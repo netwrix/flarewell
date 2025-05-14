@@ -1,5 +1,9 @@
 # Flarewell
 
+<p align="center">
+  <img src="assets/flarewell.png" alt="Flarewell Logo" width="400"/>
+</p>
+
 Convert MadCap Flare documentation projects to Docusaurus-compatible Markdown.
 
 ## Features
