@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>Configuration</title>
+        <meta name="description" content="Configuration options for the product." />
+    </head>
+    <body>
+        <h1>Configuration</h1>
+        <p>This guide explains how to configure the product for your needs.</p>
+        
+        <div class="warning">
+            <p>Warning: Incorrect configuration can lead to performance issues.</p>
+        </div>
+        
+        <h2>Basic Configuration</h2>
+        <p>The default configuration should work for most users. You can find the configuration file at:</p>
+        <pre><code>/etc/myproduct/config.yaml</code></pre>
+        
+        <h2>Advanced Settings</h2>
+        <p>For advanced users, the following settings can be customized:</p>
+        
+        <ul>
+            <li><code>max_connections</code>: Maximum number of concurrent connections</li>
+            <li><code>timeout</code>: Connection timeout in seconds</li>
+            <li><code>debug_mode</code>: Enable or disable debug logging</li>
+        </ul>
+        
+        <p>See the <MadCap:xref href="topic1.htm">Getting Started</MadCap:xref> guide for installation instructions.</p>
+        
+        <div class="tip">
+            <p>Tip: You can use environment variables to override any configuration setting.</p>
+        </div>
+        
+        <h2>Example Configuration</h2>
+        <pre><code>
+# Example configuration file
+max_connections: 100
+timeout: 30
+debug_mode: false
+log_level: info
+        </code></pre>
+    </body>
+</html> 
