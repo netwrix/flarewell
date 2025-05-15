@@ -31,6 +31,8 @@ class FlareConverter:
         use_llm: bool = False,
         llm_api_key: Optional[str] = None,
         llm_provider: str = "openai",
+        target: Optional[str] = None,
+        exclude_dirs: Optional[List[str]] = None,
     ):
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
@@ -39,6 +41,8 @@ class FlareConverter:
         self.use_llm = use_llm
         self.llm_api_key = llm_api_key
         self.llm_provider = llm_provider
+        self.target = target
+        self.exclude_dirs = exclude_dirs or []
         
         # Initialize counters
         self.stats = {
@@ -49,7 +53,7 @@ class FlareConverter:
         
         # Initialize the appropriate parser
         if input_type == "project":
-            self.parser = FlareProjectParser(self.input_dir)
+            self.parser = FlareProjectParser(self.input_dir, target=self.target)
         else:  # input_type == "html"
             self.parser = FlareHtmlParser(self.input_dir)
         
@@ -74,6 +78,21 @@ class FlareConverter:
         # Optionally use LLM to reorganize the structure
         if self.use_llm and self.llm_service:
             project_structure = self.llm_service.suggest_structure(project_structure)
+        
+        # Filter topics based on exclude_dirs if specified
+        if self.exclude_dirs:
+            filtered_topics = []
+            for item in project_structure.get("topics", []):
+                rel_path = item.get("rel_path", "")
+                exclude = False
+                for exclude_dir in self.exclude_dirs:
+                    if exclude_dir in rel_path:
+                        exclude = True
+                        self.stats["skipped"] += 1
+                        break
+                if not exclude:
+                    filtered_topics.append(item)
+            project_structure["topics"] = filtered_topics
         
         # Process files
         for item in project_structure.get("topics", []):

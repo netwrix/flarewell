@@ -32,9 +32,10 @@ class FlareParserBase(ABC):
 class FlareProjectParser(FlareParserBase):
     """Parser for MadCap Flare project files."""
     
-    def __init__(self, input_dir: Union[str, Path]):
+    def __init__(self, input_dir: Union[str, Path], target: Optional[str] = None):
         super().__init__(input_dir)
         self.project_file = None
+        self.target = target
         self._find_project_file()
     
     def _find_project_file(self) -> None:

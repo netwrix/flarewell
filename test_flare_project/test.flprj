@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<CatapultProject Version="1" xml:lang="en-us" SourceControlBound="false">
-    <ProjectName>Test Flare Project</ProjectName>
-    <SourceControlProvider>Git</SourceControlProvider>
-    <ActiveTarget>TestHTML5Target</ActiveTarget>
-</CatapultProject> 
