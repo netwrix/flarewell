@@ -11,6 +11,17 @@ class MarkdownImageCleaner:
         self.static_dir = Path(static_dir)
         self.debug = debug
 
+        self._image_index: Dict[str, List[Path]] = {}
+        self._build_image_index()
+
+    def _build_image_index(self) -> None:
+        """Pre-index images to avoid expensive globbing during cleanup."""
+        image_exts = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".bmp", ".tiff"}
+        for base in [self.docs_dir, self.static_dir]:
+            for img_file in base.rglob("*"):
+                if img_file.suffix.lower() in image_exts and img_file.is_file():
+                    self._image_index.setdefault(img_file.name.lower(), []).append(img_file)
+
     def clean(self) -> Dict[str, int]:
         removed = 0
         removed_files = 0
@@ -107,8 +118,8 @@ class MarkdownImageCleaner:
         return text, count, removed
 
     def _search_nearby_image(self, filename: str) -> Optional[Path]:
-        """Search the docs directory for an image with the same filename."""
-        matches = list(self.docs_dir.glob(f"**/{filename}"))
+        """Search indexed images for a matching filename."""
+        matches = self._image_index.get(filename.lower(), [])
         if len(matches) == 1:
             return matches[0]
         return None
