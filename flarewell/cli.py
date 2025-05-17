@@ -73,9 +73,10 @@ def cli():
     help="Fix links in converted Markdown files after conversion."
 )
 @click.option(
-    "--relocate-images",
-    type=click.Path(file_okay=False, dir_okay=True),
-    help="Relocate images to the specified directory and update references."
+    "--markdown-style",
+    type=click.Choice(["docusaurus", "markdown"]),
+    default="docusaurus",
+    help="Output style for converted files."
 )
 @click.option(
     "--markdown-style",
@@ -93,7 +94,6 @@ def convert(
     exclude_dir: List[str],
     debug: bool,
     fix_links: bool,
-    relocate_images: Optional[str],
     markdown_style: str,
 ):
     """Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
@@ -207,30 +207,28 @@ def convert(
         if errors > 0:
             click.echo(f"❌ {errors} errors encountered during link fixing.")
     
-    # Relocate images if requested
-    if relocate_images:
-        click.echo("\nRelocating images to specified directory...")
-        relocate_start = time.time()
-        
-        # Create image relocator
-        image_relocator = ImageRelocator(
-            source_dir=output_dir,
-            target_dir=relocate_images,
-            preserve_structure=preserve_structure,
-            debug=debug
-        )
-        
-        # Run image relocation
-        relocation_stats = image_relocator.relocate()
-        
-        # Print completion message
-        relocate_time = time.time() - relocate_start
-        click.echo(f"✅ Image relocation completed in {relocate_time:.2f} seconds.")
-        click.echo(f"Images relocated: {relocation_stats['images_relocated']}")
-        click.echo(f"Files updated: {relocation_stats['files_updated']}")
-        
-        if relocation_stats['errors'] > 0:
-            click.echo(f"❌ {relocation_stats['errors']} errors encountered during image relocation.")
+    # Relocate images by default to ../static
+    click.echo("\nRelocating images to static directory...")
+    relocate_start = time.time()
+
+    static_dir = Path(output_dir).parent / "static"
+
+    image_relocator = ImageRelocator(
+        source_dir=output_dir,
+        target_dir=str(static_dir),
+        preserve_structure=preserve_structure,
+        debug=debug,
+    )
+
+    relocation_stats = image_relocator.relocate()
+
+    relocate_time = time.time() - relocate_start
+    click.echo(f"✅ Image relocation completed in {relocate_time:.2f} seconds.")
+    click.echo(f"Images relocated: {relocation_stats['images_relocated']}")
+    click.echo(f"Files updated: {relocation_stats['files_updated']}")
+
+    if relocation_stats['errors'] > 0:
+        click.echo(f"❌ {relocation_stats['errors']} errors encountered during image relocation.")
     
     # Print total time
     total_time = time.time() - start_time
@@ -329,55 +327,89 @@ def fix_links(dir: str, debug: bool):
 
 
 @cli.command()
+@cli.command()
 @click.option(
-    "--dir", "-d",
+    "--input-dir", "-i",
     type=click.Path(exists=True, file_okay=False, dir_okay=True, resolve_path=True),
     required=True,
-    help="Directory containing already-converted Markdown files."
+    help="Directory containing Flare project."
 )
 @click.option(
-    "--target-dir", "-t",
-    type=click.Path(file_okay=False, dir_okay=True, resolve_path=True),
-    required=True,
-    help="Target directory for relocated images."
+    "--output-file", "-o",
+    type=click.Path(file_okay=True, dir_okay=False),
+    help="Output file for analysis results (JSON format)."
 )
 @click.option(
-    "--preserve-structure",
+    "--list-targets",
     is_flag=True,
-    default=True,
-    help="Preserve subdirectory structure within target directory."
+    help="List all targets in the project."
 )
 @click.option(
-    "--debug",
+    "--list-tocs",
     is_flag=True,
-    help="Enable debug mode for detailed logging."
+    help="List all TOCs in the project."
 )
-def relocate_images(dir: str, target_dir: str, preserve_structure: bool, debug: bool):
-    """Relocate images to a specified directory and update all references in Markdown files."""
-    click.echo(f"Relocating images from {dir} to {target_dir}")
-    start_time = time.time()
+@click.option(
+    "--folder-stats",
+    is_flag=True,
+    help="Show statistics about folders in the project."
+)
+def analyze(
+    input_dir: str,
+    output_file: Optional[str],
+    list_targets: bool,
+    list_tocs: bool,
+    folder_stats: bool,
+):
+    """Analyze a Flare project to determine which content is actively used."""
+    # Analyze project
+    if list_targets:
+        targets = list_project_targets(input_dir)
+        click.echo("\nTargets:")
+        for target in targets:
+            click.echo(f"  - {target.get('name')}: {target.get('type', 'Unknown')}")
+        return
     
-    # Create image relocator
-    image_relocator = ImageRelocator(
-        source_dir=dir,
-        target_dir=target_dir,
-        preserve_structure=preserve_structure,
-        debug=debug
+    if list_tocs:
+        tocs = list_project_tocs(input_dir)
+        click.echo("\nTOCs:")
+        for toc in tocs:
+            click.echo(f"  - {toc.get('name')}: {toc.get('title', '')}")
+        return
+    
+    if folder_stats:
+        folders = get_folder_statistics(input_dir)
+        click.echo("\nFolder Statistics:")
+        for folder, stats in folders.items():
+            click.echo(f"  - {folder}: {stats.get('files', 0)} files, {stats.get('referenced', 0)} referenced")
+        return
+    
+    # If no specific option was chosen, show a general summary
+    result = analyze_flare_project(input_dir)
+    
+    click.echo("\nProject Summary:")
+    click.echo(f"  - {len(result.get('targets', []))} targets")
+    click.echo(f"  - {len(result.get('tocs', []))} TOCs")
+    click.echo(f"  - {result.get('total_files', 0)} total files")
+    click.echo(f"  - {result.get('referenced_files', 0)} referenced files")
+    
+    # Show top folders
+    click.echo("\nTop 5 Folders by Files:")
+    folders = result.get('folder_stats', {})
+    sorted_folders = sorted(
+        folders.items(), 
+        key=lambda x: x[1].get('files', 0) if isinstance(x[1], dict) else 0, 
+        reverse=True
     )
+    for folder, stats in sorted_folders[:5]:
+        if isinstance(stats, dict):
+            click.echo(f"  - {folder}: {stats.get('files', 0)} files, {stats.get('referenced', 0)} referenced")
     
-    # Run image relocation
-    stats = image_relocator.relocate()
-    
-    # Print completion message
-    elapsed_time = time.time() - start_time
-    click.echo(f"✅ Image relocation completed in {elapsed_time:.2f} seconds.")
-    click.echo(f"Images relocated: {stats['images_relocated']}")
-    click.echo(f"Files updated: {stats['files_updated']}")
-    
-    if stats['errors'] > 0:
-        click.echo(f"❌ {stats['errors']} errors encountered.")
-
-
+    # Write to output file if specified
+    if output_file:
+        with open(output_file, "w") as f:
+            json.dump(result, f, indent=2)
+        click.echo(f"\nAnalysis results written to {output_file}")
 
 
 def main():

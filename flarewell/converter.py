@@ -36,13 +36,15 @@ class FlareConverter:
         """Create a converter.
 
         Args:
-            input_dir: Source directory containing Flare HTML output.
+            input_dir: Source directory containing Flare HTML or project files.
             output_dir: Directory for the generated Markdown files.
+            input_type: Either ``"project"`` or ``"html"``.
             preserve_structure: Mirror the input directory structure in the
                 output directory.
             use_llm: Whether to call an LLM for structure suggestions.
             llm_api_key: API key for the LLM if ``use_llm`` is ``True``.
             llm_provider: LLM provider name.
+            target: Optional Flare target to build from.
             exclude_dirs: Directories to exclude from conversion.
             debug: Enable verbose logging.
             markdown_style: ``"docusaurus"`` or ``"markdown"``.
