@@ -11,6 +11,8 @@ import re
 import yaml
 from pathlib import Path
 from typing import Dict, List, Any, Optional
+
+WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \"'.,;:])")
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from flarewell.link_mapper import LinkMapper
@@ -31,6 +33,10 @@ class DocusaurusFormatter:
         """
         self.link_mapper = link_mapper
         self.general_markdown = general_markdown
+
+    def _remove_windows_escapes(self, text: str) -> str:
+        """Remove stray Windows-style escape characters."""
+        return WINDOWS_ESCAPE_RE.sub("", text).replace("\r", "")
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """
@@ -171,6 +177,8 @@ class DocusaurusFormatter:
         Returns:
             Processed markdown
         """
+        markdown = self._remove_windows_escapes(markdown)
+
         if not self.general_markdown:
             # Fix admonitions (notes, warnings, tips)
             markdown = re.sub(r':::note\s+', ":::note\n", markdown)
@@ -225,19 +233,26 @@ class DocusaurusFormatter:
         if self.general_markdown:
             return markdown
 
-        front_matter = {
-            "title": title,
-            "sidebar_position": sidebar_position,
-        }
+        title = self._remove_windows_escapes(title).replace('"', '\\"').strip()
+        if not title:
+            first_line = markdown.split('\n', 1)[0]
+            heading = re.match(r"#\s*(.*)", first_line)
+            title = heading.group(1).strip() if heading else "Untitled"
+
+        lines = [f'title: "{title}"', f'sidebar_position: {sidebar_position}']
 
         if description:
-            front_matter["description"] = description
+            desc = self._remove_windows_escapes(description).replace('"', '\\"')
+            lines.append(f'description: "{desc}"')
 
         if tags:
-            front_matter["tags"] = tags
+            lines.append("tags:")
+            for tag in tags:
+                clean_tag = self._remove_windows_escapes(tag).replace('"', '\\"')
+                lines.append(f'  - "{clean_tag}"')
 
-        yaml_content = yaml.dump(front_matter, default_flow_style=False)
-        return f"---\n{yaml_content}---\n\n{markdown}"
+        yaml_content = "\n".join(lines)
+        return f"---\n{yaml_content}\n---\n\n{markdown}"
     
     def generate_sidebar_config(self, structure: Dict[str, Any]) -> Dict[str, Any]:
         """

@@ -8,14 +8,11 @@ import shutil
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 
-from bs4 import BeautifulSoup
-import html2markdown
 import yaml
 
 from flarewell.flare_parser import FlareHtmlParser
 from flarewell.docusaurus_formatter import DocusaurusFormatter
 from flarewell.link_mapper import LinkMapper
-from flarewell.llm_service import LlmService
 from flarewell.markdown_image_cleaner import MarkdownImageCleaner
 
 
@@ -27,9 +24,7 @@ class FlareConverter:
         input_dir: str,
         output_dir: str,
         preserve_structure: bool = True,
-        use_llm: bool = False,
-        llm_api_key: Optional[str] = None,
-        llm_provider: str = "openai",
+        generate_sidebars: bool = True,
         exclude_dirs: Optional[List[str]] = None,
         debug: bool = False,
         markdown_style: str = "docusaurus",
@@ -42,9 +37,7 @@ class FlareConverter:
             input_type: Either ``"project"`` or ``"html"``.
             preserve_structure: Mirror the input directory structure in the
                 output directory.
-            use_llm: Whether to call an LLM for structure suggestions.
-            llm_api_key: API key for the LLM if ``use_llm`` is ``True``.
-            llm_provider: LLM provider name.
+            generate_sidebars: Whether to create ``sidebars.js`` after conversion.
             target: Optional Flare target to build from.
             exclude_dirs: Directories to exclude from conversion.
             debug: Enable verbose logging.
@@ -53,9 +46,7 @@ class FlareConverter:
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
         self.preserve_structure = preserve_structure
-        self.use_llm = use_llm
-        self.llm_api_key = llm_api_key
-        self.llm_provider = llm_provider
+        self.generate_sidebars = generate_sidebars
         self.exclude_dirs = exclude_dirs or []
         self.debug = debug
         self.markdown_style = markdown_style
@@ -79,10 +70,6 @@ class FlareConverter:
             general_markdown=(self.markdown_style != "docusaurus"),
         )
         
-        # Initialize LLM service if requested
-        self.llm_service = None
-        if use_llm and llm_api_key:
-            self.llm_service = LlmService(api_key=llm_api_key, provider=llm_provider)
 
     def convert(self) -> Dict[str, int]:
         """
@@ -93,10 +80,6 @@ class FlareConverter:
         """
         # Parse the Flare HTML structure
         project_structure = self.parser.parse()
-        
-        # Optionally use LLM to reorganize the structure
-        if self.use_llm and self.llm_service:
-            project_structure = self.llm_service.suggest_structure(project_structure)
         
         # Filter topics based on exclude_dirs if specified
         if self.exclude_dirs:
@@ -140,8 +123,8 @@ class FlareConverter:
         # Copy assets
         self._copy_assets(project_structure.get("assets", []))
         
-        # Generate sidebar.js if needed
-        if not self.preserve_structure and self.use_llm:
+        # Generate sidebar.js if requested
+        if self.generate_sidebars:
             self._generate_sidebar(project_structure)
         
         # Print link mapping report
@@ -223,13 +206,18 @@ class FlareConverter:
         """
         for asset in assets:
             source_path = self.input_dir / asset.get("path", "")
-            
+
             if self.preserve_structure:
-                rel_path = asset.get("rel_path", asset.get("path", ""))
+                rel_path = Path(asset.get("rel_path", asset.get("path", "")))
+                # Drop any leading 'Resources' directory from the asset path
+                rel_parts = [p for p in rel_path.parts if p.lower() != "resources"]
+                rel_path = Path(*rel_parts)
                 dest_path = self.output_dir / rel_path
             else:
                 # Use new path if provided by LLM
-                dest_path = self.output_dir / asset.get("new_path", asset.get("rel_path", ""))
+                new_path = Path(asset.get("new_path", asset.get("rel_path", "")))
+                rel_parts = [p for p in new_path.parts if p.lower() != "resources"]
+                dest_path = self.output_dir / Path(*rel_parts)
             
             # Create parent directories
             os.makedirs(dest_path.parent, exist_ok=True)
@@ -254,5 +242,6 @@ class FlareConverter:
 
     def clean_missing_images(self) -> Dict[str, int]:
         """Scan markdown output for image references that do not exist."""
-        cleaner = MarkdownImageCleaner(str(self.output_dir), debug=self.debug)
+        static_dir = self.output_dir.parent / "static"
+        cleaner = MarkdownImageCleaner(str(self.output_dir), str(static_dir), debug=self.debug)
         return cleaner.clean()

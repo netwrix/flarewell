@@ -73,13 +73,18 @@ class ImageRelocator:
             try:
                 # Get the path relative to the source directory
                 rel_path = source_path.relative_to(self.source_dir)
-                
+
+                # Remove any 'Resources' directory from the relative path
+                rel_parts = [p for p in rel_path.parts if p.lower() != "resources"]
+                sanitized_parts = [part.replace(" ", "_") for part in rel_parts]
+                rel_path_no_res = Path(*sanitized_parts)
+
                 if self.preserve_structure:
-                    # Keep subdirectory structure but place in target directory
-                    target_path = self.target_dir / rel_path
+                    # Keep subdirectory structure without the Resources folder
+                    target_path = self.target_dir / rel_path_no_res
                 else:
                     # Flatten structure, just keep filename
-                    target_path = self.target_dir / source_path.name
+                    target_path = self.target_dir / source_path.name.replace(" ", "_")
                 
                 # Create parent directories if they don't exist
                 os.makedirs(target_path.parent, exist_ok=True)
@@ -88,13 +93,15 @@ class ImageRelocator:
                 shutil.copy2(source_path, target_path)
                 
                 # Store the mapping for updating references
-                # For the key, use the relative path from source directory
-                key = str(rel_path)
-                
+                # Include both the original path and the path without 'Resources'
+                key_original = str(rel_path).replace("\\", "/")
+                key_no_res = str(rel_path_no_res).replace("\\", "/")
+
                 # For the value, calculate the relative path from source_dir to target_path
                 # This ensures consistent path resolution regardless of absolute paths
                 target_rel_path = os.path.relpath(target_path, self.source_dir)
-                self.relocated_images[key] = target_rel_path
+                for k in {key_original, key_no_res, key_original.lower(), key_no_res.lower()}:
+                    self.relocated_images[k] = target_rel_path
                 
                 stats["images_relocated"] += 1
                 
@@ -195,43 +202,40 @@ class ImageRelocator:
         return re.sub(md_image_pattern, transform_image_link, content)
     
     def _resolve_image_path(self, img_path: str, current_dir: str) -> str:
-        """
-        Resolve an image path to its new location.
-        
-        Args:
-            img_path: Original image path
-            current_dir: Directory of the file containing the image reference
-            
-        Returns:
-            Updated image path
-        """
+        """Resolve an image path to its new location."""
+
         # Normalize slashes and remove leading/trailing slashes
         img_path = img_path.replace('\\', '/').strip('/')
-        
-        # Handle absolute paths (starting with /)
+
+        # Determine the absolute path of the referenced image relative to source_dir
         if img_path.startswith('/'):
-            # Remove leading slash for lookup
             abs_path = img_path.lstrip('/')
         else:
-            # Join with current directory to get absolute path
             abs_path = os.path.normpath(os.path.join(current_dir, img_path)).replace('\\', '/')
-        
-        # Check if this image was relocated
-        if abs_path in self.relocated_images:
-            new_path = self.relocated_images[abs_path]
-            
-            # Calculate relative path from current file to the new image location
+
+        # Look up relocated path using several fallbacks
+        candidates = [abs_path, abs_path.lower()]
+        if 'Resources/' in abs_path:
+            no_res = abs_path.replace('Resources/', '', 1)
+            candidates.extend([no_res, no_res.lower()])
+
+        new_path = None
+        for c in candidates:
+            if c in self.relocated_images:
+                new_path = self.relocated_images[c]
+                break
+
+        if new_path:
             try:
-                rel_path = os.path.relpath(new_path, current_dir).replace('\\', '/')
-                
-                # For root level links, don't use "./" prefix
+                abs_new = os.path.normpath(os.path.join(self.source_dir, new_path))
+                abs_current = os.path.normpath(os.path.join(self.source_dir, current_dir))
+                rel_path = os.path.relpath(abs_new, abs_current).replace('\\', '/')
+
                 if rel_path.startswith('./') and '/' not in rel_path[2:]:
                     rel_path = rel_path[2:]
-                    
+
                 return rel_path
             except ValueError:
-                # If relpath fails, return the absolute path
                 return '/' + new_path
-        
-        # If image wasn't relocated, return original path
-        return img_path 
+
+        return img_path
