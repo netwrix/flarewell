@@ -128,18 +128,29 @@ class FlareHtmlParser(FlareParserBase):
             
             body_content = str(main_content) if main_content else str(soup.body)
             
-            # Find all images and resources
+            # Find all images and resources, removing references that don't exist
             images = []
+            missing_images = []
             if main_content:
                 for img in main_content.find_all("img"):
                     src = img.get("src", "")
-                    if src:
-                        images.append(src)
+                    if not src:
+                        continue
+
+                    normalized_src = src.replace("\\", "/")
+                    img_path = (self.input_dir / normalized_src).resolve()
+
+                    if img_path.exists():
+                        images.append(normalized_src)
+                    else:
+                        missing_images.append(normalized_src)
+                        img.decompose()
             
             return {
                 "title": title_text,
                 "content": body_content,
                 "images": images,
+                "missing_images": missing_images,
             }
         
         except Exception as e:
