@@ -62,21 +62,6 @@ def cli():
     is_flag=True,
     help="Enable debug mode for detailed logging."
 )
-@click.option(
-    "--verbose-image-cleanup",
-    is_flag=True,
-    help="Print details about removed image references.",
-)
-@click.option(
-    "--no-sidebars",
-    is_flag=True,
-    help="Skip sidebars.js generation."
-)
-@click.option(
-    "--verbose-image-cleanup",
-    is_flag=True,
-    help="Print details about removed image references."
-)
 def convert(
     input_dir: str,
     output_dir: str,
@@ -84,8 +69,7 @@ def convert(
     exclude_dir: List[str],
     verbose_image_cleanup: bool,
     debug: bool,
-    no_sidebars: bool,
-    markdown_style: str,
+    no_sidebars: bool
 ):
     """Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
     click.echo(f"Converting HTML from {input_dir} to {output_dir}")
@@ -101,8 +85,7 @@ def convert(
         preserve_structure=preserve_structure,
         generate_sidebars=not no_sidebars,
         exclude_dirs=exclude_dir,
-        debug=debug,
-        markdown_style=markdown_style,
+        debug=debug
     )
     
     # Run conversion
@@ -221,7 +204,7 @@ def convert(
     # Remove references to images that do not exist
     click.echo("\nCleaning up references to missing images...")
     cleanup_start = time.time()
-    cleaner = MarkdownImageCleaner(output_dir, debug=verbose_image_cleanup)
+    cleaner = MarkdownImageCleaner(output_dir, static_dir=str(static_dir), debug=verbose_image_cleanup)
     cleanup_stats = cleaner.clean()
     cleanup_time = time.time() - cleanup_start
     click.echo(f"✅ Image cleanup completed in {cleanup_time:.2f} seconds.")

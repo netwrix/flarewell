@@ -1,7 +1,7 @@
 import os
 import re
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, List, Set
 
 class MarkdownImageCleaner:
     """Scan markdown files and remove references to images that do not exist."""
@@ -104,7 +104,7 @@ class MarkdownImageCleaner:
         html_img_pattern = r'<img[^>]+src="([^"]+)"[^>]*>'
         text = re.sub(html_img_pattern, repl_html, text)
 
-        return text, count
+        return text, count, removed
 
     def _search_nearby_image(self, filename: str) -> Optional[Path]:
         """Search the docs directory for an image with the same filename."""
