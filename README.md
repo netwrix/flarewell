@@ -75,6 +75,12 @@ Convert HTML to generic Markdown without Docusaurus front matter:
 flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --markdown-style markdown
 ```
 
+Convert HTML to generic Markdown without Docusaurus front matter:
+
+```bash
+flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --input-type html --markdown-style markdown
+```
+
 Convert and automatically fix links in one step:
 
 ```bash
