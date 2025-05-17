@@ -205,7 +205,9 @@ class FlareConverter:
             assets: List of asset dictionaries.
         """
         for asset in assets:
-            source_path = self.input_dir / asset.get("path", "")
+            # Asset paths returned by the parser are absolute. Using them
+            # directly avoids accidentally prefixing the input directory twice.
+            source_path = Path(asset.get("path", ""))
 
             if self.preserve_structure:
                 rel_path = Path(asset.get("rel_path", asset.get("path", "")))
