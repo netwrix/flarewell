@@ -93,6 +93,7 @@ flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaur
 - `--llm-provider`: LLM provider to use (`openai` or `anthropic`), default is `openai`
 - `--exclude-dir`: Directory patterns to exclude from conversion (can be used multiple times)
 - `--debug`: Enable debug mode for detailed logging
+- `--verbose-image-cleanup`: Print details about removed image references
 - 
 ## Development
 
