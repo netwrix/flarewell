@@ -71,7 +71,7 @@ def cli():
 @click.option(
     "--verbose-image-cleanup",
     is_flag=True,
-    help="Print missing image references removed during cleanup."
+    help="Print details about removed image references.",
 )
 @click.option(
     "--markdown-style",
@@ -227,7 +227,7 @@ def convert(
     # Remove references to images that do not exist
     click.echo("\nCleaning up references to missing images...")
     cleanup_start = time.time()
-    cleaner = MarkdownImageCleaner(output_dir, debug=verbose_image_cleanup or debug)
+    cleaner = MarkdownImageCleaner(output_dir, debug=verbose_image_cleanup)
     cleanup_stats = cleaner.clean()
     cleanup_time = time.time() - cleanup_start
     click.echo(f"✅ Image cleanup completed in {cleanup_time:.2f} seconds.")

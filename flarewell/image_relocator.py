@@ -78,15 +78,16 @@ class ImageRelocator:
                 rel_parts = [p for p in rel_path.parts if p.lower() != "resources"]
                 rel_path_no_res = Path(*rel_parts)
 
+                # Replace spaces in filenames with underscores
+                target_name = source_path.name.replace(" ", "_")
+
                 if self.preserve_structure:
                     # Keep subdirectory structure without the Resources folder
-                    target_path = self.target_dir / rel_path_no_res
+                    target_rel = rel_path_no_res.parent / target_name
+                    target_path = self.target_dir / target_rel
                 else:
                     # Flatten structure, just keep filename
-                    target_path = self.target_dir / source_path.name
-
-                # Replace spaces in filenames with underscores
-                target_path = target_path.with_name(target_path.name.replace(" ", "_"))
+                    target_path = self.target_dir / target_name
                 
                 # Create parent directories if they don't exist
                 os.makedirs(target_path.parent, exist_ok=True)
@@ -170,9 +171,13 @@ class ImageRelocator:
         Returns:
             Updated content with corrected image references
         """
-        # Pattern for Markdown image links 
+        # Pattern for Markdown image links allowing nested parentheses
         # Format: ![alt text](image/path.jpg "optional title")
-        md_image_pattern = r'!\[([^\]]*)\]\(([^)]+)\s*(?:"[^"]*")?\)'
+        md_image_pattern = (
+            r'!\[([^\]]*)\]\('
+            r'((?:[^()]|\([^)]*\))*?\.(?:png|jpg|jpeg|gif|svg|bmp|tiff|webp))'
+            r'(?:\s+"([^"]*)")?\)'
+        )
         
         # Get relative path for the current file
         rel_current_dir = os.path.dirname(str(current_file.relative_to(self.source_dir)))
@@ -181,13 +186,8 @@ class ImageRelocator:
         def transform_image_link(match):
             alt_text = match.group(1)
             img_path = match.group(2)
-            
-            # Extract title if present
-            title_match = re.search(r'\s+"([^"]+)"$', img_path)
-            title = ""
-            if title_match:
-                title = f' "{title_match.group(1)}"'
-                img_path = img_path.replace(title_match.group(0), '')
+            title_text = match.group(3) or ""
+            title = f' "{title_text}"' if title_text else ""
             
             # Skip external images
             if img_path.startswith(('http://', 'https://')):
@@ -231,6 +231,11 @@ class ImageRelocator:
             # Try again without the Resources folder
             lookup_path = abs_path.replace('Resources/', '', 1)
 
+        if lookup_path not in self.relocated_images:
+            alt = self._find_similar_image(lookup_path)
+            if alt:
+                lookup_path = alt
+
         if lookup_path in self.relocated_images:
             new_path = self.relocated_images[lookup_path]
             
@@ -248,4 +253,12 @@ class ImageRelocator:
                 return '/' + new_path
         
         # If image wasn't relocated, return original path
-        return img_path 
+        return img_path
+
+    def _find_similar_image(self, path: str) -> Optional[str]:
+        """Return a relocated image key with the same filename if unique."""
+        base = os.path.basename(path)
+        matches = [k for k in self.relocated_images.keys() if k.endswith('/' + base) or k == base]
+        if len(matches) == 1:
+            return matches[0]
+        return None
