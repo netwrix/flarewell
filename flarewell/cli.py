@@ -37,22 +37,6 @@ def cli():
     help="Directory to output Docusaurus-compatible Markdown files."
 )
 @click.option(
-    "--use-llm",
-    is_flag=True,
-    help="Use LLM to suggest an improved folder/file structure."
-)
-@click.option(
-    "--llm-api-key",
-    envvar="FLAREWELL_LLM_API_KEY",
-    help="API key for the LLM service (can also be set via FLAREWELL_LLM_API_KEY environment variable)."
-)
-@click.option(
-    "--llm-provider",
-    type=click.Choice(["openai", "anthropic"]),
-    default="openai",
-    help="LLM provider to use when --use-llm is specified."
-)
-@click.option(
     "--preserve-structure",
     is_flag=True,
     default=True,
@@ -75,20 +59,23 @@ def cli():
     help="Output style for converted files."
 )
 @click.option(
-    "--markdown-style",
-    type=click.Choice(["docusaurus", "markdown"]),
-    default="docusaurus",
-    help="Output style for converted files."
+    "--no-sidebars",
+    is_flag=True,
+    help="Skip sidebars.js generation."
+)
+@click.option(
+    "--verbose-image-cleanup",
+    is_flag=True,
+    help="Print details about removed image references."
 )
 def convert(
     input_dir: str,
     output_dir: str,
-    use_llm: bool,
-    llm_api_key: Optional[str],
-    llm_provider: str,
     preserve_structure: bool,
     exclude_dir: List[str],
     debug: bool,
+    no_sidebars: bool,
+    verbose_image_cleanup: bool,
     markdown_style: str,
 ):
     """Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
@@ -103,9 +90,7 @@ def convert(
         input_dir=input_dir,
         output_dir=output_dir,
         preserve_structure=preserve_structure,
-        use_llm=use_llm,
-        llm_api_key=llm_api_key,
-        llm_provider=llm_provider,
+        generate_sidebars=not no_sidebars,
         exclude_dirs=exclude_dir,
         debug=debug,
         markdown_style=markdown_style,
@@ -227,7 +212,7 @@ def convert(
     # Remove references to images that do not exist
     click.echo("\nCleaning up references to missing images...")
     cleanup_start = time.time()
-    cleaner = MarkdownImageCleaner(output_dir, debug=debug)
+    cleaner = MarkdownImageCleaner(output_dir, debug=verbose_image_cleanup)
     cleanup_stats = cleaner.clean()
     cleanup_time = time.time() - cleanup_start
     click.echo(f"✅ Image cleanup completed in {cleanup_time:.2f} seconds.")

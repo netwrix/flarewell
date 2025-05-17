@@ -1,7 +1,7 @@
 import os
 import re
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Optional
 
 class MarkdownImageCleaner:
     """Scan markdown files and remove references to images that do not exist."""
@@ -34,6 +34,14 @@ class MarkdownImageCleaner:
                 return match.group(0)
             abs_path = (md_file.parent / img_path_clean).resolve()
             if not abs_path.exists():
+                candidate = self._search_nearby_image(Path(img_path_clean).name)
+                if candidate:
+                    new_rel = os.path.relpath(candidate, md_file.parent).replace('\\', '/')
+                    if self.debug:
+                        print(
+                            f"Fixed missing image '{img_path_clean}' -> '{new_rel}' in {md_file}"
+                        )
+                    return f"![{match.group(1)}]({new_rel})"
                 if self.debug:
                     print(f"Removing missing image '{img_path_clean}' in {md_file}")
                 count += 1
@@ -51,6 +59,14 @@ class MarkdownImageCleaner:
                 return match.group(0)
             abs_path = (md_file.parent / img_path_clean).resolve()
             if not abs_path.exists():
+                candidate = self._search_nearby_image(Path(img_path_clean).name)
+                if candidate:
+                    new_rel = os.path.relpath(candidate, md_file.parent).replace('\\', '/')
+                    if self.debug:
+                        print(
+                            f"Fixed missing image '{img_path_clean}' -> '{new_rel}' in {md_file}"
+                        )
+                    return match.group(0).replace(img_path, new_rel)
                 if self.debug:
                     print(f"Removing missing image '{img_path_clean}' in {md_file}")
                 count += 1
@@ -61,3 +77,10 @@ class MarkdownImageCleaner:
         text = re.sub(html_img_pattern, repl_html, text)
 
         return text, count
+
+    def _search_nearby_image(self, filename: str) -> Optional[Path]:
+        """Search the docs directory for an image with the same filename."""
+        matches = list(self.docs_dir.glob(f"**/{filename}"))
+        if len(matches) == 1:
+            return matches[0]
+        return None
