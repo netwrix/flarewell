@@ -88,6 +88,12 @@ def cli():
     type=click.Path(file_okay=False, dir_okay=True),
     help="Relocate images to the specified directory and update references."
 )
+@click.option(
+    "--markdown-style",
+    type=click.Choice(["docusaurus", "markdown"]),
+    default="docusaurus",
+    help="Output style for converted files."
+)
 def convert(
     input_dir: str,
     output_dir: str,
@@ -101,6 +107,7 @@ def convert(
     debug: bool,
     fix_links: bool,
     relocate_images: Optional[str],
+    markdown_style: str,
 ):
     """Convert MadCap Flare documentation to Docusaurus-compatible Markdown."""
     click.echo(f"Converting {input_type} from {input_dir} to {output_dir}")
@@ -121,6 +128,7 @@ def convert(
         target=target,
         exclude_dirs=exclude_dir,
         debug=debug,
+        markdown_style=markdown_style,
     )
     
     # Run conversion
