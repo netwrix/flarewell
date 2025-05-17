@@ -14,6 +14,7 @@ from typing import Optional, List
 from flarewell.converter import FlareConverter
 from flarewell.link_mapper import LinkMapper
 from flarewell.image_relocator import ImageRelocator
+from flarewell.markdown_image_cleaner import MarkdownImageCleaner
 
 
 @click.group()
@@ -222,6 +223,15 @@ def convert(
 
     if relocation_stats['errors'] > 0:
         click.echo(f"❌ {relocation_stats['errors']} errors encountered during image relocation.")
+
+    # Remove references to images that do not exist
+    click.echo("\nCleaning up references to missing images...")
+    cleanup_start = time.time()
+    cleaner = MarkdownImageCleaner(output_dir, debug=debug)
+    cleanup_stats = cleaner.clean()
+    cleanup_time = time.time() - cleanup_start
+    click.echo(f"✅ Image cleanup completed in {cleanup_time:.2f} seconds.")
+    click.echo(f"References removed: {cleanup_stats['references_removed']}")
     
     # Print total time
     total_time = time.time() - start_time
