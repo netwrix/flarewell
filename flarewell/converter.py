@@ -257,7 +257,9 @@ class FlareConverter:
             f.write(str(sidebar).replace("'", '"'))
             f.write(";")
 
-    def clean_missing_images(self) -> Dict[str, int]:
+    def clean_missing_images(self, verbose: bool = False) -> Dict[str, int]:
         """Scan markdown output for image references that do not exist."""
-        cleaner = MarkdownImageCleaner(str(self.output_dir), debug=self.debug)
+        cleaner = MarkdownImageCleaner(
+            str(self.output_dir), debug=self.debug or verbose
+        )
         return cleaner.clean()

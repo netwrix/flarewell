@@ -83,7 +83,7 @@ class ImageRelocator:
                     target_path = self.target_dir / rel_path_no_res
                 else:
                     # Flatten structure, just keep filename
-                    target_path = self.target_dir / source_path.name
+                    target_path = self.target_dir / target_name
                 
                 # Create parent directories if they don't exist
                 os.makedirs(target_path.parent, exist_ok=True)
@@ -168,9 +168,13 @@ class ImageRelocator:
         Returns:
             Updated content with corrected image references
         """
-        # Pattern for Markdown image links 
+        # Pattern for Markdown image links allowing nested parentheses
         # Format: ![alt text](image/path.jpg "optional title")
-        md_image_pattern = r'!\[([^\]]*)\]\(([^)]+)\s*(?:"[^"]*")?\)'
+        md_image_pattern = (
+            r'!\[([^\]]*)\]\('
+            r'((?:[^()]|\([^)]*\))*?\.(?:png|jpg|jpeg|gif|svg|bmp|tiff|webp))'
+            r'(?:\s+"([^"]*)")?\)'
+        )
         
         # Get relative path for the current file
         rel_current_dir = os.path.dirname(str(current_file.relative_to(self.source_dir)))
@@ -179,13 +183,8 @@ class ImageRelocator:
         def transform_image_link(match):
             alt_text = match.group(1)
             img_path = match.group(2)
-            
-            # Extract title if present
-            title_match = re.search(r'\s+"([^"]+)"$', img_path)
-            title = ""
-            if title_match:
-                title = f' "{title_match.group(1)}"'
-                img_path = img_path.replace(title_match.group(0), '')
+            title_text = match.group(3) or ""
+            title = f' "{title_text}"' if title_text else ""
             
             # Skip external images
             if img_path.startswith(('http://', 'https://')):
