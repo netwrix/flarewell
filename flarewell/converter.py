@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 import html2markdown
 import yaml
 
-from flarewell.flare_parser import FlareProjectParser, FlareHtmlParser
+from flarewell.flare_parser import FlareHtmlParser
 from flarewell.docusaurus_formatter import DocusaurusFormatter
 from flarewell.link_mapper import LinkMapper
 from flarewell.llm_service import LlmService
@@ -25,12 +25,10 @@ class FlareConverter:
         self,
         input_dir: str,
         output_dir: str,
-        input_type: str = "project",
         preserve_structure: bool = True,
         use_llm: bool = False,
         llm_api_key: Optional[str] = None,
         llm_provider: str = "openai",
-        target: Optional[str] = None,
         exclude_dirs: Optional[List[str]] = None,
         debug: bool = False,
         markdown_style: str = "docusaurus",
@@ -38,27 +36,23 @@ class FlareConverter:
         """Create a converter.
 
         Args:
-            input_dir: Source directory containing Flare HTML or project files.
+            input_dir: Source directory containing Flare HTML output.
             output_dir: Directory for the generated Markdown files.
-            input_type: Either ``"project"`` or ``"html"``.
             preserve_structure: Mirror the input directory structure in the
                 output directory.
             use_llm: Whether to call an LLM for structure suggestions.
             llm_api_key: API key for the LLM if ``use_llm`` is ``True``.
             llm_provider: LLM provider name.
-            target: Optional Flare target to build from.
             exclude_dirs: Directories to exclude from conversion.
             debug: Enable verbose logging.
             markdown_style: ``"docusaurus"`` or ``"markdown"``.
         """
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
-        self.input_type = input_type
         self.preserve_structure = preserve_structure
         self.use_llm = use_llm
         self.llm_api_key = llm_api_key
         self.llm_provider = llm_provider
-        self.target = target
         self.exclude_dirs = exclude_dirs or []
         self.debug = debug
         self.markdown_style = markdown_style
@@ -70,11 +64,8 @@ class FlareConverter:
             "errors": 0,
         }
         
-        # Initialize the appropriate parser
-        if input_type == "project":
-            self.parser = FlareProjectParser(self.input_dir, target=self.target)
-        else:  # input_type == "html"
-            self.parser = FlareHtmlParser(self.input_dir)
+        # Initialize the parser for Flare HTML output
+        self.parser = FlareHtmlParser(self.input_dir)
         
         # Initialize link mapper
         self.link_mapper = LinkMapper(preserve_structure=self.preserve_structure, debug=self.debug)
@@ -97,7 +88,7 @@ class FlareConverter:
         Returns:
             Dict with conversion statistics.
         """
-        # Parse the Flare project structure
+        # Parse the Flare HTML structure
         project_structure = self.parser.parse()
         
         # Optionally use LLM to reorganize the structure
