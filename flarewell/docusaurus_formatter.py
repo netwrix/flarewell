@@ -247,10 +247,13 @@ class DocusaurusFormatter:
         }
 
         if description:
-            front_matter["description"] = description
+            fm_lines.append(f'description: "{_escape(description)}"')
 
         if tags:
-            front_matter["tags"] = tags
+            tags_yaml = yaml.dump({"tags": tags}, default_flow_style=True).strip()
+            # tags_yaml will be like "tags: [a, b]"; keep everything after ':'
+            _, _, tag_values = tags_yaml.partition(":")
+            fm_lines.append(f"tags:{tag_values}")
 
         # Manually construct YAML to keep title on one line with double quotes
         def q(val: str) -> str:
