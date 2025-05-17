@@ -1,5 +1,10 @@
 """
-Formatter for converting HTML content to Docusaurus-compatible Markdown.
+Formatter for converting HTML content to Markdown.
+
+This formatter can output either generic GitHub-Flavoured Markdown or
+Docusaurus-flavoured Markdown.  When ``general_markdown`` is ``True`` the
+output will avoid Docusaurus specific features such as YAML front matter or
+``:::note`` admonitions.
 """
 
 import re
@@ -16,14 +21,16 @@ class DocusaurusFormatter:
     Format HTML content as Docusaurus-compatible Markdown.
     """
     
-    def __init__(self, link_mapper: Optional[LinkMapper] = None):
-        """
-        Initialize the formatter with optional link mapper.
-        
+    def __init__(self, link_mapper: Optional[LinkMapper] = None, general_markdown: bool = False):
+        """Initialize the formatter.
+
         Args:
-            link_mapper: Optional LinkMapper instance for transforming links
+            link_mapper: Optional ``LinkMapper`` instance for transforming links.
+            general_markdown: When ``True`` output generic Markdown rather than
+                Docusaurus flavoured Markdown.
         """
         self.link_mapper = link_mapper
+        self.general_markdown = general_markdown
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """
@@ -94,26 +101,22 @@ class DocusaurusFormatter:
         Args:
             soup: BeautifulSoup instance of the HTML.
         """
-        # Convert notes
-        for note in soup.select(".note, .MCNote"):
-            note_text = note.get_text().strip()
-            note_tag = soup.new_tag("div")
-            note_tag.string = f":::note\n{note_text}\n:::"
-            note.replace_with(note_tag)
-        
-        # Convert warnings
-        for warning in soup.select(".warning, .MCWarning"):
-            warning_text = warning.get_text().strip()
-            warning_tag = soup.new_tag("div")
-            warning_tag.string = f":::warning\n{warning_text}\n:::"
-            warning.replace_with(warning_tag)
-        
-        # Convert tips
-        for tip in soup.select(".tip, .MCTip"):
-            tip_text = tip.get_text().strip()
-            tip_tag = soup.new_tag("div")
-            tip_tag.string = f":::tip\n{tip_text}\n:::"
-            tip.replace_with(tip_tag)
+        # Convert notes, warnings and tips
+        for selector, prefix in [
+            (".note, .MCNote", "note"),
+            (".warning, .MCWarning", "warning"),
+            (".tip, .MCTip", "tip"),
+        ]:
+            for el in soup.select(selector):
+                text = el.get_text().strip()
+                if self.general_markdown:
+                    # Use a simple blockquote for generic markdown
+                    new_tag = soup.new_tag("blockquote")
+                    new_tag.string = f"**{prefix.capitalize()}:** {text}"
+                else:
+                    new_tag = soup.new_tag("div")
+                    new_tag.string = f":::{prefix}\n{text}\n:::"
+                el.replace_with(new_tag)
         
         # Convert tables - ensure they have headers for proper markdown conversion
         for table in soup.select("table"):
@@ -168,10 +171,11 @@ class DocusaurusFormatter:
         Returns:
             Processed markdown
         """
-        # Fix admonitions (notes, warnings, tips)
-        markdown = re.sub(r':::note\s+', ":::note\n", markdown)
-        markdown = re.sub(r':::warning\s+', ":::warning\n", markdown)
-        markdown = re.sub(r':::tip\s+', ":::tip\n", markdown)
+        if not self.general_markdown:
+            # Fix admonitions (notes, warnings, tips)
+            markdown = re.sub(r':::note\s+', ":::note\n", markdown)
+            markdown = re.sub(r':::warning\s+', ":::warning\n", markdown)
+            markdown = re.sub(r':::tip\s+', ":::tip\n", markdown)
         
         # Use link mapper to transform links if available
         if self.link_mapper and current_file_path:
@@ -217,37 +221,23 @@ class DocusaurusFormatter:
         description: str = "",
         tags: List[str] = None,
     ) -> str:
-        """
-        Add Docusaurus front matter to markdown content.
-        
-        Args:
-            markdown: Markdown content
-            title: Document title
-            sidebar_position: Position in the sidebar
-            description: Document description
-            tags: List of tags
-            
-        Returns:
-            Markdown with front matter
-        """
+        """Add front matter when generating Docusaurus flavoured Markdown."""
+        if self.general_markdown:
+            return markdown
+
         front_matter = {
             "title": title,
             "sidebar_position": sidebar_position,
         }
-        
+
         if description:
             front_matter["description"] = description
-        
+
         if tags:
             front_matter["tags"] = tags
-        
-        # Convert to YAML
+
         yaml_content = yaml.dump(front_matter, default_flow_style=False)
-        
-        # Combine front matter and markdown
-        result = f"---\n{yaml_content}---\n\n{markdown}"
-        
-        return result
+        return f"---\n{yaml_content}---\n\n{markdown}"
     
     def generate_sidebar_config(self, structure: Dict[str, Any]) -> Dict[str, Any]:
         """
