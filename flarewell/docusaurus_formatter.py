@@ -15,6 +15,14 @@ from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from flarewell.link_mapper import LinkMapper
 
+WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \t\-_()&'\"])")
+
+
+def _remove_windows_escapes(text: str) -> str:
+    """Remove stray backslash escaping and Windows carriage returns."""
+    text = text.replace("\r", "")
+    return WINDOWS_ESCAPE_RE.sub("", text)
+
 
 class DocusaurusFormatter:
     """
@@ -210,7 +218,10 @@ class DocusaurusFormatter:
         
         # Remove any remaining HTML tags except for details/summary
         markdown = re.sub(r'<(?!(details|\/details|summary|\/summary))[^>]*>', '', markdown)
-        
+
+        # Clean up any stray Windows escaping
+        markdown = _remove_windows_escapes(markdown)
+
         return markdown
     
     def add_frontmatter(
@@ -225,6 +236,11 @@ class DocusaurusFormatter:
         if self.general_markdown:
             return markdown
 
+        title = _remove_windows_escapes(title)
+        description = _remove_windows_escapes(description)
+        if tags:
+            tags = [_remove_windows_escapes(t) for t in tags]
+
         front_matter = {
             "title": title,
             "sidebar_position": sidebar_position,
@@ -236,7 +252,21 @@ class DocusaurusFormatter:
         if tags:
             front_matter["tags"] = tags
 
-        yaml_content = yaml.dump(front_matter, default_flow_style=False)
+        # Manually construct YAML to keep title on one line with double quotes
+        def q(val: str) -> str:
+            return '"' + val.replace('"', '\\"') + '"'
+
+        yaml_lines = [f"title: {q(title)}", f"sidebar_position: {sidebar_position}"]
+
+        if description:
+            yaml_lines.append(f"description: {q(description)}")
+
+        if tags:
+            tag_str = '[' + ', '.join(q(t) for t in tags) + ']'
+            yaml_lines.append(f"tags: {tag_str}")
+
+        yaml_content = "\n".join(yaml_lines) + "\n"
+
         return f"---\n{yaml_content}---\n\n{markdown}"
     
     def generate_sidebar_config(self, structure: Dict[str, Any]) -> Dict[str, Any]:
