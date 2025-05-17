@@ -16,6 +16,7 @@ from flarewell.flare_parser import FlareHtmlParser
 from flarewell.docusaurus_formatter import DocusaurusFormatter
 from flarewell.link_mapper import LinkMapper
 from flarewell.llm_service import LlmService
+from flarewell.markdown_image_cleaner import MarkdownImageCleaner
 
 
 class FlareConverter:
@@ -148,7 +149,7 @@ class FlareConverter:
         print(f"Link mapping: {link_report['total_files']} files registered, "
               f"{link_report['total_links']} links mapped, "
               f"{link_report['processed_files']} files processed")
-        
+
         return self.stats
     
     def _process_file(self, file_info: Dict[str, Any]) -> None:
@@ -160,10 +161,10 @@ class FlareConverter:
         """
         content = self.parser.get_content(file_info)
 
-        # Warn about missing images
+        # Warn about missing images; cleanup will occur after conversion
         for img in content.get("missing_images", []):
             print(
-                f"Missing image '{img}' referenced in {file_info.get('rel_path', file_info.get('path', ''))}. Reference removed."
+                f"Missing image '{img}' referenced in {file_info.get('rel_path', file_info.get('path', ''))}."
             )
         
         # Convert to markdown
@@ -255,4 +256,9 @@ class FlareConverter:
         with open(self.output_dir / "sidebars.js", "w", encoding="utf-8") as f:
             f.write("module.exports = ")
             f.write(str(sidebar).replace("'", '"'))
-            f.write(";") 
+            f.write(";")
+
+    def clean_missing_images(self) -> Dict[str, int]:
+        """Scan markdown output for image references that do not exist."""
+        cleaner = MarkdownImageCleaner(str(self.output_dir), debug=self.debug)
+        return cleaner.clean()
