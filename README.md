@@ -18,18 +18,9 @@ The link mapper is integrated into the main conversion workflow and uses a two-s
 
 ## New: Image Relocation
 
-This version adds a powerful image relocation feature that:
-
-1. **Moves images to a specified directory** while preserving subdirectory structure
-2. **Updates all references** to those images in Markdown files
-3. **Preserves relative paths** between Markdown files and images
-4. **Handles both absolute and relative paths** in image references
-
-The image relocator can be used:
-- As part of the conversion process with the `--relocate-images` flag
-- As a standalone command for already-converted content with `relocate-images`
-
-> **Important Path Note:** When specifying the target directory for relocated images, use a *relative* path from your current directory. For example, use `./static/img` rather than an absolute path. This ensures proper path resolution when updating image references.
+Images are now automatically moved to a `static` directory located next to the
+output docs. All references inside Markdown files are updated, preserving
+relative paths and directory structure. No additional flags are required.
 
 ## Features
 
@@ -41,7 +32,7 @@ The image relocator can be used:
 - Generate Docusaurus sidebar configuration
 - Analyze Flare projects to identify production vs test/draft content
 - Fix references in already-converted Markdown files
-- Relocate images to a centralized directory and update all references
+- Automatically relocate images to a `static` directory next to your docs
 
 ## Installation
 
@@ -59,10 +50,9 @@ pip install -e .
 
 ## Usage
 
-Flarewell offers four main commands:
+Flarewell offers three main commands:
 - `convert`: Transform Flare content to Docusaurus Markdown
 - `fix-links`: Update internal links in already-converted Markdown files
-- `relocate-images`: Move images to a specified directory and update references
 - `analyze`: Examine a Flare project to identify production content
 
 ### Convert Command
@@ -79,17 +69,20 @@ Convert HTML output from Flare:
 flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaurus/docs --input-type html
 ```
 
+Convert HTML to generic Markdown without Docusaurus front matter:
+
+```bash
+flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --input-type html --markdown-style markdown
+```
+
 Convert and automatically fix links in one step:
 
 ```bash
 flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaurus/docs --input-type html --fix-links
 ```
 
-Convert and relocate images to a specific directory:
+Converted images will be moved to a `static` directory next to your output docs automatically.
 
-```bash
-flarewell convert --input-dir /path/to/flare/project --output-dir /path/to/docusaurus/docs --relocate-images ./static/img
-```
 
 #### Using LLM for Structure Suggestions
 
@@ -119,7 +112,6 @@ flarewell convert --input-dir /path/to/flare/project --output-dir /path/to/docus
 - `--exclude-dir`: Directory patterns to exclude from conversion (can be used multiple times)
 - `--debug`: Enable debug mode for detailed logging
 - `--fix-links`: Fix links in converted Markdown files after conversion
-- `--relocate-images`: Relocate images to the specified directory and update references (use relative paths like `./static/img`)
 
 ### Fix Links Command
 
@@ -142,55 +134,6 @@ flarewell fix-links --dir /path/to/markdown/files --debug
 - `--dir, -d`: Directory containing already-converted Markdown files
 - `--debug`: Enable debug mode for detailed logging
 
-### Relocate Images Command
-
-The relocate-images command moves all images to a specified directory and updates all references in Markdown files. This is useful for centralizing images in a structure that works well with Docusaurus.
-
-Relocate images from converted Markdown directory to a target directory:
-
-```bash
-flarewell relocate-images --dir /path/to/markdown/files --target-dir ./static/img
-```
-
-Flatten the directory structure (don't preserve subdirectories):
-
-```bash
-flarewell relocate-images --dir /path/to/markdown/files --target-dir ./static/img --no-preserve-structure
-```
-
-Enable debug mode for more detailed logging:
-
-```bash
-flarewell relocate-images --dir /path/to/markdown/files --target-dir ./static/img --debug
-```
-
-#### Relocate Images Options
-
-- `--dir, -d`: Directory containing already-converted Markdown files
-- `--target-dir, -t`: Target directory for relocated images (use relative paths like `./static/img`)
-- `--preserve-structure`: Preserve subdirectory structure within target directory (default: `True`)
-- `--debug`: Enable debug mode for detailed logging
-
-#### Conversion Workflow
-
-A typical workflow for converting Flare content might include:
-
-1. Option 1: One-step conversion with link fixing and image relocation:
-   ```bash
-   flarewell convert --input-dir /path/to/flare/project --output-dir /path/to/docusaurus/docs --fix-links --relocate-images ./static/img
-   ```
-
-2. Option 2: Multi-step process:
-   ```bash
-   # First convert the files
-   flarewell convert --input-dir /path/to/flare/project --output-dir /path/to/docusaurus/docs
-   
-   # Then fix the links in a separate step
-   flarewell fix-links --dir /path/to/docusaurus/docs
-   
-   # Finally relocate images to a centralized location
-   flarewell relocate-images --dir /path/to/docusaurus/docs --target-dir ./static/img
-   ```
 
 ### Analyze Command
 

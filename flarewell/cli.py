@@ -84,9 +84,10 @@ def cli():
     help="Fix links in converted Markdown files after conversion."
 )
 @click.option(
-    "--relocate-images",
-    type=click.Path(file_okay=False, dir_okay=True),
-    help="Relocate images to the specified directory and update references."
+    "--markdown-style",
+    type=click.Choice(["docusaurus", "markdown"]),
+    default="docusaurus",
+    help="Output style for converted files."
 )
 def convert(
     input_dir: str,
@@ -100,7 +101,7 @@ def convert(
     exclude_dir: List[str],
     debug: bool,
     fix_links: bool,
-    relocate_images: Optional[str],
+    markdown_style: str,
 ):
     """Convert MadCap Flare documentation to Docusaurus-compatible Markdown."""
     click.echo(f"Converting {input_type} from {input_dir} to {output_dir}")
@@ -121,6 +122,7 @@ def convert(
         target=target,
         exclude_dirs=exclude_dir,
         debug=debug,
+        markdown_style=markdown_style,
     )
     
     # Run conversion
@@ -214,30 +216,28 @@ def convert(
         if errors > 0:
             click.echo(f"❌ {errors} errors encountered during link fixing.")
     
-    # Relocate images if requested
-    if relocate_images:
-        click.echo("\nRelocating images to specified directory...")
-        relocate_start = time.time()
-        
-        # Create image relocator
-        image_relocator = ImageRelocator(
-            source_dir=output_dir,
-            target_dir=relocate_images,
-            preserve_structure=preserve_structure,
-            debug=debug
-        )
-        
-        # Run image relocation
-        relocation_stats = image_relocator.relocate()
-        
-        # Print completion message
-        relocate_time = time.time() - relocate_start
-        click.echo(f"✅ Image relocation completed in {relocate_time:.2f} seconds.")
-        click.echo(f"Images relocated: {relocation_stats['images_relocated']}")
-        click.echo(f"Files updated: {relocation_stats['files_updated']}")
-        
-        if relocation_stats['errors'] > 0:
-            click.echo(f"❌ {relocation_stats['errors']} errors encountered during image relocation.")
+    # Relocate images by default to ../static
+    click.echo("\nRelocating images to static directory...")
+    relocate_start = time.time()
+
+    static_dir = Path(output_dir).parent / "static"
+
+    image_relocator = ImageRelocator(
+        source_dir=output_dir,
+        target_dir=str(static_dir),
+        preserve_structure=preserve_structure,
+        debug=debug,
+    )
+
+    relocation_stats = image_relocator.relocate()
+
+    relocate_time = time.time() - relocate_start
+    click.echo(f"✅ Image relocation completed in {relocate_time:.2f} seconds.")
+    click.echo(f"Images relocated: {relocation_stats['images_relocated']}")
+    click.echo(f"Files updated: {relocation_stats['files_updated']}")
+
+    if relocation_stats['errors'] > 0:
+        click.echo(f"❌ {relocation_stats['errors']} errors encountered during image relocation.")
     
     # Print total time
     total_time = time.time() - start_time
@@ -336,55 +336,6 @@ def fix_links(dir: str, debug: bool):
 
 
 @cli.command()
-@click.option(
-    "--dir", "-d",
-    type=click.Path(exists=True, file_okay=False, dir_okay=True, resolve_path=True),
-    required=True,
-    help="Directory containing already-converted Markdown files."
-)
-@click.option(
-    "--target-dir", "-t",
-    type=click.Path(file_okay=False, dir_okay=True, resolve_path=True),
-    required=True,
-    help="Target directory for relocated images."
-)
-@click.option(
-    "--preserve-structure",
-    is_flag=True,
-    default=True,
-    help="Preserve subdirectory structure within target directory."
-)
-@click.option(
-    "--debug",
-    is_flag=True,
-    help="Enable debug mode for detailed logging."
-)
-def relocate_images(dir: str, target_dir: str, preserve_structure: bool, debug: bool):
-    """Relocate images to a specified directory and update all references in Markdown files."""
-    click.echo(f"Relocating images from {dir} to {target_dir}")
-    start_time = time.time()
-    
-    # Create image relocator
-    image_relocator = ImageRelocator(
-        source_dir=dir,
-        target_dir=target_dir,
-        preserve_structure=preserve_structure,
-        debug=debug
-    )
-    
-    # Run image relocation
-    stats = image_relocator.relocate()
-    
-    # Print completion message
-    elapsed_time = time.time() - start_time
-    click.echo(f"✅ Image relocation completed in {elapsed_time:.2f} seconds.")
-    click.echo(f"Images relocated: {stats['images_relocated']}")
-    click.echo(f"Files updated: {stats['files_updated']}")
-    
-    if stats['errors'] > 0:
-        click.echo(f"❌ {stats['errors']} errors encountered.")
-
-
 @cli.command()
 @click.option(
     "--input-dir", "-i",
