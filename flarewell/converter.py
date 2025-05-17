@@ -19,9 +19,7 @@ from flarewell.llm_service import LlmService
 
 
 class FlareConverter:
-    """
-    Main converter class for transforming Flare content to Docusaurus markdown.
-    """
+    """Convert Flare content to Markdown."""
 
     def __init__(
         self,
@@ -35,7 +33,24 @@ class FlareConverter:
         target: Optional[str] = None,
         exclude_dirs: Optional[List[str]] = None,
         debug: bool = False,
+        markdown_style: str = "docusaurus",
     ):
+        """Create a converter.
+
+        Args:
+            input_dir: Source directory containing Flare HTML or project files.
+            output_dir: Directory for the generated Markdown files.
+            input_type: Either ``"project"`` or ``"html"``.
+            preserve_structure: Mirror the input directory structure in the
+                output directory.
+            use_llm: Whether to call an LLM for structure suggestions.
+            llm_api_key: API key for the LLM if ``use_llm`` is ``True``.
+            llm_provider: LLM provider name.
+            target: Optional Flare target to build from.
+            exclude_dirs: Directories to exclude from conversion.
+            debug: Enable verbose logging.
+            markdown_style: ``"docusaurus"`` or ``"markdown"``.
+        """
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
         self.input_type = input_type
@@ -46,6 +61,7 @@ class FlareConverter:
         self.target = target
         self.exclude_dirs = exclude_dirs or []
         self.debug = debug
+        self.markdown_style = markdown_style
         
         # Initialize counters
         self.stats = {
@@ -63,8 +79,11 @@ class FlareConverter:
         # Initialize link mapper
         self.link_mapper = LinkMapper(preserve_structure=self.preserve_structure, debug=self.debug)
         
-        # Initialize the Docusaurus formatter with link mapper
-        self.formatter = DocusaurusFormatter(link_mapper=self.link_mapper)
+        # Initialize the formatter
+        self.formatter = DocusaurusFormatter(
+            link_mapper=self.link_mapper,
+            general_markdown=(self.markdown_style != "docusaurus"),
+        )
         
         # Initialize LLM service if requested
         self.llm_service = None
