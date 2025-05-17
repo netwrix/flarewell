@@ -85,7 +85,6 @@ def convert(
     verbose_image_cleanup: bool,
     debug: bool,
     no_sidebars: bool,
-    verbose_image_cleanup: bool,
     markdown_style: str,
 ):
     """Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
