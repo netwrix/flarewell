@@ -225,19 +225,27 @@ class DocusaurusFormatter:
         if self.general_markdown:
             return markdown
 
-        front_matter = {
-            "title": title,
-            "sidebar_position": sidebar_position,
-        }
+        def _escape(value: str) -> str:
+            """Escape double quotes and collapse whitespace."""
+            return value.replace("\n", " ").replace('"', '\\"').strip()
+
+        # Build front matter lines manually to keep title in quotes on one line
+        fm_lines = [
+            f'title: "{_escape(title)}"',
+            f"sidebar_position: {sidebar_position}",
+        ]
 
         if description:
-            front_matter["description"] = description
+            fm_lines.append(f'description: "{_escape(description)}"')
 
         if tags:
-            front_matter["tags"] = tags
+            tags_yaml = yaml.dump({"tags": tags}, default_flow_style=True).strip()
+            # tags_yaml will be like "tags: [a, b]"; keep everything after ':'
+            _, _, tag_values = tags_yaml.partition(":")
+            fm_lines.append(f"tags:{tag_values}")
 
-        yaml_content = yaml.dump(front_matter, default_flow_style=False)
-        return f"---\n{yaml_content}---\n\n{markdown}"
+        yaml_content = "\n".join(fm_lines)
+        return f"---\n{yaml_content}\n---\n\n{markdown}"
     
     def generate_sidebar_config(self, structure: Dict[str, Any]) -> Dict[str, Any]:
         """
