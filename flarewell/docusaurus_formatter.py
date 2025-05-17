@@ -71,11 +71,13 @@ class DocusaurusFormatter:
         for i, part in enumerate(parts):
             if part.startswith("```"):
                 continue
+
             subparts = re.split(r'(`[^`]*`)', part)
             for j, sub in enumerate(subparts):
                 if sub.startswith('`') and sub.endswith('`'):
                     continue
                 subparts[j] = _escape_segment(sub)
+
             parts[i] = ''.join(subparts)
         return ''.join(parts)
     
