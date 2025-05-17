@@ -223,13 +223,18 @@ class FlareConverter:
         """
         for asset in assets:
             source_path = self.input_dir / asset.get("path", "")
-            
+
             if self.preserve_structure:
-                rel_path = asset.get("rel_path", asset.get("path", ""))
+                rel_path = Path(asset.get("rel_path", asset.get("path", "")))
+                # Drop any leading 'Resources' directory from the asset path
+                rel_parts = [p for p in rel_path.parts if p.lower() != "resources"]
+                rel_path = Path(*rel_parts)
                 dest_path = self.output_dir / rel_path
             else:
                 # Use new path if provided by LLM
-                dest_path = self.output_dir / asset.get("new_path", asset.get("rel_path", ""))
+                new_path = Path(asset.get("new_path", asset.get("rel_path", "")))
+                rel_parts = [p for p in new_path.parts if p.lower() != "resources"]
+                dest_path = self.output_dir / Path(*rel_parts)
             
             # Create parent directories
             os.makedirs(dest_path.parent, exist_ok=True)
@@ -252,7 +257,9 @@ class FlareConverter:
             f.write(str(sidebar).replace("'", '"'))
             f.write(";")
 
-    def clean_missing_images(self) -> Dict[str, int]:
+    def clean_missing_images(self, verbose: bool = False) -> Dict[str, int]:
         """Scan markdown output for image references that do not exist."""
-        cleaner = MarkdownImageCleaner(str(self.output_dir), debug=self.debug)
+        cleaner = MarkdownImageCleaner(
+            str(self.output_dir), debug=self.debug or verbose
+        )
         return cleaner.clean()
