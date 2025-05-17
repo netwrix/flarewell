@@ -17,6 +17,14 @@ from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from flarewell.link_mapper import LinkMapper
 
+WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \t\-_()&'\"])")
+
+
+def _remove_windows_escapes(text: str) -> str:
+    """Remove stray backslash escaping and Windows carriage returns."""
+    text = text.replace("\r", "")
+    return WINDOWS_ESCAPE_RE.sub("", text)
+
 
 class DocusaurusFormatter:
     """
@@ -218,7 +226,10 @@ class DocusaurusFormatter:
         
         # Remove any remaining HTML tags except for details/summary
         markdown = re.sub(r'<(?!(details|\/details|summary|\/summary))[^>]*>', '', markdown)
-        
+
+        # Clean up any stray Windows escaping
+        markdown = _remove_windows_escapes(markdown)
+
         return markdown
     
     def add_frontmatter(

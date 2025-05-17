@@ -63,10 +63,9 @@ def cli():
     help="Enable debug mode for detailed logging."
 )
 @click.option(
-    "--markdown-style",
-    type=click.Choice(["docusaurus", "markdown"]),
-    default="docusaurus",
-    help="Output style for converted files."
+    "--verbose-image-cleanup",
+    is_flag=True,
+    help="Print details about removed image references.",
 )
 @click.option(
     "--markdown-style",
@@ -82,6 +81,7 @@ def convert(
     exclude_dir: List[str],
     verbose_image_cleanup: bool,
     debug: bool,
+    verbose_image_cleanup: bool,
     markdown_style: str,
 ):
     """Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
@@ -246,4 +246,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main() 
+    main()
