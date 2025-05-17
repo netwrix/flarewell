@@ -45,6 +45,39 @@ class DocusaurusFormatter:
     def _remove_windows_escapes(self, text: str) -> str:
         """Remove stray Windows-style escape characters."""
         return WINDOWS_ESCAPE_RE.sub("", text).replace("\r", "")
+
+    def _escape_mdx_braces(self, text: str) -> str:
+        """Escape curly braces outside of fenced or inline code blocks."""
+
+        def _escape_segment(segment: str) -> str:
+            """Escape braces in a plain text segment without using lookbehind."""
+            result = []
+            i = 0
+            while i < len(segment):
+                ch = segment[i]
+                # Preserve existing escapes
+                if ch == "\\" and i + 1 < len(segment):
+                    result.append(ch + segment[i + 1])
+                    i += 2
+                    continue
+                if ch == "{" or ch == "}":
+                    result.append("\\" + ch)
+                else:
+                    result.append(ch)
+                i += 1
+            return "".join(result)
+
+        parts = re.split(r'(```.*?```)', text, flags=re.DOTALL)
+        for i, part in enumerate(parts):
+            if part.startswith("```"):
+                continue
+            subparts = re.split(r'(`[^`]*`)', part)
+            for j, sub in enumerate(subparts):
+                if sub.startswith('`') and sub.endswith('`'):
+                    continue
+                subparts[j] = _escape_segment(sub)
+            parts[i] = ''.join(subparts)
+        return ''.join(parts)
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """
@@ -208,9 +241,12 @@ class DocusaurusFormatter:
         
         # Remove extra blank lines
         markdown = re.sub(r'\n{3,}', '\n\n', markdown)
-        
+
         # Fix code blocks
         markdown = re.sub(r'```\s+', '```\n', markdown)
+
+        # Escape curly braces outside of code blocks to avoid MDX parse errors
+        markdown = self._escape_mdx_braces(markdown)
         
         # Fix any remaining HTML artifacts
         # Convert any remaining <br> tags to newlines
