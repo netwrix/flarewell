@@ -73,10 +73,14 @@ class ImageRelocator:
             try:
                 # Get the path relative to the source directory
                 rel_path = source_path.relative_to(self.source_dir)
-                
+
+                # Remove any 'Resources' directory from the relative path
+                rel_parts = [p for p in rel_path.parts if p.lower() != "resources"]
+                rel_path_no_res = Path(*rel_parts)
+
                 if self.preserve_structure:
-                    # Keep subdirectory structure but place in target directory
-                    target_path = self.target_dir / rel_path
+                    # Keep subdirectory structure without the Resources folder
+                    target_path = self.target_dir / rel_path_no_res
                 else:
                     # Flatten structure, just keep filename
                     target_path = self.target_dir / source_path.name
@@ -84,17 +88,20 @@ class ImageRelocator:
                 # Create parent directories if they don't exist
                 os.makedirs(target_path.parent, exist_ok=True)
                 
-                # Copy the file
+                # Move the file so that no copy remains in the docs output
                 shutil.copy2(source_path, target_path)
+                os.remove(source_path)
                 
                 # Store the mapping for updating references
-                # For the key, use the relative path from source directory
-                key = str(rel_path)
-                
+                # Include both the original path and the path without 'Resources'
+                key_original = str(rel_path).replace("\\", "/")
+                key_no_res = str(rel_path_no_res).replace("\\", "/")
+
                 # For the value, calculate the relative path from source_dir to target_path
                 # This ensures consistent path resolution regardless of absolute paths
                 target_rel_path = os.path.relpath(target_path, self.source_dir)
-                self.relocated_images[key] = target_rel_path
+                self.relocated_images[key_original] = target_rel_path
+                self.relocated_images[key_no_res] = target_rel_path
                 
                 stats["images_relocated"] += 1
                 
@@ -217,8 +224,13 @@ class ImageRelocator:
             abs_path = os.path.normpath(os.path.join(current_dir, img_path)).replace('\\', '/')
         
         # Check if this image was relocated
-        if abs_path in self.relocated_images:
-            new_path = self.relocated_images[abs_path]
+        lookup_path = abs_path
+        if abs_path not in self.relocated_images and 'Resources/' in abs_path:
+            # Try again without the Resources folder
+            lookup_path = abs_path.replace('Resources/', '', 1)
+
+        if lookup_path in self.relocated_images:
+            new_path = self.relocated_images[lookup_path]
             
             # Calculate relative path from current file to the new image location
             try:
@@ -234,4 +246,4 @@ class ImageRelocator:
                 return '/' + new_path
         
         # If image wasn't relocated, return original path
-        return img_path 
+        return img_path
