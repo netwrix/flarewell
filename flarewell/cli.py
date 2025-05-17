@@ -68,19 +68,23 @@ def cli():
     help="Print details about removed image references.",
 )
 @click.option(
-    "--markdown-style",
-    type=click.Choice(["docusaurus", "markdown"]),
-    default="docusaurus",
-    help="Output style for converted files."
+    "--no-sidebars",
+    is_flag=True,
+    help="Skip sidebars.js generation."
+)
+@click.option(
+    "--verbose-image-cleanup",
+    is_flag=True,
+    help="Print details about removed image references."
 )
 def convert(
     input_dir: str,
     output_dir: str,
-    no_sidebars: bool,
     preserve_structure: bool,
     exclude_dir: List[str],
     verbose_image_cleanup: bool,
     debug: bool,
+    no_sidebars: bool,
     verbose_image_cleanup: bool,
     markdown_style: str,
 ):
@@ -218,7 +222,7 @@ def convert(
     # Remove references to images that do not exist
     click.echo("\nCleaning up references to missing images...")
     cleanup_start = time.time()
-    cleaner = MarkdownImageCleaner(output_dir, static_dir, debug=verbose_image_cleanup)
+    cleaner = MarkdownImageCleaner(output_dir, debug=verbose_image_cleanup)
     cleanup_stats = cleaner.clean()
     cleanup_time = time.time() - cleanup_start
     click.echo(f"✅ Image cleanup completed in {cleanup_time:.2f} seconds.")

@@ -37,7 +37,7 @@ class FlareConverter:
             input_type: Either ``"project"`` or ``"html"``.
             preserve_structure: Mirror the input directory structure in the
                 output directory.
-            generate_sidebars: Whether to create ``sidebars.js`` after conversion.
+            generate_sidebars: Generate ``sidebars.js`` in the output.
             target: Optional Flare target to build from.
             exclude_dirs: Directories to exclude from conversion.
             debug: Enable verbose logging.

@@ -26,7 +26,7 @@ Missing image references are removed during a post-conversion scan of the genera
 ## Features
 
 - Convert Flare HTML output to Markdown
-- Maintain folder/file structure or suggest an improved structure using LLM
+- Preserve the original folder structure and automatically generate `sidebars.js`
 - Convert Flare-specific UI elements to Docusaurus equivalents (admonitions, expandable sections, etc.)
 - Generate Docusaurus sidebar configuration
 - Automatically relocate images to a `static` directory next to your docs
@@ -68,33 +68,16 @@ flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --markdown
 
 Converted images will be moved to a `static` directory next to your output docs automatically.
 
-
-#### Using LLM for Structure Suggestions
-
-To use an LLM to suggest an improved folder/file structure:
-
-```bash
-flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaurus/docs --use-llm --llm-api-key YOUR_API_KEY
-```
-
-You can also set your API key via environment variable:
-
-```bash
-export FLAREWELL_LLM_API_KEY=YOUR_API_KEY
-flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaurus/docs --use-llm
-```
-
 #### Convert Options
 
 - `--input-dir, -i`: Directory containing Flare HTML output
 - `--output-dir, -o`: Directory to output Docusaurus-compatible Markdown files
 - `--preserve-structure`: Preserve the original folder/file structure (default: `True`)
-- `--use-llm`: Use LLM to suggest an improved folder/file structure
-- `--llm-api-key`: API key for the LLM service (or set via `FLAREWELL_LLM_API_KEY` environment variable)
-- `--llm-provider`: LLM provider to use (`openai` or `anthropic`), default is `openai`
 - `--exclude-dir`: Directory patterns to exclude from conversion (can be used multiple times)
 - `--debug`: Enable debug mode for detailed logging
-- `--verbose-image-cleanup`: Print details about removed image references
+- `--no-sidebars`: Skip generating `sidebars.js`
+- `--verbose-image-cleanup`: Print each removed image reference
+- 
 ## Development
 
 ### Setup Development Environment
