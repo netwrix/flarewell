@@ -128,9 +128,8 @@ class FlareHtmlParser(FlareParserBase):
             
             body_content = str(main_content) if main_content else str(soup.body)
             
-            # Find all images and resources, removing references that don't exist
+            # Collect image references for post-processing
             images = []
-            missing_images = []
             if main_content:
                 for img in main_content.find_all("img"):
                     src = img.get("src", "")
@@ -138,19 +137,12 @@ class FlareHtmlParser(FlareParserBase):
                         continue
 
                     normalized_src = src.replace("\\", "/")
-                    img_path = (self.input_dir / normalized_src).resolve()
-
-                    if img_path.exists():
-                        images.append(normalized_src)
-                    else:
-                        missing_images.append(normalized_src)
-                        img.decompose()
+                    images.append(normalized_src)
             
             return {
                 "title": title_text,
                 "content": body_content,
                 "images": images,
-                "missing_images": missing_images,
             }
         
         except Exception as e:

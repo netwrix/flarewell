@@ -21,6 +21,7 @@ The link mapper is integrated into the main conversion workflow and uses a two-s
 Images are now automatically moved to a `static` directory located next to the
 output docs. All references inside Markdown files are updated, preserving
 relative paths and directory structure. No additional flags are required.
+Missing image references are removed during a post-conversion scan of the generated Markdown.
 
 ## Features
 
@@ -29,6 +30,7 @@ relative paths and directory structure. No additional flags are required.
 - Convert Flare-specific UI elements to Docusaurus equivalents (admonitions, expandable sections, etc.)
 - Generate Docusaurus sidebar configuration
 - Automatically relocate images to a `static` directory next to your docs
+- Remove references to images that are missing after conversion
 
 ## Installation
 
