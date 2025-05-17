@@ -160,12 +160,6 @@ class FlareConverter:
             file_info: Dictionary with file information.
         """
         content = self.parser.get_content(file_info)
-
-        # Warn about missing images; cleanup will occur after conversion
-        for img in content.get("missing_images", []):
-            print(
-                f"Missing image '{img}' referenced in {file_info.get('rel_path', file_info.get('path', ''))}."
-            )
         
         # Convert to markdown
         md_content = self.formatter.to_markdown(content)
