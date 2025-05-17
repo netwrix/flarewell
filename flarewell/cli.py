@@ -68,11 +68,6 @@ def cli():
     help="Enable debug mode for detailed logging."
 )
 @click.option(
-    "--fix-links",
-    is_flag=True,
-    help="Fix links in converted Markdown files after conversion."
-)
-@click.option(
     "--markdown-style",
     type=click.Choice(["docusaurus", "markdown"]),
     default="docusaurus",
@@ -93,7 +88,6 @@ def convert(
     preserve_structure: bool,
     exclude_dir: List[str],
     debug: bool,
-    fix_links: bool,
     markdown_style: str,
 ):
     """Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
@@ -129,83 +123,82 @@ def convert(
     if stats['errors'] > 0:
         click.echo(f"❌ {stats['errors']} errors encountered.")
     
-    # Fix links in output directory if requested
-    if fix_links:
-        click.echo("\nFixing links in converted Markdown files...")
-        fix_links_start = time.time()
-        
-        # Create directory path
-        md_dir = Path(output_dir)
-        
-        # Find all Markdown files
-        md_files = list(md_dir.glob("**/*.md"))
-        total_files = len(md_files)
-        click.echo(f"Found {total_files} Markdown files")
-        
-        # Create link mapper with debug mode if requested
-        link_mapper = LinkMapper(preserve_structure=preserve_structure, debug=debug)
-        
-        # Register all files in the mapper
-        click.echo("Building link registry...")
-        
-        registry = []
-        for file_path in md_files:
-            # Get path relative to the base directory
-            rel_path = file_path.relative_to(md_dir)
-            # Convert to .htm for registration
-            htm_path = rel_path.with_suffix(".htm")
-            
-            registry.append({
-                "rel_path": str(htm_path),
-                "title": file_path.stem
-            })
-        
-        # Register files with link mapper
-        link_mapper.register_files(registry)
-        click.echo(f"Registered {len(registry)} files in link map")
-        
-        # Process files
-        files_processed = 0
-        files_changed = 0
-        errors = 0
-        
-        for i, file_path in enumerate(md_files):
-            if debug or (i % 100 == 0 and i > 0):
-                click.echo(f"Processing file {i+1}/{total_files} ({(i+1)/total_files*100:.1f}%)")
-            
-            try:
-                # Read file content
-                with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
-                
-                # Get path relative to base dir for context
-                rel_path = str(file_path.relative_to(md_dir))
-                
-                # Check for links requiring transformation
-                if re.search(r'\]\([^)]*\.(htm|html)', content):
-                    # Transform links
-                    transformed = link_mapper.transform_links(content, rel_path)
-                    
-                    # Only write back if changes were made
-                    if transformed != content:
-                        with open(file_path, "w", encoding="utf-8") as f:
-                            f.write(transformed)
-                        files_changed += 1
-                
-                files_processed += 1
-                
-            except Exception as e:
-                click.echo(f"Error processing {file_path}: {str(e)}")
-                errors += 1
-        
-        # Print completion message
-        fix_links_time = time.time() - fix_links_start
-        click.echo(f"✅ Link fixing completed in {fix_links_time:.2f} seconds.")
-        click.echo(f"Files processed: {files_processed}")
-        click.echo(f"Files modified: {files_changed}")
-        
-        if errors > 0:
-            click.echo(f"❌ {errors} errors encountered during link fixing.")
+    # Fix links in output directory
+    click.echo("\nFixing links in converted Markdown files...")
+    fix_links_start = time.time()
+
+    # Create directory path
+    md_dir = Path(output_dir)
+
+    # Find all Markdown files
+    md_files = list(md_dir.glob("**/*.md"))
+    total_files = len(md_files)
+    click.echo(f"Found {total_files} Markdown files")
+
+    # Create link mapper with debug mode if requested
+    link_mapper = LinkMapper(preserve_structure=preserve_structure, debug=debug)
+
+    # Register all files in the mapper
+    click.echo("Building link registry...")
+
+    registry = []
+    for file_path in md_files:
+        # Get path relative to the base directory
+        rel_path = file_path.relative_to(md_dir)
+        # Convert to .htm for registration
+        htm_path = rel_path.with_suffix(".htm")
+
+        registry.append({
+            "rel_path": str(htm_path),
+            "title": file_path.stem
+        })
+
+    # Register files with link mapper
+    link_mapper.register_files(registry)
+    click.echo(f"Registered {len(registry)} files in link map")
+
+    # Process files
+    files_processed = 0
+    files_changed = 0
+    errors = 0
+
+    for i, file_path in enumerate(md_files):
+        if debug or (i % 100 == 0 and i > 0):
+            click.echo(f"Processing file {i+1}/{total_files} ({(i+1)/total_files*100:.1f}%)")
+
+        try:
+            # Read file content
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = f.read()
+
+            # Get path relative to base dir for context
+            rel_path = str(file_path.relative_to(md_dir))
+
+            # Check for links requiring transformation
+            if re.search(r'\]\([^)]*\.(htm|html)', content):
+                # Transform links
+                transformed = link_mapper.transform_links(content, rel_path)
+
+                # Only write back if changes were made
+                if transformed != content:
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        f.write(transformed)
+                    files_changed += 1
+
+            files_processed += 1
+
+        except Exception as e:
+            click.echo(f"Error processing {file_path}: {str(e)}")
+            errors += 1
+
+    # Print completion message
+    fix_links_time = time.time() - fix_links_start
+    click.echo(f"✅ Link fixing completed in {fix_links_time:.2f} seconds.")
+    click.echo(f"Files processed: {files_processed}")
+    click.echo(f"Files modified: {files_changed}")
+
+    if errors > 0:
+        click.echo(f"❌ {errors} errors encountered during link fixing.")
     
     # Relocate images by default to ../static
     click.echo("\nRelocating images to static directory...")
@@ -235,181 +228,8 @@ def convert(
     click.echo(f"\n✅ Total process completed in {total_time:.2f} seconds.")
 
 
-@cli.command()
-@click.option(
-    "--dir", "-d",
-    type=click.Path(exists=True, file_okay=False, dir_okay=True, resolve_path=True),
-    required=True,
-    help="Directory containing already-converted Markdown files."
-)
-@click.option(
-    "--debug",
-    is_flag=True,
-    help="Enable debug mode for detailed logging."
-)
-def fix_links(dir: str, debug: bool):
-    """Fix links in already-converted Markdown files to point to .md files instead of .htm/.html files."""
-    click.echo(f"Fixing links in Markdown files in: {dir}")
-    start_time = time.time()
-    
-    # Create directory path
-    md_dir = Path(dir)
-    
-    # Find all Markdown files
-    md_files = list(md_dir.glob("**/*.md"))
-    total_files = len(md_files)
-    click.echo(f"Found {total_files} Markdown files")
-    
-    # Create link mapper with debug mode if requested
-    link_mapper = LinkMapper(preserve_structure=True, debug=debug)
-    
-    # Register all files in the mapper
-    click.echo("Building link registry...")
-    
-    registry = []
-    for file_path in md_files:
-        # Get path relative to the base directory
-        rel_path = file_path.relative_to(md_dir)
-        # Convert to .htm for registration
-        htm_path = rel_path.with_suffix(".htm")
-        
-        registry.append({
-            "rel_path": str(htm_path),
-            "title": file_path.stem
-        })
-    
-    # Register files with link mapper
-    link_mapper.register_files(registry)
-    click.echo(f"Registered {len(registry)} files in link map")
-    
-    # Process files
-    files_processed = 0
-    files_changed = 0
-    errors = 0
-    
-    for i, file_path in enumerate(md_files):
-        if debug or (i % 100 == 0):
-            click.echo(f"Processing file {i+1}/{total_files} ({(i+1)/total_files*100:.1f}%)")
-        
-        try:
-            # Read file content
-            with open(file_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            
-            # Get path relative to base dir for context
-            rel_path = str(file_path.relative_to(md_dir))
-            
-            # Check for links requiring transformation
-            if re.search(r'\]\([^)]*\.(htm|html)', content):
-                # Transform links
-                transformed = link_mapper.transform_links(content, rel_path)
-                
-                # Only write back if changes were made
-                if transformed != content:
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        f.write(transformed)
-                    files_changed += 1
-            
-            files_processed += 1
-            
-        except Exception as e:
-            click.echo(f"Error processing {file_path}: {str(e)}")
-            errors += 1
-    
-    # Print completion message
-    elapsed_time = time.time() - start_time
-    click.echo(f"✅ Link fixing completed in {elapsed_time:.2f} seconds.")
-    click.echo(f"Files processed: {files_processed}")
-    click.echo(f"Files modified: {files_changed}")
-    
-    if errors > 0:
-        click.echo(f"❌ {errors} errors encountered.")
 
 
-@cli.command()
-@cli.command()
-@click.option(
-    "--input-dir", "-i",
-    type=click.Path(exists=True, file_okay=False, dir_okay=True, resolve_path=True),
-    required=True,
-    help="Directory containing Flare project."
-)
-@click.option(
-    "--output-file", "-o",
-    type=click.Path(file_okay=True, dir_okay=False),
-    help="Output file for analysis results (JSON format)."
-)
-@click.option(
-    "--list-targets",
-    is_flag=True,
-    help="List all targets in the project."
-)
-@click.option(
-    "--list-tocs",
-    is_flag=True,
-    help="List all TOCs in the project."
-)
-@click.option(
-    "--folder-stats",
-    is_flag=True,
-    help="Show statistics about folders in the project."
-)
-def analyze(
-    input_dir: str,
-    output_file: Optional[str],
-    list_targets: bool,
-    list_tocs: bool,
-    folder_stats: bool,
-):
-    """Analyze a Flare project to determine which content is actively used."""
-    # Analyze project
-    if list_targets:
-        targets = list_project_targets(input_dir)
-        click.echo("\nTargets:")
-        for target in targets:
-            click.echo(f"  - {target.get('name')}: {target.get('type', 'Unknown')}")
-        return
-    
-    if list_tocs:
-        tocs = list_project_tocs(input_dir)
-        click.echo("\nTOCs:")
-        for toc in tocs:
-            click.echo(f"  - {toc.get('name')}: {toc.get('title', '')}")
-        return
-    
-    if folder_stats:
-        folders = get_folder_statistics(input_dir)
-        click.echo("\nFolder Statistics:")
-        for folder, stats in folders.items():
-            click.echo(f"  - {folder}: {stats.get('files', 0)} files, {stats.get('referenced', 0)} referenced")
-        return
-    
-    # If no specific option was chosen, show a general summary
-    result = analyze_flare_project(input_dir)
-    
-    click.echo("\nProject Summary:")
-    click.echo(f"  - {len(result.get('targets', []))} targets")
-    click.echo(f"  - {len(result.get('tocs', []))} TOCs")
-    click.echo(f"  - {result.get('total_files', 0)} total files")
-    click.echo(f"  - {result.get('referenced_files', 0)} referenced files")
-    
-    # Show top folders
-    click.echo("\nTop 5 Folders by Files:")
-    folders = result.get('folder_stats', {})
-    sorted_folders = sorted(
-        folders.items(), 
-        key=lambda x: x[1].get('files', 0) if isinstance(x[1], dict) else 0, 
-        reverse=True
-    )
-    for folder, stats in sorted_folders[:5]:
-        if isinstance(stats, dict):
-            click.echo(f"  - {folder}: {stats.get('files', 0)} files, {stats.get('referenced', 0)} referenced")
-    
-    # Write to output file if specified
-    if output_file:
-        with open(output_file, "w") as f:
-            json.dump(result, f, indent=2)
-        click.echo(f"\nAnalysis results written to {output_file}")
 
 
 def main():

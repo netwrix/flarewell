@@ -28,7 +28,6 @@ relative paths and directory structure. No additional flags are required.
 - Maintain folder/file structure or suggest an improved structure using LLM
 - Convert Flare-specific UI elements to Docusaurus equivalents (admonitions, expandable sections, etc.)
 - Generate Docusaurus sidebar configuration
-- Fix references in already-converted Markdown files
 - Automatically relocate images to a `static` directory next to your docs
 
 ## Installation
@@ -47,10 +46,8 @@ pip install -e .
 
 ## Usage
 
-Flarewell offers three main commands:
-- `convert`: Transform Flare content to Docusaurus Markdown
-- `fix-links`: Update internal links in already-converted Markdown files
-- `analyze`: Examine a Flare project to identify production content
+Flarewell provides a single command:
+- `convert`: Transform Flare content to Docusaurus Markdown. Links are automatically fixed during conversion.
 
 ### Convert Command
 
@@ -64,24 +61,6 @@ Convert HTML to generic Markdown without Docusaurus front matter:
 
 ```bash
 flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --markdown-style markdown
-```
-
-Convert HTML to generic Markdown without Docusaurus front matter:
-
-```bash
-flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --input-type html --markdown-style markdown
-```
-
-Convert HTML to generic Markdown without Docusaurus front matter:
-
-```bash
-flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --input-type html --markdown-style markdown
-```
-
-Convert and automatically fix links in one step:
-
-```bash
-flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaurus/docs --input-type html --fix-links
 ```
 
 Converted images will be moved to a `static` directory next to your output docs automatically.
@@ -112,64 +91,6 @@ flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaur
 - `--llm-provider`: LLM provider to use (`openai` or `anthropic`), default is `openai`
 - `--exclude-dir`: Directory patterns to exclude from conversion (can be used multiple times)
 - `--debug`: Enable debug mode for detailed logging
-- `--fix-links`: Fix links in converted Markdown files after conversion
-
-### Fix Links Command
-
-The fix-links command updates all internal references in already-converted Markdown files to point to `.md` files instead of `.htm/.html` files. This is particularly useful when you've already converted your content but links still reference the original HTML files.
-
-Fix links in a directory of Markdown files:
-
-```bash
-flarewell fix-links --dir /path/to/markdown/files
-```
-
-Enable debug mode for more detailed logging:
-
-```bash
-flarewell fix-links --dir /path/to/markdown/files --debug
-```
-
-#### Fix Links Options
-
-- `--dir, -d`: Directory containing already-converted Markdown files
-- `--debug`: Enable debug mode for detailed logging
-
-### Analyze Command
-
-The analyze command helps identify which parts of a Flare project are actively used in production and which might be test, draft, or deprecated content.
-
-Get a full analysis of a Flare project:
-
-```bash
-flarewell analyze --input-dir /path/to/flare/project
-```
-
-List all targets in a project:
-
-```bash
-flarewell analyze --input-dir /path/to/flare/project --list-targets
-```
-
-Get folder statistics:
-
-```bash
-flarewell analyze --input-dir /path/to/flare/project --folder-stats
-```
-
-Output analysis to a JSON file:
-
-```bash
-flarewell analyze --input-dir /path/to/flare/project --output-file analysis.json
-```
-
-#### Analyze Options
-
-- `--input-dir, -i`: Directory containing Flare project
-- `--output-file, -o`: Output file for analysis results (JSON format)
-- `--list-targets`: List all targets in the project
-- `--list-tocs`: List all TOCs in the project
-- `--folder-stats`: Show statistics about folders in the project
 - 
 ## Development
 
