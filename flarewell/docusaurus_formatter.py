@@ -48,19 +48,36 @@ class DocusaurusFormatter:
 
     def _escape_mdx_braces(self, text: str) -> str:
         """Escape curly braces outside of fenced or inline code blocks."""
-        # Split on fenced code blocks
+
+        def _escape_segment(segment: str) -> str:
+            """Escape braces in a plain text segment without using lookbehind."""
+            result = []
+            i = 0
+            while i < len(segment):
+                ch = segment[i]
+                # Preserve existing escapes
+                if ch == "\\" and i + 1 < len(segment):
+                    result.append(ch + segment[i + 1])
+                    i += 2
+                    continue
+                if ch == "{" or ch == "}":
+                    result.append("\\" + ch)
+                else:
+                    result.append(ch)
+                i += 1
+            return "".join(result)
+
         parts = re.split(r'(```.*?```)', text, flags=re.DOTALL)
         for i, part in enumerate(parts):
-            if part.startswith('```'):
+            if part.startswith("```"):
                 continue
-            # Further split on inline code
+
             subparts = re.split(r'(`[^`]*`)', part)
             for j, sub in enumerate(subparts):
                 if sub.startswith('`') and sub.endswith('`'):
                     continue
-                sub = re.sub(r'(?<!\\){', r'\\{', sub)
-                sub = re.sub(r'(?<!\\)}', r'\\}', sub)
-                subparts[j] = sub
+                subparts[j] = _escape_segment(sub)
+
             parts[i] = ''.join(subparts)
         return ''.join(parts)
     
