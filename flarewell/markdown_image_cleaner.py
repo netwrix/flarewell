@@ -29,7 +29,12 @@ class MarkdownImageCleaner:
         def repl_md(match):
             nonlocal count
             img_path = match.group(2)
-            img_path_clean = img_path.split()[0].replace('\\', '/').strip()
+            # Remove optional title after the path
+            title_match = re.search(r'\s+"[^"]*"$', img_path)
+            if title_match:
+                img_path = img_path[:title_match.start()].strip()
+
+            img_path_clean = img_path.replace('\\', '/').strip()
             if img_path_clean.startswith(('http://', 'https://')):
                 return match.group(0)
             abs_path = (md_file.parent / img_path_clean).resolve()
@@ -40,7 +45,7 @@ class MarkdownImageCleaner:
                 return ''
             return match.group(0)
 
-        md_image_pattern = r'!\[([^\]]*)\]\(([^)]+)\)'
+        md_image_pattern = r'!\[([^\]]*)\]\(([^)]+)\s*(?:"[^"]*")?\)'
         text = re.sub(md_image_pattern, repl_md, text)
 
         def repl_html(match):

@@ -84,6 +84,9 @@ class ImageRelocator:
                 else:
                     # Flatten structure, just keep filename
                     target_path = self.target_dir / source_path.name
+
+                # Replace spaces in filenames with underscores
+                target_path = target_path.with_name(target_path.name.replace(" ", "_"))
                 
                 # Create parent directories if they don't exist
                 os.makedirs(target_path.parent, exist_ok=True)
