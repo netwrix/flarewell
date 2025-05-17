@@ -11,6 +11,8 @@ import re
 import yaml
 from pathlib import Path
 from typing import Dict, List, Any, Optional
+
+WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \"'.,;:])")
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from flarewell.link_mapper import LinkMapper
@@ -39,6 +41,10 @@ class DocusaurusFormatter:
         """
         self.link_mapper = link_mapper
         self.general_markdown = general_markdown
+
+    def _remove_windows_escapes(self, text: str) -> str:
+        """Remove stray Windows-style escape characters."""
+        return WINDOWS_ESCAPE_RE.sub("", text).replace("\r", "")
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """
@@ -179,6 +185,8 @@ class DocusaurusFormatter:
         Returns:
             Processed markdown
         """
+        markdown = self._remove_windows_escapes(markdown)
+
         if not self.general_markdown:
             # Fix admonitions (notes, warnings, tips)
             markdown = re.sub(r':::note\s+', ":::note\n", markdown)
@@ -236,41 +244,26 @@ class DocusaurusFormatter:
         if self.general_markdown:
             return markdown
 
-        title = _remove_windows_escapes(title)
-        description = _remove_windows_escapes(description)
-        if tags:
-            tags = [_remove_windows_escapes(t) for t in tags]
+        title = self._remove_windows_escapes(title).replace('"', '\\"').strip()
+        if not title:
+            first_line = markdown.split('\n', 1)[0]
+            heading = re.match(r"#\s*(.*)", first_line)
+            title = heading.group(1).strip() if heading else "Untitled"
 
-        front_matter = {
-            "title": title,
-            "sidebar_position": sidebar_position,
-        }
+        lines = [f'title: "{title}"', f'sidebar_position: {sidebar_position}']
 
         if description:
-            fm_lines.append(f'description: "{_escape(description)}"')
+            desc = self._remove_windows_escapes(description).replace('"', '\\"')
+            lines.append(f'description: "{desc}"')
 
         if tags:
-            tags_yaml = yaml.dump({"tags": tags}, default_flow_style=True).strip()
-            # tags_yaml will be like "tags: [a, b]"; keep everything after ':'
-            _, _, tag_values = tags_yaml.partition(":")
-            fm_lines.append(f"tags:{tag_values}")
+            lines.append("tags:")
+            for tag in tags:
+                clean_tag = self._remove_windows_escapes(tag).replace('"', '\\"')
+                lines.append(f'  - "{clean_tag}"')
 
-        # Manually construct YAML to keep title on one line with double quotes
-        def q(val: str) -> str:
-            return '"' + val.replace('"', '\\"') + '"'
-
-        yaml_lines = [f"title: {q(title)}", f"sidebar_position: {sidebar_position}"]
-
-        if description:
-            yaml_lines.append(f"description: {q(description)}")
-
-        if tags:
-            tag_str = '[' + ', '.join(q(t) for t in tags) + ']'
-            yaml_lines.append(f"tags: {tag_str}")
-
-        yaml_content = "\n".join(yaml_lines) + "\n"
-
-        return f"---\n{yaml_content}---\n\n{markdown}"
+        yaml_content = "\n".join(lines)
+        return f"---\n{yaml_content}\n---\n\n{markdown}"
     
     def generate_sidebar_config(self, structure: Dict[str, Any]) -> Dict[str, Any]:
         """
