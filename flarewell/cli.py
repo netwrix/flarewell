@@ -12,14 +12,13 @@ from pathlib import Path
 from typing import Optional, List
 
 from flarewell.converter import FlareConverter
-from flarewell.flare_analyzer import analyze_flare_project, list_project_targets, list_project_tocs, get_folder_statistics
 from flarewell.link_mapper import LinkMapper
 from flarewell.image_relocator import ImageRelocator
 
 
 @click.group()
 def cli():
-    """Flarewell: Convert MadCap Flare projects to Docusaurus-compatible Markdown."""
+    """Flarewell: Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
     pass
 
 
@@ -28,7 +27,7 @@ def cli():
     "--input-dir", "-i",
     type=click.Path(exists=True, file_okay=False, dir_okay=True, resolve_path=True),
     required=True,
-    help="Directory containing Flare project or HTML output."
+    help="Directory containing Flare HTML output."
 )
 @click.option(
     "--output-dir", "-o",
@@ -53,20 +52,10 @@ def cli():
     help="LLM provider to use when --use-llm is specified."
 )
 @click.option(
-    "--input-type",
-    type=click.Choice(["project", "html"]),
-    default="project",
-    help="Type of input. 'project' for Flare project files, 'html' for Flare HTML output."
-)
-@click.option(
     "--preserve-structure",
     is_flag=True,
     default=True,
     help="Preserve the original folder/file structure."
-)
-@click.option(
-    "--target",
-    help="Specify a specific target to convert (use the analyze command to list available targets)."
 )
 @click.option(
     "--exclude-dir",
@@ -89,22 +78,26 @@ def cli():
     default="docusaurus",
     help="Output style for converted files."
 )
+@click.option(
+    "--markdown-style",
+    type=click.Choice(["docusaurus", "markdown"]),
+    default="docusaurus",
+    help="Output style for converted files."
+)
 def convert(
     input_dir: str,
     output_dir: str,
     use_llm: bool,
     llm_api_key: Optional[str],
     llm_provider: str,
-    input_type: str,
     preserve_structure: bool,
-    target: Optional[str],
     exclude_dir: List[str],
     debug: bool,
     fix_links: bool,
     markdown_style: str,
 ):
-    """Convert MadCap Flare documentation to Docusaurus-compatible Markdown."""
-    click.echo(f"Converting {input_type} from {input_dir} to {output_dir}")
+    """Convert MadCap Flare HTML output to Docusaurus-compatible Markdown."""
+    click.echo(f"Converting HTML from {input_dir} to {output_dir}")
     
     # Make sure output directory exists
     os.makedirs(output_dir, exist_ok=True)
@@ -114,12 +107,10 @@ def convert(
     converter = FlareConverter(
         input_dir=input_dir,
         output_dir=output_dir,
-        input_type=input_type,
         preserve_structure=preserve_structure,
         use_llm=use_llm,
         llm_api_key=llm_api_key,
         llm_provider=llm_provider,
-        target=target,
         exclude_dirs=exclude_dir,
         debug=debug,
         markdown_style=markdown_style,
