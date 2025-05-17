@@ -43,9 +43,19 @@ def cli():
     help="Preserve the original folder/file structure."
 )
 @click.option(
+    "--no-sidebars",
+    is_flag=True,
+    help="Skip sidebar.js generation."
+)
+@click.option(
     "--exclude-dir",
     multiple=True,
     help="Directory patterns to exclude from conversion (can be used multiple times)."
+)
+@click.option(
+    "--verbose-image-cleanup",
+    is_flag=True,
+    help="Print each removed image reference and deleted file."
 )
 @click.option(
     "--debug",
@@ -53,10 +63,9 @@ def cli():
     help="Enable debug mode for detailed logging."
 )
 @click.option(
-    "--markdown-style",
-    type=click.Choice(["docusaurus", "markdown"]),
-    default="docusaurus",
-    help="Output style for converted files."
+    "--verbose-image-cleanup",
+    is_flag=True,
+    help="Print details about removed image references.",
 )
 @click.option(
     "--no-sidebars",
@@ -73,6 +82,7 @@ def convert(
     output_dir: str,
     preserve_structure: bool,
     exclude_dir: List[str],
+    verbose_image_cleanup: bool,
     debug: bool,
     no_sidebars: bool,
     verbose_image_cleanup: bool,
@@ -240,4 +250,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main() 
+    main()

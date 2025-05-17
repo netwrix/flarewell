@@ -83,13 +83,14 @@ class ImageRelocator:
                     target_path = self.target_dir / rel_path_no_res
                 else:
                     # Flatten structure, just keep filename
-                    target_path = self.target_dir / source_path.name
+                    target_path = self.target_dir / source_path.name.replace(" ", "_")
                 
                 # Create parent directories if they don't exist
                 os.makedirs(target_path.parent, exist_ok=True)
                 
-                # Copy the file
+                # Move the file so that no copy remains in the docs output
                 shutil.copy2(source_path, target_path)
+                os.remove(source_path)
                 
                 # Store the mapping for updating references
                 # Include both the original path and the path without 'Resources'
@@ -167,9 +168,13 @@ class ImageRelocator:
         Returns:
             Updated content with corrected image references
         """
-        # Pattern for Markdown image links 
+        # Pattern for Markdown image links allowing nested parentheses
         # Format: ![alt text](image/path.jpg "optional title")
-        md_image_pattern = r'!\[([^\]]*)\]\(([^)]+)\s*(?:"[^"]*")?\)'
+        md_image_pattern = (
+            r'!\[([^\]]*)\]\('
+            r'((?:[^()]|\([^)]*\))*?\.(?:png|jpg|jpeg|gif|svg|bmp|tiff|webp))'
+            r'(?:\s+"([^"]*)")?\)'
+        )
         
         # Get relative path for the current file
         rel_current_dir = os.path.dirname(str(current_file.relative_to(self.source_dir)))
@@ -178,13 +183,8 @@ class ImageRelocator:
         def transform_image_link(match):
             alt_text = match.group(1)
             img_path = match.group(2)
-            
-            # Extract title if present
-            title_match = re.search(r'\s+"([^"]+)"$', img_path)
-            title = ""
-            if title_match:
-                title = f' "{title_match.group(1)}"'
-                img_path = img_path.replace(title_match.group(0), '')
+            title_text = match.group(3) or ""
+            title = f' "{title_text}"' if title_text else ""
             
             # Skip external images
             if img_path.startswith(('http://', 'https://')):
@@ -201,25 +201,15 @@ class ImageRelocator:
         return re.sub(md_image_pattern, transform_image_link, content)
     
     def _resolve_image_path(self, img_path: str, current_dir: str) -> str:
-        """
-        Resolve an image path to its new location.
-        
-        Args:
-            img_path: Original image path
-            current_dir: Directory of the file containing the image reference
-            
-        Returns:
-            Updated image path
-        """
+        """Resolve an image path to its new location."""
+
         # Normalize slashes and remove leading/trailing slashes
         img_path = img_path.replace('\\', '/').strip('/')
-        
-        # Handle absolute paths (starting with /)
+
+        # Determine the absolute path of the referenced image relative to source_dir
         if img_path.startswith('/'):
-            # Remove leading slash for lookup
             abs_path = img_path.lstrip('/')
         else:
-            # Join with current directory to get absolute path
             abs_path = os.path.normpath(os.path.join(current_dir, img_path)).replace('\\', '/')
         
         # Check if this image was relocated
@@ -233,16 +223,15 @@ class ImageRelocator:
             
             # Calculate relative path from current file to the new image location
             try:
-                rel_path = os.path.relpath(new_path, current_dir).replace('\\', '/')
-                
-                # For root level links, don't use "./" prefix
+                abs_new = os.path.normpath(os.path.join(self.source_dir, new_path))
+                abs_current = os.path.normpath(os.path.join(self.source_dir, current_dir))
+                rel_path = os.path.relpath(abs_new, abs_current).replace('\\', '/')
+
                 if rel_path.startswith('./') and '/' not in rel_path[2:]:
                     rel_path = rel_path[2:]
-                    
+
                 return rel_path
             except ValueError:
-                # If relpath fails, return the absolute path
                 return '/' + new_path
-        
-        # If image wasn't relocated, return original path
-        return img_path 
+
+        return img_path

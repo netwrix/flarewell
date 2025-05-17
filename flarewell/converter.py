@@ -8,8 +8,6 @@ import shutil
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 
-from bs4 import BeautifulSoup
-import html2markdown
 import yaml
 
 from flarewell.flare_parser import FlareHtmlParser
@@ -82,7 +80,6 @@ class FlareConverter:
         """
         # Parse the Flare HTML structure
         project_structure = self.parser.parse()
-        
         
         # Filter topics based on exclude_dirs if specified
         if self.exclude_dirs:
@@ -243,7 +240,8 @@ class FlareConverter:
             f.write(str(sidebar).replace("'", '"'))
             f.write(";")
 
-    def clean_missing_images(self) -> Dict[str, int]:
+    def clean_missing_images(self, verbose: bool = False) -> Dict[str, int]:
         """Scan markdown output for image references that do not exist."""
-        cleaner = MarkdownImageCleaner(str(self.output_dir), debug=self.debug)
+        static_dir = self.output_dir.parent / "static"
+        cleaner = MarkdownImageCleaner(str(self.output_dir), str(static_dir), debug=self.debug)
         return cleaner.clean()

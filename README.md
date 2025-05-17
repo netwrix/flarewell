@@ -30,6 +30,7 @@ Missing image references are removed during a post-conversion scan of the genera
 - Convert Flare-specific UI elements to Docusaurus equivalents (admonitions, expandable sections, etc.)
 - Generate Docusaurus sidebar configuration
 - Automatically relocate images to a `static` directory next to your docs
+- Image filenames with spaces are stored using underscores in the output
 - Remove references to images that are missing after conversion
 
 ## Installation
