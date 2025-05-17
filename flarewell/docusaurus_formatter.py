@@ -4,15 +4,26 @@ Formatter for converting HTML content to Docusaurus-compatible Markdown.
 
 import re
 import yaml
+from pathlib import Path
 from typing import Dict, List, Any, Optional
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
+from flarewell.link_mapper import LinkMapper
 
 
 class DocusaurusFormatter:
     """
     Format HTML content as Docusaurus-compatible Markdown.
     """
+    
+    def __init__(self, link_mapper: Optional[LinkMapper] = None):
+        """
+        Initialize the formatter with optional link mapper.
+        
+        Args:
+            link_mapper: Optional LinkMapper instance for transforming links
+        """
+        self.link_mapper = link_mapper
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """
@@ -58,7 +69,8 @@ class DocusaurusFormatter:
         markdown = md(str(soup), heading_style="ATX", bullets="*", strip=["body", "html"])
         
         # Post-process the markdown
-        markdown = self._post_process_markdown(markdown)
+        current_file_path = content_dict.get("rel_path", "")
+        markdown = self._post_process_markdown(markdown, current_file_path)
         
         # Add the expandable sections back
         for i, section in enumerate(toggle_sections):
@@ -136,13 +148,22 @@ class DocusaurusFormatter:
             link.string = text
             
             xref.replace_with(link)
+        
+        # Preserve image paths with original structure for later relocation
+        for img in soup.select("img"):
+            src = img.get("src", "")
+            if src:
+                # Keep the original path but normalize slashes
+                normalized_src = src.replace("\\", "/")
+                img["src"] = normalized_src
     
-    def _post_process_markdown(self, markdown: str) -> str:
+    def _post_process_markdown(self, markdown: str, current_file_path: str = "") -> str:
         """
         Post-process markdown content to apply Docusaurus conventions and ensure all HTML is removed.
         
         Args:
             markdown: Markdown content
+            current_file_path: Path of the current file being processed
             
         Returns:
             Processed markdown
@@ -152,13 +173,18 @@ class DocusaurusFormatter:
         markdown = re.sub(r':::warning\s+', ":::warning\n", markdown)
         markdown = re.sub(r':::tip\s+', ":::tip\n", markdown)
         
-        # Fix internal links
-        # Replace .htm/.html extensions with nothing (Docusaurus will handle routes)
-        markdown = re.sub(r'\]\(([^)]+)\.(htm|html)\)', r'](\1)', markdown)
+        # Use link mapper to transform links if available
+        if self.link_mapper and current_file_path:
+            markdown = self.link_mapper.transform_links(markdown, current_file_path)
+        else:
+            # Legacy link handling if no link mapper is available
+            # Fix internal links by removing extensions
+            markdown = re.sub(r'\]\(([^)]+)\.(htm|html)\)', r'](\1)', markdown)
         
-        # Fix image paths
-        # This will need customization based on your asset structure
-        markdown = re.sub(r'\]\(Resources/Images/', r'](../static/img/', markdown)
+        # Preserve original image paths (don't modify them here)
+        # This allows the image relocator to handle them correctly later
+        # Only normalize any Resource/Images references to avoid duplicate slashes
+        markdown = re.sub(r'\]\(Resources/+Images/', r'](Resources/Images/', markdown)
         
         # Remove extra blank lines
         markdown = re.sub(r'\n{3,}', '\n\n', markdown)

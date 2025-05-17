@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Dell Isilon/PowerScale Activity Auditing Configuration</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../EnterpriseAuditor/Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>Dell Isilon/PowerScale Activity Auditing Configuration</h1>
+                                        <p>Dell Isilon/PowerScale can be configured to audit Server Message Block (SMB) and NFS protocol access events on the Dell Isilon/PowerScale cluster. All audit data can be forwarded to the Dell Common Event Enabler (CEE). The <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> listens for all events coming through the Dell CEE and translates all relevant information into entries in the log files or syslog messages.</p>
+                                        <p>Protocol auditing must be enabled and then configured on a per-access zone basis. For example, all SMB protocol events on a particular access zone can be audited, while only attempts to delete files on a different access zone can be audited.</p>
+                                        <p>The audit events are logged and stored on the individual OneFS nodes where the SMB/NFS client initiated the activity. The stored events are then forwarded by the node to the Dell CEE instance or concurrently to several instances. At this point, Dell CEE forwards the audit event to a defined endpoint, such as <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> agent.</p>
+                                        <p>Complete the following checklist prior to configuring <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> to monitor the host. Instructions for each item of the checklist are detailed within the following sections.</p>
+                                        <p><span style="font-weight: bold;">Checklist Item 1</span>: Plan Deployment</p>
+                                        <ul>
+                                            <li>
+                                                <p>Prior to beginning the deployment, gather the following:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>DNS name of Isilon/PowerScale CIFS share(s) to be monitored</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Access Zone(s) containing the CIFS shares to be monitored</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Account with access to the OneFS UI or CLI</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Download the Dell CEE from:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><a href="https://www.dell.com/support/home/en-us/" class="Hyperlink" target="_blank" title="Dell Technologies Support" alt="Dell Techlologies Support">https://www.dell.com/support/home/en-us/</a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <p class="Recommended-1" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;&lt;i&gt;RECOMMENDED: &lt;/i&gt;&lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Recommended"><span style="color: #fb8000;" class="mcFormatColor"><b><i>RECOMMENDED: </i></b></span></span></span>You can achieve higher throughput and fault tolerance by monitoring the Isilon/PowerScale cluster with more than one pair of Dell CEE and <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent. The activity will be evenly distributed between the pairs.</p>
+                                        </ul>
+                                        <p><span style="font-weight: bold;">Checklist Item 2</span>: <a href="InstallCEE.htm" title="Install Dell CEE" alt="Install Dell CEE" target="_parent" class="MCXref xref">Install Dell CEE</a></p>
+                                        <ul>
+                                            <li>
+                                                <p>Dell CEE should be installed on a Windows or a Linux server.</p>
+                                                <p class="Recommended-1" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;&lt;i&gt;RECOMMENDED: &lt;/i&gt;&lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Recommended"><span style="color: #fb8000;" class="mcFormatColor"><b><i>RECOMMENDED: </i></b></span></span></span>Dell CEE can be installed on the same server as the Activity Agent, or on a different Windows or Linux server. If CEE is installed on the same server, the Activity Agent can configure it automatically.</p>
+                                            </li>
+                                            <li>
+                                                <p>Important:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Dell CEE 8.8 is the minimum supported version. It is recommended to use the latest available version.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Dell CEE requires .NET Framework 3.5 to be installed on the Windows server</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p><span style="font-weight: bold;">Checklist Item 3</span>: Configure Auditing on the Dell  Isilon/PowerScale Cluster</p>
+                                        <ul>
+                                            <li>
+                                                <p>Select method:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Recommended-1" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;&lt;i&gt;RECOMMENDED: &lt;/i&gt;&lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Recommended"><span style="color: #fb8000;" class="mcFormatColor"><b><i>RECOMMENDED: </i></b></span></span></span>Allow the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> to configure auditing automatically. </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Automation completed while the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> is configured to monitor the Isilon/PowerScale device</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Automatically sets CEE Server with the IP Address of the server where CEE is installed</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Automatically sets Storage Cluster Name to exactly match the name known to the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span></p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Choose between monitoring all Access Zones or scoping to specific Access Zones </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><a href="ManualConfiguration.htm" target="_parent" title="Manually Configure Auditing in OneFS" alt="Manually Configure Auditing in OneFS" class="MCXref xref">Manually Configure Auditing in OneFS</a>
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>After configuration, add the Isilon/PowerScale device to be monitored by the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Important:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Value of the <b>Storage Cluster Name</b> field must exactly match the name entered for the monitored host in the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console. If the Storage Cluster Name cannot be modified (for example, another 3rd party depends on it), you need to set the Host Aliases parameter in the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console. Otherwise, if for some reason the Storage Cluster Name must be left empty, one can list OneFS cluster node names in the Host Aliases.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>If the Storage Cluster Name is not empty, set the Host Aliases parameter to its value</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>If the Storage Cluster Name is empty, set the Host Aliases to a semicolon-separated list of OneFS node names</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>Include all Access Zones to be monitored in the auditing configuration</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>As soon as  the first CEE is installed, Isilon/PowerScale will start to send all activity, including all previous audit events, to the agent. The start time can be modified to exclude previously recorded audit events to prevent the agent from becoming overloaded with data.  It can be done using OneFS CLI only with isi audit modify command to edit the start time.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Start time command:</p>
+                                                                <div class="codeSnippet">
+                                                                    <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>isi audit settings global modify <span style="color: #000000; ">--</span>cee<span style="color: #000000; ">-</span>log<span style="color: #000000; ">-</span>time <span style="color: #000000; ">[</span>Protocol@<span style="color: #df5000; ">2021</span><span style="color: #000000; ">-</span><span style="color: #df5000; ">04</span><span style="color: #000000; ">-</span><span style="color: #df5000; ">23</span> <span style="color: #df5000; ">14</span>:<span style="color: #df5000; ">00</span>:<span style="color: #df5000; ">00</span><span style="color: #000000; ">]</span></code></pre>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p>View progress: </p>
+                                                                <div class="codeSnippet">
+                                                                    <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>isi_for_array isi audit progress view</code></pre>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p>See the Audit log time adjustment section of the Dell <a href="https://www.dellemc.com/resources/en-us/asset/white-papers/products/storage/h12428-wp-best-practice-guide-isilon-file-system-auditing.pdf" target="_blank" title="File System Auditing with Dell PowerScale and Dell Common Event Enabler" alt="File System Auditing with Dell PowerScale and Dell Common Event Enabler">File System Auditing with Dell PowerScale and Dell Common Event Enabler</a> documentation for additional information.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>For automatic configuration, an account needs to be provisioned with the following privileges:</p>
+                                        <p class="Bold_Subheading">Read-only Privileges</p>
+                                        <ul>
+                                            <li>
+                                                <p>ISI_PRIV_LOGIN_PAPI</p>
+                                            </li>
+                                            <li>
+                                                <p>ISI_PRIV_AUTH</p>
+                                            </li>
+                                            <li>
+                                                <p>ISI_PRIV_SMB</p>
+                                            </li>
+                                            <li>
+                                                <p>ISI_PRIV_NFS</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Read-Write Privilege</p>
+                                        <ul>
+                                            <li>
+                                                <p>ISI_PRIV_AUDIT</p>
+                                            </li>
+                                        </ul>
+                                        <p>Privileges can be added to a role and then the role can be assigned to an account. Use the following commands to create a role, add privileges, and assign the role to an account:</p>
+                                        <div class="codeSnippet">
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>isi auth role create --name=activity_monitor<br />isi auth roles modify activity_monitor --add-priv-read="ISI_PRIV_LOGIN_PAPI,ISI_PRIV_AUTH,ISI_PRIV_SMB,ISI_PRIV_NFS"<br />isi auth roles modify activity_monitor --add-priv-write="ISI_PRIV_AUDIT"<br />isi auth roles modify activity_monitor --add-user="ACCOUNT_NAME"</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Assigned privileges can be verified with the following command:</p>
+                                        <div class="codeSnippet">
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>isi auth mapping token "ACCOUNT_NAME"</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Another way to check the privileges is to use the <b>OneFS Web UI</b> in the <b>OneFS</b> &gt; <b>Membership</b> &gt; <b>User Mapping</b> &gt; <b>Test User Mapping</b> section.</p>
+                                        <p><span style="font-weight: bold;">Checklist Item 4</span>: Configure Dell CEE to Forward Events to the Activity Agent. See the <a href="Validate.htm" target="_parent" title="Validate Setup" alt="Validate Setup" class="MCXref xref">Validate Setup</a> topic for additional information. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -14,6 +14,7 @@ import yaml
 
 from flarewell.flare_parser import FlareProjectParser, FlareHtmlParser
 from flarewell.docusaurus_formatter import DocusaurusFormatter
+from flarewell.link_mapper import LinkMapper
 from flarewell.llm_service import LlmService
 
 
@@ -33,6 +34,7 @@ class FlareConverter:
         llm_provider: str = "openai",
         target: Optional[str] = None,
         exclude_dirs: Optional[List[str]] = None,
+        debug: bool = False,
     ):
         self.input_dir = Path(input_dir)
         self.output_dir = Path(output_dir)
@@ -43,6 +45,7 @@ class FlareConverter:
         self.llm_provider = llm_provider
         self.target = target
         self.exclude_dirs = exclude_dirs or []
+        self.debug = debug
         
         # Initialize counters
         self.stats = {
@@ -57,8 +60,11 @@ class FlareConverter:
         else:  # input_type == "html"
             self.parser = FlareHtmlParser(self.input_dir)
         
-        # Initialize the Docusaurus formatter
-        self.formatter = DocusaurusFormatter()
+        # Initialize link mapper
+        self.link_mapper = LinkMapper(preserve_structure=self.preserve_structure, debug=self.debug)
+        
+        # Initialize the Docusaurus formatter with link mapper
+        self.formatter = DocusaurusFormatter(link_mapper=self.link_mapper)
         
         # Initialize LLM service if requested
         self.llm_service = None
@@ -94,9 +100,24 @@ class FlareConverter:
                     filtered_topics.append(item)
             project_structure["topics"] = filtered_topics
         
+        # First, build the complete link mapping registry
+        print("Building link mapping registry...")
+        self.link_mapper.register_files(project_structure.get("topics", []))
+        
+        # Dump the link map for debugging if requested
+        if self.debug:
+            self.link_mapper.dump_link_map()
+        
         # Process files
-        for item in project_structure.get("topics", []):
+        file_count = len(project_structure.get("topics", []))
+        print(f"Converting {file_count} files...")
+        
+        for i, item in enumerate(project_structure.get("topics", [])):
             try:
+                # Print progress indicator for large projects
+                if file_count > 100 and i % 100 == 0:
+                    print(f"Progress: {i}/{file_count} files ({i/file_count*100:.1f}%)")
+                
                 self._process_file(item)
                 self.stats["converted"] += 1
             except Exception as e:
@@ -109,6 +130,12 @@ class FlareConverter:
         # Generate sidebar.js if needed
         if not self.preserve_structure and self.use_llm:
             self._generate_sidebar(project_structure)
+        
+        # Print link mapping report
+        link_report = self.link_mapper.generate_report()
+        print(f"Link mapping: {link_report['total_files']} files registered, "
+              f"{link_report['total_links']} links mapped, "
+              f"{link_report['processed_files']} files processed")
         
         return self.stats
     
@@ -149,6 +176,30 @@ class FlareConverter:
         # Write the file
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(md_content)
+        
+        if self.debug and "rel_path" in file_info and file_info["rel_path"].endswith((".htm", ".html")):
+            # Print link mapper diagnostics for the first few files
+            rel_path = file_info["rel_path"]
+            print(f"\nDebug info for file: {rel_path}")
+            
+            # Display how this file is registered in the link map
+            norm_path = self.link_mapper._normalize_path(rel_path)
+            base_path = os.path.splitext(norm_path)[0]
+            
+            print(f"Normalized path: {norm_path}")
+            print(f"Base path: {base_path}")
+            
+            # Check various ways this file might be referenced
+            variations = [
+                norm_path,
+                norm_path.lower(),
+                base_path,
+                base_path.lower(),
+            ]
+            
+            for var in variations:
+                if var in self.link_mapper.link_map:
+                    print(f"  Found in link map as: {var} → {self.link_mapper.link_map[var]}")
     
     def _copy_assets(self, assets: List[Dict[str, Any]]) -> None:
         """

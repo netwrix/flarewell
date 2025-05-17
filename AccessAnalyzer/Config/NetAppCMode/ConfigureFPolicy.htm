@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Configure FPolicy</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../EnterpriseAuditor/Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>Configure FPolicy</h1>
+                                        <p><span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> relies on the NetApp FPolicy framework for monitoring of file access events on Storage Virtual Machines (SVM). FPolicy needs to be configured for each SVM.</p>
+                                        <p>There are two ways to configure FPolicy:</p>
+                                        <ul>
+                                            <li>
+                                                <p><span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> agent can facilitate the <a href="#Automatic_Configuration_of_FPolicy" target="_parent" title="Automatic Configuration of FPolicy" alt="Automatic Configuration of FPolicy" class="MCXref xref">Automatic Configuration of FPolicy</a> for the monitored SVM using the ONTAP&#160;API. This mode is simple, but does not allow you to exclude certain volumes or shares of the SVM from being monitored. It also requires additional permissions to create and modify FPolicy. </p>
+                                            </li>
+                                            <li>
+                                                <p>Another option is to <a href="#Manually" target="_parent" title="Manually Configure FPolicy" alt="Manually Configure FPolicy" class="MCXref xref">Manually Configure FPolicy</a> for each SVM. This mode allows you to fine tune FPolicy by excluding certain volumes or shares from being monitored. It also reduces product permissions.</p>
+                                            </li>
+                                        </ul>
+                                        <p>Regardless of the chosen approach for FPolicy configuration, one also needs to perform extra steps if the FPolicy communication has to be secured with TLS. </p>
+                                        <h2>TLS Authentication Options</h2>
+                                        <p>There are two TLS FPolicy Authentication options that can be used: </p>
+                                        <ul>
+                                            <li>
+                                                <p>TLS, server authentication – Server only authentication</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>A certificate (Server Certificate) for the Agent server needs to be generated and copied to a PEM file. The Server Certificate PEM file needs to be saved locally on the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console server. </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>For manual FPolicy configuration, the Server Certificate needs to be installed on the SVM, and then server-authentication set.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>For automatic FPolicy configuration, the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> manages installation of the Server Certificate.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>TLS, mutual authentication – Mutual authentication</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>A certificate (Server Certificate) for the Agent server needs to be generated and copied to a PEM file. The Server Certificate PEM file needs to be saved locally on the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console server.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>A certificate (Client Certificate) for the SVM needs to be copied to a PEM file and saved locally on the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console server.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>For manual FPolicy configuration, the Server Certificate needs to be installed on the SVM and then mutual-authentication set.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>For automatic FPolicy configuration, mutual-authentication set before the configuration process. The <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> manages installation of both certificates.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h3>Generate Server Certificate</h3>
+                                        <p>A certificate (Server Certificate) for the Agent server needs to be generated and copied to a PEM file. This is required for both of the TLS authentication options.</p>
+                                        <p>The PEM file must contain both Public Key and Private Key parts. A certificate may be self-signed or issued by a certification authority. Below are the steps for generation of a self-signed certificate using OpenSSL toolkit.</p>
+                                        <p>Use the following command on the agent server to create the Server Certificate and copy it to a .pem file:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>openssl<span style="color: #000000; ">.</span>exe req <span style="color: #000000; ">-</span>x509 <span style="color: #000000; ">-</span>newkey rsa:<span style="color: #df5000; ">2048</span> <span style="color: #000000; ">-</span>keyout key<span style="color: #000000; ">.</span>pem <span style="color: #000000; ">-</span>out cert<span style="color: #000000; ">.</span>pem <span style="color: #000000; ">-</span>days <span style="color: #df5000; ">365</span> <span style="color: #000000; ">-</span>nodes <span style="color: #000000; ">-</span>subj <span style="color: #df5000; ">"/CN=[ACTIVITY_AGENT_SERVER_NAME]"</span>&#160;<br />copy cert<span style="color: #000000; ">.</span>pem<span style="color: #000000; ">+</span>key<span style="color: #000000; ">.</span>pem <span style="color: #000000; ">[</span>CERTIFICATE_FILE_NAME<span style="color: #000000; ">.</span>pem<span style="color: #000000; ">]</span><br />del cert<span style="color: #000000; ">.</span>pem key<span style="color: #000000; ">.</span>pem <span style="color: #000000; ">.</span>rnd</code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>openssl<span style="color: #000000; ">.</span>exe req <span style="color: #000000; ">-</span>x509 <span style="color: #000000; ">-</span>newkey rsa:<span style="color: #df5000; ">2048</span> <span style="color: #000000; ">-</span>keyout key<span style="color: #000000; ">.</span>pem <span style="color: #000000; ">-</span>out cert<span style="color: #000000; ">.</span>pem <span style="color: #000000; ">-</span>days <span style="color: #df5000; ">365</span> <span style="color: #000000; ">-</span>nodes <span style="color: #000000; ">-</span>subj <span style="color: #df5000; ">"/CN=testagentserver"</span>&#160;<br />copy cert<span style="color: #000000; ">.</span>pem<span style="color: #000000; ">+</span>key<span style="color: #000000; ">.</span>pem agentkey<span style="color: #000000; ">.</span>pem<br />del cert<span style="color: #000000; ">.</span>pem key<span style="color: #000000; ">.</span>pem <span style="color: #000000; ">.</span>rnd</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>In this example <code> agentkey.pem</code>  would be used as the Server Certificate. Save the Server Certificate locally on the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console server.</p>
+                                        <h3>Create PEM File for Client Certificate</h3>
+                                        <p>A certificate (Client Certificate) for the SVM needs to be copied to a PEM file. This is required for the TLS, mutual authentication option. Follow the steps to create the PEM file for the Client Certificate. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>On the SVM , use the following command to show the security certificate details:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>security certificate show <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>type server instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>security certificate show <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>type server instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Copy the security certificate details into a text file and copy the public key to a PEM file. The following variables from security details will be needed to set mutual-authentication during Part 6 of manual configuration and prior to automatic configuration:</p>
+                                        <ul>
+                                            <li>
+                                                <p>SVM </p>
+                                            </li>
+                                            <li>
+                                                <p>Common Name</p>
+                                            </li>
+                                            <li>
+                                                <p>Certificate Serial</p>
+                                            </li>
+                                            <li>
+                                                <p>Public Key Certificate</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Copy the value of Public Key Certificate field to a PEM file. The value spans multiple lines, starts with "<code style="font-family: 'Courier New';">----BEGIN CERTIFICATE-----</code>" and ends with "<code style="font-family: 'Courier New';">-----END CERTIFICATE-----</code>". </p>
+                                        <p>The Client Certificate PEM file has been created.</p>
+                                        <h2><a name="Persiste"></a>Persistent Store</h2>
+                                        <p>For ONTAP 9.15.1 and later, enabling the Persistent Store feature is recommended regardless of the chosen FPolicy configuration approach. The Persistent Store provides resilience and predictable latency in scenarios such as network delays or bursts of activity events. The feature uses a dedicated volume for each SVM as a staging buffer before events are sent to the agent.</p>
+                                        <p>Persistent&#160;Store requires the following parameters:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Volume name – If the volume does not exist, it will be created automatically (recommended).</p>
+                                            </li>
+                                            <li>
+                                                <p>Initial volume size – Specifies the starting size of the volume.</p>
+                                            </li>
+                                            <li>
+                                                <p>Autosize mode – Options include Off, Grow, or Grow/Shrink.</p>
+                                            </li>
+                                        </ul>
+                                        <p>The size depends on the time duration for which you want to persist the events and the rate of events. For example, if you want 30 minutes of events to persist in an SVM with a capacity of 5000 events per second and the average event record size of 0.6 KB, the required volume size is <code>5000 * 30 * 60 * 0.6 KB  = 5400000 KB ≈ 5 GB</code>. </p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To find the approximate event rate, use the FPolicy counter <code>requests_dispatched_rate</code>.</p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>For the Persistent Store to automatically create a volume, the SVM must have at least one local tier (aggregate) assigned. </p>
+                                        <p class="Bold_Subheading">To check that the SVM has assigned local tiers, use the following command:</p>
+                                        <p class="Command-Line">vserver show -vserver [SVM_NAME] -fields aggr-list</p>
+                                        <p>The command shows currently local tiers. If no tiers are assigned, "-" is displayed. </p>
+                                        <p class="Bold_Subheading">To assign local tiers to the SVM use the following command:</p>
+                                        <p class="Command-Line">vserver add-aggregates -vserver [SVM_NAME] -aggregates [AGGREGATE_LIST]</p>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <p class="Command-Line">vserver add-aggregates -vserver testserver -aggregates aggr1,aggr2</p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>This command is available to cluster administrators at the admin privilege level.</p>
+                                        <p>It is recommended to allow the volume to be created automatically. In this case, the FPolicy subsystem manages the volume, maintains the directory structure, and protects it from accidental deletion by marking it as not mountable.</p>
+                                        <p>If you choose to create the volume manually, ensure the following:</p>
+                                        <ul>
+                                            <li>
+                                                <p>The volume is not mounted and has no junction point.</p>
+                                            </li>
+                                            <li>
+                                                <p>The snapshot policy for the volume is set to none.</p>
+                                            </li>
+                                        </ul>
+                                        <p>For additional and up-to-date recommendations on volumes for the Persistent Store, refer to the NetApp documentation.</p>
+                                        <h2><a name="Manually"></a>Manually Configure FPolicy</h2>
+                                        <p>This section describes how to manually configure FPolicy. Manual configuration of the FPolicy is recommended if the policy needs to be scoped to monitor select volumes or shares. It is necessary to create several FPolicy components and then enable the FPolicy. See the sections corresponding to each part of this list:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Part 1: Install Server Certificate on the SVM (only if using TLS authentication)</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>This is only needed if using either of the TLS, … authentication options.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Part 2: Create External Engine</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>The External Engine defines how FPolicy makes and manages connections to external FPolicy servers like <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Part 3: Create FPolicy Events</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>An FPolicy event defines which protocol(s) to monitor and which file access events to monitor.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Part 4: Create Persistent Store (only if Persistent Store is used.&#160;RECOMMENDED)</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>A Persistent Store is used as a temporary on-disk storage before the events are sent to <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Part 5: Create FPolicy Policy</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="ListContinue2">The FPolicy policy associates the other three FPolicy components and allows for the designation of a privileged FPolicy user </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>If running the Access Auditing (FSAA), Activity Auditing (FSAC), and/or Sensitive Data Discovery Auditing scans, then this is the user account credential to be added to the <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> Connection Profile. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="ListContinue">
+                                                <p>Part 6: Create FPolicy Scope</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>The FPolicy scope creates the filters necessary to perform scans on specific shares or volumes.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Part 7: Set TLS Authentication (optional)</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="ListContinue2">This is only needed if using either of the TLS authentication options. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Part 8: Enable the FPolicy</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Once the FPolicy is enabled, the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent can be configured to monitor the SVM.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="ListContinue">Part 9: Connect FPolicy Server / Agent to Cluster Node (optional)</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>This is only needed if there is an issue with connection to the Cluster node or for troubleshooting a disconnection issue. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h3>Part 1: Install Server Certificate on the SVM</h3>
+                                        <p>If using the TLS authentication options, it is necessary to install the Server Certificate on the SVM. </p>
+                                        <p>Use the following command to install the Server Certificate:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>security certificate install type client<span style="color: #000000; ">-</span>ca <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>security certificate install type client<span style="color: #000000; ">-</span>ca <span style="color: #000000; ">-</span>vserver testserver</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>The command will ask you to provide a public certificate. Copy the public key from the Server Certificate PEM file, i.e. the block starting with "<code style="font-family: 'Courier New';">-----BEGIN CERTIFICATE-----</code>" and ending with "<code style="font-family: 'Courier New';">-----END CERTIFICATE-----</code>". Paste the block to the terminal window.</p>
+                                        <h4>Validate Part 1: Server Certificate Install</h4>
+                                        <p style="color: #000000;">Run the following command to validate the Server Certificate is installed:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>security certificate show <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>commonname <span style="color: #000000; ">[</span>ACTIVITY_AGENT_SERVER_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>type client<span style="color: #000000; ">-</span>ca instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>security certificate show <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>commonname testagentserver <span style="color: #000000; ">-</span>type client<span style="color: #000000; ">-</span>ca instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <h3><a name="Part2"></a>Part 2: Create External Engine</h3>
+                                        <p>The External Engine defines how FPolicy makes and manages connections to external FPolicy servers.</p>
+                                        <p class="Bold_Subheading">IMPORTANT:</p>
+                                        <ul>
+                                            <li>
+                                                <p>The <code style="font-family: 'Courier New';">-primary-servers</code> must be the server or servers hosting the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent.</p>
+                                            </li>
+                                            <li>
+                                                <p>If intending to use the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> with <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span>, then the primary server must also be the proxy server from which the <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> Access Auditing (FSAC) scans are running, e.g. the <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> Console server for local mode or the proxy server if running in any of the proxy mode options.</p>
+                                            </li>
+                                            <li>
+                                                <p>The following values are required:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><code>engine-name StealthAUDITEngine</code>, the names of the external engine object can be customized (see below).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>port 9999</code>, Port number can be customized, but it is recommended to use 9999.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>extern-engine-type asynchronous</code>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>ssl-option no-auth</code>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>send-buffer-size 6291456</code>, for ONTAP 9.10+ use <code>send-buffer-size 8388608</code></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>All parameters are case sensitive. </p>
+                                        <p>Use the following command to create the external engine:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>set <span style="color: #000000; ">-</span>privilege advanced<br />vserver fpolicy policy external<span style="color: #000000; ">-</span>engine create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>primary<span style="color: #000000; ">-</span>servers <span style="color: #000000; ">[</span>IP_ADDRESS<span style="color: #000000; ">,</span>…<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>port <span style="color: #df5000; ">9999</span> <span style="color: #000000; ">-</span><span style="color: #a71d5d; font-weight: bold; ">extern</span><span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>type asynchronous <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option no<span style="color: #000000; ">-</span>auth <span style="color: #000000; ">-</span>send<span style="color: #000000; ">-</span>buffer<span style="color: #000000; ">-</span>size <span style="color: #df5000; ">6291456</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>set <span style="color: #000000; ">-</span>privilege advanced<br />vserver fpolicy policy external<span style="color: #000000; ">-</span>engine create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>primary<span style="color: #000000; ">-</span>servers <span style="color: #df5000; ">192.168</span><span style="color: #000000; ">.</span><span style="color: #df5000; ">30.15</span> <span style="color: #000000; ">-</span>port <span style="color: #df5000; ">9999</span> <span style="color: #000000; ">-</span><span style="color: #a71d5d; font-weight: bold; ">extern</span><span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>type asynchronous <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option no<span style="color: #000000; ">-</span>auth <span style="color: #000000; ">-</span>send<span style="color: #000000; ">-</span>buffer<span style="color: #000000; ">-</span>size <span style="color: #df5000; ">6291456</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate Part 2: External Engine Creation</h4>
+                                        <p style="color: #000000;">Run the following command to validate the creation of the external engine:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>fpolicy policy external<span style="color: #000000; ">-</span>engine show <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Verify that the output is displayed as follows:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>Ontap915::<span style="color: #000000; ">&gt;</span> fpolicy policy external<span style="color: #000000; ">-</span>engine show <span style="color: #000000; ">-</span>vserver svm0 <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>instance<br />&#160;&#160;<span style="color: #000000; ">(</span>vserver fpolicy policy external<span style="color: #000000; ">-</span>engine show<span style="color: #000000; ">)</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vserver: svm0<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Engine: StealthAUDITEngine<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Primary FPolicy Servers: <span style="color: #df5000; ">192.168</span><span style="color: #000000; ">.</span><span style="color: #df5000; ">11.35</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Port Number of FPolicy Service: <span style="color: #df5000; ">9999</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Secondary FPolicy Servers: <span style="color: #000000; ">-</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;External Engine Type: asynchronous<br />&#160;&#160;SSL Option <span style="color: #a71d5d; font-weight: bold; ">for</span> External Communication: no<span style="color: #000000; ">-</span>auth<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FQDN <span style="color: #a71d5d; font-weight: bold; ">or</span> Custom Common Name: <span style="color: #000000; ">-</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Serial Number of Certificate: <span style="color: #000000; ">-</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Certificate Authority: <span style="color: #000000; ">-</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Is Resiliency Feature Enabled: <span style="color: #a71d5d; font-weight: bold; ">false</span><br />Maximum Notification Retention Duration: <span style="color: #df5000; ">3</span>m<br />&#160;&#160;&#160;&#160;&#160;Directory <span style="color: #a71d5d; font-weight: bold; ">for</span> Notification Storage: <span style="color: #000000; ">-</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;External Engine Format: xml</code></pre>
+                                            </div>
+                                        </div>
+                                        <p style="color: #000000;">Relevant NetApp Documentation: To learn more about creating an external engine, please visit the NetApp website and read the <a href="https://docs.netapp.com/us-en/ontap-cli-9141/vserver-fpolicy-policy-external-engine-create.html" class="Hyperlink" target="_blank" title="vserver fpolicy policy external-engine create" alt="vserver fpolicy policy external-engine create">vserver fpolicy policy external-engine create</a> article.</p>
+                                        <h3><a name="Part"></a>Part 3: Create FPolicy Event</h3>
+                                        <p style="color: #000000;">An event defines which protocol to monitor and which file access events to monitor.</p>
+                                        <p class="Bold_Subheading">IMPORTANT:</p>
+                                        <ul>
+                                            <li>
+                                                <p>The SVM used must be the SVM hosting the CIFS or NFS shares to be monitored.</p>
+                                            </li>
+                                            <li>
+                                                <p><span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> and the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> are capable of monitoring both NFS and CIFS. However, it is necessary to create separate events for each protocol.</p>
+                                            </li>
+                                            <li>
+                                                <p>The following values are required:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><code>event-name</code>
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>For CIFS shares – <code> StealthAUDITScreeningCifs</code>&#160;for successful events; <code>StealthAUDITScreeningFailedCifs</code> for failed events.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>For NFS shares – <code>StealthAUDITScreeningNfsV3, StealthAUDITScreeningNfsV4</code> for&#160;successful events; <code>StealthAUDITScreeningFailedNfsV3, StealthAUDITScreeningFailedNfsV4</code> for failed events.<br /><br />The names of the event objects can be customized (see <a href="#Customiz" target="_parent" title="Customization of FPolicy Object Names" alt="Customization of FPolicy Object Names" class="MCXref xref">Customization of FPolicy Object Names</a>).<br /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>volume-operation true</code>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>protocol</code> – one of the following <code>cifs</code>, <code>nfsv3</code>, <code>nfsv4</code></p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>monitor-fileop-failure</code> – <code>true </code>or <code>false</code>, indicates whether failed file operations are reported.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Limiting the file operations to be monitored is an excellent way to limit the performance impact the FPolicy will have on the NetApp device. The file operations from which to choose are below with additional filter options:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">create</code> – File create operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">create_dir</code> – Directory create operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">close</code> – File close operations</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Enable this operation for NFSv4 to capture all read operations</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">delete</code>&#160;– File delete operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">delete_dir</code> – Directory delete operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">link</code> – Link operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">open</code> – File open operations for CIFS protocol</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><code style="font-family: 'Courier New';">open-with-delete-intent</code> – Limits notification to only when an attempt is made to open a file with the intent to delete it, according to the <code style="font-family: 'Courier New';">FILE_DELETE_ON_CLOSE</code> flag specification</p>
+                                                                <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>File open <span style="color: #000000;">operations</span> are only supported with the <code style="font-family: 'Courier New';">open-with-delete-intent</code> filter applied.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">read</code> – File read operations</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><code style="font-family: 'Courier New';">first-read</code> – Limits notification to only first read operations for CIFS protocol. For ONTAP 9.2+, this filter can be used for both CIFS and NFS protocols.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">rename</code>– File rename operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">rename_dir</code>– Directory rename operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">setattr</code> – Set attribute operations and permission changes. The following filters are available for ONTAP 9.0+ to limit events to permission changes only:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>CIFS: </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-owner-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-group-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-sacl-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-dacl-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p>NFSv3:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-owner-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-group-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-mode-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p>NFSv4:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="ListContinue5" style="font-family: 'Courier New';"><code style="font-family: 'Courier New';">setattr-with-owner-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-group-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-mode-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="ListContinue5" style="font-family: 'Courier New';"><code style="font-family: 'Courier New';">setattr-with-sacl-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><code style="font-family: 'Courier New';">setattr-with-dacl-change</code>
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">symlink</code> – Symbolic link operations</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code style="font-family: 'Courier New';">write</code>&#160;– File write operations</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><code style="font-family: 'Courier New';">first-write</code> – Limits notification to only first write operations for CIFS protocol. For ONTAP 9.2+, this filter can be used for both CIFS and NFS protocols.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>For failed/denied events, the list of supported file operations is limited to the following values:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>CIFS: <code>open</code></p>
+                                                    </li>
+                                                    <li>
+                                                        <p>NFSv3: <code>create, create_dir, read, write, delete, delete_dir, rename, rename_dir, setattr, link</code></p>
+                                                    </li>
+                                                    <li>
+                                                        <p>NFSv4: <code>open, create, create_dir, read, write, delete, delete_dir, rename, rename_dir, setattr, link</code></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>All parameters are case sensitive.</p>
+                                        <p>Use the following command to create the FPolicy event for CIFS protocols:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningCifs <span style="color: #000000; ">-</span>volume<span style="color: #000000; ">-</span>operation <span style="color: #a71d5d; font-weight: bold; ">true</span> <span style="color: #000000; ">-</span>protocol cifs <span style="color: #000000; ">-</span>file<span style="color: #000000; ">-</span>operations <span style="color: #000000; ">[</span>COMMA_SEPARATED_FILE_OPERATIONS<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>filters <span style="color: #000000; ">[</span>COMMA_SEPARATED_FILTERS<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningCifs <span style="color: #000000; ">-</span>volume<span style="color: #000000; ">-</span>operation <span style="color: #a71d5d; font-weight: bold; ">true</span> <span style="color: #000000; ">-</span>protocol cifs <span style="color: #000000; ">-</span>file<span style="color: #000000; ">-</span>operations create<span style="color: #000000; ">,</span>create_dir<span style="color: #000000; ">,</span><span style="color: #a71d5d; font-weight: bold; ">delete</span><span style="color: #000000; ">,</span>delete_dir<span style="color: #000000; ">,</span>open<span style="color: #000000; ">,</span>read<span style="color: #000000; ">,</span>write<span style="color: #000000; ">,</span>rename<span style="color: #000000; ">,</span>rename_dir<span style="color: #000000; ">,</span>setattr <span style="color: #000000; ">-</span>filters first<span style="color: #000000; ">-</span>read<span style="color: #000000; ">,</span>first<span style="color: #000000; ">-</span>write<span style="color: #000000; ">,</span>open<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span><span style="color: #a71d5d; font-weight: bold; ">delete</span><span style="color: #000000; ">-</span>intent<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>owner<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>group<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>sacl<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>dacl<span style="color: #000000; ">-</span>change</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Use the following command to create the FPolicy event for NFSv3 protocols:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningNfsV3 <span style="color: #000000; ">-</span>volume<span style="color: #000000; ">-</span>operation <span style="color: #a71d5d; font-weight: bold; ">true</span> <span style="color: #000000; ">-</span>protocol nfsv3 <span style="color: #000000; ">-</span>file<span style="color: #000000; ">-</span>operations <span style="color: #000000; ">[</span>COMMA_SEPARATED_FILE_OPERATIONS<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>filters <span style="color: #000000; ">[</span>COMMA_SEPARATED_FILTERS<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningNfsV3 <span style="color: #000000; ">-</span>volume<span style="color: #000000; ">-</span>operation <span style="color: #a71d5d; font-weight: bold; ">true</span> <span style="color: #000000; ">-</span>protocol nfsv3 <span style="color: #000000; ">-</span>file<span style="color: #000000; ">-</span>operations create<span style="color: #000000; ">,</span>create_dir<span style="color: #000000; ">,</span><span style="color: #a71d5d; font-weight: bold; ">delete</span><span style="color: #000000; ">,</span>delete_dir<span style="color: #000000; ">,</span>read<span style="color: #000000; ">,</span>write<span style="color: #000000; ">,</span>rename<span style="color: #000000; ">,</span>rename_dir<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">,</span>link<span style="color: #000000; ">,</span>symlink <span style="color: #000000; ">-</span>filters first<span style="color: #000000; ">-</span>read<span style="color: #000000; ">,</span>first<span style="color: #000000; ">-</span>write<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>owner<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>group<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>mode<span style="color: #000000; ">-</span>change</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Use the following command to create the FPolicy event for NFSv4 protocols:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningNfsV4 <span style="color: #000000; ">-</span>volume<span style="color: #000000; ">-</span>operation <span style="color: #a71d5d; font-weight: bold; ">true</span> <span style="color: #000000; ">-</span>protocol nfsv4 <span style="color: #000000; ">-</span>file<span style="color: #000000; ">-</span>operations <span style="color: #000000; ">[</span>COMMA_SEPARATED_FILE_OPERATIONS<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>filters <span style="color: #000000; ">[</span>COMMA_SEPARATED_FILTERS<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningNfsV4 <span style="color: #000000; ">-</span>volume<span style="color: #000000; ">-</span>operation <span style="color: #a71d5d; font-weight: bold; ">true</span> <span style="color: #000000; ">-</span>protocol nfsv4 <span style="color: #000000; ">-</span>file<span style="color: #000000; ">-</span>operations create<span style="color: #000000; ">,</span>create_dir<span style="color: #000000; ">,</span><span style="color: #a71d5d; font-weight: bold; ">delete</span><span style="color: #000000; ">,</span>delete_dir<span style="color: #000000; ">,</span>read<span style="color: #000000; ">,</span>write<span style="color: #000000; ">,</span>rename<span style="color: #000000; ">,</span>rename_dir<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">,</span>link<span style="color: #000000; ">,</span>symlink<span style="color: #000000; ">,</span>close <span style="color: #000000; ">-</span>filters setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>group<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>mode<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>sacl<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span>setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>dacl<span style="color: #000000; ">-</span>change</code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate Part 3: FPolicy Event Creation</h4>
+                                        <p style="color: #000000;">Run the following command to validate the creation of the FPolicy event:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> show <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name <span style="color: #000000; ">[</span>StealthAUDITScreeningCifs <span style="color: #a71d5d; font-weight: bold; ">or</span> StealthAUDITScreeningNfsV3 <span style="color: #a71d5d; font-weight: bold; ">or</span> StealthAUDITScreeningNfsV4 <span style="color: #a71d5d; font-weight: bold; ">or</span> <span style="color: #000000; ">...]</span> <span style="color: #000000; ">-</span>instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> show <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningCifs <span style="color: #000000; ">-</span>instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Verify that the output is displayed as follows:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>Ontap915::<span style="color: #000000; ">&gt;</span> fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> show <span style="color: #000000; ">-</span>vserver svm0 <span style="color: #000000; ">-</span><span style="color: #000000; font-weight: bold; ">event</span><span style="color: #000000; ">-</span>name StealthAUDITScreeningCifs<br />&#160;&#160;<span style="color: #000000; ">(</span>vserver fpolicy policy <span style="color: #000000; font-weight: bold; ">event</span> show<span style="color: #000000; ">)</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vserver: svm0<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Event: StealthAUDITScreeningCifs<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Protocol: cifs<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;File Operations: create<span style="color: #000000; ">,</span> create_dir<span style="color: #000000; ">,</span> <span style="color: #a71d5d; font-weight: bold; ">delete</span><span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;delete_dir<span style="color: #000000; ">,</span> open<span style="color: #000000; ">,</span> read<span style="color: #000000; ">,</span> write<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;rename<span style="color: #000000; ">,</span> rename_dir<span style="color: #000000; ">,</span> setattr<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Filters: first<span style="color: #000000; ">-</span>read<span style="color: #000000; ">,</span> first<span style="color: #000000; ">-</span>write<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;open<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span><span style="color: #a71d5d; font-weight: bold; ">delete</span><span style="color: #000000; ">-</span>intent<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>owner<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>group<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>sacl<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>dacl<span style="color: #000000; ">-</span>change<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;setattr<span style="color: #000000; ">-</span>with<span style="color: #000000; ">-</span>mode<span style="color: #000000; ">-</span>change<br />&#160;&#160;&#160;&#160;&#160;Send Volume Operation Notifications: <span style="color: #a71d5d; font-weight: bold; ">true</span><br />Send Failed File Operation Notifications: <span style="color: #a71d5d; font-weight: bold; ">false</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p style="color: #000000;">Relevant NetApp Documentation: To learn more about creating an event, please visit the NetApp website and read the <a href="https://docs.netapp.com/us-en/ontap-cli-9141/vserver-fpolicy-policy-event-create.html" class="Hyperlink" target="_blank" title="vserver fpolicy policy event create" alt="vserver fpolicy policy event create">vserver fpolicy policy event create</a> article.</p>
+                                        <h3><a name="Part3"></a>Part 4: Create Persistent Store</h3>
+                                        <p>The Persistent Store provides a temporary on-disk storage for activity events before they are sent to <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent. The Persistent Store is optional but recommended for ONTAP 9.15.1 and later versions.</p>
+                                        <p class="Bold_Subheading">IMPORTANT:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Persistent Store is supported for ONTAP 9.15.1 and later versions.</p>
+                                            </li>
+                                            <li>
+                                                <p>The SVM used must be the one hosting the CIFS or NFS shares to be monitored.</p>
+                                            </li>
+                                            <li>
+                                                <p>There is no need to use an existing volume. A new volume will be created automatically and managed by the FPolicy subsystem.</p>
+                                            </li>
+                                            <li>
+                                                <p>The volume size depends on the duration for which the events persist and the event rate. For example, if you want 30 minutes of events to persist in an SVM with a capacity of 5000 events/second and the average event record size of 0.6 KB, the required volume size is <code>5000 * 30 * 60 * 0.6 KB  = 5400000 KB ≈ 5 GB</code>.</p>
+                                            </li>
+                                            <li>
+                                                <p>For the Persistent Store to create a volume automatically, at least one local tier (aggregate) must be assigned to the SVM. Use <code>vserver add-aggregates</code> to assign local tiers. </p>
+                                                <p>The following values are required:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><code>vserver</code> – The name of the SVM where you want to create the Persistent Store.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>persistent-store</code> – The name of the Persistent Store object. </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>The default name is <code>StealthAUDITPersistentStore</code>. <br />The names of the event objects can be customized (see <a href="#Customiz" title="Customization of FPolicy Object Names" alt="Customization of FPolicy Object Names" class="MCXref xref">Customization of FPolicy Object Names</a>).</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>volume</code> – The name of the volume used for event storage. </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>If the volume does not exist, it will be automatically created on an assigned local tier. This is recommended. </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>size</code> – The initial size of the volume. The format is <code>&lt;integer&gt;[KB|MB|GB]</code>.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>The following values are optional:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><code>autosize-mode</code> – Specifies the auto size behavior for the volume. Options include <code>off</code> (default), <code>grow</code>, or <code>grow_shrink</code>. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>All parameters are case sensitive. </p>
+                                        <p>Use the following command to create the Persistent Store:</p>
+                                        <p class="Command-Line">vserver fpolicy persistent-store create -vserver [SVM_NAME] -persistent-store [STORE_NAME] -volume [VOLUME_NAME] -size [SIZE] -autosize-mode [AUTOSIZE]</p>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <p class="Command-Line">vserver fpolicy persistent-store create -vserver testserver -persistent-store StealthAUDITPersistentStore -volume testserver_ps_vol -size 5GB -autosize-mode grow_shrink</p>
+                                        <h4>Validate Part 4: Create Persistent Store</h4>
+                                        <p>Run the following command to validate the creation of the Persistent Store:</p>
+                                        <p class="Command-Line">vserver fpolicy persistent-store show -vserver [SVM_NAME] -persistent-store StealthAUDITPersistentStore -instance</p>
+                                        <p>Ensure that the output is displayed as follows:</p>
+                                        <p class="Command-Line">cluster1::&gt; vserver fpolicy persistent-store show -vserver testserver -persistent-store StealthAUDITPersistentStore -instance<br></br> Vserver: testserver<br></br> Persistent Store Name: StealthAUDITPersistentStore <br></br> Volume name of the Persistent store: testserver_ps_vol<br></br> Size of the Persistent Store: 5GB<br></br> Autosize Mode for the Volume: grow_shrink</p>
+                                        <p> Visit the NetApp website and see the <a href="https://docs.netapp.com/us-en/ontap-cli/vserver-fpolicy-persistent-store-create.html" target="_blank" title="vserver fpolicy persistent store create" alt="vserver fpolicy persistent store create">vserver fpolicy persistent store create</a> article for additional information about creating a Persistent Store.</p>
+                                        <h3>Part 5: Create FPolicy Policy</h3>
+                                        <p style="color: #000000;">The FPolicy policy associates the other three FPolicy components and allows for the designation of a privileged FPolicy user, or the provisioned FPolicy account. If running the Access Auditing (FSAA), Activity Auditing (FSAC), and/or Sensitive Data Discovery Auditing scans in <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span>, then this is also the user account credential to be added to the <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> Connection Profile.</p>
+                                        <p class="Bold_Subheading">IMPORTANT:</p>
+                                        <ul>
+                                            <li style="color: #000000;">
+                                                <p>To monitor both CIFS and NFS protocols, two FPolicy Event were created. Multiple events can be included in the FPolicy policy.</p>
+                                            </li>
+                                            <li>
+                                                <p>The SVM used must be the SVM hosting the CIFS or NFS shares to be monitored.</p>
+                                            </li>
+                                            <li>
+                                                <p>The External Engine, FPolicy Event, Persistent Store used in this command must be configuration objects created in the preceding steps.</p>
+                                                <p>The following values are required:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><code>vserver</code> – The name of SVM.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>policy-name StealthAUDIT</code> – The name of the policy object can be customized (see <a href="#Customiz" target="_parent" title="Customization of FPolicy Object Names" alt="Customization of FPolicy Object Names" class="MCXref xref">Customization of FPolicy Object Names</a>).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>engine</code> – The name of the External Engine created in <a href="#Part2" target="_parent" title="Part 2: Create External Engine" alt="Part 2: Create External Engine" class="MCXref xref">Part 2: Create External Engine</a>.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>events</code> – A list of FPolicy Event objects  created in <a href="#Part" target="_parent" title="Part 3: Create FPolicy Event" alt="Part 3: Create FPolicy Event" class="MCXref xref">Part 3: Create FPolicy Event</a>.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>persistent-store</code> – The name of the Persistent Store created in <a href="#Part3" target="_parent" title="Part 4: Create Persistent Store" alt="Part 4: Create Persistent Store" class="MCXref xref">Part 4: Create Persistent Store</a>. Required only if the Persistent Store is used.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>The following values are required for <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> integration: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p> <code>privileged-user-name</code> – Must be a provisioned FPolicy account.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>allow-privileged-access</code> – Set to yes.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>All parameters are case sensitive.</p>
+                                        <p>Use the following command to create the FPolicy policy to monitor both CIFS and NFS protocols:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>events StealthAUDITScreeningCifs<span style="color: #000000; ">,</span>StealthAUDITScreeningNfsV3<span style="color: #000000; ">,</span>StealthAUDITScreeningNfsV4 <span style="color: #000000; ">-</span>engine StealthAUDITEngine <span style="color: #000000; ">-</span>persistent<span style="color: #000000; ">-</span>store StealthAUDITPersistentStore <span style="color: #000000; ">-</span>is<span style="color: #000000; ">-</span>mandatory <span style="color: #a71d5d; font-weight: bold; ">false</span> <span style="color: #000000; ">-</span>allow<span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>access yes <span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>user<span style="color: #000000; ">-</span>name <span style="color: #000000; ">[</span>DOMAIN\DOMAINUSER<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>events StealthAUDITScreeningCifs<span style="color: #000000; ">,</span>StealthAUDITScreeningNfsV3<span style="color: #000000; ">,</span>StealthAUDITScreeningNfsV4 <span style="color: #000000; ">-</span>engine StealthAUDITEngine <span style="color: #000000; ">-</span>persistent<span style="color: #000000; ">-</span>store StealthAUDITPersistentStore <span style="color: #000000; ">-</span>is<span style="color: #000000; ">-</span>mandatory <span style="color: #a71d5d; font-weight: bold; ">false</span> <span style="color: #000000; ">-</span>allow<span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>access yes <span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>user<span style="color: #000000; ">-</span>name example\user1</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Use the following command to create the FPolicy policy to monitor only CIFS protocols:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>events StealthAUDITScreeningCifs <span style="color: #000000; ">-</span>engine StealthAUDITEngine <span style="color: #000000; ">-</span>persistent<span style="color: #000000; ">-</span>store StealthAUDITPersistentStore <span style="color: #000000; ">-</span>is<span style="color: #000000; ">-</span>mandatory <span style="color: #a71d5d; font-weight: bold; ">false</span> <span style="color: #000000; ">-</span>allow<span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>access yes <span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>user<span style="color: #000000; ">-</span>name <span style="color: #000000; ">[</span>DOMAIN\DOMAINUSER<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>events StealthAUDITScreeningCifs <span style="color: #000000; ">-</span>engine StealthAUDITEngine <span style="color: #000000; ">-</span>persistent<span style="color: #000000; ">-</span>store StealthAUDITPersistentStore <span style="color: #000000; ">-</span>is<span style="color: #000000; ">-</span>mandatory <span style="color: #a71d5d; font-weight: bold; ">false</span> <span style="color: #000000; ">-</span>allow<span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>access yes <span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>user<span style="color: #000000; ">-</span>name example\user1</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Use the following command to create the FPolicy policy to monitor only NFS protocols:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>events StealthAUDITScreeningNfsV3<span style="color: #000000; ">,</span>StealthAUDITScreeningNfsV4 <span style="color: #000000; ">-</span>engine StealthAUDITEngine <span style="color: #000000; ">-</span>persistent<span style="color: #000000; ">-</span>store StealthAUDITPersistentStore <span style="color: #000000; ">-</span>is<span style="color: #000000; ">-</span>mandatory <span style="color: #a71d5d; font-weight: bold; ">false</span> <span style="color: #000000; ">-</span>allow<span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>access yes <span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>user<span style="color: #000000; ">-</span>name <span style="color: #000000; ">[</span>DOMAIN\DOMAINUSER<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>events StealthAUDITScreeningNfsV3<span style="color: #000000; ">,</span>StealthAUDITScreeningNfsV4 <span style="color: #000000; ">-</span>engine StealthAUDITEngine <span style="color: #000000; ">-</span>persistent<span style="color: #000000; ">-</span>store StealthAUDITPersistentStore <span style="color: #000000; ">-</span>is<span style="color: #000000; ">-</span>mandatory <span style="color: #a71d5d; font-weight: bold; ">false</span> <span style="color: #000000; ">-</span>allow<span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>access yes <span style="color: #000000; ">-</span>privileged<span style="color: #000000; ">-</span>user<span style="color: #000000; ">-</span>name example\user1</code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate Part 5: FPolicy Policy Creation</h4>
+                                        <p style="color: #000000;">Run the following command to validate the creation of the FPolicy policy:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>fpolicy policy show <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>Ontap915::<span style="color: #000000; ">&gt;</span> fpolicy policy show <span style="color: #000000; ">-</span>instance<br />&#160;&#160;<span style="color: #000000; ">(</span>vserver fpolicy policy show<span style="color: #000000; ">)</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vserver: svm0<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Policy: StealthAUDIT<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Events to Monitor: StealthAUDITScreeningCifs<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StealthAUDITScreeningFailedCifs<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StealthAUDITScreeningNfsV3<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StealthAUDITScreeningFailedNfsV3<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StealthAUDITScreeningNfsV4<span style="color: #000000; ">,</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StealthAUDITScreeningFailedNfsV4<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FPolicy Engine: StealthAUDITEngine<br />Is Mandatory Screening Required: <span style="color: #a71d5d; font-weight: bold; ">false</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Allow Privileged Access: no<br />User Name <span style="color: #a71d5d; font-weight: bold; ">for</span> Privileged Access: <span style="color: #000000; ">-</span><br />&#160;&#160;&#160;&#160;Is Passthrough Read Enabled: <span style="color: #a71d5d; font-weight: bold; ">false</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Persistent Store Name: <span style="color: #000000; ">-</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Relevant NetApp Documentation: To learn more about creating a policy, please visit the NetApp website and read the <a href="https://docs.netapp.com/us-en/ontap-cli/vserver-fpolicy-policy-create.html" class="Hyperlink" target="_blank" title="vserver fpolicy policy create" alt="vserver fpolicy policy create">vserver fpolicy policy create</a> article.</p>
+                                        <h3>Part 6: Create FPolicy Scope</h3>
+                                        <p>The FPolicy scope creates the filters necessary to perform scans on specific shares or volumes. It is possible to set the scope to monitor all volumes or all shares by replacing the volume/share name variable [SVM_NAME] in the command with an asterisk (*).</p>
+                                        <p class="Bold_Subheading">IMPORTANT:</p>
+                                        <ul>
+                                            <li>
+                                                <p>The SVM used must be the SVM hosting the CIFS or NFS shares to be monitored.</p>
+                                            </li>
+                                            <li>
+                                                <p>It is not necessary to specify both volumes and shares. One or the other is sufficient.</p>
+                                            </li>
+                                            <li>
+                                                <p>If you want to monitor everything, set the "<code style="font-family: 'Courier New';">volumes-to-include</code>" value to "<code>*</code>".</p>
+                                            </li>
+                                        </ul>
+                                        <p>Use the following command to create the FPolicy scope by specifying volume(s):</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy scope create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>volumes<span style="color: #000000; ">-</span>to<span style="color: #000000; ">-</span>include <span style="color: #000000; ">[</span>VOLUME_NAME<span style="color: #000000; ">],[</span>VOLUME_NAME<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy scope create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>volumes<span style="color: #000000; ">-</span>to<span style="color: #000000; ">-</span>include samplevolume1<span style="color: #000000; ">,</span>samplevolume2</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Use the following command to create the FPolicy scope by specifying share(s):</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy scope create <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>shares<span style="color: #000000; ">-</span>to<span style="color: #000000; ">-</span>include <span style="color: #000000; ">[</span>SHARE_NAME<span style="color: #000000; ">],[</span>SHARE_NAME<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy scope create <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>shares<span style="color: #000000; ">-</span>to<span style="color: #000000; ">-</span>include sampleshare1<span style="color: #000000; ">,</span>sampleshare2</code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate Part 6: FPolicy Scope Creation</h4>
+                                        <p style="color: #000000;">Run the following command to validate the FPolicy scope creation:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>fpolicy policy scope show <span style="color: #000000; ">-</span>instance</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>Ontap915::<span style="color: #000000; ">&gt;</span> fpolicy policy scope show <span style="color: #000000; ">-</span>instance<br />&#160;&#160;<span style="color: #000000; ">(</span>vserver fpolicy policy scope show<span style="color: #000000; ">)</span><br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Vserver: svm0<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Policy: StealthAUDIT<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Shares to Include: <span style="color: #000000; ">*</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Shares to Exclude: <span style="color: #000000; ">-</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Volumes to Include: <span style="color: #000000; ">*</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Volumes to Exclude: <span style="color: #000000; ">-</span><br />Export Policies to Include: <span style="color: #000000; ">*</span><br />Export Policies to Exclude: <span style="color: #000000; ">-</span><br />File Extensions to Include: <span style="color: #000000; ">-</span><br />File Extensions to Exclude: <span style="color: #000000; ">-</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Relevant NetApp Documentation: To learn more about creating scope, please visit the NetApp website and read the <a href="https://docs.netapp.com/us-en/ontap-cli-9141/vserver-fpolicy-policy-scope-create.html" class="Hyperlink" target="_blank" title="vserver fpolicy policy scope create" alt="vserver fpolicy policy scope create">vserver fpolicy policy scope create</a> article.</p>
+                                        <h3>Part 7: Set TLS Authentication</h3>
+                                        <p>If using the TLS authentication options, it is necessary to set authentication for the type of authentication. </p>
+                                        <h4>Set Server-Authentication</h4>
+                                        <p>Use the following command to set server-authentication:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy externalengine modify <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option server<span style="color: #000000; ">-</span>auth</code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy externalengine modify <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option server<span style="color: #000000; ">-</span>auth</code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Set Mutual-Authentication</h4>
+                                        <p>Use the following command to set mutual-authentication:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy external<span style="color: #000000; ">-</span>engine modify &#8209;vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option mutual<span style="color: #000000; ">-</span>auth <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>common<span style="color: #000000; ">-</span>name <span style="color: #000000; ">[</span>COMMON_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>serial <span style="color: #000000; ">[</span>CERTIFICATE_SERIAL<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>ca <span style="color: #000000; ">[</span>CERTIFICATE_AUTHORITY<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy external<span style="color: #000000; ">-</span>engine modify <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option mutual<span style="color: #000000; ">-</span>auth <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>common<span style="color: #000000; ">-</span>name testserver <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>serial <span style="color: #df5000; ">461</span>AC46521B31321330EBBE4321AC51D <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>ca <span style="color: #df5000; ">"VeriSign Universal Root Certification Authority"</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate Mutual-Authentication Is Set</h4>
+                                        <p style="color: #000000;">Run the following command to confirm mutual-authentication is set:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy external<span style="color: #000000; ">-</span>engine show <span style="color: #000000; ">-</span>fields ssl<span style="color: #000000; ">-</span>option</code></pre>
+                                            </div>
+                                        </div>
+                                        <h3>Part 8: Enable the FPolicy</h3>
+                                        <p>The FPolicy must be enabled before the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent can be configured to monitor the SVM.</p>
+                                        <p class="Bold_Subheading">IMPORTANT:</p>
+                                        <ul>
+                                            <li>
+                                                <p>The SVM used must be the SVM hosting the CIFS or NFS shares to be monitored.</p>
+                                            </li>
+                                        </ul>
+                                        <p>Use the following command to enable the FPolicy:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy enable <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>sequence<span style="color: #000000; ">-</span>number <span style="color: #000000; ">[</span>INTEGER<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy enable <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>sequence<span style="color: #000000; ">-</span>number <span style="color: #df5000; ">10</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate Part 8: FPolicy Enabled</h4>
+                                        <p style="color: #000000;">Run the following command to validate the FPolicy scope creation:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy show</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>Ontap915::<span style="color: #000000; ">&gt;</span> fpolicy show<br />&#160;&#160;&#160;&#160;show&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;show<span style="color: #000000; ">-</span>enabled<br />&#160;&#160;&#160;&#160;show<span style="color: #000000; ">-</span>engine&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;show<span style="color: #000000; ">-</span>passthrough<span style="color: #000000; ">-</span>read<span style="color: #000000; ">-</span>connection<br />Ontap915::<span style="color: #000000; ">&gt;</span> fpolicy show<br />&#160;&#160;<span style="color: #000000; ">(</span>vserver fpolicy show<span style="color: #000000; ">)</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sequence<br />Vserver&#160;&#160;&#160;&#160;&#160;&#160;&#160;Policy Name&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Number&#160;&#160;Status&#160;&#160;&#160;Engine<br /><span style="color: #000000; ">-------------</span> <span style="color: #000000; ">-----------------------</span> <span style="color: #000000; ">--------</span>&#160;&#160;<span style="color: #000000; ">--------</span> <span style="color: #000000; ">---------</span><br />svm0&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;StealthAUDIT&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #df5000; ">10</span>&#160;&#160;on&#160;&#160;&#160;&#160;&#160;&#160;&#160;StealthAU<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DITEngine</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>Relevant NetApp Documentation: To learn more about enabling a policy, please visit the NetApp website and read the <a href="https://docs.netapp.com/us-en/ontap-cli-9121//vserver-fpolicy-enable.html" class="Hyperlink" target="_blank" title="vserver fpolicy enable" alt="vserver fpolicy enable">vserver fpolicy enable</a> article.</p>
+                                        <h3>Part 9: Connect FPolicy Server / Agent to Cluster Node</h3>
+                                        <p>Manually connecting the FPolicy server (or Agent server) to the Cluster Node is only needed if there is an issue with connection to the Cluster Node or for troubleshooting a disconnection issue.</p>
+                                        <p>Use the following command to connect the <code style="font-family: 'Courier New';">StealthAUDITEngine</code> that belongs to the <code style="font-family: 'Courier New';">StealthAUDIT</code> policy to all Cluster Nodes:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>policy engine<span style="color: #000000; ">-</span>connect <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>node <span style="color: #000000; ">*</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>policy engine<span style="color: #000000; ">-</span>connect <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>node <span style="color: #000000; ">*</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate Part 9: Connection to Cluster Node</h4>
+                                        <p style="color: #000000;">Run the following command to validate connection to the Cluster Node:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>fpolicy show<span style="color: #000000; ">-</span>engine <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>node <span style="color: #000000; ">*</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>Ontap915::<span style="color: #000000; ">&gt;</span> fpolicy show<span style="color: #000000; ">-</span>engine <span style="color: #000000; ">-</span>vserver svm0 <span style="color: #000000; ">-</span>policy<span style="color: #000000; ">-</span>name StealthAUDIT <span style="color: #000000; ">-</span>node <span style="color: #000000; ">*</span><br />&#160;&#160;<span style="color: #000000; ">(</span>vserver fpolicy show<span style="color: #000000; ">-</span>engine<span style="color: #000000; ">)</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FPolicy&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Server&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Server<br />Vserver Policy Name&#160;&#160;&#160;Node&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Server&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Status&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Type<br /><span style="color: #000000; ">-------</span> <span style="color: #000000; ">-------------</span> <span style="color: #000000; ">------------</span> <span style="color: #000000; ">-----------------</span> <span style="color: #000000; ">--------------</span> <span style="color: #000000; ">-----------</span><br />svm0&#160;&#160;&#160;&#160;StealthAUDIT&#160;&#160;Ontap915<span style="color: #000000; ">-</span><span style="color: #df5000; ">01</span>&#160;&#160;<span style="color: #df5000; ">192.168</span><span style="color: #000000; ">.</span><span style="color: #df5000; ">11.35</span>&#160;&#160;&#160;&#160;&#160;disconnected&#160;&#160;&#160;primary</code></pre>
+                                            </div>
+                                        </div>
+                                        <h2><a name="Automatic_Configuration_of_FPolicy"></a>Automatic Configuration of FPolicy</h2>
+                                        <p>The <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> can automatically configure FPolicy on the targeted SVM. The FPolicy created will monitor file system activity from all volumes and shares of the SVM. This feature can be enabled using the <b>Configure FPolicy. Create or modify FPolicy objects if needed</b> checkbox on the FPolicy page in the monitored host's properties in the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span>.</p>
+                                        <p>Starting ONTAP 9.15.1 and later versions, it is recommended to enable the Persistent Store feature that stores events on disk before they are sent to the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Agent. This reduces client-side latency and increases resilience during network delays or bursts of activity. To enable the Persistent Store, specify a volume name and size on the Persistent Store tab of the FPolicy page in the monitored host properties. The volume will be automatically created if it does not already exist. See the <a href="#Persiste" target="_parent" title="Persistent Store" alt="Persistent Store" class="MCXref xref">Persistent Store</a> topic for additional information on the recommended volume size. </p>
+                                        <p>If using the TLS, mutual authentication option, you will need to create the PEM file for the Client Certification, which is needed during the monitored host configuration in the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span>. It will also be necessary to set mutual authentication on the SVM.</p>
+                                        <h3>Set TLS Mutual-Authentication</h3>
+                                        <p>If using the TLS, mutual authentication options, it is necessary to set authentication. </p>
+                                        <p>Use the following command to set mutual-authentication:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy external<span style="color: #000000; ">-</span>engine modify <span style="color: #000000; ">-</span>vserver <span style="color: #000000; ">[</span>SVM_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option mutual<span style="color: #000000; ">-</span>auth <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>common<span style="color: #000000; ">-</span>name <span style="color: #000000; ">[</span>COMMON_NAME<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>serial <span style="color: #000000; ">[</span>CERTIFICATE_SERIAL<span style="color: #000000; ">]</span> <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>ca <span style="color: #000000; ">[</span>CERTIFICATE_AUTHORITY<span style="color: #000000; ">]</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Bold_Subheading">Example:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy external<span style="color: #000000; ">-</span>engine modify <span style="color: #000000; ">-</span>vserver testserver <span style="color: #000000; ">-</span>engine<span style="color: #000000; ">-</span>name StealthAUDITEngine <span style="color: #000000; ">-</span>ssl<span style="color: #000000; ">-</span>option mutual<span style="color: #000000; ">-</span>auth <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>common<span style="color: #000000; ">-</span>name testserver <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>serial <span style="color: #df5000; ">461</span>AC46521B31321330EBBE4321AC51D <span style="color: #000000; ">-</span>certificate<span style="color: #000000; ">-</span>ca <span style="color: #df5000; ">"VeriSign Universal Root Certification Authority"</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <h4>Validate: Mutual-Authentication</h4>
+                                        <p style="color: #000000;">Run the following command to confirm mutual-authentication is set:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: CPP;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>vserver fpolicy policy external<span style="color: #000000; ">-</span>engine show <span style="color: #000000; ">-</span>fields ssl<span style="color: #000000; ">-</span>option</code></pre>
+                                            </div>
+                                        </div>
+                                        <h2><a name="Customiz"></a>Customization of FPolicy Object Names</h2>
+                                        <p><span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> uses the following FPolicy object names by default:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Policy name – <code>StealthAUDIT</code></p>
+                                            </li>
+                                            <li>
+                                                <p>External Engine name – <code>StealthAUDITEngine</code></p>
+                                            </li>
+                                            <li>
+                                                <p>CIFS Event name – <code>StealthAUDITScreeningCifs</code></p>
+                                            </li>
+                                            <li>
+                                                <p>NFS v3 Event name – <code>StealthAUDITScreeningNfsV3</code></p>
+                                            </li>
+                                            <li>
+                                                <p>NFS v4 Event name – <code>StealthAUDITScreeningNfsV4</code></p>
+                                            </li>
+                                            <li>
+                                                <p>Failed CIFS Event name – <code>StealthAUDITScreeningFailedCifs</code></p>
+                                            </li>
+                                            <li>
+                                                <p>Failed NFS v3 Event name – <code>StealthAUDITScreeningFailedNfsV3</code></p>
+                                            </li>
+                                            <li>
+                                                <p>Failed NFS v4 Event name – <code>StealthAUDITScreeningFailedNfsV4</code></p>
+                                            </li>
+                                            <li>
+                                                <p>Persistent Store name – <code>StealthAUDITPersistentStore</code></p>
+                                            </li>
+                                        </ul>
+                                        <p>These names can be customized in the monitored host's settings in the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span>. It can be useful in two scenarios:</p>
+                                        <ul>
+                                            <li>
+                                                <p>You want the names to match the company policies;</p>
+                                            </li>
+                                            <li>
+                                                <p>You want to configure FPolicy manually using your custom names, but also want to leverage the "Enable and Connect FPolicy" feature of the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span>, so that the product ensures that FPolicy stays enabled and connected at all times.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

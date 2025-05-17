@@ -1,0 +1,1644 @@
+/*<meta conditions="" />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/* Stealthbits Colors: 
+Primary colors first column: 
+Blue: 		   	  Green: 	      	  Black:			Fuchisa:
+  Hex:#0894D8	    Hex:#55FB99			Hex:#1D1D1D	  	  Hex:#E50288
+  R:8 G:148 B:216   R:85 G:251 B:153    R:29 G:29 B:29	  R:229 G:2 B:136
+
+Secondary colors first column: 
+Light pink:	  	 		Purple:
+	Hex:#FB48C6	    	  Hex:#B000FB
+	R:251 G:72 B:198      R:176 G:0 B:251
+
+Action colors first column: 
+Green:		   		Orange:	      	  Red:
+  Hex:#57BE76	     Hex:#FB8000		Hex:#DA0000
+  R:87 G:190 B:118   R:251 G:128 B:0	R:218 G:0 B:0
+ */
+
+:root
+{
+	--Brand1: #0894D8;
+	--Brand2: #1D1D1D;
+	--Black: #1D1D1D;
+	--Dark: #777777;
+	--Medium: #d9d9d9;
+	--Light: #eaeced;
+	--White: #ffffff;
+}
+
+body
+{
+	color: #1d1d1d;
+	font-family: Calibri;
+	mc-hyphenate: never;
+}
+
+.body-container
+{
+	padding-left: 2%;
+	padding-top: 2%;
+}
+
+/* Backmatter */
+
+div.GlossaryPageDefinition
+{
+	font-size: 10pt;
+}
+
+div.GlossaryPageHeading
+{
+	font-size: 21pt;
+	font-weight: normal;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	border-bottom-color: var(--Medium);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	text-align: left;
+	color: inherit;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-right: 10px;
+	background-image: url('../Images/Generic Flare/Backmatter-Heading-Background.png');
+	background-repeat: no-repeat;
+}
+
+div.GlossaryPageTerm
+{
+	font-size: 12pt;
+	font-weight: bold;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+MadCap|glossaryProxy
+{
+	border-top: none;
+	mc-hyphenate: never;
+}
+
+MadCap|indexProxy
+{
+	border-top: none;
+	mc-hyphenate: never;
+}
+
+p.Index1
+{
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+p.Index2
+{
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+p.IndexHeading
+{
+	font-size: 21pt;
+	font-weight: normal;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	border-bottom-color: var(--Medium);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	text-align: left;
+	color: inherit;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-top: 12px;
+	padding-right: 10px;
+	background-image: url('../Images/Generic Flare/Backmatter-Heading-Background.png');
+	background-repeat: no-repeat;
+}
+
+/* Content */
+
+img
+{
+	max-width: 100%;
+	text-align: center;
+	border: solid 3px #0894d8;
+}
+
+p
+{
+	letter-spacing: 0.25;
+	widows: 3;
+	orphans: 3;
+	font-family: Calibri;
+	font-size: 11pt;
+	line-height: 15pt;
+	margin-bottom: 10pt;
+	margin-top: 10pt;
+}
+
+p.table-text
+{
+	font: Calibri;
+	font-size: 11pt;
+}
+
+/* Frontmatter */
+
+hr.title-page
+{
+	border: solid 0px transparent;
+	background-color: var(--Light);
+	height: 1px;
+	width: 100%;
+	margin-bottom: 30px;
+	margin-top: 370px;
+}
+
+MadCap|tocProxy
+{
+	border-top: none;
+	margin-right: 0.25in;
+	font: Calibri;
+	color: #1d1d1d;
+	font-size: 12pt;
+	mc-hyphenate: never;
+}
+
+p.created-using-flare
+{
+	color: var(--Dark);
+	font-weight: bold;
+	margin-top: 18px;
+	font-size: 9pt;
+	line-height: 15pt;
+	text-transform: uppercase;
+}
+
+p.title
+{
+	font-size: 55pt;
+	line-height: 65pt;
+	margin-top: 30px;
+	mc-hyphenate: never;
+}
+
+p.title-page-footer
+{
+	color: var(--Dark);
+	font-size: 9pt;
+	frame-break-before: always;
+	line-height: 15pt;
+	margin-top: 30px;
+}
+
+p.title-page-url
+{
+	color: var(--Dark);
+	font-size: 9pt;
+	line-height: 15pt;
+}
+
+p.TOC1
+{
+	font-weight: normal;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	page-break-after: avoid;
+	color: #1d1d1d;
+	font-size: 11pt;
+	font-family: Calibri;
+	line-height: 11pt;
+	mc-hyphenate: never;
+}
+
+p.TOC2
+{
+	font-weight: normal;
+	margin-bottom: 13px;
+	margin-top: 13px;
+	color: #1d1d1d;
+	font-size: 11pt;
+	line-height: 11pt;
+	margin-left: .25in;
+	mc-hyphenate: never;
+}
+
+p.TOC3
+{
+	font-weight: normal;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 11pt;
+	color: #1d1d1d;
+	line-height: 11pt;
+	margin-left: 0.5in;
+	mc-hyphenate: never;
+}
+
+/* Headings */
+
+h1
+{
+	font-family: Teko;
+	page-break-before: always;
+	font-size: 24pt;
+	font-weight: bold;
+	color: #1d1d1d;
+	text-align: center;
+	display: block;
+	margin-bottom: -2pt;
+}
+
+h2
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-size: 24pt;
+	margin-bottom: -0.25em;
+}
+
+h3
+{
+	font-style: normal;
+	color: #1d1d1d;
+	font-size: 22pt;
+	margin-bottom: -0.17em;
+	font-weight: normal;
+	font-family: Teko;
+}
+
+h4
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-style: normal;
+	font-size: 20pt;
+	margin-bottom: 7px;
+	line-height: 33px;
+	mc-hyphenate: never;
+}
+
+h5
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-style: normal;
+	font-size: 18pt;
+	margin-bottom: 7px;
+	line-height: 30px;
+	mc-hyphenate: never;
+}
+
+h6
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-style: normal;
+	font-size: 16pt;
+	margin-bottom: 7px;
+	line-height: 30px;
+	mc-hyphenate: never;
+}
+
+h7
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-style: normal;
+	font-size: 16pt;
+	margin-bottom: 7px;
+	line-height: 30px;
+	mc-hyphenate: never;
+	mc-heading-level: 7;
+}
+
+h8
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-style: normal;
+	font-size: 16pt;
+	margin-bottom: 7px;
+	line-height: 30px;
+	mc-hyphenate: never;
+	mc-heading-level: 8;
+}
+
+h9
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-style: normal;
+	font-size: 16pt;
+	margin-bottom: 7px;
+	line-height: 30px;
+	mc-hyphenate: never;
+	mc-heading-level: 9;
+}
+
+h10
+{
+	font-family: Teko;
+	font-weight: normal;
+	color: #1d1d1d;
+	font-style: normal;
+	font-size: 16pt;
+	margin-bottom: 7px;
+	line-height: 30px;
+	mc-hyphenate: never;
+	mc-heading-level: 10;
+}
+
+/* Home page topic */
+
+div.home-layout
+{
+	padding: 2% 5%;
+}
+
+div.home-section
+{
+	padding: 5% 0;
+	border-bottom: solid 1px var(--Light);
+}
+
+div.home-tiles	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.home-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: var(--Brand2);
+	padding: 2%;
+}
+
+div.home-tiles > div:nth-child(1)
+{
+	width: 48%;
+	margin-left: 0%;
+}
+
+div.home-tiles > div:nth-child(2)
+{
+	width: 48%;
+	margin-left: 4%;
+}
+
+div.home-tiles-layout	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.home-tiles-layout::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles-layout::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles-layout > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.home-tiles-layout > div:nth-child(1)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.home-tiles-layout > div:nth-child(2)
+{
+	width: 66.66667%;
+	margin-left: 0%;
+}
+
+div.home-tiles-layout p
+{
+	line-height: 1.2;
+}
+
+div.quick-links	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.quick-links::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.quick-links::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.quick-links > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.quick-links > div:nth-child(1)
+{
+	width: 16.66666%;
+	margin-left: 2%;
+}
+
+div.quick-links > div:nth-child(2)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(3)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(4)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(5)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links *	/*Text-align center set to all elements within div.quick-links*/
+{
+	text-align: center;
+}
+
+div.topic-hero
+{
+	padding: 5%;
+	background-image: url('../Images/Generic Flare/Hero-Image.png');
+	background-size: cover;
+	background-attachment: scroll;
+}
+
+div.topic-hero h1
+{
+	color: var(--White);
+	font-size: 48pt;
+	text-align: center;
+}
+
+html.home-topic	/*Used on home topic to override padding set in the skin*/
+{
+	
+}
+
+html.home-topic .body-container	/*Overrides padding set in the skin*/
+{
+	padding: 0;
+}
+
+html.home-topic .main-section > .outer-row	/*Overrides padding set in the skin when in tablet/mobile*/
+{
+	max-width: 100%;
+	padding: 0;
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom-width: 0;
+	color: var(--Dark);
+	font: Calibri;
+	font-size: 10pt;
+	font-style: italics;
+	mc-hyphenate: never;
+}
+
+/* Links */
+
+a
+{
+	color: #0894d8;
+}
+
+a:link
+{
+	color: #0894d8;
+	mc-hyphenate: never;
+}
+
+a:visited
+{
+	color: #0894d8;
+	text-decoration: none;
+	mc-hyphenate: never;
+}
+
+MadCap|dropDown
+{
+	mc-image-position: left;
+	mc-image-spacing: 10px;
+	mc-open-image: url('../Images/Generic Flare/Minus.png');
+	padding: 10px 0;
+	color: #1d1d1d;
+	font: Teko;
+	font-size: 20pt;
+	mc-closed-image: none;
+	line-height: 15pt;
+	font-family: Teko;
+	mc-hyphenate: never;
+}
+
+MadCap|dropDownBody
+{
+	padding: 10px 30px 0;
+	font: Calibri;
+	font-size: 11pt;
+	border-bottom-width: 1px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	border-bottom: solid 1px #0894d8;
+	line-height: 15pt;
+	mc-hyphenate: never;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	text-decoration: none;
+	font-size: 20pt;
+	color: #1d1d1d;
+	border-bottom: solid 1px #0894d8;
+	font: Teko;
+	line-height: 15pt;
+	font-family: Teko;
+	mc-hyphenate: never;
+}
+
+MadCap|expandingBody
+{
+	color: var(--Dark);
+	font-style: italic;
+	mc-hyphenate: never;
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: var(--Brand1);
+	mc-hyphenate: never;
+}
+
+MadCap|xref
+{
+	font-weight: bold;
+	mc-format: '{para}';
+	text-decoration: underline;
+	color: var(--Brand1);
+}
+
+/* Standardized Lists */
+
+li
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-left: 0.35in;
+}
+
+li p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ol,
+ul
+{
+	letter-spacing: .25;
+	line-height: 20pt;
+}
+
+/* Page layout */
+
+p.frame-footer-page-number
+{
+	color: var(--Medium);
+	font-size: 11pt;
+	font-weight: bold;
+	text-align: right;
+}
+
+p.frame-footer-text
+{
+	color: var(--Medium);
+	font-size: 11pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* Master page */
+
+div.home-footer
+{
+	background-color: var(--Brand1);
+	padding: 2% 5%;
+}
+
+p.footer
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	line-height: 13pt;
+	color: var(--White);
+}
+
+p.footer-sub
+{
+	color: var(--White);
+	font-size: 14pt;
+	margin-top: 14px;
+}
+
+ol
+{
+	font-size: 11pt;
+	font-family: Calibri;
+	line-height: 0;
+	letter-spacing: 0;
+	text-indent: 20px;
+	margin-left: 0px;
+	list-style-image: none;
+	mc-hyphenate: never;
+}
+
+b
+{
+	font-family: Calibri;
+	mc-hyphenate: never;
+	font-weight: bolder;
+}
+
+ul
+{
+	font-style: normal;
+	font: Calibri;
+	font-size: 11pt;
+	list-style-image: none;
+	margin-left: -16px;
+	list-style-type: disc;
+	line-height: 15pt;
+	mc-hyphenate: never;
+}
+
+ol ol
+{
+	
+}
+
+li::marker
+{
+	display: list-item;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	margin-left: 0;
+	orphans: 2;
+	widows: 2;
+}
+
+span.mc-variable
+{
+	font: Calibri;
+	font-size: 11pt;
+	mc-hyphenate: never;
+}
+
+p.TOC4
+{
+	color: #1d1d1d;
+	line-height: 11pt;
+	margin-left: 0.75in;
+	mc-hyphenate: never;
+}
+
+p.TOC5
+{
+	color: #1d1d1d;
+	line-height: 11pt;
+	margin-left: 1in;
+	mc-hyphenate: never;
+}
+
+p.TOC6
+{
+	color: #1d1d1d;
+	line-height: 11pt;
+	margin-left: 1.25in;
+	mc-hyphenate: never;
+}
+
+@media only screen and (max-width: 1279px)
+{
+	/* Home page topic */
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 49%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 49%;
+		margin-left: 2%;
+	}
+
+	div.home-tiles-layout > div:nth-child(1)
+	{
+		width: 40%;
+		margin-left: 30%;
+	}
+
+	div.home-tiles-layout > div:nth-child(2)
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	div.quick-links > div:nth-child(1)
+	{
+		width: 24%;
+		margin-left: 0%;
+	}
+
+	div.quick-links > div:nth-child(2)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	div.quick-links > div:nth-child(3)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	div.quick-links > div:nth-child(4)
+	{
+		width: 24%;
+		margin-left: 19%;
+	}
+
+	div.quick-links > div:nth-child(5)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	html.home-topic .body-container
+	{
+		margin-left: 0;
+	}
+}
+
+/* Content */
+
+p
+{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+p.table-text
+{
+	font-size: 11pt;
+	mc-hyphenate: never;
+}
+
+/* Headings */
+
+h1
+{
+	font-size: 25pt;
+	margin-bottom: 7px;
+	line-height: 33px;
+	mc-hyphenate: never;
+}
+
+h2
+{
+	font-weight: normal;
+	margin-top: 40px;
+	font-size: 24pt;
+	font-style: normal;
+	margin-bottom: 7px;
+	line-height: 33px;
+	mc-hyphenate: never;
+}
+
+h3
+{
+	margin-top: 40px;
+	font-weight: normal;
+	font-size: 22pt;
+	margin-bottom: 7px;
+	line-height: 33px;
+	mc-hyphenate: never;
+}
+
+/* Links */
+
+MadCap|xref
+{
+	font-weight: normal;
+	text-decoration: none;
+	mc-format: "{para}";
+	mc-hyphenate: never;
+}
+
+/* Custom styles created for Stealthbits Technologies CSS - 2020 Elena Gorell */
+
+p.Step
+{
+	mc-auto-number-format: '{b}Step {n+} – {/b}';
+	mc-auto-number-class: Step;
+	color: #1d1d1d;
+	font-size: 11pt;
+	font-family: Calibri;
+	mc-hyphenate: never;
+}
+
+span.Step
+{
+	mc-hyphenate: never;
+}
+
+p.Step-Reset
+{
+	mc-auto-number-format: '{b}Step {n=1} – {/b}';
+	mc-auto-number-class: Step;
+	color: #1d1d1d;
+	font-size: 11pt;
+	font-family: Calibri;
+	mc-hyphenate: never;
+}
+
+span.Step-Reset
+{
+	mc-hyphenate: never;
+}
+
+p.Note-1
+{
+	mc-auto-number-format: '{b}NOTE: {/b}';
+	mc-auto-number-class: Note;
+	font-family: Calibri;
+	color: #1d1d1d;
+	mc-hyphenate: never;
+}
+
+span.Note-1
+{
+	mc-hyphenate: never;
+}
+
+p.Recommended-1
+{
+	mc-auto-number-format: '{color: #fb8000}{b}{i}RECOMMENDED: {/i}{/b}{/color}';
+	mc-auto-number-class: Recommended;
+	font-family: Calibri;
+	text-indent: -0.05in;
+	margin-left: 0.05in;
+	mc-hyphenate: never;
+}
+
+span.Recommended-1
+{
+	mc-hyphenate: never;
+}
+
+p.Remember
+{
+	mc-auto-number-format: '{color: #fb8000}{i}Remember, {/i}{/color}';
+	mc-auto-number-class: Remember;
+	font-family: Calibri;
+	font-size: 11pt;
+	line-height: 15pt;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	mc-hyphenate: never;
+}
+
+span.Remember
+{
+	mc-hyphenate: never;
+}
+
+p.Caution
+{
+	mc-auto-number-format: '{color: #da0000}{b}CAUTION: {/b}{/color}';
+	mc-auto-number-class: Caution;
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-left: 0.25in;
+	text-indent: -0.25in;
+	mc-hyphenate: never;
+}
+
+span.Caution
+{
+	mc-hyphenate: never;
+}
+
+p.Bold_Subheading
+{
+	color: #1d1d1d;
+	font-family: Calibri;
+	font-weight: bold;
+	margin-top: 20pt;
+	mc-hyphenate: never;
+}
+
+/* For Stealthbits Word output */
+
+@media Sb-print
+{
+	body
+	{
+		font-size: 11pt;
+		line-height: 13pt;
+		margin: 8px;
+	}
+
+	span.Step
+	{
+		color: #1d1d1d;
+		font-size: 11pt;
+		font-weight: bolder;
+		font-family: Calibri;
+	}
+
+	p.Step
+	{
+		mc-auto-number-format: 'Step {n+} – ';
+		mc-auto-number-class: Step;
+	}
+
+	span.Step-Reset
+	{
+		color: #1d1d1d;
+		font-size: 11pt;
+		font-weight: bolder;
+		font-family: Calibri;
+	}
+
+	p.Step-Reset
+	{
+		mc-auto-number-format: 'Step {n=1} – ';
+		mc-auto-number-class: Step;
+	}
+
+	span.Note-1
+	{
+		font-family: Calibri;
+		color: #1d1d1d;
+		font-weight: bolder;
+	}
+
+	p.Note-1
+	{
+		mc-auto-number-format: 'NOTE: ';
+		mc-auto-number-class: Note-1;
+	}
+
+	span.Recommended-1
+	{
+		color: #fb8000;
+		font-family: Calibri;
+		font-weight: bold;
+		font-style: italic;
+		text-transform: uppercase;
+		text-indent: -0.05in;
+		margin-left: 0.05in;
+	}
+
+	p.Recommended-1
+	{
+		mc-auto-number-format: 'RECOMMENDED: ';
+		mc-auto-number-class: Recommended-1;
+	}
+
+	span.Remember
+	{
+		color: #fb8000;
+		font-family: Calibri;
+		font-size: 11pt;
+		font-style: italic;
+		line-height: 15pt;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	p.Remember
+	{
+		mc-auto-number-format: 'Remember, ';
+		mc-auto-number-class: Remember;
+	}
+
+	span.Caution
+	{
+		color: #da0000;
+		font-family: Calibri;
+		font-size: 11pt;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-left: 0.25in;
+		text-indent: -0.25in;
+	}
+
+	p.Caution
+	{
+		mc-auto-number-format: '{color: #da0000}{b}CAUTION: {/b}{/color}';
+		mc-auto-number-class: CAUTION;
+	}
+
+	p.TOC1
+	{
+		line-height: 11pt;
+	}
+
+	p.TOC2
+	{
+		line-height: 11pt;
+		margin-left: 0.25in;
+	}
+
+	p.TOC3
+	{
+		line-height: 11pt;
+	}
+
+	p.TOC4
+	{
+		line-height: 11pt;
+		margin-left: 0.75in;
+	}
+
+	p.TOC5
+	{
+		line-height: 11pt;
+		margin-left: 1in;
+	}
+
+	p.TOC6
+	{
+		line-height: 11pt;
+		margin-left: 1.25in;
+	}
+
+	h2
+	{
+		font-style: ;
+	}
+
+	MadCap|dropDownHotspot
+	{
+		font-family: Teko;
+		border-bottom: none 0px #ffffff;
+	}
+
+	img
+	{
+		border: solid 3px #0894d8;
+	}
+
+	MadCap|dropDownBody
+	{
+		border-bottom: none 0px #ffffff;
+	}
+
+	MadCap|dropDown
+	{
+		font-family: ;
+	}
+}
+
+/*Continuation of Normal medium styles ----------
+
+For command line: Add 24pt each line for Command Line spacing*/
+
+p.Command-Line
+{
+	font-family: 'Courier New';
+	letter-spacing: 0px;
+	margin-top: 0pt;
+	margin-left: 0pt;
+	margin: 0;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-1
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 104px;
+	mc-hyphenate: never;
+	mc-hyphenate-shortest-word: 20;
+}
+
+p.Command-Line-2
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 128px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-3
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 152px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-4
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 176px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-5
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 200px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-6
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 222px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-7
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 246px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-8
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 270px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-9
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 294px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-z10
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 318px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-z11
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 342px;
+	mc-hyphenate: never;
+}
+
+p.Command-Line-z12
+{
+	font-family: 'Courier New';
+	margin-top: 0pt;
+	margin: 0;
+	text-indent: -0.5in;
+	margin-left: 366px;
+	mc-hyphenate: never;
+}
+
+p.Sb-Date
+{
+	font-family: Teko;
+	font-size: 18pt;
+	color: #e9008c;
+	font-weight: bold;
+	margin-bottom: 30pt;
+	mc-hyphenate: never;
+}
+
+p.Sb-DocTitle
+{
+	color: #000000;
+	font-family: Teko;
+	font-size: 24pt;
+	line-height: 25pt;
+	mc-hyphenate: never;
+}
+
+p.Sb-ProductName
+{
+	color: #000000;
+	font-family: Teko;
+	font-size: 28pt;
+	font-weight: bold;
+	margin-bottom: 25pt;
+	mc-hyphenate: never;
+}
+
+p.Sb-GenericTitle
+{
+	color: #000000;
+	font-family: Teko;
+	font-weight: bold;
+	font-size: 26pt;
+	text-decoration: underline;
+	text-align: center;
+	line-height: 30pt;
+	mc-hyphenate: never;
+}
+
+p.Sb-ToC-Heading
+{
+	color: #000000;
+	font-family: Teko;
+	font-size: 20pt;
+	text-align: center;
+	mc-hyphenate: never;
+}
+
+p.Sb-Doc-ID
+{
+	color: #777777;
+	font-size: 8pt;
+	mc-hyphenate: never;
+}
+
+p.Sb-Footer
+{
+	font-size: 11pt;
+	margin-bottom: 10pt;
+	mc-hyphenate: never;
+}
+
+p.Sb-Header
+{
+	font-size: 10pt;
+	margin-bottom: 8pt;
+	mc-hyphenate: never;
+}
+
+/* Custom nested ul lists. Implemented a complex selector in the Stylesheet using child combinators in the Selector for each level list bullet. The standard ul element is set to "square" so the list below starts at level two.*/
+
+ul > li > ul
+{
+	list-style-type: disc;
+}
+
+ul > li > ul > li > ul
+{
+	list-style-type: disc;
+}
+
+ul > li > ul > li > ul > li > ul
+{
+	list-style-type: disc;
+}
+
+ul > li > ul > li > ul > li > ul > li > ul
+{
+	list-style-type: disc;
+}
+
+ul > li > ul > li > ul > li > ul > li > ul > li > ul
+{
+	list-style-type: disc;
+}
+
+ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul
+{
+	list-style-type: disc;
+}
+
+/* Custom nested paragraph styles within an unordered list. Intended to be used with the Custom Note styles*/
+
+ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > li > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > li > ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > li > ul > li > ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > li > ul > li > ul > li > ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+/* Custom nested paragraph styles within an unordered list. */
+
+ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > p > ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > p > ul > p > ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > p > ul > p > ul > p > ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ul > p > ul > p > ul > p > ul > p > ul > p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+li.Table-Bullet
+{
+	list-style-image: none;
+	list-style-type: disc;
+	margin-left: 0.45in;
+	mc-hyphenate: never;
+}
+
+p.Table-Title
+{
+	text-align: center;
+	font-weight: normal;
+	font-style: italic;
+	color: #0894d8;
+	mc-hyphenate: never;
+}
+
+/*<meta sourceDocument="C:\Users\KimHorvatin\Desktop\Publishing\NPS_Reports.docx" />*/
+
+p.p_1
+{
+	font-weight: bold;
+	margin-bottom: 10pt;
+	font-family: 'Open Sans';
+	margin-top: 0pt;
+	font-size: 10pt;
+}
+
+ol.ol_1
+{
+	letter-spacing: .25;
+	line-height: 20pt;
+	font-weight: bold;
+	margin-bottom: 10pt;
+	font-family: 'Open Sans';
+	margin-top: 0pt;
+	font-size: 10pt;
+}
+
+ul.ul_1
+{
+	letter-spacing: .25;
+	line-height: 20pt;
+	font-weight: bold;
+	margin-bottom: 10pt;
+	font-family: 'Open Sans';
+	margin-top: 0pt;
+	font-size: 10pt;
+}
+
+li.li_1
+{
+	margin-left: 0.35in;
+	font-weight: bold;
+	margin-bottom: 10pt;
+	font-family: 'Open Sans';
+	margin-top: 0pt;
+	font-size: 10pt;
+}
+
+td
+{
+	margin-bottom: 10pt;
+	font-family: 'Open Sans';
+	vertical-align: top;
+}
+
+a.Hyperlink
+{
+	color: #0070DD;
+	text-decoration: underline;
+}
+
+img.img_1
+{
+	visibility: visible;
+	mso-wrap-style: square;
+	width: 198px;
+	height: 327px;
+}
+
+p.p_2
+{
+	text-align: center;
+}
+
+ul.ul_2
+{
+	padding-left: 0px;
+}
+
+span.span_1
+{
+	font-weight: bold;
+}
+
+img.img_2
+{
+	visibility: visible;
+	mso-wrap-style: square;
+	width: 624px;
+	height: 202px;
+}
+
+ul.ul_3
+{
+	padding-left: 0px;
+	list-style-type: square;
+	margin-left: 36pt;
+}
+
+ul.ul_4
+{
+	padding-left: 0px;
+	list-style-type: circle;
+	margin-left: 0pt;
+}
+
+img.img_3
+{
+	visibility: visible;
+	mso-wrap-style: square;
+	width: 624px;
+	height: 224px;
+}
+
+img.img_4
+{
+	visibility: visible;
+	mso-wrap-style: square;
+	width: 624px;
+	height: 193px;
+}
+
+img.img_5
+{
+	z-index: -1;
+	visibility: visible;
+	mso-wrap-style: square;
+	mso-width-percent: 0;
+	mso-height-percent: 0;
+	mso-wrap-distance-left: 9pt;
+	mso-wrap-distance-top: 0;
+	mso-wrap-distance-right: 9pt;
+	mso-wrap-distance-bottom: 0;
+	mso-position-horizontal: absolute;
+	mso-position-horizontal-relative: text;
+	mso-position-vertical: absolute;
+	mso-position-vertical-relative: page;
+	mso-width-percent: 0;
+	mso-height-percent: 0;
+	mso-width-relative: page;
+	mso-height-relative: page;
+	margin-left: 374.25pt;
+	width: 118px;
+	height: 25px;
+}
+
+span.span_2
+{
+	color: black;
+}
+

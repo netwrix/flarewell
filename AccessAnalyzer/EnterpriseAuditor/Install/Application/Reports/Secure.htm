@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Securing the Web Console</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="SecuringWebConsole"></a>Securing the Web Console</h1>
+                                        <p>Published reports can be accessed in the Web Console. There are several options for enhancing security.</p>
+                                        <p>Additional configuration options for enhanced security include:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Enable SSL – The <code style="font-family: 'Courier New';">BindingUrl</code> parameter shows the port used by the <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> web server for SSL reports. If SSL is enabled, the value will be HTTPS instead of HTTP.</p>
+                                            </li>
+                                            <li>
+                                                <p>Enable Multiple Domain Access – The <code style="font-family: 'Courier New';">AuthenticationDomains</code> parameter allows the Web Console to be accessed from multiple domains. By default this parameter is blank, allowing only domain users from the domain where the <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> Console resides to access the Web Console.</p>
+                                            </li>
+                                            <li>
+                                                <p>Enable Single Sign-On – The <code style="font-family: 'Courier New';">WindowsAuthentication</code> parameter allows domain users to be automatically logged into the Web Console. By default this parameter is set to <code style="font-family: 'Courier New';">false</code>, which requires domain users to login each time the Web Console is accessed. See the <a href="SSO.htm" target="_parent" title="Enable Single Sign-On" alt="Enable Single Sign-On" class="MCXref xref">Enable Single Sign-On</a> topic&#160;for additional information.</p>
+                                                <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>The Web Console also supports using Microsoft Entra ID&#160;single sign-on. See the <a href="EntraIDSSO.htm" target="_parent" title="Microsoft Entra ID Single Sign-On" alt="Microsoft Entra ID Single Sign-On" class="MCXref xref">Microsoft Entra ID Single Sign-On</a> topic for additional information.</p>
+                                            </li>
+                                        </ul>
+                                        <p>These parameters can be configured within the <b>WebServer.exe.config</b> file in the Web folder of the <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> installation directory <code>…\STEALTHbits\StealthAUDIT\Web</code>.</p>
+                                        <h2><a name="_Enable_SSL_for"></a>Enable SSL for the Web Console</h2>
+                                        <p>To enable Secure Sockets Layer (SSL) for secure, remote connections to the Web Console it is necessary to bind a certificate to the port. See the <a href="#Self-Sig" target="_parent" title="Self-Signed Certificate for SSL" alt="Self-Signed Certificate for SSL" class="MCXref xref">Use a Self-Signed Certificate for SSL</a> topic  for more information. Follow the steps on the server where <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> is installed to enable SSL for the Web Console.</p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>The following steps require a certificate to be available. Organizations typically have one or more system administrators responsible for Public Key Infrastructure (PKI) and certificates. To continue with this configuration it will first be necessary to confer with the PKI administrator to determine which certificate method will conform to the organization’s security policies. Optionally, see <a href="#Self-Sig" target="_parent" title="Self-Signed Certificate for SSL" alt="Self-Signed Certificate for SSL" class="MCXref xref">Use a Self-Signed Certificate for SSL</a> for an Administrator PowerShell command which will both create and import a self-signed certificate.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Import the certificate to the hosting server using the Certificate Management MMC snap-in. </p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If using a self-signed certificate, it will also need to be imported. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>  Create an SSL binding. It is necessary to use the certificate’s <b>Hash</b> value for the <code>$certHash</code> value:</p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>The following Administrator PowerShell dir command can be run on the certificate's “drive” to find the <b>Hash</b> value of a certificate which was already created and the output will include the Thumbprint (<b>Hash</b>) value and the certificate name:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: PowerShell;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>dir cert:\localmachine\my</code></pre>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <p>Run the following command using Administrator PowerShell to create the SSL binding, with the appropriate <code>certHash</code> value:</p>
+                                                <div class="codeSnippet">
+                                                    <div style="mc-code-lang: PowerShell;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="font-weight: bold; ">$guid</span> = <span style="color: #df5000; ">"bdd5710f-7cbe-4f85-b8c1-da4bddf485a8"</span><br /><span style="font-weight: bold; ">$certHash</span> = <span style="color: #df5000; ">"80F78FD2566793D2F39E748CDF6DED09B6F57A82"</span> <span style="color: #969896; "># the 'Thumbprint' value</span><br /><span style="font-weight: bold; ">$ip</span> = <span style="color: #df5000; ">"0.0.0.0"</span> <span style="color: #969896; "># this means all IP addresses</span><br /><span style="font-weight: bold; ">$port</span> = <span style="color: #df5000; ">"8082"</span> <span style="color: #969896; "># the default HTTPS port</span><br /><span style="color: #df5000; ">"http add sslcert ipport=$($ip):$port certhash=$certHash appid={$guid}"</span> | netsh</code></pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Open the <b>WebServer.exe.config</b> file with a text editor, for example Notepad. It is located within the Web folder of the <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> installation directory.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/WebServerExeConfig.png" title="WebServer.exe.config file in Notepad" alt="WebServer.exe.config file in Notepad" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Change the value for the <code style="font-family: 'Courier New';">BindingUrl</code> parameter from <code>http</code> to <code>https</code>: </p>
+                                        <div class="codeSnippet">
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>&lt;add key="BindingUrl" value="https://+:8082" /&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>After changing the <code>BindingUrl</code> value in the <b>WebServer.exe.config</b> file, the Website URL must be updated to match the new value in the following places:<ul><li><span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span>'s <b>Settings</b> &gt; <b>Reporting </b>node</li><li><span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span>'s Published Reports Desktop icon properties</li><li><p>See the <a href="#_Update_Website_URLs" title="Update Website URLs" alt="Update Website URLs" target="_parent" class="MCXref xref">Update Website URLs</a> topic for additional information.</p></li></ul></li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Save and close the file.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>Navigate to Services (<code style="font-family: 'Courier New';">services.msc</code>). Restart the <span class="mc-variable SA.Product_Long_Name variable">Netwrix Access Analyzer (formerly Enterprise Auditor)</span> Web Server service.</p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If also using the AIC, then SSL needs to be enabled for the AIC using this certificate. See the Securing the AIC section of the <a href="https://helpcenter.netwrix.com/category/accessinformationcenter" target="_blank" title="Netwrix Access Information Center Documentation" alt="Netwrix Access Information Center Documentation">Netwrix Access Information Center Documentation</a>  for additional information. </p>
+                                        <p>The Web Console has been enabled for SSL communication. Access it using the server’s fully qualified domain name and the HTTPS port (<code style="font-family: 'Courier New';">https://[hostname.domain.com]:8082</code>). If a self-signed certificate was used, then the client-side access to the Web Console will generate a Certificate error. See the <a href="#_Add_the_Certificate_1" target="_parent" title="Add the Certificate for Client-Side Access" alt="Add the Certificate for Client-Side Access" class="MCXref xref">Add the Certificate for Client-Side Access</a> topic for additional information.</p>
+                                        <h3><a name="_Update_Website_URLs"></a>Update Website URLs</h3>
+                                        <p>If the Binding URL value is updated in <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span>'s <b>WebServer.exe.config</b> file, the Website URL must be updated to match the new value in the following places:</p>
+                                        <ul>
+                                            <li><span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span>'s Reporting node (<b>Settings</b> &gt; <b>Reporting</b>)</li>
+                                            <li><span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span>'s Published Reports Desktop icon properties</li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Update the Website URL in the Reporting Node</p>
+                                        <p>Follow the steps to update the Website URL in the <b>Settings</b> &gt; <b>Reporting</b> node.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Expand <b>Settings</b> and select the <b>Reporting</b> node. </p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/WebsiteURLReporting.png" title="Access Governance Reporting Settings page" alt="Access Governance Reporting Settings page" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>In the <b>Website URL</b> box, update the URL to: <code style="font-family: 'Courier New';">https://[hostname.domain.com]:8082</code></p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span> Click <b>Save</b>. </p>
+                                        <p class="C1SectionEnd">The Website URL is now updated.</p>
+                                        <p class="Bold_Subheading">Update the URL in the Published Reports Desktop Icon Properties</p>
+                                        <p>Follow the steps to update the URL in the Published Reports desktop icon's Published Report's Properties window. </p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Right click on the <b>Published Reports</b> desktop shortcut and click <b>Properties</b>.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/PublishedReportsProperties.png" title="Published Reports desktop icon properties" alt="Published Reports desktop icon properties" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>On the <b>Web Document</b> tab, update the <b>URL</b> in the text box to: <code>https://localhost:8082/</code></p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span> Click <b>Apply</b> and then <b>OK</b> to exit.</p>
+                                        <p class="ListContinue">The URL is now updated.</p>
+                                        <h3>Remove Certificate from the Port</h3>
+                                        <p>Remove or unbind the certificate from the port by running the following Administrator PowerShell command:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: PowerShell;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>netsh http delete sslcert ipport=<span style="color: #333333; ">0.0.0.0</span>:<span style="color: #333333; ">8082</span> <span style="color: #969896; "># ip and port used when binding</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <h3>List SSL Certificate Bindings</h3>
+                                        <p>You can run the following PowerShell command to list all SSL&#160;certificate bindings and use this to validate which certificates are bound to specific ports:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: PowerShell;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>netsh http show sslcert</code></pre>
+                                            </div>
+                                        </div>
+                                        <h2><a name="Self-Sig"></a>Use a Self-Signed Certificate for SSL</h2>
+                                        <p>If you want to use a self-signed certificate, use the <code>New-SelfSignedCertificate</code> cmdlet, which is available in Administrator PowerShell 3.0+ to generate and import the certificate:</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: PowerShell;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #a71d5d; font-weight: bold; ">New-SelfSignedCertificate</span> -DnsName machinename.domain.com -CertStoreLocation Cert:\LocalMachine\My</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>The output will show this info:</p>
+                                        <p style="margin-bottom: 0pt;margin-left: 18pt;"><code style="font-family: 'Courier New';">Thumbprint&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Subject</code>
+                                        </p>
+                                        <p style="margin-bottom: 0pt;margin-left: 18pt;"><code style="font-family: 'Courier New';">----------&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; -------</code>
+                                        </p>
+                                        <p style="margin-left: 18pt;margin-right: 0pt;"><code style="font-family: 'Courier New';">80F78FD2566793D2F39E748CDF6DED09B6F57A82&#160; CN=machinename.domain.com</code>
+                                        </p>
+                                        <p>The Thumbprint value is the certificate <b>Hash</b> value to be used when binding to the port. The port can be the same as in HTTP (8082). Use this <b>Hash</b> value for Step 2 of the <a href="#_Enable_SSL_for" target="_parent" title="Enable SSL for the Web Console" alt="Enable SSL for the Web Console" class="MCXref xref">Enable SSL for the Web Console</a> instructions.</p>
+                                        <p>Creation and import of the self-signed certificate can be validated in Microsoft Management Console. Follow these steps to confirm the certificate is in Microsoft Management Console.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Open Microsoft Management Console (<code style="font-family: 'Courier New';">mmc.exe</code>). </p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateAddSnapin.png" title="Microsoft Management Console Certificates snap-in" alt="Microsoft Management Console Certificates snap-in" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Select <b>File</b> &gt; <b>Add/Remove Snap-in</b>. The Add or Remove Snap-ins window opens. Select <b>Certificates</b>, and click <b>Add</b>. Then select <b>Computer account</b> in the Certificates snap-in window.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateSelectComputer.png" title="Microsoft Management Console Certificates snap-in Select Computer dialog" alt="Microsoft Management Console Certificates snap-in Select Computer dialog" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Click <b>Next</b> and select <b>Local computer</b>. Click <b>Finish</b>.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateSnapins.png" title="Microsoft Management Console Certificates Add or Remove Snap-ins window" alt="Microsoft Management Console Certificates Add or Remove Snap-ins window" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>The certificate will appear in the Selected snap-ins list in the Add or Remove Snap-ins window. Click <b>OK</b> to close the window.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Navigate to <b>Certificates</b> &gt; <b>Personal</b> &gt; <b>Certificates</b>. The certificate should show in the pane on the right.</p>
+                                        <p>The self-signed certificate was created and imported. Repeat these steps for each client-side host.</p>
+                                        <h3><a name="_Add_the_Certificate_1"></a>Add the Certificate for Client-Side Access</h3>
+                                        <p>When you open the Web Console with SSL&#160;enabled, the web browser shows a Your connection isn't private warning message. This can be removed by importing the certificate onto the client server. </p>
+                                        <p>Follow the steps to remove the certificate error.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Open the Web Console in your browser.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateConnectionNotPrivate.png" title="Your connection isn't private warning in Microsoft Edge" alt="Your connection isn't private warning in Microsoft Edge" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Click <b>Advanced</b>, and then use the link to continue to the site. This loads the main page of the Web Console.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateNotSecureError.png" title="Access Certificat Viewer from Not Secure error in Microsoft Edge address bar" alt="Access Certificat Viewer from Not Secure error in Microsoft Edge address bar" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Click the <b> Not Secure</b> warning in the browser's address bar. Open the Certificate Viewer from the warning details.</p>
+                                        <ul>
+                                            <li>
+                                                <p>In Microsoft Edge, click the <b>Your Connection to this site isn't secure</b> section, and then click the certificate icon.</p>
+                                            </li>
+                                            <li>
+                                                <p>In Google Chrome, click <b>Certificate is not valid</b>.</p>
+                                            </li>
+                                        </ul>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateViewer.png" title="Web browser Certificate Viewer window" alt="Web browser Certificate Viewer window" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>On the Details tab of the Certificate Viewer, click <b>Export</b>. Save the security certificate and  close the Certificate Viewer.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateWindow.png" title="Certificate window" alt="Certificate window" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Navigate to the save location from the previous step and open the exported security certificate.  On the Certificate window, click <b>Install Certificate</b>. The Certificate Import Wizard opens.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/CertificateImportWizard.png" title="Certificate Import Wizard" alt="Certificate Import Wizard" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span> On the Certificate Import Wizard, select the Store Location as <b>Local Machine</b>, and click <b>Next</b>. Keep the default selection of <b>Automatically select the certificate store based on the type of certificate</b>. Navigate through the wizard to save this configuration. A pop-up message should state that the import was successful. Click <b>OK</b> to close out all dialogs.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/EnterpriseAuditor/Install/Reports/AddCertificateConsole.png" title="Microsoft Management Console Trusted Root Certification Authorities Certificates" alt="Microsoft Management Console Trusted Root Certification Authorities Certificates" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>In the Microsoft Management Console, check the <b>Trusted Root Certification Authorities</b> &gt; <b>Certificates</b>. The self-signed certificate should now be listed there. </p>
+                                        <p>The client-side access to the Web Console will no longer generate a certificate error. Repeat these steps for each client-side host.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
