@@ -59,7 +59,7 @@ class ConversionTests(unittest.TestCase):
 
     def test_aix_contains_url(self):
         content = Path(DOCS_DIR / "AIX.md").read_text()
-        self.assertIn("https://IPADDRESS-SERVERNAME:PORT/api/", content)
+        self.assertIn("`https://IPADDRESS-SERVERNAME:PORT/api/`", content)
 
 
 if __name__ == "__main__":
