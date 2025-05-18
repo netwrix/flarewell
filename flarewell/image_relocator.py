@@ -147,14 +147,25 @@ class ImageRelocator:
         Returns:
             List of paths to image files
         """
-        # Common image extensions
-        image_extensions = [".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".bmp", ".tiff"]
-        
-        # Collect all image files
-        image_files = []
-        for ext in image_extensions:
-            image_files.extend(list(self.source_dir.glob(f"**/*{ext}")))
-        
+        """Return a list of image files under ``source_dir``."""
+
+        image_exts = {
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".gif",
+            ".svg",
+            ".webp",
+            ".bmp",
+            ".tiff",
+        }
+
+        image_files: List[Path] = []
+
+        for path in self.source_dir.rglob("*"):
+            if path.is_file() and path.suffix.lower() in image_exts:
+                image_files.append(path)
+
         return image_files
     
     def _update_image_references(self, content: str, current_file: Path) -> str:

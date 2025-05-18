@@ -109,22 +109,23 @@ class TestImageRelocator:
         # Check that all MD files were updated
         assert stats["files_updated"] == 2
         
-        # Check that the images exist in the target directory
-        assert (target_dir / "Resources" / "Images" / "logo.png").exists()
-        assert (target_dir / "Resources" / "Images" / "banner.jpg").exists()
-        assert (target_dir / "Resources" / "Images" / "product" / "screenshot1.png").exists()
-        assert (target_dir / "Resources" / "Images" / "product" / "screenshot2.png").exists()
+        # Check that the images exist in the target directory. The relocator
+        # drops the leading ``Resources`` folder to keep paths short.
+        assert (target_dir / "Images" / "logo.png").exists()
+        assert (target_dir / "Images" / "banner.jpg").exists()
+        assert (target_dir / "Images" / "product" / "screenshot1.png").exists()
+        assert (target_dir / "Images" / "product" / "screenshot2.png").exists()
         
         # Check that the references in the markdown files were updated
         with open(content_dir / "docs" / "index.md", "r") as f:
             index_content = f.read()
-            assert "../static/img/Resources/Images/logo.png" in index_content
-            assert "../static/img/Resources/Images/product/screenshot1.png" in index_content
+            assert "../static/img/Images/logo.png" in index_content
+            assert "../static/img/Images/product/screenshot1.png" in index_content
         
         with open(content_dir / "docs" / "product.md", "r") as f:
             product_content = f.read()
-            assert "../static/img/Resources/Images/banner.jpg" in product_content
-            assert "../static/img/Resources/Images/product/screenshot2.png" in product_content
+            assert "../static/img/Images/banner.jpg" in product_content
+            assert "../static/img/Images/product/screenshot2.png" in product_content
     
     def test_image_relocation_without_structure(self, test_setup):
         """Test relocating images without preserving directory structure."""
