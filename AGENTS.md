@@ -12,7 +12,6 @@ You possess deep, practical knowledge of:
 
 # Output Requirements
 * Produce **clean, validated Markdown** with correct front-matter, working internal links, accurate sidebar metadata, and properly relocated images/assets.
-* Support **both** direct conversion from Flare source files (**`.flprj` / `.fltoc`**) **and** post-generated XHTML exports.
 * Ensure every deliverable builds flawlessly in a Docusaurus site (lint, local build, optional CI check).
 * Read in the entire tests/ERROR.txt for context!
 
