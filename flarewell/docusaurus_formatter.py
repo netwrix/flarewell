@@ -79,6 +79,41 @@ class DocusaurusFormatter:
             parts[i] = ''.join(subparts)
         return ''.join(parts)
 
+    def _escape_angle_brackets(self, text: str) -> str:
+        """Escape `<` and `>` outside of code blocks."""
+
+        def _escape_segment(segment: str) -> str:
+            result = []
+            i = 0
+            while i < len(segment):
+                ch = segment[i]
+                # Preserve existing escapes
+                if ch == "\\" and i + 1 < len(segment):
+                    result.append(ch + segment[i + 1])
+                    i += 2
+                    continue
+                if ch == "<" or ch == ">":
+                    result.append("\\" + ch)
+                else:
+                    result.append(ch)
+                i += 1
+            return "".join(result)
+
+        parts = re.split(r'(```.*?```)', text, flags=re.DOTALL)
+        for i, part in enumerate(parts):
+            if part.startswith("```"):
+                continue
+
+            subparts = re.split(r'(`[^`]*`)', part)
+            for j, sub in enumerate(subparts):
+                if sub.startswith('`') and sub.endswith('`'):
+                    continue
+                subparts[j] = _escape_segment(sub)
+
+            parts[i] = ''.join(subparts)
+
+        return ''.join(parts)
+
     def _sanitize_bad_urls(self, text: str) -> str:
         """Wrap malformed URLs in backticks so MDX does not parse them."""
 
@@ -91,7 +126,8 @@ class DocusaurusFormatter:
                 return f"`{url}`"
             return url
 
-        return re.sub(r"https?://\S+", repl, text)
+        url_pattern = re.compile(r"https?://[^\s)>]+")
+        return url_pattern.sub(repl, text)
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """Simplified HTML to Markdown conversion without external deps."""
@@ -161,6 +197,9 @@ class DocusaurusFormatter:
 
         # Escape curly braces outside of code blocks to avoid MDX parse errors
         markdown = self._escape_mdx_braces(markdown)
+
+        # Escape stray angle brackets which may be interpreted as JSX
+        markdown = self._escape_angle_brackets(markdown)
         
         # Fix any remaining HTML artifacts
         # Convert any remaining <br> tags to newlines
