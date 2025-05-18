@@ -13,7 +13,6 @@ from typing import Optional, List
 
 from flarewell.converter import FlareConverter
 from flarewell.link_mapper import LinkMapper
-from flarewell.image_relocator import ImageRelocator
 from flarewell.markdown_image_cleaner import MarkdownImageCleaner
 
 
@@ -178,28 +177,10 @@ def convert(
     if errors > 0:
         click.echo(f"❌ {errors} errors encountered during link fixing.")
     
-    # Relocate images by default to ../static
-    click.echo("\nRelocating images to static directory...")
-    relocate_start = time.time()
 
+    # Images are relocated during conversion; report destination directory
     static_dir = Path(output_dir).parent / "static"
-
-    image_relocator = ImageRelocator(
-        source_dir=output_dir,
-        target_dir=str(static_dir),
-        preserve_structure=preserve_structure,
-        debug=debug,
-    )
-
-    relocation_stats = image_relocator.relocate()
-
-    relocate_time = time.time() - relocate_start
-    click.echo(f"✅ Image relocation completed in {relocate_time:.2f} seconds.")
-    click.echo(f"Images relocated: {relocation_stats['images_relocated']}")
-    click.echo(f"Files updated: {relocation_stats['files_updated']}")
-
-    if relocation_stats['errors'] > 0:
-        click.echo(f"❌ {relocation_stats['errors']} errors encountered during image relocation.")
+    click.echo(f"\nImages copied to: {static_dir}")
 
     # Remove references to images that do not exist
     click.echo("\nCleaning up references to missing images...")

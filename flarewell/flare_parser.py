@@ -62,9 +62,10 @@ class FlareHtmlParser(FlareParserBase):
             
             result["topics"].append(topic_info)
         
-        # Find all assets (images, etc.)
+        # Find additional assets (non-image files such as PDFs)
+        asset_exts = {".pdf"}
         for file_path in self.input_dir.glob("**/*.*"):
-            if file_path.suffix.lower() in ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.pdf']:
+            if file_path.suffix.lower() in asset_exts:
                 rel_path = file_path.relative_to(self.input_dir)
                 result["assets"].append({
                     "path": str(file_path),
