@@ -1,0 +1,18 @@
+# Main dependencies
+beautifulsoup4>=4.13.4
+click>=8.2.0
+markdown>=3.8
+markdownify>=1.1.0
+pyyaml>=6.0.2
+requests>=2.32.3
+
+# Development dependencies
+pytest
+pytest-cov
+black
+isort
+flake8
+mypy
+
+# Additional dependencies observed in the environment
+html2markdown>=0.1.7 
