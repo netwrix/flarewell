@@ -156,7 +156,11 @@ class FlareConverter:
             rel_path = file_info.get("rel_path", file_info.get("path", ""))
             output_path = self.output_dir / rel_path
         else:
-            output_path = self.output_dir / file_info.get("new_path", file_info.get("rel_path", ""))
+            new_rel = file_info.get("new_path")
+            if not new_rel:
+                rel_source = file_info.get("rel_path", file_info.get("path", ""))
+                new_rel = Path(rel_source).name
+            output_path = self.output_dir / new_rel
 
         output_path = output_path.with_suffix(".md")
 
@@ -229,10 +233,10 @@ class FlareConverter:
                 rel_path = Path(*rel_parts)
                 dest_path = self.output_dir / rel_path
             else:
-                # Use new path if provided by LLM
-                new_path = Path(asset.get("new_path", asset.get("rel_path", "")))
-                rel_parts = [p for p in new_path.parts if p.lower() != "resources"]
-                dest_path = self.output_dir / Path(*rel_parts)
+                new_rel = asset.get("new_path")
+                if not new_rel:
+                    new_rel = Path(asset.get("rel_path", asset.get("path", ""))).name
+                dest_path = self.output_dir / new_rel
             
             # Create parent directories
             os.makedirs(dest_path.parent, exist_ok=True)

@@ -72,7 +72,7 @@ Converted images will be moved to a `static` directory next to your output docs 
 
 - `--input-dir, -i`: Directory containing Flare HTML output
 - `--output-dir, -o`: Directory to output Docusaurus-compatible Markdown files
-- `--preserve-structure`: Preserve the original folder/file structure (default: `True`)
+- `--preserve-structure`: Preserve the original folder/file structure (default: `False`)
 - `--exclude-dir`: Directory patterns to exclude from conversion (can be used multiple times)
 - `--debug`: Enable debug mode for detailed logging
 - `--no-sidebars`: Skip generating `sidebars.js`
