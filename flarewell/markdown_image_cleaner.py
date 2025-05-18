@@ -41,16 +41,12 @@ class MarkdownImageCleaner:
                 if self.debug:
                     details[str(md_file.relative_to(self.docs_dir))] = refs
 
-        # Delete unreferenced images from static dir
-        image_exts = [".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".bmp", ".tiff"]
-        for img_file in self.static_dir.rglob("*"):
-            if img_file.suffix.lower() in image_exts and img_file.is_file():
-                rel = str(img_file.relative_to(self.docs_dir.parent)).replace("\\", "/")
-                if rel not in all_refs and rel.lower() not in {r.lower() for r in all_refs}:
-                    if self.debug:
-                        print(f"Deleting unreferenced image '{rel}'")
-                    img_file.unlink()
-                    removed_files += 1
+        # Previously this tool deleted images in the static directory that had
+        # no matching references in the Markdown output. However, during
+        # end-to-end conversion we want to preserve all relocated images so that
+        # manual review can decide whether they are required. The deletion logic
+        # is therefore disabled, but the counting variable is kept for
+        # compatibility.
 
         if self.debug:
             for file, refs in details.items():
