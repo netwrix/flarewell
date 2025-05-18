@@ -11,6 +11,9 @@ import re
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
+from bs4 import BeautifulSoup
+import markdownify
+
 WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \"'.,;:])")
 from html import unescape
 from flarewell.link_mapper import LinkMapper
@@ -70,13 +73,7 @@ class DocusaurusFormatter:
             if part.startswith("```"):
                 continue
 
-            subparts = re.split(r'(`[^`]*`)', part)
-            for j, sub in enumerate(subparts):
-                if sub.startswith('`') and sub.endswith('`'):
-                    continue
-                subparts[j] = _escape_segment(sub)
-
-            parts[i] = ''.join(subparts)
+            parts[i] = _escape_segment(part)
         return ''.join(parts)
 
     def _escape_angle_brackets(self, text: str) -> str:
@@ -130,23 +127,16 @@ class DocusaurusFormatter:
         return url_pattern.sub(repl, text)
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
-        """Simplified HTML to Markdown conversion without external deps."""
+        """Convert HTML content to Markdown using ``markdownify`` and BeautifulSoup."""
         html = content_dict.get("content", "")
 
-        # Convert headings
-        for i in range(6, 0, -1):
-            pattern = re.compile(fr"<h{i}[^>]*>(.*?)</h{i}>", re.IGNORECASE | re.DOTALL)
-            html = pattern.sub(lambda m: "\n" + "#" * i + " " + unescape(m.group(1)) + "\n", html)
+        # Parse with BeautifulSoup to clean malformed HTML
+        soup = BeautifulSoup(html, "html.parser")
+        for tag in soup(["script", "style"]):
+            tag.decompose()
 
-        # Replace paragraphs and breaks with newlines
-        html = re.sub(r"<p[^>]*>", "", html, flags=re.IGNORECASE)
-        html = re.sub(r"</p>", "\n\n", html, flags=re.IGNORECASE)
-        html = re.sub(r"<br\s*/?>", "\n", html, flags=re.IGNORECASE)
-
-        # Drop all other tags
-        html = re.sub(r"<[^>]+>", "", html)
-
-        markdown = unescape(html)
+        # Use markdownify for robust HTML -> Markdown conversion
+        markdown = markdownify.markdownify(str(soup), heading_style="ATX")
 
         current_file_path = content_dict.get("rel_path", "")
         markdown = self._post_process_markdown(markdown, current_file_path)
