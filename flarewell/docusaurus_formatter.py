@@ -31,8 +31,10 @@ class DocusaurusFormatter:
     """
     Format HTML content as Docusaurus-compatible Markdown.
     """
-    
-    def __init__(self, link_mapper: Optional[LinkMapper] = None, general_markdown: bool = False):
+
+    def __init__(
+        self, link_mapper: Optional[LinkMapper] = None, general_markdown: bool = False
+    ):
         """Initialize the formatter.
 
         Args:
@@ -68,16 +70,16 @@ class DocusaurusFormatter:
                 i += 1
             return "".join(result)
 
-        parts = re.split(r'(```.*?```)', text, flags=re.DOTALL)
+        parts = re.split(r"(```.*?```)", text, flags=re.DOTALL)
         for i, part in enumerate(parts):
             if part.startswith("```"):
                 continue
 
             parts[i] = _escape_segment(part)
-        return ''.join(parts)
+        return "".join(parts)
 
     def _escape_angle_brackets(self, text: str) -> str:
-        """Escape `<` and `>` outside of code blocks."""
+        """Escape `<` and `>` outside of code blocks by using HTML entities."""
 
         def _escape_segment(segment: str) -> str:
             result = []
@@ -89,27 +91,29 @@ class DocusaurusFormatter:
                     result.append(ch + segment[i + 1])
                     i += 2
                     continue
-                if ch == "<" or ch == ">":
-                    result.append("\\" + ch)
+                if ch == "<":
+                    result.append("&lt;")
+                elif ch == ">":
+                    result.append("&gt;")
                 else:
                     result.append(ch)
                 i += 1
             return "".join(result)
 
-        parts = re.split(r'(```.*?```)', text, flags=re.DOTALL)
+        parts = re.split(r"(```.*?```)", text, flags=re.DOTALL)
         for i, part in enumerate(parts):
             if part.startswith("```"):
                 continue
 
-            subparts = re.split(r'(`[^`]*`)', part)
+            subparts = re.split(r"(`[^`]*`)", part)
             for j, sub in enumerate(subparts):
-                if sub.startswith('`') and sub.endswith('`'):
+                if sub.startswith("`") and sub.endswith("`"):
                     continue
                 subparts[j] = _escape_segment(sub)
 
-            parts[i] = ''.join(subparts)
+            parts[i] = "".join(subparts)
 
-        return ''.join(parts)
+        return "".join(parts)
 
     def _sanitize_bad_urls(self, text: str) -> str:
         """Wrap malformed URLs in backticks so MDX does not parse them."""
@@ -129,7 +133,9 @@ class DocusaurusFormatter:
     def _fix_code_blocks(self, text: str) -> str:
         """Ensure code fences have a language and escape problematic characters."""
 
-        code_block_pattern = re.compile(r"```(?P<lang>[^\n]*)\n(?P<code>.*?)```", re.DOTALL)
+        code_block_pattern = re.compile(
+            r"```(?P<lang>[^\n]*)\n(?P<code>.*?)```", re.DOTALL
+        )
 
         def repl(match: re.Match) -> str:
             lang = match.group("lang").strip()
@@ -174,10 +180,11 @@ class DocusaurusFormatter:
         """Wrap HTML-like tags in backticks to avoid MDX JSX parsing."""
 
         jsx_pattern = re.compile(
-            r"(?<!`)(<[a-zA-Z][^<>]*>[^<>]*</[a-zA-Z][^<>]*>|<[a-zA-Z][^<>]*/>)(?!`)")
+            r"(?<!`)(<[a-zA-Z][^<>]*>[^<>]*</[a-zA-Z][^<>]*>|<[a-zA-Z][^<>]*/>)(?!`)"
+        )
 
         return jsx_pattern.sub(lambda m: f"`{m.group(0)}`", text)
-    
+
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """Convert HTML content to Markdown using ``markdownify`` and BeautifulSoup."""
         html = content_dict.get("content", "")
@@ -194,16 +201,15 @@ class DocusaurusFormatter:
         markdown = self._post_process_markdown(markdown, current_file_path)
 
         return markdown
-    
-    
+
     def _post_process_markdown(self, markdown: str, current_file_path: str = "") -> str:
         """
         Post-process markdown content to apply Docusaurus conventions and ensure all HTML is removed.
-        
+
         Args:
             markdown: Markdown content
             current_file_path: Path of the current file being processed
-            
+
         Returns:
             Processed markdown
         """
@@ -211,28 +217,28 @@ class DocusaurusFormatter:
 
         if not self.general_markdown:
             # Fix admonitions (notes, warnings, tips)
-            markdown = re.sub(r':::note\s+', ":::note\n", markdown)
-            markdown = re.sub(r':::warning\s+', ":::warning\n", markdown)
-            markdown = re.sub(r':::tip\s+', ":::tip\n", markdown)
-        
+            markdown = re.sub(r":::note\s+", ":::note\n", markdown)
+            markdown = re.sub(r":::warning\s+", ":::warning\n", markdown)
+            markdown = re.sub(r":::tip\s+", ":::tip\n", markdown)
+
         # Use link mapper to transform links if available
         if self.link_mapper and current_file_path:
             markdown = self.link_mapper.transform_links(markdown, current_file_path)
         else:
             # Legacy link handling if no link mapper is available
             # Fix internal links by removing extensions
-            markdown = re.sub(r'\]\(([^)]+)\.(htm|html)\)', r'](\1)', markdown)
-        
+            markdown = re.sub(r"\]\(([^)]+)\.(htm|html)\)", r"](\1)", markdown)
+
         # Preserve original image paths (don't modify them here)
         # This allows the image relocator to handle them correctly later
         # Only normalize any Resource/Images references to avoid duplicate slashes
-        markdown = re.sub(r'\]\(Resources/+Images/', r'](Resources/Images/', markdown)
-        
+        markdown = re.sub(r"\]\(Resources/+Images/", r"](Resources/Images/", markdown)
+
         # Remove extra blank lines
-        markdown = re.sub(r'\n{3,}', '\n\n', markdown)
+        markdown = re.sub(r"\n{3,}", "\n\n", markdown)
 
         # Fix code blocks and escape special characters inside them
-        markdown = re.sub(r'```\s+', '```\n', markdown)
+        markdown = re.sub(r"```\s+", "```\n", markdown)
         markdown = self._fix_code_blocks(markdown)
 
         # Escape braces inside inline code
@@ -249,31 +255,33 @@ class DocusaurusFormatter:
 
         # Escape stray angle brackets which may be interpreted as JSX
         markdown = self._escape_angle_brackets(markdown)
-        
+
         # Fix any remaining HTML artifacts
         # Convert any remaining <br> tags to newlines
-        markdown = re.sub(r'<br\s*/?>', '\n', markdown)
-        
+        markdown = re.sub(r"<br\s*/?>", "\n", markdown)
+
         # Fix details/summary to use proper format
         markdown = re.sub(
-            r'<details>\s*<summary>(.*?)</summary>\s*(.*?)\s*</details>',
-            r'<details>\n<summary>\1</summary>\n\n\2\n</details>',
+            r"<details>\s*<summary>(.*?)</summary>\s*(.*?)\s*</details>",
+            r"<details>\n<summary>\1</summary>\n\n\2\n</details>",
             markdown,
-            flags=re.DOTALL
+            flags=re.DOTALL,
         )
-        
+
         # Remove any remaining HTML tags except for details/summary
-        markdown = re.sub(r'<(?!(details|\/details|summary|\/summary))[^>]*>', '', markdown)
+        markdown = re.sub(
+            r"<(?!(details|\/details|summary|\/summary))[^>]*>", "", markdown
+        )
 
         # Clean up any stray Windows escaping
         markdown = _remove_windows_escapes(markdown)
 
         return markdown
-    
+
     def add_frontmatter(
-        self, 
-        markdown: str, 
-        title: str = "", 
+        self,
+        markdown: str,
+        title: str = "",
         sidebar_position: int = 1,
         description: str = "",
         tags: List[str] = None,
@@ -284,11 +292,11 @@ class DocusaurusFormatter:
 
         title = self._remove_windows_escapes(title).replace('"', '\\"').strip()
         if not title:
-            first_line = markdown.split('\n', 1)[0]
+            first_line = markdown.split("\n", 1)[0]
             heading = re.match(r"#\s*(.*)", first_line)
             title = heading.group(1).strip() if heading else "Untitled"
 
-        lines = [f'title: "{title}"', f'sidebar_position: {sidebar_position}']
+        lines = [f'title: "{title}"', f"sidebar_position: {sidebar_position}"]
 
         if description:
             desc = self._remove_windows_escapes(description).replace('"', '\\"')
@@ -302,31 +310,31 @@ class DocusaurusFormatter:
 
         yaml_content = "\n".join(lines)
         return f"---\n{yaml_content}\n---\n\n{markdown}"
-    
+
     def generate_sidebar_config(self, structure: Dict[str, Any]) -> Dict[str, Any]:
         """
         Generate sidebar configuration for Docusaurus.
-        
+
         Args:
             structure: Project structure dictionary.
-            
+
         Returns:
             Sidebar configuration.
         """
         # Build basic sidebar structure from TOC
         toc_items = structure.get("toc", [])
         topics = structure.get("topics", [])
-        
+
         # Create a mapping of file paths to topic info
         topic_map = {}
         for topic in topics:
             rel_path = topic.get("rel_path", "")
             if rel_path:
                 topic_map[rel_path] = topic
-        
+
         # Sort TOC items by position
         toc_items = sorted(toc_items, key=lambda x: x.get("position", 0))
-        
+
         # Build sidebar items
         sidebar_items = []
         for item in toc_items:
@@ -335,18 +343,16 @@ class DocusaurusFormatter:
                 # Convert file path to docusaurus path
                 # Remove extension and transform to match Docusaurus slugs
                 docusaurus_path = file_path.rsplit(".", 1)[0]
-                
+
                 sidebar_item = {
                     "type": "doc",
                     "id": docusaurus_path,
                     "label": item.get("title", topic_map[file_path].get("title", "")),
                 }
-                
+
                 sidebar_items.append(sidebar_item)
-        
+
         # Create the final sidebar config
-        sidebar = {
-            "sidebar": sidebar_items
-        }
-        
-        return sidebar 
+        sidebar = {"sidebar": sidebar_items}
+
+        return sidebar
