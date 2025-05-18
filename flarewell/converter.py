@@ -68,6 +68,10 @@ class FlareConverter:
             link_mapper=self.link_mapper,
             general_markdown=(self.markdown_style != "docusaurus"),
         )
+
+        # Directory for relocated images
+        self.static_img_dir = self.output_dir.parent / "static" / "img"
+        self.image_map: Dict[Path, Path] = {}
         
 
     def convert(self) -> Dict[str, int]:
@@ -119,8 +123,11 @@ class FlareConverter:
                 print(f"Error processing {item.get('path')}: {str(e)}")
                 self.stats["errors"] += 1
         
-        # Copy assets
+        # Copy non-image assets
         self._copy_assets(project_structure.get("assets", []))
+
+        # Relocate tracked images
+        self._copy_tracked_images()
         
         # Generate sidebar.js if requested
         if self.generate_sidebars:
@@ -142,9 +149,25 @@ class FlareConverter:
             file_info: Dictionary with file information.
         """
         content = self.parser.get_content(file_info)
-        
+
+        # Determine output path
+        if self.preserve_structure:
+            rel_path = file_info.get("rel_path", file_info.get("path", ""))
+            output_path = self.output_dir / rel_path
+        else:
+            output_path = self.output_dir / file_info.get("new_path", file_info.get("rel_path", ""))
+
+        output_path = output_path.with_suffix(".md")
+
+        images = content.get("images", [])
+
         # Convert to markdown
         md_content = self.formatter.to_markdown(content)
+
+        for img in images:
+            new_ref = self._register_image(img, file_info, output_path)
+            if new_ref:
+                md_content = md_content.replace(img, new_ref)
         
         # Add front matter
         md_content = self.formatter.add_frontmatter(
@@ -154,16 +177,6 @@ class FlareConverter:
             description=file_info.get("description", ""),
         )
         
-        # Determine output path
-        if self.preserve_structure:
-            rel_path = file_info.get("rel_path", file_info.get("path", ""))
-            output_path = self.output_dir / rel_path
-        else:
-            # Use new path if provided by LLM
-            output_path = self.output_dir / file_info.get("new_path", file_info.get("rel_path", ""))
-        
-        # Ensure the path has .md extension
-        output_path = output_path.with_suffix(".md")
         
         # Create directories if they don't exist
         os.makedirs(output_path.parent, exist_ok=True)
@@ -226,6 +239,40 @@ class FlareConverter:
             # Copy the file
             if source_path.exists():
                 shutil.copy2(source_path, dest_path)
+
+    def _register_image(self, img_path: str, file_info: Dict[str, Any], output_path: Path) -> Optional[str]:
+        """Record an image reference and return the new relative path."""
+        html_dir = Path(file_info.get("path", "")).parent
+
+        if os.path.isabs(img_path):
+            abs_path = (self.input_dir / img_path.lstrip("/"))
+        else:
+            abs_path = (html_dir / img_path).resolve()
+
+        if not abs_path.exists():
+            return None
+
+        try:
+            rel_src = abs_path.relative_to(self.input_dir)
+        except ValueError:
+            return None
+
+        rel_parts = [p for p in rel_src.parts if p.lower() != "resources"]
+        dest_path = self.static_img_dir / Path(*rel_parts)
+
+        self.image_map[abs_path] = dest_path
+
+        new_ref = os.path.relpath(dest_path, output_path.parent).replace("\\", "/")
+        return new_ref
+
+    def _copy_tracked_images(self) -> None:
+        """Copy all tracked images to the static directory."""
+        for src, dest in self.image_map.items():
+            if not src.exists():
+                continue
+            os.makedirs(dest.parent, exist_ok=True)
+            if not dest.exists():
+                shutil.copy2(src, dest)
     
     def _generate_sidebar(self, structure: Dict[str, Any]) -> None:
         """
