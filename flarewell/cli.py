@@ -38,7 +38,7 @@ def cli():
 @click.option(
     "--preserve-structure",
     is_flag=True,
-    default=True,
+    default=False,
     help="Preserve the original folder/file structure."
 )
 @click.option(
