@@ -8,13 +8,11 @@ output will avoid Docusaurus specific features such as YAML front matter or
 """
 
 import re
-import yaml
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
 WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \"'.,;:])")
-from bs4 import BeautifulSoup
-from markdownify import markdownify as md
+from html import unescape
 from flarewell.link_mapper import LinkMapper
 
 WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \t\-_()&'\"])")
@@ -82,132 +80,29 @@ class DocusaurusFormatter:
         return ''.join(parts)
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
-        """
-        Convert HTML content to Markdown.
-        
-        Args:
-            content_dict: Dictionary with content and metadata.
-            
-        Returns:
-            Markdown string.
-        """
-        content = content_dict.get("content", "")
-        
-        # Parse with BeautifulSoup to clean up HTML
-        soup = BeautifulSoup(content, "html.parser")
-        
-        # Remove unwanted elements (navigation, scripts, etc.)
-        for element in soup.select("script, style, nav, .navigation, .toolbar, .breadcrumbs, .footer"):
-            element.decompose()
-        
-        # Store expandable sections for later processing
-        toggle_sections = []
-        
-        # Extract toggle sections before conversion
-        for toggle in soup.select(".toggleButton, .MCToggleButton"):
-            section = toggle.find_next("div", class_=["toggleSection", "MCToggleSection"])
-            if section:
-                toggle_text = toggle.get_text().strip()
-                section_content = section.get_text().strip()
-                toggle_sections.append({
-                    "title": toggle_text,
-                    "content": section_content
-                })
-                
-                # Remove these elements so they don't get processed by markdownify
-                toggle.decompose()
-                section.decompose()
-        
-        # Convert Flare-specific elements to Docusaurus equivalents
-        self._convert_flare_elements(soup)
-        
-        # Convert to markdown using markdownify with all HTML elements converted
-        markdown = md(str(soup), heading_style="ATX", bullets="*", strip=["body", "html"])
-        
-        # Post-process the markdown
+        """Simplified HTML to Markdown conversion without external deps."""
+        html = content_dict.get("content", "")
+
+        # Convert headings
+        for i in range(6, 0, -1):
+            pattern = re.compile(fr"<h{i}[^>]*>(.*?)</h{i}>", re.IGNORECASE | re.DOTALL)
+            html = pattern.sub(lambda m: "\n" + "#" * i + " " + unescape(m.group(1)) + "\n", html)
+
+        # Replace paragraphs and breaks with newlines
+        html = re.sub(r"<p[^>]*>", "", html, flags=re.IGNORECASE)
+        html = re.sub(r"</p>", "\n\n", html, flags=re.IGNORECASE)
+        html = re.sub(r"<br\s*/?>", "\n", html, flags=re.IGNORECASE)
+
+        # Drop all other tags
+        html = re.sub(r"<[^>]+>", "", html)
+
+        markdown = unescape(html)
+
         current_file_path = content_dict.get("rel_path", "")
         markdown = self._post_process_markdown(markdown, current_file_path)
-        
-        # Add the expandable sections back
-        for i, section in enumerate(toggle_sections):
-            details_markdown = f"\n<details>\n<summary>{section['title']}</summary>\n\n{section['content']}\n</details>\n\n"
-            # Add details after the corresponding section (typically after installation)
-            if i == 0 and "## Installation" in markdown:
-                install_section_end = markdown.find("##", markdown.find("## Installation") + 12)
-                if install_section_end == -1:
-                    install_section_end = len(markdown)
-                markdown = markdown[:install_section_end] + details_markdown + markdown[install_section_end:]
-            else:
-                # If we can't find a good place, append to the end
-                markdown += details_markdown
-        
+
         return markdown
     
-    def _convert_flare_elements(self, soup: BeautifulSoup) -> None:
-        """
-        Convert Flare-specific HTML elements to equivalent Docusaurus markdown patterns.
-        
-        Args:
-            soup: BeautifulSoup instance of the HTML.
-        """
-        # Convert notes, warnings and tips
-        for selector, prefix in [
-            (".note, .MCNote", "note"),
-            (".warning, .MCWarning", "warning"),
-            (".tip, .MCTip", "tip"),
-        ]:
-            for el in soup.select(selector):
-                text = el.get_text().strip()
-                if self.general_markdown:
-                    # Use a simple blockquote for generic markdown
-                    new_tag = soup.new_tag("blockquote")
-                    new_tag.string = f"**{prefix.capitalize()}:** {text}"
-                else:
-                    new_tag = soup.new_tag("div")
-                    new_tag.string = f":::{prefix}\n{text}\n:::"
-                el.replace_with(new_tag)
-        
-        # Convert tables - ensure they have headers for proper markdown conversion
-        for table in soup.select("table"):
-            # Ensure tables have proper structure for Markdown
-            if not table.find("thead"):
-                # If no header, add an empty one for markdown conversion
-                thead = soup.new_tag("thead")
-                tr = soup.new_tag("tr")
-                
-                # Get number of columns
-                first_row = table.find("tr")
-                if first_row:
-                    num_cols = len(first_row.find_all(["td", "th"]))
-                    for _ in range(num_cols):
-                        th = soup.new_tag("th")
-                        th.string = " "  # Empty header
-                        tr.append(th)
-                    
-                    thead.append(tr)
-                    
-                    # Insert the header at the beginning of the table
-                    table.insert(0, thead)
-        
-        # Convert MadCap-specific elements to markdown equivalents
-        for xref in soup.select("MadCap\\:xref"):
-            href = xref.get("href", "")
-            text = xref.get_text().strip()
-            
-            # Create a standard link
-            link = soup.new_tag("a")
-            link["href"] = href
-            link.string = text
-            
-            xref.replace_with(link)
-        
-        # Preserve image paths with original structure for later relocation
-        for img in soup.select("img"):
-            src = img.get("src", "")
-            if src:
-                # Keep the original path but normalize slashes
-                normalized_src = src.replace("\\", "/")
-                img["src"] = normalized_src
     
     def _post_process_markdown(self, markdown: str, current_file_path: str = "") -> str:
         """

@@ -6,7 +6,8 @@ from pathlib import Path
 from typing import Dict, List, Optional, Any, Union
 from abc import ABC, abstractmethod
 
-from bs4 import BeautifulSoup
+import re
+from html import unescape
 
 
 class FlareParserBase(ABC):
@@ -78,16 +79,14 @@ class FlareHtmlParser(FlareParserBase):
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            
-            soup = BeautifulSoup(content, "html.parser")
-            title_tag = soup.find("title")
-            if title_tag:
-                return title_tag.text.strip()
-            
-            # Look for h1 if no title
-            h1_tag = soup.find("h1")
-            if h1_tag:
-                return h1_tag.text.strip()
+
+            title_match = re.search(r"<title[^>]*>(.*?)</title>", content, re.IGNORECASE|re.DOTALL)
+            if title_match:
+                return unescape(title_match.group(1).strip())
+
+            h1_match = re.search(r"<h1[^>]*>(.*?)</h1>", content, re.IGNORECASE|re.DOTALL)
+            if h1_match:
+                return unescape(h1_match.group(1).strip())
             
             # Fallback to filename
             return file_path.stem
@@ -111,33 +110,15 @@ class FlareHtmlParser(FlareParserBase):
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            
-            # Parse HTML with BeautifulSoup
-            soup = BeautifulSoup(content, "html.parser")
-            
-            # Extract title
-            title = soup.find("title")
-            title_text = title.text.strip() if title else file_info.get("title", "")
-            
-            # Find the main content div (typical in Flare HTML output)
-            main_content = soup.find(class_="MCWikiCategory") or \
-                          soup.find(class_="MCWikiArticle") or \
-                          soup.find(class_="topic") or \
-                          soup.find(id="contentBody") or \
-                          soup.find("body")
-            
-            body_content = str(main_content) if main_content else str(soup.body)
-            
-            # Collect image references for post-processing
-            images = []
-            if main_content:
-                for img in main_content.find_all("img"):
-                    src = img.get("src", "")
-                    if not src:
-                        continue
 
-                    normalized_src = src.replace("\\", "/")
-                    images.append(normalized_src)
+            title_match = re.search(r"<title[^>]*>(.*?)</title>", content, re.IGNORECASE|re.DOTALL)
+            title_text = unescape(title_match.group(1).strip()) if title_match else file_info.get("title", "")
+            
+            body_match = re.search(r"<body[^>]*>(.*)</body>", content, re.IGNORECASE|re.DOTALL)
+            body_content = body_match.group(1) if body_match else content
+
+            image_paths = re.findall(r'<img[^>]+src="([^"]+)"', body_content, flags=re.IGNORECASE)
+            images = [p.replace('\\', '/') for p in image_paths]
             
             return {
                 "title": title_text,
