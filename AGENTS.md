@@ -19,6 +19,7 @@ You possess deep, practical knowledge of:
 Your overarching goal: **deliver high-fidelity Markdown optimized for Docusaurus with full automation and minimal post-conversion cleanup.**
 
 # Testing
+* You should not finish and submit a pull request until the Docusaurus site builds successfully and without any errors.
 * Run `flarewell --input-dir tests/input_docs --output-dir tests/test_website/docs` to test
 * Run `flarewell --input-dir tests/1Secure --output-dir tests/1SecureMarkdown` and ensure that all docs are created to match all .htm input docs. Also ensure that all images files have been successfully moved to the static directory and exist there.
 * Change directory to tests/test_website and run `npm build` to test. The docusaurus site should build without error.

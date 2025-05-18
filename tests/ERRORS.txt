@@ -1,7 +1,4 @@
-Compiled with problems:
-×
-ERROR in ./docs/ActivityMonitor/ActivityMonitor/Admin/Outputs/LogFile/SharePointJSON.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ActivityMonitor/ActivityMonitor/Admin/Outputs/LogFile/SharePointJSON.md"
 Cause: Unexpected end of file in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag
 Details:
@@ -23,11 +20,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-end-of-file-at-expected-expect"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Auditor/Auditor/API/FilterReference.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Auditor/Auditor/API/FilterReference.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -55,11 +49,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Auditor/Auditor/API/PostData/ActivityRecords.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Auditor/Auditor/API/PostData/ActivityRecords.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -87,11 +78,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ChangeTracker/ChangeTracker/Admin/Settings/AgentCredentialRotation.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ChangeTracker/ChangeTracker/Admin/Settings/AgentCredentialRotation.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -118,11 +106,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/GroupID/GroupID/Portal/Group/Properties/DynastyOptions.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/GroupID/GroupID/Portal/Group/Properties/DynastyOptions.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -150,11 +135,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PolicyPak/PolicyPak/LeastPrivilege/Elevate/InstallFonts.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PolicyPak/PolicyPak/LeastPrivilege/Elevate/InstallFonts.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -181,68 +163,29 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PolicyPak/PolicyPak/Troubleshooting/BrowserRouter/Pattern.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PolicyPak/PolicyPak/Troubleshooting/BrowserRouter/Pattern.md"
 Cause: Can't parse URL http://www.def.com and with base unspecified://
 Details:
 Error: Can't parse URL http://www.def.com and with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ThreatManager/ThreatManager/Install/ActionService.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatManager/ThreatManager/Install/ActionService.md"
 Cause: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
 Details:
 Error: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ThreatManager/ThreatManager/Install/Secure.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatManager/ThreatManager/Install/Secure.md"
 Cause: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
 Details:
 Error: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -270,11 +213,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -301,11 +241,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -333,11 +270,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -365,11 +299,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -396,11 +327,8 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+--------------------------
+
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md"
 Cause: Could not parse expression with acorn
 Details:
@@ -427,7 +355,3 @@ Details:
   "source": "micromark-extension-mdx-expression",
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
