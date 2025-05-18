@@ -42,8 +42,9 @@ class FlareConverter:
             debug: Enable verbose logging.
             markdown_style: ``"docusaurus"`` or ``"markdown"``.
         """
-        self.input_dir = Path(input_dir)
-        self.output_dir = Path(output_dir)
+        # Normalize paths to avoid relative/absolute mismatches
+        self.input_dir = Path(input_dir).resolve()
+        self.output_dir = Path(output_dir).resolve()
         self.preserve_structure = preserve_structure
         self.generate_sidebars = generate_sidebars
         self.exclude_dirs = exclude_dirs or []
