@@ -130,6 +130,3 @@ dmypy.json
 .vscode/
 *.swp
 *.swo
-
-# Project specific
-test_output/ 
