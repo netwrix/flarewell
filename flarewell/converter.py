@@ -8,7 +8,6 @@ import shutil
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 
-import yaml
 
 from flarewell.flare_parser import FlareHtmlParser
 from flarewell.docusaurus_formatter import DocusaurusFormatter
