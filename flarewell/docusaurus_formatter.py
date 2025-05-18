@@ -78,6 +78,20 @@ class DocusaurusFormatter:
 
             parts[i] = ''.join(subparts)
         return ''.join(parts)
+
+    def _sanitize_bad_urls(self, text: str) -> str:
+        """Wrap malformed URLs in backticks so MDX does not parse them."""
+
+        def repl(match: re.Match) -> str:
+            url = match.group(0)
+            # If URL contains a port that is not purely numeric or any
+            # obviously invalid characters, wrap it in backticks.
+            parsed = re.match(r"https?://[^\s/:]+:(\d+)(/.*)?$", url)
+            if (";" in url) or ("(" in url) or (")" in url) or not parsed:
+                return f"`{url}`"
+            return url
+
+        return re.sub(r"https?://\S+", repl, text)
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """Simplified HTML to Markdown conversion without external deps."""
@@ -141,6 +155,9 @@ class DocusaurusFormatter:
 
         # Fix code blocks
         markdown = re.sub(r'```\s+', '```\n', markdown)
+
+        # Wrap malformed URLs so MDX does not attempt to parse them
+        markdown = self._sanitize_bad_urls(markdown)
 
         # Escape curly braces outside of code blocks to avoid MDX parse errors
         markdown = self._escape_mdx_braces(markdown)
