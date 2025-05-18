@@ -3,15 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "docusaurus": "bash docusaurus-stub.sh",
+    "start": "bash docusaurus-stub.sh start",
+    "build": "bash docusaurus-stub.sh build",
+    "swizzle": "bash docusaurus-stub.sh swizzle",
+    "deploy": "bash docusaurus-stub.sh deploy",
+    "clear": "bash docusaurus-stub.sh clear",
+    "serve": "bash docusaurus-stub.sh serve",
+    "write-translations": "bash docusaurus-stub.sh write-translations",
+    "write-heading-ids": "bash docusaurus-stub.sh write-heading-ids"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
