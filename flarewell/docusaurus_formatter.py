@@ -125,6 +125,58 @@ class DocusaurusFormatter:
 
         url_pattern = re.compile(r"https?://[^\s)>]+")
         return url_pattern.sub(repl, text)
+
+    def _fix_code_blocks(self, text: str) -> str:
+        """Ensure code fences have a language and escape problematic characters."""
+
+        code_block_pattern = re.compile(r"```(?P<lang>[^\n]*)\n(?P<code>.*?)```", re.DOTALL)
+
+        def repl(match: re.Match) -> str:
+            lang = match.group("lang").strip()
+            code = match.group("code")
+
+            if not lang:
+                lang = "text"
+
+            # Escape braces which confuse MDX
+            code = code.replace("{", "\\{").replace("}", "\\}")
+
+            # Escape percent signs in shell-style blocks
+            if lang.lower() in [
+                "bash",
+                "cmd",
+                "powershell",
+                "shell",
+                "bat",
+                "console",
+                "sh",
+                "zsh",
+            ]:
+                code = code.replace("%", "\\%")
+
+            return f"```{lang}\n{code}```"
+
+        return code_block_pattern.sub(repl, text)
+
+    def _escape_inline_code(self, text: str) -> str:
+        """Escape braces inside inline code segments."""
+
+        inline_code_pattern = re.compile(r"`([^`]*?(?:\\{|\\})[^`]*)`")
+
+        def repl(match: re.Match) -> str:
+            code = match.group(1)
+            code = code.replace("{", "\\{").replace("}", "\\}")
+            return f"`{code}`"
+
+        return inline_code_pattern.sub(repl, text)
+
+    def _escape_jsx_like(self, text: str) -> str:
+        """Wrap HTML-like tags in backticks to avoid MDX JSX parsing."""
+
+        jsx_pattern = re.compile(
+            r"(?<!`)(<[a-zA-Z][^<>]*>[^<>]*</[a-zA-Z][^<>]*>|<[a-zA-Z][^<>]*/>)(?!`)")
+
+        return jsx_pattern.sub(lambda m: f"`{m.group(0)}`", text)
     
     def to_markdown(self, content_dict: Dict[str, Any]) -> str:
         """Convert HTML content to Markdown using ``markdownify`` and BeautifulSoup."""
@@ -179,8 +231,15 @@ class DocusaurusFormatter:
         # Remove extra blank lines
         markdown = re.sub(r'\n{3,}', '\n\n', markdown)
 
-        # Fix code blocks
+        # Fix code blocks and escape special characters inside them
         markdown = re.sub(r'```\s+', '```\n', markdown)
+        markdown = self._fix_code_blocks(markdown)
+
+        # Escape braces inside inline code
+        markdown = self._escape_inline_code(markdown)
+
+        # Wrap HTML-like tags in backticks so MDX doesn't treat them as JSX
+        markdown = self._escape_jsx_like(markdown)
 
         # Wrap malformed URLs so MDX does not attempt to parse them
         markdown = self._sanitize_bad_urls(markdown)
