@@ -133,5 +133,3 @@ dmypy.json
 node_modules/
 package-lock.json
 package.json
-tests/test_website/docs/
-tests/test_website/static/
