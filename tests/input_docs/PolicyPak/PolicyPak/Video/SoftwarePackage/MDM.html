@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Software Package Manager|[%=System.LinkedTitle%]|Using with other METHODS (Cloud, MDM, etc.)">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Endpoint Policy Package Manager (AppX Policies): Add or Remove Microsoft Store using your MDM service.</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Endpoint Policy Package Manager (AppX Policies): Add or Remove Microsoft Store using your MDM service.</h1>
+                                    <p>Once you've rolled out a machine using Autopilot, how can you REMOVE unwanted applications and ADD important Windows 10 Store applications? With <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> Package Manager (AppX) policies of course! Use your Intune (or any other MDM service) to remove "junkware" but then add important business related Windows 10 Store applications !</p><iframe width="1700" height="956" src="https://www.youtube.com/embed/tjoNyqcvWRU" title="Endpoint Policy Package Manager (AppX Policies): Add or Remove Microsoft Store using your MDM service." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    <p>Hi, this is Jeremy Moskowitz. In this video I'm going to show you how you can use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Software Package Manager to deliver AppX settings and also remove AppX settings from your machines that are managed by, say, an MDM service like InTune or if you're using Autopilot when you've got your machines automatically rolled out. The thing is that even though modern machines have a pretty clean initial start menu, it turns out that there are some things that are deployed that you don't want from the Windows Store or there's stuff that's in the Microsoft Store and you don't to deploy them.</p>
+                                    <p>The good news is as you saw in the previous videos, we can deploy any kind of Microsoft Store app and also remove stuff. I'm going to how you how to do that with your MDM service. To get started, this one app came with the operating system, and you don't want it there. Here's Skype. I've already got its package ID and also its publisher, so I'm going to take its package ID and remove this puppy.</p>
+                                    <p>I'm going to Copy this over here. I'm going to back in my Group Policy Editor, and I'm going to Add a New AppX Policy. I'm going to Remove Skype, and I'm going to remove the Package by Name. I could just match by the Name. I could do Match Wildcard *Skype*. That actually would be good enough. That's going to remove it.</p>
+                                    <p>Now the only question is how do I get this gaggle of settings here that will remove Candy Crush, remove everything by that manufacturer, remove Duolingo if it's there, install Slack, install Power BI, also deliver Netflix, which I did in a previous demonstration, and also now remove Skype? How do I take these items from my Group Policy Editor and get them over to my MDM service? Well, if you've seen any of our other videos, it's actually really easy to do. What are we going to do?</p>
+                                    <p>We're going to take these settings, right-click, and Export a XML as a Collection. I'm going to put them on the Desktop here. I'll just call them XML Examples. I'll call this PPPACMAN-EXPORT1. I've got my settings exported.</p>
+                                    <p>The next thing I want to do is I want to go to my <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Export utility. I'm going to Create a New MSI Installer. I'm going to Add Existing File I just created, which is PACMAN-EXPORT1. There it is. I'm going to deliver it to the computer.</p>
+                                    <p>I'm going to take those settings and deliver it to the computer. Then that will affect all users. I'll call this file EXPORTED-GPOS. Now that I've got it exported, I'm ready to flip into InTune.</p>
+                                    <p>Here in InTune we're already deploying the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Client Side Extension, that's the moving part, the License file, and now it's time to simply add the EXPORTED-GPOS we created ten seconds ago. That's it. We're off to the races, and we're ready to synchronize this on our MDM Machine over out in the field.</p>
+                                    <p>Now that we're back on our endpoint, we can see that this machine is being managed by our MDM service, which happens to be InTune. It could be any MDM service you want. What we'll do next is we will go ahead and click on Sync, and we'll give this a minute to catch up. </p>
+                                    <p>Before it catches up, let's go ahead and reestablish where we're at. We still have Skype, which is preinstalled in the operating system. We don't have Slack, and we don't have Microsoft Power BI. We'll give this a second to catch up, and then let's see if we can catch it in real time. Yeah, there we go. There's Slack getting installed as we speak.</p>
+                                    <p>If we patiently wait, we should also see Microsoft Power BI also get installed, and then Skype will be uninstalled all in the same time. We're doing this all through InTune. These are Microsoft Windows Store Applications that we are dictating exactly what we want to install and what we want to remove.</p>
+                                    <p>Let's go back and check on it now. Bang, there we go. We can see we got all three of our softwares deployed, Slack, Power BI Desktop, and Netflix. We also said goodbye to Skype that came in the box even with the latest edition of Windows 10.</p>
+                                    <p>I hope this helps you out, giving you the power to deploy and remove applications from the Microsoft Store using <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> and your MDM service. I hope this helps you out. Looking forward to getting you started with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> real soon. Thanks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

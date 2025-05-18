@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Active Directory Changes Event Type</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link href="../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>Active Directory Changes Event Type</h1>
+                                        <p>The Active Directory Changes event type can be configured to generate an event when an Active Directory object or attribute is changed (add, delete, modify, move, rename).</p>
+                                        <p>The event filters for the Active Directory Changes event type are: </p>
+                                        <ul>
+                                            <li>
+                                                <p>AD Event</p>
+                                            </li>
+                                            <li>
+                                                <p>Domains/Servers</p>
+                                            </li>
+                                            <li>
+                                                <p>AD Context</p>
+                                            </li>
+                                            <li>
+                                                <p>AD Classes</p>
+                                            </li>
+                                            <li>
+                                                <p>AD Attributes</p>
+                                            </li>
+                                            <li>
+                                                <p>AD Objects</p>
+                                            </li>
+                                            <li>
+                                                <p>AD Perpetrator</p>
+                                            </li>
+                                            <li>
+                                                <p>IP Addresses (from)</p>
+                                            </li>
+                                            <li>
+                                                <p>Hosts (from)</p>
+                                            </li>
+                                            <li>
+                                                <p>Success</p>
+                                            </li>
+                                            <li>
+                                                <p>Advanced Filter</p>
+                                            </li>
+                                        </ul>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/EventType/ADChanges.png" style="width: 913px;height: 461px;" title="Policy window - Active Directory Changes Event Type" alt="Policy window - Active Directory Changes Event Type" />
+                                        </p>
+                                        <p>Each filter tab acts like an "AND" statement for the filter. Any filter tab left blank is treated like an "ALL" for that filter set.</p>
+                                        <h2>AD Event Filter</h2>
+                                        <p>Use the AD Event filter to select Active Directory events to be monitored or locked down by the policy.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/ADEvent.png" style="width: 758px;height: 224px;" title="Policy window - AD Event filter" alt="Policy window - AD Event filter" />
+                                        </p>
+                                        <p>Check the <b>All</b> box to monitor or lockdown all operations, or select specific operations:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Object Added – The policy monitors for objects being added to Active Directory</p>
+                                            </li>
+                                            <li>
+                                                <p>Object Deleted – The policy monitors for objects being deleted from Active Directory</p>
+                                            </li>
+                                            <li>
+                                                <p>Object Modified  – The policy monitors for Active Directory objects being modified</p>
+                                            </li>
+                                            <li>
+                                                <p>Object Moved or Renamed  – The policy monitors for Active Directory objects being moved or renamed</p>
+                                            </li>
+                                        </ul>
+                                        <p>If applied to a Lockdown Event Type, the policy both monitors and lockdowns the objects based on the selection.</p>
+                                        <h2>Domains/Servers Filter</h2>
+                                        <p>Use the Domains/Servers filter to set the scope of the policy  to  specific domains and/or servers or to exclude specific domains and/or servers.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/DomainsServersMonitoring.png" title="Event Type - Domains/Servers Monitoring filter" alt="Event Type - Domains/Servers Monitoring filter" style="width: 726px;height: 228px;" />
+                                        </p>
+                                        <p>Use the buttons in the Include and Exclude areas to edit the lists.</p>
+                                        <ul>
+                                            <li>
+                                                <p>The Add (+) buttons open the <a href="Window/SelectDomainsServers.htm" title="Navigates to the Select Domains and Servers selection window. " alt="Navigates to the Select Domains and Servers selection window. " class="MCXref xref">Select Domains and Servers Window</a>. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category.</p>
+                                            </li>
+                                            <li>
+                                                <p>The Remove (x) button deletes the selected item(s) from that box.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To enable a Dynamic Policy, use the Collection button to select the desired Dynamic Collection. See the <a href="../../Configuration/CollectionManager/Dynamic.htm" title="Navigates to the Dynamic Collections section of the Collection Manager menu window. " alt="Navigates to the Dynamic Collections section of the Collection Manager menu window. " class="MCXref xref">Dynamic Collections</a> topic for additional information.</p>
+                                        <h2>AD Context Filter</h2>
+                                        <p>Use the AD Context filter to set the scope of the policy to only monitor specific contexts (e.g. containers and organizational units) in Active Directory or to exclude specific contexts from being monitored.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/ADContext.png" style="width: 907px;height: 360px;" title="Policy window - AD Context filter" alt="Policy window - AD Context filter" />
+                                        </p>
+                                        <p>Use the buttons in the Include Contexts, Include Collections, Exclude Contexts, and Exclude Collections areas to edit the lists. </p>
+                                        <ul>
+                                            <li>
+                                                <p>The Context Add (+) button opens the <a href="Window/SelectActiveDirectory/Context.htm" title="Select Active Directory Contexts Window" alt="Select Active Directory Contexts Window" target="_parent" class="MCXref xref">Select Active Directory Contexts Window</a>. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category.</p>
+                                            </li>
+                                            <li>
+                                                <p>The Remove (x) button deletes the selected item(s) from that box.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Sub Tree</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/SubTree.png" title="Sub-Tree option in event type filters" alt="Sub-Tree option in event type filters" style="width: 505px;height: 140px;" />
+                                        </p>
+                                        <p>When contexts are added, a Sub-Tree  checkbox displays. Check it to apply the filter to the parent and all child contexts. Uncheck it to apply the filter to the listed context only.</p>
+                                        <h2>AD Classes Filter</h2>
+                                        <p>Use the AD Classes filter  to set the scope of the policy to only monitor specific classes within Active Directory or to exclude specific classes from being monitored.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/ADClasses.png" style="width: 893px;height: 276px;" title="Policy window - AD Classes filter" alt="Policy window - AD Classes filter" />
+                                        </p>
+                                        <p>Use the buttons in the Include and Exclude areas to edit the lists.</p>
+                                        <ul>
+                                            <li>
+                                                <p> The Add (+) buttons open the <a href="Window/ClassList.htm" title="Navigates to the Class List selection window. " alt="Navigates to the Class List selection window. " class="MCXref xref">Class List Window</a>. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Remove (x) button deletes the selected item(s) from that box.</p>
+                                            </li>
+                                        </ul>
+                                        <h2>AD Attributes Filter</h2>
+                                        <p>Use the AD Attributes filter to set the scope of the policy to only monitor specific Active Directory attributes  or to exclude specific attributes from being monitored. </p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/ADAttributes.png" style="width: 916px;height: 349px;" title="Policy window - AD Attributes filter" alt="Policy window - AD Attributes filter" />
+                                        </p>
+                                        <p>Use the buttons in the Include Attributes, Include Collections, Exclude Attributes, and Exclude Collections areas to edit the lists.</p>
+                                        <ul>
+                                            <li>
+                                                <p>The Attributes Add (+) button opens the <a href="Window/AttributeList.htm" title="Navigates to the Attribute List selection window. " alt="Navigates to the Attribute List selection window. " class="MCXref xref">Attribute List Window</a>.</p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category. </p>
+                                            </li>
+                                            <li>
+                                                <p> The Remove (x) button deletes the selected item(s) from that box.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Attribute, Operator and Value</p>
+                                        <p>When an attribute is selected, it is added to the filter and a drop-down menu is displayed in the Operation column with <b>Any Value</b> selected. You can further scope the attributes to enable the policy to only capture events based on the new value. Use the Operation and Value columns of the Include Attributes and Exclude Attributes boxes to achieve this. </p>
+                                        <p>The Operation drop-down menu has the following options:
+			
+			</p>
+                                        <ul>
+                                            <li>
+                                                <p>Any Value – No scoping applied for this attribute</p>
+                                            </li>
+                                            <li>
+                                                <p>(empty value) – Blank attribute values</p>
+                                            </li>
+                                            <li>
+                                                <p>Equal – Attribute values that are identical to the Value field</p>
+                                            </li>
+                                            <li>
+                                                <p>Not Equal – Attribute values that do not match the Value field</p>
+                                            </li>
+                                            <li>
+                                                <p>Less Than – Attribute values below the numeric value or before the alphabetical value supplied in the Value field</p>
+                                            </li>
+                                            <li>
+                                                <p>Greater Than – Attribute values above the numeric value or after the alphabetical value supplied in the Value field</p>
+                                            </li>
+                                            <li>
+                                                <p>Contains – Attribute value includes the user supplied string (numbers are treated as strings) in the Value field</p>
+                                            </li>
+                                            <li>
+                                                <p>Not Contain – Attribute values do not include the user supplied string (numbers are treated as strings) in the Value field</p>
+                                            </li>
+                                            <li>
+                                                <p>Starts with – Attribute values start with the user supplied string in the Value field</p>
+                                            </li>
+                                        </ul>
+                                        <p>Select an  <b>Operation</b> and type a value in the textbox. The value may include alphanumeric characters, string type, or dates. Only one value is supported; do not specify multiple values for the attribute. Also the Value field is not case sensitive.</p>
+                                        <p>When you select another attribute, a new row is added, where you can specify an operator and a value for that attribute. Each row is treated as an “OR” statement. If any event matches any of the attribute filters, then the event data includes all attributes in the list. </p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>You cannot specify more than one value for an attribute and you cannot select the same attribute twice. To use the same attribute again, you have to add the same event type again to the policy, select that event type and then select a previously used attribute to include in the Add Attributes filter.</p>
+                                        <p>When the userAccountControl attribute is included or excluded in the filter, selecting the Any Value dropdown  opens the <a href="Window/UserAccountControl.htm" title="Navigates to the User Account Control selection window. " alt="Navigates to the User Account Control selection window. " class="MCXref xref">User Account Control Window</a> with additional UAC flags to add to the filter. </p>
+                                        <h2>AD Objects Filter</h2>
+                                        <p>Use the AD Objects filter to set the scope of the policy to only monitor specific objects in Active Directory or to exclude specific objects from being monitored.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/ADObjects.png" style="width: 865px;height: 283px;" title="Policy window - AD Objects filter" alt="Policy window - AD Objects filter" />
+                                        </p>
+                                        <p>Use the buttons in the Include and Exclude areas to edit the lists. </p>
+                                        <ul>
+                                            <li>
+                                                <p> The Add (+) buttons open the <a href="Window/SelectActiveDirectory/Objects.htm" title="Navigates to the Select Active Directory Objects selection window. " alt="Navigates to the Select Active Directory Objects selection window. " class="MCXref xref">Select Active Directory Objects Window</a>. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Remove (x) button deletes the selected item(s) from that box.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To enable a Dynamic Policy, use the Collection button to select the desired Dynamic Collection. See the <a href="../../Configuration/CollectionManager/Dynamic.htm" title="Navigates to the Dynamic Collections section of the Collection Manager menu window. " alt="Navigates to the Dynamic Collections section of the Collection Manager menu window. " class="MCXref xref">Dynamic Collections</a> topic for additional information.</p>
+                                        <h2>AD Perpetrator Filter</h2>
+                                        <p>Use the AD Perpetrator filter for monitoring to set the scope of the policy to  only monitor specific security principals committing changes or to exclude specific security principals committing changes  from being monitored.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/ADPerpetratorMonitoring.png" title="Event Type - AD Perpetrator Monitoring filter" alt="Event Type - AD Perpetrator Monitoring filter" style="width: 883px;height: 327px;" />
+                                        </p>
+                                        <p>Use the buttons in  the Include Perpetrators, Include Collections, Exclude Perpetrators, and Exclude Collections areas to edit the lists. </p>
+                                        <ul>
+                                            <li>
+                                                <p>The Perpetrators Add (+) button opens the <a href="Window/SelectActiveDirectory/Perpetrators.htm" title="Navigates to the Select Active Directory Perpetrators selection window. " alt="Navigates to the Select Active Directory Perpetrators selection window. " class="MCXref xref">Select Active Directory Perpetrators Window</a>. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category.</p>
+                                            </li>
+                                            <li>
+                                                <p>The Remove (x) button deletes the selected item(s) from that box. </p>
+                                            </li>
+                                        </ul>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To enable a Dynamic Policy, use the Collection button to select the desired Dynamic Collection. See the <a href="../../Configuration/CollectionManager/Dynamic.htm" title="Navigates to the Dynamic Collections section of the Collection Manager menu window. " alt="Navigates to the Dynamic Collections section of the Collection Manager menu window. " class="MCXref xref">Dynamic Collections</a> topic for additional information.</p>
+                                        <p class="Bold_Subheading">Sub Tree</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/SubTree.png" title="Sub-Tree option in event type filters" alt="Sub-Tree option in event type filters" style="width: 505px;height: 140px;" />
+                                        </p>
+                                        <p>When contexts are added, a Sub-Tree  checkbox displays. Check it to apply the filter to the parent and all child contexts. Uncheck it to apply the filter to the listed context only.</p>
+                                        <h2>IP Addresses (from) Filter</h2>
+                                        <p>Use the IP Addresses (from) filter to set the scope of the policy  to  specific IP addresses as originators of an event or to exclude specific IP addresses.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/IPAddressesFrom.png" style="width: 849px;height: 330px;" title="Event Type – IP Addresses (from) filter" alt="Event Type – IP Addresses (from) filter" />
+                                        </p>
+                                        <p>Use the buttons in the Include IP Addresses, Include Collections, Exclude IP Addresses, and Exclude Collections areas to edit the lists. </p>
+                                        <ul>
+                                            <li>
+                                                <p>The IP&#160;Addresses Add (+) button opens the <a href="Window/AddIPAddress.htm" title="Navigates to the Add IP Address Window section" alt="Navigates to the Add IP Address Window section" class="MCXref xref">Add IP Address Window</a>. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category.</p>
+                                            </li>
+                                            <li>
+                                                <p>The Remove (x) button deletes the selected item(s) from that box.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To enable a Dynamic Policy, use the Collection button to select the desired Dynamic Collection. See the <a href="../../Configuration/CollectionManager/Dynamic.htm" title="Navigates to the Dynamic Collections section of the Collection Manager menu window. " alt="Navigates to the Dynamic Collections section of the Collection Manager menu window. " class="MCXref xref">Dynamic Collections</a> topic for additional information.</p>
+                                        <h2>Hosts (from) Filter</h2>
+                                        <p>Use the Hosts (from) filter for monitoring to set the scope of the policy to only monitor  specific hosts as originators of an event or to exclude specific hosts from being monitored.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/HostsFrom.png" style="width: 847px;height: 350px;" title="Event Type – Hosts (from) filter" alt="Event Type – Hosts (from) filter" />
+                                        </p>
+                                        <p>Use the buttons in the Include Hosts, Include Collections, Exclude Hosts, and Exclude Collections areas to edit the lists. </p>
+                                        <ul>
+                                            <li>
+                                                <p>The Hosts Add (+) button opens the <a href="Window/SelectComputers.htm" title="Navigates to the Select Computer Window section" alt="Navigates to the Select Computer Window section" class="MCXref xref">Select Computer Window</a>. </p>
+                                            </li>
+                                            <li>
+                                                <p>The Collection button opens the <a href="../../Configuration/CollectionManager/ListCollections.htm" title="Navigates to the List of Collections section of the Collection Manager menu window. " alt="Navigates to the List of Collections section of the Collection Manager menu window. " class="MCXref xref">List of Collections Window</a> to the appropriate Collection category.</p>
+                                            </li>
+                                            <li>
+                                                <p>The Remove (x) button deletes the selected item(s) from that box.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To enable a Dynamic Policy, use the Collection button to select the desired Dynamic Collection. See the <a href="../../Configuration/CollectionManager/Dynamic.htm" title="Navigates to the Dynamic Collections section of the Collection Manager menu window. " alt="Navigates to the Dynamic Collections section of the Collection Manager menu window. " class="MCXref xref">Dynamic Collections</a> topic for additional information.</p>
+                                        <h2>Success Filter</h2>
+                                        <p>The Success filter is where the policy is set to only monitor successful events, failed events, or both.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/Success.png" title="Event Type – Success filter" alt="Event Type – Success filter" />
+                                        </p>
+                                        <p>Select the radio button for the desired monitoring filter:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Success – Only monitors successful events</p>
+                                            </li>
+                                            <li>
+                                                <p>Failure – Only monitors failed events</p>
+                                            </li>
+                                            <li>
+                                                <p>Both Success and Failure – Monitors all events that are within the scope of the respective filters for the event type</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Advanced Filter</h2>
+                                        <p>Use the Advanced Filter to include or exclude attribute conditions for monitoring Active Directory changes. </p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/AdvancedADChanges.png" style="width: 1026px;height: 303px;" title="AD Changes event type - Advanced Filter" alt="AD Changes event type - Advanced Filter" />
+                                        </p>
+                                        <p>You can define a criteria (filter statements) to monitor event data  based on  event data values or event attribute values or both.</p>
+                                        <p>Filter statements can be added to the Include condition and Exclude condition boxes. The filter uses pre-defined logical and comparison operators to create filter criteria for the scan. You can add conditions to a filter statement. Conditions can be singular or grouped by a logical operator. </p>
+                                        <p>In the screenshot above, the Exclude condition box displays singular conditions while the Include condition box displays conditions grouped by logical operators.</p>
+                                        <p class="Bold_Subheading">Logical Operator</p>
+                                        <p class="p_18">The logical operator is displayed as left aligned red text.   To change the logical operator, click on it to open a menu with the following options: </p>
+                                        <ul>
+                                            <li>
+                                                <p>And</p>
+                                            </li>
+                                            <li>
+                                                <p>Or</p>
+                                            </li>
+                                            <li>
+                                                <p>Not And</p>
+                                            </li>
+                                            <li>
+                                                <p>Not Or</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Add icon (+)</p>
+                                        <p>To add a filter (condition) to the filter statement or to start a new group of filters, click the <b>Add</b> (+) icon. Then select:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Add Condition – Adds a conditions to the filter statement</p>
+                                            </li>
+                                            <li>
+                                                <p>Add Group – Adds a group with a conditions and a logical operator to the filter statement</p>
+                                            </li>
+                                        </ul>
+                                        <p>A new row is inserted that displays an event data drop-down menu, a comparison operator, and a Value box.</p>
+                                        <p class="Bold_Subheading">Event Data Selection</p>
+                                        <p>The Event Data drop-down menu is displayed in orange. it contains a list of all the fields that can be part of an event. Click it to select an event name. Your selection is displayed in orange text in the box below.</p>
+                                        <p>The “Attributes: New” and “Attributes: Old” options are special cases discussed below in detail.</p>
+                                        <p class="Bold_Subheading">Comparison Operator</p>
+                                        <p>The comparison operator drop-down menu is displayed in blue. To change it, click on it to open a menu with options that associate with the selected event data field.</p>
+                                        <p>If you have selected the “Attributes: New” or “Attributes: Old” option  in the Event Data drop-down menu, then only the following comparison operators are available:</p>
+                                        <ul>
+                                            <li>
+                                                <p>ContainsValue</p>
+                                            </li>
+                                            <li>
+                                                <p>DoesNotContainValue</p>
+                                            </li>
+                                            <li>
+                                                <p>EqualsValue</p>
+                                            </li>
+                                            <li>
+                                                <p>StartsWithValue</p>
+                                            </li>
+                                            <li>
+                                                <p>EndsWithValue</p>
+                                            </li>
+                                        </ul>
+                                        <p>Your selected comparison operator is displayed in blue text in the box below.</p>
+                                        <p class="Bold_Subheading">Value</p>
+                                        <p>The value box is displayed in green. Click in it to type a value, then press Enter. The value is displayed in green text in the box below.</p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>The Value box only accepts a single string except when the “Attributes: New” or “Attributes: Old” option is selected in the Event Data drop-down menu.</p>
+                                        <p>In case of “Attributes: New” and “Attributes: Old”, type  three comma separated values (parameters) in the Value box in the following format:</p>
+                                        <p>%name%,%suboperation%,%value%<br />(White space is not allowed between the comma and the argument, unless white space is part of the argument.)</p>
+                                        <p>where:</p>
+                                        <ul>
+                                            <li>
+                                                <p>%name% – The attribute name, for example 'member' (case insensitive)</p>
+                                            </li>
+                                            <li>
+                                                <p>%suboperation% – Attribute sub-operation, which can be Add Attribute, Add Value, Remove Attribute, Remove Value, or Change Attribute (case insensitive)</p>
+                                            </li>
+                                            <li>
+                                                <p>%value% – The attribute value (case insensitive)</p>
+                                            </li>
+                                        </ul>
+                                        <p>All the parameters are optional and only evaluated if non-empty. This means that you can select attributes either only by %name% or %suboperation% or %value% or by combination of  %name%/%suboperation%/%value%.</p>
+                                        <p>If %value% is not specified, all the functions behave in the same way because they implement the same logic for %name% / %suboperation% comparison. The difference is applicable only when %value% is specified. </p>
+                                        <p>Following is how the comparison operator (displayed in blue) works with %value%:</p>
+                                        <ul>
+                                            <li>
+                                                <p>ContainsValue  – matches if an attribute has any value containing %value%</p>
+                                            </li>
+                                            <li>
+                                                <p>DoesNotContainValue  – matches if an attribute does not have any value containing %value%</p>
+                                            </li>
+                                            <li>
+                                                <p>EqualsValue  – matches if an attribute has any value equal to %value%</p>
+                                            </li>
+                                            <li>
+                                                <p>StartsWithValue  – matches if an attribute has any value starting with %value%</p>
+                                            </li>
+                                            <li>
+                                                <p>EndsWithValue –  matches if an attribute has any value ending with %value%</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Examples of how the comparison operator (displayed in blue) works with Value</p>
+                                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                    <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p>Comparison Operator</p>
+                                                    </th>
+                                                    <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p>Value (%name%,%suboperation%,%value%)</p>
+                                                    </th>
+                                                    <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                        <p>Outcome</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                        <p>ContainsValue</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                        <p>description,Change Attribute,testdescription</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                        <p>Matches any attribute where:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p> name is 'description'</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>operation is 'Change Attribute' </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>value contains 'testdescription'</p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                        <p>ContainsValue</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                        <p>,Change Attribute,testdescription</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                        <p>Matches any attribute where:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>operation is 'Change Attribute'</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>value contains 'testdescription'</p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                        <p>ContainsValue</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                        <p>description,,testdescription</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                        <p>Matches any attribute where:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>name is 'description'</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>value contains 'testdescription'</p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                        <p>ContainsValue</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                        <p>,,testdescription</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                        <p>Matches any attribute where:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>value contains 'testdescription'</p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                        <p>ContainsValue</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                        <p>description</p>
+                                                        <p>OR</p>
+                                                        <p>description,</p>
+                                                        <p>OR</p>
+                                                        <p>description,,</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                        <p>Matches any attribute where:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>name is 'description'</p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                        <p>ContainsValue</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                        <p>description,Change Attribute</p>
+                                                        <p>OR</p>
+                                                        <p>description,Change Attribute,</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                        <p>Matches any attribute where:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>name is 'description'</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>operation is 'Change Attribute'</p>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="Bold_Subheading">Example of a filter statement with "Attribute New"</p>
+                                        <p>Following is an example of a filter statement defined in the Include condition box with the "Attribute New" option.</p>
+                                        <p style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/Filters/FilterStatement.png" title="Example of an advanced filter" alt="Example of an advanced filter" style="width: 698px;height: 204px;" />
+                                        </p>
+                                        <p><code>And<br />[Attributes: New] [StartsWithValue] [telephoneNumber, change attribute, (555)]</code>
+                                        </p>
+                                        <p>This filter statement would only generate an event if an object's  telephoneNumber attribute is changed and the new value starts with (555), rather than generating an event every time the telephone number is changed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

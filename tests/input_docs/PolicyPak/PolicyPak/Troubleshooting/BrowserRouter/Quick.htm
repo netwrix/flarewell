@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Browser Router|[%=System.LinkedTitle%]|Troubleshooting">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>How to quickly troubleshoot Endpoint Policy Manager Browser Router</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>How to quickly troubleshoot Endpoint Policy Manager Browser Router</h1>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span> Are you licensed? And did you reboot the endpoint?</p>
+                                    <p>Each component of <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> On-Prem is licensed separately.</p>
+                                    <p><span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router is licensed with a license key, and that license key is typically inside a GPO.</p>
+                                    <p>To understand how / where your license keys might live, please check this video:</p>
+                                    <p><a href="https://kb.policypak.com/kb/article/458-policypak-licensing-onpremise-licensing-methods-compared" target="_blank" title="https://kb.Endpoint Policy Manager.com/kb/article/458-Endpoint Policy Manager-licensing-onpremise-licensing-methods-compared" alt="https://kb.Endpoint Policy Manager.com/kb/article/458-Endpoint Policy Manager-licensing-onpremise-licensing-methods-compared">https://kb.policypak.com/kb/article/458-policypak-licensing-onpremise-licensing-methods-compared</a>
+                                    </p>
+                                    <p>Also, before continuing, reboot the endpoint with the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE / <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router installed upon it.</p>
+                                    <p><span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router may need a reboot the first time for all features.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Are you getting the GPO?</p>
+                                    <p>You need a GPO to make the routes. Make sure the following is true:</p>
+                                    <ul>
+                                        <li>You have a GPO.</li>
+                                        <li>GPO is linked to either USER or COMPUTER OU.</li>
+                                        <li>The GPO has data / routes in it for the correct side.</li>
+                                    </ul>
+                                    <p>In this example, the GPO has data / routes on the user side and is correctly linked to where users reside (West Sales Users.)</p>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_1_image007.jpg" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span> Verifying you GOT the GPOs… one for licensing and one for the routes.</p>
+                                    <p>Run <code>GPresult /R </code>two times:</p>
+                                    <ul>
+                                        <li>AS an ADMIN and verify that you got the LICENSING GPO.</li>
+                                        <li>As the USER and verify you got the GPO with the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router data.</li>
+                                    </ul>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_2_image008-1024x395.png" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span> Is <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router the "default browser" ?</p>
+                                    <p>In DEFAULT PROGRAMS, verify that PPBRAgent is the Default Browser for HTTP and HTTPs.</p>
+                                    <p>(Will be PPBRAgent32 on 32-bit and PPBRAgent64 on 64-bit).</p>
+                                    <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>For Non-Domain Joined machines, we (PolicyPak) cannot set this automatically. For more information on this problem,&#160;<a href="../NonDomain/Limitations.htm" class="MCXref xref" xrefformat="{para}">Which Endpoint Policy Manager items will not work when the computer is non-domain joined (or the computer is NEVER connected to the Internet)?</a></p>
+                                    <p>For Domain joined Windows 10, Look at Default Programs here,</p>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_3_image.png" />
+                                    </p>
+                                    <p>For Domain Joined Windows 7, check Default Programs as seen here,</p>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_4_image013.jpg" />
+                                    </p>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_5_image014.png" />
+                                    </p>
+                                    <p>CHECKPOINT: If PPBRAGENT is not the default for HTTP and HTTPS then, run <code>GPupdate /force</code> then REBOOT the computer.</p>
+                                    <p>Then verify that it took. If it didn't, stop here and figure out why.</p>
+                                    <p>Common reasons:</p>
+                                    <ul>
+                                        <li>Computer doesn't have <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE installed.</li>
+                                        <li>Computer isn't licensed.</li>
+                                        <li>User/ Computer didn't get the GPO.</li>
+                                        <li>No <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router routes at all.</li>
+                                        <li>Again: For NON-Domain Joined machines, you must set <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> as the default browser MANUALLY. There is no workaround.</li>
+                                    </ul>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span> Check <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router logs</p>
+                                    <p>As the USER, go to <code>Appdata\Local\PolicyPak\PolicyPak   Browser Router</code> and verify that ANY logs exist as seen here.</p>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_6_image009.png" />
+                                    </p>
+                                    <p>Open the LATEST-created file (by date) for inspection.</p>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_7_image010.png" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span> Checking what <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router thinks are your routes. <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router can take routes from various sources and multiple GPOs and/or files and/or <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud.</p>
+                                    <p>Ultimately those rules are boiled down to one file: <code>ppBRresults.xml.</code></p>
+                                    <p>You should manually inspect this to verify that routes are generated as expected.</p>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_8_image011-1024x487.png" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span> Getting more help (exactly what to do and attach THREE THINGS).</p>
+                                    <ul>
+                                        <li>
+                                            <p>To get MORE help with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router, first export your <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Browser Router collection as seen here.</p>
+                                        </li>
+                                        <li>
+                                            <p>It’s good to take a screen shot too, so we can see what you’re trying to; computer or user side.</p>
+                                        </li>
+                                        <li>
+                                            <p>Attach / send both your SCREEN SHOT and your XML EXPORT file to your support case.</p>
+                                        </li>
+                                    </ul>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_9_image001-1.png" />
+                                    </p>
+                                    <p>Then, run <code>PPLOGS</code> twice:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Use an ADMIN command prompt and run <code>PPLOGS</code>. Rename to <code>ppLogs-as-Admin.zip</code>. Attach to your support case.</p>
+                                        </li>
+                                        <li>
+                                            <p>Use a NORMAL command prompt and run <code>PPLOGS</code>. Rename to<code> ppLogs-as-USER.zip</code>. Attach to your support case.</p>
+                                        </li>
+                                    </ul>
+                                    <p style="text-align: center;">
+                                        <img alt="" src="../../../Resources/Images/Troubleshooting/BrowserRouter/55_10_image0012-1024x593.png" />
+                                    </p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If your email system strips ZIP files, rename it to <code>.ZIPP</code> or <code>.TXT</code> or whatever you want.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

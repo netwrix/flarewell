@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Connectors|Configuration Details">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>
+              
+              Write a Robot Framework Script
+              </title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/connectors/how-tos/write-fulfill-robotframework-script/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <section id="body">
+                                        <div id="body-inner">
+                                            <h1>
+                                                <div>
+              
+              Write a Robot Framework Script
+              </div>
+                                            </h1>
+                                            <p>This guide shows how to write a Robot Framework script that will be used by <a href="../../references-connectors/robotframework/index.html" target="_parent" title="Robot Framework" alt="Robot Framework" class="MCXref xref">
+              
+              Robot Framework
+              </a>.</p>
+                                            <h2 id="structure-of-a-robot-framework-script">Structure of a Robot Framework Script</h2>
+                                            <h3 id="build-the-skeleton">Build the skeleton</h3>
+                                            <p>A Robot Framework script is divided into four main parts:</p>
+                                            <ol>
+                                                <li value="1"><strong>Settings</strong>: contains the instructions to import library or external resource files.</li>
+                                                <li value="2"><strong>Variables</strong>: contains the global variables shared by all the functions in the script.</li>
+                                                <li value="3"><strong>Keywords</strong>: contains all the functions defined by the user.</li>
+                                                <li value="4"><strong>Test Cases</strong>: contains the functions which will be run when the script is launched.</li>
+                                            </ol>
+                                            <h4 id="example">Example</h4><pre class="python" xml:space="preserve"><code>
+*** Settings ***
+Library  Telnet
+
+*** Variables ***
+${IPADDRESS}  192.168.1.22
+
+*** Keywords ***
+Open Telnet Connection
+    Open Connection  ${IPADDRESS}  prompt=$
+
+*** Test Cases ***
+Run Provisioning
+    Open Telnet Connection
+</code></pre>
+                                            <p>Let's analyze the four parts of this example:</p>
+                                            <ul>
+                                                <li><strong>Settings</strong>: we import here the Telnet library to use the functions defined in it.</li>
+                                                <li><strong>Variables</strong>: we define the variable <code>IPADDRESS</code> to use it later.</li>
+                                                <li><strong>Keywords</strong>: we define a custom function called <code>Open Telnet Connection</code>. It will use a function defined in the Telnet library (called <code>Open Connection</code>) and the variable <code>IPADDRESS</code> which has been defined before in the <code>Variables</code> section.</li>
+                                                <li><strong>Test Cases</strong>: we define here the main function which we choose to call <code>Run Provisioning</code> (it can be named anything), and which will be run when launching the script. It will use the function <code>Open Telnet Connection</code>.</li>
+                                            </ul>
+                                            <div class="notices warning">
+                                                <p>Robot Framework needs two spaces between two different instructions to parse them correctly.<br /><br />For example, <code>Open Connection</code> consists of only one instruction. Only one space is thus needed between the two words. But, <code>Open Connection ${IPADDRESS}</code> consists of two instructions, the function and the parameter. Two spaces are then required to separate <code>Connection</code> from <code>${IPADDRESS}</code>.<br /><br />To read your script more easily, you could also use the pipe character (<code>|</code>) between instructions, like this: <code>Open Connection | ${IPADDRESS}</code>.</p>
+                                            </div>
+                                            <div class="notices note">
+                                                <p>See the <a href="https://robotframework.org/#libraries" target="_blank" title="Robot Framework Libraries" alt="Robot Framework Libraries">Robot Framework Libraries</a> for additional information.</p>
+                                            </div>
+                                            <h3 id="define-specific-functions">Define specific functions</h3>
+                                            <p>To use a Robot Framework script for provisioning external systems with <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, the following elements are required in the script:</p>
+                                            <ul>
+                                                <li>The import of a resource file written by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;called <code>UsercubeRobotFramework.resource</code>.</li>
+                                                <li>The definition of three functions which will be called by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to perform three required actions: <code>ExecuteAdd</code>, <code>ExecuteDelete</code> and <code>ExecuteModify</code>. These functions are where you will write the actions to perform on the external system.</li>
+                                                <li>The use of one function to start the provisioning called <code>Launch Provisioning</code>.</li>
+                                            </ul>
+                                            <div class="notices warning">
+                                                <p>Never modify the resource file <code>UsercubeRobotFramework.resource</code>.</p>
+                                            </div>
+                                            <h4 id="example-1">Example</h4>
+                                            <p>The resource file defined at the beginning of the script is located in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s <code>Runtime</code> folder. Therefore, you will have to change the path accordingly.</p><pre class="python" xml:space="preserve"><code>
+*** Settings ***
+Resource  C:/UsercubeContoso/Runtime/UsercubeRobotFramework.resource
+
+*** Keywords ***
+ExecuteAdd
+    [Arguments]  ${order}
+    ...
+
+ExecuteDelete
+    [Arguments]  ${order}
+    ...
+
+ExecuteModify
+    [Arguments]  ${order}
+    ...
+
+...
+
+*** Test Cases ***
+Run Provisioning
+    ...
+    Launch Provisioning
+    ...
+</code></pre>
+                                            <p>The parameter <code>${order}</code> is mandatory only for the three functions: <code>ExecuteAdd</code>, <code>ExecuteDelete</code> and <code>ExecuteModify</code>. It is an object corresponding to the following sample provisioning order (JSON):</p><pre class="json" xml:space="preserve"><code>
+{
+    "AssignedResourceTypeId": "3930001",
+    "ChangeType": "Added",
+    "WorkflowInstanceId": "81",
+    "Owner": {
+        "Id": "21511",
+        "InternalDisplayName": "007 - Bond James",
+        "Identifier": "007",
+        "EmployeeId": "007",
+        "PhotoTag": -3065,
+        "MainFirstName": "James",
+        "MainLastName": "Bond",
+        ...
+    },
+    "ResourceType": {
+        "Id": "-41",
+        "SourceEntityType": {
+            "Id": "51",
+            "Identifier": "Directory_User"
+        },
+        "TargetEntityType": {
+            "Id": "70",
+            "Identifier": "RobotFramework_User"
+        },
+        "Identifier": "RobotFramework_User_NominativeUser"
+    },
+    "Changes": {
+        "identifier": "007",
+        "firstName": "James",
+        "lastName": "Bond"
+    }
+}</code></pre>
+                                            <p>The elements of <code>${order}</code>can be accessed like this: <code>${order['Changes']['identifier']}</code>.</p>
+                                            <div class="notices note">
+                                                <p>See the <a href="https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html">Robot Framework User Guide</a> for additional information.</p>
+                                            </div>
+                                            <h2 id="usercube-keywords">Keywords</h2>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Keyword</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Details</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Catch Keyword</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Arguments</strong>
+                                                            <br /><code>Keyword</code>: Keyword<br /><code>*args</code><br /><br /><strong>Description</strong><br />Launches <code>Keyword</code> with the given arguments <code>*args</code> if the keyword launched by <code>Try Keyword</code> failed. If <code>Try Keyword</code> was not called, this keyword will not do anything. <code>Catch Keyword</code> should always be called right after <code>Try Keyword</code>.<br /><br /><strong>Example</strong><br />Try to connect to <code>Usercube.com</code>. If the connection fails, restart the browser and try to connect to <code>Usercube.com</code>:<br /> <p xml:space="preserve"><code>Connect to URL<br />    Try Keyword  Go To  Usercube.com<br />    Catch Keyword  Restart Browser At URL  Usercube.com</code></p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Generate Password</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                            <p><strong>Description</strong>
+                                                                <br />Generates a password based on the <a href="../../../toolkit/xml-configuration/connectors/passwordresetsettings/index.html" target="_parent" title="PasswordResetSettings" alt="PasswordResetSettings" class="MCXref xref">
+              
+              Password Reset Settings
+              </a> associated to the <a href="../../../toolkit/xml-configuration/connectors/resourcetypemappings/index.html" target="_parent" title="Resource Type Mappings" alt="Resource Type Mappings" class="MCXref xref">Resource Type Mappings</a> being provisioned.<br /><code>Send Password Notification</code> should always be called after <code>Generate Password</code>, preferably right after the password is used. If <code>Send Password Notification</code> is not called before the provisioning of the resource is over, it will automatically be called.<br />If multiple passwords should be generated, <code>Send Password Notification</code> should be called after each password generation.<br /><br /><strong>Returns</strong><br /><code>Password</code>: string</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Get Secure Data</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p><strong>Arguments</strong>
+                                                                <br /><code>Attribute</code>: string<br /><code>Erase Data</code>: boolean<br /><br /><strong>Description</strong><br />Retrieves the secured option <code>Attribute</code> from the connector configuration. If <code>Erase Data</code> is set to true, the secured option is deleted once it is read.<br /><br /><strong>Example</strong><br />Get Login option and erase it:<br /><code>Get Secure Data | Login | True</code></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Launch Provisioning</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                            <p><strong>Description</strong>
+                                                                <br />Launches the provisioning defined by the provisioning orders. This keyword is required for any provisioning to happen.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Log Debug</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p><strong>Arguments</strong>
+                                                                <br /><code>Message</code>: string<br /><br /><strong>Description</strong><br />Logs <code>Message</code> at the <code>Debug</code> log level.<br /><br /><strong>Example</strong><br />Log a keyword failure message: <code>Log Debug The keyword has failed</code></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Log Error</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                            <p><strong>Arguments</strong>
+                                                                <br /><code>Message</code>: string<br /><br /><strong>Description</strong><br />Logs <code>Message</code> at the <code>Error</code> log level.<br /><br /><strong>Example</strong><br />Log a keyword failure message: <code>Log Error The keyword has failed</code></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Send Password Notification</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p><strong>Description</strong>
+                                                                <br />Sends a notification containing the last password generated. If <code>Generate Password</code> is called and <code>Send Password Notification</code> is not called before the provisioning of the resource is over, <code>Send Password Notification</code> will automatically be called.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>Try Keyword</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Arguments</strong>
+                                                            <br /><code>Keyword</code>: Keyword<br /><code>*args</code><br /><br /><strong>Description</strong><br />Launches <code>Keyword</code> with the given arguments <code>*args</code>, and ignores its errors. If <code>Keyword</code> fails, the keyword sent to <code>Catch Keyword</code> will run. <code>Try Keyword</code> should always be called right before <code>Catch Keyword</code>.<br /><br /><strong>Example</strong><br />Try to connect to <code>Usercube.com</code>. If the connection fails, restart the browser and try to connect to <code>Usercube.com</code>:<br /> <p xml:space="preserve"><code>Connect to URL<br />    Try Keyword  Go To  Usercube.com<br />    Catch Keyword  Restart Browser At URL  Usercube.com</code></p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h2 id="error-handling">Error handling</h2>
+                                            <p>Consider a web application that contains user information. Suppose a user is missing from the web application. When the script attempts to reach the user's information page, it will reach an error page, and fail. The next user's provisioning starts, but the web browser is still on the error page, so the script keeps failing.</p>
+                                            <p>In this example, if a user's provisioning fails, each subsequent provisioning will fail. This failure issue can be solved with the error handling custom keywords.</p>
+                                            <p>Consider the following example using the Robot Framework Selenium library:</p><pre class="python" xml:space="preserve"><code>
+Open Usercube Website
+    Open Browser
+    Connect To Usercube
+    [Teardown]  Close Browser
+
+Restart Browser
+    [Arguments]  ${url}
+    Log Debug  An error has occured, restarting the browser
+    Close Browser
+    Open Browser  ${url}
+
+Connect To Usercube
+    Try Keyword  Go To  Usercube.com
+    Catch Keyword  Restart Browser  Usercube.com
+    Page Should Contain  Usercube
+</code></pre>
+                                            <p>In this example, the keyword <code>Open Usercube Website</code> opens a browser, then calls <code>Connect To Usercube</code>. To ensure that the browser is closed regardless of the script's success, the <code>Close Browser</code> keyword is used in a teardown. A keyword in a teardown is always executed regardless of what happens in the script or in the teardown.</p>
+                                            <p>The <code>Restart Browser</code> keyword logs a debug message before restarting the browser to help debug the script. The <code>Connect To Usercube</code> tries to use the <code>Go To</code> keyword to connect to the <code>Usercube.com</code> web page. As <code>Go To</code> is used with <code>Try Keyword</code>, if the execution fails, <code>Restart Browser</code> is called by <code>Catch Keyword</code>. This means that if the browser fails to load <code>Usercube.com</code>, the browser restarts. Last, <code>Connect To Usercube</code> verifies that the page contains the word <code>Usercube</code>.</p>
+                                            <h3 id="error-handling-for-executeadd-executedelete-and-executemodify">Error Handling for ExecuteAdd, ExecuteDelete, and ExecuteModify</h3>
+                                            <p>The <code>ExecuteAdd</code>, <code>ExecuteDelete</code>, and <code>ExecuteModify</code> methods are harder to interact with. First, it is not possible to get their execution status within the script. Second, if the execution failed, it should be kept as a failure in order to log the failure.</p>
+                                            <p>To simplify error handling, consider the following structure:</p><pre class="python" xml:space="preserve"><code>
+Execute Add
+    [Arguments]  ${order}
+    Try Keyword  Add User  ${order}
+    Catch Keyword  Restart Program And Fail  Add User failed.
+
+Add User
+    [Arguments]  ${order}
+    Click New User
+    Fill In Information  ${order}
+    Click Add User
+
+Restart Program And Fail
+    [Arguments]  ${failmessage}
+    Close Program
+    Start Program
+    Fail  ${failmessage}
+</code></pre>
+                                            <p>In this example, <code>ExecuteAdd</code> does not call the custom keywords to add a new user directly, and only calls <code>Add User</code> instead. This means that it is possible to call <code>Add User</code> from the <code>Try Keyword</code> keyword. If <code>Add User</code> fails, then <code>Execute Add</code> fails. Therefore it is possible to catch a failure with this structure.</p>
+                                            <p>Note that <code>Restart Program And Fail</code> fails. This failure is necessary as the provisioning order would be counted as a success otherwise.</p>
+                                            <h2 id="testing-a-robotframework-script">Testing a RobotFramework script</h2>
+                                            <p>In order to write a RobotFramework script, we need to test that it works. It is possible to test the script by running a fulfillment job from the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;interface. While this kind of test proves that everything works as expected, it can take a long time. There is a faster method to check that the script runs.</p>
+                                            <p>Suppose the RobotFramework script's path is <code>RobotFramework/script.robot</code>.</p>
+                                            <p>We need the following elements :</p>
+                                            <ul>
+                                                <li>A provisioning order, in folder <code>RobotFrameworkScript/Order</code>. The provisioning order can be encrypted or unencrypted. The script will write the encrypted results to <code>RobotFrameworkScript/Order/results.csv</code>.</li>
+                                                <li>The path to the <code>Runtime</code> folder. In our example, we will consider this path as <code>C:/UsercubeDemo/Runtime</code>.</li>
+                                            </ul>
+                                            <p>The <code>RobotFramework/script.robot</code> script may be run from the command prompt.</p><pre class="Powershell" xml:space="preserve"><code>cd RobotFramework
+
+robot --variable ORDERPATH:./Order --variable RUNTIMEPATH:C:/UsercubeDemo/Runtime --variable RESULTPATH:./Order/results.csv ./script.robot</code></pre>
+                                            <p>This command will generate an output file, a log file, and a report file in the <code>RobotFramework</code> folder. This command will also write information to the command prompt.</p>
+                                            <p>For most testing cases, we only care about the command prompt information and the log file, written at <code>RobotFramework/log.html</code>. The other outputs can be removed.</p><pre class="Powershell" xml:space="preserve"><code>cd RobotFramework
+
+robot --loglevel NONE --report NONE --variable ORDERPATH:./Order --variable RUNTIMEPATH:C:/UsercubeDemo/Runtime --variable RESULTPATH:./Order/results.csv ./script.robot</code></pre>
+                                            <h3 id="get-secure-data-and-generate-password"><code>Get Secure Data</code> and <code>Generate Password</code></h3>
+                                            <p>Most keywords are not different when a script is launched manually. The keywords <code>Get Secure Data</code> and <code>Generate Password</code> are exceptions.</p>
+                                            <ul>
+                                                <li><code>Get Secure Data</code>: This keyword expects the Robot Framework process to receive a json list of attributes in the stdin stream. This can be provided manually by writing the data in the command prompt. As an example, if the script requires a <code>Login</code> and <code>Password</code> attribute :
+<code>{"Login":"login","Password":"password"}</code></li>
+                                                <li><code>Generate Password</code>: This keyword expects a file that contains the <a href="../../../toolkit/xml-configuration/connectors/passwordresetsettings/index.html" target="_parent" title="PasswordResetSettings" alt="PasswordResetSettings" class="MCXref xref">
+              
+              Password Reset Settings
+              </a> associated to the provisioned <a href="../../../toolkit/xml-configuration/connectors/resourcetypemappings/index.html" target="_parent" title="Resource Type Mappings" alt="Resource Type Mappings" class="MCXref xref">Resource Type Mappings</a>. The easiest way to enable the <code>Generate Password</code> keyword is as follow:
+<ul><li>Launch the Robot Framework fulfillment through the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;web application with a blank script.</li><li>Copy the <code>PasswordResetSettings</code> folder generated in the most recent subfolder of <code>Work/FulfillRobotFramework</code>.</li><li>Paste the folder in the same folder as the provisioning order.</li></ul></li>
+                                            </ul>
+                                            <h2 id="use-case-write-a-script-to-fulfill-a-csv-file">Use Case: Write a Script to Fulfill a CSV File</h2>
+                                            <p>The goal of the script is to append, for each provisioning order, a line in a CSV file located on an external system which we will access through a Telnet connection.</p>
+                                            <p>Let's consider the following <code>ResourceType</code>:</p><pre class="xml" xml:space="preserve"><code>
+...
+&lt;ResourceType Identifier="RobotFramework_User_NominativeUser" DisplayName_L1="Robot Framework User (nominative)" Policy="Default" TargetEntityType="RobotFramework_User" Category="RobotFramework" SourceEntityType="Directory_User" ApprovalWorkflowType="One"&gt;  &lt;ScalarRule Property="identifier" Binding="EmployeeId"/&gt;  &lt;ScalarRule Property="firstName" Binding="FirstName"/&gt;  &lt;ScalarRule Property="lastName" Binding="LastName"/&gt;&lt;/ResourceType&gt;...
+</code></pre><code></code>
+                                            <p>The end of the CSV file must look like:</p><pre class="csv" xml:space="preserve"><code>
+command;identifier;firstName;lastName
+...
+Insert;007;James;Bond
+...
+</code></pre>
+                                            <h3 id="define-settings">Define settings</h3>
+                                            <p>In every Robot Framework script, we need to import the resource file <code>UsercubeRobotFramework.resource</code>.
+In this example, we also need to import the Telnet library to use its functions.</p><pre class="python" xml:space="preserve"><code>
+*** Settings ***
+Resource  C:/UsercubeContoso/Runtime/UsercubeRobotFramework.resource
+Library  Telnet
+</code></pre>
+                                            <h3 id="define-variables">Define variables</h3>
+                                            <p>To connect to the external system through Telnet, we need an IP address corresponding to the external system. We will store the IP address in the global variable <code>${IPADDRESS}</code>.
+We also use the global variable <code>${CSVFILEPATH}</code> to define the CSV file where the data will be written in the external system.</p><pre class="python" xml:space="preserve"><code>
+*** Variables ***
+${CSVFILEPATH}  /home/contoso/robotframework_users.csv
+${IPADDRESS}  192.168.1.22
+</code></pre>
+                                            <h3 id="define-custom-keywords">Define custom keywords</h3>
+                                            <p>We define all the custom functions which we will use to provision the external system:</p>
+                                            <ul>
+                                                <li><code>Delete CSV File</code>: removes a possible pre-existing CSV file.</li>
+                                                <li><code>Write In CSV</code>: executes a command to write the line in the CSV file in the external system.</li>
+                                                <li><code>Write Data</code>: formats the line to write in the CSV and calls <code>Write In CSV</code> to write it.</li>
+                                                <li><code>Write Header</code>: defines the header to write in the CSV and calls <code>Write Data</code> to write it.</li>
+                                                <li><code>Open Telnet Connection</code>: opens the Telnet connection to the external system using the login and the password defined in the <a href="../../references-connectors/robotframework/index.html" target="_parent" title="Robot Framework" alt="Robot Framework" class="MCXref xref">
+              
+              Robot Framework
+              </a> attribute in <code>appsettings.agent.json</code>, as well as the IP address defined in the <code>Variables</code> section.</li>
+                                            </ul><pre class="python" xml:space="preserve"><code>
+*** Keywords ***
+Delete CSV File
+    Execute Command  rm ${CSVFILEPATH}
+
+Write In CSV
+    [Arguments]  ${line}
+    Execute Command  echo ${line} &gt;&gt; ${CSVFILEPATH}
+
+Write Data
+    [Arguments]  ${command}  ${identifier}  ${firstName}  ${lastName}
+    Write In CSV  '"${command}","${identifier}","${firstName}","${lastName}"'
+
+Write Header
+    Write Data  Command  identifier  firstName  lastName
+
+Open Telnet Connection
+    Open Connection  ${IPADDRESS}  prompt=$
+    Read Until  login
+    ${LOGIN}=  Get Secure Data  Login  False
+    Write  ${LOGIN}
+    Read Until  Password
+    ${PASSWORD}=  Get Secure Data  Password  True
+    Write  ${PASSWORD}
+</code></pre>
+                                            <div class="notices info">
+                                                <p>The method <code>Get Secure Data</code> will retrieve the value of the attributes filled in the options in <code>appsettings.agent.json</code>. This is the method strongly recommended by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. However, you could also enter the value directly into the script (example: <code>${LOGIN}= UserName</code>). This may be easier for initial testing purposes.</p>
+                                            </div>
+                                            <h3 id="define-mandatory-keywords">Define mandatory keywords</h3>
+                                            <p>To be able to provision the external system, we need the three required functions: <code>ExecuteAdd</code>, <code>ExecuteDelete</code> and <code>ExecuteModify</code>. These methods are called by the connector depending on the action to perform on the external system.</p><pre class="python" xml:space="preserve"><code>
+*** Keywords ***
+ExecuteAdd
+    [Arguments]  ${order}
+    Write Data  Insert  ${order['Changes']['identifier']}  ${order['Changes']['firstName']}  ${order['Changes']['lastName']}
+
+ExecuteDelete
+    [Arguments]  ${order}
+    Write Data  Delete  ${order['Changes']['identifier']}  ${order['Changes']['firstName']}  ${order['Changes']['lastName']}
+
+ExecuteModify
+    [Arguments]  ${order}
+    Write Data  Update  ${order['Changes']['identifier']}  ${order['Changes']['firstName']}  ${order['Changes']['lastName']}
+</code></pre>
+                                            <p>Here, for each action, we use the function <code>Write Data</code> defined in the previous section to write the changes to the CSV file with a corresponding word <code>Insert</code>, <code>Delete</code> or <code>Update</code>.</p>
+                                            <h3 id="define-test-cases">Define test cases</h3>
+                                            <p>The function launched by the Robot Framework script will be written in the section <code>Test Cases</code> and will be called <code>Run Provisioning</code>.</p><pre class="python" xml:space="preserve"><code>
+*** Test Cases ***
+Run Provisioning
+    Open Telnet Connection
+    Delete CSV File
+    Write Header
+    Launch Provisioning
+    Close All Connections
+</code></pre>
+                                            <p>In our test case, we will perform the following operations in <code>Run Provisioning</code>:</p>
+                                            <ul>
+                                                <li>Open the Telnet connection with the external system.</li>
+                                                <li>Remove a possible pre-existing CSV file.</li>
+                                                <li>Write the header to the new CSV file.</li>
+                                                <li>Launch the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> provisioning. The method <code>Launch Provisioning</code> is mandatory when using the Robot Framework connector.</li>
+                                                <li>Close the Telnet connection with the external system.</li>
+                                            </ul>
+                                            <h3 id="read-the-full-script">Read the full script</h3>
+                                            <p>The full script is as follows:</p><pre class="python" xml:space="preserve"><code>
+*** Settings ***
+Resource  C:/UsercubeContoso/Runtime/UsercubeRobotFramework.resource
+Library  Telnet
+
+*** Variables ***
+${CSVFILEPATH}  /home/contoso/robotframework_users.csv
+${IPADDRESS}  192.168.1.22
+
+*** Keywords ***
+ExecuteAdd
+    [Arguments]  ${order}
+    Write Data  Insert  ${order['Changes']['identifier']}  ${order['Changes']['firstName']}  ${order['Changes']['lastName']}
+
+ExecuteDelete
+    [Arguments]  ${order}
+    Write Data  Delete  ${order['Changes']['identifier']}  ${order['Changes']['firstName']}  ${order['Changes']['lastName']}
+
+ExecuteModify
+    [Arguments]  ${order}
+    Write Data  Update  ${order['Changes']['identifier']}  ${order['Changes']['firstName']}  ${order['Changes']['lastName']}
+
+Delete CSV File
+    Execute Command  rm ${CSVFILEPATH}
+
+Write In CSV
+    [Arguments]  ${line}
+    Execute Command  echo ${line} &gt;&gt; ${CSVFILEPATH}
+
+Write Data
+    [Arguments]  ${command}  ${identifier}  ${firstName}  ${lastName}
+    Write In CSV  '"${command}","${identifier}","${firstName}","${lastName}"'
+
+Write Header
+    Write Data  Command  identifier  firstName  lastName
+
+Open Telnet Connection
+    Open Connection  ${IPADDRESS}  prompt=$
+    Read Until  login
+    ${LOGIN}=  Get Secure Data  Login  False
+    Write  ${LOGIN}
+    Read Until  Password
+    ${PASSWORD}=  Get Secure Data  Password  True
+    Write  ${PASSWORD}
+
+*** Test Cases ***
+Run Provisioning
+    Open Telnet Connection
+    Delete CSV File
+    Write Header
+    Launch Provisioning
+    Close All Connections
+</code></pre>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

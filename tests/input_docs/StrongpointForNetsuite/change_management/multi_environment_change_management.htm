@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Change Management Tools" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Multi-Environment Change Management</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Multi-Environment Change Management</h1>
+                                        <p>Multi-Environment Change Management helps you manage changes between your Production and Development/Testing accounts. The design is based on:</p>
+                                        <ul>
+                                            <li>Changes to production accounts go through appropriate development and testing in separate NetSuite accounts to ensure that the performance and data in production are not compromised.</li>
+                                            <li>Documenting the process of transitioning changes through these accounts is critical to ensure that the process is followed to manage the risks associated with changes in NetSuite.</li>
+                                            <li> Change Requests and Deployment Records, along with Environment Comparison enable the documentation and validation of this process to ensure changes are deployed properly and can be reported for audits.</li>
+                                        </ul>
+                                        <p class="note"><span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> must be deployed on the target environment. You need to have a least the Strongpoint Developer Role to perform a Change Request Push.</p>
+                                        <div class="toc-macro"/><h2 id="create_a_master_change_request_in_production"> Create a Master Change Request in Production</h2>
+                                        <p>A best practice is to create change requests in your production account so that they are not lost, they have an audit trail and approvals can be shown.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>ITGC Change Request</b>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter all required fields and additional approver(s).</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click Pending Approval. Wait until the Change Request is approved.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>ITGC Change Request</b>.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click <b>Edit </b>on the appropriate Change Request.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Open the <b>Sync Tool </b>tab on the Change Request.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Set the<b> Target </b>environment (where the Change Request will be pushed).</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Set the Target login credentials: <b>Target Email and Target Password</b>.</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Set the <b>Account ID Target</b> (this is automatically loaded upon selecting Target account).</p>
+                                            </li>
+                                            <li value="10">
+                                                <p>Set the <b>Account Target Role</b>.</p>
+                                            </li>
+                                            <li value="11">
+                                                <p>Click <b>Push</b>.</p>
+                                                <p> </p>
+                                            </li>
+                                            <img src="../Resources/Images/push_change_request.png"/>
+                                            <br/>
+                                            <br/>
+                                        </ol>
+                                        <h2 id="update_the_change_request_in_testingdevelopment">Update the Change Request in Testing/Development</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Change Request</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>Edit</b> on the Change Request that came from Production.</p>
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <p>Attach <b>customizations created/updated</b>.</p>
+                                                    <p class="img-inside-p">
+                                                        <img src="../Resources/Images/multi_env_1.png"/>
+                                                            </p><p>
+                                                            </p>
+                                                        
+                                                    <p/>
+                                                </li>
+                                                <li>
+                                                    <p><b>Stage</b>: <b>Deployment Record</b></p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Set Approval Status</b>: <b>Approved</b> (this is optional)</p>
+                                                    <p class="img-inside-p">
+                                                        <img src="../Resources/Images/multi_env_2.png"/>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <li value="3">
+                                                <p>Open the <b>Sync Tool</b> tab.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p><b>Push</b> the updated Change Request back into Production. This adds a related deployment record to the Master Change Request in Production.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="run_predeployment_environment_comparison">Run Pre-Deployment Environment Comparison</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Run <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Compare Environments</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter the login credentials of the <b>Target</b> and <b>Source</b> Accounts.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Set the <b>Comparison Type</b> to <b>Target Newer than Source</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click the <b>Compare</b> button.<br/>Refer to <a href="comparing_environments.htm" title="Open Comparing Environments topic" alt="Open Comparing Environments topic">Comparing Environments</a> for more details.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="create_the_deployment_record">Create the Deployment Record</h2>
+                                        <p>Once you have compared your environments, get the deployment record approved. When your deployment record is approved, deploy the customizations listed on the change request.</p>
+                                        <p>In your Production environment:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Change Request</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p><b>Edit </b>your <b>master</b> Change Request.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Open<b> Related Change Records</b> tab.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Open <b>Change Request</b> tab.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click <b>Edit</b> (deployment record). </p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/multi_env_3.png"/>
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Push the Change Request from Production to Development/Testing.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Install any customizations in Development/Testing.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="run_postdeployment_environment_comparison">Run Post-Deployment Environment Comparison</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Run <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Compare Environments</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter the login credentials of the <b>Target</b> and <b>Source</b> Accounts.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Set the <b>Comparison Type</b> to <b>Target Newer than Source</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click the <b>Compare</b> button.<br/>Refer to <a href="comparing_environments.htm" title="Open Comparing Environments topic" alt="Open Comparing Environments topic">Comparing Environments</a> for more details.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="completing_the_process">Completing the Process</h2>
+                                        <p>If testing fails, continue to update the Change Request on Testing/Development and comparing the environments until test passes. Once testing passes:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Edit the Change Request in Testing/Development.</p><ul><li>Set <b>Approval Status</b>: <b>Approved</b></li></ul><ul><li>Set <b>Stage</b>: <b>Deployment</b></li></ul><p/>
+                                            </li>
+                                            <li value="2">
+                                                <p>Push the Change Request back to Production.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Set the (Master) Change Request Status to <b>Completed</b>.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

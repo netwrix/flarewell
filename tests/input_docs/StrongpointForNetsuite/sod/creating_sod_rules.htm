@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Segregation of Duties (SoD)" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Creating SoD Rules</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Creating SoD Rules</h1>
+                                        <div class="toc-macro"/><h2 id="sod_rules">​SoD Rules</h2>
+                                        <p>No individual user should ​have permission to take a transaction from initiation to completion.</p>
+                                        <p>Transaction duties should be separated under:</p>
+                                        <ul>
+                                            <li>Recording</li>
+                                            <li>Approvals</li>
+                                            <li>Reconciliations</li>
+                                            <li>Custody of Assets</li>
+                                        </ul>
+                                        <p>Ideally these should all be handled by four separate people​. Where external compensating controls exist and approvals are closely monitored, exemptions can be made. Exceptions must be acceptable to the company’s auditors.</p>
+                                        <p>You can create a custom change request form for SoD Rule Changes. Refer to <a href="../change_management/use_custom_cr_forms.htm" title="Open Using Custom Change Request Forms" class="MCXref xref">Using Custom Change Request Forms</a> for information on implementing your custom form.</p>
+                                        <h3 id="access_levels">Access Levels</h3>
+                                        <p>The following are general definitions of access levels for permissions in NetSuite.</p>
+                                        <ul>
+                                            <li><b>View</b>: The user has access to view existing files. The user cannot create, edit, or delete existing files.</li>
+                                            <li><b>Create</b>: The user can create new and view existing files. The user cannot edit or delete existing files.</li>
+                                            <li><b>Edit</b>: The user has access to create, view, and edit files. The user cannot delete existing files.</li>
+                                            <li><b>Full</b>: The user can create, view, edit, and delete files.</li>
+                                        </ul>
+                                        <h2 id="creating_an_sod_rule">Creating an SoD Rule</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>SoD</b> &gt; <b>SoD Rule</b> &gt; <b>SoD Rule Library</b> &gt; <b>New</b></p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/SoD_rule_new.png"/>
+                                                        </p><p>
+                                                        </p>
+                                                    
+                                                <p/>
+                                            </li>
+                                            <li value="2">
+                                                <p><b>External ID</b> is assigned by <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span>. Custom rules are numbered 1000 or above. External IDs for custom rules can be edited. SoD Library rule External IDs are 1 through 999 and cannot be edited.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Add a Rule <b>Name</b> and <b>Description</b> and optional <b>Memo</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p><b>Status</b> indicates the current state of the Rule: <b>Test on Roles</b>, <b>Disabled</b>, <b>Test on Employees</b>, <b>Approved</b>, <b>Pending for Approval</b>, <b>Disabled - Feature Not In Use</b>, or <b>Disabled - Compensating Control</b>. Only <b>Approved</b>and <b>Active</b> rules are applied.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Select or add a new <b>Risk</b> (optional).</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Select the <b>Process</b> from the list. The rule pertains to the group of activities and transactions defined for the selected <b>Process</b>. The <b>Process</b> for an  SoD Library rule cannot be edited.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Check to make the rule <b>Inactive</b> if needed (optional).</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Check to <b>Block Conflict</b> to block the save attempt on the employee record if the employee permissions/roles violates this rule (optional).</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Select the <b>Access Control Type</b>:</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/SoD_access_controls.png" title="SoD Access Controls"/>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><b>Role-based</b> - Select one or more <b>Roles</b> from the displayed list. The Permissions and Advanced Permission Controls are not available for this option.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Permission-based</b>
+                                                        </p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Select <b>One-Sided Rule</b> (only Base Permissions/Levels) or <b>Two-Sided Rule</b> (both Base and Conflicting Permissions/Levels). </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Select  one or more <b>Base Permissions</b> and one or more <b>Base Permission Levels</b>. For <b>Base Permission</b>, you can enter part of the name to see a matching list, or use the drop down to view all of the permissions. </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Optionally add a <b>Base Permission Text Match</b> to filter for conflicts matching the base permission string. For example: <b>ADMI_</b> matches all <b>ADMI</b> permissions. Can use <b>startswith</b> search operator.</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>For Two-Sided Rules, select  one or more <b>Conflicting Permissions</b> and  one or more <b>Conflicting Permission Levels</b>. For <b>Conflict Permission</b>, you can enter part of the name to see a matching list, or use the drop down to view all of the permissions.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Optionally add a <b>Conflict Permission Text Match</b> to filter for conflicts matching the conflicting permission string. For example: <b>ADMI_</b> matches all <b>ADMI</b> permissions. Can use <b>startswith</b> search operator.</p>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Permission vs Role</b> provides you additional control to fine tune access to sensitive custom records. Requires all of the fields for both <b>Role-based</b> and <b>Permission-based</b>.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="10">
+                                                <p> Add Restrictions to limit the SoD rule to employees associated in one or more of the categories: <b>Subsidiaries</b>, <b>Departments</b>, <b>Classes</b>,  and <b>Locations</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/SoD_classifications.png" title="SoD Classifications"/>
+                                                </p>
+                                            </li>
+                                            <li value="11">
+                                                <p> <b>Save</b> the rule.</p>
+                                            </li>
+                                        </ol>
+                                        <p>Once a Rule is saved, the <b>Change ID</b> and <b>Run Retroactive</b> functions are available.</p>
+                                        <p>There are four tabs to access details:</p>
+                                        <ul>
+                                            <li><b>Change Logs</b>: all changes to the rule, including Date Created, SoD Rule, Operation, Changed By, Field Name and Script ID, NonCompliance, Old/New Value and Difference Summary.</li>
+                                            <li><b>SoD Rule Processing Status</b>: the last update and current status of the rule. Status can be <b>Not Started</b>, <b>InQueue</b>, <b>Processing</b>, or <b>Done</b>.</li>
+                                            <li><b>Compensating Controls</b>: list of controls for the rule. Click <span>+</span> to the right of the list to add a new control. Compensating Controls are defined on the Customization record.</li>
+                                            <li><b>Workflow</b>: displays Active Workflows and Workflow History.</li>
+                                        </ul>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/sod_proc_status_tab.png" title="SoD Processing Status"/>
+                                        </p>
+                                        <p>When you add or change a rule, you can manually start the evaluation process, or wait until the Spider runs overnight. To manually run the process:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>SoD</b> &gt; <b>SoD Processing Status</b> &gt; <b>Run SoD on User Roles</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Select all of the roles you have modified.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <b>Run SoD</b></p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="updates_to_sod_rules_report">Updates to SoD Rules Report</h2>
+                                        <p>To view the updates to your SoD rules:</p>
+                                        <p><b>SoD</b> &gt; <b>SoD Rule</b> &gt; <b>Updates to SoD Rules</b></p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/SoD_rules_update_report.png" title="Updates to SoD Rules report"/>
+                                        </p>
+                                        <p>With this report, you can easily identify modified pre-defined SoD rules. There is a saved import SoD Rule Import available to enable bulk add or update SoD rules to your production environment.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Create a <b>.csv</b> file with the following fields:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>External ID	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Name	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Status	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Description</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Block Conflict	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Process Issues	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Process	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Roles	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Memo	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Base Permission	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Base Permission Level(s)	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Conflicting Permission	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Conflicting Permission Level(s)	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Base Permission Text Match	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Conflict Permission Text Match	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Subsidiaries	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Departments	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Classes	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Locations	</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Compensating Controls</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="2">
+                                                <p>Open <b>Setup</b> &gt; <b>Import/Export</b> &gt; <b>Saved Imports</b> &gt; <b>SoD Rule Import</b></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Follow the prompts in the <b>Import Assistant</b>.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Endpoint Policy Manager: Use the DesignStudio to manage FireFox's about:config settings</title>
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Endpoint Policy Manager: Use the DesignStudio to manage FireFox's about:config settings</h1>
+                                    <p>Firefox is easy to manage using  <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span>. Here is the how-to using the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span><b> DesignStudio</b> to implement about:config settings within your Paks.</p>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/k8GhOSdHWGU" title="Endpoint Policy Manager: Use the DesignStudio to manage FireFox's about:config settings" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3 id="transcript" style="text-align: center;">PolicyPak: Use the DesignStudio to manage FireFox's about:config settings video transcript</h3>
+                                    <p>Hello, everybody. This is Jeremy Moskowitz, former Group Policy MVP and Founder of PolicyPak Software. In this video, I'm going to show you how to manage and create "about:config" settings in your PolicyPak "Firefox" Pak.</p>
+                                    <p>First things first, let's go ahead and just make an assumption that we here at PolicyPak are probably not going to institute all of the zillions and zillions of settings that are here in the about:config. That being said, we give you the ability to add the ones that are important to you for your environment.</p>
+                                    <p>By way of example, if we go over to the Pak that we've created for you, we actually supply one, two, three of them for you inside the preconfigured Pak. I was messing around, and I have this other example here just for show. What I'm going to do here in this video is show you how to add your own, if you need to, to this "About:Config" dialogue.</p>
+                                    <p>Now, first things first, I would humbly suggest that you create a copy of the Firefox Pak for yourself, change the "Properties" and "Project name" to something like Firefox about:config. So that way if we here at PolicyPak update the preconfigured Firefox Pak, it doesn't overwrite what you're about to do. I hope that makes sense. I'm not going to do that, but you should.</p>
+                                    <p>Long story short, first things first, let's go ahead and take a look over at some of the "about:config" settings here. Again there are a bazillion of them here, and I'm not going to go over all of them. I'm just going to do one quick example here.</p>
+                                    <p>So somebody asks me, how do you configure "browser.shell.checkDefaultBrowser"? OK, well, first thing is that you can see here what you want to do is if you want to set this you need to note the type. See how the type here is "boolean." That's important because different of these configuration options have "string," or "integer" or "boolean." That's really important because that's how you're going to configure this in the Design Studio.</p>
+                                    <p>What we're going to do is go over to the "Design Studio" first. We'll then go ahead and just make it nice and pretty. What I like to do is take a "Label" here, and we'll just drag a "Label" down. I'll name this thing "browser.shell.checkDefaultBrowser," and this is just the display name. This has nothing to do with the actual configuration.</p>
+                                    <p>Next thing we want to do is this is a true/false, so what I would suggest that you do here is you put a little "Check Box" in. I'm going to put a little "Check Box" here, and we can call this checkbox "Checked is TRUE," which of course means that unchecked would be false. OK.</p>
+                                    <p>Then on this value here, I'm going to go to "Advanced" parameters and under "First Action" I'm going to pick the "Mozilla-specific config file." We're in Mozilla, and all this is already situated so we're OK here. You just leave "&lt;project root&gt;." You put in the "Property" name. We'll go ahead and we'll call this – again this is the official thing we're doing here – which is "browser.shell.checkDefaultBrowser." The "Default state" is "Unchecked," and the "Revert state" is "Unchecked."</p>
+                                    <p>Next we need to go to "Data type," and it's not an "Integer," right? It is a "Boolean," and therefore "On" when it's checked is "True" and "Off" will be "False." OK, so that's how this all lines up. You need to know the "Date type," which is the first thing we did. We figured out is it a "String," is it an "Integer" or a "Boolean." Then you put the information here as you need to – so "Boolean," "True" or "False."</p>
+                                    <p>OK, so that's it. Let's go to compile this guy. We'll go ahead and click "OK." We're done here. This is the preview of this here. You can see that there's a little preview of this guy here, but that's not the real deal. The real deal is going to be inside the Group Policy Object.</p>
+                                    <p>Let me "Delete" this guy. This is from a previous thing I was working on. We'll go ahead and we'll "Create a GPO in this domain, and Link it here…" to our "Desktops" because you get the lockout in Firefox if you link it over to "Desktops." We'll call this "Firefox Demo 4."</p>
+                                    <p>We'll dive down under computer side "PolicyPak/Applications/New/Application," and we'll go ahead and pick "PolicyPak for Mozilla Firefox." Under "About:Config" here, there we go. Here is our "Browser.shell.checkDefaultBrowser," and "Checked is TRUE," which means unchecked is false. I'll right click over this guy also and "Lockdown this setting using the system-wide config file." This is going to make it locked. Let's go ahead and set it true first.</p>
+                                    <p>Let's go over to the target machine. Right now just to prove a point as we sit here, "browser.shell.check," OK, it is set to "true" but it's not locked, right? Any user could do anything they want to. Let's set it to true and lock it down.</p>
+                                    <p>Let's go ahead and do that. We'll run "gpupdate" here. Alright, we'll go ahead and run "Mozilla Firefox" here, and we'll go to "about:config." Again, now we're looking for "browser.shell." Here we go, "browser.shell.checkDefaultBrowser" is "locked" and it's set to "true." OK, can't change it.</p>
+                                    <p>Let's go back to the Group Policy Object here. Let's just go back to "About:Config." We'll uncheck this puppy. So "Checked is TRUE," unchecked is false. OK, and it's still locked down using the config file. Now we've now set it to false.</p>
+                                    <p>We'll just make sure that this works the way we expect. OK, now that that's done, we'll rerun "Mozilla Firefox" here. Go to "about:config," and again it's called "browser.shell.check." And there we go, set to "false." And that's it.</p>
+                                    <p>You've seen me do it for Boolean. It's really similar for string and for numerics. What I would suggest that you do for string type, you can just copy the example I've already got here. String type, I use this guy here, which is a "Text Box," and for numeric you're going to use a "Numeric Edit." And that's it, and that way you're able to do all three types.</p>
+                                    <p>Remember, the hard part is once you drag the item, like say a "Numeric Edit," for editing, don't forget. Once it's here, you just need to pick the "Advanced" elements, then you're going to go to "Mozilla-specific config file." You're going to pick the "Data type" if that's "Integer." Right? That's "Integer."</p>
+                                    <p>Then you'll type the "Property" name whatever that is, you know, whatever the Firefox calls it. Then you'll have a "Min. value" and a "Max. value" and you can just set it right here and you're good to go. OK, so this is the important part, setting the "Data type" and setting the "Property," and you're good to go.</p>
+                                    <p>I hope this has been helpful. If you have any questions, please post them to the forums and we'll talk to you soon.</p>
+                                    <p>Thanks so much.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

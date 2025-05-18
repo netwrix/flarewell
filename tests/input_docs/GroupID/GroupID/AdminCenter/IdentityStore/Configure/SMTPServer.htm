@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html d1p1:tocPath="Admin Center|Identity Stores|Configure Identity Stores" d1p1:medium="Sb-print" d1p1:InPreviewMode="false" d1p1:PreloadImages="false" d1p1:TargetType="WebHelp2" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-runtime-file-type="Default;Topic" xmlns:d1p1="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="generator" content="Adobe RoboHelp 2019" /><title>Configure an SMTP Server</title>
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Introduction.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Configure an SMTP Server</h1>
+                                    <p>An identity store requires an SMTP server for sending email notifications. It can be an Exchange server deployed in your environment or an external SMTP server; for example, Gmail or Office 365.</p>
+                                    <p xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">When configuring a provider that supports modern authentication, such as Exchange Online and Office 365, you have the option to use OAuth for modern authentication.</p>
+                                    <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>With Microsoft Entra ID's mandatory multifactor authentication policy, basic authentication cannot be used for an Office 365 SMTP server. You can only use OAuth for modern authentication.</p>
+                                    <p>You can also specify notification recipients, that can be:</p>
+                                    <ul>
+                                        <li>
+                                            <p>individual recipients</p>
+                                        </li>
+                                        <li>
+                                            <p>the user who makes a change to a directory object</p>
+                                        </li>
+                                        <li>
+                                            <p>the directory object being modified</p>
+                                        </li>
+                                        <li>
+                                            <p>group owners and user managers—a practice that does not require update when role assignments change</p>
+                                        </li>
+                                        <li>
+                                            <p>owners of a public group on membership changes</p>
+                                        </li>
+                                        <li>
+                                            <p>an object that is added to the membership of a group</p>
+                                        </li>
+                                        <li>
+                                            <p>an object that is removed from the membership of a group</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Bold_Subheading">What do you want to do?</p>
+                                    <ul>
+                                        <li><a href="#configure" target="_parent" title="Configure an SMTP Server" alt="Configure an SMTP Server" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Configure an SMTP Server</a>
+                                        </li>
+                                        <li><a href="#specify" target="_parent" title="Specify Notification Recipients" alt="Specify Notification Recipients" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Specify Notification Recipients</a>
+                                        </li>
+                                        <li><a href="#URL" target="_parent" title="Specify a Portal URL for Password Expiry Group Notifications" alt="Specify a Portal URL for Password Expiry Group Notifications" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Specify a Portal URL for Password Expiry Group Notifications</a>
+                                        </li>
+                                        <li><a href="#manage" target="_parent" title="Manage Membership Life Cycle Notifications" alt="Manage Membership Life Cycle Notifications" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Manage Membership Life Cycle Notifications</a>
+                                        </li>
+                                        <li><a href="#managedby" target="_parent" title="Manage Managed by Life Cycle Notifications" alt="Manage Managed by Life Cycle Notifications" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Manage Managed by Life Cycle Notifications</a>
+                                        </li>
+                                    </ul>
+                                    <h2>Configure an SMTP Server<a name="configure"></a></h2>
+                                    <p xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Follow the steps to configure an SMTP Server.</p>
+                                    <p class="Step-Reset" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 1 – "><span class="autonumber"><span class="Step">Step 1 – </span></span>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 2 – "><span class="autonumber"><span class="Step">Step 2 – </span></span>On the <b>Identity Stores</b> page, click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 3 – "><span class="autonumber"><span class="Step">Step 3 – </span></span>Click <b>Configurations</b> under <b>Settings</b> in the left pane. Then click <b>Notifications</b>. The <b>Notifications</b> page is displayed.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 4 – "><span class="autonumber"><span class="Step">Step 4 – </span></span>In the <b>SMTP Server</b> section, enter the fully qualified domain name or IP address of the SMTP server in the <b>SMTP Server</b> box. Email notifications will be routed through this
+        server.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 5 – "><span class="autonumber"><span class="Step">Step 5 – </span></span>Enter the email address to use for sending notifications in the <b>From email address</b> box.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 6 – "><span class="autonumber"><span class="Step">Step 6 – </span></span>Enter a port for communicating with the SMTP server in the <b>Port</b> box.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 7 – "><span class="autonumber"><span class="Step">Step 7 – </span></span>Select the <b>SSL enabled</b> check box if the SMTP server is SSL-enabled.</p>
+                                    <p><b>Set up user authentication</b>
+                                    </p>
+                                    <p>By default, the credentials of the user logged into Admin Center are used to connect to the SMTP server. Hence, each user connects to the server in the context of the identity store and credentials he or she has currently used to sign into Admin Center.<br />However, you may choose to specify a single account for connecting, in case your user accounts do not have rights on the SMTP server or you want to use a dedicated account. Select the <b>Use SMTP user authentication</b> check box. This enables the credentials options, where you can choose <i>basic authentication</i> or <i>OAuth</i>; then provide the credentials of an authorized user account on the SMTP server.</p>
+                                    <ul>
+                                        <li>
+                                            <p><b>For basic authentication</b>
+                                            </p>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1">
+                                                    <p>Select the <b>Basic</b> tile.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>Enter the username and password of an authorized user account on the SMTP server in the <b>SMTP username</b> and <b>SMTP password</b> boxes.</p>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <p><b>For modern authentication</b>
+                                            </p>
+                                            <p>OAuth settings are available when you specify a provider that supports modern authentication, such as Exchange Online and Office 365.</p>
+                                            <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>For OAuth to work, you must enable the Graph API’s ‘SMTP.Send’ permission   for the <span class="mc-variable GroupID.Product variable">Directory Manager</span> app in <span class="mc-variable GroupID.Azure_portal variable">Microsoft Entra Admin Center</span>:</p>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1">
+                                                    <p>Click the <b>OAuth 2.0</b> tile.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>In the <b>Token Endpoint</b> box, provide the following URL:<br />https://login.microsoftonline.com/organizations/oauth2/v2.0/token
+                  </p>
+                                                    <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>In case of Office 365 provider, you need to provide Graph Endpoint of your CloudType in the <b>Token Endpoint</b> box, for example, https://graph.microsoft.com/v1.0</p>
+                                                </li>
+                                                <li value="3">
+                                                    <p>In the <b>Client ID</b> box, provide the client ID assigned to the <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> application when you registered it in <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Azure_portal variable">Microsoft Entra Admin Center</span>.</p>
+                                                </li>
+                                                <li value="4">
+                                                    <p>In the <b>Client Secret</b> box, provide the client secret value generated against the certificate uploaded to <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Azure_portal variable">Microsoft Entra Admin Center</span> while registering the <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> application.</p>
+                                                </li>
+                                                <li value="5">
+                                                    <p>In the <b>Scope</b> box, provide the following URL:<br />https://outlook.office365.com/SMTP.Send</p>
+                                                    <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>In case of Office 365 provider, provide name of the tenant the <b>Scope</b> box, for example, abcd.onmicrosoft.com</p>
+                                                </li>
+                                                <li value="6">
+                                                    <p>In the <b>Username</b> and <b>Password</b> boxes, provide the credentials  to connect to the SMTP server.
+                                </p>
+                                                </li>
+                                            </ol>
+                                            <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>The user account used for SMTP Authentication for OAuth should have no MFA applied to it or have a conditional bypass for GraphAPI requests.
+                        </p>
+                                        </li>
+                                    </ul>
+                                    <p class="Bold_Subheading" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><b>Test the connection</b>
+                                    </p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 8 – "><span class="autonumber"><span class="Step">Step 8 – </span></span>Click <b>Test Server</b> to check the server settings. In the <b>Test Notification</b> dialog box, enter an email address to receive the test notification, and click <b>OK</b>. A
+          test email is sent to the provided email address using the configured SMTP settings.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 9 – "><span class="autonumber"><span class="Step">Step 9 – </span></span>Click <b>Save </b>on the <b>Notifications</b> page.</p>
+                                    <h2>Specify Notification Recipients<a name="specify"></a></h2>
+                                    <p xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Follow the steps to specify notfication recipients.</p>
+                                    <p class="Step-Reset" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 1 – "><span class="autonumber"><span class="Step">Step 1 – </span></span>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 2 – "><span class="autonumber"><span class="Step">Step 2 – </span></span>On the <b>Identity Stores</b> page, click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 3 – "><span class="autonumber"><span class="Step">Step 3 – </span></span>Click <b>Configurations</b> under <b>Settings</b> in the left pane. Then click <b>Notifications</b>. The <b>Notifications</b> page is displayed.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 4 – "><span class="autonumber"><span class="Step">Step 4 – </span></span>In the <b>To:</b> and <b>CC:</b> boxes in the <b>Recipients </b>section, enter the email addresses of one or more notification recipients, separating
+        multiple addresses with a semicolon (;). All email notifications generated for the identity store are sent to these recipients.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 5 – "><span class="autonumber"><span class="Step">Step 5 – </span></span>You can also select other recipients to send email notifications for different events. In the <b>Also Notify</b> area, select the required check boxes.</p>
+                                    <ul>
+                                        <li>
+                                            <p>Logged in users for their actions –  To send email notifications to the logged-on user for changes they make to directory objects using Admin Center, <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> portal, and  Management Shell. This setting applies to mail-enabled users
+              only.</p>
+                                        </li>
+                                        <li>
+                                            <p>Object being modified – To send email notifications to the object (group, user, contact) being modified. In case of a group, all members are notified.</p>
+                                        </li>
+                                        <li>
+                                            <p>Group ownser(s) for their groups To send email notifications to the primary and additional owners of groups about changes made to their respective groups.</p>
+                                        </li>
+                                        <li>
+                                            <p>Manager(s) for their direct reports – To send email notifications to managers about changes made to their respective direct reports.</p>
+                                        </li>
+                                        <li>
+                                            <p>Newly added group members on addition – To send email notifications to objects when they are added to the membership of a group.</p>
+                                        </li>
+                                        <li>
+                                            <p>Removed group member on removal – To send email notifications to objects when they are removed from the membership of a group.</p>
+                                        </li>
+                                        <li>
+                                            <p>Public group owner for membership – To send email notifications to the primary and additional owners of a public group on membership change. See the <a href="../../General/Concepts.htm#Group4" target="_parent" title="Group Security Types" alt="Group Security Types" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Group Security Types</a> topic.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 6 – "><span class="autonumber"><span class="Step">Step 6 – </span></span>Click <b>Save </b>on the <b>Notifications</b> page.</p>
+                                    <h2>Specify a Portal URL for Password Expiry Group Notifications<a name="URL"></a></h2>
+                                    <p>A password expiry Smart Group can be created using the <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> portal. Its membership is limited to users whose identity store account passwords are approaching their expiry dates.</p>
+                                    <p>The administrator can apply a setting to send a password expiry warning email to group members every time group membership is updated. This email includes the URL of a <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> portal to redirect users there for changing their passwords.</p>
+                                    <p>Users who change their passwords are removed from group membership.</p>
+                                    <p>Follow the steps to specify the portal URL.</p>
+                                    <p class="Step-Reset" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 1 – "><span class="autonumber"><span class="Step">Step 1 – </span></span>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 2 – "><span class="autonumber"><span class="Step">Step 2 – </span></span>On the Identity Store page, click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 3 – "><span class="autonumber"><span class="Step">Step 3 – </span></span>Click <b>Configurations</b> under Settings in the left pane. Then click <b>Notifications</b>. The Notifications page is displayed.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 4 – "><span class="autonumber"><span class="Step">Step 4 – </span></span>In the Password Expiry Group Notifications section, select the URL of a <span class="mc-variable GroupID.Product variable">Directory Manager</span> portal in the <b>GroupID Portal URL</b> drop-down list. This URL will be included in password expiry warning emails to redirect users to the portal, where they can change their
+        identity store account passwords.<br />The list contains URLs of all <span class="mc-variable GroupID.Product variable">Directory Manager</span> portals linked with the identity store.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 5 – "><span class="autonumber"><span class="Step">Step 5 – </span></span>Click <b>Save </b>on the <b>Notifications</b> page.</p>
+                                    <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>Password expiry Smart Groups cannot be created in a <span class="mc-variable GroupID.Azure_AD variable">Microsoft Entra ID</span> identity store.</p>
+                                    <h2>Manage Membership Life Cycle Notifications<a name="manage"></a></h2>
+                                    <p>Membership lifecycle notifications are triggered on the following events:</p>
+                                    <ul>
+                                        <li>
+                                            <p>When the Membership Life Cycle schedule temporarily adds or removes a user from the membership of a semi-private or public group,
+          the respective user is notified.</p>
+                                        </li>
+                                        <li>
+                                            <p>Peers and managers can temporarily join or leave a group on behalf of another user (User A). Membership lifecycle notifications are sent to User A when the Membership Life Cycle schedule adds or removes him or her from group membership.</p>
+                                        </li>
+                                        <li>
+                                            <p>Users are also notified when they are temporarily added or removed from group membership according to membership lifecycle policies. See the <a href="DirectoryService/MembershipLifecycle.htm" target="_parent" title="Manage Membership Lifecycle Policies" alt="Manage Membership Lifecycle Policies" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Manage Membership Life Cycle Policies</a> topic.</p>
+                                        </li>
+                                    </ul>
+                                    <p>You can choose to send notification when users are temporarily added to groups, removed from groups, or on both events.</p>
+                                    <p>Follow the steps to set Membership Life Cycle notifications.</p>
+                                    <p class="Step-Reset" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 1 – "><span class="autonumber"><span class="Step">Step 1 – </span></span>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 2 – "><span class="autonumber"><span class="Step">Step 2 – </span></span>On the Identity Stores page, click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 3 – "><span class="autonumber"><span class="Step">Step 3 – </span></span>Click <b>Configurations</b> under Settings in the left pane. Then click <b>Notifications</b>. The page is displayed.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 4 – "><span class="autonumber"><span class="Step">Step 4 – </span></span>In the Membership Lifecycle Notifications section, select your desired options.</p>
+                                    <ul xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                                        <li>
+                                            <p>On joining group – Sends email notifications to users when the Membership Life Cycle schedule temporarily adds them to group membership.</p>
+                                        </li>
+                                        <li>
+                                            <p>On leaving group – ends email notifications to users when the Membership Life Cycle schedule temporarily removes them from group membership.</p>
+                                        </li>
+                                        <li>
+                                            <p>X days before user is going to leave the group – Select this check box and specify a certain number of days, say 2. The user receives a notification 2 days before he or she is removed from group membership by the Membership Life Cycle schedule. This setting also applies to users who have
+              been marked for removal from group membership in the group attestation process. (See the <b>Specify member inactive period</b> setting in the <a href="DirectoryService/GroupLifecycle.htm#attestation" target="_parent" title="Enable Group Attestation" alt="Enable Group Attestation" class="MCXref xref">Enable Group Attestation</a> topic.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 5 – "><span class="autonumber"><span class="Step">Step 5 – </span></span>Click <b>Save </b>on the <b>Notifications</b> page.</p>
+                                    <h2>Manage Managed by Life Cycle Notifications<a name="managedby"></a></h2>
+                                    <p>You can set up email notifications for objects when the Managed By Life Cycle schedule adds or removes them as temporary additional owners for groups and temporary additional managers for
+      users.</p>
+                                    <p>When a group is set or removed as a temporary additional owner, all its members are notified.</p>
+                                    <p>Follow the steps to set up Managed By Life Cycle notifications.</p>
+                                    <p class="Step-Reset" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 1 – "><span class="autonumber"><span class="Step">Step 1 – </span></span>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 2 – "><span class="autonumber"><span class="Step">Step 2 – </span></span>On the Identity Stores page, click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 3 – "><span class="autonumber"><span class="Step">Step 3 – </span></span>Click <b>Configurations</b> under Settings in the left pane. Then click <b>Notifications</b>. The <b>Notifications</b> page is displayed.</p>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 4 – "><span class="autonumber"><span class="Step">Step 4 – </span></span>In the<b> Managed By Notifications</b> section, select your desired options.</p>
+                                    <ul>
+                                        <li>
+                                            <p>Same as membership life cycle – Applies the membership lifecycle notification settings to the managed by life cycle and disables the <b>Managed By Notifications</b> section. For example, if <i>On joining group</i> is selected for Membership life cycle, it has the same behavior as discussed for <i>Object is added as additional owner/manager</i>.</p>
+                                        </li>
+                                        <li>
+                                            <p>Object is added as additional owner/manager – <b>Object is added as additional owner/manager</b> - Sends an email notification to an object when the Managed By Life Cycle schedule adds it as the temporary additional owner of a group or the temporary additional manager of a user. The primary owner or primary manager is also notified accordingly.</p>
+                                        </li>
+                                        <li>
+                                            <p>Object is removed as additional owner/manager – Sends an email notification to an object when the Managed By Life Cycle schedule removes it as the temporary additional owner of a group or the temporary additional manager of a user. The primary owner or primary manager is also notified accordingly.</p>
+                                        </li>
+                                        <li>
+                                            <p>X Days before object is removed as additional owner/manager – Select this check box and specify a certain number of days, say 2. The temporary additional manager/owner receives a notification 2 days before the Managed By Life Cycle schedule removes him or her as additional manager/owner.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Step" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="Step 5 – "><span class="autonumber"><span class="Step">Step 5 – </span></span>Click <b>Save</b> on the Notifications page.</p>
+                                    <p xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">&#160;</p>
+                                    <p class="Bold_Subheading"><b>See Also</b>
+                                    </p>
+                                    <ul>
+                                        <li><a href="../../Notification/Overview.htm" target="_parent" title="Notifications" alt="Notifications" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Notifications</a>
+                                        </li>
+                                        <li><a href="../../Schedule/MembershipLifecycle.htm" target="_parent" title="Membership Life Cycle Schedule" alt="Membership Life Cycle Schedule" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Membership Life Cycle Schedule</a>
+                                        </li>
+                                        <li><a href="../../Schedule/ManagedByLifecycle.htm" target="_parent" title="Managed By Life Cycle Schedule" alt="Managed By Life Cycle Schedule" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Managed By Life Cycle Schedule</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

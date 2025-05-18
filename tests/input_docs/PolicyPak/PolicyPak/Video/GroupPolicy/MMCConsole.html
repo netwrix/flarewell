@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Getting Started with Group Policy|[%=System.LinkedTitle%]|Tips and Tricks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Trim the MMC console for OU admins</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Trim the MMC console for OU admins</h1>
+                                    <p>If you want to hide some of the PolicyPak MMC items for your OU admins, this is how to do it.</p>
+                                    <p><iframe width="1477" height="831" src="https://www.youtube.com/embed/5mJe4XBghFY" title="Endpoint Policy Manager: Trim the MMC console for OU admins" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <p>Hi. This is Jeremy Moskowitz, former 15-year Group Policy MVP and Founder of PolicyPak Software. In this vid, I'm going to show you how you can trim what you see in the PolicyPak Management Console.</p>
+                                    <p>We're going to play pretend here. This is you on this machine on your management station, and this is your buddy Eddie. When you click "Edit" on any given Group Policy Object maybe you want to see all the things PolicyPak can do. Let me show you what I'm talking about. For instance, inside the MMC console here when you click on "PolicyPak" you see all the nodes here.</p>
+                                    <p>Maybe for Eddie you don't want to do that. Maybe for Eddie what you want to do is say for Group Policy Objects that Eddie creates that Eddie can only see some of the PolicyPak nodes. So you can see that right now he has all of them.</p>
+                                    <p>Let's say I wanted to remove his ability to do "Java Rules Manager." How would I do that? We have ADMX templates that will control this. We have another video on how to manage our ADMX templates, but it's as quick as downloading them from the bits, taking the policy definitions, and putting them in your Microsoft central store. That's all there is to it.</p>
+                                    <p>The other side note is that the target machine doesn't need the PolicyPak client-side extension. That's the moving part. We don't need that on the endpoint. The MMC console is just looking at all times to see if the flag is set to receive this policy, and it will do the work.</p>
+                                    <p>I'll show you what we're talking about. Again, now we're back on your machine and we're going to modify Eddie's behavior. How do we do that? We know that Eddie is in "West Sales Admins." So we're going to "Create a GPO in this domain, and link it here" and call it "West Sales Admins cannot use PP JRM." Then we click "Edit" on this Group Policy Object.</p>
+                                    <p>This, again, is not a PolicyPak function. You're going to go to user or computer side, "Policies / Administrative Templates / PolicyPak / Snap-ins." If you want to "Hide Java Rules Manager snap-in," you go ahead and set "Enabled" and click "OK." Now provided, again, that Eddie's account is in fact in "West Sales Admins," he's going to pick up this policy setting and it will affect him.</p>
+                                    <p>Let's go ahead and see if that's true. We'll go ahead and run GP Update ("gpupdate") here. We'll give this a second to finish up. As soon as this is over, the next time he edits a Group Policy Object the PolicyPak MMC snap-in will see that that's there and will not give him the ability to do Java Rules Manager. Let's go ahead and check that out. Right click and click "Edit" here. We'll go to "PolicyPak" node and no more Java Rules Manager. So that's basically it.</p>
+                                    <p>Now another thing you could do is also do it on the computer. If you knew that Eddie's computer or all of your administrators for West Sales were in some OU like "West Sales Desktops," you could do that. I actually think Eddie's computer is in a weird place. Let's take a look where it is. Eddie's computer is currently in "East Sales Desktops," so that's sort of a weird place.</p>
+                                    <p>Let's go ahead and affect this computer. When we do that, it will be additive. So he'll get the user-based things and the computer-based things. So let's say we want to say goodbye to "Browser Router" or something like that. What we'll do is we'll do this on the computer side for "East Sales Desktops." We'll "Create a GPO in this domain, and link it here" and call it "Computers in this OU cannot use PP BR."</p>
+                                    <p>We'll go ahead and click on this guy, click "Edit" here. Then we'll dive down on the computer side. Again, this is you doing this. We'll go to "Policies / Administrative Templates / PolicyPak / Snap-ins." You want to "Hide Browser Router snap-in." You just go ahead and click "Enabled" and "OK" and you're off to the races.</p>
+                                    <p>This computer is in this OU, and we're going to get the GP Update ("gpupdate") here. Again, we don't need the PolicyPak moving part on here. The admin stations don't need the moving part in order to create policy settings. The next time we run Group Policy, let's go ahead and go back to "gpmc.msc" here, and then we'll go back to that same Group Policy Object from before. Click "Edit" and now we'll look and see. If we go to "PolicyPak," we can see Browser Router has been annihilated, exactly what we want to have happen.</p>
+                                    <p>Here is a key point though. Just because you've removed the items here doesn't mean that they are shut out from seeing the reporting in there. If I were to as you, now this is you going into the Group Policy Object here. If I were to find that Eddie Group Policy Object, and this is you doing this. If you were to create some Browser Router stuff or create some Java Rules Manager stuff, he can see that without even having the ability to edit it.</p>
+                                    <p>So if you were to "Add" a "New Collection" and you were to just put a single policy in here, right click "Add" a "New Policy" here and just give it some dummy data for right this second here, if you were to look at it here in the Group Policy console and look at the "Settings" report, you will see the details here come on up. So you can see that you've configured some "Browser Router" stuff.</p>
+                                    <p>What about Eddie? Well, we know he can't edit it, but can he see it? Let's go ahead and go click on it here. Now if he goes into the "Settings" report and he clicks on "Administrative Templates" for "Browser Router," he can see it but he can't edit it. So that's important.</p>
+                                    <p>I do want to say that this is not considered a security boundary. So just because you've removed the ability to edit it in the Group Policy editor, this is not considered a security boundary. If somebody really knew what they were doing, they could edit the Group Policy Object directly if they have rights. Eddie does have the rights. And then he could actually put XML data directly into the Group Policy Object even if he doesn't have the ability to have the nice editor for it. So, again, don't consider this a security boundary. Consider this light electric fencing.</p>
+                                    <p>All right, well, I hope this helps you out and helps you get started.</p>
+                                    <p>Thank you very much and talk to you soon.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

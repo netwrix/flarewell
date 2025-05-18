@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Connectors|Configuration Details">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>
+              
+              Fulfill Microsoft Exchange via PowerShell
+              </title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/connectors/how-tos/powershell-fulfill/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <section id="body">
+                                        <div id="body-inner">
+                                            <h1>
+                                                <div>
+              
+              Fulfill Microsoft Exchange via PowerShell
+              </div>
+                                            </h1>
+                                            <p>This guide shows how to set up a PowerShell connector to fulfill data in Microsoft Exchange Server. It will focus on registering <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;within the target Microsoft Exchange instance, configuring the connector, and building the job to perform a regularly scheduled fulfillment. Of course, any other system compatible with PowerShell can be chosen.</p>
+                                            <h2 id="prerequisites">Prerequisites</h2>
+                                            <h3 id="external-system-configuration">External System Configuration</h3>
+                                            <p>Check the following prerequisites:</p>
+                                            <ul>
+                                                <li><a href="../../references-connectors/powershellprov/index.html" target="_parent" title="PowerShellProv" alt="PowerShellProv" class="MCXref xref">
+              
+              PowerShellProv
+              </a>
+                                                </li>
+                                                <li><a href="../../references-connectors/microsoftexchange/index.html" target="_parent" title="Microsoft Exchange" alt="Microsoft Exchange" class="MCXref xref">
+              
+              Microsoft Exchange
+              </a>
+                                                </li>
+                                                <li><a href="../../references-connectors/activedirectory/index.html" target="_parent" title="Active Directory" alt="Active Directory" class="MCXref xref">Active Directory</a>
+                                                </li>
+                                            </ul>
+                                            <p>Let's consider a simplified system, including three parts:</p>
+                                            <ol>
+                                                <li value="1"><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>
+                                                </li>
+                                                <li value="2">Microsoft Exchange Server</li>
+                                                <li value="3">Active Directory</li>
+                                            </ol>
+                                            <div class="notices note">
+                                                <p>For more details on the complete system, see <a href="https://docs.microsoft.com/en-us/exchange/network-configuration/architecture?view=exchserver-2016" target="_blank" title="Exchange architecture" alt="Exchange architecture">Exchange architecture</a>.</p>
+                                            </div>
+                                            <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;can:</p>
+                                            <ul>
+                                                <li>export and fulfill AD entries independently of Microsoft Exchange.</li>
+                                                <li>export mailboxes from Microsoft Exchange independently of AD.</li>
+                                                <li>fulfill a mailbox but <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;needs first to fulfill an AD entry and then, launch the Microsoft Exchange Fulfill.</li>
+                                            </ul>
+                                            <h3 id="usercube-configuration">Identity Manager Configuration</h3>
+                                            <p>This step sets up the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Agent to use the Active Directory and PowerShell connectors in order to fulfill the Microsoft Exchange mailboxes.</p>
+                                            <p>The settings must be entered in <code>appsettings.agent.json &gt; Connections</code>. For more details, see the <a href="../../references-connectors/activedirectory/index.html" target="_parent" title="Active Directory" alt="Active Directory" class="MCXref xref">Active Directory</a> and <a href="../../references-connectors/powershellprov/index.html" target="_parent" title="PowerShellProv" alt="PowerShellProv" class="MCXref xref">
+              
+              PowerShellProv
+              </a> sections.</p>
+                                            <h4 id="add-sections">Add Sections</h4>
+                                            <p>As explained previously, the simplified system consists of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;and two other systems. It means that settings are required in <code>appsettings.agent.json</code> to connect with the systems. See the <a href="../../references-connectors/microsoftexchange/index.html" target="_parent" title="Microsoft Exchange" alt="Microsoft Exchange" class="MCXref xref">
+              
+              Microsoft Exchange
+              </a>, <a href="../../references-connectors/powershellprov/index.html" target="_parent" title="PowerShellProv" alt="PowerShellProv" class="MCXref xref">
+              
+              PowerShellProv
+              </a>, and<a href="../../references-connectors/activedirectory/index.html" target="_parent" title="Active Directory" alt="Active Directory" class="MCXref xref">Active Directory</a> topics for additional information.</p>
+                                            <blockquote>
+                                                <p>This example contains export and fulfillment settings for the Active Directory and for Microsoft Exchange:</p><pre class="json" xml:space="preserve"><code><em>appsettings.agent.json</em>
+{
+    "Connections": {
+    ...
+    "ADFulfillment": {
+      "Servers": [
+        {
+          "Server": "...",
+          "BaseDN": "..."
+        },
+        {
+          "Server": "paris.contoso.com",
+          "BaseDN": "DC=defense,DC=paris,DC=com"
+        }
+      ],
+      "AuthType": "Basic",
+      "Login": "...",
+      "Password": "...",
+      "Filter": "(objectclass=*)",
+      "EnableSSL": true,
+    }
+    "MicrosoftExchangeExportFulfillment": {
+      // Export Microsoft Exchange settings
+      ...
+      // Fulfillment Microsoft Exchange settings
+      "PowerShellScriptPath": "C:/UsercubeDemo/Scripts/Fulfill-Exchange.ps1",
+      "Options": {
+        "AuthType": "Basic",
+        "Server": "http://ex-server1/powershell",
+        "Login": "PIXELABS\\Administrateur",
+        "Password": "Secret123"
+      }
+    },
+  }
+}</code></pre>
+                                            </blockquote>
+                                            <p>As this guide focuses on the fulfillment of an external system, export settings will be omitted.</p>
+                                            <p>The Fulfill-PowerShell needs a script whose path is defined by the attribute <strong>PowerShellScriptPath</strong>. <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;provides a script in the SDK in <code>Usercube.Demo/Scripts/Fulfill-Exchange.ps1</code>.See the <a href="../write-fulfill-powershell-script/index.html" target="_parent" title="Write a PowerShell Script for Provisioning" alt="Write a PowerShell Script for Provisioning" class="MCXref xref">
+              
+              Write a PowerShell Script for Provisioning
+              </a> topic for additional information on how to write a customized script.</p>
+                                            <p>To define and apply additional settings when authenticating to an external system, we can set the attribute Options and add required parameters for authentication.</p>
+                                            <p>In the example above, the <code>Basic</code> AuthType was chosen to show how to fill the credentials, but it isn't mandatory to use this . See the <a href="../../references-connectors/microsoftexchange/index.html" target="_parent" title="Microsoft Exchange" alt="Microsoft Exchange" class="MCXref xref">
+              
+              Microsoft Exchange
+              </a> topic for additional information.</p>
+                                            <p>For pedagogical reasons, this guide focuses on the simplest way to set up the fulfillment, but it's not the most secure. Hence, it is strongly recommended to use Kerberos AuthType or credentials protection via Azure Key Vault or CyberArk in a production environment. See the <a href="../../references-connectors/powershellprov/index.html" target="_parent" title="PowerShellProv" alt="PowerShellProv" class="MCXref xref">
+              
+              PowerShellProv
+              </a> topic for additional information.<br /><br /><span class="mc-variable IdentityManager.Product_Long_Name variable">Netwrix Identity Manager (formerly Usercube)</span> recommends completing this guide once, testing the configuration, and only then, switching to a more secure way of storing credentials.</p>
+                                            <h2 id="build-the-connector">Build the Connector</h2>
+                                            <p>To be used for export tasks, a connector must be declared in the applicative configuration and linked to an Agent. See the <a href="../../../toolkit/index.html" target="_parent" title="Toolkit for XML Configuration" alt="Toolkit for XML Configuration" class="MCXref xref">Toolkit for XML Configuration</a> topic for additional information.</p>
+                                            <p>It is strongly recommended that the applicative configuration be stored in the working directory Conf folder as a set of xml files organized by connector. To follow this structure, create a MicrosoftExchange directory in the Conf folder.</p>
+                                            <h3 id="declare-a-connector">Declare a Connector</h3>
+                                            <p>In the <code>MicrosoftExchange</code> directory, create a <code>MicrosoftExchange Connector.xml</code> file. This file contains the declaration of the connector and the associated <a href="../../../entity-model/index.html" target="_parent" title="Entity Model" alt="Entity Model" class="MCXref xref">Entity Model</a>.</p>
+                                            <blockquote>
+                                                <p>This example declares the <code>MicrosoftExchange</code><a href="../../../toolkit/xml-configuration/connectors/connector/index.html" target="_parent" title="Connector" alt="Connector" class="MCXref xref">
+              
+              Connector
+              </a> on the <code>Local</code> agent, and the <a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> linked to the previously defined <code>MicrosoftExchangeExportFulfillment</code> JSON section (see the example above):</p><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Connector.xml</em>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;ConfigurationFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-usercube-com:configuration"&gt;    ...
+    &lt;Connector Identifier="MicrosoftExchange" DisplayName_L1="Microsoft Exchange" Agent="Local" /&gt;    &lt;Connection Connector="MicrosoftExchange" DisplayName_L1="Connection Microsoft Exchange" Identifier="MicrosoftExchangeExportFulfillment" Package="Usercube.MicrosoftExchange@0000001"/&gt;    &lt;Category Policy="Default" Identifier="MicrosoftExchange" DisplayName_L1="Microsoft Exchange"/&gt;    ...
+&lt;/ConfigurationFile&gt;
+</code></pre>
+                                            </blockquote>
+                                            <h3 id="write-entity-types">Write Entity Types</h3>
+                                            <p>The <a href="../../../entity-model/index.html" target="_parent" title="Entity Model" alt="Entity Model" class="MCXref xref">Entity Model</a> should match as closely as possible the structure of the Microsoft Exchange data relevant for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. It is designed by analyzing the Microsoft Exchange data structure, and describing said data with Entity Types and <a href="../../../toolkit/xml-configuration/metadata/entityassociation/index.html" target="_parent" title="Entity Association" alt="Entity Association" class="MCXref xref">
+              
+              Entity Association
+              </a>.</p>
+                                            <p>Eventually, it is up to the integration team to design the <a href="../../../entity-model/index.html" target="_parent" title="Entity Model" alt="Entity Model" class="MCXref xref">Entity Model</a> that best serves the Role Model needs. It will most likely be refined iteratively throughout the project integration. See the <a href="../../../role-model/role-model-rules/index.html" target="_parent" title="Assignment Policy" alt="Assignment Policy" class="MCXref xref">
+              
+              Assignment Policy
+              </a> topic for additional information.</p>
+                                            <p>A good starting point for the Entity Model is to mirror the shape of the Microsoft Exchange mailboxes and databases.</p>
+                                            <h5 id="example">Example</h5>
+                                            <p>This example defines the entity types named MicrosoftExchange_Database and MicrosoftExchange_Mailbox.</p>
+                                            <p>Notice the omitted <strong>TargetColumnIndex</strong> attribute and the presence of Type="ForeignKey" for the Mailboxes and Database properties. If omitted, this attribute indicates that the properties are navigation properties.</p><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Connector.xml</em>
+...
+&lt;EntityType Identifier="MicrosoftExchange_Database" DisplayName_L1="Microsoft Exchange - Database"&gt;  &lt;Property Identifier="Name" DisplayName_L1="Name" TargetColumnIndex="4" Type="String" /&gt;  &lt;Property Identifier="Server" DisplayName_L1="Server" TargetColumnIndex="5" Type="String" /&gt;  &lt;Property Identifier="Mounted" DisplayName_L1="Mounted" TargetColumnIndex="7" Type="String" /&gt;  &lt;Property Identifier="ObjectCategory" DisplayName_L1="ObjectCategory" TargetColumnIndex="1" Type="String" /&gt;  &lt;Property Identifier="Guid" DisplayName_L1="Guid" IsKey="true" TargetColumnIndex="0" Type="String" /&gt;  &lt;Property Identifier="WhenChangedUTC" DisplayName_L1="WhenChangedUTC" TargetColumnIndex="2" Type="String" /&gt;  &lt;Property Identifier="WhenCreatedUTC" DisplayName_L1="WhenCreatedUTC" TargetColumnIndex="3" Type="String" /&gt;  &lt;Property Identifier="ObjectState" DisplayName_L1="ObjectState" TargetColumnIndex="6" Type="String" /&gt;  &lt;Property Identifier="Mailboxes" DisplayName_L1="Mailboxes" Type="ForeignKey" /&gt;&lt;/EntityType&gt;&lt;EntityType Identifier="MicrosoftExchange_Mailbox" DisplayName_L1="Microsoft Exchange - Mailbox"&gt;  &lt;Property Identifier="EmailAddresses" DisplayName_L1="EmailAddresses" TargetColumnIndex="8" Type="String" /&gt;  &lt;Property Identifier="UseDatabaseRetentionDefaults" DisplayName_L1="UseDatabaseRetentionDefaults" TargetColumnIndex="34" Type="String" /&gt;  &lt;Property Identifier="RetainDeletedItemsUntilBackup" DisplayName_L1="RetainDeletedItemsUntilBackup" TargetColumnIndex="27" Type="String" /&gt;  &lt;Property Identifier="DeliverToMailboxAndForward" DisplayName_L1="DeliverToMailboxAndForward" TargetColumnIndex="28" Type="String" /&gt;  &lt;Property Identifier="ExchangeGuid" DisplayName_L1="ExchangeGuid" TargetColumnIndex="5" Type="String" /&gt;  &lt;Property Identifier="ExchangeUserAccountControl" DisplayName_L1="ExchangeUserAccountControl" TargetColumnIndex="35" Type="String" /&gt;  &lt;Property Identifier="ForwardingAddress" DisplayName_L1="ForwardingAddress" TargetColumnIndex="40" Type="String" /&gt;  &lt;Property Identifier="ForwardingSmtpAddress" DisplayName_L1="ForwardingSmtpAddress" TargetColumnIndex="41" Type="String" /&gt;  &lt;Property Identifier="IsMailboxEnabled" DisplayName_L1="IsMailboxEnabled" TargetColumnIndex="36" Type="String" /&gt;  &lt;Property Identifier="ProhibitSendQuota" DisplayName_L1="ProhibitSendQuota" TargetColumnIndex="19" Type="String" /&gt;  &lt;Property Identifier="ProhibitSendReceiveQuota" DisplayName_L1="ProhibitSendReceiveQuota" TargetColumnIndex="20" Type="String" /&gt;  &lt;Property Identifier="RecoverableItemsQuota" DisplayName_L1="RecoverableItemsQuota" TargetColumnIndex="9" Type="String" /&gt;  &lt;Property Identifier="RecoverableItemsWarningQuota" DisplayName_L1="RecoverableItemsWarningQuota" TargetColumnIndex="10" Type="String" /&gt;  &lt;Property Identifier="CalendarLoggingQuota" DisplayName_L1="CalendarLoggingQuota" TargetColumnIndex="11" Type="String" /&gt;  &lt;Property Identifier="IsResource" DisplayName_L1="IsResource" TargetColumnIndex="29" Type="String" /&gt;  &lt;Property Identifier="IsLinked" DisplayName_L1="IsLinked" TargetColumnIndex="30" Type="String" /&gt;  &lt;Property Identifier="IsShared" DisplayName_L1="IsShared" TargetColumnIndex="31" Type="String" /&gt;  &lt;Property Identifier="SamAccountName" DisplayName_L1="SamAccountName" TargetColumnIndex="21" Type="String" /&gt;  &lt;Property Identifier="AntispamBypassEnabled" DisplayName_L1="AntispamBypassEnabled" TargetColumnIndex="32" Type="String" /&gt;  &lt;Property Identifier="ServerName" DisplayName_L1="ServerName" TargetColumnIndex="26" Type="String" /&gt;  &lt;Property Identifier="UseDatabaseQuotaDefaults" DisplayName_L1="UseDatabaseQuotaDefaults" TargetColumnIndex="37" Type="String" /&gt;  &lt;Property Identifier="UserPrincipalName" DisplayName_L1="UserPrincipalName" TargetColumnIndex="7" Type="String" /&gt;  &lt;Property Identifier="WhenMailboxCreated" DisplayName_L1="WhenMailboxCreated" TargetColumnIndex="14" Type="String" /&gt;  &lt;Property Identifier="IsInactiveMailbox" DisplayName_L1="IsInactiveMailbox" TargetColumnIndex="33" Type="String" /&gt;  &lt;Property Identifier="AccountDisabledIsDirSynced" DisplayName_L1="AccountDisabledIsDirSynced" TargetColumnIndex="42" Type="String" /&gt;  &lt;Property Identifier="Alias" DisplayName_L1="Alias" TargetColumnIndex="22" Type="String" /&gt;  &lt;Property Identifier="OrganizationalUnit" DisplayName_L1="OrganizationalUnit" TargetColumnIndex="3" Type="String" /&gt;  &lt;Property Identifier="DisplayName" DisplayName_L1="DisplayName" TargetColumnIndex="12" Type="String" /&gt;  &lt;Property Identifier="MaxSendSize" DisplayName_L1="MaxSendSize" TargetColumnIndex="23" Type="String" /&gt;  &lt;Property Identifier="MaxReceiveSize" DisplayName_L1="MaxReceiveSize" TargetColumnIndex="24" Type="String" /&gt;  &lt;Property Identifier="PrimarySmtpAddress" DisplayName_L1="PrimarySmtpAddress" TargetColumnIndex="6" Type="String" /&gt;  &lt;Property Identifier="RecipientType" DisplayName_L1="RecipientType" TargetColumnIndex="17" Type="String" /&gt;  &lt;Property Identifier="RecipientTypeDetails" DisplayName_L1="RecipientTypeDetails" TargetColumnIndex="18" Type="String" /&gt;  &lt;Property Identifier="Identity" DisplayName_L1="Identity" TargetColumnIndex="2" Type="String" /&gt;  &lt;Property Identifier="IsValid" DisplayName_L1="IsValid" TargetColumnIndex="38" Type="String" /&gt;  &lt;Property Identifier="Name" DisplayName_L1="Name" TargetColumnIndex="13" Type="String" /&gt;  &lt;Property Identifier="DistinguishedName" DisplayName_L1="DistinguishedName" TargetColumnIndex="1" Type="String" /&gt;  &lt;Property Identifier="Guid" DisplayName_L1="Guid" IsKey="true" TargetColumnIndex="0" Type="String" /&gt;  &lt;Property Identifier="ObjectCategory" DisplayName_L1="ObjectCategory" TargetColumnIndex="4" Type="String" /&gt;  &lt;Property Identifier="WhenChangedUTC" DisplayName_L1="WhenChangedUTC" TargetColumnIndex="15" Type="String" /&gt;  &lt;Property Identifier="WhenCreatedUTC" DisplayName_L1="WhenCreatedUTC" TargetColumnIndex="16" Type="String" /&gt;  &lt;Property Identifier="ObjectState" DisplayName_L1="ObjectState" TargetColumnIndex="25" Type="String" /&gt;  &lt;Property Identifier="Database" DisplayName_L1="Database" Type="ForeignKey" TargetColumnIndex="128" /&gt;&lt;/EntityType&gt;...
+</code></pre>
+                                            <h3 id="write-the-entity-type-mapping">Write the Entity Type Mapping</h3>
+                                            <p>The entity type must be mapped, on a property by property basis, to the exported attributes of Microsoft Exchange mailboxes and databases (namely, the columns of the CSV source files generated by the export). The <a href="../../../toolkit/xml-configuration/connectors/entitytypemapping/index.html" target="_parent" title="Entity Type Mapping" alt="Entity Type Mapping" class="MCXref xref">
+              
+              Entity Type Mapping
+              </a> element maps scalar properties from a CSV source file to an EntityType.</p>
+                                            <h5 id="example-1">Example</h5>
+                                            <p>In this example, the CSV source files are microsoftexchange_databases.csv and microsoftexchange_mailboxes.csv located in the <a href="../../../network-configuration/agent-configuration/appsettings/index.html" target="_parent" title="Application Settings" alt="Application Settings" class="MCXref xref">Application Settings</a> folder.</p><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Connector.xml</em>
+...
+&lt;EntityTypeMapping Identifier="MicrosoftExchange_Database" Connector="MicrosoftExchange" ConnectionTable="microsoftexchange_databases"&gt;  &lt;Property Identifier="Name" ConnectionColumn="Name" IsUniqueKey="true" /&gt;  &lt;Property Identifier="Server" ConnectionColumn="Server" /&gt;  &lt;Property Identifier="Mounted" ConnectionColumn="Mounted" /&gt;  &lt;Property Identifier="ObjectCategory" ConnectionColumn="ObjectCategory" /&gt;  &lt;Property Identifier="Guid" ConnectionColumn="Guid" IsPrimaryKey="true" /&gt;  &lt;Property Identifier="WhenChangedUTC" ConnectionColumn="WhenChangedUTC" /&gt;  &lt;Property Identifier="WhenCreatedUTC" ConnectionColumn="WhenCreatedUTC" /&gt;  &lt;Property Identifier="ObjectState" ConnectionColumn="ObjectState" /&gt;&lt;/EntityTypeMapping&gt;&lt;EntityTypeMapping Identifier="MicrosoftExchange_Mailbox" Connector="MicrosoftExchange" ConnectionTable="microsoftexchange_mailboxes"&gt;  &lt;Property Identifier="EmailAddresses" ConnectionColumn="EmailAddresses" /&gt;  &lt;Property Identifier="UseDatabaseRetentionDefaults" ConnectionColumn="UseDatabaseRetentionDefaults" /&gt;  &lt;Property Identifier="RetainDeletedItemsUntilBackup" ConnectionColumn="RetainDeletedItemsUntilBackup" /&gt;  &lt;Property Identifier="DeliverToMailboxAndForward" ConnectionColumn="DeliverToMailboxAndForward" /&gt;  &lt;Property Identifier="ExchangeGuid" ConnectionColumn="ExchangeGuid" /&gt;  &lt;Property Identifier="ExchangeUserAccountControl" ConnectionColumn="ExchangeUserAccountControl" /&gt;  &lt;Property Identifier="ForwardingAddress" ConnectionColumn="ForwardingAddress" /&gt;  &lt;Property Identifier="ForwardingSmtpAddress" ConnectionColumn="ForwardingSmtpAddress" /&gt;  &lt;Property Identifier="IsMailboxEnabled" ConnectionColumn="IsMailboxEnabled" /&gt;  &lt;Property Identifier="ProhibitSendQuota" ConnectionColumn="ProhibitSendQuota" /&gt;  &lt;Property Identifier="ProhibitSendReceiveQuota" ConnectionColumn="ProhibitSendReceiveQuota" /&gt;  &lt;Property Identifier="RecoverableItemsQuota" ConnectionColumn="RecoverableItemsQuota" /&gt;  &lt;Property Identifier="RecoverableItemsWarningQuota" ConnectionColumn="RecoverableItemsWarningQuota" /&gt;  &lt;Property Identifier="CalendarLoggingQuota" ConnectionColumn="CalendarLoggingQuota" /&gt;  &lt;Property Identifier="IsResource" ConnectionColumn="IsResource" /&gt;  &lt;Property Identifier="IsLinked" ConnectionColumn="IsLinked" /&gt;  &lt;Property Identifier="IsShared" ConnectionColumn="IsShared" /&gt;  &lt;Property Identifier="SamAccountName" ConnectionColumn="SamAccountName" /&gt;  &lt;Property Identifier="AntispamBypassEnabled" ConnectionColumn="AntispamBypassEnabled" /&gt;  &lt;Property Identifier="ServerName" ConnectionColumn="ServerName" /&gt;  &lt;Property Identifier="UseDatabaseQuotaDefaults" ConnectionColumn="UseDatabaseQuotaDefaults" /&gt;  &lt;Property Identifier="UserPrincipalName" ConnectionColumn="UserPrincipalName" /&gt;  &lt;Property Identifier="WhenMailboxCreated" ConnectionColumn="WhenMailboxCreated" /&gt;  &lt;Property Identifier="IsInactiveMailbox" ConnectionColumn="IsInactiveMailbox" /&gt;  &lt;Property Identifier="AccountDisabledIsDirSynced" ConnectionColumn="AccountDisabledIsDirSynced" /&gt;  &lt;Property Identifier="Alias" ConnectionColumn="Alias" /&gt;  &lt;Property Identifier="OrganizationalUnit" ConnectionColumn="OrganizationalUnit" /&gt;  &lt;Property Identifier="DisplayName" ConnectionColumn="DisplayName" /&gt;  &lt;Property Identifier="MaxSendSize" ConnectionColumn="MaxSendSize" /&gt;  &lt;Property Identifier="MaxReceiveSize" ConnectionColumn="MaxReceiveSize" /&gt;  &lt;Property Identifier="PrimarySmtpAddress" ConnectionColumn="PrimarySmtpAddress" /&gt;  &lt;Property Identifier="RecipientType" ConnectionColumn="RecipientType" /&gt;  &lt;Property Identifier="RecipientTypeDetails" ConnectionColumn="RecipientTypeDetails" /&gt;  &lt;Property Identifier="Identity" ConnectionColumn="Identity" /&gt;  &lt;Property Identifier="IsValid" ConnectionColumn="IsValid" /&gt;  &lt;Property Identifier="Name" ConnectionColumn="Name" /&gt;  &lt;Property Identifier="DistinguishedName" ConnectionColumn="DistinguishedName" /&gt;  &lt;Property Identifier="Guid" ConnectionColumn="Guid" IsPrimaryKey="true" /&gt;  &lt;Property Identifier="ObjectCategory" ConnectionColumn="ObjectCategory" /&gt;  &lt;Property Identifier="WhenChangedUTC" ConnectionColumn="WhenChangedUTC" /&gt;  &lt;Property Identifier="WhenCreatedUTC" ConnectionColumn="WhenCreatedUTC" /&gt;  &lt;Property Identifier="ObjectState" ConnectionColumn="ObjectState" /&gt;&lt;/EntityTypeMapping&gt;...
+</code></pre>
+                                            <h3 id="write-entity-associations">Write Entity Associations</h3>
+                                            <p>Entity types are associated through their navigation properties with <a href="../../../toolkit/xml-configuration/metadata/entityassociation/index.html" target="_parent" title="Entity Association" alt="Entity Association" class="MCXref xref">
+              
+              Entity Association
+              </a> elements.</p>
+                                            <h5 id="example-2">Example</h5>
+                                            <p>The following example declares a <code>1:n</code> (<code>'one-to-many'</code>) association. One <code>MicrosoftExchange_Database</code> may be referenced by any number of <code>MicrosoftExchange_Mailbox</code><em>(es)</em>, but each <code>MicrosoftExchange_Mailbox</code> can only reference one <code>MicrosoftExchange_Database</code>.</p>
+                                            <p>The properties used for the association must be <code>Primary</code> or <code>Unique</code> keys.</p><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Connector.xml</em>
+...
+&lt;EntityAssociation Identifier="MicrosoftExchange_Mailbox_Database" DisplayName_L1="Database" IsProperty1Collection="true" Property1="MicrosoftExchange_Database:Mailboxes" Property2="MicrosoftExchange_Mailbox:Database" /&gt;...
+</code></pre>
+                                            <h3 id="write-the-entity-association-mapping">Write the Entity Association Mapping</h3>
+                                            <p>The <a href="../../../toolkit/xml-configuration/connectors/entityassociationmapping/index.html" target="_parent" title="Entity Association Mapping" alt="Entity Association Mapping" class="MCXref xref">
+              
+              Entity Association Mapping
+              </a> element maps column values from a CSV source file to an EntityType navigation property.</p>
+                                            <h5 id="example-3">Example</h5>
+                                            <p>This example describes the mailbox/database associations between MicrosoftExchange_Mailbox and MicrosoftExchange_Database.
+Thanks to the <strong>Export</strong> Microsoft Exchange job, the file microsoftexchange_mailboxes.csv is generated.
+This file looks like:</p><pre class="csv" xml:space="preserve"><code>
+Command;Property_1;Property_2;...;Property_N
+Add;value1;value2;...;valueN
+</code></pre>
+                                            <p>Each line of the CSV file corresponds to a <code>MicrosoftExchange_Mailbox</code>.
+The properties used in the association are:</p>
+                                            <ul>
+                                                <li><code>Guid</code>: the Guid of the <code>MicrosoftExchange_Mailbox</code>.</li>
+                                                <li><code>Name</code>: the name of the <code>MicrosoftExchange_Database</code> referencing the <code>MicrosoftExchange_Mailbox</code> (name is unique among the databases).</li>
+                                            </ul>
+                                            <p>The following table can be extracted from the CSV file:</p>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Guid</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Name</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>4ecbdba7-e984-409a-a9ac-6027ac81fa42</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p>Mailbox Database 1882404652</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>1d3e67a2-7d44-46f1-a300-afa73ae120f4</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                            <p>DB1</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>aab57e15-847b-4e16-96f1-82ebc54c01e2</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p>DB1</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>ea513604-3758-463f-9b72-6c42ea949260</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                            <p>DB2</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p>It means that the MicrosoftExchange_Mailbox with Guid ? 4ecbdba7-e984-409a-a9ac-6027ac81fa42 is contained in the MicrosoftExchange_Database with Name ? Mailbox Database 1882404652. This association is created for every line in the CSV file, and therefore also for every line in the table above.</p>
+                                            <p>This can be enabled with an <strong>EntityAssociationMapping</strong> like in the following XML:</p><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Connector.xml</em>
+...
+&lt;EntityAssociationMapping Identifier="MicrosoftExchange_Mailbox_Database" Column1="Database" Column2="Guid" Connector="MicrosoftExchange" ConnectionTable="microsoftexchange_mailboxes" EntityPropertyMapping1="MicrosoftExchange_Database:Name" EntityPropertyMapping2="MicrosoftExchange_Mailbox:Guid" /&gt;...
+</code></pre>
+                                            <div class="notices note">
+                                                <p>The CSV file <code>microsoftexchange_mailboxes.csv</code> must be exported to the export output folder. See the <a href="../../../network-configuration/agent-configuration/appsettings/index.html" target="_parent" title="Application Settings" alt="Application Settings" class="MCXref xref">Application Settings</a> topic for additional information.</p>
+                                            </div>
+                                            <h2 id="build-the-role-model">Build the Role Model</h2>
+                                            <p>A <a href="../../../../introduction-guide/overview/entitlement-management/index.html" target="_parent" title="Entitlement Management" alt="Entitlement Management" class="MCXref xref">
+              
+              Entitlement Management
+              </a> must be created with the following elements:</p>
+                                            <ul>
+                                                <li><code>ResourceType</code>
+                                                </li>
+                                                <li><code>ResourceTypeMapping</code>
+                                                </li>
+                                                <li><code>ResourceCorrelationRule</code>
+                                                </li>
+                                                <li><code>SingleRole</code> (optional)</li>
+                                            </ul>
+                                            <h3 id="resource-type">Resource Type</h3>
+                                            <p>A <a href="../../../toolkit/xml-configuration/provisioning/resourcetype/index.html" target="_parent" title="Resource Type" alt="Resource Type" class="MCXref xref">Resource Type</a> is a conceptual model of an information system object, here a mailbox.</p>
+                                            <p>The resource type contains several rules:</p>
+                                            <ul>
+                                                <li>Type Rule which assigns a resource to a user</li>
+                                                <li> which specifies the value to be set to an assigned resource scalar property</li>
+                                                <li>Resource Type which specifies a value to be set to an assigned resource multi-valued navigation property</li>
+                                            </ul>
+                                            <h4 id="example-4">Example</h4><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/Directory User Role Model MicrosoftExchange.xml"</em>
+...
+&lt;ResourceType Identifier="MicrosoftExchange_Mailbox_NominativeUser" DisplayName_L1="Microsoft Exchange Mailbox (nominative)" DisplayName_L2="Bo�te Microsoft Exchange (nominative)" Policy="Default" TargetEntityType="MicrosoftExchange_Mailbox" Category="MicrosoftExchange" SourceEntityType="Directory_User" ApprovalWorkflowType="One" MaximumUpdatePercent="100" MaximumInsertPercent="100"&gt;  &lt;ScalarRule Property="SamAccountName" Binding="Login" /&gt;  &lt;ScalarRule Property="PrimarySmtpAddress" Binding="Mail" /&gt;  &lt;ScalarRule Property="EmailAddresses" Expression="C#:person:return String.IsNullOrEmpty(person.ProxyAddress) ? &amp;quot;SMTP:&amp;quot; + person.Mail : &amp;quot;smtp:&amp;quot; + person.ProxyAddress + &amp;quot; SMTP:&amp;quot; + person.Mail;" /&gt;  &lt;NavigationRule Property="Database" Resource="24679385-b2dd-461d-aebf-42a77e0c620e" SingleRole="Mailbox Database 1882404652" /&gt;  &lt;NavigationRule Property="Database" Resource="9c512155-d912-4fcb-9448-0755fbaf1b96" SingleRole="DB1" /&gt;  &lt;NavigationRule Property="Database" Resource="d1d81888-3ad3-4256-a621-2273aba7c48f" SingleRole="DB2" /&gt;&lt;/ResourceType&gt;...
+</code></pre>
+                                            <p>The TargetEntityType is MicrosoftExchange_Mailbox and the SourceEntityType is Directory_User.</p>
+                                            <p>This Resource Type allows <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to compute the values used when fulfilling the external system.</p>
+                                            <p>Finally, the Navigation Rule sets the property Database of the entity MicrosoftExchange_Mailbox. See the <a href="#" target="_parent" title="Fulfill Microsoft Exchange via PowerShell" alt="Fulfill Microsoft Exchange via PowerShell" class="MCXref xref" xrefformat="{para}">
+              
+              Fulfill Microsoft Exchange via PowerShell
+              </a> topic for additional information.</p>
+                                            <h3 id="resource-type-mapping">Resource Type Mapping</h3>
+                                            <p>A <a href="../../../toolkit/xml-configuration/connectors/resourcetypemappings/index.html" target="_parent" title="Resource Type Mappings" alt="Resource Type Mappings" class="MCXref xref">Resource Type Mappings</a> element contains all the resource types (sharing the same Identifier) that can be provisioned into targeted platforms, applications, and systems.</p>
+                                            <h4 id="example-5">Example</h4><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/Directory User Role Model MicrosoftExchange.xml"</em>
+...
+&lt;ResourceTypeMapping Identifier="MicrosoftExchange_Mailbox_NominativeUser" Connection="MicrosoftExchangeExportFulfillment" /&gt;...
+</code></pre>
+                                            <p>In this example, <code>Fulfill-PowerShell</code> requires only a simple <code>ResourceTypeMapping</code> (including only one <code>Identifier</code> and one <code>Connection</code>):</p>
+                                            <ul>
+                                                <li>The <strong>Identifier</strong> attribute is <code>MicrosoftExchange_Mailbox_NominativeUser</code> which corresponds to the identifier of the resource type defined earlier.</li>
+                                                <li>The <strong>Connection</strong> attribute is <code>MicrosoftExchangeExportFulfillment</code> which corresponds to the section in <code>appsettings.agent.json</code> containing the parameters used to provision the external system.</li>
+                                            </ul>
+                                            <h3 id="resource-correlation-rule">Resource Correlation Rule</h3>
+                                            <p>A <a href="../../../toolkit/xml-configuration/provisioning/resourcecorrelationrule/index.html" target="_parent" title="Resource Correlation Rule" alt="Resource Correlation Rule" class="MCXref xref">
+              
+              Resource Correlation Rule
+              </a> is used to correlate the resource <code>MicrosoftExchange_Mailbox_NominativeUser</code> with the <code>Directory_User</code>.</p>
+                                            <h4 id="example-6">Example</h4><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/NotImplementInAutoTest/Directory User Role Model MicrosoftExchange.xml"</em>
+...
+&lt;ResourceCorrelationRule ResourceType="MicrosoftExchange_Mailbox_NominativeUser" TargetBinding="SamAccountName" Policy="Default" SourceMatchedConfidenceLevel="100" SourceBinding="Login" /&gt;...
+</code></pre>
+                                            <p>This rule means if the <code>SamAccountName</code> (<code>MicrosoftExchange_Mailbox</code>) is equal to the <code>Login</code> (<code>Directory_User</code>) then, the <code>ResourceType</code> can be linked to the <code>User</code> with a confidence rate of 100%.</p>
+                                            <h3 id="single-role-optional">Single Role (optional)</h3>
+                                            <p>A <a href="../../../toolkit/xml-configuration/provisioning/singlerole/index.html" target="_parent" title="SingleRole" alt="SingleRole" class="MCXref xref">
+              
+              Single Role
+              </a> encapsulates system entitlements.</p>
+                                            <h4 id="example-7">Example</h4><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/Directory User Role Model MicrosoftExchange.xml"</em>
+...
+&lt;SingleRole Identifier="Mailbox Database 1882404652" DisplayName_L1="Mailbox Database 1882404652" DisplayName_L2="Base de donn�e pour bo�te mail 1882404652" Category="MicrosoftExchange" ApprovalWorkflowType="One" EntityType="Directory_User" Policy="Default" /&gt;&lt;SingleRole Identifier="DB1" DisplayName_L1="DB1" DisplayName_L2="DB1" Category="MicrosoftExchange" ApprovalWorkflowType="One" EntityType="Directory_User" Policy="Default" /&gt;&lt;SingleRole Identifier="DB2" DisplayName_L1="DB2" DisplayName_L2="DB2" Category="MicrosoftExchange" ApprovalWorkflowType="One" EntityType="Directory_User" Policy="Default" /&gt;...
+</code></pre>
+                                            <p>This single role was previously used in one of the navigation rules defined in the <code>ResourceType</code>.</p><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/Directory User Role Model MicrosoftExchange.xml"</em>
+...
+&lt;NavigationRule Property="Database" Resource="24679385-b2dd-461d-aebf-42a77e0c620e" SingleRole="Mailbox Database 1882404652" /&gt;&lt;NavigationRule Property="Database" Resource="9c512155-d912-4fcb-9448-0755fbaf1b96" SingleRole="DB1" /&gt;&lt;NavigationRule Property="Database" Resource="d1d81888-3ad3-4256-a621-2273aba7c48f" SingleRole="DB2" /&gt;...
+</code></pre>
+                                            <p>If a <code>Directory_User</code> is assigned the SingleRole <code>DB1</code> then, the <code>NavigationRule</code> indicates that the property <code>Database</code> (in <code>MicrosoftExchange_Mailbox</code>) will have the value <code>9c512155-d912-4fcb-9448-0755fbaf1b96</code> (unique id of a <code>MicrosoftExchange_Database</code>).</p>
+                                            <h2 id="display">Display</h2>
+                                            <p>This step focuses on configuring a nice display for the synchronized list of resources in the UI.</p>
+                                            <h3 id="navigation">Navigation</h3>
+                                            <p>A <a href="../../../toolkit/xml-configuration/user-interface/menuitem/index.html" target="_parent" title="MenuItem" alt="MenuItem" class="MCXref xref">
+              
+              Menu Item
+              </a> can be added to include a link to the resources list in the left menu on the UI home screen.</p>
+                                            <p>It is strongly recommended that you gather synchronized resources menu items under parent menu items. This is usually declared in the <code>Nav.xml</code> file in the configuration root folder.</p>
+                                            <p>NETWRIX also advises to use a new <code>MicrosoftExchange Nav.xml</code> file in the <code>MicrosoftExchange</code> connector's folder to add a <code>mailboxes</code> and <code>databases</code> menu item.</p>
+                                            <h4 id="example-8">Example</h4><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Nav.xml</em>
+...
+&lt;MenuItem Identifier="Nav_Connectors_MicrosoftExchange" DisplayName_L1="Microsoft Exchange" DisplayName_L2="Microsoft Exchange" ParentMenuItem="Nav_Connectors"&gt;  &lt;MenuItem Identifier="Nav_Connectors_ADMicrosoftExchange_Entry" DisplayName_L1="AD Entries" DisplayName_L2="Entr�es AD" EntityType="ADMicrosoftExchange_Entry" /&gt;  &lt;MenuItem Identifier="Nav_Connectors_MicrosoftExchange_Database" DisplayName_L1="Databases" DisplayName_L2="Bases de donn�es" EntityType="MicrosoftExchange_Database" /&gt;  &lt;MenuItem Identifier="Nav_Connectors_MicrosoftExchange_Mailbox" DisplayName_L1="Mailboxes" DisplayName_L2="Boites mails" EntityType="MicrosoftExchange_Mailbox" /&gt;&lt;/MenuItem&gt;...
+</code></pre>
+                                            <p>This example adds a new menu item under the <code>Nav_Connectors</code> menu item declared in the root <code>Conf/Nav.xml</code> file. This new menu item gives access to the list of synchronized Microsoft Exchange entities.</p>
+                                            <p style="text-align: center;">
+                                                <img src="../../../../../Resources/Images/microsoftexchange_fulfill_menu_item_5.1.7.png" alt="Microsoft Exchange Menu Items" />
+                                            </p>
+                                            <h3 id="configuration">Configuration</h3>
+                                            <p>It is strongly recommended that the display configuration be written to a new <code>MicrosoftExchange UI.xml</code> file in the <code>MicrosoftExchange</code> connector's folder.</p>
+                                            <h4 id="all-in-one-scaffolding">All-in-One Scaffolding</h4>
+                                            <p>The <a href="../../../toolkit/xml-configuration/configuration/scaffoldings/templates/viewtargetresourcetemplate/index.html" target="_parent" title="ViewTargetResourceTemplate" alt="ViewTargetResourceTemplate" class="MCXref xref">
+              
+              View Target Resource Template
+              </a> generates all the required elements to be seen by the user.</p>
+                                            <h5 id="example-9">Example</h5>
+                                            <p>The documentation explains what is generated by the following scaffolding:</p><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange UI.xml</em>
+...
+&lt;ViewTargetResourceTemplate EntityType="MicrosoftExchange_Database" Profile="Administrator" /&gt;&lt;ViewTargetResourceTemplate EntityType="MicrosoftExchange_Mailbox" Profile="Administrator" /&gt;...
+</code></pre><code></code>
+                                            <p>The following sections show how to override the elements generated by this scaffolding in order to provide a more precise display.</p>
+                                            <h4 id="display-entity-type">Display Entity Type</h4>
+                                            <p>The <a href="../../../toolkit/xml-configuration/user-interface/displayentitytype/index.html" target="_parent" title="Display Entity Type" alt="Display Entity Type" class="MCXref xref">Display Entity Type</a> describes how a single resource should be displayed.</p>
+                                            <h5 id="example-10">Example</h5><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange UI.xml</em>
+...
+&lt;DisplayEntityType Identifier="MicrosoftExchange_Database"&gt;  &lt;Property OutputType="BasicCollection" Identifier="Mailboxes" /&gt;&lt;/DisplayEntityType&gt;...
+</code></pre>
+                                            <p>This example configures the following display for <a href="mailto:wolfgang.abendroth@acme.com">wolfgang.abendroth@acme.com</a>.</p>
+                                            <p style="text-align: center;">
+                                                <img src="../../../../../Resources/Images/microsoftexchange_fulfill_display_entity_type_5.1.7.png" alt="Microsoft Exchange Display Entity Type" style="width: 782px;height: 558px;" />
+                                            </p>
+                                            <p>The scalar properties require no configuration: they are automatically displayed. The only information that the <a href="../../../toolkit/xml-configuration/user-interface/displayentitytype/index.html" target="_parent" title="Display Entity Type" alt="Display Entity Type" class="MCXref xref">Display Entity Type</a> adds here, is that the property <code>BasicCollection</code> is a navigation property. An eye icon will be displayed to take you directly to the matching page.</p>
+                                            <h4 id="display-table">Display Table</h4>
+                                            <p>The <a href="../../../toolkit/xml-configuration/user-interface/displaytable/index.html" target="_parent" title="Display Table" alt="Display Table" class="MCXref xref">Display Table</a> elements describe how a list of resources should be displayed.</p>
+                                            <p>The <a href="../../../toolkit/xml-configuration/user-interface/displaytable/index.html"><a href="../../../toolkit/xml-configuration/user-interface/displaytable/index.html" target="_parent" title="Display Table" alt="Display Table" class="MCXref xref">Display Table</a></a> contains a list of <a href="../../../toolkit/xml-configuration/user-interface/displaytable/index.html" target="_parent" title="Display Table" alt="Display Table" class="MCXref xref">Display Table</a> columns elements that identify which properties should be included in the list display.</p>
+                                            <h5 id="example-11">Example</h5><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange UI.xml</em>
+...
+&lt;DisplayTable Identifier="MicrosoftExchange_Database" EntityType="MicrosoftExchange_Database" DisplayTableDesignElement="table" IsEntityTypeDefault="true"&gt;  &lt;Column DefaultSortPriority="1" DisplayBinding="Guid" IsDisplayInSummaryView="true" IsResizable="true" IsSortable="true" CanBeFiltered="true" ColumnSize="1" /&gt;  &lt;Column DisplayBinding="Name" IsDisplayInSummaryView="true" IsResizable="true" IsSortable="true" CanBeFiltered="true" ColumnSize="2" /&gt;  &lt;Column DisplayBinding="Server" IsDisplayInSummaryView="true" IsResizable="true" IsSortable="true" CanBeFiltered="true" ColumnSize="2" /&gt;&lt;/DisplayTable&gt;&lt;DisplayTable Identifier="MicrosoftExchange_Mailbox" EntityType="MicrosoftExchange_Mailbox" DisplayTableDesignElement="resourcetable" IsEntityTypeDefault="true"&gt;  &lt;Column DefaultSortPriority="1" DisplayBinding="Guid" IsDisplayInSummaryView="true" IsResizable="true" IsSortable="true" CanBeFiltered="true" ColumnSize="1" /&gt;  &lt;Column DisplayBinding="ServerName" IsDisplayInSummaryView="true" IsResizable="true" IsSortable="true" CanBeFiltered="true" ColumnSize="2" /&gt;  &lt;Column DisplayBinding="UserPrincipalName" IsDisplayInSummaryView="true" IsResizable="true" IsSortable="true" CanBeFiltered="true" ColumnSize="2" /&gt;&lt;/DisplayTable&gt;...
+</code></pre><code></code>
+                                            <p>This example configures the following list display:</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/microsoftexchange_fulfill_display_table_5.1.7.png" alt="Microsoft Exchange Display Table" />
+                                            </p>
+                                            <h4 id="internal-display-name">Internal Display Name</h4>
+                                            <p>An <code>InternalDisplayName</code> can also be declared as an <a href="../../../toolkit/xml-configuration/metadata/entitytype/index.html" target="_parent" title="EntityType" alt="EntityType" class="MCXref xref">
+              
+              Entity Type
+              </a> property expression. The <code>InternalDisplayName</code> is used in several UI screens to identify a resource for the user.</p>
+                                            <div class="notices note">
+                                                <p>With no custom <code>InternalDisplayName</code>, a default value is used (instead of the first property of the identity) containing the string <b>name</b>. If no such property is found, the first declared property of the entity type is used.</p>
+                                            </div>
+                                            <h5 id="example-12">Example</h5><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange UI.xml</em>
+...
+&lt;EntityPropertyExpression Identifier="MicrosoftExchange_Database_InternalDisplayName" Expression="C#:item:return item.Name;" EntityType="MicrosoftExchange_Database" Property="InternalDisplayName" /&gt;&lt;EntityPropertyExpression Identifier="MicrosoftExchange_Mailbox_InternalDisplayName" Expression="C#:item:return item.Name;" EntityType="MicrosoftExchange_Mailbox" Property="InternalDisplayName" /&gt;...
+</code></pre>
+                                            <p>This example adds the <code>InternalDisplayName</code> to the <code>MicrosoftExchange_Mailbox</code> entity type to be used by the UI.</p>
+                                            <h3 id="permissions">Permissions</h3>
+                                            <p>This step focuses on setting up permissions for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s end-users granting them access to the connector.</p>
+                                            <p>The <a href="../../../toolkit/xml-configuration/access-control/accesscontrolrule/index.html" target="_parent" title="AccessControlRule" alt="AccessControlRule" class="MCXref xref">Access Control Rule</a> and Access Control Entry elements define <a href="../../../toolkit/xml-configuration/access-control/accesscontrolpermission/index.html" target="_parent" title="AccessControlPermission" alt="AccessControlPermission" class="MCXref xref">
+              
+              AccessControlPermission
+              </a> for end-user profiles to read and write the connector's data (such as resources of a given entity type). It is used by the UI when displaying data such as resources and available roles.</p>
+                                            <p>It is strongly recommended that permissions be written to a new file. For example, the administrator profile permissions can be written to the <code>MicrosoftExchange Profile Administrator.xml</code> file.</p>
+                                            <h4 id="example-13">Example</h4><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Profile Administrator.xml</em>
+...
+&lt;ViewAccessControlRules Profile="Administrator" EntityType="MicrosoftExchange_Database"/&gt;&lt;ViewAccessControlRules Profile="Administrator" EntityType="MicrosoftExchange_Mailbox"/&gt;...
+</code></pre>
+                                            <p>This example sets permissions for the <code>Administrator</code> profile.</p>
+                                            <p>It entitles an administrator to display Microsoft Exchange resources (<code>mailboxes</code> and <code>databases</code>) and role categories from the UI.</p>
+                                            <h2 id="jobs">Jobs</h2>
+                                            <h3 id="construction">Construction</h3>
+                                            <p>This step focuses on writing a Complete Synchronization Job.</p>
+                                            <p><span class="mc-variable IdentityManager.Product_Long_Name variable">Netwrix Identity Manager (formerly Usercube)</span> recommends writing Jobs associated with the MicrosoftExchange connector to the Conf/MicrosoftExchange/MicrosoftExchange Jobs.xml file.</p>
+                                            <h4 id="example-14">Example</h4><pre class="xml" xml:space="preserve"><code><em>Conf/MicrosoftExchange/MicrosoftExchange Jobs.xml</em>
+...
+&lt;CreateConnectorSynchroComplete Connector="MicrosoftExchange" DisplayName_L1="01: Microsoft Exchange - Synchronization Complete (scaffolding)" JobIdentifier="MicrosoftExchange_Synchronize_Complete_Scaffolding"&gt;  &lt;OpenIdIdentifier Identifier="Job"/&gt;  &lt;NoSynchronization/&gt;&lt;/CreateConnectorSynchroComplete&gt;...
+</code></pre>
+                                            <p>This job will be executed on Microsoft Exchange's connector agent.</p>
+                                            <p>Notice the <strong>Identifier</strong> attribute with the value <code>Job</code> in the <code>OpenIdIdentifier</code> tag. It refers to the <code>ClientId</code> written to the <a href="../../../network-configuration/agent-configuration/appsettings-agent/index.html" target="_parent" title="appsettings.agent" alt="appsettings.agent" class="MCXref xref">appsettings.agent</a> technical configuration. The Tasks will authenticate with the profile associated with this <code>ClientId</code> in the <code>&lt;OpenIdClient&gt;</code> xml configuration element.</p>
+                                            <p>There is also the tag &lt;NoSynchronization/&gt; which means that the export will not be executed. Removing the tag will launch export-related tasks before fulfillment-related tasks. Export tasks need the same XML configuration and additional settings in <a href="../../../network-configuration/agent-configuration/appsettings-agent/index.html" target="_parent" title="appsettings.agent" alt="appsettings.agent" class="MCXref xref">appsettings.agent</a>.json.</p>
+                                            <p>All the job steps generated by the scaffolding can be found in the <a href="../../../toolkit/xml-configuration/configuration/scaffoldings/jobs/createconnectorsynchrocomplete/index.html" target="_parent" title="Create Connector Synchro Complete" alt="Create Connector Synchro Complete" class="MCXref xref">Create Connector Synchro Complete</a> scaffolding.</p>
+                                            <div class="notices note">
+                                                <p>Check <a href="../../../toolkit/xml-configuration/configuration/scaffoldings/jobs/createconnectorsynchroincremental/index.html" target="_parent" title="Create Connector Synchro Incremental" alt="Create Connector Synchro Incremental" class="MCXref xref">Create Connector Synchro Incremental</a> for incremental synchronization.</p>
+                                            </div>
+                                            <h3 id="permissions-1">Permissions</h3>
+                                            <p>The execution of a Job entails the execution of Tasks, reading/writing to the Database and sending files over to the Server. These operations are protected by an authorization mechanism.</p>
+                                            <p>A <a href="../../../toolkit/xml-configuration/access-control/profile/index.html" target="_parent" title="Profile" alt="Profile" class="MCXref xref">
+              
+              Profile
+              </a> is required and must have the proper permissions for the associated Job or Task to perform.</p>
+                                            <p>Here, jobs use the default <code>OpenId</code>.</p>
+                                            <h3 id="job-launch">Job Launch</h3>
+                                            <p>Scheduling the job execution can rely either on <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s scheduler or an external scheduler.</p>
+                                            <h4 id="with-usercubes-scheduler">With Scheduler</h4>
+                                            <p>Use the <a href="../../../toolkit/xml-configuration/jobs/job/index.html" target="_parent" title="Job" alt="Job" class="MCXref xref">
+              
+              Job
+              </a> Cron Tab Expression attribute.</p>
+                                            <h4 id="with-an-external-scheduler">With an external scheduler</h4>
+                                            <p>An external scheduler would rely on the <a href="../../../executables/references/invoke-job/index.html" target="_parent" title="Usercube-Invoke-Job" alt="Usercube-Invoke-Job" class="MCXref xref">
+              
+              Usercube-Invoke-Job
+              </a> tool.</p>
+                                            <h2 id="validation">Validation</h2>
+                                            <h3 id="deploy-configuration">Deploy Configuration</h3>
+                                            <p>The configuration is written to the database using the <a href="../../../toolkit/xml-configuration/jobs/tasks/server/deployconfigurationtask/index.html" target="_parent" title="DeployConfigurationTask" alt="DeployConfigurationTask" class="MCXref xref">
+              
+              Deploy Configuration Task
+              </a> tool.</p>
+                                            <h3 id="test">Test</h3>
+                                            <h4 id="admicrosoftexchange-prerequisites">ADMicrosoftExchange Prerequisites</h4>
+                                            <p>An Active Directory configuration is required for Microsoft Exchange to work. Fill the AD Microsoft Exchange Export Fulfillment settings in accordance with the configuration.</p>
+                                            <div class="notices note">
+                                                <p>To reset the password, if <strong>AuthType</strong> is <code>Basic</code>, then <strong>EnableSSL</strong> must be  <code>true</code>. <br />Otherwise, if <strong>AuthType</strong> is <code>Kerberos</code>, then <strong>EnableSSL</strong> is not required.</p>
+                                            </div>
+                                            <h4 id="mailbox-creation">Mailbox Creation</h4>
+                                            <p>To create a new mailbox, apply the following procedure:</p>
+                                            <ol>
+                                                <li value="1">Select a user and validate both resource types <code>ADMicrosoftExchange_Entry_NominativeUser</code> and <code>MicrosoftExchange_Mailbox_NominativeUser</code>.</li>
+                                                <li value="2">In the Provisioning Review, confirm both resource types.</li>
+                                                <li value="3">First, launch the job AD Microsoft Exchange Synchronization.</li>
+                                                <li value="4">Then, launch the job Microsoft Exchange Synchronization.</li>
+                                            </ol>
+                                            <p>In fact, an <code>ADMicrosoftExchange_Entry</code> is required to create a mailbox.
+To update or delete an existing mailbox, the Active Directory part can be skipped.</p>
+                                            <h4 id="interface-display">Interface display</h4>
+                                            <p>The Synchronization job should be found in the UI, under the <strong>Job Execution</strong> menu, with the name input in the Job's <strong>DisplayName_Li</strong> attribute.</p>
+                                            <p style="text-align: center;">
+                                                <img src="../../../../../Resources/Images/microsoftexchange_jobs_5.1.7.png" alt="Microsoft Exchange Jobs" />
+                                            </p>
+                                            <p>From there, the Synchronization job can be launched and debugged (if needed).</p>
+                                            <p>After execution, Microsoft Exchange resources and databases should be in the <code>UR_Resources</code> table of the SQL Server database.</p>
+                                            <p>The results can also be viewed on the UI:</p>
+                                            <p style="text-align: center;">
+                                                <img src="../../../../../Resources/Images/microsoftexchange_fulfill_menu_item_5.1.7.png" alt="Microsoft Exchange Menu Items" />
+                                            </p>
+                                            <p style="text-align: center;">
+                                                <img src="../../../../../Resources/Images/microsoftexchange_fulfill_display_entity_type_5.1.7.png" alt="Microsoft Exchange Display Entity Type" style="width: 732px;height: 524px;" />
+                                            </p>
+                                            <p style="text-align: center;">
+                                                <img src="../../../../../Resources/Images/microsoftexchange_fulfill_display_table_5.1.7.png" alt="Microsoft Exchange Display Table" style="width: 734px;height: 166px;" />
+                                            </p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

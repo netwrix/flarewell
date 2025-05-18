@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Change Management Tools" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Opportunistic Clearance</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Opportunistic Clearance</h1>
+                                        <p>Many non-compliant change logs are generated due to one or more related objects not being included in a Change Request. You can set up to automatically clear low risk non-compliant changes that meet specific criteria. By default, opportunistic clearance is not enabled. To enable it:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b><b>Support</b> &gt;<b>Installation Settings</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>Edit </b>to open <b>Configuration and Stats</b>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Select the <b>Change Management</b> tab.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Select <b>Enable Opportunistic Clearance</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <p>Automatic clearance applies in these cases:</p>
+                                        <ul>
+                                            <li>Deployment or Library Script changes related to an Approved Script Change.</li>
+                                            <li>Field changes related to an Approved Record Change.</li>
+                                            <li>Record changes related to an Approved Field Change.</li>
+                                            <li>Search changes related to an Approved Workflow Change.</li>
+                                            <li>Help or Description text updates. These changes are always compliant. This object change is reported in the Change Log as <b>Documentation Change </b>for the <b>Change Type</b> and the <b>Resolution </b>set to <em>Automatically cleared documentation change. Only Help or Description changed</em>. The Change Log is closed.</li>
+                                        </ul>
+                                        <h3 id="deployment_or_library_script_changes_related_to_an_approved_script_change">Deployment or Library Script Changes related to an Approved Script Change </h3>
+                                        <p>Deployment or library script changes must meet these rules to be automatically cleared:</p>
+                                        <ul>
+                                            <li>Customization is a deployment or library script with one of the following:
+				<ul><li>Script has an Open Approved Change Request.</li><li>Main script has an Open Approved Change Request.</li></ul></li>
+                                            <li>Change Request <b>Stage </b>meets the required <a href="setting_up_policies.htm" rel="internal" title="Set Up Default Policies" alt="Set Up Default Policies">Policy Change Level</a>.</li>
+                                        </ul>
+                                        <p>If all rules are met, the Change Request is attached to the Change Log and the log is compliant. The <b>Resolution Description</b> in the Change Log is set to <b>Automatically cleared in existing Open Approved CR via related customization [</b><em>Object Name</em><b> (</b><em>ScriptID</em><b>)]</b>. The<em> Object Name</em> and <em>ScriptID </em>are inserted from the original Change Request. The deployment or library script does not need to be present in any Open Approved Change Request. <a href="example_deploy_script_related_approved_change.htm" title="Open Example Script Use Case" alt="Open Example Script Use Case">Example Script Use Case</a></p>
+                                        <h3 id="field_changes_related_to_an_approved_record_change">Field Changes related to an Approved Record Change </h3>
+                                        <p>Field changes must meet these rules to be automatically cleared:</p>
+                                        <ul>
+                                            <li>Customization is a field with one of the following:
+				<ul><li>Field has an Open Approved Change Request </li><li>Field has no script or workflow dependencies and the parent record has an Open Approved Change Request.</li></ul></li>
+                                            <li>Change Request <b>Stage </b>meets the required <a href="setting_up_policies.htm" rel="internal" title="Set Up Default Policies" alt="Set Up Default Policies">Policy Change Level</a>.</li>
+                                        </ul>
+                                        <p>If all rules are met, the Change Request is attached to the Change Log and the log is compliant. The <b>Resolution Description</b> in the Change Log is set to <b>Automatically cleared in existing Open Approved CR via related customization [</b><em>Field Name</em><b>]</b>. The <em>Field Name</em> is inserted from the original Change Request. The field does not need to be present in any Open Approved Change Request. <a href="example_field_changes_related_approved_change.htm" title="Open Example Field Change Use Case" alt="Open Example Field Change Use Case">Example Field Change Use Case</a></p>
+                                        <h3 id="record_changes_related_to_an_approved_field_change">Record Changes related to an Approved Field Change </h3>
+                                        <p>Record changes must meet these rules to be automatically cleared:</p>
+                                        <ul>
+                                            <li>Customization is a record with one of the following:
+				<ul><li>Record has an Open Approved Change Request</li><li>Record has no script <b>or </b>workflow dependencies and any field that has the record as a parent has an Open Approved Change Request.</li></ul></li>
+                                            <li>Change Request <b>Stage </b>meets the required <a href="setting_up_policies.htm" rel="internal" title="Set Up Default Policies" alt="Set Up Default Policies">Policy Change Level</a>.</li>
+                                        </ul>
+                                        <p>If all rules are met, the Change Request is attached to the Change Log and the log is compliant. The <b>Resolution Description</b> in the Change Log is set to <b>Automatically cleared in existing Open Approved CR via related customization [</b><i>Record Name</i><b>]</b>. The <em>Record Name</em> is inserted from the original Change Request. The record does not need to be present in any Open Approved Change Request. <a href="example_record_changes_related_approved_change.htm" title="Open Example Record Change Use Case" alt="Open Example Record Change Use Case">Example Record Change Use Case</a></p>
+                                        <h3 id="search_changes_related_to_an_approved_workflow_change">Search Changes related to an Approved Workflow Change </h3>
+                                        <p>Approved Workflow changes must meet these rules to be automatically cleared:</p>
+                                        <ul>
+                                            <li>Customization is a search with an Open Approved Change Request, or <b>all </b>of the following:
+
+				<ul><li>Search is used in a workflow.</li><li>Search is not used by any script.</li><li>Related Workflow has an Open Approved Change Request.</li></ul></li>
+                                            <li>Change Request <b>Stage </b>meets the required <a href="setting_up_policies.htm" rel="internal" title="Set Up Default Policies" alt="Set Up Default Policies">Policy Change Level</a>.</li>
+                                        </ul>
+                                        <p>If all rules are met, the Change Request is attached to the Change Log and the log is compliant. The <b>Resolution Description</b> in the Change Log is set to <b>Automatically cleared in existing Open Approved CR via related customization </b><b>[</b><em>Search Name</em><b>]</b>. The <em>Search Name</em> is inserted from the original Change Request.The search does not need to be present in any Open Approved Change Request.<a href="example_search_changes_related_approved_change.htm" title="Open Search changes related to an Approved Workflow Change" alt="Open Search changes related to an Approved Workflow Change"> Example Search Change Use Case</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

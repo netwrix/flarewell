@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_CSH_NPR_Skin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="online">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Configure Pulse Secure Devices</title>
+        <!-- Google Tag Manager -->
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NKJ33G');</script> -->
+        <!-- End Google Tag Manager -->
+        <link rel="shortcut icon" href="https://img.netwrix.com/fav.ico" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Resources/TableStyles/Basic.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1260px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJ33G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2538779-18">
+                                    </script>
+                                    <script>/* <![CDATA[ */
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-2538779-18');
+		/* ]]> */</script>
+                                    <div class="searchbar">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search here" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="main">
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="toc">
+                                                <ul class="nocontent menu _Skins_TOC mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Auditor__Auditor.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="content">
+                                                <div role="main" id="mc-main-content">
+                                                    <h1>Configure Pulse Secure Devices</h1>
+                                                    <ol>
+                                                        <li value="1">
+                                                            <p>Connect to your Pulse Secure device: launch an Internet browser and enter the IP address or device DNS name in the URL field (https://&lt;IP address / Device DNS name&gt;/admin).</p>
+                                                        </li>
+                                                        <li value="2">
+                                                            <p>In the Web Interface, navigate to System → Log/Monitoring.</p>
+                                                        </li>
+                                                        <li value="3">
+                                                            <p>Under Log/Monitoring, expand the User Access link.</p>
+                                                        </li>
+                                                        <li value="4">
+                                                            <p>Locate the Settings tab.</p>
+                                                        </li>
+                                                        <li value="5">
+                                                            <p>Under the Select Events to Log, select the following (minimal requirement, select other events if needed):</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Login/Logout</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>VPN Tunneling</p>
+                                                                </li>
+                                                            </ul>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Auditor/ManualConfig/Manual_Config_Pulse_1.png" alt="" title="" style="width: 599px;height: 552px;" />
+                                                            </p>
+                                                        </li>
+                                                        <li value="6">
+                                                            <p>Under the Syslog Servers, complete the following fields:</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Basic.css');margin-left: auto;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                                                                <col class="TableStyle-Basic-Column-Column1" style="width: 200px;" />
+                                                                <col class="TableStyle-Basic-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Basic-Head-Header1">
+                                                                        <th class="TableStyle-Basic-HeadE-Column1-Header1">Option</th>
+                                                                        <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">Server nameIP</td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">Specify the IP address of the computer where resides.</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">Facility</td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">	
+Select desired facility.</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">Type</td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">Select <span class="semibold">UDP</span>.</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">Client Certificate</td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">Use default values.</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyB-Column1-Body1">Filter</td>
+                                                                        <td class="TableStyle-Basic-BodyA-Column1-Body1">Select Standard.</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                        <li value="7">
+                                                            <p>Save your changes.</p>
+                                                        </li>
+                                                        <li value="8">
+                                                            <p>Switch to the <span class="semibold">Admin Access</span> tab.</p>
+                                                        </li>
+                                                        <li value="9">
+                                                            <p>Under the <span class="semibold">Select Events to Log</span>, select the following (minimal requirement, select other events if needed):</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Administrator logins</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Administrator changes</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li value="10">
+                                                            <p>Repeat the step 6 for Syslog Servers configuration.</p>
+                                                        </li>
+                                                        <li value="11">
+                                                            <p>Save your changes.</p>
+                                                        </li>
+                                                        <li value="12">
+                                                            <p>Navigate to <span class="semibold">System </span>→ <span class="semibold">Configuration </span>→ <span class="semibold">Advanced Networking</span>.</p>
+                                                        </li>
+                                                        <li value="13">
+                                                            <p>Expand the <span class="semibold">Select the source port to be used for the following features</span> link.</p>
+                                                        </li>
+                                                        <li value="14">
+                                                            <p>Locate the <span class="semibold">Syslog </span>parameter and set it to <i>Internal</i>.</p>
+                                                            <p class="Note">Netwrix Auditor must be accessible from the selected network interface</p>
+                                                        </li>
+                                                        <li value="15">
+                                                            <p>Save your changes.</p>
+                                                        </li>
+                                                        <li value="16">
+                                                            <p>Start Netwrix Auditor.</p>
+                                                        </li>
+                                                        <li value="17">
+                                                            <p>Navigate to your monitoring plan for Network Devices. See <a href="../../Admin/MonitoringPlans/Overview.htm" target="_parent" title="Monitoring Plans" alt="Monitoring Plans" class="MCXref xref">Monitoring Plans</a></p>
+                                                        </li>
+                                                        <li value="18">
+                                                            <p>Provide the IP address of the interface you specified on the step 14 as the <span class="semibold">Computer </span>item for your monitoring plan. See <a href="../../Admin/MonitoringPlans/ActiveDirectory/Overview.htm" target="_parent" title="Active Directory Plans" alt="Active Directory Plans" class="MCXref xref">Active Directory</a></p>
+                                                        </li>
+                                                    </ol>
+                                                    <h2>Pulse Secure Devices</h2>
+                                                    <p>Review a full list of object types <span class="mc-variable MyVariables.ProductName variable">Netwrix Auditor</span> can collect on Pulse Secure network devices.</p>
+                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Basic.css');margin-left: auto;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                                                        <col class="TableStyle-Basic-Column-Column1" style="width: 200px;" />
+                                                        <col class="TableStyle-Basic-Column-Column1" style="width: 200px;" />
+                                                        <col class="TableStyle-Basic-Column-Column1" style="width: 217px;" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Object Type</th>
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Actions</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                                                    <p>&#160;</p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">
+                                                                    <p>Logon</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Successful logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>user authenticated successfully
+</li>
+                                                                        <li>user logged in successfully</li>
+                                                                        <li>	administrative login succeeded</li>
+                                                                        <li>	SuperAdmin session created using token for administrative logon recovery
+</li>
+                                                                        <li>Admin logged in successfully through the local console
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Failed logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>Login/authentication failed
+</li>
+                                                                        <li>Login attempt from the local console failed
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Logoff</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>user logged out or session timed out</li>
+                                                                        <li>admin logged out or session timed out
+</li>
+                                                                        <li>SuperAdmin session finished or timed out</li>
+                                                                        <li>Admin logged off from the local console
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2">
+                                                                    <p>Authentication</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Successful logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>VPN Tunneling Successful Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Logoff</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>VPN connection closed</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Configuration</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>Server shutdown/reboot/restart requested
+</li>
+                                                                        <li>Platform administrator account added</li>
+                                                                        <li>Console administrator password is disabled or enabled
+</li>
+                                                                        <li>IKEv2 settings modified
+</li>
+                                                                        <li>Global SAML Settings modified
+</li>
+                                                                        <li>SAML Metadata Provider added
+</li>
+                                                                        <li>SAML Metadata Provider removed</li>
+                                                                        <li>SAML Metadata Provider updated</li>
+                                                                        <li>authentication server added</li>
+                                                                        <li>authentication server deleted</li>
+                                                                        <li>authentication server modified</li>
+                                                                        <li>Sign-in policy created</li>
+                                                                        <li>Sign-in policy deleted</li>
+                                                                        <li>Sign-in policy modified</li>
+                                                                        <li>Sign-in policy multiple user session limit modified</li>
+                                                                        <li>Sign-in policy multiple user session modified</li>
+                                                                        <li>Sign-in policy multiple user session warning notification modified</li>
+                                                                        <li>Updated the order of the sign-in policies</li>
+                                                                        <li>Sign-in policy user access parameters modified</li>
+                                                                        <li>Sign-in page created</li>
+                                                                        <li>Sign-in page deleted</li>
+                                                                        <li>Sign-in page updated</li>
+                                                                        <li>Sign-in notification created</li>
+                                                                        <li>Sign-in notification deleted</li>
+                                                                        <li>Sign-in notification updated</li>
+                                                                        <li>Sign-in SAML modified</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">
+                                                                    <p>User</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Added</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">user account added</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>user account password changed</li>
+                                                                        <li>	user account disabled or enabled</li>
+                                                                        <li>	user account unlocked
+</li>
+                                                                        <li>user account modified
+</li>
+                                                                        <li>admin rights granted
+</li>
+                                                                        <li>admin rights revoked
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Removed </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">user account removed</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4">
+                                                                    <p>Role</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Added</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Role is created</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Role is modified</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Removed </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Role is deleted</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Copied </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Role is duplicated</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2">
+                                                                    <p>Session </p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Session start</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">VPN Tunneling Session started</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Session end </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">VPN Tunneling Session ended</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2">
+                                                                    <p>Realm</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Added</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Realm added</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li>IP added to allowed IP list in Realm authentication policy
+</li>
+                                                                        <li>IP removed from allowed IP list
+</li>
+                                                                        <li>IP setting reordered
+</li>
+                                                                        <li>Source IP restriction modified
+</li>
+                                                                        <li>browser restriction set
+</li>
+                                                                        <li>Browser restriction modified
+</li>
+                                                                        <li>browser restriction removed
+</li>
+                                                                        <li>Browser restriction reordered
+</li>
+                                                                        <li>Client-side certificate requirement modified
+</li>
+                                                                        <li>Certificate attribute modified
+</li>
+                                                                        <li>Password restriction modified</li>
+                                                                        <li>Minimum password length modified
+</li>
+                                                                        <li>Host Checker restriction is updated</li>
+                                                                        <li>User Limit restriction is modified</li>
+                                                                        <li>Guaranteed minimum number of users is modified</li>
+                                                                        <li>Maximum number of sessions is modified</li>
+                                                                        <li>Maximum number of users is modified</li>
+                                                                        <li>Realm is modified</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">&#160;</td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Removed </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Realm deleted</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Copied </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Realm duplicated</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Renamed </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Realm renamed</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

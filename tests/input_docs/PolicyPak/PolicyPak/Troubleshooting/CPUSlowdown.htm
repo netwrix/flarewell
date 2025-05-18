@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|All Things Installation &amp; Upkeep|[%=System.LinkedTitle%]|Performance Related Questions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>How would I verify if Endpoint Policy Manager Client Side Extension is / is not causing high or CPU disk slowdowns?</title>
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>How would I verify if Endpoint Policy Manager Client Side Extension is / is not causing high or CPU disk slowdowns?</h1>
+                                    <p>So there are lots of reasons why you might see 99% disk, and it doesn't have to be <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> causing it.</p>
+                                    <p>Here's an example scenario…</p>
+                                    <p>
+                                        <img alt="" src="../../Resources/Images/Troubleshooting/369_1_faq-913-01.jpg" />
+                                    </p>
+                                    <p>First:There are known bugs which push the utilization up to 100% from MS. Example:<a href="https://support.microsoft.com/en-us/help/3083595/task-manager-might-show-100-disk-utilization-on-windows-10-devices-wit" target="_blank" title="Windows Support - Task Manager May Show 100% Disk Utilization on Windows 10">https://support.microsoft.com/en-us/help/3083595/task-manager-might-show-100-disk-utilization-on-windows-10-devices-wit</a></p>
+                                    <p>Second: Task Manager isn't the most reliable about actually showing truth. Disk usage demonstrated in Task Manager is not about MB/s. It's about the number of I/O operations (reads and writes) . </p>
+                                    <p>Note that Taskman has a way to view the number of I/O operations on the details tab, but that is not in this shot.</p>
+                                    <p>Regardless, since it shows only CURRENT value, (and the total Disk usage is not shown on that tab), we suggest using perfmon that shows a nice graph with relationships.</p>
+                                    <p>Doing this allows to see a correlation between process disk usage (# of I/O operations/sec) and total disk usage (100%-%Idle time) (if any exist).</p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>So to verify and see if <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> is the actual cause for high disk utilization, you can get REAL DATA how to use science to troubleshoot it.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>When you suspect high-disk utilization from <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>, use TaskMan, then right-click on the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Helper Service, click Go to details (this may be important to select the right process), then on the Details tab right-click on the selected process and Create dump file. We can analyze this and it tells us a lot.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Run <code>perfmon.exe</code> to see a relationship graph. Clear out any existing counters.</p>
+                                    <p>
+                                        <img alt="" src="../../Resources/Images/Troubleshooting/369_2_faq-913-02.jpg" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Next you need to add new counters for PPExtensionSvc disk usage. To do this, find PROCESS then EXPAND.</p>
+                                    <p>
+                                        <img alt="" src="../../Resources/Images/Troubleshooting/369_3_faq-913-03.jpg" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Expand the Process item from the top list, select only:</p>
+                                    <ul>
+                                        <li>I/O Data Operations/sec and</li>
+                                        <li>I/O Other Operations/sec then from the bottom list select</li>
+                                    </ul>
+                                    <p>
+                                        <img alt="" src="../../Resources/Images/Troubleshooting/369_4_faq-913-04.jpg" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>From Logical Disk, you want to add the following items (only ONE of which is shown in the screenshot).</p>
+                                    <ol>
+                                        <li value="1">%Idle Time</li>
+                                        <li value="2">Current Disk Queue Length and</li>
+                                        <li value="3">Split IO/Sec</li>
+                                    </ol>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Ensure _Total selected in the bottom list.</p>
+                                    <p>
+                                        <img alt="" src="../../Resources/Images/Troubleshooting/369_5_faq-913-05.jpg" />
+                                    </p>
+                                    <p>Your total counters should look like this.. when sorted by OBJECT:</p>
+                                    <p>
+                                        <img alt="" src="../../Resources/Images/Troubleshooting/369_6_faq-913-06.jpg" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>Optionally, add anything else that could be getting in the way or adding to high disk activity, like <code>DISM.EXE</code> which was seen in the first screenshot which is known for high disk usage.&#160;<br /></p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 8 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 8 – </b></span></span>This step is the same as adding other processes for disk usage, except that<code> DISM.EXE </code>should be selected from the bottom list.</p>
+                                    <p>Results / what you're looking for:</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 9 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 9 – </b></span></span>See the correlation between Process and Disk counters if any:</p>
+                                    <ol>
+                                        <li value="1">For instance, if the Disk %Idle Time is low (so the disk is being actively used)</li>
+                                        <li value="2">And PPExtensionService I/O Data Operations/sec is ALSO LOW…</li>
+                                    </ol>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 10 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 10 – </b></span></span>…then it's NOT PPExtensionService causing high disk usage and maybe <code>DISM.EXE</code> I/O Data Operations/sec is high at the same time.</p>
+                                    <p>If you still think <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> is causing high disk usage / slowdowns we need:</p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span><a href="FastSupport.htm" class="MCXref xref" xrefformat="{para}">What must I send to Endpoint Policy Manager support in order to get the FASTEST support?</a>
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Screenshot of the perfmon as configured above running for a full minute.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Dump file created with task manager.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Scripts &amp; Triggers Manager|[%=System.LinkedTitle%]|Tip and Tricks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>How do I user Endpoint Policy Manager to set the screensaver to a custom slideshow?</title>
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>How do I user Endpoint Policy Manager to set the screensaver to a custom slideshow?</h1>
+                                    <p>Group policy can be used to assign screensaver configurations where desired. However, if you want to implement a custom slideshow, i.e. dictate the images to be used for the screensaver, a bit of extra work and a reference computer is needed to accomplish the task.</p>
+                                    <p>The tasks involved are:</p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Implement a script to download the images to each user's computer</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Use a reference computer to configure and save image storage location</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Configure Group Policy Screensaver options</p>
+                                    <h2>Prerequisites</h2>
+                                    <p>The following is assumed:</p>
+                                    <ul>
+                                        <li>The images are located on a share accessible to necessary users</li>
+                                        <li>A workstation is available to use to extract encrypted registry information</li>
+                                    </ul>
+                                    <h2>Create script to copy images</h2>
+                                    <p><span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> Script Manager can be used to copy the images from a network share to the user's computer. Although they can be accessed by the screen saver on a network share, thereby eliminating the need for this script, they would not be accessible if the computer were away from the network.</p>
+                                    <p>In this example the source directory is <code>\\dccore\share\SSImages\*</code> and the destination is <code>%userprofile%\Pictures\SSImages\.</code></p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Create new Group Policy Object were required</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Expand Computer Configuration -&gt; <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> and click on Scripts Manager</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Add a new Collection, giving it a descriptive name (e.g. Screensaver scripts or Houston Screensaver…) and click OK</p>
+                                    <p>
+                                        <img alt="" height="384" src="../../Resources/Images/ScriptsTriggers/207_1_image-20200819181623-1.png" width="821" />
+                                    </p>
+                                    <p>
+                                        <img alt="" height="104" src="../../Resources/Images/ScriptsTriggers/207_3_image-20200819181623-2.png" width="580" />
+                                    </p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span> If rolling out different images for different sets of users, ILT may be set on collection to specified different groups of users or computers.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Double-click to enter Collection</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Click on "Add New Policy" and NEXT on first page</p>
+                                    <p>
+                                        <img alt="" height="386" src="../../Resources/Images/ScriptsTriggers/207_5_image-20200819181623-3.png" width="490" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>On the "On apply action" screen, either click File -&gt; Open and browse for a preconfigured script or click down-arrow by "(None)", select the appropriate type of script and either paste or type in the script to copy the image files.</p>
+                                    <p align="center" style="text-align: center;margin-left: 48px;">
+                                        <img src="../../Resources/Images/ScriptsTriggers/207_7_image-20200819181623-4.png" width="343" />&#160; OR <img src="../../Resources/Images/ScriptsTriggers/207_9_image-20200819181623-5.png" width="340" /></p>
+                                    <p>Sample script using powershell that will 1; check for the existence of the destination, 2; Create the destination if it does not exist and 3; copy the files over.</p>
+                                    <p>
+                                        <img alt="" height="176" src="../../Resources/Images/ScriptsTriggers/207_11_image-20200819181623-6.png" width="577" />
+                                    </p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: PlainText;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>if (!(Test-Path -Path $env:userprofile\pictures\SSImages\))&#160;&#160;&#160;&#160;{&#160;&#160;&#160;&#160;New-item -path $env:userprofile\pictures\ -Name SSImages -Itemtype directory&#160;&#160;&#160;&#160;}&#160;&#160;&#160;&#160;<br />Copy-Item \\dccore\share\SSImages\* -Destination $env:userprofile\pictures\SSImages</code></pre>
+                                        </div>
+                                    </div>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>On "On revert action" screen, leave as-is and click NEXT</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 8 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 8 – </b></span></span>Ensure "Always" is selected and click NEXT</p>
+                                    <p>
+                                        <img alt="" height="98" src="../../Resources/Images/ScriptsTriggers/207_13_image-20200819181623-7.png" width="201" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 9 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 9 – </b></span></span>Give a descriptive name to the policy, set item-level targeting if required and click FINISH</p>
+                                    <h2>Get Custom Location Information</h2>
+                                    <p>The path to the image location is saved in the Registry as an encrypted value. Use the steps below to create the path, export the value, and make it usable.</p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>On your reference computer, set the screensaver to use "Photos", click on Settings and Browse to the location of the Screensaver images</p>
+                                    <p>
+                                        <img alt="" height="508" src="../../Resources/Images/ScriptsTriggers/207_15_image-20200819181623-8.png" width="859" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Click SAVE to close the Photo Screen Saver settings window and then OK to finish</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Open Regedit and search HKCU Values for "EncryptedPIDL"</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Export "Screensaver" registry key</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Open the <code>.REG</code> file in text editor (I recommend something like Notepad++ that has a larger maximum line size) and edit the following:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Delete lines for "Speed" and "Shuffle" configuration</p>
+                                        </li>
+                                        <li>
+                                            <p>Remove all line-breaks for <code>"EncryptedPIDL"</code> – data must be on one line</p>
+                                            <p>
+                                                <img alt="" height="260" src="../../Resources/Images/ScriptsTriggers/207_17_image-20200819181623-9.png" width="803" />
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <p>It will end up looking something like this…</p>
+                                    <p>
+                                        <img alt="" height="91" src="../../Resources/Images/ScriptsTriggers/207_19_image-20200819181623-10.png" width="900" />
+                                    </p>
+                                    <h2>Create Group Policy Object</h2>
+                                    <p>Once the prep-work is completed, we can create the Group Policy Object to 1; Import the .REG settings and 2; set the Screensaver configuration options as per your requirements.</p>
+                                    <h3>Enable and configure The Screen Saver</h3>
+                                    <p>Here we are configuring the Screensaver options to your requirements.</p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Open your existing Group Policy Object</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Expand Computer Configuration -&gt; <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> and click on Administrative Templates Manager</p>
+                                    <p>
+                                        <img alt="" height="149" src="../../Resources/Images/ScriptsTriggers/207_21_image-20200819181623-11.png" width="317" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Add a new Collection, giving it a descriptive name (e.g. Screensaver scripts or Houston Screensaver…) and click OK</p>
+                                    <p>
+                                        <img alt="" height="177" src="../../Resources/Images/ScriptsTriggers/207_23_image-20200819181623-12.png" width="841" />
+                                    </p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span> If rolling out different images for different sets of users, ILT may be set on collection to specified different groups of users or computers.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Double-click to enter the Collection</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Add new policy</p>
+                                    <p>
+                                        <img src="../../Resources/Images/ScriptsTriggers/207_25_image-20200819181623-13.png" width="608" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>Set the Scope Filter to "User Policy" or "All Policy"</p>
+                                    <p>
+                                        <img alt="" height="61" src="../../Resources/Images/ScriptsTriggers/207_27_image-20200819181623-14.png" width="284" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>Create required policies – Screensaver Policies are kept under Users -&gt; Admin Templates -&gt; Control Panel -&gt; Personalization.</p>
+                                    <p>Setting Policies in <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> land is the same as Group Policy</p>
+                                    <ul>
+                                        <li>
+                                            <p>Double-click open the setting</p>
+                                        </li>
+                                        <li>
+                                            <p>Enable, set any configuration Options</p>
+                                        </li>
+                                        <li>
+                                            <p>OK to close</p>
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        <img alt="" height="205" src="../../Resources/Images/ScriptsTriggers/207_29_image-20200819181623-15.png" width="588" />
+                                    </p>
+                                    <p>The following are the minimum policies required</p>
+                                    <ul>
+                                        <li>
+                                            <p>Enable Screen Saver - Enable</p>
+                                        </li>
+                                        <li>
+                                            <p>Force Specific screen saver – Enable and set executable name to <code>"%systemroot%\system32\PhotoScreensaver.scr"</code></p>
+                                        </li>
+                                        <li>
+                                            <p>Password protect the screen saver – Enabled</p>
+                                        </li>
+                                        <li>
+                                            <p>Screen Saver timeout – Enabled, set timeout value to desired length in Seconds (default is 900 (15min), 300 is 5 min)</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 8 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 8 – </b></span></span>Once all policies have been enabled and configured, click CLOSE in the bottom-right corner</p>
+                                    <h3>Configure the Custom Path</h3>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Expand Computer<code> Configuration -&gt; Policypak-&gt; Scripts Manager </code>and click on the collection created earlier</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Add a new policy and NEXT on first window</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Select "Apply this policy to all users who log on to the computer (switched Mode)" and click NEXT</p>
+                                    <p>
+                                        <img alt="" height="68" src="../../Resources/Images/ScriptsTriggers/207_31_image-20200819181623-16.png" width="486" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Select "Batch script" from the drop-down menu and either type in or copy the script below to import the .REG file, replacing the /D value (LongEncryptedText…) with the very long encrypted path value from the exported .REG key.</p>
+                                    <p>Command to import the registry data using<code> REG.EXE</code>:</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: PlainText;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>reg add HKCU\Software\Microsoft\Windows Photo Viewer\Slideshow\Screensaver /v EncryptedPIDL /t REG_SZ /D LongEncryptedText…</code></pre>
+                                        </div>
+                                    </div>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Select "Run Script as user" and "With elevated rights" and click NEXT</p>
+                                    <p>
+                                        <img alt="" height="497" src="../../Resources/Images/ScriptsTriggers/207_33_image-20200819181623-17.png" width="711" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>NEXT again</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>Select "Once" and click NEXT</p>
+                                    <p>
+                                        <img alt="" height="86" src="../../Resources/Images/ScriptsTriggers/207_35_image-20200819181623-18.png" width="257" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 8 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 8 – </b></span></span>Give it a descriptive name (e.g. "Screensaver Path"), ensure it is enabled and click FINISH</p>
+                                    <p>
+                                        <img alt="" height="301" src="../../Resources/Images/ScriptsTriggers/207_37_image-20200819181623-19.png" width="459" />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

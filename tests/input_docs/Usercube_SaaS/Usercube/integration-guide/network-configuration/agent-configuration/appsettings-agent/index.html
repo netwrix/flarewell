@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Network Configuration|Agent Configuration">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>appsettings.agent</title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/network-configuration/agent-configuration/appsettings-agent/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>appsettings.agent</h1>
+                                    <p>The appsettings.agent.json file is meant to contain configuration data to be used by the agent to run <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                    <p>It includes:</p>
+                                    <ul>
+                                        <li>Connections to the managed systems</li>
+                                        <li>Password reset settings</li>
+                                        <li>Connections to potential additional databases</li>
+                                        <li>OpenId information</li>
+                                        <li>Specific task configuration</li>
+                                    </ul>
+                                    <p>JSON files can contain any additional information that you might find useful. See the example below.</p>
+                                    <p>For example, in order to store the agent's address, we can add:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />"UsercubeAgent": {<br />&#160;&#160;"Url": "<span style="color: #63a35c; ">&lt;http://localhost:1234&gt;</span>"<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>As <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;does not know any object named <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>Agent, its content will be ignored, but it can still be used to store information for human use.</p>
+                                    <h2 id="supported-sections">Supported Sections</h2>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 229px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Connections<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">List of Connections</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Connection information of all the systems managed by this agent, for synchronization and fulfillment configuration.<br />This section contains a subsection for each connection containing the connection's agent settings.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"Connections": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"<span style="color: #63a35c; ">&lt;ConnectionIdentifier&gt;</span>": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"<span style="color: #63a35c; ">&lt;AgentSetting&gt;</span>": "<span style="color: #63a35c; ">&lt;Value&gt;</span>":&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                    <p>Example:</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"Connections": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"Directory": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"Path": "C:\UsercubeDemo\Sources\Directory.xlsx"<br />&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"ServiceNowExportFulfillment": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"Server": "https://INSTANCE.service-now.com/api/now/table",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Login": "LOGIN",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Password": "PASSWORD"<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                    <p>See the <a href="../../../../user-guide/set-up/connect-system/connection-creation/index.html" target="_parent" title="Create a Connection" alt="Create a Connection" class="MCXref xref">Create a Connection</a>and <a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> topics for additional information.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Databases<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">List of Databases</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Names and connection strings of all databases used by the agent through InvokeSqlCommandTask, other than <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s database and other than the databases provided in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s available packages.<br /></p>
+                                                    <p>This subsection contains a subsection for each additional database.</p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>The Database is a subsection of the Connections section mentioned above.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"Databases": {<br />&#160;&#160;&#160;&#160;"<span style="color: #63a35c; ">&lt;DatabaseName&gt;</span>": "<span style="color: #63a35c; ">&lt;DatabaseConnectionString&gt;</span>"<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>Example:<div class="codeSnippet"><div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"Databases": {<br />&#160;&#160;&#160;&#160;"UsercubeContoso": "data source=.;Database=Usercube;Integrated Security=SSPI;Min Pool Size=10;encrypt=false;"<br />&#160;&#160;}<br />}</code></pre></div></div></td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>OpenId<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">OpenId</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>OpenId information, i.e. the ClientIds and related ClientSecrets that the agent may use to authenticate to the server in order to launch jobs and tasks.</p>
+                                                    <div class="notices note">
+                                                        <p>In order to launch jobs and tasks, the profiles related to these OpenId credentials must possess the required permissions.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>PasswordResetSettings<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">PasswordResetSettings</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Parameters which configure the reset password process for the managed systems that support it.<br /><br /></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>SourcesRootPaths<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String Array</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>List of folder paths from which <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;is allowed to read. This option is used to validate the sources files defined in file-based connections. 
+</p>
+                                                    <p>These paths are case sensitive.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"SourcesRootPaths": [ "C:/UsercubeContoso/SourceHR", "C:/UsercubeContoso/SourcesPhone" ]<br />&#160;}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>TaskAgentConfiguration<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">TaskAgentConfiguration</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Various settings to customize the behavior of some agent tasks.<br /><br /></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="openid">OpenId</h2>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>AgentIdentifier<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Identifier of the agent, as it is named in the XML configuration.</p>
+                                                    <p>With the following configuration:</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #63a35c; ">&lt;Agent <span style="color: #795da3; ">Identifier</span><span style="color: #df5000; ">="MyAgent"</span> <span style="color: #795da3; ">DisplayName_L1</span><span style="color: #df5000; ">="My Agent"</span> <span style="color: #795da3; ">URI</span><span style="color: #df5000; ">="https://contoso.com"</span> /&gt;</span></code></pre>
+                                                        </div>
+                                                    </div>
+                                                    <p>We could have the following setting in the agent’s appsettings.agent.json:</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"OpenId":{<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"AgentIdentifier": "MyAgent"<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>DefaultOpenIdClient<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>ClientId that defines the default OpenId pair, from the OpenIdClients section, used by the agent to authenticate to the server.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"OpenId":{<br />&#160;&#160;&#160;&#160;"OpenIdClients": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"Job": "secret1",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Admin": "secret2",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Agent": "secret3"<br />&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"DefaultOpenIdClient": "Agent"<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>OpenIdClients<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">List of OpenIdClients</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Pairs of ClientIds and non-hashed ClientSecrets, to override the corresponding secrets specified in the XML configuration.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"OpenId":{<br />&#160;&#160;&#160;&#160;"OpenIdClients": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"Job": "secret",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Admin": "secret2"<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2>PasswordResetSettings</h2>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>EncryptionCertificate<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">EncryptionCertificate</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Location of the public key certificate and the private key used to handle input and output files' encryption.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>MailSettings<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">MailSettings</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Settings for configuring the SMTP server, used to send password reset email notifications.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>NotificationSettings<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">NotificationSettings</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Settings to configure password reset notifications.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>TokenBuildingSettings<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">TokenBuildingSettings</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Settings to build the confirmation token used by the password reset's two-Way mode.<br /></p>
+                                                    <div class="notices note">
+                                                        <p>The confirmation token is a base-64 encoded JSON Web Token (JWT) token that contains the information required to complete password reset when in two-way mode. It is appended to the confirmation Uri.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>TwoFactorSettings<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">TwoFactorSettings</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Settings to configure the password reset's two-way mode, i.e. the process where <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;sends emails containing links to users for them to click on it and reset their passwords.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="encryptioncertificate">EncryptionCertificate</h3>
+                                    <div class="notices note">
+                                        <p>If you are using the certificate provided in the SDK, the agent will be unable to launch. You must create your own certificate.</p>
+                                    </div>
+                                    <p>Encryption certificate information can be set in one of two ways:</p>
+                                    <ul>
+                                        <li>
+                                            <p>As a <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">Public Key Cryptography Standards (PKCS) #12</a> archive (also called <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/personal-information-exchange---pfx--files" style="font-style: normal; text-decoration: none;">Personal </a>Information Exchange file or <code>.pfx</code> file) stored in the Agent's host file system. The archive contains both the public key certificate and the private key.</p>
+                                        </li>
+                                    </ul>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>File<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12">PKCS #12</a> archive path on the agent's host file system.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;"File": "<span style="color: #63a35c; ">&lt;C:/UsercubeAgentContoso/contoso.pfx&gt;</span>"<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Password<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12">PKCS #12</a> archive password.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;"File": "<span style="color: #63a35c; ">&lt;C:/UsercubeAgentContoso/contoso.pfx&gt;</span>",<br />&#160;&#160;&#160;&#160;"Password": "<span style="color: #63a35c; ">&lt;oarjr6r9f00&gt;</span>"<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul>
+                                        <li>
+                                            <p>As a certificate from a Windows' <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/working-with-certificates#certificate-stores" style="text-decoration: none;">certificate store</a> identified by SubjectDistinguishedName or by Thumbprint. The Windows certificate also contains both the public key certificate and the private key.</p>
+                                        </li>
+                                    </ul>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>DistinguishedName<br />Required if Thumbprint is empty</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Subject distinguished name of the certificate.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;"DistinguishedName": "<span style="color: #63a35c; ">&lt;UsercubeContoso&gt;</span>"<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>StoreLocation<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Location of the relevant Windows certificate.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"StoreLocation": "<span style="color: #63a35c; ">&lt;LocalMachine&gt;</span>"<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>StoreName<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Name of the relevant Windows certificate.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"StoreName": "<span style="color: #63a35c; ">&lt;AuthRoot&gt;</span>"<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Thumbprint<br />Required if DistinguishedName is empty</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Thumbprint of the certificate.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;"Thumbprint": "<span style="color: #63a35c; ">&lt;6261A70E599642A21A57A605A73B6D2AE7C5C450&gt;</span>"<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Remember" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;i&gt;Remember, &lt;/i&gt;&lt;/span&gt;"><span class="autonumber"><span class="Remember"><span style="color: #fb8000;" class="mcFormatColor"><i>Remember, </i></span></span></span>Netwrix recommends using Windows' certificate store.
+<br></br>On the other hand, the PFX file takes priority over Windows' certificate, which means that when <code>File</code> is specified then the PFX certificate is used, even if the options for Windows' certificate are specified too.
+<br></br>In both ways, missing and/or incorrect settings trigger an error and no certificate is loaded.</p>
+                                    <h3>MailSettings</h3>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>FromAddress<br />Required if PickupDirectory is empty</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Email address used by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to send notifications.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"MailSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"FromAddress": "<span style="color: #63a35c; ">&lt;no-reply@acme.com&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Host<br />Required if PickupDirectory is empty</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>SMTP server domain name or an IP address.<br /></p>
+                                                    <p> To be used only when UseSpecifiedPickupDirectory is set to false.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Password<br />Required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Password that <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;will use to login to the SMTP server.<br /></p>
+                                                    <p> used only when the SMTP server is password-protected and UseSpecifiedPickupDirectory is set to false.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>PickupDirectory<br />Required if FromAddress/Host are empty</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>&#160;</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Path to the pickup directory. See the <a href="../../../../installation-guide/production-ready/email-server/index.html" target="_parent" title="Send Notifications" alt="Send Notifications" class="MCXref xref">
+              
+              Send Notifications
+              </a> topic for additional information. See more details on the pickup directory feature.<br /></p>
+                                                    <p> To be used only when UseSpecifiedPickupDirectory is set to true.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"MailSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"PickupDirectory": "<span style="color: #63a35c; ">&lt;../Mails&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Username<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Username for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to login to the SMTP server.<br /></p>
+                                                    <p> Used only when the SMTP server is password-protected and UseSpecifiedPickupDirectory is set to false.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>AllowedDomains<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>List of domains to which the SMTP server is authorized to send emails. Domain names must be separated by &lt;;&gt;.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>CatchAllAddress<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Catch-all address that will receive all of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s emails instead of usual users.<br /></p>
+                                                    <p> this is helpful for testing before going live.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"MailSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"CatchAllAddress": "<span style="color: #63a35c; ">&lt;administrator@acme.com&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>CatchAllCCAddress<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Catch-all address that will receive all of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s emails as cc (carbon copied).</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"MailSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"CatchAllCCAddress": "<span style="color: #63a35c; ">&lt;administratorcc@acme.com&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Enabled<br />default value: True</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>True to enable email sending. When set to false, no email is sent by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>EnableSsl<br />default value: False</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;"><strong>DEPRECATED</strong>: EnableSsl won't be supported in the future. Please specify a SecureSocketOption instead.<br />To keep the same behavior as EnableSsl: True, use the setting SecureSocketOption: StartTls.<br /><p>True to encrypt communication with the SMTP server.<br /></p><p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span> To be used only when UseSpecifiedPickupDirectory is set to false.</p></td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>SecureSocketOption<br />default value: Auto</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Specifies the encryption strategy to connect to the SMTP server. If set, this takes priority over EnableSsl.<br />None: No SSL or TLS encryption should be used.<br />Auto: Allow the mail service to decide which SSL or TLS options to use (default). If the server does not support SSL or TLS, then the connection will not be encrypted.<br />SslOnConnect: The connection should use SSL or TLS encryption immediately.<br />StartTls: Elevates the connection to use TLS encryption immediately after reading the greeting and capabilities of the server. If the server does not support the STARTTLS extension, then the connection will fail and a NotSupportedException will be thrown.<br />StartTlsWhenAvailable: Elevates the connection to use TLS encryption immediately after reading the greeting and capabilities of the server, but only if the server supports the STARTTLS extension.<br /></p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To be used only when UseSpecifiedPickupDirectory is set to false.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Port<br />default value: 0</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>SMTP server port.<br /></p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span> To be used only when UseSpecifiedPickupDirectory is set to false.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>UseDefaultCredentials<br />default value: False</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>True to use the default username/password pair to login to the SMTP server. When set to false, Windows authentication is used.<br /></p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>To be used only when UseSpecifiedPickupDirectory is set to false.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>UseSpecifiedPickupDirectory<br />default value: False</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>True to write emails as local files in the specified PickupDirectory instead of sending them as SMTP packets. See&#160;the <a href="../../../../installation-guide/production-ready/email-server/index.html" target="_parent" title="Send Notifications" alt="Send Notifications" class="MCXref xref">
+              
+              Send Notifications
+              </a>topic for additional information.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"MailSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"UseSpecifiedPickupDirectory": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3>NotificationSettings</h3>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Cultures<br />default value: ["en"]</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">String Array</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>List of languages in which reset-password email notifications will be sent, among: fr and en.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"NotificationSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"Cultures": [“fr”, “en”]<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3>TokenBuildingSettings</h3>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>ValidFor<br /><span class="optionalAttribute">default value: 03:00:00</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Validity period of the issued token, and thus of the password reset link. The format must be HH:mm:ss</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"TokenBuildingSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"ValidFor": "<span style="color: #63a35c; ">&lt;03:00:00&gt;</span>"<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3>TwoFactorSettings</h3>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 45px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>ApplicationUri<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>URI of the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;application.<br /></p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>this helps create the links in the emails for two-way password reset.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"TwoFactorSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ApplicationUri": "<span style="color: #63a35c; ">&lt;http://localhost:5000&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>ResetConfirmationUri<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Base URI for the password reset link that is sent to the user. The password reset confirmation token is appended to the ResetConfirmationUri. The resulting URI is sent to the user.</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;"PasswordResetSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"TwoFactorSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ResetConfirmationUri": "&lt;http://localhost:5000/PasswordReset/Activate/?activationCode=&gt;"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2>TaskAgentConfiguration</h2>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>HttpClientTimeoutSupplement<br />default value: 0</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">Integer</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Additional minutes that extend the default timeout (30 minutes) of the HttpClient instance used to send requests to the server.</p>
+                                                    <p>Here the total timeout will be 50 minutes:</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;…<br />&#160;&#160;"TaskAgentConfiguration": {<br />&#160;&#160;&#160;&#160;…<br />&#160;&#160;&#160;&#160;&#160;"HttpClientAdditionalTimeout": 20<br />&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

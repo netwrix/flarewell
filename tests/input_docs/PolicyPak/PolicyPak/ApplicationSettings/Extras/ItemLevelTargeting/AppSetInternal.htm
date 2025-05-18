@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="_Skins_Netwrix_Website" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Apps, Browsers, &amp; Java Security Pak|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Internal Item-Level Targeting for the AppSet Itself</title>
+        <link href="../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Internal Item-Level Targeting for the AppSet Itself</h1>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>  To see an overview of Internal ItemLevel Targeting, including how to bypass the filters, see this video: <a href="http://www.policypak.com/products/policypak-preconfigured-paks.html">http://www.policypak.com/videos/bypassing-internal-item-level-targeting-filters.html</a>.
+                </p>
+                                    <p>Many preconfigured AppSets that <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Settings Manager makes available for free have built-in predefined, or internal, Item -Level Targeting filters.
+        </p>
+                                    <p>For instance, an AppSet might be set to apply specifically to only Windows 7 or later. Or an AppSet might be set to apply specifically to a certain version of an application. For instance, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Settings Manager's Java 7 U 40 AppSet will only apply when Java 7 U 40 is present on the machine.</p>
+                                    <p>The preconfigured AppSets do this with internal Item-Level Targeting filters that are set within the AppSet. These internal filters are NOT configurable within the MMC. They are only configurable using the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> DesignStudio at design time.
+        </p>
+                                    <p>Figure 51 shows an example of how you might configure an internal filter.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../Resources/Images/ApplicationSettings/PolicyPak Application Settings_2_5.png" />
+                                    </p>
+                                    <p>Figure 51. Configuring an internal filter.</p>
+                                    <p>The purpose is to make sure that configuration items aren't delivered unless these predefined conditions match and are actually present on the target machine.</p>
+                                    <p>This keeps your target machines cleaner, because no <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Settings Manager data is written unless it's actually needed.</p>
+                                    <p>However, you might find the need to bypass sets of internal filters and apply the AppSet anyway, regardless of whether the application is present on the machine. To do this, you need to modify the AppSet entry's options and change the "Predefined Item-Level Targeting" switch, as seen in Figure 52.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../Resources/Images/ApplicationSettings/PolicyPak Application Settings_2_6.png" />
+                                    </p>
+                                    <p>Figure 52.&#160; Changing the Predefined Item-Level Targeting switch.</p>
+                                    <p>There are three ways to configure this entry, which are presented in Table 1 (also see Figure 53 for an example of one of the scenarios).</p>
+                                    <p class="Table-Title">Table 1: Internal Item-Level Targeting settings options.</p>
+                                    <table align="center" style="margin-left: auto;margin-right: auto;border-collapse: collapse;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col style="width: 156pt;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col style="width: 156pt;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col style="width: 157pt;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Setting</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Reason for Using This</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Notes</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>On (Installed Applications)
+                        </p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>This is the default if you don't set it specifically. </p>
+                                                    <p>When this is selected, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Settings Manager's internal Item-Level Targeting will apply ONLY to applications when they are actually installed on the machine.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Internal Item-Level Targeting is&#160; automatically bypassed for virtualized applications. </p>
+                                                    <p>This is recommended because <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Settings Manager can only evaluate if something is true within the operating system itself and not within a virtualized application (e.g., Microsoft App-V 4 or App-V 5, ThinApp 4, ThinApp 5, Spoon.Net, Symantec Workspace Virtualization, or Citrix Streaming).</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>On (Installed and Virtual Applications)
+                        </p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>This forces <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Settings Manager to evaluate internal Item-Level Targeting, even when the application is virtualized.</p>
+                                                    <p>You might want to set this setting if you would like to ensure that an internal filter for the operating system, IP range, or other system-specific setting is validated.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Typically, you wouldn't use this setting if you have internal filters that check for particular application-specific entries—such as Registry entries or file entries—since those cannot be evaluated inside the virtualized application.</p>
+                                                    <p>Remember that <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Settings Manager can only evaluate the "real" machine and not the conditions within the virtualized application itself.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Off</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Set this to Off to bypass ANY internal filters.</p>
+                                                    <p>This is a good troubleshooting step if you're not seeing settings being applied on your target machine.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>When this is set to Off, no internal Item-Level Targets will "interfere" with the application of the settings.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../Resources/Images/ApplicationSettings/PolicyPak Application Settings_2_7.png" />
+                                    </p>
+                                    <p>Figure 53. One scenario for item-level targeting on installed applications only.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

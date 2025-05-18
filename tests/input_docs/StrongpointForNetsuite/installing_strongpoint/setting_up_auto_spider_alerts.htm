@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Installation" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Setting Up the AutoSpider and Alerts</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Setting Up the AutoSpider and Alerts</h1>
+                                        <p>After you have run your initial spider, the AutoSpider monitors your account on an ongoing basis to see if customization changes have occurred. This is a light scan of the data to determine if there were any changes. If changes are detected, you are reminded to ReSpider your account.</p>
+                                        <p class="note">Best practice is to run the AutoSpider regularly. If the AutoSpider is not run, your Change Logs will be missing the <b>Changed by</b> and <b>Actual Change Date</b> fields. When the Change Log is newly created, the fields contain <b>Pending AutoSpider</b>. If too many days go by, the fields change to <b>Could not be determined</b>.</p>
+                                        <div class="toc-macro"/><h2 id="set_up_the_autospider">Set Up the AutoSpider</h2>
+                                        <p class="note">The AutoSpider portlet should be installed on all Administrator homepages. The AutoSpider triggers when the Administrator logs in. Ideally daily or every other day. Best practice is to wait for the portlet to load and see the <b>Spider Triggered</b> message before continuing.</p>
+                                        <p>The <b>AutoSpider Portlet</b> is required to update certain object types in NetSuite. Once triggered through the dashboard portlet, it picks up all changes on custom objects and triggers the scheduled scripts to reflect them in the Customization records, going back two days. The AutoSpider  portlet is required in order to update these object types:</p>
+                                        <ul>
+                                            <li>Bundle</li>
+                                            <li>Custom Report</li>
+                                            <li>Entry Form</li>
+                                            <li>Mass Update</li>
+                                            <li>Online Customer Form</li>
+                                            <li>Record</li>
+                                            <li>Transaction Form</li>
+                                            <li>Custom Advanced PDF/HTML Template</li>
+                                        </ul>
+                                        <p>To add the auto spider portlet:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Log in to NetSuite with an Administrator role.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>Personalize</b> on your home page.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <b>Custom Portlet</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click the menu icon for the <b>Custom Portlet</b> and select <b>Set Up</b></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Select <b>Strongpoint AutoSpider Portlet (Realtime)</b> from the <b>Source</b> list.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click <b>Save</b></p>
+                                            </li>
+                                        </ol>
+                                        <p>  Any objects not captured by the AutoSpider are picked up by the Customizations to ReSpider alert.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/auto-spider_portlet.png" title="Auto-Spider Portlet"/>
+                                        </p>
+                                        <p>Stay on your <b>Home</b> page until you see <b>Spider Triggered</b> to ensure the spider starts.</p>
+                                        <h2 id="set_up_customizations_to_respider_alerts">Set up Customizations to ReSpider Alerts</h2>
+                                        <p>A series of Workflows are used to review system notes, audit logs and object history. These workflows identify when the Customization Records have not been updated. To ensure the objects in your account are updating, set up the Customizations to ReSpider search to provide alerts to the appropriate people in your company.</p>
+                                        <p><b>Next Step: </b><a href="managing_users.htm" title="Open Managing Users topic." alt="Open Managing Users topic.">Managing Users</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

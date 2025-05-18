@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Automated Search Clean Up" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Automated Search Clean Up Considerations</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Automated Search Clean Up Considerations</h1>
+                                        <p>This list describes some of the special cases encountered when using the <a href="automated_search_cleanup.htm">Automated Search Clean Up</a> tool</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>When an archived search contains <b>Date</b> filters, you must have the same date format preference as the Company’s date preference to accurately restore the filter.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>SuiteScript cannot delete <b>Pricing</b> searches. Pricing searches are not displayed in the Clean Up preview and are excluded from the Automated Search Clean Up.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Private searches with a <b>Period</b> filter cannot be deleted. SuiteScript returns an <b>Unexpected Error</b> when trying to temporarily set the search as public  to delete it.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Searches with <b>Period</b> filter cannot be fully restored. Only public searches can be deleted for searches with <b>Period</b> filter.</p>
+                                            </li>
+                                        </ol>
+                                        <h3 id="limitations_to_restoring_auto_archived_searches">Limitations to Restoring Auto Archived Searches</h3>
+                                        <p>Items from the <b>Criteria</b> and <b>Results</b> tabs are restored with the exception of <b>Public</b> searches with the <b>Period</b> filter. Auto archiving does not occur with <b>Private</b> searches with the <b>Period</b> filter, as they cannot be deleted or archived.</p>
+                                        <p>The following check boxes on the Search form are not restored if they were checked:</p>
+                                        <ul>
+                                            <li>Available as List View</li>
+                                            <li>Available as Dashboard View</li>
+                                            <li>Available as SubList View</li>
+                                            <li>Available for Reminders</li>
+                                            <li>Show in Menu</li>
+                                        </ul>
+                                        <p>Items from the following tabs on the Search form are not retained when an auto archived search is restored:</p>
+                                        <ul>
+                                            <li>Highlighting</li>
+                                            <li>Available Filters</li>
+                                            <li>Audience</li>
+                                            <li>Email</li>
+                                            <li>Audit Trail: the restored search is assigned a new Internal ID. The audit trail only contains entries for the new Internal ID.</li>
+                                        </ul>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/limitation_restoring_searches.png" title="Search form"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

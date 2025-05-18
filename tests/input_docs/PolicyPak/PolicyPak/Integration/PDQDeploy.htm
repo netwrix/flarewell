@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|All Things Installation &amp; Upkeep|[%=System.LinkedTitle%]|Method PDQ Deploy (recommended)">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Managing Group Policy using Endpoint Policy Manager and PDQ Deploy</title>
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Managing Group Policy using Endpoint Policy Manager and PDQ Deploy</h1>
+                                    <p>Microsoft MVP Jeremy Moskowitz and Shane from Admin Arsenal demonstrate the setup and advantages of using <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> and PDQ Deploy together to manage the heck out of your group policy.</p>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/IKtI-apx1RY" title="Managing Group Policy using Endpoint Policy Manager and PDQ Deploy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3 id="transcript">Managing Group Policy using PolicyPak and PDQ Deploy</h3>
+                                    <p>Shane: Hey, I'm Shane from Admin Arsenal. Today, we have Jeremy Moskowitz. You probably already know of this man: GPanswers, the founder of <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>, Microsoft MVP, Enterprise Mobility. This guy is the bee's knees. We're going to talk about how you've already got Active Directory, now let's add some muscle to it. This is the guy that we're going to talk to.</p>
+                                    <p>Jeremy: Thank you. What we're going to do is we're going to show you a better together story. In this video, we're going to do a setup of getting <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> ready. If you decide that you like what you see in this series of videos and you want to try <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> and/or PDQ Deploy better together, this is video number one in order for you to get started.</p>
+                                    <p>Let me give you the lash-up of where we're at with our setup here. We have "Active Directory" and "Group Policy" ready to go. I just want to show how we have our setup here. In "Active Directory" we've already got our "Users and Computers." Let me show you where they live just so you can see how to follow along.</p>
+                                    <p>For instance, our users are hanging out under "Standard Users." We have "User1" and "User2." If we look at "Deadwood Computers/Workstations/Standard Computers," we've got "COMPUTER1" and "COMPUTER2." We try to make it very complicated. We've got these two computers and two users, and these are who we're going to manage.</p>
+                                    <p>The first thing we want to do is show you a before shot before we show you an after shot. If you take any given "Group Policy Object," it doesn't really matter. We'll call it "aaa." If we look inside, you've seen this a million times. You know there's the user side and computer side. There's "Policies" and "Preferences."</p>
+                                    <p>What we just said is we're going to add a little muscle to this by adding the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> node. This is super easy. You probably want to do this step by hand. You could use PDQ Deploy to do it, but just to make things easier for this demonstration, I just want to go to the downloaded <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>, which you get my contacting <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> first of all. Then you go to the "Admin Console MSI for all On-Prem <a href="https://dev.policypak.com/products/">https://dev.policypak.com/products/</a>," and you just install the admin.</p>
+                                    <p>I'm pretty sure this machine is x86, right?.</p>
+                                    <p>Shane: No, it's x64.</p>
+                                    <p>Jeremy: Oh, it's x64. Okay, great. It doesn't matter. Whichever on you have, it will work. This step takes a moment or two. Once this is done, you've increased your ability to create new directives inside your Group Policy editor. We'll go ahead and wait for this to finish. That's it. It just takes a moment, and we're ready to go.</p>
+                                    <p> We'll go ahead and "Close" that. Now let's look at the after shot. We'll go ahead and take a look. We now have a new node here in the Group Policy editor enabling you to do more stuff. We're going to cover what that stuff is in this series of videos. We're not super concerned about the stuff right now. We're just getting set up. That's thing number one. I'll go ahead and close this.</p>
+                                    <p>Step number two is one of the superpowers that <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> has is the ability to manage Flash, Firefox, Java, Internet Explorer. You name it, we have a way to manage it. We have these definitions or Pak files that there's a handful of ways to do it, but the best way is to get them on one domain controller which is to say your Central Store for <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>.</p>
+                                    <p> What we're going to do here is we're going to take the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> stuff, and I've already got all the Paks listed here. You can see we have over 400.</p>
+                                    <p>Shane: Wow.</p>
+                                    <p>Jeremy: We have "430" Paks as of this recording. We're going to…</p>
+                                    <p>Shane: There's your "SYSVOL" in "venice." We're going to use "venice."</p>
+                                    <p>Jeremy:That's the one, "venice." I'll move this one to the left, this one to the right. I'll just pick a couple of guys just to show you how quick and easy it is. Let's say you want to do "Java Version 8 u 77." I'm just pulling this one out of my ear here. We'll go ahead and go to "SYSVOL," domain name, "Policies."</p>
+                                    <p>You might already have an existing what's called "PolicyDefinitions" folder. Now that's Microsoft. <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> is going to be – I know, wait for it, this is super complicated – "<span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>."</p>
+                                    <p>Shane:If you're lost by creating a folder, you probably need a couple of other videos.</p>
+                                    <p>Jeremy: Yeah, this is not the tool for you. We'll go ahead and create the "<span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>" folder and drag-and-drop in one of our Pak definition files. Now look at that. You're going to be able to manage the heck out of "Java Version 8 u 77.".</p>
+                                    <p> If you want to take WinZip, let me go ahead and find it. "WinZip 14 to 17" is a good one. We'll go ahead and copy that guy right there. That's it. If you want to pick and choose the ones you want, it's super easy to do.</p>
+                                    <p> Let's go ahead and go back to the after shot again. We'll go to "aaa" and take a look at that one more time. If we take a look, we can go to user or computer, "<span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>." Take a look at "Application Settings Manager," which is the thing we're going to spend some time on in our first videos. Right click, "New Application," there we are. Those are the Paks we just dragged in, ready to go.</p>
+                                    <p> If we want to manage the heck out of "WinZip" which we'll probably do in our next video, you just double click it. We'll cover this in the next video, but we've now officially set up a handful of Paks. If you want to do Flash, Firefox, Java, etc., you just drag the right Pak file in and you're ready to go.</p>
+                                    <p> That's it. There's one more step, and that's where he's going to come in. You need to deploy our moving part, that client side extension, to enhance your Group Policy experience on your endpoints. You're going to cover how to get that deployed..</p>
+                                    <p>Shane: Yeah, we'll get that out there. We're going to use "PDQ Deploy." It's a free download. We're going to show you using the Enterprise level version.</p>
+                                    <p>Jeremy: " You can close that right out. We're done with that.</p>
+                                    <p>Shane: Okay. But if you're using the free version, you're just going to need to do two packages if you have both 64-bit and 32-bit targets. I'm just going to create a "New Package" here. We'll call this "<span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE," the client side extensions, perfect.</p>
+                                    <p> Then our "Step 1" is an install step. This is where you choose your MSI or your EXE files or your batch files, etc. We are going to go out to, I'll put this on a file share somewhere. There we go. We'll do the 64-bit for right now. It's an MSI, so there are no other properties that you need to add. We're just going to hit "Save" on that.</p>
+                                    <p> There's our "<span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE," and we'll go ahead and deploy. Obviously, you could choose targets from your Active Directory OU or etc., but since we know the names of these computers we'll just do it for the sake of this.</p>
+                                    <p>Jeremy: But you could pick your entire domain. You could cherry pick OUs.</p>
+                                    <p>Shane: Yes, you can choose targets from "Active Directory," "PDQ Inventory," "Spiceworks," etc. We'll hit "Deploy Now." I didn't name that step, but it's okay. You can see that it's kicking off the client side extension install right away. Jeremy has got those. The MSI is ready to go. It's sweet.</p>
+                                    <p>Jeremy: The best part is no reboot required. Once you get it deployed out there, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> is automatically working, ready to rock from moment zero. You don't have to wait for a reboot or schedule a reboot. We're just ready to rock since it's installed.
+That's it. <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> is fully deployed. We have it all ready to go, and we're ready to actually do some work with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> and PDQ.</p>
+                                    <p>Shane: So see us on the next video. We'll talk to you later.</p>
+                                    <p>Jeremy: Bye.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

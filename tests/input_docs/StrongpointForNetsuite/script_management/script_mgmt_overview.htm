@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Script Management</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Script Management</h1>
+                                        <p>With the <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> tools and the Critical Script Analysis methodology you can:</p>
+                                        <ul>
+                                            <li>Identify high priority scripts based on usage</li>
+                                            <li>Identify people and departments triggering scripts to focus on scripts that could be in appropriately triggered</li>
+                                            <li>Understand script execution times</li>
+                                        </ul>
+                                        <p class="note"><span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> does not  document or analyze locked scripts.</p>
+                                        <div class="toc-macro"/><h2 id="automatically_archiving_scripts">Automatically Archiving Scripts</h2>
+                                        <p> If enabled, a copy of each script is archived when it is changed, keeping a full version history. The archived script versions are saved in the script archive folder, are also accessible in the Customization record for the script. Archiving all script changes does use storage space. It is a good practice to occasionally review and clean up old versions. To enable automatic archiving:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b><span class="mc-variable General.MenuName variable">Strongpoint</span> Support</b> &gt; <b>Installation Settings</b>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>Edit</b> by the current version.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Open the <b>Installation</b> tab.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Check <b>Enable Auto Archive</b>.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Specify the <b>Auto Archive Folder</b> location.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p><b>Save</b> the record.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="error_log_and_analysis">Error Log and Analysis</h2>
+                                        <p>Managing script errors is the first level of analysis required for optimization. Eliminating errors can greatly increase performance and fix broken scripts.</p>
+                                        <p>Script error reports provides a summary of all the available errors logged in the system for various scripts. Errors are summarized into types by excluding specific data such as line numbers, ids and, where detectable, execution data. The result is a manageable number of errors.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Ensure that the scripts are log levels are at least Error (anything other than Emergency).  See the NetSuite User Guide article “Setting Script Execution Log Levels” for log level definitions.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Review the Error Report. All script errors are reported regardless of if the script is locked, unlocked, part of a bundle or any other factor.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Identify errors that are not material to your business and mark them as resolved</p>
+                                            </li>
+                                            <li value="4">
+                                                <p><span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> no longer reports those errors, so any future errors that occur are unexpected and should be managed.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="analyze_script_performance_data">Analyze Script Performance Data</h2>
+                                        <p><span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> enables you to systematically analyze:</p>
+                                        <ul>
+                                            <li>How often scripts are executing to enable you to focus on high volume scripts or identity scripts that are executing many times more than the transactions in the account would warrant.</li>
+                                            <li>Who is triggering the script to identify scripts that are being triggered inappropriately, which is an efficient use of system capacity.</li>
+                                            <li>Script average runtime.</li>
+                                        </ul>
+                                        <p>There are two requirements to analyze and report script performance data:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Start Tags must be inserted at the beginning of the script in order to track frequency of execution and who is triggering the script.  End tags are required for Script Average Run Time.  </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Log level of the scripts be set to at least Audit or Debug. </p>
+                                            </li>
+                                        </ol>
+                                        <p>There are pre-built saved mass updates to quickly do this, but some factors need to be considered.</p>
+                                        <p>Since tags need to be added to the script file, there are some limitations on the data <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> can analyze for locked scripts.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p><b>Locked Script Records</b>: A locked script record does not impact script analysis since <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> analyzes the Script File.  If all elements of the script are unlocked or if only the script record is locked, <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> can report on script performance metrics.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p><b>Locked but readable (not hidden) Script File</b>: Script tags cannot be added to locked files, but <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> can read them if they have audit tags already in them.</p>
+                                            </li>
+                                        </ol>
+                                        <ul>
+                                            <li>With audit tags:  
+				<ul><li>Spiders identify the audit tags and documents them in the <b>Audit Tags</b> field in the <b>Scripting</b> tab of the Customization Record.</li><li>Document who is executing the script</li><li>Provides a sense of how often it is executing. It tracks the number of executions per tag and averages them.  The number can vary based on the placement of the tags and how the script is executed any given time. While it does not provide an exact number, it will be within the right range and can help identify if a script is executing significantly more than the transaction volume would indicate.</li></ul></li>
+                                            <li>Without audit tags:  Same and locked and hidden scripts below.</li>
+                                        </ul>
+                                        <p>3.  <b>Locked and hidden script files</b>: For scripts where the script file is hidden and locked, <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> cannot track performance metrics, in most cases.   However, if the script Log Level is changed to Debug mode, <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> can document who is executing the script while the script is at that log level.</p>
+                                        <h2 id="define_the_scope_of_your_analysis">Define the Scope of your Analysis</h2>
+                                        <p>The focus of script analysis can vary based on your business needs. We recommend the following based on the questions you are trying to answer:</p>
+                                        <p><b>Which scripts are executing too often or being triggered by the wrong people across the whole account? </b> </p>
+                                        <p>This question would require a broader approach and applying audit tags and changing log levels across the account.  However, if you have a large number of locked and hidden scripts, you may be forced to go with a more focused approach due to the limitations mentioned above.  </p>
+                                        <p><b>How are my scripts performing in a particular process? </b> </p>
+                                        <p>To get a process focused view, you can use the Map Customization Tools to associate bundles and scripts to processes. This enables you to apply audit tags and change log levels for scripts associated with specific processes using the mass update filters.</p>
+                                        <p><b>How are particular scripts or bundles performing?</b>
+                                        </p>
+                                        <p>In this case you can either add the audit tags and change the log levels manually or filter the mass updates.</p>
+                                        <p><span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> has tools to automatically change the log level of script deployments and add start tags to files.  However, before deploying these tools, you may want to consider the following factors.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Changing the log level from Error or Emergency to Audit, which is required for Script Analysis may increase the level of log entries that appear on the Execution Log tab based on what tags are in the scripts.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Log levels <b>cannot</b> be automatically changed for bundled deployments.  Bundled deployment log levels need to be changed manually.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Since audit tags can only be added to unlocked files, changing the log levels of locked files serves no purpose from a Script Analysis perspective.</p>
+                                            </li>
+                                        </ol>
+                                        <p><span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> has the following capabilities to set up script analysis.  We will provide specific ways to use this tools based on your objectives and account set up.</p>
+                                        <h2 id="identify_which_scripts_and_how_many_scripts_have_locked_and_hidden_files">Identify which Scripts and how many Scripts have Locked and Hidden Files</h2>
+                                        <p>As mentioned above audit tags cannot be added to these files and changing the log levels is moot.  A future bundle will have this search built in, but you can quickly identify and count the number of locked scripts by creating this saved search:</p>
+                                        <ul>
+                                            <li>Create a new saved search, type Customization</li>
+                                            <li>Add the following criteria:
+				<ul><li>Attempt # greater than zero</li><li>Retrieval Error Not Empty</li></ul></li>
+                                            <li>You can add Type to the results to see the script type</li>
+                                        </ul>
+                                        <p>Compare this number to the number of scripts in your account (Customizations&gt;Scripting [ensure all filters are cleared]).  If a large proportion of your scripts are locked and hidden, you may want to focus your analysis by changing the log level and adding audit tags to a limited number of scripts.</p>
+                                        <p><b>Customization Record</b>:  You can also see if a script file is locked by looking at the Customization record for that script.  On the <b>Scripting</b> tab, check the script file.  If there are options to download or edit the file, the script file is unlocked.</p>
+                                        <h2 id="run_mass_updates">Run  Mass Updates</h2>
+                                        <p>A core part of the script performance analysis involves the use of audit tags.  These audit tags only provide data when the scripts are in Audit or Debug mode. It is important to switch the scripts over to one of those two levels if appropriate.The Add Audit Tags mass update backs up and then adds start tags to all of your unlocked scripts.  This enables tracking  frequency of execution.  You can manually add end tags for script execution time tracking. <a href="analyzing_script_performance.htm" title="Open Analyzing Script Performance topic" alt="Open Analyzing Script Performance topic">Analyzing Script Performance</a>.</p>
+                                        <h2 id="schedule_the_script_utilization_data_update_script">Schedule the Script Utilization Data Update Script</h2>
+                                        <p>This scheduled script captures the script execution data such as how many times it was triggered, who used it and how long it took to execute. Schedule the Script Utilization Data Update Script <a href="scheduling_script_monitor.htm">Schedule the Script Monitor</a></p>
+                                        <h2 id="track_progress">Track Progress</h2>
+                                        <p>You can monitor the progress of the script data collection with <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Script Management</b> &gt; <b>Tagged scripts with No Data</b><br/>The scripts on this list will fall off this search as data is collected. Scripts that remain on this list are not being executed.</p>
+                                        <h2 id="review_script_performance_and_error_reports">Review Script Performance and Error Reports</h2>
+                                        <p>There are several searches that provide data about script performance and errors. <a href="reviewing_script_performance_errors.htm" title="Open Review Script Performance and Error Reports topic" alt="Open Review Script Performance and Error Reports topic">Review Script Performance and Error Reports</a></p>
+                                        <p>Another critical script is the <b>Strongpoint Parse Script Files SS</b> (note there is also an on demand version OD). This reads each unlocked script file to check for changes, updates the documentation and stores an archive copy of any previous version of the code. Once complete it triggers the <b>Strongpoint MakeJoins</b> script to complete the documentation by attaching related fields and saved searches.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

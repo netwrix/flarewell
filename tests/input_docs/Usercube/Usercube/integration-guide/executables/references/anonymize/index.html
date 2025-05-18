@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Executables|References: Executables">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Usercube-Anonymize
+              </title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/executables/references/anonymize/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <section id="body">
+                                        <div id="body-inner">
+                                            <h1>Usercube-Anonymize
+              </h1>
+                                            <p>This tool anonymizes data based on a certain knowledge of the database and the data structure.</p>
+                                            <h2 id="overview">Overview</h2>
+                                            <p>Anonymizing data helps unlock situations where it is necessary to send data to varied teams while guaranteeing the privacy of the data owners.</p>
+                                            <blockquote>
+                                                <p>For example, it can be necessary to transmit data to an integration team that needs to set up tests or a development environment to work on the applicative configuration.
+For example, users sometimes need to send data to <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s support team to reproduce a bug and get it corrected.</p>
+                                            </blockquote>
+                                            <h2 id="technical-principles">Technical Principles</h2>
+                                            <p>Anonymizing can be performed on data:</p>
+                                            <ul>
+                                                <li>
+                                                    <p>from a CSV file, with the output written to a new CSV file;</p>
+                                                </li>
+                                                <li>
+                                                    <p>directly inside a SQL database, overwriting existing data with the anonymized data.</p>
+                                                    <div class="notices note">
+                                                        <p>In this case, the plain data is lost. So make sure to work on a copy of the original database.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>Several types of data can be anonymized, according to distinct substitution methods that are deterministic and non-reversible:</p>
+                                            <ul>
+                                                <li>
+                                                    <p><u>strings</u> have each alphabetical character substituted for another alphabetical character;</p>
+                                                    <blockquote>
+                                                        <p>For example, <code>John Doe</code> becomes <code>Xert Okl</code>.</p>
+                                                    </blockquote>
+                                                    <div class="notices info">
+                                                        <p>Diacritical characters are replaced by a non-diacritical equivalent.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p><u>numbers</u> have each digit substituted for another digit;</p>
+                                                    <blockquote>
+                                                        <p>For example, <code>54689</code> becomes <code>32016</code>.</p>
+                                                    </blockquote>
+                                                </li>
+                                                <li>
+                                                    <p><u>emails</u> have the username anonymized, while leaving the domain name as is;</p>
+                                                    <blockquote>
+                                                        <p>For example, <code>johndoe@contoso.com</code> becomes <code>xertoekl@contoso.com</code>.</p>
+                                                    </blockquote>
+                                                </li>
+                                                <li>
+                                                    <p>Active Directory's <u>RDN</u> properties (Relative Distinguished Names), in the <em>attribute=value</em> format, are anonymized via the string method on the value, leaving the attribute as is.</p>
+                                                    <blockquote>
+                                                        <p>For example, <code>CN=John Doe</code> becomes <code>CN=Xert Okl</code>.</p>
+                                                    </blockquote>
+                                                </li>
+                                            </ul>
+                                            <h2 id="examples">Examples</h2>
+                                            <h3 id="anonymizing-a-csv-file">Anonymizing a CSV file</h3>
+                                            <p>The following example anonymizes the <code>first_name</code>, <code>last_name</code>, <code>email</code> and <code>phone</code> column of the following CSV file:</p><pre class="csv" xml:space="preserve"><code>
+id,first_name,last_name,email,gender,phone
+1,Darrin,Crumpe,dcrumpe0@nifty.com,Male,2666420820
+2,Lyon,Boddam,lboddam1@eepurl.com,Male,5927617041
+3,Roxana,Prose,rprose2@statcounter.com,Female,5134883113
+4,Vladimir,Grisedale,vgrisedale3@blogtalkradio.com,Male,1338476916
+5,Jaquith,Pendrich,jpendrich4@merriam-webster.com,Female,1894520819
+6,Art,Sweatland,asweatland5@boston.com,Male,5066492715
+7,Lynelle,Klammt,lklammt6@stumbleupon.com,Female,5653774981
+8,Chicky,Blatherwick,cblatherwick7@walmart.com,Male,4095068397
+9,Delilah,Kauscher,dkauscher8@de.vu,Female,9324858513
+10,Estelle,Melmeth,emelmeth9@dot.gov,Female,2176715812
+</code></pre>
+                                            <p>The following command outputs the anonymized data in STDOUT.</p><pre class="powershell" xml:space="preserve"><code>
+./Usercube-Anonymize.exe -n C:/Projects/Usercube/Documentation/exampleSources/Anonymizer/users.csv -s "," --columns first_name,last_name,mail:email,number:phone
+</code></pre>
+                                            <p>The output is:</p><pre class="csv" xml:space="preserve"><code>
+id,first_name,last_name,email,gender,phone
+1,Afccrp,Icqesl,aicqesl0@nifty.com,Male,6111065265
+2,Mdhp,Qhaafe,mqhaafe1@eepurl.com,Male,4665125502
+3,Chlfpf,Schnl,cschnl2@statcounter.com,Female,4230223223
+4,Imfarerc,Ocrnlafml,iocrnlafml3@blogtalkradio.com,Male,2332051621
+5,Jfkqrfg,Slpacrig,jslpacrig4@merriam-webster.com,Female,2260465226
+6,Fcf,Nalffmfpa,fnalffmfpa5@boston.com,Male,4511066524
+7,Mdplmml,Bmfeef,mbmfeef6@stumbleupon.com,Female,4143550622
+8,Igribd,Qmffglcarib,iqmffglcarib7@walmart.com,Male,0564512365
+9,Almrmfg,Bfqniglc,abfqniglc8@de.vu,Female,6360242423
+10,Lnflmml,Elmelfg,lelmelfg9@dot.gov,Female,6251524226
+</code></pre>
+                                            <h3 id="anonymizing-a-sql-server-table">Anonymizing a SQL Server table</h3>
+                                            <p>The following example <u>overwrites</u> the <code>UR_Resources</code> table of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s database with anonymized data for the <code>C3</code>, <code>C8</code>, <code>CA</code>, <code>CB</code>, <code>CC</code> and <code>CD</code> columns for all resources whose <code>Type</code> is <code>17</code>.</p><pre class="powershell" xml:space="preserve"><code>
+.\Usercube-Anonymize.exe --connection-string "data source=.;Database=Usercube;Integrated Security=SSPI;Min Pool Size=10;encrypt=false" --table UR_Resources --columns "number:C3,C8,number:CA,mail:CB,number:CC,number:CD" --select-query "select * FROM UR_Resources WHERE Type = 17"
+</code></pre>
+                                            <h2 id="arguments">Arguments</h2>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Argument Name</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Details</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>--columns<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />Strings<br /><br /><strong>Description</strong><p>Columns from the CSV or SQL database that need anonymizing.</p><strong>Usage</strong><p>The value is a string sequence in the form <code>type:columname</code>, separated by a coma <code>,</code>, where <code>type</code> is used to choose the anonymize algorithm from among the following formats: <code>string</code> (default value); <code>mail</code>; <code>number</code>; <code>rdn</code>, and where <code>columnname</code> is the actual name, not case-sensitive, of the column to anonymize.<br /></p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>--connection-string<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Connection string to the SQL Server database to be anonymized.<br /><strong>Note:</strong> required when anonymizing a database.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>--csv-separator (-s)<br /><span class="optionalAttribute">default value: ;</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Separator of the input CSV file, provided between simple quotes.<br /><strong>Note:</strong> used only when anonymizing a CSV file.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>--entry-file (-n)<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Path to the input CSV file to anonymize.<br /><strong>Note:</strong> required when anonymizing a CSV file.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>--no-transaction<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />No Value<br /><br /><strong>Description</strong><p>Disables the SQL transaction for the request made by the anonymizing tool to the target SQL Server database.<br /><strong>Warning:</strong> NETWRIX recommends using this option <u>only when</u> using transactions leads to a failure (exceeded RAM usage, exceeded CPU usage), because it could corrupt the data from the database. Make sure to prepare a backup of the database before using this option.<br /><strong>Note:</strong> used only when anonymizing a database.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>--output (-o)<br /><span class="optionalAttribute">default value: STDOUT</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Path of the output CSV file to write the anonymized data.<br /><strong>Note:</strong> used only when anonymizing a CSV file.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>--select-query (-q)<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>SQL query to filter the rows to be anonymized.<br /><strong>Note:</strong> used only when anonymizing a database, and useful only when the query includes a "WHERE" condition, otherwise the <code>--table</code> and <code>--columns</code> arguments are enough.</p><strong>Usage</strong><p>The table targeted by the query must be on the table specified in <code>--table</code>.<br /></p><strong>Examples</strong><p><code>SELECT Id, name, firstName FROM Resources WHERE resourceType = 'Person'</code> is a query with a simple condition.<br /><code>SELECT * FROM Persons WHERE resourceType = 'Person' AND specialFlag = 'TopSecret'</code> selects all columns, and adds a specific condition.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>--table (-t)<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Name of the table from the SQL Server database to be anonymized.<br /><strong>Note:</strong> required when anonymizing a database.</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

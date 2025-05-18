@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Ticketing System Integration" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>ServiceNow</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">ServiceNow</h1>
+                                        <div class="toc-macro"/><h2 id="features_and_benefits">Features and Benefits </h2>
+                                        <p>With <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span>'s integration of <b>NetSuite </b>and <b>ServiceNow</b>, you can use the <b>ServiceNow</b> tool while we automatically add and track the associated changes in your NetSuite account. The integration eliminates the need for double entry in the two systems.</p>
+                                        <p>The ServiceNow integration automatically syncs ServiceNow with NetSuite:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Creates a corresponding Change Request when a ServiceNow ticket is generated.</p>
+                                            </li>
+                                            <li>
+                                                <p>Updates NetSuite with the corresponding customizations.</p>
+                                            </li>
+                                            <li>
+                                                <p>Sets the Change Request status to <b>Approved</b>.</p>
+                                            </li>
+                                        </ul>
+                                        <p>Change Managers and System Administrators quickly realize the integration benefits:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Uses ServiceNow  to organize their development process.</p>
+                                            </li>
+                                            <li>
+                                                <p>Maintains data integrity within ServiceNow and NetSuite .</p>
+                                            </li>
+                                            <li>
+                                                <p>Streamlines processes for updating daily activities and tasks.</p>
+                                            </li>
+                                            <li>
+                                                <p>Reduces turnaround time for change deployments.</p>
+                                            </li>
+                                            <li>
+                                                <p>Eliminates waiting for others to approve a change request.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="technical_considerations">Technical Considerations </h2>
+                                        <p>The following should be considered prior to deploying the ServiceNow integration:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>The integration is a client script that can be enabled or disabled by form, user, or role. It has high order value to ensure it is the last thing to run and does not interrupt any other process.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>All functions are self-executing, complying with ServiceNow's best practices.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>No DOM manipulation or global scripts are deployed.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>No external libraries are needed. It is plain JavaScript.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>No direct or custom database access is required.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>NetSuite connections use the REST ServiceNow interface, executing on the client side to prevent server load.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="servicenow_integration_process_flow">ServiceNow Integration process Flow </h2>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/ServiceNowFlow.PNG"/> </p>
+                                        <h2 id="deployment_process">Deployment Process </h2>
+                                        <p>This process is performed by the ServiceNow Administrator.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Create a ServiceNow ticket for deployment.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>Select Account</b> to connect to <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Add customization to the ServiceNow ticket:
+				</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Parsed from text with script identifiers.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Added as customizations using the <b>Connector </b>tab.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click <b>Push Deployment Record</b> when complete. A Change Request is created using the changes in the ServiceNow ticket.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Start a <b>Respider </b>to create the Change Log and documents.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

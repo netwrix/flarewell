@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_CSH_NPR_Skin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="online">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Configure Cisco Meraki Devices</title>
+        <!-- Google Tag Manager -->
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NKJ33G');</script> -->
+        <!-- End Google Tag Manager -->
+        <link rel="shortcut icon" href="https://img.netwrix.com/fav.ico" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1260px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJ33G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2538779-18">
+                                    </script>
+                                    <script>/* <![CDATA[ */
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-2538779-18');
+		/* ]]> */</script>
+                                    <div class="searchbar">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search here" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="main">
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="toc">
+                                                <ul class="nocontent menu _Skins_TOC mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Auditor__Auditor.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="content">
+                                                <div role="main" id="mc-main-content">
+                                                    <h1>Configure Cisco Meraki Devices</h1>
+                                                    <p>To configure Cisco Meraki devices, configure the Syslog server for each of your networks. </p>
+                                                    <p class="Note"><span class="mc-variable Netwrix.Company variable">Netwrix</span> recommends assigning a unique identificator to each Cisco Meraki device; otherwise, the product may count them as a single anonymous device.</p>
+                                                    <p>Follow the steps to configure the Syslog server.</p>
+                                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Sign in to <a href="https://account.meraki.com/secure/login/dashboard_login">Cisco Meraki Dashboard</a>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Navigate to <b>Network wide</b> &gt; <b>Configure</b> &gt; <b>General</b>.</p>
+                                                    <p style="text-align: center;">
+                                                        <img src="../../../Resources/Images/Auditor/ManualConfig/NAND_Meraki_Network.png" style="width: 592px;height: 392px;" />
+                                                    </p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Locate the <span class="semibold">Reporting</span> section and click <span class="semibold" style="font-weight: bold;">Add a syslog server</span>.</p>
+                                                    <p style="text-align: center;">
+                                                        <img src="../../../Resources/Images/Auditor/ManualConfig/NAND_Meraki_Server.png" style="width: 604px;height: 123px;" />
+                                                    </p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>In the dialog that opens, complete the following fields:</p>
+                                                    <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 250px;" />
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Option</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <p>Server IP</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <p>Provide the IP address of the computer that hosts your <span class="mc-variable MyVariables.NAC variable">Netwrix Auditor Server</span>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <p>Port</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <p>Provide the port configured in your <span class="mc-variable MyVariables.MO variable">monitoring plan</span> for Network Devices (514 by default). See the<a href="../../Admin/MonitoringPlans/NetworkDevices.htm" target="_parent" title="Network Devices Plans" alt="Network Devices Plans" class="MCXref xref">Network Devices</a> topic for additional information.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                                    <p>Roles</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                                    <p>Select the following roles:</p>
+                                                                    <ul>
+                                                                        <li><span class="semibold">Appliance event log</span>
+                                                                        </li>
+                                                                        <li> <span class="semibold">Switch event log </span></li>
+                                                                        <li><span class="semibold">Wireless event log</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <h3>Cisco Meraki Devices Configuration</h3>
+                                                    <p class="Note">If you need any additional information about the Cisco Meraki devices configuration, refer to Cisco documentation: <a href="https://documentation.meraki.com/zGeneral_Administration/Monitoring_and_Reporting/Syslog_Server_Overview_and_Configuration" target="_blank" title="Syslog Server Overview and Configuration" alt="Syslog Server Overview and Configuration">Syslog Server Overview and Configuration</a>.</p>
+                                                    <p>Review a full list of object types <span class="mc-variable MyVariables.ProductName variable">Netwrix Auditor</span> can collect on Cisco Meraki network devices.</p>
+                                                    <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 169px;" />
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 169px;" />
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 169px;" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Object type</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1" style="text-align: left;">Actions</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">Event ID</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <p>&#160;</p>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2" data-mc-conditions="">
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" colspan="3">
+                                                                    <p colspan="3" style="text-align: center;"><span class="semibold">Cisco Meraki</span>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" rowspan="2">
+                                                                    <p>Authentication</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Successful Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>716038</li>
+                                                                        <li>
+                                                                            <p>113012</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>client_vpn_connect</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>authentication on</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=8021x_auth</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=8021x_eap_success</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=splash_auth</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=wpa_auth</code>
+                                                                            </p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2" data-mc-conditions="">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Failed Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>113020</li>
+                                                                        <li>
+                                                                            <p>113015</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=8021x_eap_failure</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=disassociation</code>
+                                                                            </p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" rowspan="3">
+                                                                    <p>Session</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Successful Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p>716001</p>
+                                                                        </li>
+                                                                        <li>713228</li>
+                                                                        <li>
+                                                                            <p>722033</p>
+                                                                        </li>
+                                                                        <li>722022</li>
+                                                                        <li>
+                                                                            <p>725001</p>
+                                                                        </li>
+                                                                        <li>725002</li>
+                                                                        <li>
+                                                                            <p>725003</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Failed Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>716039</li>
+                                                                        <li>
+                                                                            <p>722056</p>
+                                                                        </li>
+                                                                        <li>725006</li>
+                                                                        <li>
+                                                                            <p>725014</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Logoff</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>716002</li>
+                                                                        <li>
+                                                                            <p>713259</p>
+                                                                        </li>
+                                                                        <li>302014</li>
+                                                                        <li>
+                                                                            <p>302304</p>
+                                                                        </li>
+                                                                        <li>302016</li>
+                                                                        <li>
+                                                                            <p>722023</p>
+                                                                        </li>
+                                                                        <li>725007</li>
+                                                                        <li>
+                                                                            <p>722030</p>
+                                                                        </li>
+                                                                        <li>722031</li>
+                                                                        <li>
+                                                                            <p>113019</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>client_vpn_disconnect</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=8021x_deauth</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=8021x_client_deauth</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=wpa_deauth</code>
+                                                                            </p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2" data-mc-conditions="">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <p>Rule</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Activated</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><code>ids-alerts</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>security_event ids_alerted</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>security_event security_filtering_file_scanned</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>security_event security_filtering_disposition_change</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=device_packet_flood</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=rogue_ssid_detected</code>
+                                                                            </p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><code>type=ssid_spoofing_detected</code>
+                                                                            </p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                                    <p>URL</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1" style="text-align: left;">
+                                                                    <ul>
+                                                                        <li style="text-align: left;">Read / Failed read</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>716003</li>
+                                                                        <li>
+                                                                            <p>716004</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

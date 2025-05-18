@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|All Things Installation &amp; Upkeep|[%=System.LinkedTitle%]|Best Practices / Keeping up to Date with releases">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Using Rings to Test and Update the Endpoint Policy Manager Client-Side Extension and/or Cloud Client (And How to Stay Supported)</title>
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Using Rings to Test and Update the Endpoint Policy Manager Client-Side Extension and/or Cloud Client (And How to Stay Supported)</h1>
+                                    <p>This topic will cover how to  best pre-test a Client-Side Extension (CSE) roll-out (with or without the Cloud Client), before deploying it to all end-computers. It is not recommended to deploy the latest CSE to all your machines at once whenever a new version is released.</p>
+                                    <h2>Definitions</h2>
+                                    <p>CSE (Client Side Extension) — This is the client-side component that must be installed on all endpoints for the product to function.</p>
+                                    <p>Cloud Client  — Available only within the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud portal, it connects the machine to <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud, downloads licenses, communicates with the cloud, downloads policies, and uploads event log files. On-Prem or MDM customers typically need only the CSE. <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud users need both.</p>
+                                    <p>
+                                        <h2>Importance of Using the Latest Version</h2>
+                                    </p>
+                                    <p>Only the latest CSE and Cloud Client are officially supported to ensure access to the latest features and bug fixes, which minimizes the risk of encountering untested upgrade paths or outdated behaviors. Maintaining updated systems ensures optimal performance and security.</p>
+                                    <p>&#160;</p>
+                                    <p><span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> acts as part of the operating system and helps you manage important security and configuration items, but since no product is bug free, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> cannot guarantee that any updated client-side extension (CSE) will work completely with what you already have. It is recommended to test a newly provided CSE and/or Cloud Client on a small group first and verify that they are working the way you expect before you deploy them out to all your machines. </p>
+                                    <p>Avoid a situation where you mass-deploy an untested CSE and/or Cloud Client to 100% of your machines. Only to find that you have some problem you need to back out of. This can be very time consuming and difficult to do. Instead, if you test the CSE and/or Cloud Client before a mass roll-out, you avoid these potential issues and will have increased confidence to roll it out to all your machines.</p>
+                                    <h2>Understanding the Microsoft Ring Model for Rollouts</h2>
+                                    <p><span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> is not alone in wanting to ensure your confidence during updates. Indeed, Microsoft also has this same concern and the same recommendation against upgrading all machines at the same time. Ever since Windows 10 shipped, Microsoft has recommended a "Ring Model" approach to updating Windows. This is because Windows is constantly updated, every month for bug fixes and twice a year for huge upgrades. When Windows itself gets updated, there are controls available to help you segregate machines so you know in advance which machines will get which new software. These separate groups are known as "deployment rings," "update rings," or just "rings."</p>
+                                    <p>The basic idea behind rings is the following:</p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Allocate 2–5% of your computers to get the latest update (as soon as possible). If something goes wrong, you will know about it now, and not later when you've rolled it out to your whole estate.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>If all goes well, increase the percentage of computers with the update to 10–50%.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>If there are no issues, increase that to 51–100%.</p>
+                                    <p>It is recommend to become familiar with Microsoft's idea of rings using the following resources:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Microsoft documentation: <a href="https://learn.microsoft.com/en-us/windows/deployment/update/waas-servicing-strategy-windows-10-updates" target="_blank" title="Prepare a servicing strategy for Windows client updates" alt="Prepare a servicing strategy for Windows client updates">Prepare a servicing strategy for Windows client updates</a></p>
+                                        </li>
+                                        <li>
+                                            <p><span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>'s blog post: <a href="https://www.policypak.com/resources/pp-blog/windows-update-business/" target="_blank" title="Windows Update for Business (WuFB): A Simplified Guide" alt="Windows Update for Business (WuFB): A Simplified Guide">Windows Update for Business (WuFB): A Simplified Guide</a></p>
+                                        </li>
+                                        <li>
+                                            <p>Microsoft Ignite's talk about rings: <a href="https://www.youtube.com/watch?v=omwelzp-Hlw" target="_blank" title="Strategic and tactical considerations for ring-based Windows 10 deployments" alt="Strategic and tactical considerations for ring-based Windows 10 deployments">Strategic and tactical considerations for ring-based Windows 10 deployments</a></p>
+                                        </li>
+                                        <li>
+                                            <p>Jeremy's MDM book (Chapter 9): <a href="https://www.mdmandgpanswers.com/books" target="_blank" title="MDM book" alt="MDM book">MDMandGPanswers.com/book</a></p>
+                                        </li>
+                                    </ul>
+                                    <p>These segmentation blocks are what is referred to as rings. An example of this process is described in this Microsoft's article <a href="https://learn.microsoft.com/en-us/windows/deployment/update/waas-wufb-csp-mdm" target="_blank" title="Use CSPs and MDMs to configure Windows Update for Business" alt="Use CSPs and MDMs to configure Windows Update for Business">Use CSPs and MDMs to configure Windows Update for Business</a>. The basic idea is that you put a delay between your rings. </p>
+                                    <ul>
+                                        <li>
+                                            <p>Initial Pilots (2-5%): No delay; machines get the Microsoft updates immediately.</p>
+                                        </li>
+                                        <li>
+                                            <p>Fast Ring (10-50%): 5-day delay.</p>
+                                        </li>
+                                        <li>
+                                            <p>Slow Ring (51-100%): 10-day delay.</p>
+                                        </li>
+                                    </ul>
+                                    <p style="text-align: center;">
+                                        <img alt="" height="450" src="../../Resources/Images/Install/71_1_hfkb-1094-img-01.png" width="800" />
+                                    </p>
+                                    <p>Microsoft updates can be a little complicated because they also deal with channels, or the types of versions you want to install. Additionally, Microsoft's model is more complex than <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>'s model, because the updates are required and forced. Microsoft Quality Updates (i.e., bugfixes) are required to be performed within 30 days (or they will be installed automatically) and Microsoft Upgrades (i.e., new versions of Windows) are required to be performed within 365 days (or they will be installed automatically).</p>
+                                    <p>However, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> doesn't have any of those requirements or any method to force an update. Instead, our life cycle is pretty simple:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Every 4 to 8 weeks, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> ships a new CSE and/or Cloud Client with bug fixes and new features.</p>
+                                        </li>
+                                        <li>
+                                            <p>That version goes into the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Portal (for CSE) and that CSE is also available for use within <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud. Typically <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud client is updated about the same time (same day, or close to it.)</p>
+                                        </li>
+                                        <li>
+                                            <p>When the update occurs, we notify all customers (primary and secondary technical contacts). Customers are also encouraged to subscribe to <span class="mc-variable Netwrix.Company variable">Netwrix</span> community for all announcements. See the <a href="https://community.netwrix.com/c/policypak/28" target="_blank" title="Netwrix Endpoint Policy Manager Community" alt="Netwrix Endpoint Policy Manager Community">Netwrix PolicyPak Community</a> for additional information.</p>
+                                        </li>
+                                        <li>
+                                            <p>If some known issue occurs within the month, we will occasionally release a hotfix build and generally make no announcement (if low impact, and doesn't affect many customers.).</p>
+                                        </li>
+                                        <li>
+                                            <p>Whichever is the latest CSE and/or Cloud Client in the Portal or <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud, is the only version of the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> that is supported.</p>
+                                        </li>
+                                    </ul>
+                                    <p>This means that you only need to keep one simple MSI up to date for CSEs and one simple MSI up to date for Cloud Client on your endpoints to be at the latest build.</p>
+                                    <p>Remember that when you use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> with Active Directory (SCCM or GPO) or with your MDM service, the latest CSE isn't automatically pushed to your PCs. For <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud customers, the latest CSE isn't dictated to your endpoints either. In all cases it's an admin's choice to opt-in to use the latest CSE and specify where exactly he or she wants to get started using it. </p>
+                                    <p>In the follow sections, we'll provide our recommendations for various <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> products on how to implement a ring policy for <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE updates.</p>
+                                    <h2>Recommendations when using Endpoint Policy Manager Cloud: Rings and Rollouts</h2>
+                                    <p>In <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud, because the concept of "groups" is baked in, you can use a <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud Group like a ring. Simply choose a group and manually specify the use a particular version of the CSE on that group. You can also specify the use a particular version of the CSE everywhere (using the special ALL groups).</p>
+                                    <p>Therefore, our advice would be to do the following:</p>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Set up a group of 2–5% of your computers. When a new CSE and/or Cloud Client is released, you should opt in and use this group to start testing and verify success. If there's a problem you can raise it to the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> support team and we'll work with you.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>If all goes well, you can roll out the latest CSE and/or Cloud Client to more <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud Groups. It only takes one click within the group to select the CSE and/or Cloud Client. Your target rollout for the new CSE should be around 30–50% of your Windows 10 machines. Again, at this point if there's a problem, you can raise it to support and we'll work with you.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>After you've rolled out to 50% of your machines, you should be confident enough to roll it out to all machines.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>When ready, simply pick the remaining <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud Groups and select the latest CSE&#160;and/or Cloud Client to opt-in more groups.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Alternatively, use the special All group to finish your upgrade and mass upgrade the remaining PCs all at once (again, after you've done some pre-testing.)</p>
+                                    <p>See&#160;the <a href="../Video/Cloud/Groups.html" target="_blank" title="Endpoint Policy Manager Cloud Groups CSE and Cloud Client Small-Scale Testing and Updates" alt="Endpoint Policy Manager Cloud Groups CSE and Cloud Client Small-Scale Testing and Updates" class="MCXref xref" xrefformat="{para}">Endpoint Policy Manager Cloud Groups CSE and Cloud Client Small-Scale Testing and Updates</a>&#160;topic for additional information and a video on this process.</p>
+                                    <h2>Recommendations when using Endpoint Policy Manager with your Active Directory: Rings and Rollouts</h2>
+                                    <p>When you're using <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> with Active Directory, you typically only need to update the CSE (and not the Cloud Client). </p>
+                                    <p>There are two ways to make rings when you have machines joined to Active Directory:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Use some 3<sup>rd</sup> party software installation mechanism</p>
+                                        </li>
+                                        <li>
+                                            <p>Use the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> built-in CSE updater.</p>
+                                        </li>
+                                    </ul>
+                                    <h3>Active Directory Option 1: Making Rings with 3<sup>rd</sup> Party software deployment tools (recommended)</h3>
+                                    <p>Chances are you already have some kind of on-prem software deployment system to perform your software updates, such as:</p>
+                                    <ul>
+                                        <li>PDQ Deploy (recommended by us here at <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> for on-prem software installs)</li>
+                                        <li>Microsoft SCCM</li>
+                                        <li>KACE</li>
+                                        <li>Many, many others.</li>
+                                    </ul>
+                                    <p>Whichever software deployment tool you are using, we recommend you use the three ring method mentioned above for your CSE rollout.</p>
+                                    <p>The idea of rings (or collections, groups, etc.) varies from tool to tool in the following ways:</p>
+                                    <ul>
+                                        <li>
+                                            <p>For SCCM, you use collections and make them act like rings.  The rule you create would essentially look for no CSE or an earlier CSE version. See the Microsoft article on <a href="https://learn.microsoft.com/en-us/mem/configmgr/core/clients/manage/collections/create-collections" target="_blank" title="How to create collections in Configuration Manager" alt="How to create collections in Configuration Manager">How to create collections in Configuration Manager</a> for additional information. </p>
+                                        </li>
+                                        <li>
+                                            <p>For PDQ Deploy, you use targets and make them act like rings. You can select Active Directory groups, text files with specific computers, PDQ Inventory groups, and other group lists. See this article on <a href="https://documentation.pdq.com/PDQDeploy/13.0.3.0/index.html?optimize-deploy.htm" target="_blank" title=" Optimizing Deployment" alt=" Optimizing Deployment">Optimizing Deployment</a> for additional information. </p>
+                                        </li>
+                                        <li>
+                                            <p>For other on-prem tools, see your corresponding documentation.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>While it's possible to deploy the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE via Microsoft's Group Policy software installation, it is not recommended. The best practice  to deploy the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE, should you have no on-prem software deployment tool, is the free version of PDQ Deploy. For more information, see the video series<a href="https://www.policypak.com/integration/policypak-and-pdq.html" target="_blank" title="Endpoint Policy Manager and PDQ" alt="Endpoint Policy Manager and PDQ">PolicyPak and PDQ</a>.</p>
+                                    <h3>Active Directory Option 2: Using the Built-in Endpoint Policy Manager CSE Update mechanism</h3>
+                                    <p>Not everyone has a 3rd party software deployment tool. </p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>While it's possible to deploy the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE via Microsoft's Group Policy Software Installation, it&#160;is not recommended. Our official recommended way to deploy the client is, again, via a tool like PDQ Deploy, SCCM, etc.</p>
+                                    <p>As an alternative, you can use the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE Auto-Updater.&#160; The general idea is that if you put the CSE in the Central Store, then the CSE will automatically look for updates, perform the update, and optionally report on the update.</p>
+                                    <p>To be consistent with the idea of Rings, we have added this capability to the configurable options of the CSE Auto-Updater. The CSE Auto-Updater will honor one of two types of rings:</p>
+                                    <ul>
+                                        <li>Ring Type 1: Using specific dates and times to make rings and perform a roll-out. In this style you will set specific dates and times for the machines to get the updates.</li>
+                                        <li>Ring Type 2: Using relative number of hours to make rings and perform a roll-out. In this style you will set your rings apart with number of hours between updates.</li>
+                                    </ul>
+                                    <p>See the   <a href="RingsUpgrade.htm" target="_parent" title="How can I roll out latest Endpoint Policy Manager CSE with Active Directory in a controlled manner using Rings ?" alt="How can I roll out latest Endpoint Policy Manager CSE with Active Directory in a controlled manner using Rings ?" class="MCXref xref" xrefformat="{para}">How can I roll out the latest Endpoint Policy Manager CSE with Active Directory in a controlled manner using Rings ?</a>&#160;topic for additional information.</p>
+                                    <h3>Active Directory Option 3: Using the Built-in Endpoint Policy Manager CSE Update mechanism in an alternate manner.</h3>
+                                    <p>You can use a similar technique as Option 2 which uses an <code>update.config</code> file, but in reverse.  Here's the outline of the process:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Place the updated CSE in the central store</p>
+                                        </li>
+                                        <li>
+                                            <p>Create the <code>update.config</code> file, but specify that the functionwill be disabled and always be off. You would do this with the <code>Enabled=False</code> parameter. &#160;</p>
+                                        </li>
+                                        <li>
+                                            <p>Clients can only be upgraded when an admin (or system wide script) runs a special command:&#160; <code>ppupdate /cseupdatenow /force</code></p>
+                                        </li>
+                                        <li>
+                                            <p>This command will override the <code>Enabled=False</code> parameter and force-update the client with the latest CSE from the Central Store</p>
+                                        </li>
+                                        <li>
+                                            <p>You can automate this "signal" to them using a script, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Scripts &amp; Triggers, SCCM or any other another technique and the machine will upgrade</p>
+                                        </li>
+                                    </ul>
+                                    <h3>Active Directory Option 4: Using Endpoint Policy Manager Remote Work Delivery Manager to specify an update</h3>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span> This is not a best practice, but could work for your situation.</p>
+                                    <p>Another way to make rings would be to use Group Policy to deliver a CSE update via <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Remote Work Delivery Manager.&#160;You could create the rings using Active Directory groups or any other targeting, then, shoot down a CSE update to specific machines as you saw fit.</p>
+                                    <p>See the <a href="../RemoteWorkDelivery/UpdateClientSideExtension.htm" target="_parent" title="How do I use Endpoint Policy Manager Remote Work Delivery Manager to update the Client Side Extension?" alt="How do I use Endpoint Policy Manager Remote Work Delivery Manager to update the Client Side Extension?" class="MCXref xref" xrefformat="{para}">How do I use Endpoint Policy Manager Remote Work Delivery Manager to update the Client Side Extension?</a> and <a href="../Video/RemoteWorkDelivery/UpdateClientSideExtension.html" target="_blank" title="Using Remote Work Delivery Manager to Update the Endpoint Policy Manager Client Side Extension" alt="Using Remote Work Delivery Manager to Update the Endpoint Policy Manager Client Side Extension" class="MCXref xref" xrefformat="{para}">Using Remote Work Delivery Manager to Update the Endpoint Policy Manager Client Side Extension</a>&#160;topics for additional information.</p>
+                                    <h2>Recommendations when using Endpoint Policy Manager with your MDM: Rings and Rollouts</h2>
+                                    <p>The concept of rings with regard to Windows 10 updates and upgrades is built into Microsoft Intune (and perhaps other MDM services). See How To Manage Device's article &#160;<a href="https://www.anoopcnair.com/software-update-patching-options-with-intune/" target="_blank" title="Microsoft use of rings" alt="Microsoft use of rings">Microsoft use of rings</a>&#160;for additional information..</p>
+                                    <p>But the specific idea of using rings to deploy other software (any software), like the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE, is not something native in an MDM service. Therefore, you will need to create computer groups, then assign software to those groups.</p>
+                                    <p>In Intune (and most other MDM services), groups can be simple or dynamic. You might want to create three groups like this:</p>
+                                    <ul>
+                                        <li>Simple group — Hand-picked machines which represent 2–5% of your estate</li>
+                                        <li>Dynamic group at 30% — A group you define with 30% of your Windows 10 computers</li>
+                                        <li>Dynamic group at the remainder (31-100%) — A group you define with the remainder of your Windows 10 computers</li>
+                                    </ul>
+                                    <p>By making the groups dynamic, as computers get enrolled into your MDM service they will automatically be part of the first or second dynamic group. But because the first group is a simple group with hand-specified machines, those machines are the only ones that will get the initial rollout of a new CSE. Then, because the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE is an MSI, you can use the MSI deployment method with your MDM service to target to these groups.</p>
+                                    <h2>How to Stay Supported</h2>
+                                    <p>Earlier we stated that the <b>latest</b> CSE and/or Cloud Client in the Portal or <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud is the only supported version.  This is because the latest version is the one with the most fixes and features.</p>
+                                    <p>You might be wondering if only the very latest CSE version is supported, does that mean that you lose support if you are unable to stay current (or nearly current) with the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE and/or Cloud Client rollouts?</p>
+                                    <p> The answer in summary is no; you are always supported, regardless of the CSE version you have on your machine. You are always welcome to ask questions and open support tickets.</p>
+                                    <p>However, if you find a bug, problem, inconsistency, or other issue, then <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> support will direct you to update (at least) one machine with the very latest CSE and/or Cloud Client on it for investigation. And we will ask for log files from that machine after you have reproduced the issue. In other words, as a general rule, we will typically&#160;not begin to investigate your issue unless you can reproduce it on a machine with the latest CSE and/or Cloud Client. There is simply no value in investigating old CSE behavior because the problem could already be fixed in the latest version. Logging improvements could be present in the latest CSEs and/or Cloud Client. Additionally, if your request involves us investigating the log files, similarly, we will not ask for nor investigate any log files unless the problem is reproducible on the latest CSE and/or Cloud Client.</p>
+                                    <p>From a practical perspective though, you should attempt to have your Windows machines on a Client Side Extension which was  shipped at least within the last full year (six months is better, and three months is even better.) For the Cloud Client, it is recommend you fall no further behind than every 3 months.<p>&#160;</p>  Upgrades <b>should go smoothly</b> from any Client Side Extension to any other Client Side Extension (or Cloud Client to Cloud Client), but those are not expressly or exhaustively tested. We really only test the "previous Client Side Extension to current Client Side Extension" upgrade path. Therefore, when you stay as close to our currently shipping Client Side Extension as possible, you're likely going to get the best experience and latest testing and fewest problems overall.</p>
+                                    <p>Furthermore, because corporate PCs are typically full of applications, system software, and possibly other unusual circumstances, we strongly recommend you have at least one very clean machine for ongoing small-scale initial testing when we release the CSE and/or Cloud Client. </p>
+                                    <p>Such a machine would have:</p>
+                                    <ul>
+                                        <li>Latest version of Windows</li>
+                                        <li>Latest version of Microsoft Edge</li>
+                                        <li>Latest version of Chrome or other browsers</li>
+                                        <li>Only software which <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> might be controlling, such as required with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Application Manager, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Least Privilege Manager, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Start Screen &amp; Taskbar Manager, etc.</li>
+                                        <li>Not much else, and most specifically, no 3rd party system software or A/V software other than <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> </li>
+                                    </ul>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Minimize the exposure to third party problems and you're working cleanly like we are in our testing. You can just hand-install the latest <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE and/or Cloud Client, and do some pre-flight testing before you even get to your rings. Then if you encounter a bug, you can quickly validate your bug report, and collect logs from a machine that's close to you and available whenever you need it, not just when the user is available.</p>
+                                    <h2>Final Thoughts and Recap</h2>
+                                    <p>A Windows roll-out incorporates the concepts of rings so you can confidently roll out Windows as new versions come out, month after month and year after year. <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> encourages you to utilize the same concept of rings when rolling out the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE either for the first time or at update time.</p>
+                                    <p>Use your software deployment mechanism (either an on-prem system, or via MDM or <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud) to make the rings you need. Keep in mind that you typically want to update 2– 5% of your computers for a quick check, then feather it out to about 30%. Finally, after ensuring that everything is working properly, you can roll it out to the remainder.</p>
+                                    <p>If you fall behind, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> has no force update mechanism. You can stay behind and out of date for the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE and/or Cloud Client as long as you want (again, the practical outside length in this is about a year). Again this is not recommended, because  you specifically lose out on new features and fixes in latest CSE.</p>
+                                    <p>Even if you fall out of date with the latest <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> CSE, you are still entitled to support. </p>
+                                    <p>Just remember that you will have to reproduce the issue on a machine with the latest CSE and/or Cloud Client and be prepared to get logs from a very clean machine.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

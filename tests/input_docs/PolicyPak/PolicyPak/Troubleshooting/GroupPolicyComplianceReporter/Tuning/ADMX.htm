@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="_Skins_Netwrix_Website" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|GPO Compliance Pak|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Using ADMX Files to Tune the Auditor</title>
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Using ADMX Files to Tune the Auditor</h1>
+                                    <p>Inside the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR download is the PPGPCR Diagnostics ADMX.ZIP. When unpacked from the ZIP file, you can use the ADMX files to manage and tune <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR or for troubleshooting if necessary. To use the ADMX files, do the following:</p>
+                                    <ul>
+                                        <li>
+                                            <p>If you have a Group Policy Central store, copy the PolicyDefinitions folder into </p>
+                                            <div class="codeSnippet">
+                                                <div style="mc-code-lang: PlainText;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>\\&lt;DC&gt;\sysvol\&lt;domain&gt;\Policies</code></pre>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p>If you do not have a Group Policy Central store, copy the PolicyDefinitions folder to </p>
+                                            <div class="codeSnippet">
+                                                <div style="mc-code-lang: PlainText;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>c:\PolicyDefinitions</code></pre>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p>You can see what copying those files to a Group Policy Central store looks like in Figure 58.</p>
+                                    <p>
+                                        <img src="../../../../Resources/Images/Appendix F - PolicyPak Group Policy Compliance Reporter/Tuning and Troubleshooting_624x274.png" class="img_46" style="width: 624;height: 274;" />
+                                    </p>
+                                    <p>Figure 58. Copying the ADMX files to the PolicyDefinitions folder.</p>
+                                    <p>Now when you edit Group Policy Objects (GPOs), you will see <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR policy settings under <code>Computer Configuration\Policies\Administrative Templates\PolicyPak</code>. The settings to tune <code>PPGPCR.Auditor.exe</code> on endpoints can be seen in the Auditor Endpoints folder, as shown in Figure 59.</p>
+                                    <p>
+                                        <img src="../../../../Resources/Images/Appendix F - PolicyPak Group Policy Compliance Reporter/Tuning and Troubleshooting_1_624x272.png" class="img_117" style="width: 624;height: 272;" />
+                                    </p>
+                                    <p>Figure 59. The policy settings for endpoints.</p>
+                                    <p>The settings and their functions are each presented in the sections that follow. Note that they are not presented in the same order as found in the figure above.</p>
+                                    <h2>Maximum Check-Ins Per Day</h2>
+                                    <p>The "Maximum check-ins per day" setting allows you to limit how many times per day <code>PPGPCR.Auditor.exe</code> will run on an endpoint automatically. The default maximum is 20 audits in a calendar day (not 24 hours from when the computer is started).</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If you were to run <code>PPGPCR.Auditor.exe</code> with the /force switch to manually start the auditing process, it would not count toward this maximum number. The<code> PPGPCR.Auditor.exe</code> can only run with the /force switch when run as SYSTEM (not as an admin).</p>
+                                    <h2>Time Period Allowed to Run</h2>
+                                    <p>The "Time period allowed to run" setting allows you to limit the hours that the auditor will run. This can be useful during times when it is not needed, such as outside of normal business hours. It can also be used if you only want the auditor to run outside of business hours to save bandwidth. The following options are available for the setting:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Default/Not Configured: Runs at all hours</p>
+                                        </li>
+                                        <li>
+                                            <p>Enabled: Runs from 10 AM to 4 PM according to the time zone of the endpoint and is changeable</p>
+                                        </li>
+                                        <li>
+                                            <p>Disabled: Runs at all hours</p>
+                                        </li>
+                                    </ul>
+                                    <h2>Run Auditor on Logon</h2>
+                                    <p>The "Run Auditor on logon" setting controls whether the auditor can run on user login and consume bandwidth during that startup and login process. When allowed, this can cause massive network flow at the start of working hours and can also slow the user's login time. Our recommended approach is to keep the default setting, which will only send <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR auditor data in the background (after the login process). The following options are available for the setting:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Default/Not Configured: Does not run at login</p>
+                                        </li>
+                                        <li>
+                                            <p>Enabled: Runs at login</p>
+                                        </li>
+                                        <li>
+                                            <p>Disabled: Does not run at login</p>
+                                        </li>
+                                    </ul>
+                                    <p>When enabled, the auditor will also trigger and send data when the following GP events occur: </p>
+                                    <ul>
+                                        <li>
+                                            <p>8000 Successful computer end event</p>
+                                        </li>
+                                        <li>
+                                            <p>8001 Successful user end event</p>
+                                        </li>
+                                    </ul>
+                                    <h2>Prevent Auditor from Running</h2>
+                                    <p>To save bandwidth it is recommended to only run the auditor during background events. This is the Default/Not Configured recommendation. You can also prevent the auditor from running during background events by changing the "Prevent Auditor from running upon Group Policy background events" setting to "Disabled." If this policy is set to "Disabled," then you will likely need to enable "PPGPCR Auditor Endpoints: Run Auditor on logon" or you will have no data from the auditor (unless manually run with the <code>/force</code> command). The following options are available for the setting:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Not Configured/Enabled: Runs during background events</p>
+                                        </li>
+                                        <li>
+                                            <p>Disabled: Does not run during background events</p>
+                                        </li>
+                                    </ul>
+                                    <p>When disabled, the auditor will no longer trigger for the following event IDs for background events: </p>
+                                    <ul>
+                                        <li>
+                                            <p>8006 Successful computer periodic refresh event</p>
+                                        </li>
+                                        <li>
+                                            <p>8007 Successful user periodic refresh event</p>
+                                        </li>
+                                    </ul>
+                                    <h2>Run Auditor Upon Network Change</h2>
+                                    <p>The setting "Run Auditor upon network change" controls whether the auditor runs on a network change. This might be useful when computers are offline for a period of time, and then re-connect over wireless or a VPN connection. We recommend you leave this off by default, and acquire auditing data in the background, which will occur during the next background refresh cycle of Group Policy. The following options are available for the setting:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Not Configured/Default: Does not run on a network change</p>
+                                        </li>
+                                        <li>
+                                            <p>Enabled: Runs on a network change</p>
+                                        </li>
+                                        <li>
+                                            <p>Disabled: Does not run on a network change</p>
+                                        </li>
+                                    </ul>
+                                    <p>If enabled, the auditor will trigger for the following event IDs: </p>
+                                    <ul>
+                                        <li>
+                                            <p>8002 Successful computer network change event</p>
+                                        </li>
+                                        <li>
+                                            <p>8003 Successful user network change event</p>
+                                        </li>
+                                    </ul>
+                                    <h2>Run Auditor Upon Manual GPUpdate</h2>
+                                    <p>The setting "Run Auditor upon manual gpupdate" controls whether the auditor runs when a user manually runs GPUpdate. This is enabled by default because, typically, end-users do not run GPUpdate; it is usually run by admins. Therefore, the default is that an Admin would run GPUpdate, which would automatically run the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR auditor and deliver latest data to the server. The following options are available for the setting:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Default: Auditor will trigger when GPUpdate is run manually</p>
+                                        </li>
+                                        <li>
+                                            <p>Enabled: Same as Default / auditor will run upon manual GPUpdate</p>
+                                        </li>
+                                        <li>
+                                            <p>Disabled: Does not trigger the auditor when GPUpdate is run manually</p>
+                                        </li>
+                                    </ul>
+                                    <p>When disabled, the following event IDs are ignored:</p>
+                                    <ul>
+                                        <li>
+                                            <p>8004 Successful computer manual refresh event</p>
+                                        </li>
+                                        <li>
+                                            <p>8005 Successful user manual refresh event</p>
+                                        </li>
+                                    </ul>
+                                    <h2>Run Auditor Immediately</h2>
+                                    <p>The setting "Run Auditor immediately when Scheduled Task configuring Auditor is applied" controls whether or not the auditor will run when a scheduled task it applied. We recommend using the default setting as running the auditor immediately can create massive network flow just after configuring auditor. The following options are available for the setting:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Default: Does not immediately run when the scheduled task is applied</p>
+                                        </li>
+                                        <li>
+                                            <p>Enabled/Not Configured: Does not run immediately after the scheduled task is applied</p>
+                                        </li>
+                                        <li>
+                                            <p>Disabled: Runs immediately on any machine after the scheduled task configuring the auditor is applied</p>
+                                        </li>
+                                    </ul>
+                                    <p>The behavior of the auditor is not affected at the occurrence of any event IDs.</p>
+                                    <h2>Only Run Group Policy Compliance Reporter Auditor on Computer Side</h2>
+                                    <p>The setting "Only run PPGPCR Auditor on computer side, but only when a user is actually logged in" controls whether the auditor runs when no user is logged in to a PC. You might want to set this setting to "Enabled" to only capture auditing data when someone is actually logged in to save bandwidth. The following options are available for the setting:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Default/Not configured: Runs on the computer side regardless of whether a user is logged in or not</p>
+                                        </li>
+                                        <li>
+                                            <p>Enabled: Only runs on the computer side when a user is logged in</p>
+                                        </li>
+                                        <li>
+                                            <p>Disabled: Runs on the computer side regardless of whether a user is logged in or not</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

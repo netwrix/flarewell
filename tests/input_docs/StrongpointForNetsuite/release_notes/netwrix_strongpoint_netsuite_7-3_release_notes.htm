@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Archive" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Core  7.3.2</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <p class="Sb-DocTitle">Netwrix Strongpoint for Netsuite 7.3 Release Notes</p>
+                                        <div class="toc-macro"/><h2 id="core_732">Core  7.3.2</h2>
+                                        <p>April 15, 2024</p>
+                                        <ul>
+                                            <li>
+                                                <p>Improved evaluation for handling customizations in Change Logs that are included in normal bundles to ensure they are set to Compliant. Managed and 3rd party Bundle handling is unchanged.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of Strongpoint Bundle Change Level Processing, ensuring consistency between Change Types.</p>
+                                            </li>
+                                            <li>
+                                                <p>Added a legend to the Environment Compare results.</p>
+                                            </li>
+                                            <li>
+                                                <p> Included User Name in the Change Log for User Provisioning Change Request for role assignment/removal.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="core_731">Core 7.3.1</h2>
+                                        <p>March 18, 2024</p>
+                                        <ul>
+                                            <li>
+                                                <p>Improved handling of fields that are Platform changes not user changes.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of changes to standard NetSuite roles:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Changes to Standard role permissions (internal id &lt; 1000) are flagged as platform changes.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Changes to Custom role permissions are evaluated based on the policy.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>User Role assignment changes are evaluated based on policy.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Streamlined searching for changes for Chart of Accounts.</p>
+                                            </li>
+                                            <li>
+                                                <p>Increased flexibility for routing Agent Change Request approvals to make the process-based approvals similar to ITGC change requests.</p>
+                                            </li>
+                                            <li>
+                                                <p>Updated library to SuiteScript 2.x to support customization audit tags.</p>
+                                            </li>
+                                            <li>
+                                                <p>Updated Strongpoint bundle component changes to be flagged as Managed Bundle instead of nonmaterial SP Bundle Change.</p>
+                                            </li>
+                                            <li>
+                                                <p>Updated the Search results link for <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Reports</b> &gt; <b>Policy Changes</b> to open <b>Strongpoint Policy Changes</b>. This is the same report as the one available in the <b>Reminders</b> portlet.</p>
+                                            </li>
+                                            <li>
+                                                <p>Updated the Strongpoint <i>customscript_flo_create_error_proc_issue</i> script to be a maximum of 4000 characters to avoid a field length error.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="core_7301">Core 7.3.0.1</h2>
+                                        <p>March 1, 2024</p>
+                                        <ul>
+                                            <li>
+                                                <p>Added a saved search <b>Strongpoint Config Value Changes</b> (<i>customsearch_cofgstat_jira_value_changes</i>) to view fields updated by users.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="core_73">Core 7.3</h2>
+                                        <p>February 26, 2024</p>
+                                        <p><a name="Formula" id="Formula"/>New: <b>Formula Update in Searches</b></p>
+                                        <p>The <b>Strongpoint Open Noncompliant Changes</b>, <b>Strongpoint What Changed</b>, and <b>Open Noncompliant Changes - Audit</b> searches criteria has been updated.</p>
+                                        <p>As part of an ongoing effort to minimize non-material change logs and save time on reporting, we have reviewed and updated some of the filters in our non-compliant and what changed compliance reports.</p>
+                                        <p>A filter was discovered in the search criteria that could cause change logs to be excluded. This filter was used during the implementation of change detection through the autospider portlet, to filter out duplicate logs caused by late reconciliation of changes done by our processes. With the improved process scheduling, the filter is no longer needed.</p>
+                                        <p>For some accounts, this may result in additional change logs from previous periods in these reports.  These logs were always available on the customization records and the original change log information will not have changed.</p>
+                                        <p><a name="Jira" id="Jira"/>New: Jira On-Prem</p>
+                                        <p>Atlassian is discontinuing support for the Jira On-Prem solution. Jira Cloud will be the only supported option. You can use the Strongpoint <a href="../api/api_overview.htm" class="MCXref xref">Integration API</a> to create your own integration with your ticketing system.</p>
+                                        <p><b>Resolved Issues</b>
+                                        </p>
+                                        <p>These issues have been resolved in this release:</p>
+                                        <ul>
+                                            <li>
+                                                <p><i>New Fields not detected by scheduled spiders</i>. A usage limit error was fixed so the new fields are now documented.</p>
+                                            </li>
+                                            <li>
+                                                <p><i>Change log for Role changes are showing as Could Not Be Determined</i>. An error was occurring if the access history was blank for an employee.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="sod_165">SoD 1.6.5</h2>
+                                        <p>March 27, 2024</p>
+                                        <ul>
+                                            <li>
+                                                <p>Improved processing workflow for <b>Reevaluate Employee SoD Violations</b> and <b>Strongpoint Create SoD Entity Record</b>.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="sod164">SoD1.6.4</h2>
+                                        <p>February 23, 2024</p>
+                                        <ul>
+                                            <li>
+                                                <p>The Preview SoD pop-up box can now be re-sized.</p>
+                                            </li>
+                                            <li>
+                                                <p>Streamlined the process workflow for Pending Employee Evaluations related to the SoD Processing Status records, to avoid rules getting stuck in the state <b>Retroactive Check in Progress</b>.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="user_access_review_104">User Access Review 1.0.4</h2>
+                                        <p>February 16, 2024</p>
+                                        <ul>
+                                            <li>
+                                                <p>Reviews can become stuck if non-compliant changes occur on a change request created for role modification. If this occurs, the UAR administrator can override the status. A <b>Submit</b> button is available for the Admin and the Owner for the stuck review. The <b>Review Notes</b> status is <b>Admin Change</b> instead of <b>Mark Complete</b>.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="user_access_review_103">User Access Review 1.0.3</h2>
+                                        <p>January 25, 2024</p>
+                                        <ul>
+                                            <li>
+                                                <p>Added <b>Supervisor</b> column to the Membership Review.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/uar_review_supervisor.png" title="UAR Membership Review"/>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>New filters are available. <b>Permission Reviews</b> now have a <b>Status</b> filter. Membership Reviews now have <b>Status</b> and <b>Supervisor</b> filters.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

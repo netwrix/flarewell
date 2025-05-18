@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Archive" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Core 7.2</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <p class="Sb-DocTitle">Netwrix Strongpoint for NetSuite 7.2 Release Notes</p>
+                                        <h2 id="core_72">Core 7.2</h2>
+                                        <p>December 22, 2023</p>
+                                        <p><b>New:</b> <b>Strongpoint Integration API</b></p>
+                                        <p>Strongpoint is excited to release an <a href="../api/api_overview.htm" title="Open API Overview topic" class="MCXref xref">Integration API</a> to enable your developers to support your ticketing systems! Customers enthusiastically embraced our Strongpoint pre-built integrations for Jira, ServiceNow and Zendesk. The API makes this integration functionality available to everyone. Integrating your systems with your Strongpoint account helps you make the most of your change management and ticketing strategies.</p>
+                                        <p>Here are the API highlights:</p>
+                                        <ul>
+                                            <li>
+                                                <p> <b>Customizations</b> can be retrieved from your NetSuite account and can be added and removed from your Change Requests.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Change Requests</b> can be created, updated, retrieved and deleted. </p>
+                                            </li>
+                                            <li>
+                                                <p><b>ERD</b> and <b>Impact Analysis</b> tools are available.</p>
+                                            </li>
+                                            <li>
+                                                <p>API commands are documented in the <a href="../api/api_overview.htm" title="Open API Overview topic" class="MCXref xref">Integration API</a> section of this guide.</p>
+                                            </li>
+                                            <li>
+                                                <p>API commands are available in <a href="http://postman.com/" title="Launch the Postman web site.">Postman</a>, where you can try them out and test them. There are Postman links in this guide.</p>
+                                            </li>
+                                        </ul>
+                                        <p><b>New: Strongpoint Reset Schedule Deployments Suitelet for Sandbox Refresh</b>
+                                        </p>
+                                        <p>NetSuite has removed the scheduled status on scripts after a sandbox is refreshed. This stops the Strongpoint scripts required for environment compares, change requests built to push to production, and other activities. This suitelet enables you to automatically reset all of your Strongpoint scripts. If you have scheduled custom scripts in your sandbox, you must manually set the status after a sandbox refresh.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open your Sandbox.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Open <b>Customization</b> &gt; <b>Scripting</b> &gt; <b>Scripts</b>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Set the Filter <b>Type</b> to <b>Suitelet</b> and the <b>Bundle ID</b> to <b>294336</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/scripts.png" title="Find the Suitelet"/>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click <b>View</b> by the <b>Strongpoint Reset Schedule Deployments</b> suitelet.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Open the <b>Deployments</b> tab.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/script_deploy_tab.png" title="Open the Deployment tab"/>
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click the Suitelet name: <b>Strongpoint Reset Schedule Deployments</b>.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Click on the Script <b>URL</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/script_deploy_url.png" title="Click the Script URL"/>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="sod_163">SoD 1.6.3</h2>
+                                        <p>December 19, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Changed the format of the <b>Reason for Exemption</b> column on the <b>Strongpoint SoD Change Requests (List)</b> report to <b>Formula Text</b>. Due to NetSuite 2023.2 changes, HTML tags were displaying in the report. Refer to  NetSuite Release 2023.2 Support for more details on the NetSuite change.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of inline edits on Employee names. Making an inline name change does not affect open SoD Exemptions for the employee.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading"><b> NetSuite Release 2023.2 Support</b><a name="html_formula_text" id="html_formula_text"/>
+                                        </p>
+                                        <p>The Strongpoint Searches have been updated to support NetSuite's change of <b>Formula (Text) Fields</b> to the new <b>Formula (HTML) Fields</b>. This is a NetSuite security enhancement.</p>
+                                        <p class="note">If you have custom searches, you must update them to support the NetSuite change. To view the list of saved searches in your account that contain code in <b>Formula(Text)</b> fields, open: <br/><b>Lists</b> &gt; <b>Search</b> &gt; <b>Saved Searches with HTML in Formula(Text)</b></p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/formulaHTML.png" title="Run the Saved Search to view changes"/>
+                                        </p>
+                                        <p>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Least Privilege Manager|[%=System.LinkedTitle%]|Business Solutions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Endpoint Policy Manager and WinGet: Overcome UAC prompts when standard users use Windows Package Manager</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Endpoint Policy Manager and WinGet: Overcome UAC prompts when standard users use Windows Package Manager</h1>
+                                    <p>Learn how you can use Application Manager in your MDM environment to manage a myriad of settings for commonly used applications such as Firefox and Java!</p>
+                                    <p><iframe width="1642" height="924" src="https://www.youtube.com/embed/kgp0dKhHuew" title="Endpoint Policy Manager and WinGet: Overcome UAC prompts when standard users use Windows Package Manager" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <p>Hi, this is Jeremy Moskowitz. In this video, I'm going to show you how you can use <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> with winget. Winget is also known as the Windows Package Manager and gives you the ability to quickly download pre-wrapped up applications and get them installed very quickly on a bunch of endpoint machines. The problem is that standard users can't use the tool because everything from winget requires local admin rights. I'm going to show you how you can work around that. To get started with Windows Package Manager or winget, because it's so new, it's not part of the operating system at least in times of this video that I created. You'll have to get it installed as an admin. You go to github.com/microsoft/winget-cli/releases. You'll download the appxbundle and then install it as a local admin. </p>
+                                    <p>When you do, the very next PowerShell you open will enable you to do winget and you could give it a quick test run. You could do winget show and you can see all the applications that are here. I'll just do a winget install vim which is a VI editor. This takes a minute or two downloading from the internet and then you get a UAC prompt. Remember, you can install it as an admin but it won't install as a standard user which is what we're going to fix next. I'm just giving it a quick test run and making sure it all works before we move on to the next step. By the time it's done, you should have a couple of icons. Here we go, right there, recently added. You should be able to run your utility, whatever the thing is that you chose to do. There you go.</p>
+                                    <p>I know how to use VI because I cut my teeth in the ‘90s on this, so I remember VI pretty well, so long story short. Is that how it works? Let me go to Control Panel and try to uninstall it which remember, as of this writing, there's no way to uninstall packages using winget. I'm going to go ahead find that package here. Installed on today and let's go ahead and uninstall it. Again, I'm just walking before I'm running, making sure I can get winget to work.&#160; I'm going to go ahead and continue this. The big problem is that if you try to do what I just tried to do as a standard user, it's not going to work because standard users can't install software. Let me go ahead. In fact, let me show that to you real fast as soon as this is done. </p>
+                                    <p>Once this is uninstalled here, what I'm going to do is I'm going to switch gears over to my WestSalesUser2 guy here, WestSalesUser2. Give him a second to log on. This is my standard user. He's logged on. If he tries to do a winget here, if he tries to do winget install – actually, let's do winger show again. He can at least do that part. Get the packages that are available. If he wants to do winget install vim, here's what it will do. It will download it which is great, but then when it tries to run it, what happens, that shouldn't work. Now we're logged on as WestSalesUser2 and he also has winget. What's actually interesting is even though I don't have Notepad, even though I don't have vim installed anymore, if he tries to do winget install vim, it actually oddly succeeds but actually won't perform the install.</p>
+                                    <p>I don't know what that's all about but that's how it works. It's not there and nothing to see, nothing to do. However, if he does try to install an application like winget install Notepad ++, this is not going to work. It will download it and aha, he gets a prompt with a UAC prompt and this is what we're going to overcome. Now in this first part of the demonstration, if you want to just blanket, let anyone who's a standard user just install anything from winget, that's easy to do. You have to know a little something about where they're being downloaded but I do. </p>
+                                    <p>If you go to app data local packages, Microsoft Desktop Installer and then TempState and then WinGet, you can see there is the Notepad ++ that was downloaded but it couldn't actually run. Everything that happens, happens here in the user's profile, AppData, Local, Packages, Microsoft Desktop Installer, TempState, WinGet. In order to overcome that, I've got a Group Policy object that I've created already called Let my East Sales Users install absolutely anything using winget. I've got this GPO that has these two values in them. One for executables and one for Windows Installer policy. Again, I'm not recommending this. I'm just showing you one way to do this. What I'm doing is I'm making – I'm using for an executable rule that would do the entire folder for %user profile%, AppData, Local, Packages, Microsoft Desktop Installer_ 8weky, whatever that is /TempState/WinGet.</p>
+                                    <p>I'm doing that one for executables and one for Windows Installer policies. I'm letting those things run with elevated privileges. I've got these rules set up and I've got it linked over. Let me go ahead and run gpupdate to just get that from <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> land. Give this a second to settle in. Now what I'll try to do is just rerun the same command. Here we go. Winget install, Notepad ++. Same command. Here we go. Try to download, try to run, bingo, bango, bongo, no UAC prompt. We're off to the races and let's go ahead and see the application. We head over to take a look. Here we go. Notepad ++ installed. This should install absolutely anything now. If you do winget show again, we want to pick a different thing. We now blanketed the ability for them to install anything they want. I don't even know what half these things are. </p>
+                                    <p>Spotify, I know Spotify, but if I wanted to do a winget install Spotify, all right. This will do that. No questions asked. By the time it's over, we should have Spotify. Let's just go ahead and take a look. Installer hash verification fail. Yeah, let's go ahead and say yes to that and see if we get Spotify. There we go. If you wanted to be more specific about what these things are instead of the blanket that I have given you here, let me turn off the rules and show you the trick on how to be more specific. Let me go ahead and take these two rules. I'm just going to unlink the GPO here and uncheck Link Enabled. Then we're going to go back to the way we were with that gpupdate. I've removed the rules. Now we're back to just group policy and Windows by itself. Shouldn't be able to install any application. </p>
+                                    <p>Now even though I have just done that, there actually are going to be some applications that will let you install as a non-admin. For instance, Zoom works. I just tested that. That works. You can install Zoom not being an admin, but most things are going to require an admin. You want to be specific. We know that this is the folder where things happen. If we were to do a winget – let's do one more, let's do show one more time. Let's find another package that we haven't used yet. Let's do wire shark. Winget install wireshark. Now what's going to happen here with wireshark is that it will download which is great. It will try to run as a local admin and then it's going to bomb out because we're not a local admin and if you don't have <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>, then you can't do this magic. </p>
+                                    <p>We'll go ahead and just wait for a quick second here and then we can use it to our advantage. Here's the UAC prompt where again, we know that it's published by the wireshark guys and we actually know what the name is, what the actual executable is. We can be very specific. We can do is take the file that got downloaded here and I'm going to copy it over to my management station or you could create the rule right from here if that's what you wanted to do too. I'm just going to net use, star over two, dc, share, dc2016 share, dc2016 share. I'm going to copy that over to my management station basically. Now that I have it over here on my management station, I actually have everything I need to do. I could do PPLPM Let Wireshark install via <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> and WINGET.</p>
+                                    <p>All right. I'll go ahead and click Edit here. Then I'll dive down under User side, PolicyPak. Go to Least Privilege Manager and I can make a combo rule just like I've done in a million other videos. I can make a New Executable Policy because we saw it as a .exe. I'll use a combo rule and I'm just going to point over to that file. I'm going to go to the Signature and the File Info for that file. I'm going to Select a reference file and pick in my share. I have Wireshark that I just got. Bang. You can see it's signed by the Wireshark guys and the File Info Condition I can say higher than – higher or equals that version number which it will be, and then I'm off to races. I can run that application installer with elevated privileges and I am done. Let's go ahead and try this out again. Now I've got a rule in <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> land that should let this kick off and winget is doing the kicking off part. Let's go ahead and see that it runs after this. </p>
+                                    <p>Now the gpupdate is done. Let me go ahead and rerun that command winget install wireshark. It's going to try to redownload it and re-kick it off. This time <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> is on the case and we've now overcome that UAC prompt. No UAC prompt with winget. There we go. It's all the way installed. The standard user can now run Wireshark and then they're off to the races. That's basically it. If you want to see how we do uninstalls by the way, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> has a little sidecar utility. Look up the video on the helper tools. The helper tools will enable you to use control panel applet idea where you can uninstall things and you can limit what they can uninstall through <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Least Privilege Manager. </p>
+                                    <p>The other way that you can do what I'm showing you here is through <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Scripts Manager. For instance, if I wanted to use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>'s Scripts Manager to – let's pick another application real fast. Pick another application we don't have. We'll go back to winget show. Let's pick one more application. Let's pick Ghostwriter. I don't even know what that is. Let's go ahead and say Ghostwriter. We can do is we can create a Scripts manager item, add a new policy here and all we got to do is do a PowerShell Script with elevated rights. That's going to be winget install ghostwriter. I think that's what that was. Let's take a look one more time. Ghostwriter, yeah. I don't know what that is. We're going to find out together, winget install ghostwriter. That's it. We're going to run Once in <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> land and we'll call this install ghostwriter and then let's go ahead and run gpupdate here. Give this a second to settle in. </p>
+                                    <p>Now that that's done, there we go. Let's take a look. It will take a little while. There we go. There is ghostwriter. I don't know what ghostwriter is but maybe you do and you love it. Anyway, there's your application. Like I said, if you want to do uninstalls and stuff, you have to check out the video called setting up the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Least Privilege Manager Helper Tools. Hopefully, in this video you got three great ideas on how to use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> to either use the Scripts manager, the Least Privilege Manager with a particular rule or the blanket rules if you want to go bananas and let users install anything with winget and overcome UAC prompts. Hope this helps you out. Thank you very much and talk to you soon. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

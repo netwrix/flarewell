@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Automated Search Clean Up</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Automated Search Clean Up</h1>
+                                        <p>The Automated Search Clean Up feature runs as scheduled, or on demand, using custom rules to find and manage Saved Searches. Accumulated searches contribute to inefficiency in NetSuite accounts.</p>
+                                        <p class="note">Review the <a href="automated_search_cleanup_considerations.htm" title="Open Automated Search Clean Up Considerations topic" alt="Open Automated Search Clean Up Considerations topic">Automated Search Clean Up Considerations</a> prior to using this feature.</p>
+                                        <p>Saved Searches are powerful customizations used throughout NetSuite and interconnected to other customizations. As user-created Saved Searches proliferate, NetSuite accounts become inefficient and overall performance degrades. This rules-based tool provides administrators the ability to identify and archive Saved Searches and keep NetSuite accounts organized, easy to understand, and improve efficiency and performance. Archived searches can be restored with <a href="#Limitati">limitations</a>.</p>
+                                        <p>The <b>Automated Search Clean Up</b> tool has two operating modes:</p>
+                                        <ul>
+                                            <li><b>Automatic </b>- scheduled automated search cleanup that runs continuously and completes within 14 days.</li>
+                                            <li><b>Run Now </b>- adhoc run of automated search cleanup that triggers once and completes within 7 days of notifying owners and users. If you choose to not send notifications, searches are archived immediately.</li>
+                                        </ul>
+                                        <p>These searches are excluded from clean up:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Searches from managed bundles</p>
+                                            </li>
+                                            <li>
+                                                <p>Searches from 3rd party bundles</p>
+                                            </li>
+                                            <li>
+                                                <p>Searches with script/script deployment dependencies, workflow dependencies, field/data sourcing dependencies, and documented integration dependencies</p>
+                                            </li>
+                                            <li>
+                                                <p>Searches with role dependencies</p>
+                                            </li>
+                                            <li>
+                                                <p>Searches with group dependencies</p>
+                                            </li>
+                                            <li>
+                                                <p>Agent control searches</p>
+                                            </li>
+                                            <li>
+                                                <p>Searches with Change/Approval Policy requiring a Change Record</p>
+                                            </li>
+                                            <li>
+                                                <p>Search record types not in Suitescript Supported Records</p>
+                                            </li>
+                                        </ul>
+                                        <p>Menu options are available to access the rules and lists:</p>
+                                        <ul>
+                                            <li>Search Clean Up Rules</li>
+                                            <li>Search Clean Up Status</li>
+                                            <li>Archived Searches</li>
+                                            <li>Retained Searches</li>
+                                            <li>Searches To Be Archived</li>
+                                        </ul>
+                                        <div class="toc-macro"/><h2 id="search_clean_up_rules">Search Clean Up Rules</h2>
+                                        <p>Search Clean Up rules are created by the administrator and used to locate Saved Searches matching the rule criteria. Search Clean Up rules are used for both Automatic and Run Now.</p>
+                                        <p>To create or edit rules, access <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b>&gt; <b>Automated Search Clean Up</b> &gt; <b>Search Clean Up Rules</b></p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/autoCleanup.png"/>
+                                        </p>
+                                        <ul>
+                                            <li><b>Name </b>is the assigned name for the <b>Search Clean Up Rule Record</b>.</li>
+                                            <li><b>Rule Owner(s)</b> is the administrator or owners for the rule record. </li>
+                                            <li><b>Description </b>is the purpose of the rule record. An informative description helps administrators easily maintain and identify rules.</li>
+                                            <li><b>Notify Search Owners Prior to Archive</b> check to send email to search owners prior to archive. Default is checked.</li>
+                                            <li><b>Notify Search Users Prior to Archive</b> check to send email to search users prior to archive. Default is checked.</li>
+                                            <li><b>Notify Supervisor for Inactive Owners</b> check to send email to an inactive owner's supervisor. Default is checked.</li>
+                                            <li><b>Automatic </b>is used to include the rule in the automated search. This option is not available until the <b>Preview </b>function has been used.</li>
+                                            <li><b>Inactive </b>check to exclude this Search Clean Up Rule from the automated search.</li>
+                                            <li><b>Filter Summary</b> displays all of the current filters for the rule.</li>
+                                            <li><b>Notes </b>displays information about the Search Clean Up for this rule.</li>
+                                        </ul>
+                                        <p><b>Schedule</b>
+                                        </p>
+                                        <p>This section is available when <b>Automatic</b> is checked.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/autoCleanupScheduler.png"/>
+                                        </p>
+                                        <ul>
+                                            <li><b>Weekly Event</b>: check and enter the <b>Repeat</b> frequency to schedule clean up weekly.</li>
+                                            <li><b>Monthly Event</b>: check and enter the <b>Repeat</b> frequency to schedule clean up monthly.</li>
+                                            <li><b>Yearly Event</b>: check to schedule a yearly run.</li>
+                                            <li><b>Next Run Date</b>: this field is populated by the system, and cannot be edited. The date is added when the schedule is saved.</li>
+                                            <li><b>End By</b>: pick a date to stop running automatic clean up.</li>
+                                            <li><b>No End Date</b>: check to never stop the scheduled clean up.</li>
+                                        </ul>
+                                        <p><b>Basic Filters</b>
+                                        </p>
+                                        <ul>
+                                            <li><b>Search Name </b>filters searches to clean-up by name. Filter operator is <em>startswith </em>and the wildcard <em>%</em> may be used. Default is blank.<br/>			Example: <em>Custom % Search%</em> returns all searches with a name starting with '<em>Custom</em> ' followed by any character and the name must contain '<em>Search</em>' such as <em>Custom Inventory Detail Search</em>.</li>
+                                            <li><b>Search ScriptID</b> filters searches to clean-up by ID. Filter operator is <em>startswith </em>and the wildcard <em>%</em> may be used. Default is blank.<br/>			Example: <em>%testing</em> returns all searches with an ID containing the word '<em>testing</em>' such as <em>customsearch_testing_1</em>.</li>
+                                            <li><b>Months Since Date Last Used, Retained/Restored</b> filters searches by the last run date of the search or the restore/retain date, whichever is the most recent. Searches that have been used, restored, or retained within the specified timeframe are excluded from the search. Default is <b>6</b> months. </li>
+                                            <li><b>Exclude Private Searches</b> excludes searches set as <b>Private </b>by search owners. Default is checked.</li>
+                                            <li><b>Exclude Scheduled Searches</b> excludes searches set to run on a schedule. Default is checked.</li>
+                                            <li><b>Exclude Searches That Send Triggered Emails</b> excludes searches that send scheduled results reports. Default is checked.</li>
+                                            <li><b>Exclude Searches Less Than A Month Old</b> excludes new searches that have not been run. Default is checked.</li>
+                                            <li><b>Exclude Searches Available As Sublist</b> excludes searches available as a sublist in a Record. Default is checked.</li>
+                                        </ul>
+                                        <p><b>Advanced Filters</b>
+                                        </p>
+                                        <ul>
+                                            <li><b>Search Owner(s)</b> filters searches by matching selected owners or if <b>Exclude Owner(s) </b>is checked, to exclude matching owners for the rule. Multiple owners can be selected. Default is blank and unchecked.</li>
+                                            <li><b>Owner's Department(s)</b> filters searches by matching departments to the rule or if <b>Exclude Department(s) </b>is checked, to exclude matching departments for the rule. Multiple departments can be selected. Default is blank and unchecked.</li>
+                                            <li><b>Owner's Subsidiary</b> filters searches by matching subsidiaries to the rule or if <b>Exclude Subsidiary </b>is checked, to exclude matching subsidiaries for the rule. Multiple subsidiaries can be selected. Default is blank and unchecked.</li>
+                                            <li><b>Inactive Owner(s)</b> filters searches by matching inactive owners. Default is blank.</li>
+                                            <li><b>All Inactive Owners </b>filters searches by all inactive owners. Default is unchecked. A maximum of 1000 inactive users are loaded. A warning is displayed if there are additional inactive users.</li>
+                                        </ul>
+                                        <p><b>Excluded Searches From Preview</b>
+                                        </p>
+                                        <p>Lists any searches excluded after the <b>Preview </b>function is used.</p>
+                                        <h3 id="rule_preview">Rule Preview</h3>
+                                        <p>The <b>Preview </b>function provides a quick method to mark Saved Searches to be retained or to included for clean up. The <a href="#run_now" title="Automated Search Cleanup" alt="Automated Search Cleanup">Run Now</a> feature begins an immediate run for the rule.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Administrators can click <b>Preview </b>on an Search Clean Up Rule. <b>Preview </b>displays the rule, filters and conditions.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Review the Search List.<br/>				Check <b>Include </b>to trigger a final notification email to be sent to the owner/user.<br/>			Check <b>Retain Search</b> to keep the search.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <a href="#run_now" title="Automated Search Cleanup" alt="Automated Search Cleanup">Run Now</a> to begin a Search Clean Up for the rule.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click <b>Confirm</b>.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>After previewing, you can click <b>Automatic<a id="automatic" name="automatic"/> </b>on the Search Clean Up Rule to include the rule for automatic searches.</p>
+                                            </li>
+                                        </ol>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanup_preview.png"/>
+                                        </p>
+                                        <h3 id="run_now">Run Now<a id="run_now" name="run_now"/></h3>
+                                        <p>This option immediately begins an Search Clean Up using the current rule.</p>
+                                        <p>If a Saved Search matches the Clean Up Rule:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Summary notification of all the matching saved searches is sent to the rule owner.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Immediate notice to all search owners and search users with their searches that are about to be archived. Notifications include a <b>Retain this Search</b> link. A <b>Preview </b>link is available for the user to view the Search.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>If the <b>Retain Search</b> link is not used and the Saved Search has not been used, final notifications are sent to all search owners and search users seven calendar days after the <b>Run Now</b> option was used. The notification includes the date the search is to be archived.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>If the <b>Retain Search</b> link is not used and the Saved Search has not been used by the archive date:
+				</p><ul><li>Saved Search is archived.</li><li>Archive notifications are sent to rule owner and all search owners/users.</li><li>Search is added to administrator's Archived Searches list.</li><li>Summary notification of all auto-archived searches are sent to the rule owner.</li></ul><p/>
+                                            </li>
+                                        </ol>
+                                        <h2 id="automated_run_workflow">Automated Run Workflow</h2>
+                                        <p><b>Automated Search Clean Up</b> runs continuously comparing searches to all rules marked <a href="#automatic" title="Automated Search Cleanup" alt="Automated Search Cleanup"><b>Automatic</b></a>. Administrators receive weekly summary information containing: <b>identified searches</b>, <b>retained searches</b>, <b>scheduled to be archived searches</b> and<b> archived searches</b>.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>When a Saved Search matches a Clean Up Rule:
+				</p><ul><li>Notification is emailed to the rule owner. The Saved Search is also included in the summary notification to the rule owner.</li><li>Notifications are sent the first closest Sunday since the rule was marked <b>Automatic</b>.</li><li>Notification is emailed to the search owners unless <b>Notify Search Owners Prior to Archive</b> is turned off for the rule.</li><li>Notification is emailed to the search users unless <b>Notify Search Users Prior to Archive</b> is turned off for the rule. </li><li>All email notifications include a <b>Retain this Search</b> link. A <b>Preview </b>link is available for the user to view the Search.</li><li>Saved Search is added to the <b>Automated Search Clean Up</b> &gt; <b>Searches To Be Archived (Auto)</b> list.</li></ul><p/>
+                                            </li>
+                                            <li value="2">
+                                                <p>If the <b>Retain Search</b> link is not used and the Saved Search has not been used, second notifications are sent the following Sunday after the first notification date. The notification includes the date the search is to be archived.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>If the <b>Retain Search</b> link is not used and the Saved Search has not been used by the archive date:
+				</p><ul><li>Saved Search is archived.</li><li>Archive notifications are sent to rule owner and all search owners/users.</li><li>Search is added to administrator's Archived Searches list.</li></ul><p/>
+                                            </li>
+                                        </ol>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanup_tab.png"/>
+                                        </p>
+                                        <h2 id="search_clean_up_status">Search Clean Up Status</h2>
+                                        <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b>&gt; <b>Search Auto Clean Up</b> &gt; <b>Search Clean Up Status</b> to view current status. </p>
+                                        <ul>
+                                            <li><b>Job Type</b>: <b>Run Now</b> or <b>Automatic</b>. </li>
+                                            <li><b>Status</b>:<br/><b>Pending </b>- initial status for the run.<br/><b>Pending Notification</b> - searches have been identified, no notifications sent.<br/><b>In Notice Period</b> - at least one notification has been sent.<br/><b>Processing </b>- search is being auto-archived.<br/><b>Completed </b>- all identified searches have been archived, and email sent to rule owner and administrator.<br/><b>Canceled </b>- <b><a href="#automatic" title="Automated Search Cleanup" alt="Automated Search Cleanup">Automatic</a> </b>checkbox was turned off for the rule.</li>
+                                        </ul>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanup_status.png"/>
+                                        </p>
+                                        <p>Click <b>Notification Tracker</b> on the <b>Notifications </b>tab to launch the tracker.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanup_notifications_tab.png"/>
+                                        </p>
+                                        <h3 id="notification_tracker">Notification Tracker</h3>
+                                        <p>Accesses all of the communications and history for search clean ups. You can list all notifications sent by rule or by the job. Provides traceability between the clean up rules, clean up jobs, and email notifications. </p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanup_notification_tracker.png"/>
+                                        </p>
+                                        <h2 id="retaining_a_search"><a name="Retaining" id="Retaining"/>Retaining a Search</h2>
+                                        <p>Notification emails contain a link to <b>Retain this search</b> for each listed search or <b>Retain All</b> to keep all of them. Use the <b>Preview </b>link to view each Search.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanup_warning.png"/>
+                                        </p>
+                                        <p><b>Retain this search</b> prevents archiving an individual search. The <b>Retain Search</b> form is displayed so you can add the <b>Reason for Retaining</b> the search. Click <b>Save and Exit</b> when complete.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/clean_up_retain_search.png" title="Provide a reason to retain an individual search"/>
+                                        </p>
+                                        <p><b>Retain All</b> opens a page where you can provide the <b>Reason</b> to retain each search. Check the Apply box for each search. When finished, click <b>Retain Search</b>.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/clean_up_retain_all.png" title="Retain All dialog to provide retention Reason"/>
+                                        </p>
+                                        <p>The Retain process:</p>
+                                        <ul>
+                                            <li>Updates the <b>Date Last Used, Retained/Restored</b> to the current date.</li>
+                                            <li>Adds the search to the <b>Automated Search Clean Up</b> &gt; <b>Retained Searches</b> report. The <b>Search Retain Reason</b> is shown on this report.</li>
+                                            <li>Notifies the owners/users the search will be retained.</li>
+                                        </ul>
+                                        <h2 id="auto_archiving_a_search">Auto Archiving a Search</h2>
+                                        <p>If search owners or users do not click on <b>Retain this search</b> in the email notifications, the search is archived. The Archive process:</p>
+                                        <ul>
+                                            <li>Archives the search.</li>
+                                            <li>Adds the search to the <b>Automated Search Clean Up</b> &gt; <b>Archived Searches</b> report.</li>
+                                            <li>Marks Customization record for the search <b>Inactive</b>.</li>
+                                            <li>A <b>Restore </b>button is added to the <b>Clean Up</b> tab on the customization record for the search.</li>
+                                            <li>Auto Archive notifications are sent to the rule owner and administrators. A <b>Restore</b> link is included in the email.</li>
+                                        </ul>
+                                        <h2 id="restoring_an_auto_archived_search">Restoring an Auto Archived Search</h2>
+                                        <p>A NetSuite Administrator can restore an auto archived search with some <a href="#Limitati">limitations</a>. Open the <b>Clean Up</b> tab of the Customization record for the search or the report <b>Automated Search Clean Up</b> &gt; <b>Archived Searches</b>. Click <b>Restore</b>. Or use the <b>Restore </b>link in the email sent to the rule owner and administrators.</p>
+                                        <ul>
+                                            <li>Search is restored with <a href="#Limitati">limitations</a>. Restored searches have a different internal ID from their original version, resetting the audit trail.</li>
+                                            <li>Updates the <b>Date Last Used, Retained/Restored</b> to the current date.</li>
+                                            <li>Adds the search to the <b>Automated Search Clean Up</b> &gt; <b>Retained Searches</b> list.</li>
+                                        </ul>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanup_restore.png"/>
+                                        </p>
+                                        <h3 id="limitations_to_restoring_auto_archived_searches"><a name="Limitati" id="Limitati"/>Limitations to Restoring Auto Archived Searches</h3>
+                                        <p>Items from the <b>Criteria</b> and <b>Results</b> tabs are restored with the exception of <b>Public</b> searches with the <b>Period</b> filter. Auto archiving does not occur with <b>Private</b> searches with the <b>Period</b> filter, as they cannot be deleted or archived.</p>
+                                        <p>The following check boxes on the Search form are not restored if they were checked:</p>
+                                        <ul>
+                                            <li>Available as List View</li>
+                                            <li>Available as Dashboard View</li>
+                                            <li>Available as SubList View</li>
+                                            <li>Available for Reminders</li>
+                                            <li>Show in Menu</li>
+                                        </ul>
+                                        <p>Items from the following tabs on the Search form are not retained when an auto archived search is restored:</p>
+                                        <ul>
+                                            <li>Highlighting</li>
+                                            <li>Available Filters</li>
+                                            <li>Audience</li>
+                                            <li>Email</li>
+                                            <li>Audit Trail: the restored search is assigned a new Internal ID. The audit trail only contains entries for the new Internal ID.</li>
+                                        </ul>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/limitation_restoring_searches.png" title="Search form"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

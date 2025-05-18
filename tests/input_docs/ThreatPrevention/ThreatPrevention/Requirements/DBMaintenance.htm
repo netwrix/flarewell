@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Database Maintenance Feature Requirements</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>Database Maintenance Feature Requirements</h1>
+                                        <p>All operations to configure database maintenance on the <a href="../Admin/Configuration/DatabaseMaintenance/Overview.htm" target="_parent" title="Database Maintenance Window" alt="Database Maintenance Window" class="MCXref xref">Database Maintenance Window</a> are executed by the Enterprise Manager. Therefore,  either the SQL Server account supplied during <span class="mc-variable SI.Product variable">Threat Prevention</span> installation or the Windows account configured to run the Enterprise Manager (for Windows Authentication to the SQL Server)  must have enough rights to execute the Database Maintenance feature. </p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If the account used to run Database Maintenance is changed, it is necessary to manually delete the DBMaintenance SQL Agent Job in the SQL Server Management Studio.</p>
+                                        <p class="Bold_Subheading">Permissions Summary</p>
+                                        <p class="p_3">The database user must have the following rights to run Database Maintenance:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Read/Write permissions in the NVMonitorData database</p>
+                                            </li>
+                                            <li>
+                                                <p>Read/Write permissions in the NVMonitorConfig database</p>
+                                            </li>
+                                            <li>
+                                                <p>Query SQL Agent status</p>
+                                            </li>
+                                            <li>
+                                                <p>Create/Delete/Modify SQL Agent job</p>
+                                            </li>
+                                            <li>
+                                                <p>Query Database size information</p>
+                                            </li>
+                                            <li>
+                                                <p>Execute sp_updatestats for the NVMonitorData database</p>
+                                            </li>
+                                            <li>
+                                                <p>Create Server Link</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Database Permissions</p>
+                                        <p class="p_3">The following rights are required to run database maintenance:</p>
+                                        <ul>
+                                            <li>
+                                                <p>In the master database:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>VIEW SERVER STATE permission</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ALTER ANY LOGIN permission</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ALTER ANY LINKED SERVER permission</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>In the msdb database:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>SQLAgentOperatorRole role</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Permission to select from msdb.dbo.sysjobs</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>In the NVMonitorConfig database:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>db_datareader role</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>db_datawriter role</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>In the NVMonitorData database:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Be owner of this database </p>
+                                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>There is a least privilege option for this requirement. See the <a href="#Least" target="_parent" title="Less Privilege Model for NVMonitorData Database Permission" alt="Less Privilege Model for NVMonitorData Database Permission" class="MCXref xref">Less Privilege Model for NVMonitorData Database Permission</a> topic for additional information.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>See the <a href="../Admin/Overview.htm#Database" target="_parent" title="Database Components" alt="Database Components" class="MCXref xref">Database Components</a> topic for a discussion of these databases.</p>
+                                        <p class="Bold_Subheading">Archive Database Permissions</p>
+                                        <p>If the <b>Move</b> option is selected on the <a href="../Admin/Configuration/DatabaseMaintenance/Archive.htm" target="_parent" title="Archive Data" alt="Archive Data" class="MCXref xref">Archive Data</a> tab of the Database Maintenance window, an additional account must be provided for the destination server/database. This account must have rights to:</p>
+                                        <ul>
+                                            <li>
+                                                <p> Create the database on the specified server</p>
+                                            </li>
+                                            <li>
+                                                <p>Modify the schema</p>
+                                            </li>
+                                            <li>
+                                                <p>Read/write data from the archive database</p>
+                                            </li>
+                                        </ul>
+                                        <h2><a name="Least"></a>Less Privilege Model for NVMonitorData Database Permission</h2>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If this less privileged model is used, then the last step in the Database Maintenance process, executing sp_updatestats, will fail. However, all other steps in the process will complete successfully and all data will be deleted/moved as configured.</p>
+                                        <p>If it is not possible to grant the ‘user’ owner rights to the NVMonitorData database, grant the following instead:</p>
+                                        <ul>
+                                            <li>
+                                                <p>db_datareader role</p>
+                                            </li>
+                                            <li>
+                                                <p>db_datawriter role</p>
+                                            </li>
+                                            <li>
+                                                <p>ALTER ON SCHEMA :: dbo</p>
+                                            </li>
+                                            <li>
+                                                <p>Execute </p>
+                                            </li>
+                                        </ul>
+                                        <h2>Sample Script to Grant Database Maintenance Rights</h2>
+                                        <p>Here is a sample script to give the necessary rights for Database Maintenance.</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: SQL;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #969896; ">/*</span>&#160;<br /><span style="color: #969896; ">*&#160;&#160;Script creates user with a set of minimum required rights to run</span>&#160;<br /><span style="color: #969896; ">*&#160;&#160;Database Maintenance in StealthINTERCEPT (now Threat Prevention) product version 4.1 or newer</span><br /><span style="color: #969896; ">*&#160;&#160;&#160;</span><br /><span style="color: #969896; ">*&#160;&#160;Prerequisites: Corresponding Windows account must already exist</span><br /><span style="color: #969896; ">*&#160;&#160;&#160;</span><br /><span style="color: #969896; ">*/</span><br />&#160;<br /><span style="color: #a71d5d; ">declare</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #a71d5d; ">varchar</span> (<span style="color: #005cc5; ">50</span>) <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'DomainName\UserName'</span>;<br />&#160;<br /><span style="color: #a71d5d; ">declare</span>&#160;<br /><span style="color: #8f3300; ">@q</span> <span style="color: #a71d5d; ">varchar</span>(<span style="color: #005cc5; ">8000</span>),<br /><span style="color: #8f3300; ">@id</span> <span style="color: #a71d5d; ">int</span>;<br />&#160;<br />&#160;<br /><span style="color: #a71d5d; ">begin</span> <span style="color: #969896; ">-- CLEAN</span><br />&#160;<br /><span style="color: #a71d5d; ">use</span> NVMonitorData;<br /><span style="color: #a71d5d; ">if</span> <span style="color: #a71d5d; ">exists</span>(<span style="color: #a71d5d; ">select</span> <span style="color: #005cc5; ">1</span> <span style="color: #a71d5d; ">from</span> sys.database_principals <span style="color: #a71d5d; ">where</span> name <span style="color: #0086b3; ">=</span> <span style="color: #8f3300; ">@usr</span>)<br /><span style="color: #a71d5d; ">begin</span><br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'exec sp_dropuser ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span><span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">end</span>;<br />&#160;<br /><span style="color: #a71d5d; ">use</span> NVMonitorConfig;<br /><span style="color: #a71d5d; ">if</span> <span style="color: #a71d5d; ">exists</span>(<span style="color: #a71d5d; ">select</span> <span style="color: #005cc5; ">1</span> <span style="color: #a71d5d; ">from</span> sys.database_principals <span style="color: #a71d5d; ">where</span> name <span style="color: #0086b3; ">=</span> <span style="color: #8f3300; ">@usr</span>)<br /><span style="color: #a71d5d; ">begin</span>&#160;&#160;&#160;&#160;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'exec sp_dropuser ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">end</span>;<br />&#160;<br /><span style="color: #a71d5d; ">use</span> master;<br /><span style="color: #a71d5d; ">if</span> <span style="color: #a71d5d; ">exists</span>(<span style="color: #a71d5d; ">select</span> <span style="color: #005cc5; ">1</span> <span style="color: #a71d5d; ">from</span> sys.database_principals <span style="color: #a71d5d; ">where</span> name <span style="color: #0086b3; ">=</span> <span style="color: #8f3300; ">@usr</span>)<br /><span style="color: #a71d5d; ">begin</span>&#160;&#160;&#160;&#160;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'exec sp_dropuser ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">end</span>;<br />&#160;<br /><span style="color: #a71d5d; ">use</span> msdb;<br /><span style="color: #a71d5d; ">if</span> <span style="color: #a71d5d; ">exists</span>(<span style="color: #a71d5d; ">select</span> <span style="color: #005cc5; ">1</span> <span style="color: #a71d5d; ">from</span> msdb.sys.database_principals <span style="color: #a71d5d; ">where</span> name <span style="color: #0086b3; ">=</span> <span style="color: #8f3300; ">@usr</span>)<br /><span style="color: #a71d5d; ">begin</span>&#160;&#160;&#160;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'exec sp_dropuser ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">end</span>;<br />&#160;<br /><span style="color: #a71d5d; ">if</span> <span style="color: #a71d5d; ">exists</span>(<span style="color: #a71d5d; ">select</span> <span style="color: #0086b3; ">*</span> <span style="color: #a71d5d; ">from</span> master.sys.server_principals <span style="color: #a71d5d; ">where</span> name <span style="color: #0086b3; ">=</span> <span style="color: #8f3300; ">@usr</span>)<br /><span style="color: #a71d5d; ">begin</span>&#160;&#160;&#160;<br /><span style="color: #a71d5d; ">while</span>(<span style="color: #005cc5; ">1</span><span style="color: #0086b3; ">=</span><span style="color: #005cc5; ">1</span>)<br /><span style="color: #a71d5d; ">begin</span><br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@id</span> <span style="color: #0086b3; ">=</span> <span style="color: #a71d5d; ">null</span>;<br /><span style="color: #a71d5d; ">select</span> <span style="color: #8f3300; ">@id</span><span style="color: #0086b3; ">=</span>session_id <span style="color: #a71d5d; ">from</span> master.sys.dm_exec_sessions <span style="color: #a71d5d; ">where</span> login_name <span style="color: #0086b3; ">=</span> <span style="color: #8f3300; ">@usr</span>;<br /><span style="color: #a71d5d; ">if</span> <span style="color: #8f3300; ">@id</span> <span style="color: #0086b3; ">is</span> <span style="color: #a71d5d; ">null</span><br /><span style="color: #a71d5d; ">break</span>;<br />&#160;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'kill '</span><span style="color: #0086b3; ">+</span> <span style="color: #a71d5d; ">cast</span>(<span style="color: #8f3300; ">@id</span> <span style="color: #a71d5d; ">as</span> <span style="color: #a71d5d; ">varchar</span>);<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">end</span>;<br />&#160;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #df5000; ">'drop login ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>);<br /><span style="color: #a71d5d; ">end</span>;<br /><span style="color: #a71d5d; ">end</span>;<br />&#160;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'CREATE LOGIN ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">'] FROM WINDOWS WITH DEFAULT_DATABASE = [NVMonitorData]'</span><br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br />&#160;<br /><span style="color: #a71d5d; ">use</span> master;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'CREATE USER ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">'] FOR LOGIN ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'GRANT VIEW SERVER STATE TO ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'GRANT ALTER ANY LOGIN TO ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'GRANT ALTER ANY LINKED SERVER TO ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br />&#160;<br /><span style="color: #a71d5d; ">use</span> msdb;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'CREATE USER ['</span><span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">'] FOR LOGIN ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'exec sp_addrolemember ''SQLAgentOperatorRole'',['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'GRANT select ON msdb.dbo.sysjobs TO ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br />&#160;<br /><span style="color: #a71d5d; ">use</span> NVMonitorConfig;<br /><span style="color: #969896; ">-- Uncomment next line on error: The login already has an account under a different user name.</span><br /><span style="color: #969896; ">-- exec sp_changedbowner 'sa'</span>&#160;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'CREATE USER ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">'] FOR LOGIN ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'exec sp_addrolemember ''db_datareader'',['</span><span style="color: #0086b3; ">+</span><span style="color: #8f3300; ">@usr</span><span style="color: #0086b3; ">+</span><span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'exec sp_addrolemember ''db_datawriter'',['</span><span style="color: #0086b3; ">+</span><span style="color: #8f3300; ">@usr</span><span style="color: #0086b3; ">+</span><span style="color: #df5000; ">']'</span>;<br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);<br />&#160;<br /><span style="color: #a71d5d; ">use</span> NVMonitorData;<br /><span style="color: #969896; ">/*</span><br /><span style="color: #969896; ">* To use this list of DB permissions the issue with 'sp_updatestats' should be resolved first</span><br /><span style="color: #969896; ">*</span><br /><span style="color: #969896; ">-- Uncomment next line on error: The login already has an account under a different user name.</span><br /><span style="color: #969896; ">-- exec sp_changedbowner 'sa'</span><br /><span style="color: #969896; ">set @q = 'CREATE USER [' + @usr + '] FOR LOGIN [' + @usr + '];';</span><br /><span style="color: #969896; ">exec(@q);</span><br /><span style="color: #969896; ">set @q = 'exec sp_addrolemember ''db_datareader'',['+@usr+']';</span><br /><span style="color: #969896; ">exec(@q);</span><br /><span style="color: #969896; ">set @q = 'exec sp_addrolemember ''db_datawriter'',['+@usr+']';</span><br /><span style="color: #969896; ">exec(@q);</span><br /><span style="color: #969896; ">set @q = 'GRANT ALTER ON SCHEMA::dbo TO ['+ @usr +']';</span><br /><span style="color: #969896; ">exec(@q);</span>&#160;<br /><span style="color: #969896; ">set @q = 'GRANT EXECUTE TO ['+ @usr +']';</span><br /><span style="color: #969896; ">exec(@q);</span><br /><span style="color: #969896; ">*/</span><br />&#160;<br /><span style="color: #a71d5d; ">set</span> <span style="color: #8f3300; ">@q</span> <span style="color: #0086b3; ">=</span> <span style="color: #df5000; ">'ALTER AUTHORIZATION ON DATABASE::NVMonitorData TO ['</span> <span style="color: #0086b3; ">+</span> <span style="color: #8f3300; ">@usr</span> <span style="color: #0086b3; ">+</span> <span style="color: #df5000; ">']'</span><br /><span style="color: #a71d5d; ">exec</span>(<span style="color: #8f3300; ">@q</span>);</code></pre>
+                                            </div>
+                                        </div>
+                                        <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>Errors may occur if this script  designates an existing user for granting Less Privilege Model permissions for database maintenance. This happens because the user is directed to be dropped and subsequently recreated.</p>
+                                        <p class="Recommended-1" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;&lt;i&gt;RECOMMENDED: &lt;/i&gt;&lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Recommended"><span style="color: #fb8000;" class="mcFormatColor"><b><i>RECOMMENDED: </i></b></span></span></span>Rather than using this script as it is, create a dedicated role for this user with required permission based on the recommended best practices.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

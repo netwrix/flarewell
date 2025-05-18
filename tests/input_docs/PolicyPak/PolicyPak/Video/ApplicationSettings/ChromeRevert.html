@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Application Manager|[%=System.LinkedTitle%]|Misc Tips and Tricks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Chrome Revert Tips (Pre-CSE 1260)</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Chrome Revert Tips (Pre-CSE 1260)</h1>
+                                    <p>Reverting settings using the<span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> Chrome Pak is a little special. Here's the video how-to.</p>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/Nn6Tgbwo7xU" title="Endpoint Policy Manager: Chrome Revert Tips (Pre-CSE 1260)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3 id="transcript" style="text-align: center;">PolicyPak: Chrome Revert Tips (Pre-CSE 1260)</h3>
+                                    <p>Hi. This is Jeremy Moskowitz. In this video, I'm going to show you the current state of affairs when it comes to the strange "un-application" of Chrome settings.<br />We have two Chrome Paks. They're ostensibly the same at this point. They started off life a little different, but they're ostensibly the same. I'm going to demonstrate what happens when if you try to remove settings. I'm going to show you also how to work around it.</p>
+                                    <p>Very often, people will get started with a Chrome Pak. I'm going to just set two arbitrary settings here and show you what happens. Let's say you want to "Show Home button" and "Always show the bookmarks bar." If you right click, you'll see that by default – in fact, it's not changeable – it says it will "Delete this policy setting when it is no longer applied." If you also right click this, you'll see this setting is the same way. I'm just pointing that out for right now.</p>
+                                    <p>When you click "OK" here, let's go ahead and go to our endpoint and log on for the first time here. Let's go ahead and run "Google Chrome." I will tell you that if you're going to be doing these tests, one of the thing you might want to do is either through PolicyPak or temporarily at least you want to not let Google Chrome in the background because if you run GP Update, it won't actually update the settings.</p>
+                                    <p>In fact, that is changeable inside the Pak. I might as well just do it now and get it over with because it's actually a very good setting to have on there. That's in "Advanced" and then I want to uncheck "Continue running background apps when Google Chrome is closed."</p>
+                                    <p>Okay, what I want to do is show you if I take a look at "Settings" here, those are the two settings. Let's pretend now you want to back out of one of those settings. Let's say you want to uncheck "Show Home button." Fine.</p>
+                                    <p>You might think that if you go back to the Pak here and simply uncheck the "Show Home button" and also right click "Always reapply this setting" (in other words, underline means go and no underline means don't go) so therefore you would think that you're not setting it anymore. Well, with regards to the Chrome Pak as it sits right now that's not precisely how it works.</p>
+                                    <p>Let me just prove a point here. I'll show you that it is not going to take effect the way we expect. I'll go ahead and close this out and run "Google Chrome." If we take a look at "Settings," you can see it's still set.</p>
+                                    <p>So what does that mean when it says "Delete this policy setting when it is no longer applied"? With regards to the Chrome Pak, what we're talking about is this will only revert properly when the Group Policy Object itself no longer applies. When the GPO itself no longer applies, then it will behave the way you expect. In fact, let's go ahead and just see what happens.</p>
+                                    <p>Let's go ahead and run GP Update ("<code>gpupdate</code>") here. Okay, we'll close this out. Rerunning "Google Chrome." Remember, I had two settings checked. Both of those settings had the flag called "Delete this policy setting when it is no longer applied." If we take a look at the "Settings" now, the second one got deleted but the first one actually remained. Why is that? Because a couple minutes, remember, we unchecked that checkbox and also de-underlined it.</p>
+                                    <p>Long story short, what you need to do if you need to remove stuff from the Pak items here is – let's go ahead and relink back into it here – you would have the settings checked that you want. Let's go ahead and do that. Let's check both of them. You'll see that "Delete this policy setting when it is no longer applied" is there.</p>
+                                    <p>Then what you should do is get all the settings recognized on the endpoint (by running "<code>gpupdate</code>"). Now we're redelivering both of those checkboxes. There they are. Let's say you only want to get rid of this first one. How do you do that?<br /></p>
+                                    <p>Because they're both set right now, the proper thing to do is like this. It's to simply uncheck "Link Enabled" for the GPO, which will revert all the settings in the Pak. Let's go ahead and see that (run "<code>gpupdate</code>"). </p>
+                                    <p>Now at this point, we're expecting both of those two settings to peel back. Let's go ahead and see if that's true…and it is.</p>
+                                    <p>If you only want the first one to be unchecked, you go back to the Pak. You recheck "Link Enabled" for your GPO, and you change the configuration now inside the entry. If we go over to this guy and we don't want this one to take effect anymore, now we're saying goodbye to that one setting. We're leaving this setting in place, and we're saying no more to this setting.</p>
+                                    <p>The net result here will be when we run GP Update ("<code>gpupdate</code>") we'll have the one checkbox we want and not get the other checkbox we don't want. Let's rerun "Google Chrome" here, and that's exactly what we wanted.</p>
+                                    <p>The point of the story is when it says "Delete this policy setting when it is no longer applied," we're talking about the Pak not the particular setting, so the whole Pak has to fall out of scope. This means you could either make the GPO unlinked, you could move the guy from "Sales" to marketing – any number of things to make it fall out of scope. That's when the Chrome Pak will revert itself.</p>
+                                    <p>That's the state of affairs right now. We know that it needs some improvement, but we're working on it and it's on our roadmap.</p>
+                                    <p>Thanks so very much, and we'll talk to you soon.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

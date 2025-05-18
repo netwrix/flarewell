@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Application Manager|[%=System.LinkedTitle%]|Chrome (all videos)">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Manage Google Chrome using Group Policy, SCCM or your own management utility</title>
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Manage Google Chrome using Group Policy, SCCM or your own management utility</h1>
+                                    <p><span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span>: Manage Google Chrome using Group Policy, SCCM or your own management utility</p>
+                                    <p><iframe width="1477" height="831" src="https://www.youtube.com/embed/hjXlY4a1H2Q" title="Endpoint Policy Manager: Manage Google Chrome using Group Policy, SCCM or your own management utility" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3>Manage Google Chrome using Group Policy video transcript</h3>
+                                    <p>Hi, everybody. This is Jeremy Moskowitz, former Group Policy MVP and Founder of PolicyPak Software. In this video, I'm going to show you how to manage Chrome using Group Policy or your own systems management utility.</p>
+                                    <p>To get started, let's set the stage. I'm just a guy called "eastsalesuser4," a standard user, no admin rights. Even a standard user can get into all sorts of mischief. If we go to "Settings" here for Chrome and take a look at "Show advanced settings," let's take a look at what's available to the user.</p>
+                                    <p>Some of these defaults that Chrome puts in are pretty good like "Enable phishing and malware protection." That's good, but the user just clicks it, closes out Chrome, and now they're not protected – not good for you. Just to prove a point here, if I go back to "Settings" here and go back to "Show advanced settings," you can see that's not being enforced in any meaningful way.</p>
+                                    <p>That's thing number one. Thing number two, let's say this idea here, "Offer to save passwords I enter on the web," not good if it is checked. Let me say that again. If this checkmark is checked, that's not good because then this machine becomes less secure. The bad guy steals a laptop, and they can start surfing the websites that your users have used, and then they can get into all sorts of places that you probably don't want to bad guys to go. You want this unchecked, but how are you going to do that? That's what we're going to show you next.</p>
+                                    <p>Lastly, let's take a look at "Content settings." One of the scariest settings overall is "Ask me when a site requires access to my camera and microphone." The user can just say, "Yes, I would like to do that," and the camera turns on, the microphone turns on and your secrets go right out the door. Instead, wouldn't it be better to "Do not allow sites to access my camera and microphone"? I'm going to show you how to do that.</p>
+                                    <p>Let's go ahead and close this out and go over to the Group Policy editor. We'll "Create a GPO in this domain, and Link it here…" and we'll call this "Manage Chrome using PolicyPak." Click "Edit" here, and we'll dive down under user side, "PolicyPak/Applications/New/Application" and there it is – "PolicyPak for Google Chrome" – as well as lots of other great applications like "Internet Explorer," "Java," "Lync," "Mozilla Firefox," "Adobe Reader." Actually, we have about 100 Paks, so you can just snap those in and you're ready to rock.</p>
+                                    <p>We'll go ahead and pick "PolicyPak for Google Chrome" here, and let's go ahead and dictate our settings. If you'll remember, that user unchecked "Enable phishing and malware protection." We're going to "Always reapply this setting." We're going to just check that checkbox and make sure that it's always set.</p>
+                                    <p>Remember this other guy, "Offer to save passwords I enter on the web"? We want to if it is checked, uncheck it because when it is checked – which is the default – that means you're less secure, so we're going to uncheck that checkbox. We're delivering uncheck.</p>
+                                    <p>Let's go to "Content Settings," and we'll go all the way to the bottom here. Remember, the default is for "Ask me when a site requires access to my camera and microphone." Let's go ahead and dictate "Do not allow sites to access my camera and microphone."</p>
+                                    <p>Let's go over to our target machine. We'll run "gpupdate." Now, you don't have to use Group Policy to manage Chrome with PolicyPak if you don't want to. You can use SCCM. You can use LANDesk, Ghost, KACE or any other management tool you want. We just happen to be using Group Policy in these examples.</p>
+                                    <p>Now that that's all done, let's go ahead and run "Google Chrome" and see what happens. We'll go over to our "Settings" here. You can see "Some settings are managed by your administrator."</p>
+                                    <p>We'll "Show advanced settings," and let's take a look. "Enable phishing and malware protection" is checked, and "Offer to save passwords I enter on the web" is unchecked. Excellent. Let's go over to the "Content Settings." If we go all the way to the bottom, we'll see "Do not allow sites to access my camera and microphone."</p>
+                                    <p>What if a user is naughty here and they decide that they should uncheck this guy and recheck this guy? PolicyPak is always working. Even if the computer is offline, PolicyPak is always working for you.</p>
+                                    <p>When we rerun "Google Chrome" and go back over to "Settings" here, and we go back to "Show advanced settings," those two checkboxes are checked and unchecked exactly the way you delivered them.</p>
+                                    <p>That's it. If you're looking to get ahold of the bits, we ask that you join us for our webinar first. Once the webinar is over, we'll hand over the bits and see what kind of trial you want to start, and we'll get you started.</p>
+                                    <p>That's it. If you have any questions, feel free to post them on our support forums. We monitor them around the clock.</p>
+                                    <p>Thanks so much. Talk to you soon.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

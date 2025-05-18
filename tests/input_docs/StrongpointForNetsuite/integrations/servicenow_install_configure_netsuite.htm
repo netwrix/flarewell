@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Ticketing System Integration|ServiceNow" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Installing ServiceNow in NetSuite</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Installing ServiceNow in NetSuite</h1>
+                                        <div class="toc-macro"/><h2 id="install_netsuite_bundle">Install NetSuite Bundle</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Customization</b> &gt; <b>SuiteBundler</b> &gt; <b>Search &amp; Install Bundles</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Search for bundle id <b>311232</b></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click on bundle name <b>ServiceNow Integration</b></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>When the <b>Bundle Details</b> opens, click <b>Install</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall2.png"/>
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p>When <b>Preview Bundle</b> opens, review the bundle and click <b>Install </b>to finish.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b><span class="mc-variable General.MenuName variable">Strongpoint</span> Support</b> &gt; <b>Installation Settings</b> &gt; <b>View</b></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Open the <b>ServiceNow Integration</b> tab.</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>If the <b>Service Now URL</b> is not present:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Click <b>Edit</b>.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Add the url. The format is: <i>https://dev67367.service-now.com/</i></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Click <b>Save</b>.</p>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                        <h3 id="install_servicenow">Install ServiceNow</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Connections &amp; Credentials</b> &gt; <b>Credentials</b>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>New</b>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Select <b>Basic Auth Credentials</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNow_credentials_record.png" title="Create a Credentials Record"/>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Enter the user credentials:<br/><b>User Name</b>: <b>sp-integrations</b><br/><b>Password</b>: Contact your Customer Success Manager to receive the password.<br/>Click <b>Submit</b> when complete.<br/></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Open <b>System Applications</b> &gt; <b>Studio</b> or enter <b>Studio </b>in the Menu Search box.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall4.png"/>
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>If a pop-up window appears, click <b>Import From Source Control</b>.</p>
+                                                <p>
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall5.png"/>
+                                                    <br/>				Otherwise, open <b>File</b> &gt; <b>Import From Source Control</b>.<br/><img src="../Resources/Images/ServiceNowInstall6.png"/></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Enter the required information:    
+                <br/><b>URL</b>: <em><a href="https://github.com/StrongpointGit/strongpoint-ns-ssn.git" target="_blank" title="Install and Configure ServiceNow in NetSuite">https://github.com/StrongpointGit/strongpoint-ns-ssn.git</a></em><br/><b>Credential</b>: Select your credential from the drop down list<br/><b>User Name</b>: sp-integrations
+                <br/><b>Branch</b>: master
+                </p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall7.png"/>
+                                                </p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Click <b>Import</b>. You see the <b>Strongpoint NetSuite Integration</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall7-2.png" title="Select Strongpoint NetSuite Integration"/>
+                                                </p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Click <b>Strongpoint NetSuite Integration</b> to open the Application Explorer. You use this for the <b>Configure ServiceNow</b> procedure.</p>
+                                            </li>
+                                            <li value="10">
+                                                <p>In NetSuite, open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b><span class="mc-variable General.MenuName variable">Strongpoint</span> Support</b> &gt; <b>Installation Settings</b></p>
+                                            </li>
+                                            <li value="11">
+                                                <p>Click <b>Edit</b>.</p>
+                                            </li>
+                                            <li value="12">
+                                                <p>Open the <b>ServiceNow Integration</b> tab and enter your credentials.</p>
+                                            </li>
+                                            <li value="13">
+                                                <p><b>Save</b> your credentials.</p>
+                                            </li>
+                                        </ol>
+                                        <h3 id="configure_servicenow">Configure ServiceNow</h3>
+                                        <p>You can configure ServiceNow for your users:</p>
+                                        <blockquote>
+                                            <p><a href="#Action" class="MCXref xref">Display Action Buttons Only for Specific Conditions</a>
+                                            </p>
+                                            <p><a href="#PushDeploy" class="MCXref xref">Display Push Deployment Record Only Based on State</a>
+                                            </p>
+                                            <p><a href="#Tab" class="MCXref xref">Display Strongpoint NetSuite Tab for Selected Users</a>
+                                            </p>
+                                        </blockquote>
+                                        <h4 id="display_action_buttons_only_for_specific_conditions"><a name="Action" id="Action"/>Display Action Buttons Only for Specific Conditions</h4>
+                                        <p>You can set conditions on NetSuite integration buttons to control when they are displayed on specific change records. If you use ServiceNow, you can set Configuration Items to 		manage change requests for different platforms, projects or products.</p>
+                                        <p class="note">You need to know the IDs of the configuration items to set conditions. Ask your ServiceNow administrator for help.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>In the ServiceNow Application Explorer for the NetSuite Integration, open <b>Server Development</b> &gt; <b>UI Action</b> &gt; <b>Select Account</b></p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall8.png"/>
+                                                    <br/>To open the Application Explorer, open <b>System Applications</b> &gt; <b>Studio</b> and select <b>Strongpoint NetSuite Integration</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Set the <b>Condition</b> field to restrict display based on specific configuration items. If your company uses a different solution to identify changes for the NetSuite platform, contact your ServiceNow administrator to help determine the conditions to be set. In this example, we set the condition to be: <br/><b>current.cmdb_ci == 'configuration_item_sys_id'</b></p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall9.png"/>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <b>Update</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Repeat these steps to complete the setup on the other UI Actions: <b>ERD</b>, <b>Push Deployment Record</b>, <b>Select Customizations</b> and <b>View Impact Analysis</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <h4 id="display_push_deployment_record_only_based_on_state"><a name="PushDeploy" id="PushDeploy"/>Display Push Deployment Record Only Based on State</h4>
+                                        <p>This is an example procedure to display the <b>Push Deployment Record</b> button once a change request has passed the <b>Authorize</b> state. Your organization may have a different approval process.</p>
+                                        <p class="note">You can set any other stage (standard or custom) depending on your approval processes.<br/>					If you need help to determine the correct conditions per your customizations, please contact your Service Now Administrator.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>In ServiceNow, open <b>System Applications</b> &gt; <b>Studio</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Select <b>Strongpoint NetSuite Integration</b>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Open <b>Server Development</b> &gt; <b>UI Action</b> &gt; <b>Push Deployment Record</b></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Set <b>Condition</b> to <b>current.state &gt; -3</b></p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/ServiceNowInstall10.png"/>
+                                                    <br/>				If you set action button conditions in the <a href="#Action" title="Install and Configure ServiceNow in NetSuite" alt="Install and Configure ServiceNow in NetSuite">Display Action Buttons Only for Specific Conditions</a> procedure, add this condition to the existing ones. For example,<br/><b>current.cmdb_ci == 'configuration_item_sys_id' &amp;&amp; current.state &gt; -3</b></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click <b>Update</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <h4 id="display_strongpoint_netsuite_tab_for_selected_users"><a name="Tab" id="Tab"/>Display Strongpoint NetSuite Tab for Selected Users</h4>
+                                        <p>By default, all user can see the Strongpoint NetSuite tab in ServiceNow Change Requests. You can modify this to only allow configured users to see the tab.</p>
+                                        <p> </p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/ServiceNow_tab.png" title="Strongpoint NetSuite tab"/>
+                                        </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Log in to ServiceNow as an administrator to manage your instance.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Obtain the system identifiers for each user you want to have access to the Strongpoint NetSuite tab:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Filter for <b>configuration</b></p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Open <b>Base Items</b> &gt; <b>Computers</b></p>
+                                                        <p class="img-inside-p">
+                                                            <img src="../Resources/Images/ServiceNow_tab1.png" title="Open the ServiceNow Configuration items"/>
+                                                        </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Select the system for the user to grant access to the tab.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Select <b>Copy sys_id</b> from the drop down menu.</p>
+                                                        <p class="img-inside-p">
+                                                            <br/>
+                                                            <img src="../Resources/Images/ServiceNow_tab2.png" title="Select Copy sys_id from the drop down menu"/>
+                                                        </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Paste the identifier in a file where you can access it to add to the script when you are finished locating the system identifiers. An example identifer is <i>b4fd7c8437201000deeabfc8bcbe5dc1</i></p>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li value="3">
+                                                <p>Filter for <b>Studio</b></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Select <b>Strongpoint NetSuite Integration</b>.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Open <b>Client Development</b> &gt; <b>Client Scripts</b> &gt; <b>Strongpoint Initialize</b></p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/ServiceNow_tab3.png" title="Open the Strongpoint Initialize Script"/>
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Add all of your copied System Identifiers to the <b>allowedCIs</b>. Separate multiple IDs with a comma (,). For example:<br/><code>var allowedCIs = ['fe1cc02c735423002728660c4cf6a7dc','b4fd7c8437201000deeabfc8bcbe5dc1'];</code></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Click <b>Update</b>.<br/></p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

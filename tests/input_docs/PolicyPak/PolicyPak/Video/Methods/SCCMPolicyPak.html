@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Getting Started with Endpoint Policy Manager (Misc)|[%=System.LinkedTitle%]|Methods: SCCM (and other on-prem tools) - Deploying real Microsoft GPO and Endpoint Policy Manager settings">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Deploy Endpoint Policy Manager Settings Using SCCM or Other Management System!</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Deploy Endpoint Policy Manager Settings Using SCCM or Other Management System!</h1>
+                                    <p>Do you want to deploy <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> settings, but hate the idea of using Group Policy to do it? You're in luck–this video tells you how to create, export, and deploy <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> magic using your own desktop management system like SCCM or LanDesk!</p>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/n1ZZpUbbNd0" title="Deploy Endpoint Policy Manager Settings Using SCCM or Other Management System!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3 id="transcript" style="text-align: center;">Deploy PolicyPak Settings Using SCCM or Other Management System</h3>
+                                    <p>Hi, this is Whitney with PolicyPak Software. In a previous video, we looked at how to deploy real Group Policy using, well, not Group Policy, using SCCM or some other desktop management system. In this video, we're going to learn how to create PolicyPak magic and then export it and wrap it up in an MSI and deploy it using SCCM or some other system.</p>
+                                    <p>To start off with, what we need to do is create a "New" GPO. I'm going to do that, and I'm just going to call it "PP Settings." Then we're going to need to "Edit" this. So we're starting off in Group Policy, but we're going to end in not Group Policy land. All right, let's just make this a little bit wider.</p>
+                                    <p>We're going to actually use three different components of the PolicyPak software. Here we go. Let's open up this node. I'm going to use the "Application Settings Manager" to manage some Firefox settings. I'm going to use the "<a href="https://www.policypak.com/products/policypak-least-privilege-manager.html" target="_blank" title="Least Privilege Manager">https://www.policypak.com/products/policypak-least-privilege-manager.html</a>" component here to make sure that my users can't download and run unknown ware, malicious software. And I'm going to use the "Browser Router" to make sure that every URL with the word "Google" in it will open up in Chrome, and I'll use it also to <a href="https://www.policypak.com/pp-blog/windows-10-block-websites">https://www.policypak.com/pp-blog/windows-10-block-websites</a> like Facebook.</p>
+                                    <p>Let's start off with the "Application Settings Manager." There are other videos on the website that will go into greater detail on all of these components. For today, all I want to do is just create some settings and then export them and deploy them using not Group Policy.</p>
+                                    <p>Let's go over here. I want to deliver the setting that I want a particular "Home Page" to be there. Let's just go with "www.policypak.com." Then let's also say that we can't have users going into incognito mode. Let's go over to "Extras." We're going to "Turn off private browsing," and we'll save that.</p>
+                                    <p>Now that we've created these settings that will manage Firefox, how are we're going to go about deploying them? We'll start off by exporting them as an XML file that will then get wrapped up in an MSI that we'll deploy using a desktop management system. So we will "Export settings to XML Data File." I'll just put that right on the "Desktop." I'll just call it "FF Settings." There it is right there.</p>
+                                    <p>All right, so now let's hop down to "Browser Router." We're going to start on "Browser Router" by creating selecting "ADD NEW COLLECTION" because I want to put a couple of policies in there. So let's get in there, and I'm going to "ADD NEW POLICY" here. I'll say "Google to Ch." I'll "Wildcard" it. We'll just say anything "*google*" goes to "Google Chrome."</p>
+                                    <p>All right, I'm going to add one more policy ("ADD NEW POLICY") where I say "No FB." Again, I'll just "Wildcard" it ("*facebook*") and I'm going to "Block" it. The "Block Text" I want to be "NO FB FOR YOU!" All right, so now once again I'm going to right click and "Export Collection as XML." I'm just going to call it "BR Settings." There you go. It pops up right there.</p>
+                                    <p>Finally, with "Least Privilege Manager" I'm just going to "ADD NEW SECURE RUN POLICY," which says basically if the file wasn't installed by one of these in the "SecureRun Member" list, then it won't open. So some portable app or malicious software won't be able to accidentally downloaded by your standard user because they're not on this list. Let's say "OK." Let's "Export as XML." We'll just call that "SR Settings" I suppose, and that's that.</p>
+                                    <p>All right, so now we've created our directives. We've exported them as XML. Now what do we do? We're going to use the PolicyPak Exporter Tool to be able to wrap it up in an MSI that can then be deployed using any of a number of different systems – SCCM or KACE or some other system.</p>
+                                    <p>It installs alongside the admin console MSI when you get that installed on your management station. Sometimes it's up here with the "Most used" or Recently Installed. If it's not, just scroll down, find the "PolicyPak" folder and you'll see the "PolicyPak Exporter Tool" right there.</p>
+                                    <p>I'm going to "Create a new MSI installer." Now it wants me to "Add Existing Files." What I want to do is pick up those XML files that we had earlier. So let's grab these three settings. Let's "Open" them all up. We are going to "Install For" "Computer" with a "Target" of "All Users." Then we click "Next."</p>
+                                    <p>We can give it a "Product Name." It's what shows up in the Uninstall a Program, for example, in your Control Panel. Let's call it "PP Settings." We'll click "Next/Next." I am going to go ahead and put this actually in a "SHARE" folder. I'm going to call it "PP Settings," and we are good to go.</p>
+                                    <p>Now before we talk about deployment, I want to go over to my endpoint and look at these ungoverned policies so you can see the before and after. If I come over here and I open up "Mozilla Firefox," it's going to open on whatever this homepage is here. If I want to go to "New Private Window," I absolutely can because these settings aren't governed.</p>
+                                    <p>Also, while I've got a browser up, let's go ahead and go to "google.com" and watch it just stay in Firefox, which is to be expected because we haven't applied any Browser Router routes yet. There we go. It just popped up in there. It stays in Firefox like you would expect it to do.</p>
+                                    <p>Finally, we talked about Least Privilege Manager and making sure that users can't run stuff that might be harmful. "NotepadP" right here is just going to open right up. If I go to look at some ransomware (it's just a "Ransomware Simulator") but oh, my God, now it's eating all my documents. So the users can access stuff that could be potentially very harmful, and the SecureRun is going to stop that in its tracks.</p>
+                                    <p>So now we've looked at the endpoint. We've looked at the ungoverned settings. All right, let's go back to my management station here and talk about deployment. Since there are a lot of different ways to go about deploying this, I'm going to have to ask you to use your imagination and just remember you can deploy it however you're already deploying MSIs.</p>
+                                    <p>In my case, I went ahead and I dropped it in the "SHARE" folder, so this is going to be a little manual on my end. But it's in my "SHARE" folder so when I hop back over to my endpoint here, I can just get into that SHARE folder. There we go. It already knows where I wanted to go.</p>
+                                    <p>We're going to go with the "PP Settings" here. I'm just going to install it by hand. Like I said before, if you were using SCCM or other systems management, then you would be able to do this completely silently just in the background.</p>
+                                    <p>All right, so now if I come up here and I go to my "Control Panel," I'm going to look at "Uninstall a program." I'm not actually uninstalling anything. I just want to point out that the "PolicyPak Client-Side Extension" is already on this machine. That has been previously deployed. That has to be there in order for the settings to work. And then right here, "PP Settings," we have them set right here.</p>
+                                    <p>Now that we've done this, when we go to our settings that used to be ungoverned we'll find out a new thing. Let's open up "Mozilla Firefox" and see what happens. There we go. We have our homepage set to "www.policypak.com" just like we told it to. When we come here, we can no longer get into the incognito mode. So we ripped the knob off of that one, we set this homepage, and that was done using the Application Settings Manager.</p>
+                                    <p>Now actually let's hop back into Firefox here and let's see what happens if we try to go to "google.com." There we go. It closed out Firefox, and it's going to pop us right open in Chrome just like we told it to because we created that route. So anything with "google" in it is going to close down the tab of whatever it's in, and now it opens in Chrome. If we try to go to "facebook.com," let's see what happens. "NO FB FOR YOU!" We blocked that website using the Browser Router.</p>
+                                    <p>Finally, we talked about Least Privilege Manager. Let's see if we can get into "NotepadP" anymore. Nope, sure can't. If I go to the "Ransomware Simulator" and try to open that up, it has been blocked.</p>
+                                    <p>So we looked at creating application settings using the Application Settings Manager. We used the Least Privilege Manager to lock down the machine and make sure that users couldn't run anything harmful. And we used the Browser Router to send everything Google to Chrome and block Facebook. Then we exported those settings, we wrapped them up in an MSI, and I deployed it by hand. You'll deploy it using SCCM or KACE or whatever you have.</p>
+                                    <p>If this is interesting to you, let us know and we'll get you started on a free trial right away.</p>
+                                    <p>I'll see you in the next video. Thanks for watching.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

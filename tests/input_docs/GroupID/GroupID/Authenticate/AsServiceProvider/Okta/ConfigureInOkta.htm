@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Stealthbits_WebsiteSkin" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="Sb-print" data-mc-toc-path="Authenticate|As Service Provider|Okta">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Configure GroupID In Okta</title>
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Introduction.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Configure Directory Manager In Okta</h1>
+                                    <p>To configure <span class="mc-variable GroupID.Product variable">Directory Manager</span> in Okta, follow these steps:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Create an app for <span class="mc-variable GroupID.Product variable">Directory Manager</span> in Okta</p>
+                                        </li>
+                                        <li>
+                                            <p>Download the Okta metadata file</p>
+                                        </li>
+                                        <li>
+                                            <p>Configure Users in Okta</p>
+                                        </li>
+                                    </ul>
+                                    <h2>Configure Directory Manager  In Okta</h2>
+                                    <ol>
+                                        <li value="1">
+                                            <p>Launch Okta and sign in.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On signing in, the Okta dashboard is displayed.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>To configure the <span class="mc-variable GroupID.Product variable">Directory Manager</span>application in Okta, click <b>Applications</b> in the ribbon at the top.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>On the <b>Applications</b> page, click the <b>Add Application</b> button.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p>The <b>Add Application</b> page displays some preconfigured options. Click the <b>Create New App</b> button.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p>On the <b>Create a New Application Integration</b> dialog box, select the <b>SAML 2.0</b> option button and click <b>Create</b>.</p>
+                                        </li>
+                                        <li value="7">
+                                            <p>On the <b>General Settings</b> tab of the <b>Create SAML Integration</b> page, provide a user-friendly name for the app (for example, <span class="mc-variable GroupID.Product variable">Directory Manager</span> Okta Sign-On) in the <b>App name</b> box.</p>
+                                        </li>
+                                        <li value="8">
+                                            <p>Use the <b>App Logo</b> option to upload a logo for the <span class="mc-variable GroupID.Product variable">Directory Manager</span> app. This logo will be displayed on the Okta dashboard. When a user signs into Okta, he or she will be redirected to the dashboard that will have <span class="mc-variable GroupID.Product variable">Directory Manager</span> and other applications listed for single sign-on.</p>
+                                        </li>
+                                        <li value="9">
+                                            <p>Click <b>Next</b>.</p>
+                                        </li>
+                                        <li value="10">
+                                            <p>On the <b>Configure SAML</b> tab of the <b>Create SAML Integration</b> page, provide the consumer URL and audience URL that you generated for the <span class="mc-variable GroupID.Product variable">Directory Manager</span> client In the <b>Single sign on URL</b> and <b>Audience URI (SP Entity ID)</b> boxes respectively. See the <a href="GenerateURLs.htm" target="_parent" title="Generate URLs" alt="Generate URLs" class="MCXref xref">Generate URLs</a> topic.</p>
+                                        </li>
+                                        <li value="11">
+                                            <p>We will not specify any default relay state, so leave the <b>Default Relay State</b> field blank.</p>
+                                        </li>
+                                        <li value="12">
+                                            <p>Leave the <b>Name ID format</b> field selected to <i>Unspecified</i>.</p>
+                                        </li>
+                                        <li value="13">
+                                            <p>In the <b>Application username</b> list, make sure <i>Okta username</i> is selected. This implies that only users defined in Okta can authenticate on the <span class="mc-variable GroupID.Product variable">Directory Manager</span> portal <i>Wizard</i> using the Okta single sign-on option. See the <a href="#Configur" target="_parent" title="Configure Users in Okta" alt="Configure Users in Okta" class="MCXref xref">Configure Users in Okta</a> topic.</p>
+                                        </li>
+                                        <li value="14">
+                                            <p>Click <b>Show Advanced Settings</b>.</p>
+                                        </li>
+                                        <li value="15">
+                                            <p>The <b>Attribute Statements</b> area is for specifying an attribute that will be used to authenticate users who will be signing into <span class="mc-variable GroupID.Product variable">Directory Manager</span> using Okta. Hence, this attribute is meant for user identification.<br />Skip this section and leave the selections to default. The Okta provider would authenticate users on the basis of the username.</p>
+                                        </li>
+                                        <li value="16">
+                                            <p>Click <b>Next</b>.</p>
+                                        </li>
+                                        <li value="17">
+                                            <p>On the <b>Feedback</b> tab of the <b>Create SAML Integration</b> page, select the option, <b>I’m a software vendor. I’d like to integrate my app with Okta</b> and click <b>Finish</b>.</p>
+                                        </li>
+                                    </ol>
+                                    <p>With this, the <span class="mc-variable GroupID.Product variable">Directory Manager</span> OKTA SSO app is successfully added in Okta, and the <b>Sign-On</b> page is displayed.</p>
+                                    <h3><a name="Download"></a>Download the Okta Metadata File</h3>
+                                    <p>You can download a metadata file from Okta and import it into <span class="mc-variable GroupID.Product variable">Directory Manager</span> to configure the Okta provider in <span class="mc-variable GroupID.Product variable">Directory Manager</span>.</p>
+                                    <p><b>To download the file:</b>
+                                    </p>
+                                    <ol>
+                                        <li value="1">
+                                            <p style="font-weight: normal;">On the <b>Sign-On</b> page, go to the <b>Sign On</b> tab. In the <b>Sign On Methods</b> area, click the <b>Identity Provider metadata</b> link.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On the <b>Opening metadata</b> dialog box, make sure the <b>Save File</b> option is selected and click <b>OK</b>. The file downloads and the <b>Library</b> dialog box opens, showing the downloaded file.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>Right-click the metadata file and select the <b>Open Containing Folder</b> option on the shortcut menu.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>The next dialog box displays the  file at its download location. Either copy the file to your desktop for simplicity or save its location, so that you can easily locate it for import into <span class="mc-variable GroupID.Product variable">Directory Manager</span>.</p>
+                                        </li>
+                                    </ol>
+                                    <h3><a name="Configur"></a>Configure Users in Okta</h3>
+                                    <p>You must define users in Okta. Only these users can authenticate on the <span class="mc-variable GroupID.Product variable">Directory Manager</span>  portal <i>Wizard</i> using Okta. See the <a href="SignIn.htm" target="_parent" title="Sign In Using Okta" alt="Sign In Using Okta" class="MCXref xref">Sign In Using Okta</a> topic.</p>
+                                    <p>There are multiple ways to define users in Okta, such as:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Add users manually</p>
+                                        </li>
+                                        <li>
+                                            <p>Use a CSV file to import users</p>
+                                        </li>
+                                        <li>
+                                            <p>Use the Active Directory tool provided by Okta (that syncs Active Directory users to Okta)</p>
+                                        </li>
+                                    </ul>
+                                    <p>For all of these, if Okta finds an existing user in its own database, it will link the <span class="mc-variable GroupID.Product variable">Directory Manager</span> application to the existing account. If not, it will create a new Okta account for the user. For new users, Okta generates a password and sends it to them by email.</p>
+                                    <p><b>To configure users:</b>
+                                    </p>
+                                    <ol>
+                                        <li value="1">
+                                            <p>Click the <b>People</b> tab on the <b>Sign-On</b> page.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>To create users manually, visit the <a href="https://help.okta.com/en-us/content/topics/users-groups-profiles/usgp-add-users.htm" title="Add users manually" alt="Add users manually">Add users manually</a> page.<br />To import users into Okta, visit the <a href="https://help.okta.com/en-us/content/topics/users-groups-profiles/usgp-import-users-main.htm" title="Import users" alt="Import users">Import users</a> page.<br />To use an Active Directory tool for adding users, see the <a href="https://help.okta.com/en-us/content/topics/directory/ad-agent-import-users-on-demand.htm" title="Import Active Directory users on demand" alt="Import Active Directory users on demand">Import Active Directory users on demand</a> page.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>After defining users, you must manually add these users. On the <b>People</b> tab, click the <b>Assign to People</b> button.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>On the <b>Assign Okta Sign-On to People</b> dialog box, click <b>Assign</b> for a user so that they can authenticate on the <span class="mc-variable GroupID.Product variable">Directory Manager</span> portal <i>Wizard</i> using Okta.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p>The next page on the dialog box displays the <b>User Name</b> field populated with the user name. Remove the domain after the user’s name, i.e., the part starting with ‘@’. After removing the domain, we are left with the user name. The user will use this name to authenticate on the <i>Wizard</i> portal using Okta.<br />This done, click <b>Save and Go Back</b>.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p>Repeat steps 4 and 5 for all the required users and then click <b>Done</b> on the <b>Assign Okta Sign-On to People</b> dialog box. The users will be displayed on the <b>People</b> page.</p>
+                                        </li>
+                                        <li value="7">
+                                            <p>The next step is to activate the user accounts. Click the <b>Directory</b> link in the ribbon  at the top.</p>
+                                        </li>
+                                        <li value="8">
+                                            <p>On the <b>Directory</b> page, click the <b>Activate</b> link for the required user.</p>
+                                        </li>
+                                        <li value="9">
+                                            <p>On the <b>Activate Person</b> dialog box, click <b>Activate User</b>.<br />With this, we have successfully configured users within the Okta provider.</p>
+                                        </li>
+                                    </ol>
+                                    <p>&#160;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

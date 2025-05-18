@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedHeader%]|[%=System.LinkedHeader%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>SharePoint Online JSON Log File</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link href="../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>SharePoint Online JSON Log File</h1>
+                                        <p>The JSON log file format is used to send SharePoint Online activity monitoring data to <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> v10.0 consoles. The following information lists all of the attributes generated by SharePoint Online Activity Monitor into a JSON log file:</p>
+                                        <h2>Base Schema</h2>
+                                        <p>The following table details lists of attributes for base schema generated by SharePoint Online Activity Monitor.</p>
+                                        <table align="center" style="margin-left: auto;margin-right: auto;border-collapse: collapse;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');width: 100%;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                            <col style="width: 10%;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col style="width: 60%;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col style="width: 30%;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Attribute Name</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Description</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Example</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">TimeLogged</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>	Event time (UTC)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">2019-03-14T18:13:39.0 00Z</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">
+                                                        <p>ActivityType</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>Constant "SharePoint"</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	SharePointOnline</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">
+                                                        <p>AgentHost</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>Host name where agent is installed.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">sphost</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">Source</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>SharePoint, SharePointFileOperation, SharePointListOperation, SharePointListItemOperation, SharePointContentTypeOperation, SharePointFieldOperation, SharePointSharingOperation, ComplianceDLPSharePoint, ComplianceDLPSharePointClassification</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">SharePointFileOperation</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">Id</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">Unique id of an audit record</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">	5ed5f834-7609-4ea6-df9b-08d76f79a875</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">EventType</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>AccessInvitationCreated </p>
+                                                        <p>AccessInvitationExpired </p>
+                                                        <p>AccessInvitationRevoked </p>
+                                                        <p>AccessInvitationUpdated </p>
+                                                        <p>AccessRequestApproved </p>
+                                                        <p>AccessRequestCreated </p>
+                                                        <p>AccessRequestRejected </p>
+                                                        <p>ActivationEnabled </p>
+                                                        <p>AdministratorAddedToTermStore </p>
+                                                        <p>AdministratorDeletedFromTermStore </p>
+                                                        <p>AllowGroupCreationSet </p>
+                                                        <p>AppCatalogCreated </p>
+                                                        <p>AuditPolicyRemoved </p>
+                                                        <p>AuditPolicyUpdate </p>
+                                                        <p>AzureStreamingEnabledSet </p>
+                                                        <p>CollaborationTypeModified </p>
+                                                        <p>ConnectedSiteSettingModified </p>
+                                                        <p>CreateSSOApplication </p>
+                                                        <p>CustomFieldOrLookupTableCreated </p>
+                                                        <p>CustomFieldOrLookupTableDeleted </p>
+                                                        <p>CustomFieldOrLookupTableModified </p>
+                                                        <p>CustomizeExemptUsers </p>
+                                                        <p>DefaultLanguageChangedInTermStore </p>
+                                                        <p>DelegateModified </p>
+                                                        <p>DelegateRemoved </p>
+                                                        <p>DeleteSSOApplication </p>
+                                                        <p>eDiscoveryHoldApplied </p>
+                                                        <p>eDiscoveryHoldRemoved </p>
+                                                        <p>eDiscoverySearchPerformed </p>
+                                                        <p>EngagementAccepted </p>
+                                                        <p>EngagementModified </p>
+                                                        <p>EngagementRejected </p>
+                                                        <p>EnterpriseCalendarModified </p>
+                                                        <p>EntityDeleted </p>
+                                                        <p>EntityForceCheckedIn </p>
+                                                        <p>ExemptUserAgentSet </p>
+                                                        <p>FileAccessed </p>
+                                                        <p>FileCheckOutDiscarded </p>
+                                                        <p>FileCheckedIn </p>
+                                                        <p>FileCheckedOut </p>
+                                                        <p>FileCopied </p>
+                                                        <p>FileDeleted </p>
+                                                        <p>FileDeletedFirstStageRecycleBin </p>
+                                                        <p>FileDeletedSecondStageRecycleBin </p>
+                                                        <p>FileDownloaded </p>
+                                                        <p>FileFetched </p>
+                                                        <p>FileModified </p>
+                                                        <p>FileMoved </p>
+                                                        <p>FilePreviewed </p>
+                                                        <p>FileRenamed </p>
+                                                        <p>FileRestored </p>
+                                                        <p>FileSyncDownloadedFull </p>
+                                                        <p>FileSyncDownloadedPartial </p>
+                                                        <p>FileSyncUploadedFull </p>
+                                                        <p>FileSyncUploadedPartial </p>
+                                                        <p>FileUploaded FileViewed </p>
+                                                        <p>FolderCopied </p>
+                                                        <p>FolderCreated </p>
+                                                        <p>FolderDeleted </p>
+                                                        <p>FolderDeletedFirstStageRecycleBin </p>
+                                                        <p>FolderDeletedSecondStageRecycleBin </p>
+                                                        <p>FolderModified </p>
+                                                        <p>FolderMoved </p>
+                                                        <p>FolderRenamed </p>
+                                                        <p>FolderRestored </p>
+                                                        <p>GroupAdded </p>
+                                                        <p>GroupRemoved </p>
+                                                        <p>GroupUpdated </p>
+                                                        <p>LanguageAddedToTermStore </p>
+                                                        <p>LanguageRemovedFromTermStore </p>
+                                                        <p>LegacyWorkflowEnabledSet </p>
+                                                        <p>LookAndFeelModified </p>
+                                                        <p>ManagedSyncClientAllowed </p>
+                                                        <p>MaxQuotaModified </p>
+                                                        <p>MaxResourceUsageModified </p>
+                                                        <p>MySitePublicEnabledSet </p>
+                                                        <p>NewsFeedEnabledSet </p>
+                                                        <p>ODBNextUXSettings </p>
+                                                        <p>OfficeOnDemandSet </p>
+                                                        <p>PageViewed </p>
+                                                        <p>PeopleResultsScopeSet </p>
+                                                        <p>PermissionSyncSettingModified </p>
+                                                        <p>PermissionTemplateModified </p>
+                                                        <p>PortfolioDataAccessed </p>
+                                                        <p>PortfolioDataModified </p>
+                                                        <p>PreviewModeEnabledSet </p>
+                                                        <p>ProjectAccessed </p>
+                                                        <p>ProjectCheckedIn </p>
+                                                        <p>ProjectCheckedOut </p>
+                                                        <p>ProjectCreated </p>
+                                                        <p>ProjectDeleted </p>
+                                                        <p>ProjectForceCheckedIn </p>
+                                                        <p>ProjectModified </p>
+                                                        <p>ProjectPublished </p>
+                                                        <p>ProjectWorkflowRestarted </p>
+                                                        <p>PWASettingsAccessed </p>
+                                                        <p>PWASettingsModified </p>
+                                                        <p>QueueJobStateModified </p>
+                                                        <p>QuotaWarningEnabledModified </p>
+                                                        <p>RenderingEnabled </p>
+                                                        <p>ReportingAccessed </p>
+                                                        <p>ReportingSettingModified </p>
+                                                        <p>ResourceAccessed </p>
+                                                        <p>ResourceCheckedIn </p>
+                                                        <p>ResourceCheckedOut </p>
+                                                        <p>ResourceCreated </p>
+                                                        <p>ResourceDeleted </p>
+                                                        <p>ResourceForceCheckedIn </p>
+                                                        <p>ResourceModified </p>
+                                                        <p>ResourcePlanCheckedInOrOut </p>
+                                                        <p>ResourcePlanModified </p>
+                                                        <p>ResourcePlanPublished </p>
+                                                        <p>ResourceRedacted </p>
+                                                        <p>ResourceWarningEnabledModified </p>
+                                                        <p>SSOGroupCredentialsSet </p>
+                                                        <p>SSOUserCredentialsSet </p>
+                                                        <p>SearchCenterUrlSet </p>
+                                                        <p>SecondaryMySiteOwnerSet </p>
+                                                        <p>SecurityCategoryModified </p>
+                                                        <p>SecurityGroupModified </p>
+                                                        <p>SendToConnectionAdded </p>
+                                                        <p>SendToConnectionRemoved </p>
+                                                        <p>SharedLinkCreated </p>
+                                                        <p>SharedLinkDisabled </p>
+                                                        <p>SharingInvitationAccepted </p>
+                                                        <p>SharingRevoked </p>
+                                                        <p>SharingSet </p>
+                                                        <p>SiteAdminChangeRequest </p>
+                                                        <p>SiteCollectionAdminAdded </p>
+                                                        <p>SiteCollectionCreated </p>
+                                                        <p>SiteRenamed </p>
+                                                        <p>StatusReportModified </p>
+                                                        <p>SyncGetChanges </p>
+                                                        <p>TaskStatusAccessed </p>
+                                                        <p>TaskStatusApproved </p>
+                                                        <p>TaskStatusRejected </p>
+                                                        <p>TaskStatusSaved </p>
+                                                        <p>TaskStatusSubmitted </p>
+                                                        <p>TimesheetAccessed </p>
+                                                        <p>TimesheetApproved </p>
+                                                        <p>TimesheetRejected </p>
+                                                        <p>TimesheetSaved </p>
+                                                        <p>TimesheetSubmitted </p>
+                                                        <p>UnmanagedSyncClientBlocked </p>
+                                                        <p>UpdateSSOApplication </p>
+                                                        <p>UserAddedToGroup </p>
+                                                        <p>UserRemovedFromGroup </p>
+                                                        <p>WorkflowModified</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">FileDeleted</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">OrganizationId</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>	Organization tenant ID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">	86e5dcbf-56e9-4452-8c43-1e99f0e9aabd</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">UserType</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>	Type of the user performed the operation.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	Regular</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">UserId</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>	The UPN of the user who performed the operation</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">user1@stealthbitstechnologie.onmicrosoft.com</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">UserName</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>Name of the user who performed the operation</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	User1</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">UserLogin</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>	An alternative ID of the user. "DlpAgent" for DLP events</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">i:0h.f/membership/10033fff8a7ae322@live.com</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">ClientIP</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>	IP address of the user or a trusted application</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	75.155.180.82</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">Protocol</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>	Protocol: HTTPS</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">	HTTPS</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">Workload</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>	Office 365 service where the activty occurred.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	SharePoint</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">ResultStatus</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>	Succeeded, ParticallySucceeded, Failed, True, False</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">	ParticallySucceeded</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">AbsoluteUrl</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>	Full path of the file/folder accessed by the user</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">https://stealthbitstechnologie-my.sharepoint.com/personal/sgiles_stealthbitstechnologie_onmicrosoft_com/personal/myfiles/21ded</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">Scope</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>	Was this event created by a hosted O365 service or an on-premises server? online or onprem</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">SiteId</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>		Guid of the site</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	aef1ad6b-11c5-4b25-a669-b5f8379f8c55</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">ItemType</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>Object type: File, Folder, Web, Site, Tenant, DocumentLibrary, Page, Differs from SP&#160;types</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">File</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">ItemTitle</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">EventSource</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>SharePoint or ObjectModel</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">SharePoint</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">UserAgent</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>User client or browser</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">MachineDomainInfo</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>Information about device sync operations</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">MachineId</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>Information about device sync operations</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">UpdateType</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                        <p>Added, Removed, or Updated</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">Added</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-weight: bold;font-size: 11pt;">Version</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-size: 11pt;">
+                                                        <p>The new version of the document/version of deleted document</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2" style="font-size: 11pt;">1</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2>File/Folder Operations</h2>
+                                        <p>The following table details lists of attributes for file/folder operations generated by SharePoint Online Activity Monitor.</p>
+                                        <table align="center" style="margin-left: auto;margin-right: auto;border-collapse: collapse;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Attribute Name</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Description</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Example</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">
+                                                        <p>SiteUrl</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">URL of the site</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">	https://example-url.sharepoint.com/</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">DocLocation</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">Relative URL of the file or document accessed by the user</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">Shared Documents/100 Sensitive Docs/Document.docx</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">
+                                                        <p>SourceRelativeUrl</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">The URL of the folder that contains the file accessed by the user. The combination of the values for the SiteURL, SourceRelativeURL, and SourceFileName parameters is the same as the value for the AbsoluteUrl property</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">Shared Documents/100 Sensitive Docs</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">SourceFileName</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">	File or folder name</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	My Document.docx</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">SourceFileExtension</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">File extension</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">docx</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">NewDocLocation</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">A relative URL to which the object is copied or moved</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">Shared Documents/100 Sensitive Docs/Copy.docx</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">DestinationRelativeUrl</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">Only for EventType: FileCopied, FileMoved The URL of the destination folder where a file is copied or moved.</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">Shared Documents/100 Sensitive Docs</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">DestinationFileName</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">Only for EventType: FileCopied, FileMoved The name of the file that is copied or moved.</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">Copy.docx</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1" style="font-weight: bold;font-size: 11pt;">DestinationFileExtension</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1" style="font-size: 11pt;">Only for EventType: FileCopied, FileMoved</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1" style="font-size: 11pt;">	docx</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2>Sharing</h2>
+                                        <p>The following table details lists of attributes for sharing generated by SharePoint Online Activity Monitor by Sharing.</p>
+                                        <table align="center" style="border-collapse: collapse;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;width: 100%;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                            <col style="width: 155pt;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col style="width: 189pt;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Attribute Name</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Description</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">
+                                                        <p>SharingType</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">	The type of sharing permissions that were assigned to the user that the resource was shared with</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">TargetUserOrGroupName</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">UPN or name of the target user or group that a resource was shared with</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">TargetUserOrGroupType</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">Member, Guest, Group, or Partner</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-weight: bold;font-size: 11pt;">EventData</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2>Other SharePoint Events</h2>
+                                        <p>The following table details lists of attributes for other SharePoint events generated by SharePoint Online Activity Monitor by Sharing.</p>
+                                        <table align="center" style="border-collapse: collapse;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;width: 100%;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                            <col style="width: 148pt;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col style="width: 189pt;" class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Attribute Name</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Description</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">
+                                                        <p>CustomEvent</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">EventData</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">	Optional payload</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1" style="font-weight: bold;font-size: 11pt;">ModifiedProperties</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1" style="font-size: 11pt;">	The property is included for admin events, such as adding a user as a member of a site or a site collection admin group. The property includes the name of the property that was modified, old, and new value</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2>DLP&#160;Events</h2>
+                                        <p>The following table details lists of attributes for DLP&#160;events generated by SharePoint Online Activity Monitor by Sharing.</p>
+                                        <table align="center" style="margin-left: auto;margin-right: auto;border-collapse: collapse;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Attribute Name</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Description</p>
+                                                    </th>
+                                                    <th style="vertical-align: middle;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                        <p style="text-align: center;font-weight: bold;color: #FFFFFF;">Example</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">SharePointMetaData</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">Metadata about the document that contained the sensitive information</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;"><a href="https://docs.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#sharepointmetadata-complex-type" title="Opens the SharePointMetadata Complex Type section of the Microsoft Office 365 Management Activity API schema article" alt="Opens the SharePointMetadata Complex Type section of the Microsoft Office 365 Management Activity API schema article" target="_blank">https://docs.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#sharepointmetadata-complex-type</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-weight: bold;font-size: 11pt;">ExceptionInfo</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">Reasons why a policy no longer applies and any information about false positive or override</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-weight: bold;font-size: 11pt;">PolicyDetails</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">Policy(s) that triggered the event</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;"><a href="https://docs.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#policydetails-complex-type" target="_blank" title="Opens the PolicyDetails complex type section of the Microsoft Office 365 Maangement Actiivty API schema article" alt="Opens the PolicyDetails complex type section of the Microsoft Office 365 Maangement Actiivty API schema article">https://docs.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#policydetails-complex-type</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-weight: bold;font-size: 11pt;">
+                                                        <p>SensitiveInfoDetectionIsIncluded</p>
+                                                    </td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-size: 11pt;">	Indicates whether the event contains the value of the sensitive data type</td>
+                                                    <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2" style="font-size: 11pt;">&#160;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

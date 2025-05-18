@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>PowerShell 4.0 Actions</title>
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>PowerShell 4.0 Actions</h1>
+                                        <p>A PowerShell 4.0 script can be written and assigned to a policy by <span class="mc-variable SI.Product variable">Threat Prevention</span> users or a <span class="mc-variable Netwrix.Company variable">Netwrix</span> Engineer via engaging <span class="mc-variable Netwrix.Company variable">Netwrix</span> Professional Services. The script will be invoked by the Enterprise Manager for an enabled policy. </p>
+                                        <p>Follow the steps to add a PowerShell 4.0 action to a policy/template.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/ActionsConfigurationsArea.png" style="width: 749px;height: 222px;" title="Actions tab - Actions Configurations area" alt="Actions tab - Actions Configurations area" />
+                                        </p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>On a policy or template Actions tab, click <b>Add</b> (+) to open the Add Action window.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>In the left pane, select the radio button for <b>PowerShell 4.0</b>.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/AddActionWindowForPowerShell.png" style="width: 507px;height: 549px;" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Configure the PowerShell 4.0 Script action:</p>
+                                        <ul>
+                                            <li>Name – Provide a unique, descriptive name for this PowerShell 4.0 action</li>
+                                            <li>Check the box for <b>Enabled</b> to allow the policy to launch the script</li>
+                                            <li>Description – Provide a clear and detailed description for this PowerShell 4.0 action. This is optional but recommended.</li>
+                                            <li>Click <b>Edit…</b> to view the sample script. The <span class="mc-variable SI.Product variable">Threat Prevention</span> Script Editor opens</li>
+                                        </ul>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/ScriptEditorforPS.png" style="width: 706px;height: 548px;" title="Script Editor for PowerShell Scripts" alt="Script Editor for PowerShell Scripts" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Create or copy/paste the custom script in the <span class="mc-variable SI.Product variable">Threat Prevention</span> Script Editor. See the <a href="NETScript.htm#_StealthINTERCEPT_Script_Editor" title="Threat Prevention Script Editor Tools" alt="Threat Prevention Script Editor Tools" target="_parent" class="MCXref xref">Threat Prevention Script Editor Tools</a> topic for additional information, i.e. Run for testing and Encrypt functionality. See the <a href="#_Default_PowerShell_4.0" title="Default PowerShell 4.0 Script" alt="Default PowerShell 4.0 Script" target="_parent" class="MCXref xref">Default PowerShell 4.0 Script</a> topic for the default custom script. Save and close.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>On the Add Action window, the new script is displayed in the <b>Script Preview</b> section. Check the <b>Enable compiler error logging</b> checkbox to enable <span class="mc-variable SI.Product variable">Threat Prevention</span> to log information about the compiling of scripts. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>Click Save to close the Add Action window and apply changes.</p>
+                                        <p class="p_5" style="text-align: center;">
+                                            <img src="../../../../Resources/Images/ThreatPrevention/Policies/PowerShellAction.png" style="width: 718px;height: 511px;" title="Actions tab – PowerShell 4.0 Action Created" alt="Actions tab – PowerShell 4.0 Action Created" />
+                                        </p>
+                                        <p>The Actions tab now displays the configured settings for the specified PowerShell 4.0 action. The action configuration can be directly edited through this display as well.</p>
+                                        <h2><a name="_Default_PowerShell_4.0"></a>Default PowerShell 4.0 Script</h2>
+                                        <p>The following PowerShell 4.0 script is configured as a default action. It will either create the <i>c:\nveventdata.txt</i> file or append the event data to it.</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: PowerShell;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #969896; "># Note: Powershell 4.0 or later is required for</span>&#160;<br /><span style="color: #969896; "># Integration with StealthINTERCEPT variables</span><br />&#160;<br /><span style="color: #969896; "># input parameters</span><br /><span style="color: #969896; "># $event, $helper</span><br /><span style="color: #a71d5d; font-weight: bold; ">function</span> <span style="color: #a71d5d; font-weight: bold; ">Write-Attributes</span> ()<br />{<br /><span style="color: #a71d5d; font-weight: bold; ">Param</span>([System.IO.StreamWriter] <span style="font-weight: bold; ">$sw</span>, [system.collections.hashtable] <span style="font-weight: bold; ">$attributes</span>)<br /><span style="color: #a71d5d; font-weight: bold; ">foreach</span> (<span style="font-weight: bold; ">$key</span> <span style="color: #a71d5d; font-weight: bold; ">in</span> <span style="font-weight: bold; ">$attributes</span>.Keys)<br />{<br /><span style="font-weight: bold; ">$s</span> = <span style="font-weight: bold; ">$key</span> + <span style="color: #df5000; ">": "</span><br /><span style="font-weight: bold; ">$v</span> = <span style="font-weight: bold; ">$attributes</span>[<span style="font-weight: bold; ">$key</span>]<br /><span style="color: #969896; "># echo $v.GetType()</span><br />&#160;<br /><span style="color: #a71d5d; font-weight: bold; ">if</span>(<span style="font-weight: bold; ">$v</span>.GetType().FullName <span style="color: #795da3; ">-eq</span> <span style="color: #df5000; ">'SI.Common.Messages.NvMessageArray'</span>)<br />{<br /><span style="font-weight: bold; ">$sv</span> = <span style="color: #df5000; ">""</span><br /><span style="font-weight: bold; ">$index</span> = <span style="color: #333333; ">0</span><br /><span style="font-weight: bold; ">$values</span> = <span style="font-weight: bold; ">$v</span>;<br />&#160;<br /><span style="color: #a71d5d; font-weight: bold; ">foreach</span> (<span style="font-weight: bold; ">$value</span> <span style="color: #a71d5d; font-weight: bold; ">in</span> <span style="font-weight: bold; ">$values</span>)<br />{<br /><span style="color: #a71d5d; font-weight: bold; ">if</span> (<span style="font-weight: bold; ">$index</span> <span style="color: #795da3; ">-gt</span> <span style="color: #333333; ">0</span>)<br />{<br /><span style="font-weight: bold; ">$sv</span> = <span style="font-weight: bold; ">$sv</span> + <span style="color: #df5000; ">", "</span><br />}<br />&#160;<br /><span style="font-weight: bold; ">$sv</span> = <span style="font-weight: bold; ">$sv</span> + <span style="font-weight: bold; ">$value</span><br /><span style="font-weight: bold; ">$index</span> = <span style="font-weight: bold; ">$index</span> + <span style="color: #333333; ">1</span><br />}<br />&#160;<br /><span style="font-weight: bold; ">$s</span> = <span style="font-weight: bold; ">$s</span> + <span style="font-weight: bold; ">$sv</span><br />}&#160;<br /><span style="color: #a71d5d; font-weight: bold; ">else</span>&#160;<br />{<br /><span style="font-weight: bold; ">$s</span> = <span style="font-weight: bold; ">$s</span> + <span style="font-weight: bold; ">$v</span><br />}<br />&#160;<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="font-weight: bold; ">$s</span>)<br />&#160;<br />}<br />}<br />&#160;<br />[System.IO.StreamWriter] <span style="font-weight: bold; ">$sw</span> = <span style="font-weight: bold; ">$null</span><br /><span style="color: #a71d5d; font-weight: bold; ">Try</span><br />{<br /><span style="font-weight: bold; ">$sw</span> = <span style="color: #a71d5d; font-weight: bold; ">New-Object</span> System.IO.StreamWriter (<span style="color: #df5000; ">"C:\si_eventdata.txt"</span>, <span style="font-weight: bold; ">$true</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"==========================================="</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"TimeLogged:&#160;&#160;"</span> + <span style="font-weight: bold; ">$helper</span>.TimeLogged.ToString()))<br /><span style="font-weight: bold; ">$sw</span>.Flush()<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"TimeLoggedUtc:&#160;&#160;"</span> + <span style="font-weight: bold; ">$helper</span>.TimeLoggedUtc.ToString()))<br /><span style="font-weight: bold; ">$sw</span>.Flush()<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"EventSourceType: "</span> + <span style="font-weight: bold; ">$helper</span>.EventSourceType))<br /><span style="font-weight: bold; ">$sw</span>.Flush()<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"EventSourceName: "</span> + <span style="font-weight: bold; ">$helper</span>.EventSourceName))<br /><span style="font-weight: bold; ">$sw</span>.Flush()<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"SettingName: "</span> + <span style="font-weight: bold; ">$helper</span>.SettingName))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"EventName: "</span> + <span style="font-weight: bold; ">$helper</span>.EventName))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"DN:&#160;&#160;"</span> + <span style="font-weight: bold; ">$helper</span>.DN.ToString()))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"ClassName: "</span> + <span style="font-weight: bold; ">$helper</span>.ClassName))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"Perpetrator: "</span> + <span style="font-weight: bold; ">$helper</span>.Perpetrator))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"OriginatingServer: "</span> + <span style="font-weight: bold; ">$helper</span>.OriginatingServer))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"OriginatingClient: "</span> + <span style="font-weight: bold; ">$helper</span>.OriginatingClient))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"Success: "</span> + <span style="font-weight: bold; ">$helper</span>.Success.ToString()))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"Status: "</span> + <span style="font-weight: bold; ">$helper</span>.Status))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"BlockedEvent: "</span> + <span style="font-weight: bold; ">$helper</span>.BlockedEvent.ToString()))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"EventsCount: "</span> + <span style="font-weight: bold; ">$helper</span>.EventsCount.ToString()))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"OriginatingClientProtocol: "</span> + <span style="font-weight: bold; ">$helper</span>.OriginatingClientProtocol))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"FromHost: "</span> + <span style="font-weight: bold; ">$helper</span>.FromHost))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"FromHostIp: "</span> + <span style="font-weight: bold; ">$helper</span>.FromHostIp))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"ToHost: "</span> + <span style="font-weight: bold; ">$helper</span>.ToHost))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"ToHostIp: "</span> + <span style="font-weight: bold; ">$helper</span>.ToHostIp))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"LoginType: "</span> + <span style="font-weight: bold; ">$helper</span>.LoginType.ToString()))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"AffectedObjectSid: "</span> + <span style="font-weight: bold; ">$helper</span>.AffectedObjectSid))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"OriginatingServerIp: "</span> + <span style="font-weight: bold; ">$helper</span>.OriginatingServerIp))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"PerpetratorName: "</span> + <span style="font-weight: bold; ">$helper</span>.PerpetratorName))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"PerpetratorSid: "</span> + <span style="font-weight: bold; ">$helper</span>.PerpetratorSid))<br /><span style="font-weight: bold; ">$sw</span>.WriteLine((<span style="color: #df5000; ">"EventNameTranslated: "</span> + <span style="font-weight: bold; ">$helper</span>.EventNameTranslated))<br /><span style="font-weight: bold; ">$sw</span>.Flush()<br />&#160;<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">""</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"New Attributes:"</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"--------------"</span>)<br /><span style="color: #a71d5d; font-weight: bold; ">Write-Attributes</span> -sw <span style="font-weight: bold; ">$sw</span> -attributes <span style="font-weight: bold; ">$helper</span>.NewAttributes<br />&#160;<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">""</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"Old Attributes:"</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"--------------"</span>)<br /><span style="color: #a71d5d; font-weight: bold; ">Write-Attributes</span> -sw <span style="font-weight: bold; ">$sw</span> -attributes <span style="font-weight: bold; ">$helper</span>.OldAttributes<br />&#160;<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">""</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"Operations:"</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"--------------"</span>)<br /><span style="color: #a71d5d; font-weight: bold; ">Write-Attributes</span> -sw <span style="font-weight: bold; ">$sw</span> -attributes <span style="font-weight: bold; ">$helper</span>.Operations<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"==========================================="</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">""</span>)<br />&#160;<br /><span style="font-weight: bold; ">$sw</span>.Flush()<br /><span style="font-weight: bold; ">$sw</span>.Close()<br />}<br /><span style="color: #a71d5d; font-weight: bold; ">Catch</span>&#160;<br />{<br />echo <span style="font-weight: bold; ">$_</span>.Exception.GetType().FullName, <span style="font-weight: bold; ">$_</span>.Exception.Message<br /><span style="color: #a71d5d; font-weight: bold; ">if</span>(<span style="font-weight: bold; ">$sw</span>)<br />{<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="color: #df5000; ">"Exception"</span>)<br /><span style="font-weight: bold; ">$sw</span>.WriteLine(<span style="font-weight: bold; ">$_</span>.Exception.GetType().FullName, <span style="font-weight: bold; ">$_</span>.Exception.Message)<br />&#160;<br /><span style="font-weight: bold; ">$sw</span>.Flush()<br /><span style="font-weight: bold; ">$sw</span>.Close()<br />}<br />}&#160;&#160;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

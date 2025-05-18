@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|User Guide|Set Up|Connect to a Managed System">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+              
+              Model the Data
+              </title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../user-guide/set-up/connect-system/connector-modeling/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <section id="body">
+                                        <div id="body-inner">
+                                            <h1>
+                                                <div>
+              
+              Model the Data
+              </div>
+                                            </h1>
+                                            <p>How to choose the appropriate model for a connector's data.</p>
+                                            <h2 id="overview">Overview</h2>
+                                            <p>In this part, you work outside <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to define the model that is going to be used in the next steps to represent a managed system's resources and entitlements inside <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, as a connector.</p>
+                                            <div class="notices info">
+                                                <p>This page is no technical procedure, but rather a guide aiming to give a global view on connectors (with their components and their purpose), in order to help integrators choose the most appropriate way to model the managed system in the form of a connector later inside <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                            </div>
+                                            <p>The aim is to think about said managed system in order to specify:</p>
+                                            <ul>
+                                                <li>what data you need to import into <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>;</li>
+                                                <li>how you are going to organize this data together, and model it as a connector inside <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</li>
+                                            </ul>
+                                            <h3 id="useful-data">Useful data</h3>
+                                            <p>Modeling the connector is a matter of identifying what data you want to get into <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. You should not retrieve all the data from the managed system, but only two kinds of useful data:</p>
+                                            <ol>
+                                                <li value="1">data that represents how the authorization system works in the managed system, i.e. data that composes entitlements and their assignments;</li>
+                                                <li value="2">data that you want to watch and/or control and/or fulfill.</li>
+                                            </ol>
+                                            <p>The model must take both into account. So both kinds of data must be extracted from the managed system.</p>
+                                            <blockquote>
+                                                <p>Let's take an example. An Active Directory manages authorization through group membership (using the user-group paradigm).</p>
+                                                <p>So first we need to retrieve both groups and accounts, in order to manage the AD's assignments of entitlements for our users (in the AD language: manage their accounts and group memberships).</p>
+                                                <p>Secondly, we want to control attributes such as the name or e-mail of the account, and ensure they are consistent with the correlated identity. Thus these attributes are the second kind of information that we want to retrieve.</p>
+                                            </blockquote>
+                                            <h3 id="data-models">Data models</h3>
+                                            <p>Fortunately, you won't have to design your connector model from scratch. NETWRIX has done a little work ahead, and you are presented here with four model templates that have proven to work so far. Experience shows that most managed systems can be shaped using one or a mix of the following:</p>
+                                            <ul>
+                                                <li>the User model is the most simple model for a connector, where a user is directly associated with a list of entitlements;</li>
+                                                <li>the User-Group model represents typical <a href="https://en.wikipedia.org/wiki/Role-based_access_control">Role-Based Access Control</a> mechanisms, where the ability to perform an action is granted through accounts' membership to a specific group (also called role or profile according to the system);</li>
+                                                <li>the Account-Profile-Transaction model represents a system, where the ability to perform an action is granted through the assignment of fine-grained entitlements (called transactions) which are packaged into profiles;</li>
+                                                <li>the Star model represents a system, where the ability to perform an action is granted through the assignment of entitlements which are based on at least two variable parameters.</li>
+                                            </ul>
+                                            <p>Each template presents a few objects and the relationships between them. To become the model of the actual managed system, these objects must be renamed and their attributes defined according to the reality of said managed system.</p>
+                                            <div class="notices info">
+                                                <p>This sheet guides you through choosing the right model template for your connector. The actual technical implementation of the model will be tackled in the last part of the connector configuration: <a href="../entity-type-creation/index.html" target="_parent" class="MCXref xref">Create an Entity Type</a>.</p>
+                                            </div>
+                                            <div class="notices note">
+                                                <p><strong>Connector model and roles:</strong>
+                                                    <br />
+                                                    <br />The design of a model must take into account what is really going on inside the managed system in terms of entitlements, <u>and</u> be flexible enough to express it as roles in the context of the role model. The role model is the universal RBAC/ABAC language used by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to express all entitlements.
+<br /><br />You don't have to worry about this "role" part right now. It is going to be tackled during single role catalog creation. At this point, you will take a look at the way roles are defined and linked to resources to represent entitlements. But the work starts here, by modeling the resources that exist in the managed system. Some of those resources, such as Active Directory groups, include interesting information about entitlements.
+<br /><br />Right now, you can see the connector's model as a precise description of the <u>shape</u> of the technical resources and entitlements of the managed system. And, you can see roles as the higher-order universal <u>language</u> in which entitlements and their assignments are expressed in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> for all managed systems.
+<br /><br /><strong>Connector model and provisioning</strong>:
+<br /><br />After defining the useful data that you need to model a given system, you also have to decide what data you need <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to write to the managed system. <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> writing to an external system is called provisioning.</p>
+                                            </div>
+                                            <h2 id="participants-and-artifacts">Participants and Artifacts</h2>
+                                            <p>For a given managed system, integrators may need the help of the <u>application owner</u> who knows the purpose of the application.</p>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Input</th>
+                                                        <th>Output</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>Connector model</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h2 id="define-the-connector-model">Define the Connector Model</h2>
+                                            <p>Define your connector model by proceeding as follows:</p>
+                                            <ol>
+                                                <li value="1">
+                                                    <p>Use the advice and examples given about each model template to find the template that most closely matches your use case.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>Adapt the template to the reality of your managed system by renaming and adjusting the model's objects.</p>
+                                                </li>
+                                                <li value="3">
+                                                    <p>Define your useful data, and thus the attributes of each object according to the reality of the data in your managed system.</p>
+                                                </li>
+                                                <li value="4">
+                                                    <p>Ensure that all objects have at least one attribute that can serve as a key to be uniquely identified within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. You will get more details about keys during entity type creation.</p>
+                                                </li>
+                                                <li value="5">
+                                                    <p>Ensure the following guidelines' enforcement:</p>
+                                                    <p><strong>Keep it simple</strong>
+                                                    </p>
+                                                    <p>The model must stay as <u>simple</u> as possible. Embed just enough information.</p>
+                                                    <p><strong>Keep it readable for most users</strong>
+                                                    </p>
+                                                    <p>The model must be easy to understand. For this, adopt a business approach, i.e. make the model user-friendly and close to real activities. This functional approach is essential to the efficiency of data flows (synchronization/provisioning loop). Keep in mind that the aim is to define a model close to the <u>reality</u> of the system.</p>
+                                                    <p><strong>Keep it open to changes</strong>
+                                                    </p>
+                                                    <p>The model is going to change and evolve during the life of the application, to account for new needs or changes. This must be considered too in the initial model to make future changes less painful.</p>
+                                                </li>
+                                            </ol>
+                                            <div class="notices info">
+                                                <p>Find at the bottom a procedure example about modeling the Active Directory.</p>
+                                            </div>
+                                            <h2 id="model-templates">Model Templates</h2>
+                                            <p>All templates are detailed with examples and schemas with the following key:
+
+</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_key.png" alt="Schemas' Key" style="box-shadow: none;" />
+                                            </p>
+                                            <div class="notices info">
+                                                <p>During the technical modeling inside <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, these objects will become <u>entity types</u>, their attributes will become <u>scalar properties</u>, the links between them will become <u>navigation properties</u>.</p>
+                                            </div>
+                                            <h3 id="user">User</h3>
+                                            <h4 id="authorization-mechanisms">Authorization mechanisms</h4>
+                                            <p>The User template is the most simple model for a connector, and used to represent <u>a user directly associated with a list of entitlements</u>.</p>
+                                            <p>Users are represented by the accounts they own, and entitlements are represented by resources.</p>
+                                            <p>Permissions can be managed:</p>
+                                            <ul>
+                                                <li>by resource, with a list of authorized accounts for each resource;</li>
+                                                <li>by account, with a list of authorized resources for each account.</li>
+                                            </ul>
+                                            <h4 id="model">Model</h4>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_User.png" alt="User Model" style="box-shadow: none;" />
+                                            </p>
+                                            <p>Thus you need to create one entity type to represent either accounts or other resources.</p>
+                                            <p>Each entity type needs to be shaped with properties, chosen according to the data useful for entitlement assignment.</p>
+                                            <p>The only sensitive and required properties are the keys and the property holding entitlements. It means that:</p>
+                                            <ul>
+                                                <li>if entitlements are managed by resource, then the entity type representing resources must have an attribute (scalar property) containing the list of authorized accounts;</li>
+                                                <li>if entitlements are managed by account, then the entity type representing accounts must have an attribute (scalar property) containing the list of authorized resources.</li>
+                                            </ul>
+                                            <div class="notices note">
+                                                <p><strong>Recommendation: categorize accounts in types</strong>
+                                                    <br />
+                                                    <br />Some of the managed systems following this model offer predefined <u>types of accounts</u>, with a pre-packaged set of authorizations (such as the <code>basic</code> user with read/write permissions on non-sensitive resources, or the <code>admin</code> with higher privileges).
+<br /><br />Account types make modeling easier, as they bring another level of information about the entitlements they contain. So we can embed more useful information in the model, thanks to an attribute that represents the account type.
+<br /><br />In further steps, you will be able to define one resource type per account type and map each one to a role for assignment and provisioning.</p>
+                                            </div>
+                                            <h4 id="example---canteen-badges">Example - Canteen badges</h4>
+                                            <p>Canteen badges are a simple system handled with the User model. Indeed users can simply have among their attributes the access authorization for a given building and a given time. Or also, instead of creating an entity type for users, we can create an entity type for the badges. They would have in their attributes their respective access location and time, and an attribute listing authorized users.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_User-canteen.png" alt="User Model - Canteen Badges Example" style="box-shadow: none;" />
+                                            </p>
+                                            <h4 id="example---mailboxes">Example - Mailboxes</h4>
+                                            <p>Mailboxes constitute a complex system, but IGA purposes require little information (only accounts) so this system can too be handled with the User model, either through users and their entitlement lists, or through mailbox entitlements and their lists of authorized users.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_User-mailbox.png" alt="User Model - Mailboxes Example" style="box-shadow: none;" />
+                                            </p>
+                                            <h3 id="user-group">User-Group</h3>
+                                            <h4 id="authorization-mechanisms-1">Authorization mechanisms</h4>
+                                            <p>The User-Group template is better suited to represent typical Role-Based Access Control authorization mechanisms, where a user is authorized to perform an action according to their account's <u>membership to a specific group</u>. Instead of groups, some systems talk about roles or profiles: users are authorized to perform an action through a given role or profile which they are assigned, instead of a group membership. It is all the same idea, and the User-Group template is perfect for them too.</p>
+                                            <p>Groups can also be categorized and grouped into larger groups.</p>
+                                            <p>Users are represented by the accounts they own.</p>
+                                            <h4 id="model-1">Model</h4>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_UserGroup.png" alt="User-Group Model" style="box-shadow: none;" />
+                                            </p>
+                                            <p>Thus you need to create one entity type to represent groups (or roles or profiles) and one for accounts.</p>
+                                            <p>Each entity type needs to be shaped with properties, chosen according to the data useful for entitlement assignment.</p>
+                                            <p>The only sensitive and required properties are those constituting the link between both entity types, i.e. the navigation properties representing the group membership.</p>
+                                            <div class="notices note">
+                                                <p><strong>Recommendation: categorize accounts in types</strong>
+                                                    <br />
+                                                    <br />Many of the managed systems following this model, just like the User model, distinguish between several types of accounts.
+<br /><br />In further steps, you will be able to define one resource type per account type and map each one to a role for assignment and provisioning.</p>
+                                            </div>
+                                            <h4 id="example---sab">Example - SAB</h4>
+                                            <p>The SAB system handles authorizations using users and groups. A user is authorized to perform an action according to their group membership.</p>
+                                            <p>We define two entity types <code>SAB - User</code> and <code>SAB - Group</code>. We fill them with a few attributes useful to manage entitlements in the SAB application. Finally, we add a navigation property in both entity types in order to link <code>User</code> with <code>Group</code> with an "n-to-n" relationship.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_SAB.png" alt="User-Group Example - SAB" style="box-shadow: none;" />
+                                            </p>
+                                            <h4 id="example---racf">Example - RACF</h4>
+                                            <p>The <a href="https://www.ibm.com/docs/en/zos-basic-skills?topic=zos-what-is-racf">RACF</a> connector is used to manage critical entitlements on the mainframe. RACF is a complex system, but IGA purposes only require information about accounts and groups, as entitlements are given by group membership. Thus the system can be simplified to be managed by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> following the User-Group model.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_RACF.png" alt="User-Group Example - RACF" style="box-shadow: none;" />
+                                            </p>
+                                            <p>For RACF, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> provisions only the link between accounts and groups.</p>
+                                            <h4 id="example---tss">Example - TSS</h4>
+                                            <p>The TSS connector is similar to RACF in its use, but manages fine-grained entitlements at a higher level than RACF. TSS is at least as complex as RACF, and its connector follows a similar simplification as RACF's.</p>
+                                            <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;manages users (with their accounts) and groups called here profiles. Both users and profiles are grouped into departments, themselves grouped into partitions. Entitlements are called authorizations, and are linked to users through group (profile) membership.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_TSS.png" alt="User-Group Example - TSS" style="box-shadow: none;" />
+                                            </p>
+                                            <p>For TSS, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;provisions only the link between users and profiles.</p>
+                                            <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> receives a write access for users and profiles, only a read access for the rest of the model. It is interesting to keep the whole model for query goals such as listing a given user's entitlements.</p>
+                                            <div class="notices note">
+                                                <p><strong>Recommendation: categorize accounts in types</strong>
+                                                    <br />
+                                                    <br />Many of the managed systems following this model, just like the User model, distinguish between several types of accounts.
+<br /><br />In further steps, you will be able to define one resource type per account type and map each one to a role for assignment and provisioning.
+<br /><br /><strong>Roles:</strong> During the<a href="../../single-roles-catalog-creation/index.html" target="_parent" class="MCXref xref">
+              
+              Create Roles in the Role Catalog
+              </a>step for this connector you can build roles based on the group-membership system represented by users and profiles. Thus you will create navigation rules to represent the link between users and profiles.</p>
+                                            </div>
+                                            <h4 id="example---sdge">Example - SDGE</h4>
+                                            <p>The SDGE connector is used not to manage people but positions, so the application screens depend on the user's position. In other words, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> is going to manage users' entitlements in SDGE through their positions.</p>
+                                            <p>The object <code>User</code> or <code>Account</code> from the template, which contains users' accounts, is called here <code>Worker</code>.</p>
+                                            <p>The object <code>Group</code> from the template is called here <code>Position</code> (grouped into organizations, themselves grouped into organization types). It contains the way an entitlement is given, here through a given position and wallet.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_SDGE.png" alt="User-Group Example - SDGE" style="box-shadow: none;" />
+                                            </p>
+                                            <p>For SDGE, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;provisions only workers and the link between workers and positions.</p>
+                                            <h3 id="account-profile-transaction">Account-Profile-Transaction</h3>
+                                            <h4 id="authorization-mechanisms-2">Authorization mechanisms</h4>
+                                            <p>The Account-Profile-Transaction model is better suited to represent a system, with the following basic characteristics:</p>
+                                            <ul>
+                                                <li>To be able to perform an action or read a piece of data, a user must be granted one or several <u>transactions</u>. Transactions represent fine-grained entitlements. They can be associated to a type and conditions that restrict their use, such as a maximum per day or a context of validity.</li>
+                                                <li>Transactions are not assigned directly to an account, but are <u>packaged into profiles</u>, which are then assigned to accounts, which are owned by users.</li>
+                                                <li>Profiles can sometimes be classified into categories representing the sensitivity of the transactions they contain.
+<blockquote><p>For example, profile categories can be <code>Privilege Profiles</code> for high privilege transactions on sensitive data, and <code>Technical Profiles</code> for technical transactions related to system administration.</p></blockquote></li>
+                                            </ul>
+                                            <h4 id="model-2">Model</h4>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_profileTransaction.png" alt="Account-Profile-Transaction Model" style="box-shadow: none;" />
+                                            </p>
+                                            <p>Thus you need to create one entity type to represent accounts, one for profiles, and one for transactions.</p>
+                                            <p>Each entity type needs to be shaped with properties, chosen according to the data useful for entitlement assignment.</p>
+                                            <p>The only sensitive and required properties are those constituting the link between entity types, i.e. the navigation properties representing the packaging of transactions into profiles on the one hand, and the assignment of profiles to accounts on the other hand. You can potentially add a navigation property in the <code>Profile</code> entity type in order to categorize profiles within larger profiles.</p>
+                                            <div class="notices note">
+                                                <p>Instead of creating as many <code>Profile</code> objects as there are categories of profile, NETWRIX recommends <u>shaping the <code>Profile</code> object with a <code>category</code> attribute</u>. Indeed, a multiple-object model complexifies the addition of new profiles in the future. And as new profiles can be created in the future though, then you must plan for it.
+<br /><br />For example, instead of modeling two artificial types of profiles called <code>PP</code> for "Privilege Profile" and <code>TP</code> for "Technical Profile", prefer a single object <code>P</code> that represents all profiles using a specific attribute to differenciate technical from privilege profiles. This way, the model sticks to the real capacity of the technical tool and all use-cases are considered.
+<br /><br />See the schema below this note.</p>
+                                            </div>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_Profiles.png" alt="Profiles Example" style="box-shadow: none;" />
+                                            </p>
+                                            <div class="notices info">
+                                                <p><u>Transactions are not mandatory in a model</u>. Most of the time, the profile packages are predefined once and for all, or are the responsibility of the application owner. Then <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> doesn't need to manage the specific transactions for a profile directly inside the managed system. You can hence avoid modeling transactions altogether. In this case, you fall back on the User-Group model with a twist: if profile categories are relevant in the system's authorization mechanism, then you must take them into account.</p>
+                                            </div>
+                                            <h4 id="example---tss-1">Example - TSS</h4>
+                                            <p>The TSS connector is actually a mix of the User-Group and Account-Profile-Transaction models. The User-Group part is explained above.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_TSS-prof-trans.png" alt="User-Group Example - TSS" style="box-shadow: none;" />
+                                            </p>
+                                            <p>Transactions are called here authorizations.</p>
+                                            <p>For TSS, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;provisions only the link between users and profiles. Transactions (and the rest of the model) are only readable.</p>
+                                            <h3 id="star">Star</h3>
+                                            <h4 id="authorization-mechanisms-3">Authorization mechanisms</h4>
+                                            <p>The Star model is better suited to represent a system, where the ability to perform an action is granted through the assignment of entitlements, based on <u>several variable parameters</u>, most often the combination of a profile and at least one user data criteria.</p>
+                                            <blockquote>
+                                                <p>For example, you might want to give certain entitlements only to users who have an administrator profile <u>and</u> work in Marseilles.</p>
+                                            </blockquote>
+                                            <p>As the parameter combination is not predetermined, the whole system can become highly complex with the addition of data criteria.</p>
+                                            <p>Users are represented by the accounts they own.</p>
+                                            <div class="notices note">
+                                                <p><strong>Comparison with other models:</strong> while the User-Group model grants an entitlement via a group membership, the Star model grants said entitlement via a special authorization linking the right criteria altogether (i.e. the right profile and other user parameters).</p>
+                                            </div>
+                                            <h4 id="model-3">Model</h4>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_star.png" alt="Star Model" style="box-shadow: none;" />
+                                            </p>
+                                            <p>Thus you need to create one entity type to represent accounts, one for each criterion, and another one to represent the object linking acounts to criteria.</p>
+                                            <p>Each entity type needs to be shaped with properties, chosen according to the data useful for entitlement assignment.</p>
+                                            <p>The difficulty of this model is to map everything to roles in the role model. In <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s role model, one assignment is always one role. But in this case, in the managed system, an assignment is a tuple of things.</p>
+                                            <p>To map the tuple of things on a role, we have several choices:</p>
+                                            <ol>
+                                                <li value="1"><u>Create a role per possible combination of tuple of things</u>. This can quickly get out of hand as far as the number of created roles is concerned.</li>
+                                                <li value="2"><u>Use parametrized roles</u>. The number of roles will be contained, but it is a little more complicated to configure.</li>
+                                            </ol>
+                                            <p>The flexibility generated by parameters is particularly interesting for roles that incorporate entitlements in a more complex way than application roles. If the information contained in a role is complicated to deduce, then parameters can bring some clarity in the configuration. The objective is always to minimize the number of distinct roles, and the number of roles that are assigned to one given identity.</p>
+                                            <h4 id="example">Example</h4>
+                                            <p>Consider an application which manages entitlement assignment with different rules, according to users' profiles, attachment areas and sites. Our example shows 4 profiles, 4 attachment areas and 3 sites. So a user may be assigned a given entitlement for a given profile, attachment area and site.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_starModel.png" alt="Star Model Example" style="box-shadow: none;" />
+                                            </p>
+                                            <p>For this connector, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;provisions only the links between accounts and linking objects, and the links between linking objects and each criterion.</p>
+                                            <p>Concerning roles, integrators have two options:</p>
+                                            <ul>
+                                                <li>either create a specific role for <code>Profile_i</code> with <code>AttachmentArea_j</code> and <code>Site_k</code> for all available profiles, attachment areas and sites, which makes a total of 48 roles (for a quite simple example);</li>
+                                                <li>or create a single role with parameters for profiles, attachment areas and sites.</li>
+                                            </ul>
+                                            <h2 id="procedure-example">Procedure Example</h2>
+                                            <p><strong>Step 1: choose the connector model.</strong>
+                                            </p>
+                                            <p>Let's say we are modeling an Active Directory, which handles authorization through the group memberships of accounts. In other words, to assign an entitlement to an identity, we make the AD account of said identity member of the corresponding AD group. That is exactly what the User-Group template is designed to handle. See the <a href="#" target="_parent" class="MCXref xref" xrefformat="{para}">
+              
+              Model the Data
+              </a> topic for additional information.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_UserGroup.png" alt="User-Group Model" style="box-shadow: none;" />
+                                            </p>
+                                            <p><strong>Step 2: adapt the model to your reality.</strong>
+                                            </p>
+                                            <p>We start by renaming the <code>Account</code> object as <code>AD_User</code> and the <code>Group</code> object as <code>AD_Group</code>.</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_AD-step1.png" alt="AD Example - Step 1" style="box-shadow: none;" />
+                                            </p>
+                                            <p><strong>Step 3: define useful data close to your reality.</strong>
+                                            </p>
+                                            <p>We shape these objects with the following attributes:</p>
+                                            <p>
+                                                <img src="../../../../../Resources/Images/ConnectorModel_AD.png" alt="AD Example - Step 2" style="box-shadow: none;" />
+                                            </p>
+                                            <p><strong>Step 4: ensure that all objects have unique keys.</strong>
+                                            </p>
+                                            <p>Indeed we defined <code>objectGuid</code> as a key for both accounts and groups.</p>
+                                            <p><strong>Step 5: ensure the guidelines' enforcement.</strong>
+                                            </p>
+                                            <p>We could content ourselves with this model. The main benefit of this model is to closely mimic the reality of the AD authorization mechanism. But we'd like to go a bit further, applying a "keep it open to changes" approach.</p>
+                                            <p>Observe the similarities between <code>AD_User</code> and  <code>AD_Group</code>. There are many attributes repeating between the two entity types.</p>
+                                            <p>We can simplify: prefer a single object <code>AD_Entry</code> that can represent both users and groups. The difference between the two types of object will be made clear via specific properties like <code>objectCategory</code>, <code>member</code> and <code>memberOf</code>.</p>
+                                            <p>Beyond avoiding repetition, this makes the model easily adaptable if new elements pop up.</p>
+                                            <blockquote>
+                                                <p>For example, we could want to include computers or organizational units in the model in the future. Instead of creating two new additional objects <code>AD_Computer</code> and <code>AD_OU</code>, the existing object <code>AD_Entry</code> can represent them both at no additional modeling cost. Even though we could add <code>AD_Computer</code> and <code>AD_OU</code> without merging groups with entries, designing <code>AD_Entry</code> with all these attributes provides the means to add objects without creating new entity types.</p>
+                                                <p>
+                                                    <img src="../../../../../Resources/Images/ConnectorModel_ADEntry.png" alt="AD_Entry Example" style="box-shadow: none;" />
+                                                </p>
+                                            </blockquote>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

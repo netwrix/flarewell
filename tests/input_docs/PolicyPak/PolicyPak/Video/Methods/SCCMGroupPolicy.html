@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Getting Started with Endpoint Policy Manager (Misc)|[%=System.LinkedTitle%]|Methods: SCCM (and other on-prem tools) - Deploying real Microsoft GPO and Endpoint Policy Manager settings">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Deploy Real Group Policy using SCCM or Other Management System!</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Deploy Real Group Policy using SCCM or Other Management System!</h1>
+                                    <p>Do you have endpoints that you'd love to manage using REAL Group Policy, but want to deploy it using something else? Never fear, <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> is here to save the day by allowing you to deploy Admin Templates, Preferences, and Security Settings to your endpoints by using SCCM, KACE, Altiris, or whatever desktop management system you're already in love with!</p>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/xwEdISFBM6Q" title="Deploy Real Group Policy using SCCM or Other Management System!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3 id="transcript" style="text-align: center;">Deploy Real Group Policy using SCCM or Other Management System</h3>
+                                    <p>Hi, this is Whitney with PolicyPak Software. In this video, we're going to learn how to use PolicyPak magic to take real Group Policy and Preferences and Security Settings and then be able to deploy them using not Group Policy. So if you're using SCCM or KACE or some other systems management that you know and love, you can absolutely do that using PolicyPak magic.</p>
+                                    <p>To start off with, I've created a GPO that I'm just calling "GP Settings." I'm going to "Edit" this. The first thing I want to do is work with some admin templates because I really want to kill off the Control Panel in my endpoints. So I'm going to come over here and click on the "PolicyPak" node, and I'm going to go to "Administrative Templates Manager." I'm going to choose to "ADD NEW POLICY" here.</p>
+                                    <p>It's actually already highlighted over "Control Panel," so I'm going to go and choose "Prohibit access to Control Panel and PC settings." Select "Enabled" for that, just like you would if you were doing regular Group Policy here. I'm going to tell it "OK." Let's "Close" this down.</p>
+                                    <p>Now we've created that directive, but we're going to need to export it so we can then eventually wrap it up into an MSI along with some other settings and deploy that to our machines. So I'm going to right click here. I'm going to "Export as XML." We're just going to call it "No Control Panel" and "Save" that. There we go. It just dropped it right on the desktop there.</p>
+                                    <p>The next things we're going to do, the Group Policy Preferences and the Security Settings, are a little bit different. Instead of creating stuff within the "PolicyPak" node, I've done a little prepro on this and I have created "Shortcuts" over on the computer side. It's just a little "PolicyPak" shortcut. It's going to take you to "www.policypak.com" and the icon is a little butterfly.</p>
+                                    <p>I've already created that in "Preferences." What PolicyPak now allows me to do is when I go to "Preferences Manager," I'm not actually creating anything in the "Preferences Manager." I'm just using PolicyPak to export the settings that I already have up here in the standard "Preferences" area.</p>
+                                    <p>So I'm going to "SHOW WIZARD." This reminds you also that "You do not create new items from this Wizard, but instead must use existing Group Policy Preferences items within this GPO." I'll click "Next." It found my shortcut. I do want to do that, so I'll click "Next" again.</p>
+                                    <p>I can change the name of it if I want to, and I can also add item-level targeting if I want to do that as well. I'm actually just going to leave everything as it is and click "Next." Let's give it a location. I'm just going to drop it right on the "Desktop" again, and there we go. It should pop up right there.</p>
+                                    <p>The last thing we're going to do is the Security Settings. I've actually already created a security setting where I renamed the guest account. Let's drill down here and look at that: "Local Policies/Security Options." I've chosen to "Rename guest account" to just "PolicyPakGuest."</p>
+                                    <p>Since I've already created that, like with the Preferences Manager, I'm going to do kind of the same thing where I go and choose "Security Settings Manager" and we'll do the "SHOW WIZARD" business again.</p>
+                                    <p>Now this one actually has a few policy types that are not supported, so "Please note that the following policy types are not supported." The rest of them are supported and in good shape, so I'll click "Next." And, indeed, "Local Policies:Security Options." I would like to "Include in Export," thank you. "Next."</p>
+                                    <p>This is where I could put ILT on there if I wanted to do item-level targeting and filter it in for a specific security group or whatnot, but I'm going to leave it as is. Let's go ahead and throw this down on the "Desktop." I'm just going to call it "Rename Guest." There we go. We do want to create it. Moving right along, here we go.</p>
+                                    <p>All right, so we have our XML that we've just created. So we have our kill the Control Panel, we have a shortcut to deploy and we're renaming the guest account. In order to wrap all this up in an MSI, what we're going to do is we need to use the PolicyPak Exporter Tool. It installs alongside the admin console MSI. When I open up my Start Menu, sometimes it's up at the top under "Most used" or sometimes "Recently installed." If not, just scroll down, find "PolicyPak" and you'll find it right here.</p>
+                                    <p>This actually does a few different things, but right now we want to "Create a new MSI installer." We'll click "Next," and we're going to "Add Existing Files" here so let's do that. Just let me get back to the "Desktop" here.</p>
+                                    <p>I can do all of these at once actually. So I can choose "Shortcuts_PolicyPak," "Rename Guest" and "No Control Panel" all at once. There we go. The "No Control Panel" is currently "Install For" "Users &amp; Groups." I actually just want to put all three of them on the "Computer" side. And the "Target," of course, will be "All Users." I will click "Next."</p>
+                                    <p>We can change the "Product Name," which is what shows up in Uninstall a Program or something like that. I'll just call it "GP Settings" and "Next," "Next." Keep with that convention: "GP Settings." Throw it right on the "Desktop." There we go, and we "Finish" up.</p>
+                                    <p>Now we have this MSI that has our settings in it. But before I talk about deployment or any of that, let's go over and look at the settings as they are ungoverned. We'll come over to my endpoint here. One important thing I do want to point out is that the "PolicyPak Client-Side Extension" is installed on this machine. So you'll have to have that on your machine in order to be able to have your settings work. Let's get rid of this.</p>
+                                    <p>You can see I can clearly get into the "Control Panel" because I was able to do the "Uninstall a program" thing. So there we go. I can still get into Control Panel. There's no butterfly shortcut on here that I can see. If we go to "gpedit" and "Rename guest account," it's still called "Guest."</p>
+                                    <p>We're going to hop over here, and for a minute I need you to use your imagination. I'm going to install this manually, but if you were using SCCM or KACE or LANDESK or whatever, you would be able to do this and it would all occur silently.</p>
+                                    <p>So using our imaginations, I'm just going to drop that in my "SHARE" folder here. I'm going to hop back over to my endpoint. Let me go grab my "share" file here and go over here and just install this real quick. Again, this would be done silently in the background if you were using a management software. I'm just doing it manually for this video.</p>
+                                    <p>And here we are. We have the butterfly icon that popped up. If we double click it, it's going to take us to "policypak.com" just like we said. If I'm trying to get back into that "Control Panel," I'm not going to be able to do it. It has been restricted.</p>
+                                    <p>Finally, let me just "<a href="https://www.policypak.com/products/policypak-least-privilege-manager.html" target="_blank" title="Run as administrator">Run as administrator</a>" so we can check out that guest account. All right, let's drill down to "Windows Settings/Security Settings/Local Policies/Security Options." What do you know? "PolicyPakGuest."</p>
+                                    <p>So we were able to create and deploy real Group Policy. We did the Preferences. We did Security Settings. We exported that as an XML. We wrapped it all up as an MSI and then deployed it using whatever software you prefer.</p>
+                                    <p>If that's interesting to you, get in touch with us and we'll be happy to get you started with a free trial right away.</p>
+                                    <p>I'll see you in the next video. Thanks for watching.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

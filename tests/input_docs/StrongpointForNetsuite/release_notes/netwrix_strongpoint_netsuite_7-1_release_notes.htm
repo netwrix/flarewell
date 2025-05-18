@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Archive" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Netwrix Strongpoint for Netsuite 7.1 Release Notes</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Netwrix Strongpoint for Netsuite 7.1 Release Notes</h1>
+                                        <div class="toc-macro"/><h2 id="core_7121"><a name="Core" id="Core"/>Core 7.1.2.1</h2>
+                                        <p>November 30, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Support links are changing December 1<sup>st</sup>, the new link is <a href="https://www.netwrix.com/support.html" title="Open the Netwrix Support site">https://www.netwrix.com/support.html</a></p>
+                                            </li>
+                                            <li>
+                                                <p>NetSuite changes, such a moving an account to a different datacenter, are now treated as a Platform change. They do not create a non-compliant Change Log record.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of custom employee center roles across the Strongpoint spiders.</p>
+                                            </li>
+                                            <li>
+                                                <p>Bundle updates were enabling <b>Automatic Synchronization</b> between Strongpoint and Jira, changing settings where <b>Automatic Synchronization</b> was disabled. <b>Automatic Synchronization</b> defaults to enabled for new installations. Refer to <a href="../integrations/jira_integration.htm" title="Open Jira Integration topic" class="MCXref xref">Jira</a> topic for more information.</p>
+                                            </li>
+                                            <li>
+                                                <p>Enhanced handling of nonmaterial changes for fields using html coding. Special symbols ( &lt; &gt; &amp; " ) in fields do not generate non-compliant change logs.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of the <b>Date Last Used</b> script to avoid time limit errors.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="core_712"><a name="Core2" id="Core2"/>Core 7.1.2</h2>
+                                        <p>November 2, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Removed <b>People Related to Customization</b> search from the <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Customization</b> menu.</p>
+                                            </li>
+                                            <li>
+                                                <p>Increased the number of employees and roles for User Provisioning per run. If there are more than the limit, multiple runs are processed. The <b>User Provisioning Error</b> field reports the Change Request is in process until all of the runs are complete.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of Affected Employees if an error occurs during provisioning. The error only appears once per employee.</p>
+                                            </li>
+                                            <li>
+                                                <p>Eliminated duplicate logs on script <b>Type</b> customizations occurring when <b>Resider Now</b> was run after the Strongpoint Create System Note CL scheduled script.</p>
+                                            </li>
+                                            <li>
+                                                <p>Added system notes for changes to the <b>Company Preference</b> and <b>Account Preference</b>.</p>
+                                            </li>
+                                            <li>
+                                                <p>Removed the Token Based Authentication Setup note link from <b>Environment Compare</b>.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved ReSpider Now to prevent duplicated change logs.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of Non-material change workflow instances. </p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of platform changes on the Record type. Non-compliant change logs are not generated for permissions and links sublists it the <b>permittedrole</b> or <b>linkcenter</b> is empty. The change is noted in the log.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="core_7111"><a name="Core3" id="Core3"/>Core 7.1.1.1<br/></h2>
+                                        <p>October 16, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Change Log Evaluation</b>: Change logs related to workflows were labeled with a <b>Scripted Object</b> change type. The labeling caused discrepancies in the change log evaluation.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Search Functionality</b>: The <b>Execute as Admin Workflows</b> search was not displaying data, even when executed workflows were present.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="core_711"><a name="Core4" id="Core4"/>Core 7.1.1<br/></h2>
+                                        <p>September 20, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Added <b>Refresh Changed By</b> button to refresh change information on Change Logs. If the <b>Actual Change Date</b> is empty or <b>Change By</b> is set to <b>Could Not Be Determined</b> or <b>Pending Autospider</b>, a <b>Refresh Changed By</b> button is available. When clicked, it populates <b>Actual Change Date</b> and <b>Change By</b> fields.</p>
+                                                <p class="note"> The button is only available for Object types where Strongpoint can retrieve the <b>Actual Change Date</b> and <b>Change By</b> fields.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/change_log_refresh.png" title="Refresh Changed By"/>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Removed extraneous Customization record link in Search Clean Up notification emails. Non-Strongpoint users receive the notification and cannot use the link.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="core_71"><a name="Core5" id="Core5"/>Core 7.1</h2>
+                                        <p>August 23, 2023</p>
+                                        <p>Every release may contain enhancements behind the scenes and customer-specific bug fixes to keep Strongpoint running smoothly.</p>
+                                        <p> <b>NetSuite Release 2023.2 Support</b><a name="html_formula_text" id="html_formula_text"/></p>
+                                        <p>The Strongpoint Searches have been updated to support NetSuite's change of <b>Formula (Text) Fields</b> to the new <b>Formula (HTML) Fields</b>. This is a NetSuite security enhancement.</p>
+                                        <p>Strongpoint 7.1 must be installed prior to the NetSuite 2023.2 release to ensure a smooth upgrade:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Install Strongpoint 7.1 in your Sandbox August 15<sup>th</sup>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Test Strongpoint 7.1 before August 22<sup>nd</sup>. Contact your Customer Success Manager if you have questions.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Strongpoint 7.1 will be pushed to your production environment starting August 23<sup>rd</sup>.</p>
+                                            </li>
+                                        </ol>
+                                        <p>NetSuite will begin pushing release 2023.2 the end of August.</p>
+                                        <p class="note">If you have custom searches, you must update them to support the NetSuite change. To view the list of saved searches in your account that contain code in <b>Formula(Text)</b> fields, open: <br/><b>Lists</b> &gt; <b>Search</b> &gt; <b>Saved Searches with HTML in Formula(Text)</b></p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/formulaHTML.png" title="Run the Saved Search to view changes"/>
+                                        </p>
+                                        <h2 id="sod_162"><a name="SoD" id="SoD"/>SoD 1.6.2</h2>
+                                        <p>November 3, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Updated the email template to include the Affected Employee details when an SoD Exemption is updated to Pending Approval. The approver sees the following details:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Any related SOD Exemptions for the Affected Employee where Status = Approved</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Affected Employee</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Related Exemption Name</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Related Exemption Reason for Exemption</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Related Exemption Affected Rules</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Related Exemption Affected Roles</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2 id="sod_161"><a name="SoD1.6.1" id="SoD1.6.1"/>SoD 1.6.1</h2>
+                                        <p>September 20, 2023</p>
+                                        <p>Improved handling of <b>Proposed User Roles</b> and <b>Proposed Global Permissions</b> in the SoD Approval Form.</p>
+                                        <h2 id="sod_16"><a name="SoD2" id="SoD2"/>SoD 1.6</h2>
+                                        <p>August 23, 2023</p>
+                                        <p> NetSuite Release 2023.2 Support</p>
+                                        <p>The Strongpoint Searches have been updated to support NetSuite's change of <b>Formula (Text) Fields</b> to the new <b>Formula (HTML) Fields</b>. This is a NetSuite security enhancement.</p>
+                                        <p>Strongpoint 7.1 and SoD 1.6 must be installed prior to the NetSuite 2023.2 release to ensure a smooth upgrade:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Install Strongpoint 7.1 and SoD 1.6 in your Sandbox August 15<sup>th</sup>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Test Strongpoint 7.1  and SoD 1.6 before August 22<sup>nd</sup>. Contact your Customer Success Manager if you have questions.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Strongpoint 7.1  and SoD 1.6 will be pushed to your production environment starting August 23<sup>rd</sup>.</p>
+                                            </li>
+                                        </ol>
+                                        <p>NetSuite will begin pushing release 2023.2 the end of August.</p>
+                                        <h2 id="jira_13"><a name="Jira" id="Jira"/>Jira 1.3</h2>
+                                        <p>November 30, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Support links are changing December 1<sup>st</sup>, the new link is <a href="https://www.netwrix.com/support.html" title="Open the Netwrix Support site">https://www.netwrix.com/support.html</a></p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="jira_1216"><a name="Jira2" id="Jira2"/>Jira 1.2.16</h2>
+                                        <p>September 27, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Improved handling of the Jira Token field. It is now stored as an API Secret in NetSuite. Refer to <a href="https://suiteanswers.custhelp.com/app/answers/detail/a_id/98285">https://suiteanswers.custhelp.com/app/answers/detail/a_id/98285</a> for more information.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved handling of the Change Request owner assignment. <b>Owner</b> is now the person who pushed the ticket into NetSuite.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="jira_1215"><a name="Jira3" id="Jira3"/>Jira 1.2.15</h2>
+                                        <ul>
+                                            <li>
+                                                <p>Replaced the persistent popup message in the Strongpoint Jira integration when project restricted access is in effect. You see a static note in the tab if you do not have access, instead of a more intrusive popup message requiring interaction. (Jira On-prem was updated August 2023, Jira Cloud updated November 2023)</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="jira_1214">Jira 1.2.14</h2>
+                                        <ul>
+                                            <li>
+                                                <p>Added the ability to receive and store images attached in the Jira description by Jira ticket ID.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/jira_images.png" title="Strongpoint stores attached Jira images"/>
+                                                    
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="jira_1213">Jira 1.2.13</h2>
+                                        <p>Here are the enhancements for the release:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Change customization name to allow Single quotes (').</p>
+                                            </li>
+                                            <li>
+                                                <p>Added <b>Location</b> to the <b>Type</b> drop down on the <b>Add Proposed Customization</b> form.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="jira_1211">Jira 1.2.11</h2>
+                                        <p>Here are the enhancements for the release:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Import Customizations from Jira</p>
+                                            </li>
+                                            <li>
+                                                <p>Enable Allow NS to Jira Push (must be done prior to creating a ticket from NetSuite to Jira)</p>
+                                            </li>
+                                            <li>
+                                                <p>Create Ticket from NetSuite to Jira</p>
+                                            </li>
+                                            <li>
+                                                <p>Change customization name to allow Single quotes (').</p>
+                                            </li>
+                                            <li>
+                                                <p>Added <b>Group</b> to the <b>Type</b> drop down on the <b>Add Proposed Customization</b> form.</p>
+                                            </li>
+                                        </ul>
+                                        <p>Import Customizations from Jira</p>
+                                        <p class="img-inside-p">An <b>Import Customization</b> button has been added to the Jira Strongpoint form. You can import an xml file exported from a Jira ticket.<br/><br/><img src="../Resources/Images/jira_strongpoint_form.png" title="Jira Strongpoint form"/></p>
+                                        <p>Enable Allow NS to Jira Push</p>
+                                        <p>This feature must be enabled before you can create tickets from NetSuite to Jira.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b><span class="mc-variable General.MenuName variable">Strongpoint</span> Support</b> &gt; <b>Installation Settings</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Open the <b>Jira Integration</b> tab</p>
+                                            </li>
+                                            <li value="3">Check <b>Allow NS to Jira Push</b> to enable pushing NetSuite change requests into Jira.<br/><br/><p class="img-inside-p"><img src="../Resources/Images/jira_example_integration.png" title="Enable Allow NS to Push to Jira"/></p></li>
+                                        </ol>
+                                        <p>Create Ticket from NetSuite to Jira</p>
+                                        <p>Create Ticket from NetSuite to Jira must be enabled before you can create tickets from NetSuite to Jira.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Create or open a change request in Strongpoint.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Add your information and customizations.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <b>Push to Jira</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="img-inside-p">Select your Jira project.<br/><br/><img src="../Resources/Images/jira_ns_jira_push2.png" title="Select a Jira Project"/></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click <b>Push</b>. A Change Request Pushed message is displayed. Click <b>Close</b>.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p class="img-inside-p">Open the <b>Related Change Records</b> tab. The ticket number is added as an <b>External Change Request Number</b>. <b>CM-15</b> in this example.<br/><br/><img src="../Resources/Images/jira_create_cr_related_change.png" title="The ticket number is on the Related Change Records tab"/></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Open Jira.</p>
+                                            </li>
+                                            <li value="8">
+                                                <p class="img-inside-p">Navigate to <b>CM-15</b> ticket.<br/><br/><img src="../Resources/Images/jira_ns_jira_push3.png" title="Open the ticket in Jira"/></p>
+                                            </li>
+                                            <li value="9">
+                                                <p class="img-inside-p">Click <b>Strongpoint NetSuite</b>. The customizations from the change request are added.<br/><br/><img src="../Resources/Images/jira_ns_jira_push4.png" title="Customizations are added to the ticket"/></p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="jira_1210">Jira 1.2.10</h2>
+                                        <p>Here are the enhancements for the release:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Credentials are now persistent, and do not need to be entered every time.</p>
+                                            </li>
+                                            <li>
+                                                <p>Strongpoint Settings page added to Jira</p>
+                                            </li>
+                                        </ul>
+                                        <p>Strongpoint Settings for Jira</p>
+                                        <p>The Strongpoint Settings app is accessed through Jira. This is where you create your Token Based Authentication (TBA) credentials for your account. Once created, they are available to you for easy selection when performing your tasks.</p>
+                                        <p class="note">Token-Based Authentication is set up through NetSuite. Refer to <a href="../integrations/jira_integration.htm#tokens">Setting up Token-Based Authentication</a>.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Jira</b>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Open your <b>Projects</b> page:</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <br/>
+                                                    <img src="../Resources/Images/jira_projects_menu.png" title="Open your Jira Projects page to find Add-ons"/>
+                                                    
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Expand <b>Add-ons</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Select <b>Strongpoint Settings</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/jira_strongpoint_settings.png" title="Jira Strongpoint Settings"/>
+                                                    
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click <b>New Token Based Authentication</b> to add your credentials. This needs to be done once for each of your accounts.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <br/>
+                                                    <img src="../Resources/Images/jira_add_token.png" title="Add tokens for Jira"/>
+                                                    
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Enter your credentials and click <b>Add Token Based Authentication Credential</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="servicenow_integration_115">ServiceNow Integration 1.1.5</h2>
+                                        <p>November 2, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Token-based Authentication is now a requirement. The Basic Authentication login form is deprecated.</p>
+                                            </li>
+                                            <li>
+                                                <p>Improved formatting for <b>Add Proposed Customization</b> IDs.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="user_access_review_102">User Access Review 1.0.2</h2>
+                                        <p>October 13, 2023</p>
+                                        <ul>
+                                            <li>
+                                                <p>Added a <b>GL Impact</b> field and a <b>Permission Risk Severity</b> dropdown to the Permission record. <br/><br/><b>GL Impact</b> field is a <b>Y/N</b> choice.<br/><br/><b>Permission Risk Severity</b> can be <b>High</b>, <b>Medium</b>, <b>Low</b> or <b>Null</b> (default).</p>
+                                            </li>
+                                            <li>
+                                                <p>Added  <b>GL Impact</b> and  <b>Permission Risk Severity</b> filters to the Permission Revews lists. </p>
+                                            </li>
+                                            <li>
+                                                <p>Added  <b>GL Impact</b> and  <b>Permission Risk Severity</b> columns to the Permission Review.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/uar_gl_impact.png" title="UAR GL Impact"/>
+                                                    
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Added new roles and permissions for UAR users:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Strongpoint UAR Admin</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Strongpoint UAR Owner</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Strongpoint UAR Additional Reviewer</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Strongpoint UAR Auditor</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

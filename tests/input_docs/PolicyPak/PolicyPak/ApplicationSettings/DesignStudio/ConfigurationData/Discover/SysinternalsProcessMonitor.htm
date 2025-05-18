@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="_Skins_Netwrix_Website" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Apps, Browsers, &amp; Java Security Pak|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Configuration Data Using Sysinternals Process Monitor</title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Configuration Data Using Sysinternals Process Monitor</h1>
+                                    <p>Most applications' data should be easy to find. However, occasionally it is difficult to locate an application's configuration data. When these issues occur, you might want to turn to Microsoft's free Sysinternals Process Monitor to help discover where an application stores its data.</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span><span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> DesignStudio is a lite capture tool and needs to be instructed on where to perform the before and after snapshot (specific file, portion of the registry, etc).</p>
+                                    <p>Process Monitor's job is to monitor what an application is doing. When it comes to the applications we want to control, we care most about knowing what an application is doing with regard to file writes or registry writes (though Process Monitor can also trap process and thread events, DLL loads, and network activity). In short, if we know where the application is doing its writing, it's easy to learn where it stores its data. Then we can tell <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> DesignStudio where to perform its capture. Process monitor can be downloaded from Microsoft at: <a href="http://technet.microsoft.com/sysinternals">http://technet.microsoft.com/sysinternals</a>.</p>
+                                    <p>Let's explore some quick tips for running Process Monitor. First, make sure Process Monitor is capturing events by clicking on File|Capture Events (this should be on by default) and Edit|Auto Scroll (which is not the default). You can see these configuration options in Figure 102 and Figure 103.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/Appendix B - PolicyPak Application Manager DesignStudio Guide/Discovering Configuration_15_499x277.png" class="img_157" style="width: 499;height: 277;" />
+                                    </p>
+                                    <p>Figure 102. Selecting the option to capture events.
+                
+        </p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/Appendix B - PolicyPak Application Manager DesignStudio Guide/Discovering Configuration_16.png" class="img_158" />
+                                    </p>
+                                    <p>Figure 103. Selecting the option for autoscrolling.
+
+        </p>
+                                    <p>Next, you're going to create a filter automatically. To do this, use Process Monitor's Target Sight icon and drag it directly onto the target application's main window as shown in Figure 104.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/Appendix B - PolicyPak Application Manager DesignStudio Guide/Discovering Configuration_17.png" />
+                                    </p>
+                                    <p> Figure 104. Dragging the Target Sight icon into the main window.
+               
+        </p>
+                                    <p>Next, have the first two filter types selected, Registry and File, as shown in Figure 105. Unselect the remaining three items (Network Activity, Process &amp; Thread, and Profiling Events). </p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/Appendix B - PolicyPak Application Manager DesignStudio Guide/Discovering Configuration_18_624x105.png" class="img_160" style="width: 624;height: 105;" />
+                                    </p>
+                                    <p>Figure 105. Selecting the "Registry" and "File" types.
+                
+        </p>
+                                    <p>Next, make a change in your application and click "Apply" or "OK." Look for registry or disk activity that occurs when you click "OK." It takes a little practice but you should see some disk writes or registry writes when you make a change to your application. Note that some applications will keep settings in memory and only to write their data (to the registry or disk) when the application is closed. This can be a little bit frustrating, so if don't see the changes you expect, you can also try to close the application and see if it wrote any changes to the registry or disk.</p>
+                                    <p>In Figure 106 you can see the deployment.properties file was changed after checkbox was unselected and the change was applied.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/Appendix B - PolicyPak Application Manager DesignStudio Guide/Discovering Configuration_19.png" />
+                                    </p>
+                                    <p>Figure 106. Applying changes.
+               
+        </p>
+                                    <p>Knowing this, you can use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> DesignStudio to use this location (in this case, a file) as the data root and continue to build an AppSet for the application.</p>
+                                    <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>Be sure to reset the filter the next time you run Process Monitor, since it will be set to the previous application's process ID (PID). The filter dialog prompt appears only if you had set a filter the last time you ran Process Monitor. You'll be asked whether you want to continue using the same filter. Note, if you hadn't set the filter or had cleared it, you don't get the filter dialog prompt when you re-run Process Monitor. </p>
+                                    <p>If you discover a file that stores data for your application, but it isn't a currently supported type (INI, XML, JS, .properties, etc.) then let us know by emailing <a href="mailto:support@policypak.com">support@policypak.com</a> with details so we can include its support in a future release. For more information on using Process Monitor, be sure to watch this in-depth video (from the 35:30 mark) as well for more tips: </p>
+                                    <p><a href="http://channel9.msdn.com/Events/TechEd/NorthAmerica/2010/WCL314">http://channel9.msdn.com/Events/TechEd/NorthAmerica/2010/WCL314</a>. You can also purchase the book on Sysinternals tools (where Process Monitor is covered) by Mark Russinovich and Aaron Margosis by visiting this link: <a href="http://www.amazon.com/Windows®-Sysinternals-Administrators-Reference-Russinovich/dp/073565672X">http://www.amazon.com/Windows%C2%AE-Sysinternals-Administrators-Reference-Russinovich/dp/073565672X</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

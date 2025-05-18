@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedHeader%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" /><title>Active Directory Activity Auditing Configuration</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../ActivityMonitor/Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <script type="text/javascript" src="../../Resources/zzJavaScript/plugins.min.js">
+                                        </script>
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>Active Directory Activity Auditing Configuration</h1>
+                                        <p>There are two methods to configure <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> to provide Active Directory domain activity to <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span>:</p>
+                                        <ul>
+                                            <li>
+                                                <p>API Server</p>
+                                            </li>
+                                            <li>
+                                                <p>File Archive Repository</p>
+                                            </li>
+                                        </ul>
+                                        <p>See the <a href="FileArchive.htm" target="_parent" title="File Archive Repository Option" alt="File Archive Repository Option" class="MCXref xref">File Archive Repository Option</a> topic for additional information on that option.</p>
+                                        <h2>API Server Option</h2>
+                                        <p>In this method, you will be deploying two agents:</p>
+                                        <ul>
+                                            <li>
+                                                <p>First, deploy an Activity Agent to a Windows server that will act as the API server. This is a non-domain controller server. </p>
+                                                <p class="Recommended-1" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;&lt;i&gt;RECOMMENDED: &lt;/i&gt;&lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Recommended"><span style="color: #fb8000;" class="mcFormatColor"><b><i>RECOMMENDED: </i></b></span></span></span>Deploy the API Server to the same server where the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console resides.</p>
+                                            </li>
+                                            <li>
+                                                <p>Next, deploy the AD Agent to all domain controllers in the target domain. </p>
+                                            </li>
+                                        </ul>
+                                        <p>Follow the steps to setup integration between <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> and <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> through an API server. </p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Deploy the Activity Agent to the API server.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Deploy the AD Agent to each domain controller in the target domain.</p>
+                                        <p>The next step is to configure the agent deployed to the API server.</p>
+                                        <h2>Configure API&#160;Server Agent</h2>
+                                        <p>Follow the steps to configure the agent deployed to the API server.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>On the Agents tab of the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console, select the agent deployed to the API&#160;server.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Click <b>Edit</b>. The Agent properties window opens.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Select the <b>API Server</b> tab and configure the following: </p>
+                                        <ul>
+                                            <li>
+                                                <p>Select the <b>Enable API access on this agent</b> checkbox.</p>
+                                            </li>
+                                            <li>
+                                                <p>The default <b>API server port (TCP)</b> is 4494, but it can be modified if desired. Ensure the modified port is also used by <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span>.</p>
+                                            </li>
+                                            <li>
+                                                <p>Click <b>Add Application</b>. The Add or edit API client window opens. </p>
+                                            </li>
+                                            <li>
+                                                <p>Configure the following:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Provide a descriptive and unique <b>Application name</b>, for example <code><span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span></code>.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Select the <b>Read</b> checkbox to grant this permission to this application.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Click <b>Generate</b> to generate the Client ID and Client Secret. </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Copy the Client ID value to a text file.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Click <b>Copy</b> and save the Client Secret value to a text file. </p>
+                                                        <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>It is not possible to retrieve the value after closing the Add or edit API&#160;client window. It must be copied first.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>By default, the <b>Secret Expires</b> in 3 days. That means it must be used in the <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> Connection Profile within 72 hours or a new secret will need to be generated. Modify if desired.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Click <b>OK</b> to save the configuration and close the Add or edit API client window.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>If the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console server is not the API Server, then click <b>Use this console</b> to grant the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> the ability to manage the API server. </p>
+                                            </li>
+                                            <li>
+                                                <p>The IPv4 or IPv6 allowlist allows you to limit access to the API server data to specific hosts.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Click <b>OK</b> to save the configuration and close the Agent properties window. </p>
+                                        <p>The next step is to configure the agents deployed to the domain controllers.</p>
+                                        <h2>Configure Domain Controller Agent</h2>
+                                        <p>Follow the steps to configure the agent deployed to the domain controller.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>On the Agents tab of the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> Console, select an agent deployed to domain controller.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Click <b>Edit</b>. The Agent properties window opens.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Select the <b>Archiving</b> tab and configure the following: </p>
+                                        <ul>
+                                            <li>
+                                                <p>Select the <b>Enable Archiving for this agent</b> checkbox.</p>
+                                            </li>
+                                            <li>
+                                                <p>Select the <b>Archive log files on a UNC path</b> option. Click the <b>...</b> button and navigate to the desired network share on the API&#160;server. </p>
+                                            </li>
+                                            <li>
+                                                <p>The <b>User name</b> and <b>User password</b> fields only need to be filled in if the account used to install the agent does not have access to this share. </p>
+                                                <p class="Remember" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;i&gt;Remember, &lt;/i&gt;&lt;/span&gt;"><span class="autonumber"><span class="Remember"><span style="color: #fb8000;" class="mcFormatColor"><i>Remember, </i></span></span></span>The account used to install the agent on a domain controller is a Domain Administrator account.</p>
+                                            </li>
+                                            <li>
+                                                <p>Click <b>Test</b> to ensure a successful connection to the network share. </p>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Click <b>OK</b> to save the configuration and close the Agent properties window.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Repeat Steps 1-4 for each agent deployed to domain controller.</p>
+                                        <p>These agent are configured to save the Archive logs to the selected share. </p>
+                                        <h2>Configure Monitored Domain Output</h2>
+                                        <p>Follow the steps configure the monitored domain output for <span class="mc-variable SA.Product_Long_Name variable">Netwrix Access Analyzer (formerly Enterprise Auditor)</span>.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Select the <b>Monitored Domains</b> tab.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span> Select the desired domain and click <b>Add Output</b>. The Add New Ouptut window opens. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Configure the following:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Configure the desired number of days for the <b>Period to keep Log files</b>. This is the number of days the log files are kept on the API server configured in the sections above. This needs to be set to a greater value than the days between <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> scans. </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>For example, if <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> runs the <b>AD_ActivityCollection</b> Job once a week (every 7 days), then the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> output should be configured to retain at least 10 days of log files.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Check the <b>This log file is for StealthAUDIT</b> box. </p>
+                                            </li>
+                                            <li>
+                                                <p>Optionally select the <b>Enable periodic AD Status Check event reporting</b> checkbox. When enabled, the agent will send out status messages every five minutes to verify whether the connection is still active.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Click <b>Add Output</b> to save and close the Add New Output window. </p>
+                                        <p><span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> now has access to the agent log files for this domain.</p>
+                                        <h2>Configure Connection Profile</h2>
+                                        <p> Follow the steps to configure the Connection Profile in <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span>.</p>
+                                        <p class="Remember" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;i&gt;Remember, &lt;/i&gt;&lt;/span&gt;"><span class="autonumber"><span class="Remember"><span style="color: #fb8000;" class="mcFormatColor"><i>Remember, </i></span></span></span>the Client ID and Client Secret were generated by the API server and copied to a text file. If the secret expired before the Connection Profile is configured, it will need to be re-generated.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>On the <b>Settings</b> &gt; <b>Connection</b> node of the <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> Console, select the Connection Profile for the Active Directory solution. If you haven't yet created a Connection Profile or desire a specific one for AD Activity, create a new one and provide a unique descriptive name. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Click <b>Add User credential</b>. The User Credentials window opens. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Configure the following:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Select Account Type – Select <b>Web Services (JWT)</b></p>
+                                            </li>
+                                            <li>
+                                                <p>User name – Enter the Client ID generated by the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> API Server</p>
+                                            </li>
+                                            <li>
+                                                <p>Access Token – Enter the Client Secret generated by the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> API Server</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Click <b>OK</b> to save and close the User Credentials window. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Click <b>Save</b> and then <b>OK</b> to confirm the changes to the Connection Profile.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>Navigate to the <b>Jobs</b> &gt;&#160;<b>Active Directory</b> &gt; <b>6.Activity</b> &gt; <b>0.Collection</b> Job Group. Select the <b>Settings &gt; Connection</b> node.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>Select the <b>Select one of the following user defined profiles</b> option. Expand the drop-down menu and select the Connection Profile with this credential.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 8 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 8 – </b></span></span>Click <b>Save</b> and then <b>OK</b> to confirm the changes to the job group settings.</p>
+                                        <p>The Connection Profile will now be used for AD Activity collection.</p>
+                                        <h2>Configure the AD_ActivityCollection Job</h2>
+                                        <p>The <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> requires additional configurations in order to collect domain activity data. Follow the steps to configure the <b>AD_ActivityCollection</b> Job.</p>
+                                        <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Ensure that the <b>.Active Directory Inventory</b> Job Group has been successfully run against the target domain.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Navigate to the <b>Jobs</b> &gt;&#160;<b>Active Directory</b> &gt; <b>6.Activity</b> &gt; <b>0.Collection</b> &gt; <b>AD_ActivityCollection</b> Job. Select the <b>Configure</b> &gt; <b>Queries</b> node. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Click <b>Query Properties</b>. The Query Properties window displays. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>On the Data Source tab, select <b>Configure</b>. The Active Directory Activity DC wizard opens. </p>
+                                        <p style="text-align: center;">
+                                            <img src="../../Resources/Images/EnterpriseAuditor/Admin/DataCollector/ADActivity/CategoryImportFromNAM.png" title="Active Directory Activity DC wizard Category page" alt="Active Directory Activity DC wizard Category page" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>On the Category page, choose <b>Import from SAM</b> option and click <b>Next</b>. </p>
+                                        <p style="text-align: center;">
+                                            <img src="../../Resources/Images/EnterpriseAuditor/Admin/DataCollector/ADActivity/NAMConnection.png" title="Active Directory Activity DC wizard SAM connection settings page" alt="Active Directory Activity DC wizard SAM connection settings page" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>On the SAM connection page, the <b>Port</b> is set to the default 4494. This needs to match the port configured for the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> API Server agent. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>In the <b>Test SAM host</b> textbox, enter the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> API Server name using fully qualified domain format. For example, <code>NEWYORKSRV30.NWXTech.com</code>. Click <b>Connect</b>.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>If connection is successful, the archive location displays along with a Refresh token. Copy the <b>Refresh token</b>. This will replace the Client Secret in the Connection Profile in the last step. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 8 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 8 – </b></span></span>Click <b>Next</b>. </p>
+                                        <p style="text-align: center;">
+                                            <img src="../../Resources/Images/EnterpriseAuditor/Admin/DataCollector/ADActivity/Scope.png" title="Active Directory Activity DC wizard Scoping and Retention page" alt="Active Directory Activity DC wizard Scoping and Retention page" />
+                                        </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 9 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 9 – </b></span></span>On the Scope page, set the Timespan as desired. There are two options:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Relative Timespan – Set the number of days of activity logs to collect when the scan is run</p>
+                                            </li>
+                                            <li>
+                                                <p>Absolute Timespan – Set the date range for activity logs to collect when the scan is run</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Recommended-1" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;&lt;i&gt;RECOMMENDED: &lt;/i&gt;&lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Recommended"><span style="color: #fb8000;" class="mcFormatColor"><b><i>RECOMMENDED: </i></b></span></span></span>The threshold should be set to ensure the logs are collected before the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> domain output log retention expires. For example, if <span class="mc-variable SA.Product_Short_Name variable">Access Analyzer</span> runs the <b>AD_ActivityCollection</b> Job once a week (every 7 days), then the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> output should be configured to retain at least 10 days of log files. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 10 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 10 – </b></span></span>Set the Retention period as desired. This is the number of days <span class="mc-variable SA._Product_Short_Name variable">Access Analyzer</span> keeps the collected data in the SQL Server database.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 11 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 11 – </b></span></span>Click <b>Next</b> and then <b>Finish</b> to save the changes and close the wizard.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 12 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 12 – </b></span></span>Click <b>OK</b> to save the changes and close the Query Properties page. </p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 13 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 13 – </b></span></span>Navigate to the global <b>Settings</b> &gt; <b>Connection</b> node to update the User Credential with the Refresh token: </p>
+                                        <ul>
+                                            <li>
+                                                <p>Select the Connection Profile assigned to the <b>6.Activity</b> &gt; <b>0.Collection</b> Job Group.</p>
+                                            </li>
+                                            <li>
+                                                <p>Select the Web Services (JWT) User Credential and click <b>Edit</b>. </p>
+                                            </li>
+                                            <li>
+                                                <p>Replace the Access Token with the Refresh token generated by the data collector in Step 7. </p>
+                                            </li>
+                                            <li>
+                                                <p>Click <b>OK</b> to save and close the User Credentials window.</p>
+                                            </li>
+                                            <li>
+                                                <p>Click <b>Save</b> and then <b>OK</b> to confirm the changes to the Connection Profile.</p>
+                                            </li>
+                                        </ul>
+                                        <p>The query is now configured to target the <span class="mc-variable SAM.Product_Short_Name variable">Activity Monitor</span> API Server to collect domain activity logs.</p>
+                                        <h3><a name="(Optiona"></a>(Optional) Configure Import of AD Activity into Netwrix Access Information Center</h3>
+                                        <p>AD Activity data can be imported into <span class="mc-variable AIC.Product_Long_Name variable">Netwrix Access Information Center</span> by the <b>AD_ActivityCollection</b> Job. However, this is disabled by default. Follow the steps to enable the importing of AD activity data into the <span class="mc-variable AIC.Product_Short_Name variable">Access Information Center</span>.</p>
+                                        <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Navigate to the <b>Jobs</b> &gt;&#160;<b>Active Directory</b> &gt; <b>6.Activity</b> &gt; <b>0.Collection</b> &gt; <b>AD_ActivityCollection</b> Job.</p>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>On the job's Overview page, enable the import of AD Events.</p>
+                                        <ul>
+                                            <li>
+                                                <p>Click on the <b>Enable to import AD events into the AIC</b> parameter.</p>
+                                            </li>
+                                            <li>
+                                                <p>On the Parameter Configuration window, select the <b>Enabled</b> checkbox and click <b>Save</b>.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>On the job's Overview page, enable the import of authentication Events.</p>
+                                        <ul>
+                                            <li>
+                                                <p>Click on the <b>Enable to import authentication events into the AIC</b> parameter.</p>
+                                            </li>
+                                            <li>
+                                                <p>On the Parameter Configuration window, select the <b>Enabled</b> checkbox and click <b>Save</b>.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Optionally, modify the <b>List of attributes to track for Object Modified changes</b> and <b>Number of days to retain activity data in the AIC</b> parameters.</p>
+                                        <p>The <b>AD_ActivityCollection</b> Job is now configured to import both AD&#160;events and authentication events into the <span class="mc-variable AIC.Product_Long_Name variable">Netwrix Access Information Center</span>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_CSH_NPR_Skin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="online">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" /><title>Using Modern Authentication with Microsoft Entra ID</title>
+        <!-- Google Tag Manager -->
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NKJ33G');</script> -->
+        <!-- End Google Tag Manager -->
+        <link rel="shortcut icon" href="https://img.netwrix.com/fav.ico" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link href="../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="shortcut icon" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1260px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJ33G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2538779-18">
+                                    </script>
+                                    <script>/* <![CDATA[ */
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-2538779-18');
+		/* ]]> */</script>
+                                    <div class="searchbar">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search here" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="main">
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="toc">
+                                                <ul class="nocontent menu _Skins_TOC mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Auditor__Auditor.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="content">
+                                                <div role="main" id="mc-main-content">
+                                                    <h1>Using Modern Authentication with Microsoft Entra ID</h1>
+                                                    <p style="text-align: left;">This option is recommended for organizations  that use modern authentication as the identity management approach, having multi-factor authentication (MFA) enabled for their user accounts. In this scenario, <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span> will access the cloud-based infrastructure via Microsoft Graph and other modern APIs, being authenticated through a pre-configured Microsoft Entra ID application with appropriate access permissions. </p>
+                                                    <p style="text-align: left;">If you plan to implement this scenario, you should register an Microsoft Entra ID app manually and provide its settings to <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span> when configuring a monitored item.</p>
+                                                    <h2><a name="Configur2"></a>Configuring Microsoft Entra ID App for Auditing Microsoft Entra ID</h2>
+                                                    <p>Follow the steps to use a data collecting account with modern authentication.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Create and Register a New App in Microsoft Entra ID app that will be used for modern authentication. See the <a href="#Creating" target="_parent" title="Create and Register a New App in Microsoft Entra ID" alt="Create and Register a New App in Microsoft Entra ID" class="MCXref xref">Create and Register a New App in Microsoft Entra ID</a> section for additional information.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Grant required permissions to that application using Microsoft Entra ID app manifest. See the <a href="#Granting" target="_parent" title="Grant Required Permissions" alt="Grant Required Permissions" class="MCXref xref">Grant Required Permissions</a> section for additional information.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Configure client secret for that application. See the <a href="#Configur" target="_parent" title="Configure Client Secret" alt="Configure Client Secret" class="MCXref xref">Configure Client Secret</a> topic for additional information.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Obtain tenant ID – you will need it when configuring a monitored item (Office 365 tenant) settings. See the <a href="#Step4" target="_parent" title="Obtain Tenant Name" alt="Obtain Tenant Name" class="MCXref xref">Obtain Tenant Name</a> section for additional information.</p>
+                                                    <h3><a name="Creating"></a>Create and Register a New App in Microsoft Entra ID</h3>
+                                                    <p class="Important">You will need to create a dedicated app for each cloud-based data source you plan to audit: </p>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Important">Microsoft Entra ID (formerly Azure AD)</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Important">Exchange Online</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Important">SharePoint Online</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Important">MS&#160;Teams</p>
+                                                        </li>
+                                                    </ul>
+                                                    <p class="Important">If you plan to audit all of them, you need to create 4 apps.</p>
+                                                    <p>Follow the steps to register a new Microsoft Entra ID application.</p>
+                                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Sign into the <b>Microsoft 365 Admin Center</b> with your <i>Global Administrator</i>, <i>Application Administrator</i> or <i>Cloud Application Administrator</i> account and go to the <b>Microsoft Entra ID admin center</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Under the App registrations section, select <b>New registration</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>In the Name field, enter the application name.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>In the Supported account types select who can use this application – use the <b>Accounts in this organizational directory only</b> option.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Click the <b>Register</b> button. Application <b>Redirect URI</b> is optional, you can leave it blank.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>Your Application (client) ID is now available in the Overview section. Copy it to a safe location.</p>
+                                                    <p>See the following Microsoft article for additional information on how to create an application and service principal using Microsoft Entra ID Admin portal: <a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal" target="_blank" title="Create an Microsoft Entra ID application and service principal that can access resources" alt="Create an Microsoft Entra ID application and service principal that can access resources">Create an Microsoft Entra ID application and service principal that can access resources</a>.</p>
+                                                    <h3><a name="Granting"></a>Grant Required Permissions</h3>
+                                                    <p>You need to grant your new application the required API permissions. Microsoft Entra ID applications can be assigned <i>Delegated</i> or <i>Application</i> permissions:</p>
+                                                    <ul>
+                                                        <li><i>Delegated</i> permissions require a signed-in user present who consents to the permissions every time an API call is sent.</li>
+                                                        <li><i>Application</i> permissions are consented by an administrator once granted.</li>
+                                                    </ul>
+                                                    <p>For the newly created app, you should use the <i>Application</i> permissions.</p>
+                                                    <p>To grant required permissions, assign granular <i>Application</i> permissions required for <span class="mc-variable Auditor.Product_Long_Name variable">Netwrix Auditor</span> to collect data from the application. To do so, perform the following steps:</p>
+                                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Go to the <b>App registrations</b> and open the app you created to assign <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span> permissions.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Go to <b>Manage &gt; API permissions</b> and click <b>Add a permission</b> button.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Assign the required permissions.</p>
+                                                    <p>Permission assignment will depend on the data you plan to collect: </p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>Activity data only</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Both activity and state-in-time data</p>
+                                                        </li>
+                                                    </ul>
+                                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 333px;">
+                                                        </col>
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1">
+                                                        </col>
+                                                        <thead>
+                                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Requirement</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">Comment</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1" data-mc-conditions="">
+                                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                                    <p style="text-align: left;">Microsoft Entra ID app requires the following <b>Application</b> permissions:</p>
+                                                                    <ol style="list-style-type: lower-alpha;">
+                                                                        <li value="1"><b>Microsoft Graph
+</b>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <p><b>Directory.Read.All</b>
+                                                                                    </p>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p><b>AuditLog.Read.All</b>
+                                                                                    </p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li value="2"><b>Office 365 Management APIs</b>
+                                                                            <ul>
+                                                                                <li><b>ActivityFeed.Read</b>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ol>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1" style="text-align: left;">
+                                                                    <p>To learn how to assign required permissions, see the <a href="#Configur2" title="Configuring Microsoft Entra ID App for Auditing Microsoft Entra ID" alt="Configuring Microsoft Entra ID App for Auditing Microsoft Entra ID" target="_self" class="MCXref xref">Configuring Microsoft Entra ID App for Auditing Microsoft Entra ID</a> section for additional information.</p>
+                                                                    <p>&#160;</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>You can also assign application permissions by editing Microsoft Entra app manifest. See the <a href="#Assign" target="_parent" title="Assigning application permissions using manifest" alt="AAssigning application permissions using manifest" class="MCXref xref">Using Modern Authentication with Microsoft Entra ID</a>  topic  for additional information on how to assign the required permissions. Information about manifest is also described in the following Microsoft article:&#160;<a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-app-manifest" target="_blank" title=" Microsoft Entra app manifest" alt=" Microsoft Entra app manifest"> Microsoft Entra app manifest</a>. </p>
+                                                    <h3><a name="Granting2"></a>Grant Admin Consent to a Tenant</h3>
+                                                    <p>Go back to the <b>Microsoft Entra ID  admin center</b> &gt; <b>Applications</b> &gt; <b>App registrations</b> &gt; <b> API permissions</b> and click <b>Grant admin consent for</b>&#160;<i>&lt;tenant name&gt;</i>. 
+			When prompted to confirm, click <b>Yes</b>.</p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>For Office 365 permissions, go to <b>Request API Permissions</b> &gt; <b>APIs my organization users</b> and type "Office 365" in the search bar.</p>
+                                                    <p>See the following Microsoft article for additional information on how to create an application and service principal using Microsoft Entra ID  Admin portal: <a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal" target="_blank" title="Create an Microsoft Entra application and service principal that can access resources" alt="Create an Microsoft Entra application and service principal that can access resources">Create an Microsoft Entra application and service principal that can access resources</a>.</p>
+                                                    <h3><a name="Configur"></a>Configure Client Secret</h3>
+                                                    <p>Follow the steps to create a new client secret to be used by the app.</p>
+                                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Go to <b>Manage </b>&gt;<b> Certificates &amp; secrets</b> and click <b>New client secret</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Enter the description. From the expiration options select <b>24 months</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Click <b>Add</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>The new secret will be displayed in the list. Click <b>Copy to clipboard</b>   icon on the "Value" parameter on the right side of the screen.</p>
+                                                    <p>See the following Microsoft article for more information on how to add a client secret: <a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret" target="_blank" title="Add a client secret" alt="Add a client secret">Add a client secret</a>.</p>
+                                                    <h3><a name="Add"></a>Add Microsoft Entra ID  monitoring plan</h3>
+                                                    <p>Follow the steps to add Microsoft Entra ID  monitoring plan in the <span class="mc-variable Auditor.Product_Long_Name variable">Netwrix Auditor</span>.</p>
+                                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>In the Monitoring Plans, click <b>Add Plan</b> button.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Create a monitoring plan with the Microsoft Entra ID  data source.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Add the Office 365 tenant item.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Click <b>Select</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Enter your <b>tenant name</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>Choose modern authentication.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>Enter the <b>Application ID</b> and <b>Application secret</b> you have created before.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 8 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 8 – </b></span></span>Click <b>Add</b>.</p>
+                                                    <p>Microsoft Entra ID  monitoring plan has been added to <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span> and initial data collection has begun.</p>
+                                                    <h3><a name="Step4"></a>Obtain Tenant Name</h3>
+                                                    <p>Follow the steps to obtain the tenant name.</p>
+                                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Navigate to <b>Microsoft Entra ID </b>&gt;<b> Overview</b>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>In the Tenant Information menu, locate the <b>Primary domain</b> field and copy its value.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span> Store the tenant to a safe location.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

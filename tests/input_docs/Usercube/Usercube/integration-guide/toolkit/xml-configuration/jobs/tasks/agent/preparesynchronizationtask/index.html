@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Toolkit for XML Configuration|XML Configuration Schema|Jobs|Tasks|Agent Tasks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+              
+              Prepare Synchronization Task
+              </title>
+        <link href="../../../../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../../../../integration-guide/toolkit/xml-configuration/jobs/tasks/agent/preparesynchronizationtask/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <section id="body">
+                                        <div id="body-inner">
+                                            <h1>
+                                                <div>
+              
+              Prepare Synchronization Task
+              </div>
+                                            </h1>
+                                            <h2 id="view-behavior-details">View Behavior Details</h2>
+                                            <p>The task reads files from the source directory, usually the temp folder &gt;<a href="../../../../../../network-configuration/server-configuration/general-purpose/index.html" target="_parent" class="MCXref xref" xrefformat="{para}">Application Settings</a> folder.</p>
+                                            <h3 id="cleanse-data">Cleanse data</h3>
+                                            <p>The following actions are performed on the <em>CSV source files</em>:</p>
+                                            <ol>
+                                                <li value="1">Remove columns that are not used in <a href="../../../../connectors/entitytypemapping/index.html" target="_parent" title="Entity Type Mapping" alt="Entity Type Mapping" class="MCXref xref" xrefformat="{para}">
+              
+              Entity Type Mapping
+              </a> or <a href="../../../../connectors/entityassociationmapping/index.html" target="_parent" title="Entity Association Mapping" alt="Entity Association Mapping" class="MCXref xref" xrefformat="{para}">
+              
+              Entity Association Mapping
+              </a>.</li>
+                                                <li value="2">Remove entries that have a null primary key.</li>
+                                                <li value="3">Remove duplicates.</li>
+                                                <li value="4">Sort entries according to the primary key.</li>
+                                            </ol>
+                                            <p>The result of the <em>Prepare-Synchronization</em> is stored in the <a href="../../../../../../network-configuration/server-configuration/general-purpose/index.html" target="_parent" class="MCXref xref" xrefformat="{para}">Application Settings</a>directory as three files:</p>
+                                            <ul>
+                                                <li>
+                                                    <p>For every entity type of the relevant <em>Connector</em> involved in an <a href="../../../../connectors/entitytypemapping/index.html" target="_parent" title="Entity Type Mapping" alt="Entity Type Mapping" class="MCXref xref" xrefformat="{para}">
+              
+              Entity Type Mapping
+              </a>&gt; or an <a href="../../../../connectors/entityassociationmapping/index.html" target="_parent" title="Entity Association Mapping" alt="Entity Association Mapping" class="MCXref xref" xrefformat="{para}">
+              
+              Entity Association Mapping
+              </a>, a <code>.sorted.csv</code> file is generated, containing the final, cleansed and sorted result.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Duplicates are kept in a separate <code>.duplicates.csv</code> file.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Null primary key entries are kept in a separate <code>.nullpk.csv</code> file.</p>
+                                                </li>
+                                            </ul>
+                                            <div class="notices note">
+                                                <p>All files produced by the task are in the work folder &gt; Collect directory.</p>
+                                            </div>
+                                            <h3 id="compute-changes">Compute changes</h3>
+                                            <p>In <em>incremental</em> mode, changes might need to be computed by the <em>Agent</em>:</p>
+                                            <ul>
+                                                <li>
+                                                    <p>If the Export step has provided computed changes, no further process is required. The changes will be sent as-is to the server.</p>
+                                                </li>
+                                                <li>
+                                                    <p>If the Export step has provided a full extract of the managed systems, the <em>Prepare-Synchronization</em> step computes changes. This computation is based on the result of the last data cleansing, generated by the previous <em>Prepare-Synchronization</em>, and stored in the <code>previous</code> folder in the <a href="../../../../../../network-configuration/server-configuration/general-purpose/index.html" target="_parent" class="MCXref xref" xrefformat="{para}">Application Settings</a>directory.</p>
+                                                </li>
+                                            </ul>
+                                            <div class="notices note">
+                                                <p>For <em>incremental</em> mode, it is recommended, whenever possible, to use managed systems to compute changes. Dedicated workstations and knowledge of the inner data organization allow managed systems to compute changes with performance that <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> can't match. Using managed systems for these operations avoids generating heavy files and alleviates <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s processing load.</p>
+                                            </div>
+                                            <p>The result is a set of clean lists of changes stored as a <code>.sorted.delta</code> file containing a <em>command</em> column. The <em>command</em> column can take the following values:</p>
+                                            <ul>
+                                                <li><em>insert</em>
+                                                </li>
+                                                <li><em>update</em>
+                                                </li>
+                                                <li><em>delete</em>
+                                                </li>
+                                                <li><em>merge</em>
+                                                </li>
+                                            </ul>
+                                            <p>These values are instructions for the <em>Synchronization</em> step to apply the changes to the database.</p>
+                                            <p>The <code>.sorted</code> file (that is, the <strong>original</strong> clean export file, <strong>not</strong> the changes) is stored in the <code>previous</code> folder inside the <a href="../../../../../../network-configuration/server-configuration/general-purpose/index.html" target="_parent" class="MCXref xref" xrefformat="{para}">Application Settings</a>directory. It will be used as a reference for the next <em>incremental</em>  Prepare-Synchronization to compute the changes, if needed.</p>
+                                            <p>Tampering with the <code>previous</code> folder content would result in false changes leading to false computation. It would result in data corruption in the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> database. To restore the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> database and reflect the managed system data updates, a <em>complete</em><![CDATA[   ]]><em>Sync Up</em> would be required.</p>
+                                            <h3 id="prepare-the-server">Prepare the server</h3>
+                                            <p>At the beginning of every <em>Prepare-Synchronization</em> process, the <em>Server</em> is notified via HTTP.</p>
+                                            <p>Upon receiving the notification, the server creates a directory on its host environment, identified by a unique GUID, to contain <code>.sorted</code> or <code>.sorted.delta</code> files that will be sent by the agent.</p>
+                                            <p>This is designed to prevent network errors that would cause an <em>incremental</em> database update to happen more than once.</p>
+                                            <p>This means that several <em>Export</em> and <em>Prepare-Synchronization</em> tasks can be executed simultaneously. These tasks will be processed by the server one at a time, in the right order.</p>
+                                            <p>Any notification of a <em>complete</em> Prepare-Synchronization would cancel the previous non-processed <em>incremental</em> Prepare-Synchronizations. As a <em>complete</em> Prepare-Synchronization reloads the whole database, it renders <em>incremental</em> changes computation moot.</p>
+                                            <h3 id="send-clean-exports">Send clean exports</h3>
+                                            <p><code>.sorted</code> or <code>.sorted.delta</code> files are sent over HTTP to the <em>Server</em> for the last step.</p>
+                                            <h2 id="examples">Examples</h2><pre class="xml" xml:space="preserve"><code>
+&lt;PrepareSynchronizationTask
+    Identifier="HR_PrepareSynchronization"
+    DisplayName_L1="HR PrepareSynchronization"
+    OpenIdClient="Job"
+    Connector="HR"
+    Agent="Local"
+    SynchronizationMode="Initial"
+/&gt;
+</code></pre>
+                                            <h2 id="properties">Properties</h2>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Property</th>
+                                                        <th>Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Agent<br /><span class="requiredAttribute">required</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />String<br /><br /><strong>Description</strong><br />Identifier of the agent on which the job will be launched.<br /><br /><strong>Warning:</strong> all jobs containing the task must be launched on the same agent or on the server.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Connector<br /><span class="requiredAttribute">required</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />String<br /><br /><strong>Description</strong><br />Identifier of the connector involved in the task.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>DisplayName_L1<br /><span class="requiredAttribute">required</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />String<br /><br /><strong>Description</strong><br />Display name of the task in language 1 (up to 16).</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>OpenIdClient<br /><span class="requiredAttribute">required</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />String<br /><br /><strong>Description</strong><br />Connection client for the task.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SynchronizationMode<br /><span class="requiredAttribute">required</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />DataCollectType<br /><br /><strong>Description</strong><br />Synchronization mode for collect and synchronization Task.<br />List of Modes:<br />- Initial = 0,<br />- Complete = 1,<br />- Incremental = 2<br /></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ColumnName<br /><span class="optionalAttribute">optional</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />String<br /><br /><strong>Description</strong><br />If there is a delta in the synchronization, specifies the column name which stores the command</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Identifier<br /><span class="optionalAttribute">optional</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />String<br /><br /><strong>Description</strong><br />Unique identifier of the task.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Type<br /><span class="optionalAttribute">default value: None</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />PrepareSynchronizationType<br /><br /><strong>Description</strong><br />Define the type of PrepareSynchronization to launch the correct executable in job.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>WorkingDirectory<br /><span class="optionalAttribute">optional</span></td>
+                                                        <td>
+                                                            <p><strong>Type</strong>
+                                                                <br />String<br /><br /><strong>Description</strong><br />Path of the working directory</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

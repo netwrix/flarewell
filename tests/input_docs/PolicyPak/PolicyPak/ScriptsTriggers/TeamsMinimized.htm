@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Scripts &amp; Triggers Manager|[%=System.LinkedTitle%]|Tip and Tricks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>How to run Microsoft Teams minimized to systray using PPScripts and PPAM</title>
+        <link href="../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>How to run Microsoft Teams minimized to systray using PPScripts and PPAM</h1>
+                                    <p>Prerequisites:</p>
+                                    <ul>
+                                        <li>MS Teams needs to have been installed using the Teams Machine-Wide Installer option:<br /><code>msiexec /i Teams_windows_x64.msi OPTIONS="ALLUSERS=1"</code></li>
+                                        <li>
+                                            <p>User needs to have logged in completely at least once to MS Teams, (the status icon will be visible).</p>
+                                            <p>
+                                                <img alt="" height="41" src="../../Resources/Images/ScriptsTriggers/364_1_image-20210414013029-6.png" width="122" />
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Create a new Application Settings Manager policy for MS Teams on either the Computer or User side, depending on whether the GPO applies to computer or user objects. If the GPO applies to the OU containing only computer objects, then create the policy on the computer side, if the GPO applies to the OU containing only User objects, then create the policy on the user side, etc.</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>Enable the three settings (see image below) in the Microsoft Teams policy, then click Ok to save the settings.</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Only the underlined settings are being reapplied when the policy processes, the other options are not being changed.</p>
+                                    <p>
+                                        <img alt="" height="554" src="../../Resources/Images/ScriptsTriggers/364_2_image-20210414013029-7.png" width="694" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Next, create a new Scripts &amp; Triggers policy within the same GPO, under the same configuration side, user or computer that you used in Step 1.</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>	If applying the policy on the computer side choose switched mode like in the screenshot below.</p>
+                                    <p>
+                                        <img alt="" height="509" src="../../Resources/Images/ScriptsTriggers/364_3_image-20210414013029-8.png" width="727" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>At the "On apply action" screen select "PowerShell script" from the dropdown, then in the main text window, paste in the script below, check the two options "Run script as user" and "Run interactively", then click "Next".</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: PlainText;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code># Hides the blue PowerShell window UI when running PS scripts interactively<br /><br />Add-Type -Name Window -Namespace Console -MemberDefinition '<br /><br />[DllImport("Kernel32.dll")]<br />public static extern IntPtr GetConsoleWindow();<br /><br />[DllImport("user32.dll")]<br />public static extern bool ShowWindow(IntPtr hWnd, Int32 nCmdShow);<br />'<br />[Console.Window]::ShowWindow([Console.Window]::GetConsoleWindow(), 0)<br /><br /># Segment of Script below is from https://www.alkanesolutions.co.uk/2021/01/16/launch-microsoft-teams-minimised-in-the-system-tray/<br /><br />Try<br />&#160;{<br />&#160;#Terminate Teams if it is running<br />&#160;$teamsProcess = Get-Process Teams -ErrorAction SilentlyContinue<br />If ($teamsProcess)<br />&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;#Close Teams Window<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;$teamsProcess.CloseMainWindow() | Out-Null<br />&#160;&#160;&#160;&#160;&#160;Start-Sleep -s 5<br />&#160;&#160;&#160;&#160;&#160;#Close Teams&#160;<br />&#160;&#160;&#160;&#160;&#160;Stop-Process -Name "Teams" -Force -ErrorAction SilentlyContinue<br />&#160;&#160;&#160;&#160;&#160;}<br /><br />#Define Teams Update.exe paths&#160;&#160;&#160;&#160;&#160;&#160;<br />$userTeams = [System.IO.Path]::Combine("$env:LOCALAPPDATA", "Microsoft", "Teams", "current", "Teams.exe")<br />$machineTeamsX86 = [System.IO.Path]::Combine("$env:PROGRAMFILES (X86)", "Microsoft", "Teams", "current", "Teams.exe")<br />$machineTeamsX64 = [System.IO.Path]::Combine("$env:PROGRAMFILES", "Microsoft", "Teams", "current", "Teams.exe")<br />&#160;&#160;&#160;&#160;&#160;<br />#Define arguments<br />$args = @("-process-start-args","""--system-initiated""")<br /><br />#Launch Teams<br />if (Test-Path -Path $userTeams)<br />&#160;{Start-Process -FilePath $userTeams -ArgumentList $args}<br />Elseif (Test-Path -Path $machineTeamsX86)<br />&#160;{Start-Process -FilePath $machineTeamsX86 -ArgumentList $args}<br />Elseif (Test-Path -Path $machineTeamsX64)<br />&#160;{Start-Process -FilePath $machineTeamsX64 -ArgumentList $args}<br /><br />} catch {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#do something<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#$_.Exception<br />}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <img alt="" height="585" src="../../Resources/Images/ScriptsTriggers/364_4_image-20210414013029-9.png" width="727" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 5 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 5 – </b></span></span>Click "Next" at the "On revert action" screen to skip that screen, then at the "specify process mode" screen choose the "On trigger" option, then choose "Logon" from the drop down before clicking "Next" to continue.</p>
+                                    <p>
+                                        <img alt="" src="../../Resources/Images/ScriptsTriggers/364_5_image-20210414013029-10_724x538.png" style="width: 724;height: 538;" />
+                                    </p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 6 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 6 – </b></span></span>At the "Policy settings" screen give the policy a descriptive name then click "Finish."&#160;</p>
+                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 7 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 7 – </b></span></span>Lastly, test the policy by logging into a computer as a user that should receive the policy.&#160; If everything works Teams should open minimized and you should see the MS Teams icon in the systray.&#160;</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Users may initially see two MS Teams icons for a few seconds in the Systray at the same time, however, one of the icons will disappear shortly. Also, if this is the first time logging in since the policy was applied it may take a 2nd login for the policy to kick in.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

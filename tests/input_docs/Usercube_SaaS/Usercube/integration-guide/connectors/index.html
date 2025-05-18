@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Connectors</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../integration-guide/connectors/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Connectors</h1>
+                                    <p>Connectors are <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s links to the managed systems, the technical representation of the entity model. A connector is used to export data as CSV source files for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s synchronization process and to fulfill entitlement assignments to a given managed system. See the <a href="../toolkit/xml-configuration/connectors/connector/index.html" target="_parent" title="Connector" alt="Connector" class="MCXref xref">
+              
+              Connector
+              </a>,<a href="../entity-model/index.html" target="_parent" title="Entity Model" alt="Entity Model" class="MCXref xref">Entity Model</a>, and <a href="../synchronization/upward-data-sync/index.html" target="_parent" title="Upward Data Synchronization" alt="Upward Data Synchronization" class="MCXref xref">
+              
+              Upward Data Synchronization
+              </a> topics for additional information.</p>
+                                    <h2 id="overview">Overview</h2>
+                                    <p>Connectors are the mechanisms that enable <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to read and write data to/from your organization's systems. The feedback mechanism ensures <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s reliability.</p>
+                                    <div class="notices info">
+                                        <p>In this documentation, we talk about managed systems (sometimes called external systems) to refer to third-party applications, i.e. the applications used in your organization, such as Active Directory, ServiceNow, EasyVista, SAP, SharePoint, etc.</p>
+                                    </div>
+                                    <p>A connector, therefore, acts as an interface between <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> and a managed system.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../Resources/Images/ConnectorCreation_connectorSchema.png" alt="Connector Schema" style="box-shadow: none;width: 945px;height: 275px;" />
+                                    </p>
+                                    <p><span class="mc-variable IdentityManager.Product_Long_Name variable">Netwrix Identity Manager (formerly Usercube)</span>strongly recommends the creation of one connector for each application.</p>
+                                    <blockquote>
+                                        <p>For example, integrators may create an <code>AD</code> connector with the goal of importing an Active Directory's data into <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, and writing to the Active Directory from <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, either manually for administration accounts, or automatically for basic accounts.</p>
+                                        <p>Integrators may create a <code>SharePoint</code> connector in order to manage read and write entitlements for users in SharePoint.</p>
+                                    </blockquote>
+                                    <h3>Data Flows</h3>
+                                    <p>In the early steps of a project, we'll consider most of our connectors to be outbound, i.e. <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> will feed data into connected managed systems.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../Resources/Images/ConnectorCreation_outbound.png" alt="Outbound System=" style="box-shadow: none;width: 950px;height: 274px;" />
+                                    </p>
+                                    <p>In this case, data flows between <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> and the managed system are also called:</p>
+                                    <ul>
+                                        <li>Synchronization in the managed system-to-<span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> direction</li>
+                                        <li>Provisioning in the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>-to-managed system direction</li>
+                                    </ul>
+                                    <p>For a connector's synchronization, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> provides tools to perform a basic extraction of the system's data in the form of CSV files. These files are cleaned and loaded into <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. In other words, synchronizing means taking a snapshot of the managed system's data and loading into <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                    <p>For provisioning, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> generates provisioning orders and the connector provides tools to either automatically write these orders to the managed system or to create a ticket for manual provisioning.</p>
+                                    <blockquote>
+                                        <p>For example, we can use the data from <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s identity repository to fill in later the AD's fields, such as users' display names based on their first names and last names from the repository. See the <a href="../../user-guide/set-up/initial-identities-loading/index.html" target="_parent" title="Create the Workforce Repository" alt="Create the Workforce Repository" class="MCXref xref">
+              
+              Create the Workforce Repository
+              </a> topic for additional information.</p>
+                                    </blockquote>
+                                    <div class="notices info">
+                                        <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> can also benefit from inbound connectors, that will write data to <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s central identity repository. While both inbound and outbound connectors allow data to flow both ways, they do not work in the same manner. See the <a href="../../user-guide/optimize/hr-connector-creation/index.html" target="_parent" title="Create an HR Connector" alt="Create an HR Connector" class="MCXref xref">
+              
+              Create an HR Connector
+              </a> topic for additional information. </p>
+                                    </div>
+                                    <h3>Technical principles</h3>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s connectors all operate on the same basic principles. Technically speaking:</p>
+                                    <blockquote>
+                                        <p>For example, let's say that we want to connect <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to our Active Directory, or AD:</p>
+                                    </blockquote>
+                                    <ul>
+                                        <li>
+                                            <p>A connector must be created, first as a named container which will include the connections and entity types related to one managed system; See the <a href="../toolkit/xml-configuration/connectors/connector/index.html" target="_parent" title="Connector" alt="Connector" class="MCXref xref">
+              
+              Connector
+              </a> topic for additional information.</p>
+                                            <blockquote>
+                                                <p>We create a connector named <code>AD</code> (so far, an empty shell).</p>
+                                            </blockquote>
+                                        </li>
+                                        <li>
+                                            <p>A connector is linked to an agent which acts as the go-between for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s server and the managed system; See the <a href="../../introduction-guide/architecture/index.html" target="_parent" title="Architecture" alt="Architecture" class="MCXref xref">
+              
+              Architecture
+              </a> topic for additional information.</p>
+                                            <blockquote>
+                                                <p>Our <code>AD</code> connector uses the provided SaaS agent.</p>
+                                            </blockquote>
+                                        </li>
+                                        <li>
+                                            <p>A connection describes the technology used that enables data to flow back and forth between <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> and the managed system; See the <a href="../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> topic for additional information.</p>
+                                            <blockquote>
+                                                <p>We want to use a connection <code>Directory/Active Directory</code> to perform synchronization and automated provisioning, and a second connection <code>Ticket/Usercube</code> to perform manual provisioning through <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                            </blockquote>
+                                            <p>You can find standard connections dedicated to one application (AD, Microsoft Entra ID, etc.), and generic connections to communicate with any application (CSV, Powershell, RobotFramework, SQL, etc.).</p>
+                                        </li>
+                                        <li>
+                                            <p>The shape of the extracted managed system's data is modeled by entity types (we will use the term resource to refer to an entity type that has been instantiated); See the <a href="../toolkit/xml-configuration/metadata/entitytype/index.html" target="_parent" title="EntityType" alt="EntityType" class="MCXref xref">
+              
+              Entity Type
+              </a> topic for additional information.</p>
+                                            <blockquote>
+                                                <p>We create a single entity type <code>AD - Entry</code> which contains all the attributes that will describe its resources, i.e. AD groups and users. The attributes include the department, the employee identifier, the manager, the group membership (<code>member</code>/<code>memberOf</code>), the dn, the parent dn, etc.</p>
+                                            </blockquote>
+                                        </li>
+                                        <li>
+                                            <p>The intent of resources within the managed system is made clear by categorizing resources into resource types. See the <a href="../toolkit/xml-configuration/provisioning/resourcetype/index.html" target="_parent" title="Resource Type" alt="Resource Type" class="MCXref xref">Resource Type</a> and <a href="../../user-guide/set-up/categorization/index.html" target="_parent" title="Categorize Resources" alt="Categorize Resources" class="MCXref xref">
+              
+              Categorize Resources
+              </a> topics for additional information.</p>
+                                            <blockquote>
+                                                <p>We categorize AD resources into distinct resource types: <code>AD User (nominative)</code> for basic accounts, which we want <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to provision automatically; <code>AD User (administration)</code> for sensitive administration accounts, which we want to provision manually through <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                            </blockquote>
+                                        </li>
+                                    </ul>
+                                    <p style="text-align: center;">
+                                        <img src="../../../Resources/Images/ConnectorCreation_connectorTechnicalSchema.png" alt="Connector Technical Schema" style="box-shadow: none;width: 947px;height: 400px;" />
+                                    </p>
+                                    <p>A connector requires at least one connection and one entity type.</p>
+                                    <p>When provisioning a managed system, the corresponding connector also needs at least one resource type.</p>
+                                    <p><strong style="font-weight: normal;">Local vs. Saas agents</strong> — To simplify things, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> has made it possible to start configuring connectors without installing a local agent in your organization's network. Instead, you can use the agent integrated with <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s server in the Cloud (SaaS agent). See the <a href="../../introduction-guide/architecture/index.html" target="_parent" title="Architecture" alt="Architecture" class="MCXref xref">
+              
+              Architecture
+              </a> topic for additional information.</p>
+                                    <h2>Configure a Connector</h2>
+                                    <p><span class="mc-variable IdentityManager.Product_Long_Name variable">Netwrix Identity Manager (formerly Usercube)</span>recommends creating and configuring a connector via the UI. See the <a href="../../user-guide/set-up/connect-system/index.html" target="_parent" title="Connect to a Managed System" alt="Connect to a Managed System" class="MCXref xref">
+              
+              Connect to a Managed System
+              </a> topic for additional information.</p>
+                                    <h2>Supported Systems</h2>
+                                    <table style="mc-table-style: url('../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 772px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Connector</p>
+                                                </th>
+                                                <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Synchronization</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Provisioning</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Active Directory</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports and fulfills data from/to an Active Directory instance.<br />See the <a href="references-connectors/activedirectory/index.html" target="_parent" title="Active Directory" alt="Active Directory" class="MCXref xref">Active Directory</a> topic&#160;for additional information. </p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Azure</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports Azure resources, role definitions and role assignments.</p>
+                                                    <p>See the <a href="references-connectors/azure/index.html" target="_parent" title="Azure" alt="Azure" class="MCXref xref">
+              
+              Azure
+              </a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Microsoft Entra ID (formerly Microsoft Azure AD)</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports and fulfills data from/to a Microsoft Entra ID instance.</p>
+                                                    <p>See the Microsoft Entra ID, <a href="how-tos/create-connector/azuread/index.html" target="_parent" title="For Microsoft Entra ID" alt="For Microsoft Entra ID" class="MCXref xref">For Microsoft Entra ID</a>, and <a href="how-tos/setup-incremental-synchronization/azuread/index.html" target="_parent" title="For Microsoft Entra ID" alt="For Microsoft Entra ID" class="MCXref xref">For Microsoft Entra ID</a> topics for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>CSV</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports data from a CSV file.</p>
+                                                    <p>See the <a href="references-connectors/csv/index.html" target="_parent" title="CSV" alt="CSV" class="MCXref xref">
+              
+              CSV
+              </a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>EasyVista</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports data from an EasyVista-compliant system.<br /></p>
+                                                    <p>See the <a href="references-connectors/easyvista/index.html" target="_parent" title="EasyVista" alt="EasyVista" class="MCXref xref">
+              
+              EasyVista
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>EasyVista Ticket</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Creates tickets in an EasyVista instance.</p>
+                                                    <p>See the <a href="references-connectors/easyvistaticket/index.html" target="_parent" title="EasyVista Ticket" alt="EasyVista Ticket" class="MCXref xref">
+              
+              EasyVista Ticket
+              </a> and <a href="how-tos/write-ticket-template/index.html" target="_parent" title="Write a Template for a Ticket Connector" alt="Write a Template for a Ticket Connector" class="MCXref xref">
+              
+              Write a Template for a Ticket Connector
+              </a> topics for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>X</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Google Workspace</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports and fulfills users and groups from/to a Google Workspace instance.</p>
+                                                    <p>See the <a href="references-connectors/googleworkspace/index.html" target="_parent" title="Google Workspace" alt="Google Workspace" class="MCXref xref">
+              
+              Google Workspace
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Home Folder</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Export home folders from input directories.</p>
+                                                    <p>See the <a href="references-connectors/homefolder/index.html" target="_parent" title="Home Folder" alt="Home Folder" class="MCXref xref">
+              
+              Home Folder
+              </a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>InternalResources</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Opens manual provisioning tickets in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                                    <p>See the <a href="references-connectors/internalresources/index.html" target="_parent" title="Internal Resources" alt="Internal Resources" class="MCXref xref">Internal Resources</a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>InternalWorkflow</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Retrieves provisioning order files from a connector or a resource type list, and starts a workflow accordingly.</p>
+                                                    <p>See the <a href="references-connectors/internalworkflow/index.html" title="InternalWorkflow" alt="InternalWorkflow" class="MCXref xref">InternalWorkflow</a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Json</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Generates JSON files for each provisioning order.</p>
+                                                    <p>See the <a href="references-connectors/json/index.html" title="JSON" alt="JSON" class="MCXref xref">JSON</a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>LDAP</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports and fulfills data from/to an LDAP-compliant system.</p>
+                                                    <p>See the <a href="references-connectors/ldap/index.html" target="_parent" title="LDAP" alt="LDAP" class="MCXref xref">
+              
+              LDAP
+              </a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>LDIF</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Generates CSV source files from an LDIF file.</p>
+                                                    <p>See the <a href="references-connectors/ldif/index.html" target="_parent" title="LDIF" alt="LDIF" class="MCXref xref">LDIF</a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Microsoft Excel</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports data from an XLSX file.</p>
+                                                    <p>See the <a href="references-connectors/excel/index.html" target="_parent" title="Microsoft Excel" alt="Microsoft Excel" class="MCXref xref">
+              
+              Microsoft Excel
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Microsoft Exchange</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports data from a Microsoft Exchange instance.</p>
+                                                    <p>See the <a href="references-connectors/microsoftexchange/index.html" target="_parent" title="Microsoft Exchange" alt="Microsoft Exchange" class="MCXref xref">
+              
+              Microsoft Exchange
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>OData</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports entities from an OData instance.</p>
+                                                    <p>See the <a href="references-connectors/odata/index.html" target="_parent" title="OData" alt="OData" class="MCXref xref">
+              
+              OData
+              </a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>OpenLDAP</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports and fulfills from/to an OpenLDAP directory.</p>
+                                                    <p>See the <a href="references-connectors/openldap/index.html" target="_parent" title="OpenLDAP" alt="OpenLDAP" class="MCXref xref">
+              
+              OpenLDAP
+              </a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>PowerShell</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Executes PowerShell scripts to generate CSV source files from otherwise unsupported sources.</p>
+                                                    <p>See the <a href="references-connectors/powershellprov/index.html" target="_parent" title="PowerShellProv" alt="PowerShellProv" class="MCXref xref">
+              
+              PowerShellProv
+              </a>, <a href="how-tos/write-fulfill-powershell-script/index.html" target="_parent" title="Write a PowerShell Script for Provisioning" alt="Write a PowerShell Script for Provisioning" class="MCXref xref">
+              
+              Write a PowerShell Script for Provisioning
+              </a>, and <a href="how-tos/powershell-fulfill/index.html" target="_parent" title="Fulfill Microsoft Exchange via PowerShell" alt="Fulfill Microsoft Exchange via PowerShell" class="MCXref xref">
+              
+              Fulfill Microsoft Exchange via PowerShell
+              </a> topics for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>RACF</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports data from a RACF file.</p>
+                                                    <p>See the <a href="references-connectors/racf/index.html" target="_parent" title="RACF" alt="RACF" class="MCXref xref">
+              
+              RACF
+              </a> topic for additional information.<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Robot Framework</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Executes Robot Framework scripts to fulfill data to external systems.</p>
+                                                    <p>See the <a href="references-connectors/robotframework/index.html" target="_parent" title="Robot Framework" alt="Robot Framework" class="MCXref xref">
+              
+              Robot Framework
+              </a>, <a href="how-tos/write-fulfill-robotframework-script/index.html" target="_parent" title="Write a Robot Framework Script" alt="Write a Robot Framework Script" class="MCXref xref">
+              
+              Write a Robot Framework Script
+              </a>, <a href="how-tos/interact-web-page-robotframework/index.html" target="_parent" title="Interact with a Web Page via Robot Framework" alt="Interact with a Web Page via Robot Framework" class="MCXref xref">Interact with a Web Page via Robot Framework</a>, and <a href="how-tos/interact-gui-robotframework/index.html" target="_parent" title="Interact with a GUI Application via Robot Framework" alt="Interact with a GUI Application via Robot Framework" class="MCXref xref">Interact with a GUI Application via Robot Framework</a> topics for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>SAP</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports and fulfills data from/to an SAP system.</p>
+                                                    <p>See the <a href="references-connectors/sapnetweaver/index.html" target="_parent" title="SAP Netweaver" alt="SAP Netweaver" class="MCXref xref">
+              
+              SAP Netweaver
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>SAP ERP 6.0</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports and fulfills data from/to an SAP ERP 6.0 system.</p>
+                                                    <p>See the <a href="references-connectors/saperp6/index.html" target="_parent" title="SAP ERP 6.0 and SAP S4/HANA" alt="SAP ERP 6.0 and SAP S4/HANA" class="MCXref xref">SAP ERP 6.0 and SAP S4/HANA</a> topics for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>SCIM</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports and fulfills data from/to a SCIM-compliant web application.</p>
+                                                    <p>See the <a href="references-connectors/scim/index.html" target="_parent" title="SCIM" alt="SCIM" class="MCXref xref">SCIM</a>, <a href="how-tos/scim-cyberark-export/index.html" target="_parent" title="Export CyberArk Data via SCIM" alt="Export CyberArk Data via SCIM" class="MCXref xref">
+              
+              Export CyberArk Data via SCIM
+              </a> and <a href="how-tos/scim-salesforce-provisioning-entitlements/index.html" target="_parent" title="Provision Salesforce Users' Profiles via SCIM" alt="Provision Salesforce Users' Profiles via SCIM" class="MCXref xref">
+              
+              Provision Salesforce Users' Profiles via SCIM
+              </a> topics for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>ServiceNow Entity Management</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Manages ServiceNow entities.</p>
+                                                    <p>See the <a href="references-connectors/servicenowentitymanagement/index.html" target="_parent" title="ServiceNow" alt="ServiceNow" class="MCXref xref">
+              
+              ServiceNow
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>ServiceNow Ticket</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Creates tickets in ServiceNow.</p>
+                                                    <p>See the <a href="references-connectors/servicenowticket/index.html" target="_parent" title="ServiceNowTicket" alt="ServiceNowTicket" class="MCXref xref">
+              
+              ServiceNowTicket
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>SharedFolder</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Scans a Windows file directory and exports a list of folders, files, users and their associated permissions.</p>
+                                                    <p>See the <a href="references-connectors/sharedfolder/index.html" target="_parent" title="SharedFolders" alt="SharedFolders" class="MCXref xref">
+              
+              SharedFolders
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>SharePoint</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports a SharePoint's list of objects, users, groups, roles and their relationships.</p>
+                                                    <p>See the <a href="references-connectors/sharepoint/index.html" target="_parent" title="SharePoint" alt="SharePoint" class="MCXref xref">SharePoint</a> and <a href="how-tos/sharepoint-export/index.html" target="_parent" title="Set up SharePoint's Export and Synchronization" alt="Set up SharePoint's Export and Synchronization" class="MCXref xref">Set up SharePoint's Export and Synchronization</a>topics for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>SQL</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports data from various Database Management Systems.</p>
+                                                    <p>See the <a href="references-connectors/sql/index.html" target="_parent" title="Sql" alt="Sql" class="MCXref xref">
+              
+              Sql
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>SQL Server Entitlements</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Exports server and database principals from Microsoft SQL Server.</p>
+                                                    <p>See the <a href="references-connectors/sqlserverentitlements/index.html" target="_parent" title="Sql Server Entitlements" alt="Sql Server Entitlements" class="MCXref xref">
+              
+              Sql Server Entitlements
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Top Secret</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Exports the Top Secret (TSS) users and profiles.</p>
+                                                    <p>See the <a href="references-connectors/topsecret/index.html" target="_parent" title="Top Secret" alt="Top Secret" class="MCXref xref">
+              
+              Top Secret
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Workday</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Exports data from a Workday instance.</p>
+                                                    <p>See the <a href="references-connectors/workday/index.html" target="_parent" title="Workday" alt="Workday" class="MCXref xref">
+              
+              Workday
+              </a> topic for additional information.</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">√</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p class="table-text">X</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

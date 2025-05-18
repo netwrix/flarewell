@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Network Configuration|Agent Configuration">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>CyberArk's AAM Credential Providers
+              </title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/network-configuration/agent-configuration/cyberark-application-access-manager-credential-providers/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <section id="body">
+                                        <div id="body-inner">
+                                            <h1>CyberArk's AAM Credential Providers
+              </h1>
+                                            <p>This guide shows how to protect sensitive data by connecting <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to CyberArk's Application Access Manager (AAM) Credential Providers.</p>
+                                            <h2 id="data-protection">Data Protection</h2>
+                                            <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;often needs to connect to <a href="../../../connectors/index.html" target="_parent" class="MCXref xref">Connectors</a> with credentials that need protection. See the <a href="../../../connectors/index.html" target="_parent" class="MCXref xref">Connectors</a> topic for additional information.</p>
+                                            <p>By default, the data used to connect to external systems is stored in plain text in the <strong>Connections</strong> section of the <code>appsettings.agent.json</code> file. This is not a secure option.</p>
+                                            <h2 id="cyberark-for-data-protection">CyberArk for Data Protection</h2>
+                                            <p>CyberArk's Application Access Manager (AAM) Credential Providers, part of the Privileged Access Security solution, is used to stop storing hard-coded credentials in applications, scripts or configuration files, and instead store them in CyberArk's vault to be centrally logged and managed.</p>
+                                            <p>This way, the company can easily become compliant with potential internal and regulatory requirements of periodic password replacement, and able to securely monitor privileged access across all systems, databases and applications.</p>
+                                            <p>CyberArk is made of <u>vaults</u>. Inside a vault, <u>safes</u> can be created and <u>owners</u> allocated. <u>Accounts</u> and files can then be stored in safes accessible by users.</p>
+                                            <p>This section explains how <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> retrieves these accounts from CyberArk.</p>
+                                            <h2 id="prerequisites">Prerequisites</h2>
+                                            <p>CyberArk AAM can be used either with:</p>
+                                            <ul>
+                                                <li>
+                                                    <p>agentless AAM: <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/11.4/en/Content/CCP/The-Central%20-Credential-Provider.htm?tocpath=Get%20Started%7COfferings%7C_____3#CentralCredentialProvider">Central Credential Provider</a> (works with Web Service using REST);</p>
+                                                </li>
+                                                <li>
+                                                    <p>agent-based AAM: <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/11.4/en/Content/CP%20and%20ASCP/lp_cp.htm?tocpath=Get%20Started%7COfferings%7C_____1#CredentialProvider">Credential Provider</a> (works with C/C++ Application Password SDK).</p>
+                                                    <div class="notices note">
+                                                        <p>Implementing the Credential Provider method requires placing the C/C++ Application Password SDK DLL, named <code>CPasswordSDK.dll</code> (on 32-bit systems) or <code>CPasswordSDK64.dll</code> (on 64-bit systems), to the <code>Runtime</code> folder of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> supports both AAMs. <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/11.4/en/Content/CCP/The-CyberArk-Application-Identity-Management-Solution.htm?tocpath=Get%20Started%7C_____1#Overview">CyberArk's overview</a> can help choose which AAM to go to.</p>
+                                            <p>See more details about Credential Provider's <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/11.4/en/Content/CP%20and%20ASCP/SysReq-Credential-Provider.htm?tocpath=Installation%7CSystem%20Requirements%7C_____1#CredentialProvider">system requirements</a> and <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/11.4/en/Content/CP%20and%20ASCP/installing-the-Credential-Provider.htm?TocPath=Installation%7CCredential%20Provider%7CInstall%20the%20Credential%20Provider%7C_____0#InstalltheCredentialProvider">installation guide</a>.</p>
+                                            <h2 id="compatible-settings">Compatible Settings</h2>
+                                            <p>The following table sums up which keys from <code>appsettings.agent.json</code>'s <strong>Connections</strong> section can be saved to CyberArk:</p>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Use Case</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Possible Key</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Login</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p><code>Login / ApplicationId / ClientId</code>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Password</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                            <p><code>Password / ApplicationKey / ClientSecret</code>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                            <p>Address</p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                            <p><code>Server / MicrosoftGraphPathApi / ResponseUri</code>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p>Any <a href="../../../connectors/index.html" target="_parent" title="Connectors" alt="Connectors" class="MCXref xref">Connectors</a> using one of these attributes as key can retrieve the associated value from CyberArk.</p>
+                                            <blockquote>
+                                                <p>For example, <a href="../../../connectors/references-connectors/activedirectory/index.html" target="_parent" title="Active Directory" alt="Active Directory" class="MCXref xref">Active Directory</a> can retrieve: <code>Login</code>; <code>Password</code>; <code>Server</code>.</p>
+                                            </blockquote>
+                                            <h2 id="set-authorization-details">Set Authorization Details</h2>
+                                            <p>While the application's identifier is <u>required</u>, setting an authentication method and allowed machines is optional but <u>recommended</u> for security concerns.</p>
+                                            <h3 id="appid">AppID</h3>
+                                            <p><a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/Latest/en/Content/Common/Adding-Applications.htm?tocpath=Administration%7CManage%20applications%7C_____1#Step1Addanapplication">See CyberArk's documentation on how to add an application to the vault</a>.</p>
+                                            <p>CyberArk uses for each client application an <u>AppID</u>, i.e. a unique name to identify the application's permissions to access given safes and stored secrets.</p>
+                                            <h3 id="authentication">Authentication</h3>
+                                            <p>Several <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/Latest/en/Content/Common/Adding-Applications.htm?tocpath=Administration%7CManage%20applications%7C_____1#Step2Addapplicationauthentication">authentication methods</a> are available to protect the whole system and make sure that <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> actually does the API calls.</p>
+                                            <div class="notices info">
+                                                <p><span class="mc-variable IdentityManager.Product_Long_Name variable">Netwrix Identity Manager (formerly Usercube)</span>recommends:
+<br />- Using the certificate's serial number (see below how to configure certificates) when working with the <u>agentless AAM</u> - Central Credential Provider;
+<br />- Generating a hash with the AIMGetAppInfo utility when working with the <u>agent-based AAM</u> - Credential Provider.</p>
+                                            </div>
+                                            <h3 id="allowed-machines">Allowed machines</h3>
+                                            <p>Finally, <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/Latest/en/Content/Common/Adding-Applications.htm?tocpath=Administration%7CManage%20applications%7C_____1#Step3Addallowedmachines">allowed machines</a> can be added to the safe. This way, the Credential Provider verifies that only applications running from an authorized machine can access secrets.</p>
+                                            <h3 id="ssl-certificate">SSL certificate</h3>
+                                            <p>If IIS is configured with <code>AIMWebService</code> set to <code>Require SSL</code>, then an SSL certificate must be provided.</p>
+                                            <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;does not require a certificate, so it can be launched without certificate-related parameters, <u>if</u> CyberArk is configured to allow it.</p>
+                                            <h2 id="create-a-cyberark-account">Create a CyberArk Account</h2>
+                                            <p>CyberArk's Password Vault Web Access (PVWA) is meant to enable users to access sensitive data through accounts in CyberArk, from any local or remote location.</p>
+                                            <div class="notices warning">
+                                                <p>The following procedure requires credentials in order to connect to PVWA.</p>
+                                            </div>
+                                            <p>Create a CyberArk account by <a href="https://docs.cyberark.com/Product-Doc/OnlineHelp/AAM-CP/Latest/en/Content/CP%20and%20ASCP/cv_Managing-Single-Accounts.htm?tocpath=Administration%7CCredential%20Provider%7CAccounts%20and%20Safes%7C_____1#AddanaccountinthePVWA">adding it to the PVWA</a>, defining at least the following properties:</p><pre xml:space="preserve"><code>| Property Name | Key in appsettings.agent.json |
+| ------------- | ------------------------------- |
+| Username | Login |
+| Address | Server |
+| Password | Password |
+
+
+<p><span class="mc-variable IdentityManager.Product_Long_Name variable">Netwrix Identity Manager (formerly Usercube)</span> recommends customizing the account's name because it will be used in <a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> to retrieve this account from the vault.</p>
+
+</code></pre>
+                                            <h2 id="assign-the-permissions">Assign the Permissions</h2>
+                                            <p><a href="https://docs.cyberark.com/PAS/13.0/en/Content/PASIMP/Safes-add-a-safe-member-ClassicUI.htm?tocpath=Administrator%7CPrivileged%20Accounts%7CAccess%20Control%7CSafes%20and%20Safe%20members%7CClassic%20interface%7C_____3">See CyberArk's documentation on how to add a safe member</a>.</p>
+                                            <p>In order to assign the permissions to access the application, follow CyberArk's instructions to <a href="https://docs.cyberark.com/AAM-CP/13.0/en/Content/CP%20and%20ASCP/Building-CP-Environment.htm">build the environment for the Credential Provider in the PVWA</a>.</p>
+                                            <p>The aim here is to give the right permissions to:</p>
+                                            <ul>
+                                                <li>the AAM user, by default named <code>Prov\_{Credential Provider machine name}</code>, meant to enable the Credential Provider to authenticate to the vault and retrieve passwords;</li>
+                                                <li>the application, via its AppID.</li>
+                                            </ul>
+                                            <h2 id="configure-usercube">Configure Usercube</h2>
+                                            <p>Connect <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to CyberArk by adding to the agent's <code>appsettings.json</code> file a specific section.</p>
+                                            <blockquote>
+                                                <p>For example:</p><pre class="json" xml:space="preserve"><code>appsettings.json
+
+{
+  ...
+  "CyberArk": {
+      "UseCyberArkSetting": true,
+      "SafeName": "safeName",
+      "ApplicationId" : "appId",
+      "Server" : "serverUrl",
+      "File": "certificateFilePath",
+      "Password": "certificatePassword",
+      "DistinguishedName": "certificateSubjectDistinguishedName",
+      "Thumbprint": "certificateThumbprint",
+      "StoreName": "certificateStoreName",
+      "StoreLocation": "certificateStoreLocation"
+  },
+  ...
+}</code></pre>
+                                            </blockquote>
+                                            <h3 id="vault-settings">Vault settings</h3>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Name</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Details</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>UseCyberArkSetting<br /><span class="optionalAttribute">default value: False</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />Boolean<br /><br /><strong>Description</strong><p><code>True</code> to enable the CyberArk Provider for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>SafeName<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Name of the safe containing the accounts used by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. See the <a href="#" target="_parent" title="CyberArk's AAM Credential Providers" alt="CyberArk's AAM Credential Providers" class="MCXref xref" xrefformat="{para}">CyberArk's AAM Credential Providers
+              </a> topic for additional information.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>ApplicationId<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Application ID of the application that can access the safe. See the <a href="#" target="_parent" title="CyberArk's AAM Credential Providers" alt="CyberArk's AAM Credential Providers" class="MCXref xref" xrefformat="{para}">CyberArk's AAM Credential Providers
+              </a> topic for additional information.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>Server<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>URL configured for the CyberArk Vault. It is recommended to use HTTPS for security purposes.<br /><strong>Note:</strong> the <code>Server</code> attribute is only used with the CyberArk Central Credential Provider (Agentless AAM).</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h3 id="certificate-settings">Certificate settings</h3>
+                                            <div class="notices note">
+                                                <p>Certificate settings are <u>only used with the Central Credential Provider (agentless AAM)</u>. They set the location of the public key certificate and the private key used by the agent to handle encrypted network communications with CyberArk.</p>
+                                            </div>
+                                            <p>This information can be set one of two ways:</p>
+                                            <ul>
+                                                <li>
+                                                    <p>As a <a href="https://en.wikipedia.org/wiki/PKCS_12">Public Key Cryptography Standards (PKCS) #12</a> archive (also called <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/personal-information-exchange---pfx--files">Personal Information Exchange file</a> or <code>.pfx</code> file) stored in the <em>Agent</em>'s host file system. The archive contains both the public key certificate and the private key.</p>
+                                                </li>
+                                                <li>
+                                                    <p>As a certificate from a Windows' <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/working-with-certificates#certificate-stores">certificate store</a> identified by <em>SubjectDistinguishedName</em> or by <em>Thumbprint</em>. The Windows certificate also contains both the public key certificate and the private key.</p>
+                                                    <div class="notices info">
+                                                        <p><span class="mc-variable IdentityManager.Product_Long_Name variable">Netwrix Identity Manager (formerly Usercube)</span>recommends using Windows' certificate store.
+<br /><br />On the other hand, the PFX file takes priority over Windows' certificate, which means that when <code>File</code> is specified then the PFX certificate is used, even if the options for Windows' certificate are specified too.
+<br /><br />In both ways, missing and/or incorrect settings trigger an error and <u>no certificate</u> is loaded.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <h4 id="as-a-pfx-file">As a PFX file</h4>
+                                            <blockquote>
+                                                <p>For example:</p><pre class="json" xml:space="preserve"><code>appsettings.json
+
+{
+  ...
+  "CyberArk": {
+    "UseCyberArkSetting": true,
+    "SafeName": "safeName",
+    "ApplicationId" : "appId",
+    "Server" : "serverUrl",
+    "File": "C:/UsercubeAgentContoso/contoso.pfx",
+    "Password": "oarjr6r9f00"
+  },
+  ...
+}</code></pre>
+                                            </blockquote>
+                                            <p>The archive is set using the following attributes:</p>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Name</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Details</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>File<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p><a href="https://en.wikipedia.org/wiki/PKCS_12">PKCS #12</a> archive path on the host file system.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>Password<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p><a href="https://en.wikipedia.org/wiki/PKCS_12">PKCS #12</a> archive password.<br /><strong>Info:</strong> storing a <code>.pfx</code> file's password in plain text in a production environment is strongly discouraged. It should always be encrypted using the <a href="../../../executables/references/protect-certificatepassword/index.html" target="_parent" title="Usercube-Protect-CertificatePassword" alt="Usercube-Protect-CertificatePassword" class="MCXref xref">
+              
+              Usercube-Protect-CertificatePassword
+              </a> tool.</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h4 id="as-a-certificate-in-the-windows-store">As a Certificate in the Windows Store</h4>
+                                            <blockquote>
+                                                <p>For example:</p><pre class="json" xml:space="preserve"><code>appsettings.json
+
+{
+  ...
+  "CyberArk": {
+    "UseCyberArkSetting": true,
+    "SafeName": "safeName",
+    "ApplicationId" : "appId",
+    "Server" : "serverUrl",
+    "DistinguishedName": "CN=contoso, OU=Biz, O=Contoso, L=Marseille, S=MA, C=FR",
+    "StoreName": "My",
+    "StoreLocation": "LocalMachine"
+  },
+  ...
+}</code></pre>
+                                            </blockquote>
+                                            <p>The Windows certificate is set using these attributes:</p>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Name</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Details</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>DistinguishedName<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p><em>SubjectDistinguishedName</em> of the store certificate.<br /><strong>Note:</strong> required when <code>Thumbprint</code> is not specified.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Thumbprint<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p><em>Thumbprint</em> of the store certificate.<br /><strong>Note:</strong> required when <code>DistinguishedName</code> is not specified.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>StoreLocation<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Location of the relevant Windows certificate store: <code>LocalMachine</code> or <code>CurrentUser</code>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>StoreName<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Name of the relevant Windows certificate store.</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h2 id="usercubes-cyberark-vault">Usercube's CyberArk Vault</h2>
+                                            <p>Once configured, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;retrieves the sensitive values from CyberArk via the <code>appsettings.cyberArk.agent.json</code> file. See the <a href="#" target="_parent" title="CyberArk's AAM Credential Providers" alt="CyberArk's AAM Credential Providers" class="MCXref xref" xrefformat="{para}">CyberArk's AAM Credential Providers
+              </a> topic for additional information.</p>
+                                            <p>In this file:</p>
+                                            <ul>
+                                                <li>the <u>keys</u> must follow the same structure as in the <strong>Connections</strong> of the <code>appsettings.agent.json</code> file;</li>
+                                                <li>the <u>values</u> are the names of the accounts created before.</li>
+                                            </ul>
+                                            <blockquote>
+                                                <p>The following example saves in CyberArk the credentials for <code>AD_Export</code>, with the accounts <code>AdAccount</code> and <code>AdServer2</code>:</p><pre class="json" xml:space="preserve"><code>appsettings.cyberArk.agent.json
+{
+  "Connections": {
+    "AD_Export": {
+      "Login": "AdAccount",
+      "Password": "AdAccount",
+      "Servers": [
+        {
+          "Server": "AdAccount"
+        },
+        {
+          "Server": "AdServer2"
+        }
+      ]
+    }
+  }
+}</code></pre>
+                                                <p>Thus, when launching a job via the <code>AD_Export</code> connection, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;gets the values for <code>Login</code>, <code>Password</code> and <code>Server</code> from CyberArk, and the others from <code>appsettings.agent.json</code>.</p>
+                                            </blockquote>
+                                            <div class="notices note">
+                                                <p>After updating <code>appsettings.cyberArk.agent.json</code>, the agent must be restarted for the changes to take effect.</p>
+                                            </div>
+                                            <p>To get a given property's value, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> reads first the section in <code>appsettings.cyberArk.agent.json</code> for the appropriate connection. Only if the property is not listed here will <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> read the corresponding section in <code>appsettings.agent.json</code> to find it.</p>
+                                            <p>Thus, when a property is listed in both appsettings files, the value from the CyberArk vault takes priority over the one from the usual appsettings file.</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

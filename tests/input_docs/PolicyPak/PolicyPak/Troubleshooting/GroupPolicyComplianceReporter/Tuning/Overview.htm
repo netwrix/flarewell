@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" class="_Skins_Netwrix_Website" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|GPO Compliance Pak|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Tuning Group Policy Compliance Reporter</title>
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Tuning Group Policy Compliance Reporter</h1>
+                                    <p>Tuning <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR involves using provided ADMX files to reduce or increase how often <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR endpoints communicate with the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCPR server. We discuss using these files, as well as how the auditing process works and what triggers it, in the sections below. </p>
+                                    <h2>Triggering the Auditor with a Scheduled Task</h2>
+                                    <p>Starting with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR build 1227, endpoints using <code>PPGPCR.Auditor.exe</code> will not push data up to the server every time Group Policy applies. However, a scheduled task will trigger <code>PPGPCR.Auditor.exe</code> to run every time Group Policy is applied. This is shown below in the Group Policy Preference item that triggers the auditor to run: </p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: PlainText;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>Subscription &lt;QueryList&gt;&lt;Query Id="0" Path="Microsoft-<br />Windows-GroupPolicy/Operational"&gt;&lt;Select Path="Microsoft-<br />Windows-GroupPolicy/Operational"&gt;*[System[( (EventID &amp;gt;=&#160;<br />8000 and EventID &amp;lt;= 8007) or (EventID &amp;gt;= 7000 and&#160;<br />EventID &amp;lt;= 7007) or (EventID &amp;gt;= 6000 and EventID&#160;<br />&amp;lt;= 6007) )]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The auditor EXE determines when to run and then sends the data back to the server.</p>
+                                    <h2>Default Auditor Triggers</h2>
+                                    <p>The <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR auditor EXE process will only do work and send data back to the server when a Group Policy background refresh event occurs:</p>
+                                    <ul>
+                                        <li>
+                                            <p>8006 Successful computer periodic refresh event</p>
+                                        </li>
+                                        <li>
+                                            <p>8007 Successful user periodic refresh event</p>
+                                        </li>
+                                    </ul>
+                                    <p>This ensures that the computer is started and the user is logged in (90–120 minutes after login) and Group Policy is successful. The auditor EXE also keeps track of how many times per day it runs, with a maximum of 20. Capping the auditor EXE at 20 runs per day ensures you'll never send an unrealistic number of audits in a day. You could also configure the <code>PPGPCR.Auditor.exe</code> using ADMX files (see the section called "Troubleshooting with ADMX or Registry Entries) to change or augment these settings.</p>
+                                    <h2>Auditing Process for Modern Versions of Group Policy Compliance Reporter</h2>
+                                    <p>When <code>PPGPCR.Auditor.exe</code> runs, the first thing it does is gather the RSOP via WMI and send them to the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR server for storage and processing. </p>
+                                    <ul>
+                                        <li>
+                                            <p>Running<code> PPGPCR.Auditor.exe</code> over the network requires about 1.4 MB of extra data to be sent. This occurs only at the background refresh cycle (but is changeable using ADMX settings). </p>
+                                        </li>
+                                        <li>
+                                            <p>Taking an XML RSOP from WMI happens locally and takes no bandwidth.</p>
+                                        </li>
+                                        <li>
+                                            <p>Sending the RSOP data to the server takes virtually no bandwidth. Once the RSOP is determined (about 600 KB), it is zipped down to about 68 KB.</p>
+                                        </li>
+                                        <li>
+                                            <p>If the RSOP is the same as the last time, then no zipped files are sent from the client to the server, but a 1 KB heartbeat is still sent to update the server. </p>
+                                        </li>
+                                    </ul>
+                                    <p>Note that it's possible to copy <code>PPGPCR.Auditor.exe</code> locally and run it there instead of running it from a share on the server. This saves running 1.4 MB over the network every time any Group Policy event is triggered. Values may change slightly from run to run.</p>
+                                    <h2>Auditing Process for Older Versions of Group Policy Compliance Reporter</h2>
+                                    <p>With older versions of the PPGPCR, the first thing that <code>PPGPCR.Auditor.exe</code> does is run the in-system function GPRESULT /X to generate RSOPs and send them to the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR server for storage and processing. When this happens, about 10 MB of data is sent over the network. This is the very nature of <code>GPRESULT /X</code>. You can do a rough calculation of how long <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR might take to push data from the endpoints up to the server based on the number of endpoints and the bandwidth by using this calculator: <a href="http://ibeast.com/tools/band-calc.asp" target="_blank">http://ibeast.com/tools/band-calc.asp</a>.</p>
+                                    <p>For example, if you had nine computers over a very slow 1.5 MB link to the closest DC, you could estimate that the upload would take 8 minutes and 8 seconds if they all ran the auditor at the exact same time. Since Group Policy is randomly running across all machines in the background (90–120 minutes after login), and since PPGPCR.Auditor.exe will only trigger on successful background user and computer refreshes (now by default) and not at computer startup or user login, the risk of saturation of a slow link is minimized.</p>
+                                    <p>Here is the breakdown of exactly what is happening when PPGPCR.Auditor.exe is triggered to do work:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Running PPGPCR.Auditor.exe over the network requires about 1.4 MB of extra data to be sent. This occurs only at the background refresh cycle (but is changeable using ADMX settings). </p>
+                                        </li>
+                                        <li>
+                                            <p>Taking an XML RSOP from <code>gpresult.exe /x</code> causes about 7–10 MB of data to be sent over the network from the DC to the endpoint. </p>
+                                        </li>
+                                        <li>
+                                            <p>Sending the RSOP data to the server takes virtually no bandwidth. Once the RSOP is determined (about 600 KB), it is zipped down to about 34 KB.</p>
+                                        </li>
+                                        <li>
+                                            <p>If the RSOP is the same as the last time, then no zipped files are sent from the client to the server, but a 1 KB heartbeat is still sent to update the server. </p>
+                                        </li>
+                                    </ul>
+                                    <p>Note that it's possible to copy<code> PPGPCR.Auditor.exe</code> locally and run it there instead of running it from a share on the server. This saves running 1.4 MB over the network every time any Group Policy event is triggered. Values may change slightly from run to run, but in summary, after running GPUpdate, the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR auditor takes about 10 MB of network bandwidth on the next auditor run because of the need to generate a new RSOP and compare it to the last one. The biggest problem is that the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR auditor relies on GPRESULT /X, which is a system command and is hardcoded to work the way it does, making it take up the bulk of the bandwidth. This is why only events that actually trigger the auditor to do real work are successful user and computer background events, and they are capped at 20 per day.</p>
+                                    <p><span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> GPCR has a problem where bandwidth is constrained between the client and the DCs, but build 1227 has dramatically improved on this problem. In builds beyond 1227, we will continue working on additional ways to minimize the problem GPresult /x causes over slow links with future releases.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

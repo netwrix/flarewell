@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Clean Up NetSuite" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Set Up the Archive Folder</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Set Up the Archive Folder</h1>
+                                        <p><a name="kanchor13" id="kanchor13"/>Advanced Change Management allows data within customization to be archived during the Clean Up process. An archive folder must be created before the Clean Up process.</p>
+                                        <div class="toc-macro"/><h2 id="create_the_archive_folder">Create the Archive Folder</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>NetSuite Home</b> &gt; <b>Set Preferences</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Under <b>Defaults</b>, make sure <b><a name="kanchor14" id="kanchor14"/>Show Internal IDS</b> is checked on the <b>General</b> tab.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <b>Save</b></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Open <b>Documents</b> &gt; <b>Files</b> &gt; <b>File Cabinet</b> &gt; <b>New</b></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Name the folder <b>Strongpoint Archived Data Files</b>.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Enter <b>Documents and Files</b> in <b>Sub-Folder Of</b></p>
+                                            </li>
+                                            <li value="7">
+                                                <p> Best practice is to add a meaningful description.</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Click <b>Save</b></p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Note the <b>Internal ID</b> for your new <b>Strongpoint Archived Data Files</b> folder. <b>48783</b> in this example.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/internal_id.png" title="Finding the Internal ID of the Archive Folder"/>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="assign_the_internal_id_to_the_deployed_script">Assign the Internal ID to the Deployed Script</h2>
+                                        <p>To assign the internal ID to a deployed script:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Customization</b> &gt;  <b>Scripting</b> &gt;  <b>Scripts</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Change the <b>Type </b>Filter to <b>Scheduled </b>and <b>From Bundle</b> to <b>294336</b></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <b>View </b>by the <b>Strongpoint Auto Archive</b></p>
+                                            </li>
+                                            <p class="img-inside-p">
+                                                <img src="../Resources/Images/scripts-1.png"/>
+                                            </p>
+                                            <li value="4">
+                                                <p>Open the <b>Deployments</b> tab.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click on <b>Strongpoint Auto Archive – OD</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/scripts-2.png"/>
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click <b>Edit</b></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Open the <b>Parameters </b>tab, add the internal ID of your<b> Archive Folder</b></p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Click Save</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/scripts-3.png"/>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <p>The archiving function on Change Requests is now set up and ready to use.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

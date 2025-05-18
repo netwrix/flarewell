@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Change Management Tools" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Setting Up Policies</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Setting Up Policies</h1>
+                                        <ul>
+                                            <li><a href="#Policy" class="MCXref xref">Policy Information</a> general information about the policy.
+            </li>
+                                            <li><a href="#Set" class="MCXref xref">Set Up a Default Policy</a> procedure to set up your default policy and approvers.
+            </li>
+                                            <li><a href="#Change" class="MCXref xref">Change Controls</a> reference information for the Change Controls tab.
+            </li>
+                                            <li><a href="#Approvals" class="MCXref xref">Approvals</a> reference information for the Approvals tab.
+            </li>
+                                            <li><a href="#Process" class="MCXref xref">Process Policies</a> reference information for the Process Policies tab.
+            </li>
+                                            <li><a href="#Customiz" class="MCXref xref">Customization Policies</a> reference information for the Customization Policies tab.
+            </li>
+                                            <li><a href="#Control" class="MCXref xref">Control Policies</a> reference information for the Control Policies tab.
+</li>
+                                            <li><a href="#SoD" class="MCXref xref">SoD Policies</a> reference information for the SoD Policies tab.
+                       </li>
+                                            <li><a href="#Set2" class="MCXref xref">Set Up Additional Policies</a> set up additional policies as required.      </li>
+                                        </ul>
+                                        <div class="toc-macro"/><h2 id="policy_information"><a name="Policy" id="Policy"/>Policy Information</h2>
+                                        <ul>
+                                            <li><b>Name</b>: Policy name.</li>
+                                            <li><b>Default Policy</b>: Checked if it is the default policy.</li>
+                                            <li><b>Enable Global Object Level Policy</b>: Disabled by default. Check to enable.<br/>			Change Policy picking process with <b>Global Object Level Policy</b> <i>disabled</i>: 
+				<ul><li> If customizations or customization processes are attached to specific policies, pick the most stringent policy.</li><li> If there are no object-specific policies, pick <b>Default Policy</b>.</li></ul><br/>Change Policy picking process with <b>Global Object Level Policy</b> <i>enabled</i>:<ul><li> If customizations or customization processes are attached to specific policies, pick the most stringent policy.</li><li>If there are no object-specific policies, look for policies that are not attached to any customization or process. Compare the change level among all resulting policies and the Default Policy, then pick the most stringent policy.<br/></li></ul></li>
+                                            <li><b>Parent Policy</b>: Parent policy information to help organize policies, does not impact the process. This field is not available when editing the Default Policy. For child policies, it can be changed when the policy is edited.</li>
+                                            <li><b>Owner</b>: Person who created the policy.</li>
+                                            <li><b>Inactive</b>: Checked if the policy is not active.</li>
+                                            <li><b>Log XML Only Change</b>: Checked to track online changes that occur in the XML, such as NetSuite internal changes.Recommended to leave this unchecked due to the volume of false positives you would need to manage.</li>
+                                        </ul>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/changeandapprovalpolicy1.png"/>
+                                        </p>
+                                        <h2 id="set_up_a_default_policy"><a name="Set" id="Set"/>Set Up a Default Policy</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Change/Approval Policy</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Edit the <b>Default Policy</b> so that it has the following settings:</p>
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <p><b>Header</b>: Everything in the Header should remain the same including the name Default.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Change Controls:</b>
+                                                    </p>
+                                                    <p class="img-inside-p">
+                                                        <br/>
+                                                        <img src="../Resources/Images/policy_default_change_controls2.png" title="Policy Default Change Controls"/>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Approvals</b>: Select the policy approvers on the Approvals tab.</p>
+                                                </li>
+                                            </ul>
+                                            <li value="3">
+                                                <p>Click <b>Save</b></p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="change_controls"><a name="Change" id="Change"/>Change Controls</h2>
+                                        <p>Each object type has an independent change level. The change level specifies what approval is required for changes to the objects to be compliant with this policy.</p>
+                                        <h3 id="change_levels">Change Levels</h3>
+                                        <p><b>No Logs Created</b>: changes to these objects update the customization documentation is updated but does not create change logs. A warning text is displayed when the Administrator sets the change level to <b>No Logs Created</b>.</p>
+                                        <p><b>Log Changes Only</b>: changes to these objects are automatically marked compliant.</p>
+                                        <p><b>Process Issue Only</b>: changes to these objects require an <b>Approved Process Issue</b> with a status not  set to <b>Completed</b>.</p>
+                                        <p><b>Change Request</b>: changes to these objects require an <b>Approved Change Request</b> with a status not  set to <b>Completed</b>.</p>
+                                        <p><b>Sandbox Development &amp; Testing</b>: changes to these objects require an <b>Approved Change Request</b> in the <b>Stage Deployment Record</b> with a status not  set to <b>Completed</b>.</p>
+                                        <p><b>Full Software Development Lifecycle</b>: changes to these objects require an <b>Approved Change Request</b> in the <b>Stage Deployment Record</b> with a status not  set to <b>Completed</b>, and a parent <b>Change Request</b> attached to the <b>Deployment Record</b>.</p>
+                                        <p>To add new change levels, select <b>New </b>or use the <b>+</b> next to a field when editing the policy.</p>
+                                        <h3 id="object_types">Object Types</h3>
+                                        <h4 id="complex_objects">Complex Objects</h4>
+                                        <ul>
+                                            <li><b>Scripted Objects</b>: Scripts, Workflows and any object upon with a script or workflow dependency. Default: Log Changes Only</li>
+                                            <li><b>Formula Objects</b>: Fields used in Formulas. Default: Sandbox Development &amp; Testing</li>
+                                            <li><b>Workflows and Related Objects</b>: Changes to Workflows, or any objects used by a Workflow. When an object is used by a Script and a Workflow, we use the higher level between Scripted Objects, and Workflows and Related Objects change controls. Default: Change Request</li>
+                                            <li><b>Integration Objects</b>: Changes to External Records, External Fields, External Systems, and Integrations. Default: Log Changes Only</li>
+                                            <li><b>Non-Managed Bundle/App Deployments</b>: Bundle or SuiteApp Deploy into an account, updates of the bundle or SuiteApp object are handled by object type. (Only non-managed bundles/Apps). Default: Sandbox Development &amp; Testing</li>
+                                            <li><b>Agent Controls</b>: Changes to Control Searches. Default: Log Changes Only</li>
+                                            <li><b>Mass Updates</b>: Changes to Mass Updates Default: Log Changes Only</li>
+                                        </ul>
+                                        <h4 id="other_configurable_objects">Other Configurable Objects</h4>
+                                        <ul>
+                                            <li><b>Searches and Reports</b>: Searches and Reports not flagged as controls or scripted. Default: Change Request</li>
+                                            <li><b>Fields</b>: Changes to custom fields. Default: Log Changes Only</li>
+                                            <li><b>Lists</b>: Changes to custom lists. Default: Log Changes Only</li>
+                                            <li><b>Records</b>: Changes to custom records. Default: Log Changes Only</li>
+                                            <li><b>Groups</b>: Changes to groups. Default: Log Changes Only</li>
+                                            <li><b>Forms and Template Changes</b>: Changes to Forms and Templates. Default: Log Changes Only</li>
+                                            <li><b>Web-Related Changes</b>: Objects affecting web objects, for example fields displayed in a site or any part of SuiteCommerce Advanced. Default: Log Changes Only</li>
+                                            <li><b>Departments/Locations/Class</b>: Changes to department, location, or class. Default: Log Changes Only</li>
+                                            <li><b>Subsidiaries</b>: Changes to subsidiary. Default: Log Changes Only</li>
+                                        </ul>
+                                        <h4 id="access_and_setup">Access and Setup</h4>
+                                        <ul>
+                                            <li><b>User Roles</b>: Changes to role assignments on the Change Control. Default: Log Changes Only</li>
+                                            <li><b>User Role Assignment</b>: Changes to user role assignments on the Change Control. Default: Log Changes Only</li>
+                                            <li><b>User Role Related Objects</b>: Changes related to user role changes on the Change Control.  Default: Log Changes Only</li>
+                                            <li><b>NetSuite SetUp and Preferences</b>: Changes to NetSuite setup objects including accounting lists, segments, enabled features and preferences. Default: Log Changes Only</li>
+                                            <li><b>Accounting Lists</b>: Changes to accounting lists. Default: Log Changes Only<br/></li>
+                                            <li><b>Custom Segments</b>: Changes to custom segments. Default: Log Changes Only</li>
+                                            <li><b>User Offboarding</b>: Available when <a href="user_provisioning.htm" title="Open Enhanced User Provisioning topic">Enhanced User Provisioning</a> is enabled.</li>
+                                            <li><b>User Onboarding</b>: Available when <a href="user_provisioning.htm" title="Open Enhanced User Provisioning topic">Enhanced User Provisioning</a> is enabled.</li>
+                                        </ul>
+                                        <h2 id="approvals"><a name="Approvals" id="Approvals"/>Approvals</h2>
+                                        <p>Approvers initiate the change request and enable it to move to the next stage.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/policy_approvals_tab.png" title="Policy Approvals tab" alt="Policy Approvals tab"/>
+                                        </p>
+                                        <p class="Bold_Subheading">Policy Change Approvers</p>
+                                        <p>This section is only applies to the default policy.</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Preliminary Approver (Policy Change)</b>: Specifies the preliminary approver required for a policy change.   They are listed as the first approver in the Change Request. </p>
+                                            </li>
+                                            <li>
+                                                <p><b>Final Approver (Policy Change)</b>: Specifies the final approver required for a policy change. The person who needs to approve after all other approvals have been obtained.
+			</p><p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Specifying a <b>Final Approver</b> locks the default policy and all child policies. If a user attempts to change a policy, a notice is displayed. Click <b>Request Approval</b>. The form is launched, with your proposed changes populated.</p><p class="img-inside-p"><img src="../Resources/Images/record_save_blocked.png" title="Record Save Blocked" alt="Record Save Blocked"/></p><p/>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">ITGC Approvers</p>
+                                        <p>Groups are an efficient method to specify approvers. For example, if you need one approver from each of several company functions, you can create a group for each functional area, and select a minimum of 1 approval. Once each group has approved, the policy moves on to the <b>Final Approver</b>.</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Group Name</b>: enter a descriptive name to identify the approvers.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Approvers</b>: click in the entry box and select approvers from the available user list.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>No Order Required</b>: check the box if approvers can approve in any order. If not checked, approvers must approve in the order specified in the <b>Approvers</b> entry.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Min # of Approvals Required</b>: select the minimum number of approvers for the group. This option is not available if <b>No Order Required</b> is not checked.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Add Row</b>: click to add another ITGC Approver Group. Click the red <b>X</b> to delete an existing group.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Bold_Subheading">Final Approver</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Final Approver</b>: Specifies the final approver of changes affected by given policies.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>No Order Required</b>: Check this box to allow concurrent approvers. If blank, approvals route in order. Default is blank.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Max # of Approvals Required</b>: Specifies the maximum number of approvals to consider a change complete. If blank, all approvers are required.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Change ID</b>: Opens a form displaying the <b>Name</b>, <b>Old ID</b> and an input field for the <b>New ID</b>. <b>Change ID</b> is available as a button when you <b>Edit </b>the policy.</p>
+                                            </li>
+                                        </ul>
+                                        <h2 id="process_policies"><a name="Process" id="Process"/>Process Policies</h2>
+                                        <p>Process Policies specify which processes the policy applies to and how they should be managed. Process Policies are only applicable if you implement Manage Process Risk. </p>
+                                        <ul>
+                                            <li><b>Require Affected Process Approval</b>: Check to require approval from process owners on the Change Request. Default is checked.</li>
+                                            <li><b>Include Process Editors as Alternates</b>: Check to include Process Editors as alternate approvers. Process Editors are specified on the <b>Continuous </b><b>Improvement</b> tab of the <b>Process</b> record. Default is not checked.</li>
+                                            <li><b>Require Impacted Process Approval</b>: Check to require approval from process owners of related objects. Often these owners are not specifically listed in the Change Request. Default is not checked.</li>
+                                            <li><b>Require Parent Process Owner Approval</b>: Owners of processes at or above the parent level must approve. Default is not checked.</li>
+                                            <li><b>New Process</b>: Launches the  new Process form.</li>
+                                        </ul>
+                                        <h2 id="customization_policies"><a name="Customiz" id="Customiz"/>Customization Policies</h2>
+                                        <p>Customization Policies specifies the objects affected by the policy.</p>
+                                        <ul>
+                                            <li><b>Require Object Owner Approval</b>: Owner of the customization record.  Likely the person who created the object.  Default is not checked. Recommend checking this box.</li>
+                                            <li><b>Require Impacted Customization Approval</b>: Owner of any impacted customization record in NetSuite.  Default is not checked.</li>
+                                            <li><b>View </b>and <b>Customization</b>: Select a View and navigate to a Customization. Click <b>Attach</b> to add the selected customization to the Policy.</li>
+                                            <li><b>New Customization</b>: Launches the  new Customization form.</li>
+                                            <li><b>Customize View</b>: Launches the Active Customizations Search results.</li>
+                                        </ul>
+                                        <h2 id="control_policies"><a name="Control" id="Control"/>Control Policies</h2>
+                                        <p>Control Policies specify controls for this policy.</p>
+                                        <ul>
+                                            <li><b>Control Assignee Approval</b>: Checked if there is a control assignee in Control Policies. </li>
+                                            <li><b>Process Owner(s)</b>: Checked if there are any process owners in Control Policies.</li>
+                                            <li><b>Control Owner</b>: Checked if there is a control owner in Control Policies.</li>
+                                        </ul>
+                                        <h2 id="sod_policies"><a name="SoD" id="SoD"/>SoD Policies</h2>
+                                        <p>Segregation of Duties Policies specify the approvers for this policy.</p>
+                                        <ul>
+                                            <li><b>SoD Preliminary Approver</b>: One or more preliminary SoD approvers for changes affected by the policy.</li>
+                                            <li><b>SoD Final Approver</b>: One or more final SoD approvers for changes affected by the policy.</li>
+                                            <li><b>Require Change Request</b>: If checked, a Change Request is Required for any changes to the policy.</li>
+                                        </ul>
+                                        <h2 id="set_up_additional_policies"><a name="Set2" id="Set2"/>Set Up Additional Policies</h2>
+                                        <p>In some cases, you may want stricter controls on certain objects. For example, many of our public companies create a specific policy for SOX related searches, since they want it tighter than Log Only for those objects. To set up object specific policies, the initial spider must be complete, so you can attach the Customization Record to the policy.</p>
+                                        <p>To set up additional policies:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b>&gt; <b>Change Management Tools</b> &gt; <b>Change/Approval Policy</b> &gt; <b>New</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter the policy information.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Assign the <b>Change Levels</b> on the <b>Change Controls</b> tab.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Assign the <b>Approvers</b> on the <b>IT Policies</b> tab.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Click <b>Save</b></p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click <b>Edit</b></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Open the <b>Customization Policies</b> tab.</p>
+                                            </li>
+                                            <br/>
+                                            <img src="../Resources/Images/policy_add_customizations.png"/>
+                                            <ul>
+                                                <li>Check <b>Require Object Owner Approval</b> if needed.</li>
+                                                <li>Check <b>Require Impacted Customization Approval</b> if needed.</li>
+                                            </ul>
+                                            <li value="8">
+                                                <p>Add Customizations. Attaching customizations to the policy is how <span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> knows a particular policy should be applied to specific objects. If there are multiple policies applied to specific objects,   the higher change level is selected to keep the change compliant.</p>
+                                            </li>
+                                            <ul>
+                                                <li>Change the <b>View</b> to help locate the desired customization.</li>
+                                                <li>Enter all of part of the customization in <b>Customization</b>, or click the double down arrow icon to select the <b>List</b> option.</li>
+                                                <li>Select the customization.</li>
+                                                <li>Click <b>Attach</b>.</li>
+                                            </ul>
+                                            <li value="9">
+                                                <p>Click <b>Save</b> when you are finished adding customizations to the Policy.</p>
+                                            </li>
+                                        </ol>
+                                        <p>Another method to add customization is through NetSuite's <b>Mass Update</b>. Here is the basic process. Refer to the NetSuite help for more information on Mass Update.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Lists</b> &gt; <b>Mass Updates</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p> Expand <b>General Updates</b> &gt; <b>Custom Records</b> &gt; <b>Customization</b></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Use the Criteria tab to locate and <b>Add</b> your customizations.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Open the <b>Mass Update Fields</b> tab.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Locate the <b>Change/ Approval Policy</b> field. (You can use your browser’s Find function.)</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Check the box and select your new <b>Policy</b>.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p><b>Save</b> and run the Mass Update.</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Save your <b>Change Approval Policy</b>.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

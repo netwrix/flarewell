@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Ticketing System Integration|Integration API|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Get Customizations</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Get Customizations</h1>
+                                        <p>Returns a list of customizations using the available user-defined filters.</p>
+                                        <div class="toc-macro"/><h2 id="request">Request </h2>
+                                        <dl>
+                                            <dt><b>Name</b>
+                                            </dt>
+                                            <dt>URL</dt>
+                                            <dd>    https://&lt;account_id_xxx&gt;.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=customscript_flo_int_customization_api&amp;deploy=1</dd>
+                                            <dt>HTTP Method</dt>
+                                            <dd>    POST</dd>
+                                        </dl>
+                                        <h3 id="request_body_json_object_definition">Request Body JSON Object Definition</h3>
+                                        <dl>
+                                            <dt><b>Name</b> / <b>Value</b></dt>
+                                            <dt>actionType</dt>
+                                            <dd>    retrieveCustomizations</dd>
+                                            <dt>name</dt>
+                                            <dd>    &lt;customization_name&gt;</dd>
+                                            <dt>scriptId</dt>
+                                            <dd>    &lt;script_id&gt;</dd>
+                                            <dt>type</dt>
+                                            <dd>    &lt;type&gt;</dd>
+                                            <dt>bundleId</dt>
+                                            <dd>    &lt;bundle_id&gt;</dd>
+                                            <dt>modifiedBy</dt>
+                                            <dd>    &lt;employee_id&gt;</dd>
+                                            <dt>from</dt>
+                                            <dd>    &lt;date_in_milliseconds_in_string_format&gt;</dd>
+                                            <dt>to</dt>
+                                            <dd>    &lt;date_in_milliseconds_in_string_format&gt;</dd>
+                                        </dl>
+                                        <p class="note">Request body names are case sensitive and mandatory. For the <b>actionType</b> parameter, it is always  a constant value, in this case <b>retrieveCustomizations</b>.</p>
+                                        <h3 id="sample_request_body">Sample Request Body</h3>
+                                        <div class="codeSnippet">
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br/>    "actionType": "retrieveCustomizations",<br/>    "name": "test",<br/>    "scriptId": "custscript_xxx_123",<br/>    "type": "1789",<br/>    "bundleId": "249434",<br/>    "modifiedBy": "2341"<br/>    "from": "123456789098",<br/>    "to": "09876543213465"<br/>}</code></pre>
+                                            </div>
+                                        </div>
+                                        <h3 id="request_headers">Request Headers</h3>
+                                        <p>This API uses OAuth 1.0 type for its request headers and Token Based Authentication for user credentials. Header tokens should be encoded in HMAC SHA256.</p>
+                                        <h3 id="format">Format</h3>
+                                        <p>Authorization: &lt;<i>encoded authentication code</i>&gt;</p>
+                                        <h3 id="sample_request_header">Sample Request Header</h3>
+                                        <p><code>Authorization: OAuth oauth_consumer_key="xxx", oauth_nonce="xxx", oauth_signature="xxx", oauth_signature_method="HMAC-SHA256", oauth_timestamp="1698722057", oauth_token="xxx", oauth_version="1.0",realm="xxx"</code>
+                                        </p>
+                                        <h3 id="response">Response</h3>
+                                        <p>Returns a JSON format string.</p>
+                                        <h3 id="object_definition">Object Definition</h3>
+                                        <dl>
+                                            <dt><b>Name</b> / <b>Type</b></dt>
+                                            <dt>status</dt>
+                                            <dd>    string</dd>
+                                            <dt>message</dt>
+                                            <dd>    string</dd>
+                                            <dt>data</dt>
+                                            <dd>    Array of JSON objects</dd>
+                                        </dl>
+                                        <h3 id="data_object_definition">Data Object Definition</h3>
+                                        <dl>
+                                            <dt><b>Name</b> / <b>Type</b></dt>
+                                            <dt>name</dt>
+                                            <dd>    string</dd>
+                                            <dt>scriptId</dt>
+                                            <dd>    string</dd>
+                                            <dt>internalId</dt>
+                                            <dd>    string</dd>
+                                            <dt>type</dt>
+                                            <dd>    JSON object</dd>
+                                            <dt>customizationUrl</dt>
+                                            <dd>    string</dd>
+                                        </dl>
+                                        <h3 id="type_object_definition">Type Object Definition</h3>
+                                        <dl>
+                                            <dt><b>Name</b> / <b>Type</b></dt>
+                                            <dt>
+                                                </dt><dt>name</dt>
+                                                <dd>    string</dd>
+                                                <dt>value</dt>
+                                                <dd>    string</dd>
+                                            
+                                        </dl>
+                                        <h3 id="response_jsonobject">Response JSON Object</h3>
+                                        <div class="codeSnippet">
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br/>    "status": success or failed,<br/>    "message": Server response message,<br/>    "data": [<br/>        {<br/>            "name": &lt;customization name&gt;,<br/>            "scriptId": &lt;script id&gt;,<br/>            "internalId": &lt;internal id&gt;,<br/>            "type": {<br/>                "name": &lt;customization type name&gt;,<br/>                "value": &lt;customization type id&gt;<br/>            },<br/>            "customizationUrl": &lt;customization url link&gt;                <br/>        }<br/>    ]<br/>}</code></pre>
+                                            </div>
+                                        </div>
+                                        <h3 id="response_messages">Response Messages</h3>
+                                        <dl>
+                                            <dt><b>Message</b>
+                                                </dt><dt>"Customization/s retrieved successfully"</dt>
+                                                <dd>    Successfully pulled customization with the defined filters</dd>
+                                                <dt>"No Customizations."</dt>
+                                                <dd>    No customization/s found with the defined filters</dd>
+                                            
+                                        </dl>
+                                        <h3 id="error_messages">Error Messages</h3>
+                                        <p>An error message is returned if  any exceptions are encountered.</p>
+                                        <h3 id="sample_response">Sample Response</h3>
+                                        <div class="codeSnippet">
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br/>    "status": "success",<br/>    "message": "Customization/s retrieved successfully",<br/>    "data": [<br/>        {<br/>            "name": "test (Body Field)",<br/>            "scriptId": "custbody44",<br/>            "internalId": "15238",<br/>            "type": {<br/>                "name": "Body Field",<br/>                "value": "5"<br/>            },<br/>            "customizationUrl": "/app/common/custom/custrecordentry.nl?<br/>            rectype=1065&amp;id=15238&amp;compid=TSTDRV1715311"<br/>        }<br/>    ]<br/>}</code></pre>
+                                            </div>
+                                        </div>
+                                        <h2 id="development">Development</h2>
+                                        <p>The Customizations API is developed using a RESTlet with API version 2.1.</p>
+                                        <dl>
+                                            <dt>Script Name</dt>
+                                            <dd>     Strongpoint Int Customization API</dd>
+                                            <dt>Script ID</dt>
+                                            <dd>    customscript_flo_int_customization_api</dd>
+                                            <dt>Filename</dt>
+                                            <dd>     StrongpointIntegrationCustomizationAPI.js</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

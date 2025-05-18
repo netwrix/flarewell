@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_CSH_NPR_Skin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="online">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Configure PaloAlto Devices</title>
+        <!-- Google Tag Manager -->
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NKJ33G');</script> -->
+        <!-- End Google Tag Manager -->
+        <link rel="shortcut icon" href="https://img.netwrix.com/fav.ico" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../../../Resources/TableStyles/Basic.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1260px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJ33G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2538779-18">
+                                    </script>
+                                    <script>/* <![CDATA[ */
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-2538779-18');
+		/* ]]> */</script>
+                                    <div class="searchbar">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search here" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="main">
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="toc">
+                                                <ul class="nocontent menu _Skins_TOC mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Auditor__Auditor.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="content">
+                                                <div role="main" id="mc-main-content">
+                                                    <h1>Configure PaloAlto Devices</h1>
+                                                    <p><span class="mc-variable Auditor.Product_Long_Name variable">Netwrix Auditor</span> relies on native logs for collecting audit data. Therefore, successful change and access auditing requires a certain configuration of native audit settings in the audited environment and on the <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span> console computer.  Configuring your IT infrastructure may also include enabling certain built-in Windows services, etc. Proper audit configuration is required to ensure audit data integrity, otherwise your change reports may contain warnings, errors or incomplete audit data.</p>
+                                                    <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>Folder associated with <span class="mc-variable Auditor.Product_Long_Name variable">Netwrix Auditor</span> must be excluded from antivirus scanning. See the  <a href="https://helpcenter.netwrix.com/bundle/z-kb-articles-salesforce/page/kA04u0000000HirCAE.html" target="_blank" title="Antivirus Exclusions for Netwrix Auditor" alt="Antivirus Exclusions for Netwrix Auditor">Antivirus Exclusions for Netwrix Auditor</a> knowledge base article for additional information. </p>
+                                                    <p>You can configure your&#160;IT Infrastructure for monitoring in one of the following ways:</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>Automatically through a monitoring plan – This is a recommended method. If you select to automatically configure audit in the target environment, your current audit settings will be checked on each data collection and adjusted if necessary.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Manually – Native audit settings must be adjusted manually to ensure collecting comprehensive and reliable audit data. You can enable <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span>  to continually enforce the relevant audit policies or configure them manually:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Create a Syslog Server profile and syslog forwarding for the target PaloAlto device  via Web Interface as described below.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <p>To configure your PaloAlto devices, create a Syslog server profile and assign it to the log settings for each log type.</p>
+                                                    <p class="procedure"><a name="Config_Syslog_Profile"></a>Follow the steps to configure a Syslog server profile.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>Connect to your PaloAlto device: launch an Internet browser and enter the IP address of the firewall in the URL field (https://&lt;IP address&gt;).</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>In the Web Interface,  navigate to <b>Device</b> &gt; <b>Server Profiles</b> &gt; <b>Syslog</b>. </p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>Click <b>Add</b> and specify profile name, for example, <i>"SyslogProf1"</i>.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Specify syslog server parameters:</p>
+                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                                                        <col class="TableStyle-Basic-Column-Column1" />
+                                                        <col class="TableStyle-Basic-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Parameter</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Name</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <p>Specify unique name for a syslog server.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Syslog Server</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <p>Provide a server name by entering its FQDN or IPv4 address.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Transport</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <p>Select <span class="semibold">UDP</span>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Port</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <p>Provide the name of the UDP port used to listen to network devices (514 port used by default).</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Format</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <p>Select <span class="semibold">IETF</span>.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                                                    <p>Facility</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                                                    <p>Netwrix recommends using default values.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p class="procedure"><a name="Config_Syslog_Forwarding"></a>Follow the steps to configure syslog forwarding.</p>
+                                                    <p class="Step-Reset" data-mc-autonum="&lt;b&gt;Step 1 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 1 – </b></span></span>In the Web Interface, navigate to <b>Device</b> &gt; <b>Log Settings</b>. </p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 2 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 2 – </b></span></span>For System, Config, and User ID logs, click <span class="semibold" style="font-weight: bold;">Add</span> and enter unique name of your syslog server.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 3 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 3 – </b></span></span>On the syslog panel, click <span class="semibold" style="font-weight: bold;">Add</span> and select the syslog profile you created above.</p>
+                                                    <p class="Step" data-mc-autonum="&lt;b&gt;Step 4 – &lt;/b&gt;"><span class="autonumber"><span class="Step"><b>Step 4 – </b></span></span>Click <b>Commit</b> and review the logs on the syslog server.</p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>After configuring the monitoring plan, <span class="mc-variable Auditor.Product_Long_Name variable">Netwrix Auditor</span> will listen to the logs forwarded by the Palo Alto device.</p>
+                                                    <h2>PaloAlto Devices</h2>
+                                                    <p>Review a full list of object types <span class="mc-variable MyVariables.ProductName variable">Netwrix Auditor</span> can collect on PaloAlto network devices.</p>
+                                                    <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" data-mc-conditions="" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Object type</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Actions</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">Event ID</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" rowspan="2">
+                                                                    <p>Logon</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Successful logon </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">logged in</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <ul>
+                                                                        <li> Failed logon
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">failed authentication for user</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p class="code">authentication failed for user</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" rowspan="2">
+                                                                    <p>Authentication</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Successful Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">authentication succeeded for user</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p class="code">USERID,login,</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p class="code">globalprotectportal-auth-succ</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>Failed Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">authentication failed for user</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p class="code">globalprotectportal-auth-fail</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <p>Configuration</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified / Modify (Failed attempt)
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">commit</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <p>Environment</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>Read / Read (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">connect-server-monitor-failure</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <p>Session</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Logoff</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">logged out</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" rowspan="3">
+                                                                    <p>User</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>Add / Added (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">config mgt-config users</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p class="code">config shared local-user-database user</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified / Modify (Failed attempt)
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">config mgt-config users</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p class="code">config shared local-user-database user</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>Removed / Remove (Failed attempt) </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p class="code">config mgt-config users</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p class="code">config shared local-user-database user</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -21,41 +21,4 @@ Your overarching goal: **deliver high-fidelity Markdown optimized for Docusaurus
 # Testing
 * Run `flarewell --input-dir tests/input_docs --output-dir tests/test_website/docs` to test
 * Run `flarewell --input-dir tests/1Secure --output-dir tests/1SecureMarkdown` and ensure that all docs are created to match all .htm input docs. Also ensure that all images files have been successfully moved to the static directory and exist there.
-* Change directory to tests/test_website and run `npm build` to test
-
-
-Here are four errors you can write pytests for:
-1. The file tests/test_files/Secure.htm gives the following MDX JS error after conversion to Secure.md:
-```
-{
-  "reason": "Could not parse expression with acorn",
-  "ruleId": "acorn",
-  "source": "micromark-extension-mdx-expression",
-  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
-}
-```
-
-2. The file tests/test_files/PerformanceMonitoring.htm gives the following MDX JS error after conversion to PerformanceMonitoring.md:
-```
-{
-  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-```
-
-3. The file tests/test_files/PartnerServer.htm gives the following MDX JS error after conversion to PartnerServer.md:
-```
-{
-  "reason": "Unexpected end of file in expression, expected a corresponding closing brace for `{`",
-  "ruleId": "unexpected-eof",
-  "source": "micromark-extension-mdx-expression",
-  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#unexpected-end-of-file-in-expression-expected-a-corresponding-closing-brace-for-"
-}
-```
-
-4. The file tests/test_files/AIX.htm gives the following Docusaurus compiling error after conversion to AIX.md:
-```
-Cause: Can't parse URL https://IPADDRESS-SERVERNAME:PORT/api/ with base unspecified://
-```
+* Change directory to tests/test_website and run `npm build` to test. The docusaurus site should build without error.

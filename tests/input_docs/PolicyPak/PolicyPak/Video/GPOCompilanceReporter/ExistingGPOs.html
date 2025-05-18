@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Endpoint Policy Manager GP Compliance Reporter|[%=System.LinkedTitle%]|Using Endpoint Policy Manager Group Policy Compliance Reporter">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Endpoint Policy Manager GP Compliance Reporter: Using an Existing GPO as a test</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Endpoint Policy Manager GP Compliance Reporter: Using an Existing GPO as a test</h1>
+                                    <p>The <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> Group Policy Compliance Reporter can help you know if your existing settings (from a GPO) have -made it- to a target machine. Watch this video to learn how to utilize an existing GPO as a PPGPCR Test.</p>
+                                    <p><iframe width="1600" height="900" src="https://www.youtube.com/embed/ZRhqeiBzt3Q" title="Endpoint Policy Manager GP Compliance Reporter: Using an Existing GPO as a test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3>Endpoint Policy Manager GP Compliance Reporter: Using an Existing GPO as a test</h3>
+                                    <p>Hi. This is Jeremy Moskowitz, former Group Policy MVP and Founder of PolicyPak Software. In this video, we're going to learn how to use the Group Policy Compliance Reporter to take an existing Group Policy Object's settings and verify that those settings exist on target machines.</p>
+                                    <p>In a previous video, you might have seen me set settings by either hand configuring them or importing them from, well, we've got a bunch of settings that correspond to existing STIGs. A STIG is a setting collection from the U.S. government that helps you make your applications more secure.</p>
+                                    <p>In this case, I've already preconfigured Firefox with a bunch of settings. The point is, how do we discover if these settings that are now inside the Group Policy Object actually made it over to our target computers?</p>
+                                    <p>It's pretty hard to do if you only have a Group Policy Results Reporter here. You would have to run the "Group Policy Results Wizard," go to each machine individually to discover if those settings are there or not and paw through the contents to see if that's actually true or not. With the Group Policy Compliance Reporter that PolicyPak ships, it's kind of a no-brainer.</p>
+                                    <p>Let's start. The first thing you're going to want to do is to back up the Group Policy Object for later use inside the Compliance Reporter as a test. We're looking for this particular GPO: "Manage Firefox using STIG." It just happens to be the one I've got here.</p>
+                                    <p>I'm going to select "Back Up." The point is that all these settings that we're backing up from the Group Policy Object, this is what we want to test for. We want to see if all of these settings are actually on the target machine and set the way we want to, based upon the configuration.</p>
+                                    <p>Now we'll go over to the Compliance Reporter. We'll then use the "Snapshots" node to right click and "Create snapshot" against all the computers we want. If we have 1,000 computers or 100 computers or 10,000 computers, instead of individually discovering on each one if they have the setting or not, we're discovering in real time do these computers actually have the settings we want. As you can see, we've got the status back.</p>
+                                    <p>The "Tests" – this is the backed up Group Policy Object. We're simply going to right click, "Import test from GPO Backup." Again, the GPO must, in fact, be backed up already for you to then select it. Once you select the backed up GPO, you can give it a name. It can be the same name as the GPO or you can give it a different name – whatever you like.</p>
+                                    <p>All the settings within the Group Policy Object are now imported as the test. You can see all the stuff that we did in a previous video are right there, available for us test against. We want to test to see if "Firefox is the default browser," if it's set that Updater will "Never check for updates" and so on.</p>
+                                    <p>If we then go to "Results," what we're going to do next is add that test in, "123." Then you can see this is what we're testing for. Then we're going to click "Select Snapshot," pick the snapshot we just created and run the results. There we go. We can see the user side is all "OK" on all these guys. It turns out that we did this Firefox stuff on the computer side.</p>
+                                    <p>Let's look at the one computer we got a result from first. Again, we show no results because everything was in the test. If you "Show all settings in the test," you'll see everything is equal. This computer basically got all the settings that were inside that GPO and are now a test. So this computer got everything.</p>
+                                    <p>If we take a look at this computer, "WIN7COMPUTER64," we have a lot of things that are "Missing" – things that are expected but the value never made it there. Gosh, I wonder why it didn't make it there. If we take a look at this other one here, "WIN733," we have the same problem.</p>
+                                    <p>Let's take a look at where the GPO was linked in the first place. It's linked over to only "East Sales Laptops." Let's look at where these other computers are in the world. Let's take a look at this guy, "gpresults/R." Let's see where this computer lives. This computer lives in "East Sales Desktops." Well, gosh, that GPO wasn't linked over to "East Sales Desktops." Maybe we should do that. Let's "Link an Existing GPO" called "Manage Firefox using STIG" over to that OU. Now, those computers will get it.</p>
+                                    <p>Let's see where this computer lives, "gpresult /R." It lives over in "West Sales Desktops." Gosh, so we have to go over to "West Sales/West Sales Desktops" and "Link an Existing GPO" and take those settings, the "Manage Firefox using STIG."</p>
+                                    <p>Now if we're using a more modern Group Policy management console, you could right click over an OU and you could tell those computers to force Group Policy right now. Or you could go over to each of your target computers and simply run "gpupdate," which is actually a little bit faster for the purposes of this demonstration so I'm going to go ahead and do that right now. I'll just run "gpupdate" on all my target machines here.</p>
+                                    <p>In real life, you could just wait, so you have a couple of choices. You could force Group Policy remotely using the GPMC. You could run <code>GPUpdate </code>on your target computers. Or you could just wait and Group Policy would take effect.</p>
+                                    <p>Because PolicyPak is on these machines, it's picking up these Group Policy directives that have Firefox content in them. Now, let's take a look just on this computer. Let's take a look at its "Mozilla Firefox" here. Do we have the settings now?</p>
+                                    <p>If we go to "Options" here, you can see we've declared a "Home Page." If we go over to "Security," you can see we're dictating the various settings from the STIG as we want to. But, like I said, if you have 5,000 computers, how would you know that's actually true? Again, you use a "Group Policy Compliance Reporter."</p>
+                                    <p>If before, our results said that only one of our computers got it and two of them didn't, let's retake another snapshot by right clicking and creating another snapshot. Let's go ahead and do that, "Create snapshot." Ask all the computers, "Did you get those settings now?" Let's see the result of that. All the computers responded.</p>
+                                    <p>We're not changing the test. We'll go right back to "Results" and we'll just simply select the latest snapshot ("Select Snapshot") that we just took and click on "Generate Results." Now all the computers got it because we did our homework and figured out what GPOs were linked to what location. We made sure every GPO was linked to the right place. Once that was the case, the PolicyPak moving part on the target machine picked up the settings that were in the GPO, and we verified that using the Group Policy Compliance Reporter.</p>
+                                    <p>I hope this is helpful. Remember, you get for free as a PolicyPak customer the ability to test upon things that PolicyPak deploys. So in Firefox, Java, Flash – those kinds of settings – you get returned results for absolutely free. If you're looking to return results on things that Microsoft has, such as Group Policy admin templates or security settings or Group Policy Preferences, then that's the paid version of the Compliance Reporter.</p>
+                                    <p>I hope this has been helpful. Thanks so very much, and we'll talk to you soon.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Least Privilege Manager|[%=System.LinkedTitle%]|How-To &amp; Tech Support">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Prevent Users Running some commands with command lines</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Prevent Users Running some commands with command lines</h1>
+                                    <p>Customer requested demo to show how to block users from running Chrome or Firefox with specific command line options.</p>
+                                    <p><iframe width="1642" height="924" src="https://www.youtube.com/embed/Ew6cdP0oAzM" title="Endpoint Policy Manager: Prevent Users Running some commands with command lines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3>Endpoint Policy Manager: Prevent Users Running some commands with command lines</h3>
+                                    <p>Hi. This is Jeremy Moskowitz. In this video, I'm going to show you how you can use <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> <a href="https://www.policypak.com/products/policypak-least-privilege-manager.html" target="_blank" title="Least Privilege Manager">https://www.policypak.com/products/policypak-least-privilege-manager.html</a> to prevent users from doing naughty things like running Firefox or Chrome with specific flags that might work around your security.</p>
+                                    <p>We have a customer who had this challenge. Their challenge was their end users knew that if they just went to Windows+R and just ran "chrome –disable-extensions" like this, then Chrome would not have the extensions enabled. Same thing if they were to go to a Command prompt here ("cmd") and also try to run it this way: "Program Files (x86)GoogleChromeApplicationchrome.exe" –disable-extensions."</p>
+                                    <p>This is an end user doing this. They don't want this to happen. They only want "Google Chrome" to work when that end user double clicks it the way it's supposed to and the extensions will be fully running. How do we do this with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Least Privilege Manager? It's actually pretty easy to do.</p>
+                                    <p>For all of our "East Sales Users" here we're going to "Create a GPO in this domain, and link it here." We'll call this "PP LPM Command line demo." We'll right click and click "Edit" on this guy. We're doing this on the user side. You could do it for all the computers too. I just happen to be doing it on the user side.</p>
+                                    <p>We're going to go to "Least Privilege Manager." This is a little bit tricky. You're going to do what's called a "New Executable Policy" here, and you're going to "Use combo rule." A combo rule is going to have a "Path," which is going to have the executable name in it, and the "Command-line arguments" flags here.</p>
+                                    <p>The command you're going to "Add" is a file ("Add file"). You're going to just do "*chrome.exe." We don't care where it is. As long as it's Chrome, you're good to go. Then the "Command-line Arguments" is going to be "Any argument from the list." I just want to make sure I spell it exactly right because it has to be spelled perfectly. Here we go: "–disable-extensions." You put that in there.</p>
+                                    <p>Now we're saying "Any argument from the list," "–disable-extensions" is the only argument anyway. We'll go ahead and click "Next," and we want to "Deny execution." If they try to run it in this naughty fashion, we're going to deny it, so we'll call it "Put smackdown on chrome when run in naughty fashion."</p>
+                                    <p>By the way, you can specify "Item Level Targeting" to say certain people have to adhere to these rules and other people don't have to adhere to these rules if that's what you wanted to do. I'm just going to say all of my East Sales people are going to do this.</p>
+                                    <p>At that point now just to prove a point, here's "Google Chrome." It's running. You already saw me with the Command prompt. It will still run with the extensions disabled. Let me go ahead and run GP Update ("gpupdate") here. Let's get the signal from Group Policy. We'll give this a minute to finish up. Okay, and that's it.</p>
+                                    <p>At this point now let's go ahead and just prove a point. "Google Chrome" will still run. That's cool. But if we try to go to Windows+R and try to run Chrome ("chrome –disable-extensions"), "This app has been blocked by your system administrator" which is awesome. If we were to go to a Command prompt ("cmd") or something and copy this line ("Program Files (x86)GoogleChromeApplicationchrome.exe" –disable-extensions") and try to run Chrome directly, "This program is blocked by Group Policy."</p>
+                                    <p>So just like that, using <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Least Privilege Manager it's as simple as pie to ensure that applications will run the way you intend them to and not some unusual way that you do not intend them to.</p>
+                                    <p>I hope this video helps you out. If you're looking to get started, the best first step is to join us for the webinar and after that we'll hand over the bits and you can try it yourself.<br />Thanks so much.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

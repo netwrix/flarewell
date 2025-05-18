@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Connectors|Configuration Details">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Interact with a GUI Application via Robot Framework</title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/connectors/how-tos/interact-gui-robotframework/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Interact with a GUI Application via Robot Framework</h1>
+                                    <p>This guide shows how to write a Robot Framework script which interacts with an external application.</p>
+                                    <h2 id="example--interacting-with-an-application-via-a-gui">Example: Interacting with an application via a GUI</h2>
+                                    <p>Consider an external system that is accessible through a GUI program, and that does not offer an API. In this situation, we can either interact manually with the external system , or with a Robot Framework connection.</p>
+                                    <h2 id="prerequisites">Prerequisites</h2>
+                                    <p>This guide will focus only on how to interact with a GUI application. The guide on how to write a Robot Framework script explains the basics of Robot Framework. The basic prerequisites can be found on the Robot Framework connector page. See the <a href="../write-fulfill-robotframework-script/index.html" target="_parent" title="Write a Robot Framework Script" alt="Write a Robot Framework Script" class="MCXref xref">
+              
+              Write a Robot Framework Script
+              </a> and <a href="../../references-connectors/robotframework/index.html" target="_parent" title="Robot Framework" alt="Robot Framework" class="MCXref xref">
+              
+              Robot Framework
+              </a> topics for additional information.</p>
+                                    <p>The requirements specific to the Robot Framework FlaUI library are as follows:</p>
+                                    <ul>
+                                        <li>Python 3.7 or 3.8. For Python 3.9, using <code>pip install wheel</code> in the command prompt may solve installation errors.</li>
+                                        <li>Robot Framework FlaUI library: use <code>pip install --upgrade robotframework-flaui</code> in the command prompt.</li>
+                                        <li>The application with the GUI.</li>
+                                    </ul>
+                                    <div class="notices info">
+                                        <p>Other Robot Framework libraries can interact with applications. The [desktop part of the zoomba library] can also interact with a program, but requires an appium server.</p>
+                                    </div>
+                                    <p>While not strictly required, it is highly recommended that the <a href="https://gdatasoftwareag.github.io/robotframework-flaui/keywords/1.6.6.html" target="_blank" title="Robot Framework FlaUI library documentation" alt="Robot Framework FlaUI library documentation">Robot Framework FlaUI library documentation</a> be consulted.</p>
+                                    <h2 id="inspecting-tools">Inspecting tools</h2>
+                                    <p>Most FlaUI keywords require an XPath locator. These XPaths can be found using the FlaUI inspection tool. Download the <a href="https://github.com/FlaUI/FlaUInspect/releases" target="_blank" title="FlaUI inspection tool zip archive" alt="FlaUI inspection tool zip archive">FlaUI inspection tool zip archive</a>, then extract the files to a folder. The inspection tool can be launched simply by running <code>FlaUIInspect.exe</code>.</p>
+                                    <p>This tool lets you choose the UIA (UI Automation) version. Picking UIA3 should work in most use cases.</p>
+                                    <p>The FlaUI inspection tool shows each window that is open on the computer. To find the element the script is supposed to interact with, it is possible to manually search through the windows, and through the elements. However, the easiest way is to use the Hover Mode, which is accessible in the tool bar by clicking on <strong>Mode</strong> &gt; <strong>Hover Mode (use Ctrl)</strong>. To see the XPath, click on <strong>Mode</strong> &gt; <strong>Show XPath</strong>.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/RobotFrameworkFlaUI_FlaUIShowXPath.png" alt="Show XPath" style="width: 815px;height: 640px;" />
+                                    </p>
+                                    <p>To see the XPath of an element, hover over the element, and press control. A red box should appear around the element, and the FlaUI inspection tool should show the element's information. The XPath should be at the bottom left of the FlaUI element.</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/RobotFrameworkFlaUI_FlaUIXPathExample.png" alt="Highlight Element" style="width: 817px;height: 644px;" />
+                                    </p>
+                                    <p>As an example, imagine an application showing a list of files and folders. Targeting a specific file would produce an XPath in the shape of <code>/Window/Pane[3]/Pane/Pane[2]/List/Group[1]/ListItem[1]</code>. The important parts of this path are the beginning and the end. The beginning of the XPath specifies the window. The middle part of the XPath, in most cases, is irrelevant.</p>
+                                    <p>The last part of the XPath however, <code>/Group[1]/ListItem[1]</code>, is what should be modified to find the right file. <code>Group[1]</code> means the element is in the first file group. <code>ListItem[1]</code> means the element is the first file of the group. Depending on the file explorer view mode, the XPath may end with <code>Edit[1]</code>, which means the targeted element is the name section of the file.</p>
+                                    <p>As the Window's number may change, it should be specified by name. For the Downloads folder, <code>Window[@Name='Downloads']</code> specifies the window. The file may not always be at the same position, so it should also be specified. If the file is <code>FlaUInspect.exe</code>, it can be specified with <code>ListItem[@Name='FlaUInspect.exe']</code>. The Group may also change. It is not easy to find the right group, so the best method is to remove the groups, by right clicking, then selecting <strong>Group by</strong> &gt; <strong>(None)</strong>.</p>
+                                    <h2 id="use-case-set-a-file-to-read-only">Use Case: Set a file to read-only</h2>
+                                    <p>Consider an HR system that creates a file for each employee. When an employee retires, it may be interesting to set the file to read-only, so that it is not modified by accident. It is possible to set the file to read-only by provisioning it with the Robot Framework.</p>
+                                    <h3 id="define-settings">Define settings</h3>
+                                    <p>As with every other Robot Framework script, the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Robot Framework resource needs to be imported to launch the provisioning. The FlaUI library also needs to be imported to use its keywords.</p><pre class="python" xml:space="preserve"><code>
+*** Settings ***
+Resource C:/UsercubeDemo/Runtime/UsercubeRobotFramework.resource
+Library FlaUILibrary
+</code></pre>
+                                    <h3 id="define-variables">Define variables</h3>
+                                    <p>The <code>Variables</code> section contains variables that are used in the rest of the script. As the section is at the start of the script, the variables are easy to update. In this case, the folder's name and path are important variables that may be changed.</p><pre class="python" xml:space="preserve"><code>
+*** Variables ***
+${FOLDERNAME}  RobotFrameworkIdentity
+${FOLDERPATH}  C:/UsercubeDemo/${FOLDERNAME}
+</code></pre>
+                                    <h3 id="define-custom-keywords">Define custom keywords</h3>
+                                    <p>To modify a file's properties, the script needs custom keywords that allow the desired actions to be accomplished. In this case, to navigate through the explorer program. These keywords were written with the Windows 10 File Explorer in mind.</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Keyword</p>
+                                                </th>
+                                                <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Details</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Open Explorer</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Opens and attaches the explorer program to FlaUI. A program can be attached to FlaUI by its name or by its <code>Pid</code>, which stands for process identifier. The <code>Launch Application</code> keyword returns a <code>Pid</code>, however the program may launch multiple processes. In the case of the explorer, it is almost always running, even if no explorer windows are open. The <code>Pid</code> returned may not be the correct one. Attaching by the program name seems to work in this case.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Open Folder</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Opens the folder specified in the <code>Variables</code> section. Accessing the address bar is not trivial, as it is not a text field until it is clicked. However, clicking on most elements of the address bar does not open the text field. In this keyword, the icon in the address bar is clicked, which opens the text field.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Get File Name</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Returns the file's name. This allows the computation of the file's name through a keyword instead of an expression, which can make syntax easier.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Set File To Read Only</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Sets the file corresponding to the user to read only. This keyword calls the other keywords in the right order, and is used to simplify the readability of the script.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Open File Properties</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Right clicks on a file, then opens the file's properties. The right click is on the file's image, but it could be changed to any of the file's fields. Note that changing the folder's view mode or ordering may alter the file's XPath.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Select Read Only</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Selects the read only option. This keyword simply clicks on the radio button, then clicks on the <code>Ok</code> button. If the radio button is already ticked, the file will no longer be in read only mode. The script clicks on the <code>Ok</code> button as it automatically closes the properties window, unlike the <code>Apply</code> button.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td style="text-align: center;font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Close Explorer</p>
+                                                </td>
+                                                <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Clicks on the cross to close the explorer window. It is also possible to close the program with the <code>Close Application</code> keyword, however that also closes the background explorer process, so closing only the window is better.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table><pre class="python" xml:space="preserve"><code>
+Open Explorer
+    Launch Application explorer
+    Attach Application By Name explorer
+    Open Folder
+
+Open Folder
+    Click  /Window[@Name='File Explorer']/Pane[2]/Pane[3]/ProgressBar/Pane/ToolBar/SplitButton
+    Set Text To Textbox  /Window[@Name='File Explorer']/Pane[2]/Pane[3]/ProgressBar/ComboBox/Edit[@Name='Address']  ${FOLDERPATH}
+    Press Key s'ENTER'
+
+Get File Name
+    [Arguments]  ${order}
+    [return]  ${order['Changes']['Identifier']}.txt
+
+Set File To Read Only
+    [Arguments]  ${order}
+    ${FileName}=  Get File Name  ${order}
+    Open File Properties  ${FileName}
+    Select ReadOnly  ${FileName}
+
+Open File Properties
+    [Arguments]  ${filename}
+    Right Click  /Window[@Name='${FOLDERNAME}']/Pane[3]/Pane/Pane[2]/List/ListItem[@Name='${filename}']/Image
+    Click  /Menu[@Name='Context']/MenuItem[@Name='Properties']
+
+Select Read Only
+    [Arguments]  ${filename}
+    Click  /Window[@Name='${filename} Properties']/CheckBox[@Name='Read-only']
+    Click  /Window[@Name='${filename} Properties']/Button[@Name='OK']
+
+Close Explorer
+    Click  /Window[@Name='${FOLDERNAME}']/TitleBar/Button[@Name='Close']
+</code></pre>
+                                    <h3 id="define-mandatory-keywords">Define mandatory keywords</h3>
+                                    <p>To provision the system, the script must contain the three mandatory keywords: <code>ExecuteAdd</code>, <code>ExecuteDelete</code>, and <code>ExecuteModify</code>. In this case, only ExecuteDelete is implemented. (It is considered, perhaps foolishly, that employees will not come out of retirement!)</p><pre class="python" xml:space="preserve"><code>
+*** Keywords ***
+ExecuteAdd
+    [Arguments]  ${order}
+    Log To Console ExecuteAdd is not implemented
+
+ExecuteDelete
+    [Arguments]  ${order}
+    Set File To Read Only  ${order}
+
+ExecuteModify
+    [Arguments]  ${order}
+    Log To Console ExecuteModify is not implemented
+</code></pre>
+                                    <h3 id="define-test-cases">Define test cases</h3>
+                                    <p>Although the Robot Framework is used for provisioning in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, it is most often used for testing, which is why the <code>Test Cases</code> section defines what should happen when <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;starts the Robot Framework task. The <code>Launch Provisioning</code> keyword is the one that will fetch the provisioning orders.</p><pre class="python" xml:space="preserve"><code>
+*** Test Cases ***
+Run Provisioning 
+    Open Explorer
+    Launch Provisioning
+    Close Explorer
+</code></pre>
+                                    <h3 id="read-the-full-script">Read the full script</h3>
+                                    <p>The full script is as follows:</p><pre class="python" xml:space="preserve"><code>
+*** Settings ***
+Resource C:/UsercubeDemo/Runtime/UsercubeRobotFramework.resource
+Library FlaUILibrary
+
+*** Variables ***
+${FOLDERNAME}  RobotFrameworkIdentity
+${FOLDERPATH}  C:/UsercubeDemo/${FOLDERNAME}
+
+*** Keywords ***
+ExecuteAdd
+    [Arguments]  ${order}
+    Log To Console ExecuteAdd is not implemented
+
+ExecuteDelete
+    [Arguments]  ${order}
+    Set File To Read Only  ${order}
+
+ExecuteModify
+    [Arguments]  ${order}
+    Log To Console ExecuteModify is not implemented
+
+Open Explorer
+    Launch Application explorer
+    Attach Application By Name explorer
+    Open Folder
+
+Open Folder
+    Click  /Window[@Name='File Explorer']/Pane[2]/Pane[3]/ProgressBar/Pane/ToolBar/SplitButton
+    Set Text To Textbox  /Window[@Name='File Explorer']/Pane[2]/Pane[3]/ProgressBar/ComboBox/Edit[@Name='Address']  ${FOLDERPATH}
+    Press Key s'ENTER'
+
+Get File Name
+    [Arguments]  ${order}
+    [return]  ${order['Changes']['Identifier']}.txt
+
+Set File To Read Only
+    [Arguments]  ${order}
+    ${FileName}=  Get File Name  ${order}
+    Open File Properties  ${FileName}
+    Select ReadOnly  ${FileName}
+
+Open File Properties
+    [Arguments]  ${filename}
+    Right Click  /Window[@Name='${FOLDERNAME}']/Pane[3]/Pane/Pane[2]/List/ListItem[@Name='${filename}']/Image
+    Click  /Menu[@Name='Context']/MenuItem[@Name='Properties']
+
+Select Read Only
+    [Arguments]  ${filename}
+    Click  /Window[@Name='${filename} Properties']/CheckBox[@Name='Read-only']
+    Click  /Window[@Name='${filename} Properties']/Button[@Name='OK']
+
+Close Explorer
+    Click  /Window[@Name='${FOLDERNAME}']/TitleBar/Button[@Name='Close']
+
+*** Test Cases ***
+Run Provisioning 
+    Open Explorer
+    Launch Provisioning
+    Close Explorer
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Creating Two Mass Updates</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Creating Two Mass Updates</h1>
+                                        <div class="toc-macro"/><h2 id="first_mass_update">First Mass Update</h2>
+                                        <p>The first mass update flags all the bundle components to be cleaned up and set the status on the Customization to <b>To Be Cleaned Up</b>. It  identifies everything needing removal.</p>
+                                        <p>To create the first mass update:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Lists</b> &gt; <b>Mass Update</b> &gt; <b>Mass Updates</b>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Open <b>General Updates</b> &gt; <b>Custom Records</b> &gt; <b>Customization</b>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Check <b>Use Expressions</b> on the <b>Criteria </b>tab.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/bundle_removal_use_expressions.png" title="Select Use Expressions"/>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Add the following filters on the <b>Criteria</b> tab:</p>
+                                            </li>
+                                            <table count-columns="6" class="TableStyle-Standard table-with-header" cellspacing="0">
+                                                <colgroup><col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                </colgroup><thead>
+                                                    <tr class="TableStyle-Standard-Head-Header1">
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1"> </th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Parens</th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Filter</th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Description</th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Parens</th>
+                                                        <th class="TableStyle-Standard-HeadD-Regular-Header1">And/Or</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="body-for-table-with-header">
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 1</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Inactive</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is false</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>and</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 2</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>  (</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Bundle</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Bundle ID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>or</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>Filter 3</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>Bundle</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>Bundle ID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>  )</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </ol>
+                                        <p class="note">You can remove more than one bundle at a time.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/mass_update_filters.png" title="Mass Update Filters"/>
+                                        </p>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p>Open the  <b>Mass Update Fields </b>tab.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Scroll down and check the box for <b>Clean Up Status</b>.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Enter the <b>Clean Up Status</b>: <b>To Be Cleaned Up</b>.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/clean_up_status.png" title="Set Clean Up Status"/>
+                                                </p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Click <b>Save</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="second_mass_update">Second Mass Update</h2>
+                                        <p>The second mass update flags all the objects related to the bundle and sets a status on the Customization to <b>To Be Investigated</b>. It identifies everything needing investigation.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Lists</b> &gt; <b>Mass Update</b> &gt; <b>Mass Updates</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Open <b>General Updates</b> &gt; <b>Custom Records</b> &gt; <b>Customization</b></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Check <b>Use Expressions</b> on the <b>Criteria </b>tab.<br/></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Add the following filters on the Criteria tab:</p>
+                                            </li>
+                                            <table count-columns="6" class="TableStyle-Standard table-with-header" cellspacing="0">
+                                                <colgroup><col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                <col class="TableStyle-Standard-Column-Regular"/>
+                                                </colgroup><thead>
+                                                    <tr class="TableStyle-Standard-Head-Header1">
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1"> </th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Parens</th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Filter</th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Description</th>
+                                                        <th class="TableStyle-Standard-HeadE-Regular-Header1">Parens</th>
+                                                        <th class="TableStyle-Standard-HeadD-Regular-Header1">And/Or</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="body-for-table-with-header">
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 1</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Inactive</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is false</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>and</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 2</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Clean-Up Status</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is Not To Be Cleaned Up</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>and</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 3</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>  (</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Data Sources: Clean-Up Status</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is To Be Cleaned Up</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>or</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 4</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Scripts: Clean-Up Status</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is To Be Cleaned Up</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>or</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 5</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Forms: Clean-Up Status</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is To Be Cleaned Up</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>or</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 6</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Workflows: Clean-Up Status</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is To Be Cleaned Up</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>or</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Filter 7</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>List: Clean-Up Status</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>Is To Be Cleaned Up</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>or</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>Filter 8</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>Searches/Mass Updates: <br/>Clean-Up Status</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>Is To Be Cleaned Up</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                            <p>  )</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                            <p> </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="img-inside-p">
+                                                <img src="../Resources/Images/mass_update_filters2.png" title="Adding filters"/>
+                                            </p>
+                                            <li value="5">
+                                                <p>Open the<b> Mass Update Fields</b> tab.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Scroll down and check the box for <b>Clean Up Status</b></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Enter the <b>Clean Up Status</b>: <b>Under Investigation</b></p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Click <b>Save</b></p>
+                                            </li>
+                                        </ol>
+                                        <p><b>Next Step: </b><a href="creating_custom_list_and_fields.htm" title="Open Creating a Custom List and Fields topic." alt="Open Creating a Custom List and Fields topic.">Creating a Custom List and Fields</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

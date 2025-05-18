@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Network Configuration|Server Configuration">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>           
+            End-User Authentication</title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/network-configuration/server-configuration/end-users-authentication/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>           
+            End-User Authentication</h1>
+                                    <h2 id="overview">Overview</h2>
+                                    <p>Before end-users can connect to <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;through the UI, they will have to authenticate.</p>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;supports seven authentication methods organized into two categories: Internal methods and External methods.</p>
+                                    <p>It is highly recommended that you use an External method. Internal methods are mostly used for debug, test and development purposes.</p>
+                                    <p class="Bold_Subheading">Internal methods</p>
+                                    <p>The Internal methods use <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Server's internal authentication server. They rely on one of these Identity Server User Stores:</p>
+                                    <ul>
+                                        <li>Test User Store, used in development environments.</li>
+                                        <li>Active Directory User Store, using an Active Directory to authenticate.</li>
+                                    </ul>
+                                    <p class="Bold_Subheading">External methods</p>
+                                    <p>External methods use external authentication providers.</p>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;supports five types of external authentication providers of which four are based on different flavors of the OAuth 2.0 protocol, and  the last one is integrated with Windows.</p>
+                                    <p>The types of authentication providers supported by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;are:</p>
+                                    <ul>
+                                        <li><a href="https://openid.net/connect/" style="text-decoration: none;">OpenIdConnect</a>
+                                        </li>
+                                        <li><a href="http://docs.oasis-open.org/wsfed/federation/v1.2/ws-federation.html" style="text-decoration: none;">WS-Federation</a>
+                                        </li>
+                                        <li><a href="https://tools.ietf.org/html/rfc6749" style="text-decoration: none;">OAuth</a>
+                                        </li>
+                                        <li><a href="http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html" style="text-decoration: none;">SAML2</a>
+                                        </li>
+                                        <li><a href="https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/integrated-windows-authentication" style="text-decoration: none;">Integrated Windows Authentication (IWA)</a>
+                                        </li>
+                                    </ul>
+                                    <p class="Bold_Subheading">Using more than one provider</p>
+                                    <p>For each authentication method, one or several authentication providers can be set up. If several authentication providers are set up, end-users will be prompted to choose their preferred method of authentication.</p>
+                                    <p>Internal method &amp; test mode form:</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/authent_1.png" />
+                                    </p>
+                                    <p>External method prompt:</p>
+                                    <p style="text-align: center;">
+                                        <img src="../../../../../Resources/Images/authent_2.png" />
+                                    </p>
+                                    <h2 id="identity-server-rsa-key-pair">Identity Server RSA Key Pair</h2>
+                                    <p>A public key certificate and a private key are used to handle encrypted communication with external authentication providers. This is used, for example, by the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Server to retrieve the provider's signing key. It is mandatory to validate JWT tokens in an OAuth-flavor scenario.</p>
+                                    <p>This information can be set one of two ways:</p>
+                                    <ul>
+                                        <li>As a <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive (also called <code>.pfx</code> file) stored in the Agent's host file system. The archive contains both the public key certificate and the private key.</li>
+                                        <li>As a certificate from a Windows' <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/working-with-certificates#certificate-stores" style="text-decoration: none;">certificate store</a> identified by SubjectDistinguishedName or by Thumbprint. The Windows certificate also contains both the public key certificate and the private key.</li>
+                                    </ul>
+                                    <h3 id="pfx-file">PFX file</h3>
+                                    <p>The archive is set using the following attributes on the appsettings &gt; IdentityServer section:</p>
+                                    <ul>
+                                        <li>X509KeyFilePath is the <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive path on the Agent's host file system.</li>
+                                        <li>X509KeyFilePassword (optional) is the <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive password.</li>
+                                    </ul>
+                                    <p class="Bold_Subheading">Example</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>&#160;&#160;"<span style="color: #63a35c; ">&lt;IdentityServer&gt;</span>": {<br />&#160;&#160;&#160;&#160;"X509KeyFilePath":C:/UsercubeAgentContoso/contoso.pfx",<br />&#160;&#160;&#160;&#160;"X509KeyFilePassword": "oarjr6r9f00"<br />&#160;&#160;}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <h3 id="certificate">Certificate</h3>
+                                    <p>The certificate from a Windows certificate store is set up using these attributes on the appsettings &gt; IdentityServer section:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1" style="font-size: 11pt;">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1" style="font-size: 11pt;">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>X509SubjectDistinguishedName<br /><span class="optionalAttribute">optional</span>  (if Thumbprint is non-empty)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets the store certificate's SubjectDistinguishedName.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>X509Thumbprint<br /><span class="optionalAttribute">optional</span> (if DistinguishedName is non-empty)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Sets the store certificate's Thumbprint.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>X509StoreLocation<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets the Relevant Windows certificate store's location: <code>LocalMachine</code> or <code>CurrentUser</code>.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>X509StoreName<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Sets the relevant Windows certificate store's name.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Bold_Subheading">Example</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;IdentityServer&gt;</span>": {<br />&#160;&#160;&#160;&#160;"X509SubjectDistinguishedName":"<span style="color: #63a35c; ">&lt;UsercubeContoso&gt;</span>",<br />&#160;&#160;&#160;&#160;"X509StoreLocation": "<span style="color: #63a35c; ">&lt;LocalMachine&gt;</span>",<br />&#160;&#160;&#160;&#160;"X509StoreName": "<span style="color: #63a35c; ">&lt;AuthRoot&gt;</span>"<br />}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Server won't start if the <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive set up during this step is identical to the one provided with the SDK. Users must provide their own certificate. Self-signed certificates are accepted as valid. See the<a href="../../../../installation-guide/production-ready/server/index.html" target="_parent" title="Install the Server" alt="Install the Server" class="MCXref xref">Install the Server</a>topic for additional information.             </p>
+                                    <h2 id="configuration-section-description">Configuration Section Description</h2>
+                                    <p>Authentication is set up using the following two sections of the Server's appsettings set:</p>
+                                    <ul>
+                                        <li>IdentityServer</li>
+                                        <li>Authentication</li>
+                                    </ul>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"IdentityServer":{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"Authentication":{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;}<br />}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The authentication section mostly fits the following pattern:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;Authentication&gt;</span>":{<br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;Authentication Protocol 1&gt;</span>:{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;Authentication Provider 1&gt;</span>:{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;....,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;Authentication Provider n&gt;</span>:{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;Authentication Protocol 2&gt;</span>:{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;Authentication Provider 1&gt;</span>:{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;....,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;Authentication Provider n&gt;</span>:{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;}<br />}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <p>Several authentication providers can be defined (here above, &lt;Authentication Provider 1&gt; to &lt;Authentication Provider n&gt;), using one or several authentication protocols (here above, &lt;Authentication Protocol 1&gt; and &lt;Authentication Protocol 2&gt;).</p>
+                                    <p>Most of the authentication providers need the user to choose an AuthenticationScheme. It is a string that will be used to uniquely identify this authentication method in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. Its goal is to enable <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s testers to identify which authentication method is used in the logs or in the code, with a mnemonic name. Any name can be used as long as all AuthenticationSchemes are different.</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>This guide doesn't cover how to set up authorizations within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. Authorization for an end-user to access <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;resources relies on assigning roles to profiles. Identity credentials used for authentication must be linked to these profiles in the applicative configuration. See the <a href="../../settings/index.html" target="_parent" title="Various XML Settings" alt="Various XML Settings" class="MCXref xref">
+              
+              Various XML Settings
+              </a>topic for additional information. </p>
+                                    <p>Authentication-related settings are done through the following sections of the appsettings set:</p>
+                                    <ul>
+                                        <li>IdentityServer</li>
+                                        <li>Authentication</li>
+                                    </ul>
+                                    <p>See the<a href="../../../architecture/index.html" target="_parent" title="Architecture" alt="Architecture" class="MCXref xref">
+              
+              Architecture
+              </a>topic for additional information.</p>
+                                    <h3 id="identityserver">Identity Server</h3>
+                                    <p>This is the general-purpose authentication settings section.</p>
+                                    <p>The Identity Server section allows the following attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1" style="font-size: 11pt;">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1" style="font-size: 11pt;">Type</th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1" style="font-size: 11pt;">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Enabled<br />(default value: true)<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Enables or disables the Identity Server.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>AllowWindowsAuthentication<br />(default value: false)<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Allows Windows authentication. Will work only when the Active Directory User Store is enabled.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>ShowPII<br />(default value: false)<br /></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets whether or not PII is shown in logs. For security reasons, this setting should be used sparingly.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>ValidationKeys<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String Array</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Allows the definition of public certificate paths for token validation.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>IssuerURI<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets the unique name of this server instance.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>PostLogoutRedirectUri<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Sets a specific URI to which the user will be redirected after a successful logout.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>PublicOrigin<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets the origin name for this <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Server instance. Useful if end-users authenticate through a proxy server.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>X509File<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Is the <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive path on the Agent's host file system.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>X509KeyFilePassword<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Is the <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive password.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>X509SubjectDistinguishedName<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Sets the store certificate's SubjectDistinguishedName.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>X509Thumbprint<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets the store certificate's Thumbprint.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>X509StoreLocation<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Sets the relevant Windows certificate store's location.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>X509StoreName<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets the relevant Windows certificate store's name.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="authentication">Authentication</h3>
+                                    <p>This section contains specific settings for each configuration method.</p>
+                                    <p>At the root, the following properties can be used:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Enabled<br /><span class="optionalAttribute">default value: true<br /></span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Enables or disables authentication.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>RequireHttpsMetadata<br /><span class="optionalAttribute">default value: true<br /></span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Specifies whether HTTPS is required for the discovery endpoint.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>AllowLocalLogin<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>If <code>true</code>, a Login Form replaces Windows Authentication.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>CookieLifeTime<br /><span class="optionalAttribute">default value: 8<br /></span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">Int</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Maximum duration (in hours) after which the session expires automatically.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>LifeTimeSliding<br /><span class="optionalAttribute">default value: 10<br /></span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">Int</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Duration (in minutes) after which the session expires automatically, if no action is taken during this time.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Then, a subsection for every authentication method is used. Supported subsections are:</p>
+                                    <ul>
+                                        <li>OpenId</li>
+                                        <li>OAuth</li>
+                                        <li>WsFederation</li>
+                                        <li>SAML2</li>
+                                        <li>ActiveDirectoryUserStore</li>
+                                        <li>TestUserStore</li>
+                                    </ul>
+                                    <h2 id="set-up-integrated-windows-authentication-iwa">Set Up Integrated Windows Authentication (IWA)</h2>
+                                    <p>This authentication method can be used to authenticate users within an Active Directory domain using their respective domain account.</p>
+                                    <p>This authentication is silent: when an end-user tries to access <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, the browser retrieves identity credentials from the Windows session where the user is logged in and sends them to the domain controller for authentication. The domain controller confirms the user's identity and validates it for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. The end-user doesn't have to input any credentials.</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If Integrated Windows Authentication is used, internal methods have to be disabled with the <code>"AllowLocalLogin":false</code> setting.</p>
+                                    <h3 id="requirements">Requirements</h3>
+                                    <p>Setting up this authentication method requires the following:</p>
+                                    <ul>
+                                        <li><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> runs as an <a href="https://www.iis.net/" style="font-style: normal; text-decoration: none;">Internet Information Services (IIS)</a> website.</li>
+                                        <li>Windows Authentication is <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016" style="text-decoration: none;">enabled on Windows server</a>.</li>
+                                        <li>Windows Authentication is <a href="https://docs.microsoft.com/en-us/iis/configuration/system.webserver/security/authentication/windowsauthentication/#how-to-enable-windows-authentication-for-a-web-site-web-application-or-web-service" style="text-decoration: none;" target="_blank">enabled for the Usercube IIS </a><a href="https://docs.microsoft.com/en-us/iis/configuration/system.webserver/security/authentication/windowsauthentication/#how-to-enable-windows-authentication-for-a-web-site-web-application-or-web-service" style="text-decoration: none;">enabled for the Usercube IIS website</a> website.</li>
+                                    </ul>
+                                    <h3 id="configuration">Configuration</h3>
+                                    <p>Integrated Windows Authentication is configured using the following sections:</p>
+                                    <ol>
+                                        <li value="1">Set the <strong>IdentityServer</strong> &gt; <strong>AllowWindowsAuthentication</strong> attribute to <code>true</code>.</li>
+                                        <li value="2">Set the <strong>Authentication</strong> &gt; <strong>AllowLocalLogin</strong> attribute to <code>false</code>.</li>
+                                    </ol>
+                                    <blockquote>
+                                        <p>The following example sets up Windows Authentication. Windows Server and IIS requirements have been checked.</p>
+                                        <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />...<br />"<span style="color: #63a35c; ">&lt;IdentityServer&gt;</span>":{<br />&#160;&#160;&#160;&#160;"AllowWindowsAuthentication":"<span style="color: #63a35c; ">&lt;true&gt;</span>",<br />},<br />"<span style="color: #63a35c; ">&lt;Authentication&gt;</span>":{<br />&#160;&#160;&#160;&#160;"AllowLocalLogin":"<span style="color: #63a35c; ">&lt;false&gt;</span>",<br />}<br />...<br /></code></pre>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                    <h2 id="set-up-an-open-id-connect-provider">Set Up an OpenID Connect Provider</h2>
+                                    <p>One or several OpenID Connect authentication providers can be set up under the Authentication &gt; OpenId section.</p>
+                                    <p class="Bold_Subheading">Multiple providers</p>
+                                    <p>One or several OpenID Connect authentication providers can be set up.</p>
+                                    <p class="Bold_Subheading">Registration process</p>
+                                    <p style="text-decoration: none;">Using an OpenID Connect authentication requires the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Server to be registered to the provider. A ClientID and a ClientSecret are issued as a result of the registration process. They both allow <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to identify itself to the authentication provider. <a href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/configure-openid-settings"><a href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/configure-openid-settings" style="text-decoration: none;">See an example</a></a> of how to register <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to an Microsoft Entra ID (formerly Microsoft Azure AD) used as OpenID Connect provider.</p>
+                                    <p class="Bold_Subheading">Callback URL</p>
+                                    <p>The target OpenID Connect provider needs to be aware of the URI where to send the authentication token if the authentication succeeds. Depending on the provider, it is called a callback URL, a callback path, an authorization callback URL, or a redirect URI.</p>
+                                    <p>During the registration process, the provider will ask for the URL.</p>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s callback URL for OpenID Connect is <code>&lt;</code>usercube-server-address&gt;/signin-oidc where &lt;<code>usercube-server-address</code>&gt; is the address of your <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>Server such as https://usercube.contoso.com.</p>
+                                    <p class="Bold_Subheading">Authority</p>
+                                    <p>An OpenID Connect provider is identified by its Authority, according to the <a href="https://openid.net/connect/" style="text-decoration: none;">OpenID </a>Connect specifications.</p>
+                                    <p class="Bold_Subheading">NameClaimType</p>
+                                    <p>To authorize an end-user, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Server retrieves a specific claim (a key-value pair, transmitted through the OIDC-issued JWT token) returned by the provider and looks for a resource that matches this claim's value. The comparison is carried out according to the resource and property set as the end-user's identity in the applicative configuration. See the <a href="../../../toolkit/xml-configuration/metadata/settings/selectuserbyidentityqueryhandlersetting/index.html" target="_parent" title="Select User By Identity Query Handler Setting" alt="Select User By Identity Query Handler Setting" class="MCXref xref">
+              
+              Select User by Identity Query Handler Setting
+              </a></p>
+                                    <p>The name of the claim that is retrieved for this purpose defaults to <code>sub</code> which is one of the standard <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims" style="text-decoration: none;">Claim names for the OpenID Connect protocol</a>. However, some providers might not fill the <code>sub</code> value with meaningful data, or use non-standard Claim names.</p>
+                                    <p>For this reason, the name of the claim that is retrieved by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;for authorization purposes can be set up according to the provider's specifics.</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Users should be able to get a list of the claim names used by their authentication providers from their providers' portal website, documentation or administrators.</p>
+                                    <p>For example, the following claim provides no meaningful <code>sub</code> value.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"name": "<span style="color: #63a35c; ">&lt;John Doe&gt;</span>",<br />&#160;&#160;&#160;&#160;"preferred_username": "<span style="color: #63a35c; ">&lt;john.doe@contoso.com&gt;</span>",<br />&#160;&#160;&#160;&#160;"sub": "<span style="color: #63a35c; ">&lt;11v7ert42azerttyZD6d4&gt;</span>"<br />}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <p>Using the following applicative configuration setting that sets <code>Ad_Entry:userPrincipalName</code> as the value to be matched against a claim in order to identify a user's profile, the <code>preferred_username</code> NameClaimType should be used.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>&#160;<span style="color: #63a35c; ">&lt;SelectUserByIdentityQueryHandlerSetting</span>&#160;<br /><span style="color: #63a35c; ">&#160;<span style="color: #795da3; ">ResourceIdentityProperty</span><span style="color: #df5000; ">="AD_Entry:userPrincipalName&gt;"</span> ... /&gt;</span><br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <h3 id="configuration-1">Configuration</h3>
+                                    <p>First, the OpenID Connect method must be enabled.</p>
+                                    <p>Under the OpenId section:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Enabled<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Enables or disables the OpenId connection.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>For each OpenID Connect provider to integrate, a new section is added under the OpenID subsection. Any section name can be used. This section name is only used as a means for the user to find the authentication method in the configuration files.</p>
+                                    <p>Under the new subsection, the following parameters are used to configure the authentication method:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1" style="font-size: 11pt;">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1" style="font-size: 11pt;">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1" style="font-size: 11pt;">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>AuthenticationScheme<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Is the unique identifier of this authentication method within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. Any string value can be used, unique among all authentication methods.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>DisplayName<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Is the provider display name. Chosen by the user, it is used in the UI to identify the authentication method.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>ClientId<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Is the Client ID issued during the registration of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to the chosen OpenID Connect provider.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>ClientSecret<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Is the Client Secret issued during the registration of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to the chosen OpenID Connect provider.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Authority<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>This URL identifies the OpenID Connect provider for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;according to the <a href="https://openid.net/connect/" style="text-decoration: none;">OpenID Connect specifications</a>. <a name="NameClaimType"></a>It can be retrieved from the target OpenID Connect provider documentation. For example, <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc" style="text-decoration: none;">Microsoft's documentation </a>indicates the Microsoft Identity Platform OpenID Connect<a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc" style="text-decoration: underline;"> </a>authority.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>NameClaimType<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Sets the type of the claim that will be retrieved by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to identify the end-user. The retrieved claim will be compared against the resource and property set as the end-user's identity in the applicative configuration. See the <a href="../../../toolkit/xml-configuration/metadata/settings/selectuserbyidentityqueryhandlersetting/index.html" target="_parent" title="Select User By Identity Query Handler Setting" alt="Select User By Identity Query Handler Setting" class="MCXref xref">
+              
+              Select User by Identity Query Handler Setting
+              </a>topic for additional information.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Scopes<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Sets the list of the requested <a href="https://auth0.com/docs/scopes/openid-connect-scopes" style="text-decoration: none;">scopes</a>. By default, the requested scopes are: openid, profile and email.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>SaveTokens<br /><span class="optionalAttribute">default value: false<br /></span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Only for Okta providers. Set to `true if authentication uses an Okta provider. See the <a href="../../how-tos/okta/index.html" target="_parent" title="Configure Okta for Usercube Authentication" alt="Configure Okta for Usercube Authentication" class="MCXref xref">Configure Okta</a>topic for additional information.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>MetadataAddress<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>URL address of a copy of the metadata, used when the authority metadata cannot be accessed from the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;server, for example because of a firewall.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>RequireHttpsMetadata<br /><span class="optionalAttribute">default value: true<br /></span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>By default the authority metadata must use HTTPS. Set to `false to use a simple HTTP metadata, in case a local copy of the metadata is used or for test environment.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>ResponseMode<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;">
+                                                    <p>Response mode for OpenIdConnect.</p>
+                                                    <ul>
+                                                        <li>Query</li>
+                                                        <li>FormPost</li>
+                                                        <li>Fragment</li>
+                                                    </ul>
+                                                    <p><a href="https://openid.net/specs/openid-connect-core-1_0.html" style="text-decoration: none;">See OpenId documentation</a>.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>ResponseType<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-size: 11pt;">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2" style="font-size: 11pt;">
+                                                    <p>Response type for OpenIdConnect.</p>
+                                                    <ul>
+                                                        <li>Code</li>
+                                                        <li>CodeIdToken</li>
+                                                        <li>CodeIdTokenToken</li>
+                                                        <li>CodeToken</li>
+                                                        <li>IdToken</li>
+                                                        <li>IdTokenToken</li>
+                                                        <li>None</li>
+                                                        <li>Token</li>
+                                                    </ul>
+                                                    <p>See examples in the <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationExamples" style="text-decoration: none;">OpenId documentation.</a></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Bold_Subheading">Example</p>
+                                    <p style="text-decoration: none;">This example configures an OpenId Connect authority located at <a href="https://login.microsoftonline.com/bbd35166-7c13-49f3-8041-9551f2847b69" style="text-decoration: none;">https://login.microsoftonline.com/bbd35166-7c13-49f3-8041-9551f2847b69</a>.</p>
+                                    <p>This authentication provider is identified within the appsettings.json OpenId Connect providers list as OpenId1.</p>
+                                    <p>Within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, it will be identified with the authentication scheme AzureOIDC.</p>
+                                    <p>It will be displayed as Connection Microsoft Entra ID with OIDC protocol in the UI external login prompt.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"Authentication":<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"OpenId": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": "<span style="color: #63a35c; ">&lt;True&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"OpenId1": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"AuthenticationScheme": "<span style="color: #63a35c; ">&lt;AzureOIDC&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"DisplayName": "<span style="color: #63a35c; ">&lt;Connection Microsoft Entra ID with OIDC protocol&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ClientId": "<span style="color: #63a35c; ">&lt;6779ef20e75817b79602&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ClientSecret": "<span style="color: #63a35c; ">&lt;5ef0234c039c725e21ffc727a60c44895a39dce1c81ae36dc5d002feae82c1c0&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Authority": "<span style="color: #63a35c; ">&lt;https://login.microsoftonline.com/bbd35166-7c13-49f3-8041-9551f2847b69&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"NameClaimType": "<span style="color: #63a35c; ">&lt;preferred_username&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Scopes": ["<span style="color: #63a35c; ">&lt;openid&gt;</span>", "<span style="color: #63a35c; ">&lt;profile&gt;</span>"]<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <h2 id="set-up-an-oauth-provider">Set Up an OAuth Provider</h2>
+                                    <p>One or several OAuth authentication providers can be set up under the authentication &gt; OAuth section.</p>
+                                    <p class="Bold_Subheading">Multiple providers</p>
+                                    <p>One or several OAuth authentication providers can be set up.</p>
+                                    <p class="Bold_Subheading">Registration process</p>
+                                    <p>Using an OAuth authentication requires <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Server to be registered to the provider. A ClientID and a ClientSecret are issued as a result of the registration process. They both allow <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to identify itself to the authentication provider.</p>
+                                    <h4 id="callback-url-1">Callback URL</h4>
+                                    <p>The target OAuth provider needs to be aware of the URI where to send the authentication token if the authentication succeeds. Depending on the provider, it is called a callback URL, a callback path, an authorization callback URL, or a redirect URI.</p>
+                                    <p>During the registration process, the provider will ask for the URL.</p>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s callback URL for OAuth is &lt;usercube-server-address&gt;/&lt;callback-path&gt; where &lt;usercube-server-address&gt; is the address of your <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Server such as https://usercube.contoso.com and &lt;callback-path&gt; can be set up to any value chosen by the user using the CallbackPath configuration attribute. The only constraint is to make sure the CallbackPath value in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s configuration is the same as in the OAuth provider registration screen for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                    <h3 id="configuration-2">Configuration</h3>
+                                    <p>First, the OAuth method must be enabled under the authentication &gt; OAuth section.</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 45px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Enabled<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Enables or disables the OAuth connection.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Then, users must create a new section per OAuth provider. Users are free to choose any section name. Its sole purpose is for users to find the authentication method in the configuration files.</p>
+                                    <p>Each section is configured with the following settings:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>AuthenticationScheme<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is the unique identifier of this authentication method within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. Any string value can be used, unique among all authentication methods.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>DisplayName<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Is the provider display name. Chosen by the user, it is used in the UI to identify the authentication method.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>ClientId<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is the Client ID issued to <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> during the registration process.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>ClientSecret<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Is the Client Secret issued to <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> during the registration process.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>ClaimsIssuer<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is a unique identifier that will mark claims issued by this OAuth provider for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. This mark is used for debugging, monitoring, or security purposes in situations where multiple OAuth providers are involved. It's still useful if only one provider is used. Any string value can be used. Convention dictates that it is a URL shaped value such as https://accounts.google.com.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>AuthorizationEndpoint<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Is the provider's Authorization Endpoint URI. This is where the end-user's browser is redirected to start the authentication process. Usually ends with /auth or /authorize. This information must be retrieved from the provider's portal.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>TokenEndpoint<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is the provider's Token Endpoint URI. This is where the client sends token requests, using an authorization code obtained during the authentication process. This information must be retrieved from the provider's portal.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>CallbackPath<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Sets the callback path where the client is redirected after a successful authentication. Any string value can be used as long as it is reported to the provider during the registration process.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>SaveTokens<br /><span class="optionalAttribute">default value: false<br /></span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Only for Okta providers. Set to `true if authentication uses an Okta provider. See the <a href="../../how-tos/okta/index.html" target="_parent" title="Configure Okta for Usercube Authentication" alt="Configure Okta for Usercube Authentication" class="MCXref xref">Configure Okta</a>topic for additional information.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Scope<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Sets the list of the requested <a href="https://auth0.com/docs/scopes/openid-connect-scopes" style="text-decoration: none;">scopes</a>.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Bold_Subheading">Example</p>
+                                    <p>The following example configures an OAuth-based authentication provider identified as OAuthContoso_Washington in the configuration file.</p>
+                                    <p>It will be displayed as Contoso OAuth Washington in the UI external login prompt, and uniquely identified within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> by the authentication scheme contoso_0987.</p>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Server marks received claims using <a href="https://accounts.google.com" style="font-style: normal; text-decoration: none;">https://accounts.google.com</a> as a claim issuer identifier.</p>
+                                    <p>/signin-oauth has been chosen as CallbackPath and set up as such in the OAuth provider's portal during <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s registration.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"Authentication":<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"OAuth": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": "<span style="color: #63a35c; ">&lt;True&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"OAuthContoso_Washington": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"AuthenticationScheme": "<span style="color: #63a35c; ">&lt;AzureOAuth&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"DisplayName": "<span style="color: #63a35c; ">&lt;Connection Microsoft Entra ID with OAuth protocol&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ClientId": "<span style="color: #63a35c; ">&lt;6779ef20e75817b79602&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ClientSecret": "<span style="color: #63a35c; ">&lt;5ef0234c039c725e21ffc727a60c44895a39dce1c81ae36dc5d002feae82c1c0&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ClaimsIssuer": "<span style="color: #63a35c; ">&lt;https://accounts.google.com&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"AuthorizationEndpoint": "<span style="color: #63a35c; ">&lt;https://accounts.google.com/o/oauth2/v2/auth&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"TokenEndpoint": "<span style="color: #63a35c; ">&lt;https://oauth2.googleapis.com/token&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CallbackPath": "<span style="color: #63a35c; ">&lt;/signin-oauth&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Scopes": ["<span style="color: #63a35c; ">&lt;openid&gt;</span>", "<span style="color: #63a35c; ">&lt;profile&gt;</span>"]<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <h2 id="set-up-a-ws-federation-provider">Set Up a WS-Federation Provider</h2>
+                                    <p>One or several WS-Federation authentication providers can be set up under the authentication &gt; WsFederation subsection. Examples of WS-Federation providers include  Active Directory Federation Services (ADFS<span style="font-style: normal;">)</span> and Microsoft Entra ID (AAD).</p>
+                                    <p class="Bold_Subheading">Multiple providers</p>
+                                    <p>One or several  WS-Federation authentication providers can be set up.</p>
+                                    <p class="Bold_Subheading">Registration process</p>
+                                    <p>Using a WS-Federation authentication requires <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>Server to be registered to the provider. A Wtrealm value is set up during the registration process. The value can be generated by the provider, or set manually as a URL-shaped string value. This allows <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to identify itself to the authentication provider. Here are two examples of registration process:</p>
+                                    <ul>
+                                        <li>with an <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#active-directory-federation-services" style="text-decoration: none;">Active Directory Federation Services</a> provider</li>
+                                        <li>with an <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#azure-active-directory" style="text-decoration: none;">Microsoft Entra ID</a> provider</li>
+                                    </ul>
+                                    <p class="Bold_Subheading">Callback URL</p>
+                                    <p>The target WS-Federation provider needs to be aware of the URI where to send the authentication token if the authentication succeeds. Depending on the provider, it is called a callback URL, a callback path, an authorization callback URL, or a redirect URI.</p>
+                                    <p>During the registration process, the provider will ask for the URL.</p>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s callback URL for WS-Federation is &lt;<span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>-server-address&gt;/signin-wsfed where &lt;usercube-server-address&gt; is the address of your <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Server such as https://usercube.contoso.com.</p>
+                                    <p class="Bold_Subheading">Encryption algorithm</p>
+                                    <p>The nature of the encryption algorithm used for exchanging the sign-in key with the provider is automatically negotiated between <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Server and the authentication server. The most secure algorithm that both systems support is chosen.</p>
+                                    <h3 id="configuration-3">Configuration</h3>
+                                    <p>First, the WS-Federation must be enabled under the authentication &gt; WsFederation section:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 144px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 144px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Enabled<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Enables or disables the <strong style="font-weight: normal;">WS-Federation</strong> authentication.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Then, users must create a new subsection per <strong style="font-weight: normal;">WS-Federation</strong> provider. They are free to choose any section name. Its sole purpose is for users to find the authentication method in the configuration files.</p>
+                                    <p>Each section is configured with the following settings:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>MetadataAddress<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Identifies, for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, the target <strong style="font-weight: normal;">WS-Federation</strong> server's metadata. This information is to be retrieved from the app registration process or directly from the <strong style="font-weight: normal;">WS-Federation</strong> provider. The value commonly ends with the path <code>/</code>FederationMetadata/2007-06/FederationMetadata.xml.</p>
+                                                    <ul>
+                                                        <li>For <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#active-directory-federation-services" style="text-decoration: none;">Active Directory Federation Services</a>, it is https://&lt;ADFS_SERVER&gt;/federationmetadata/2007-06/federationmetadata.xml with &lt;ADFS_SERVER&gt; the name of your ADFS server such portal.contoso.com.</li>
+                                                        <li>For <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#azure-active-directory" style="text-decoration: none;">Microsoft Entra ID</a>, it is also known as <strong style="font-weight: normal;">Federation Metadata Document</strong>. It is available in <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s registered app <em style="font-style: normal;">blade</em>, in the <em style="font-style: normal;">endpoint</em> panel, <em style="font-style: normal;">Federation Metadata Document</em> value. It looks like https://bbd35166-7c13-49f3-8041-9551f2847b69/FederationMetadata/2007-06/FederationMetadata.xml with bbd35166-7c13-49f3-8041-9551f2847b69 Microsoft Entra ID tenant id.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Wtrealm<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Identifies the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;app within the <strong style="font-weight: normal;">WS-Federation</strong> provider. This information is available directly at the authentication provider's portal. It is chosen during the registration process.</p>
+                                                    <ul>
+                                                        <li>For <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#active-directory-federation-services" style="text-decoration: none;">Active Directory Federation Services</a>, it is the value set as the relying party WS-Federation Passive protocol URL parameter during the <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#active-directory-federation-services" style="text-decoration: none;">registration</a> of <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> to the ADFS server. It usually looks like an URL such as https://portal.contoso.com.</li>
+                                                        <li>For <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#azure-active-directory" style="text-decoration: none;">Microsoft Entra ID</a>, this is the Application ID URI. It is available from <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s registered app blade &gt; Expose an API &gt; APP ID URI. It has been either chosen by the user or generated by the <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-5.0#azure-active-directory" style="text-decoration: none;">Microsoft Entra ID</a> provider during the Expose an API &gt; set &gt; save step of the registration. Generated values look like api://bbd35166-7c13-49f3-8041-9551f2847b69.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>DisplayName<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is the provider display name. Chosen by the user, it is used in the UI to identify the authentication method.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>AuthenticationScheme<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Is the unique identifier of this authentication method within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. Any string value can be used, unique among all authentication methods.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Bold_Subheading">Example</p>
+                                    <p>This example configures a WS-Federation-based authentication provider identified as WsFederationContoso_LA in the configuration file.</p>
+                                    <p>Within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, it will be identified with the authentication scheme WsFederationAAD.</p>
+                                    <p>It will be displayed as <em style="font-style: normal;">Connection Microsoft Entra ID with WS-Federation protocol</em> in the UI external login prompt.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"Authentication":<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"WsFederation": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": "<span style="color: #63a35c; ">&lt;True&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"WsFederationContoso_LA": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"AuthenticationScheme": "<span style="color: #63a35c; ">&lt;WsFederationAAD&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"DisplayName": "<span style="color: #63a35c; ">&lt;Connection Microsoft Entra ID with WS-Federation protocol&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"MetadataAddress": "<span style="color: #63a35c; ">&lt;https://bbd35166-7c13-49f3-8041-9551f2847b69/FederationMetadata/2007-06/FederationMetadata.xml&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Wtrealm": "<span style="color: #63a35c; ">&lt;api://bbd35166-7c13-49f3-8041-9551f2847b69&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <h2 id="set-up-saml2-authentication">Set Up SAML2 Authentication</h2>
+                                    <p>One or several <strong style="font-weight: normal;">SAML2</strong> authentication providers can be set up under the authentication &gt; SAML2 section.</p>
+                                    <div class="notices info">
+                                        <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;does not provide a signature for SAML2 authentication.</p>
+                                    </div>
+                                    <p class="Bold_Subheading">Multiple providers</p>
+                                    <p>One or several <strong style="font-weight: normal;">SAML2</strong> authentication providers can be set up.</p>
+                                    <p class="Bold_Subheading">Registration process</p>
+                                    <p>Using a <strong style="font-weight: normal;">SAML2</strong> authentication requires <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;Server to be registered to the provider. An <strong style="font-weight: normal;">Entity ID URI</strong> value is set up for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;during the registration process. It is used as the prefix for scopes and as the value of the audience claim in access tokens. The value can be generated by the provider, or set manually as a URL-shaped string value. This allows <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;to identify itself to the authentication provider.</p>
+                                    <p class="Bold_Subheading">Reply URL</p>
+                                    <p>The target <strong style="font-weight: normal;">SAML2</strong> provider needs to be aware of the URI where to send the authentication token if the authentication succeeds. This URI is called <strong style="font-weight: normal;">Reply URL</strong> or <strong style="font-weight: normal;">Assertion Consumer Service (ACS) URL</strong>.</p>
+                                    <p>During the registration process, the provider will ask for the URL.</p>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s <strong style="font-weight: normal;">Reply URL</strong> for <strong style="font-weight: normal;">SAML2</strong> is &lt;usercube-server-address&gt;/Saml2/Acs where &lt;usercube-server-address&gt; is the address of your <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Server such as https://usercube.contoso.com.</p>
+                                    <div class="notices warning">
+                                        <p>Make sure to enter this exact URL which is treated case sensitively.</p>
+                                    </div>
+                                    <p class="Bold_Subheading">Configuration</p>
+                                    <p>First, the SAML2 method must be enabled under the authentication &gt; SAML2 section.</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Enabled<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Enables or disables SAML2 Authentication.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Then, users must create a new subsection per SAML2 provider. Users are free to choose any section name. Its sole purpose is for users to find the authentication method in the configuration files.</p>
+                                    <p>Each section is configured with the following settings:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>MetaDataLocation<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Identifies, for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>, the target SAML2 server's metadata. This information is to be retrieved from the app registration process or directly from the SAML2 provider. The value commonly ends with the path /FederationMetadata/2007-06/FederationMetadata.xml.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>IdentityProviderEntityID<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Is the Identity Provider Issuer (also known as provider Entity ID) that identifies the provider to <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. This information is to be retrieved from the provider's portal. For Microsoft Entra ID, it is the first line of metadata file.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>DisplayName<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is the provider display name. Chosen by the user, it is used in the UI to identify the authentication method.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>EntityIdAppliUriID<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Is <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s Entity ID issued during the registration process. Also referred to as an Identifier URI. For Microsoft Entra ID, it is set during the Expose an API &gt; set &gt; save step of the registration. Generated values look like api://bbd35166-7c13-49f3-8041-9551f2847b69.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>NameIdFormat<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is the requested format of the subject's name identifier.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>MinIncomingSigningAlgorithm<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Is minimal signing algorithm to validate SAML2 response.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>EncryptionCertificate<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Sets the location of the public key certificate and the private key used to handle input and output files encryption.</p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>This is required to enable logout.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <blockquote>
+                                        <p>This example configures a SAML2-based authentication provider identified as SAMLConnection in the configuration file.</p>
+                                        <p>It will be displayed as Connection Azure ActiveDirectory with SAML2 protocol in the UI external login prompt.</p>
+                                        <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"Authentication":<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"SAML2": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"SAMLConnection": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"DisplayName": "<span style="color: #63a35c; ">&lt;Connection Microsoft Entra ID with SAML2 protocol&gt;</span>",&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"EntityIdAppliUriID": "<span style="color: #63a35c; ">&lt;api://{client-id}&gt;</span>",&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"MetaDataLocation": "<span style="color: #63a35c; ">&lt;https://login.microsoftonline.com/{tenant-id}/federationmetadata/2007-06/federationmetadata.xml&gt;</span>",&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<span style="color: #63a35c; ">&lt;IdentityProviderEntityID&gt;</span>": "<span style="color: #63a35c; ">&lt;https://sts.windows.net/{tenant-id}/&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"EncryptionCertificate": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                    <h3 id="encryptioncertificate">Encryption Certificate</h3>
+                                    <p>This information can be set one of two ways:</p>
+                                    <ul>
+                                        <li>
+                                            <p>As a <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">Public Key Cryptography Standards (PKCS) #12</a> archive (also called <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/personal-information-exchange---pfx--files" style="font-style: normal; text-decoration: none;">Personal </a>Information Exchange file or <code>.pfx</code> file) stored in the Agent's host file system. The archive contains both the public key certificate and the private key.</p>
+                                        </li>
+                                        <li>
+                                            <p>As a certificate from a Windows' <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/working-with-certificates#certificate-stores" style="text-decoration: none;">certificate store</a> identified by SubjectDistinguishedName or by Thumbprint. The Windows certificate also contains both the public key certificate and the private key.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Remember" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;i&gt;Remember, &lt;/i&gt;&lt;/span&gt;"><span class="autonumber"><span class="Remember"><span style="color: #fb8000;" class="mcFormatColor"><i>Remember, </i></span></span></span>Netwrix recommends using Windows' certificate store.
+<br />On the other hand, the PFX file takes priority over Windows' certificate, which means that when <code>File</code> is specified then the PFX certificate is used, even if the options for Windows' certificate are specified too.
+<br />In both ways, missing and/or incorrect settings trigger an error and no certificate is loaded.</p>
+                                    <p class="Remember" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;i&gt;Remember, &lt;/i&gt;&lt;/span&gt;"><span class="autonumber"><span class="Remember"><span style="color: #fb8000;" class="mcFormatColor"><i>Remember, </i></span></span></span>the AzureKeyVault section is mandatory when using CertificateAzureKeyVault. <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;server loads the encryption certificate from Azure Key Vault only if the AzureKeyVault and EncryptionCertificate are defined at the same level in the configuration file.</p>
+                                    <h4>As a PFX file</h4>
+                                    <p>For example:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;"EncryptionCertificate": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"File": "<span style="color: #63a35c; ">&lt;C:/UsercubeAgentContoso/contoso.pfx&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Password": "<span style="color: #63a35c; ">&lt;oarjr6r9f00&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;}<br />&#160;}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The archive is set using the following attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>File<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive path on the host file system.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Password<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive password.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Storing a <code>.pfx</code> file password in plain text in a production environment is strongly discouraged. It should always be encrypted using the <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>-Protect-CertificatePassword tool. See the <a href="../../../executables/references/protect-certificatepassword/index.html" target="_parent" title="Usercube Protect Certificate Password" alt="Usercube Protect Certificate Password" class="MCXref xref">
+              
+              Usercube-Protect-CertificatePassword
+              </a> topic for additional information.</p>
+                                    <p>The archive is set using the following attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>File<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive path on the host file system.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Password<br />optional</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive password.<br />Storing a <code>.pfx</code> file's password in plain text in a production environment is strongly discouraged. It should always be encrypted using the Usercube-Protect-CertificatePassword.exe<a href="../../../executables/references/protect-certificatepassword/index.html" style="text-decoration: none;"> </a>tool.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h4>As a Certificate in the Windows Store</h4>
+                                    <p>For example:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>&#160;{<br />&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;"EncryptionCertificate": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"DistinguishedName":"<span style="color: #63a35c; ">&lt;UsercubeContoso&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"StoreLocation": "<span style="color: #63a35c; ">&lt;LocalMachine&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"StoreName": "<span style="color: #63a35c; ">&lt;AuthRoot&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;}<br />&#160;}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The Windows certificate is set using these attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>DistinguishedName<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>SubjectDistinguishedName of the store certificate.</p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>This is required when Thumbprint is not specified.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Thumbprint<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Thumbprint of the store certificate.</p>
+                                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>This is required when DistinguishedName is not specified.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>StoreLocation<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Location of the relevant Windows certificate store: LocalMachine or CurrentUser.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>StoreName<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Name of the relevant Windows certificate store.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h5>Using Azure Key Vault</h5>
+                                    <p>If the certificate is saved in Azure Key Vault, we must define the certificate identifier and the Vault connection. See the <a href="../../agent-configuration/azure-key-vault/index.html" title="Azure Key Vault" alt="Azure Key Vault" class="MCXref xref">Azure Key Vault</a> topic for additional information.</p>
+                                    <p class="Remember" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;i&gt;Remember, &lt;/i&gt;&lt;/span&gt;"><span class="autonumber"><span class="Remember"><span style="color: #fb8000;" class="mcFormatColor"><i>Remember, </i></span></span></span>the AzureKeyVault section is mandatory when using CertificateAzureKeyVault. <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> server loads the encryption certificate from Azure Key Vault only if the AzureKeyVault and EncryptionCertificate are defined at the same level in the configuration file.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"Authentication": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"SAML2": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<span style="color: #63a35c; ">&lt;SAMLConnection&gt;</span>": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"AzureKeyVault": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Vault": "<span style="color: #63a35c; ">&lt;https://contoso.vault.azure.net/&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"ConnectionString": "..."<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"EncryptionCertificate": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"CertificateAzureKeyVault": "<span style="color: #63a35c; ">&lt;ContosoCertificate&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <h2 id="set-up-internal-methods">Set Up Internal Methods</h2>
+                                    <p>When Internal Methods is enabled, the end-user is prompted via a form to input a login and a password. The login to be used is defined within the applicative configuration's Select User By Identity Query Handler Setting element. See the <a href="../../settings/index.html" target="_parent" title="Various XML Settings" alt="Various XML Settings" class="MCXref xref">
+              
+              Various XML Settings
+              </a> topic for additional information.</p>
+                                    <p>First, the AllowLocalLogin parameter needs to be set to true in the Authentication section.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;Authentication&gt;</span>":{<br />&#160;&#160;&#160;&#160;"AllowLocalLogin":true<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>Then, Active Directory User Store or Test User Store can be enabled.</p>
+                                    <h3 id="active-directory-user-store">Active Directory User Store</h3>
+                                    <p>The Active Directory User Store allows users to authenticate with a login and password that will be compared against the Active Directory content.</p>
+                                    <p>Several forests can be set up as identity providers for authentication. This allows, for example, the authentication of users that belong to different Active Directory forests.</p>
+                                    <p>It is configured under the Authentication &gt; ActiveDirectoryUserStore section.</p>
+                                    <p>First, the ActiveDirectoryUserStore must be enabled.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;Authentication&gt;</span>":{<br />&#160;&#160;&#160;&#160;"AllowLocalLogin":true,<br />&#160;&#160;&#160;&#160;"ActiveDirectoryUserStore": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": true<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 45px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Enabled<br />required</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>True to enable authentication via the Active Directory User Store.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>In the same section, several authentication providers can be defined, each one based on an Active Directory forest.</p>
+                                    <p>For each forest, a new section is added under ActiveDirectoryUserStore. Any name may be chosen for the forest section as long as it is unique. Two forest sections can't be identical though.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;ActiveDirectoryUserStore&gt;</span>": {<br />&#160;&#160;&#160;&#160;"Enabled": true,<br />&#160;&#160;&#160;&#160;"Forest1": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"AuthenticationScheme": "<span style="color: #63a35c; ">&lt;...&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Server": "<span style="color: #63a35c; ">&lt;...&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>Under the new forest section, the following parameters are used to configure the authentication method.</p>
+                                    <blockquote>
+                                        <p>The following example sets a single authentication method, based on the Forest1 forest. The domain controller is located at 127.168.0.1. If the user enters the login MyLogin, the resulting logon will be CONTOSO\paris\MyLogin. The Postfix won't be used as a Prefix is already provided.</p>
+                                        <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;ActiveDirectoryUserStore&gt;</span>": {<br />&#160;&#160;"Enabled": true,<br />&#160;&#160;"Forest1": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"AuthenticationScheme": "<span style="color: #63a35c; ">&lt;ADUserStore_Forest1&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Server": "<span style="color: #63a35c; ">&lt;127.168.0.1&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Domain": "<span style="color: #63a35c; ">&lt;CONTOSO&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Prefix": "<span style="color: #63a35c; ">&lt;paris&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Postfix": "<span style="color: #63a35c; ">&lt;usercube.contoso&gt;</span>"<br />&#160;&#160;}<br />}</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>In the following example, if the user enters the login MyLogin, the resulting logon will be MyLogin@<span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.contoso.</p>
+                                        <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;ActiveDirectoryUserStore&gt;</span>": {<br />&#160;&#160;"Enabled": true,<br />&#160;&#160;"Forest1": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"AuthenticationScheme": "<span style="color: #63a35c; ">&lt;ADUserStore_Forest1&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Server": "<span style="color: #63a35c; ">&lt;127.168.0.1&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Postfix": "<span style="color: #63a35c; ">&lt;usercube.contoso&gt;</span>"<br />&#160;&#160;}<br />}</code></pre>
+                                            </div>
+                                        </div>
+                                        <p>The following example enables authentication via the Active Directory User Store, for the Forest1 forest,by checking not only the password and account activation, but also whether the password is expired.</p>
+                                        <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                        <div class="codeSnippet">
+                                            <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>"<span style="color: #63a35c; ">&lt;ActiveDirectoryUserStore&gt;</span>": {<br />&#160;&#160;"Enabled": true,<br />&#160;&#160;"Forest1": {<br />&#160;&#160;&#160;&#160;&#160;&#160;"AuthenticationScheme": "<span style="color: #63a35c; ">&lt;ADUserStore_Forest1&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Server": "<span style="color: #63a35c; ">&lt;127.168.0.1&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"Domain": "<span style="color: #63a35c; ">&lt;CONTOSO&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;"FastBind": false<br />&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;}<br />}</code></pre>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>AuthenticationScheme<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Unique identifier of this authentication method within <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>. Any string value can be used, unique among all authentication methods.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Server<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Identification of the domain controller that runs the Active Directory Domain Service against which the authentication is performed. Based on <a href="https://docs.microsoft.com/en-us/dotnet/api/system.directoryservices.protocols.ldapconnection?view=dotnet-plat-ext-8.0" style="text-decoration: none;">Microsoft's documentation</a>, the format is defined either:</p>
+                                                    <ul>
+                                                        <li>by a domain name</li>
+                                                        <li>by an LDAP server name</li>
+                                                        <li>or a dotted string representing the IP address of the LDAP server/Domain Controller (example: 98.20.33.2). Optionally, this parameter may also include a port number, separated from the host by a colon (example: 98.20.33.2:4520).</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Domain<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Identification of the Active Directory domain or sub-domain against which the authentication will be performed. It is a string used to complete the user's logon in an INet name fashion. The resulting logon will resemble Domain\login. The domain is used only if no postfix was provided.<br /> This parameter is ignored if the domain or the UPN suffix is already specified in the login. This is the case for a login that conforms to the format domain\login or login@domain.com.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>FastBind<br /><span class="optionalAttribute">default value: True</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>True to check a user's credentials by verifying only the password and account activation.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>NoSigning<br /><span class="optionalAttribute">default value: true</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Enables or disables <a href="https://en.wikipedia.org/wiki/Kerberos_(protocol)" style="text-decoration: none;">Kerberos encryption</a>.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Prefix<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Is a string used to complete the user's logon in an INet name fashion. The resulting logon will resemble Prefix\login. The Postfix isn't used if the domain or the UPN suffix is already specified in the login.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Postfix<br /><span class="optionalAttribute">optional</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Is used to complete the user's login in a principal name fashion. The Postfix corresponds to the User Principal Name (UPN) suffix. The resulting logon will resemble login@Postfix. The Postfix isn't used if the domain or the UPN suffix is already specified in the login, or if the Prefix is already provided.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Ssl<br /><span class="optionalAttribute">default value: false</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Enables or disables SSL for network communication between <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;and the Active Directory.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3 id="test-user-store">Test User Store</h3>
+                                    <p>A Test User Store can be set up under the authentication &gt; TestUserStore section. It allows all users to authenticate with their login and the same password.</p>
+                                    <p class="Remember" data-mc-autonum="&lt;span style=&quot;color: #fb8000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;i&gt;Remember, &lt;/i&gt;&lt;/span&gt;"><span class="autonumber"><span class="Remember"><span style="color: #fb8000;" class="mcFormatColor"><i>Remember, </i></span></span></span>this should never be used in a production environment.</p>
+                                    <p>The following parameters are available under the authentication &gt; TestUserStore section:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 45px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Enabled<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p class="table-text">Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Enables or disables the OpenId Connection.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Password<br /><span class="requiredAttribute">required</span></p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p class="table-text">String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Is the password for all users to authenticate <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Bold_Subheading">Example</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;"Authentication":<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;"AllowLocalLogin":true<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<span style="color: #63a35c; ">&lt;TestUserStore&gt;</span>": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Password": "<span style="color: #63a35c; ">&lt;secret&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;}<br />}<br /><br />Here is an example using both `IdentityServer` and `Authentication` sections.<br /><br />appsettings.json<br />{<br />&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;"IdentityServer": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"X509KeyFilePath": "<span style="color: #63a35c; ">&lt;./UsercubeContoso.pfx&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"X509KeyFilePassword": "<span style="color: #63a35c; ">&lt;secret&gt;</span>"<br />&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"Authentication": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"RequireHttpsMetadata": false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"TestUserStore": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Enabled": "<span style="color: #63a35c; ">&lt;true&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Password": "<span style="color: #63a35c; ">&lt;secret&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"AllowLocalLogin": true<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;...<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html d1p1:tocPath="Admin Center|Workflows" d1p1:medium="Sb-print" d1p1:InPreviewMode="false" d1p1:PreloadImages="false" d1p1:TargetType="WebHelp2" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-runtime-file-type="Default;Topic" xmlns:d1p1="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" d1p1:generated="True" />
+        <link href="../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-stylesheet-type="table" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="generator" content="Adobe RoboHelp 2019" /><title>Implement Workflows</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Introduction.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Implement Workflows</h1>
+                                    <p>To create a workflow, you have to specify the following:</p>
+                                    <ul>
+                                        <li>
+                                            <p><b>Object</b> - the object(s) - user, contact, group - to apply the workflow to.</p>
+                                        </li>
+                                        <li>
+                                            <p><b>Event</b> - a create, edit, or delete event that, when performed for the object(s), would trigger the workflow.</p>
+                                        </li>
+                                        <li>
+                                            <p><b>Field</b> - one or more fields (attributes) that the workflow would apply to. When the values of these attributes change for the object, an approval request is triggered.</p>
+                                        </li>
+                                        <li>
+                                            <p><b>Filter</b> - a condition that prevents the workflow from triggering, even when the <i>object</i>, <i>event</i>, and <i>field</i> criterion is met.</p>
+                                        </li>
+                                        <li>
+                                            <p><b>Approver</b> - the object to send the workflow request for approval.</p>
+                                        </li>
+                                    </ul>
+                                    <p>As additional workflow features, you can also:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Enable workflow approver acceleration</p>
+                                        </li>
+                                        <li>
+                                            <p>Link a workflow with a Microsoft Power Automate flow</p>
+                                        </li>
+                                    </ul>
+                                    <p><b>Workflow example:</b>
+                                    </p>
+                                    <p>Consider a workflow where:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Object: Group</p>
+                                        </li>
+                                        <li>
+                                            <p>Event: Edit</p>
+                                        </li>
+                                        <li>
+                                            <p>Field: criteria</p>
+                                        </li>
+                                        <li>
+                                            <p>Approver: Group owner</p>
+                                        </li>
+                                    </ul>
+                                    <p>It implies that when a user edits the values stored in the <i>criteria</i> attribute of a group, a workflow request is sent to the group owner, who is the workflow approver. Changes are applied after the request is
+      approved.</p>
+                                    <p>But if you add a filter as:</p>
+                                    <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 318px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 317px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 300px;" />
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">Field</td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">Condition</td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">Value</td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">employee Type</td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">Not Equals</td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">manager</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                    <p>It implies that when a manager edits the value of the <i>criteria</i> attribute, the change is effective immediately and this workflow does not apply. When a non-manager user changes the value of the attribute, it
+      triggers the workflow.</p>
+                                    <h2>View the Workflows<a name="View"></a></h2>
+                                    <ol>
+                                        <li value="1">
+                                            <p>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On the <b>Identity Stores</b> page, click the ellipsis button for an identity store and select<b> Edit</b>.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>Click <b>Workflows</b> under <b>Settings</b> in the left pane. On the <b>Configure Workflows</b> tab of the <b>Workflows</b> page, the following information is displayed for a workflow:</p>
+                                            <table cellspacing="21" class="TableStyle-Sb_Table_1" style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Sb Table 1.css');">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Label</th>
+                                                        <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Enable</p>
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p>Shows whether a workflow is enabled or disabled</p>
+                                                            <p>Use the toggle button next to a workflow to enable or disable it.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Type</p>
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                            <p>A workflow has one of these types:</p>
+                                                            <ul class="Disc">
+                                                                <li>
+                                                                    <p><b>System:</b> workflows that are defined by default for an identity store.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><b>User Defined:</b> workflows that are defined by users for an identity store.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">Name</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p>A descriptive name for a workflow that identifies the action the workflow audits</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Object(s)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                            <p>The directory object(s) the workflow applies to</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Approver(s)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                            <p>The approver(s) specified for a workflow. Approver(s) are responsible for approving or denying the requests generated for the workflow.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>Event</p>
+                                                        </td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                            <p>The event that triggers a workflow</p>
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </li>
+                                        <li value="4">
+                                            <p>You can perform the following actions:</p>
+                                            <ul>
+                                                <li>
+                                                    <p>Click <b>Add Workflow</b> to create a new workflow for the identity store.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Click the ellipsis button for a workflow and select <b>Edit</b> to update workflow details, such as approvers, filters, and fields.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <h2>Create a New Workflow<a name="create"></a></h2>
+                                    <ol>
+                                        <li value="1">
+                                            <p>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On the <b>Identity Stores</b> page, click the ellipsis button for an identity store and select<b> Edit</b>.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>Click <b>Workflows</b> under <b>Settings</b> in the left pane.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>On the <b>Configure Workflows</b> tab of the <b>Workflows</b> page, click <b>Add Workflow</b> in the top right corner.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p>On the <b>Create Workflow</b> page, enter a name for the workflow In the <b>Name</b> box.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p>Select one or more objects (User, Contact, Group) to apply the workflow to.</p>
+                                        </li>
+                                        <li value="7">
+                                            <p>In the <b>Events</b> drop-down list, select the event (Create, Edit, Delete) that will trigger the workflow.</p>
+                                            <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>(1) For the Create event, you can define only one workflow for an object.<br /> (2) A workflow for the Group object with the Delete event will be triggered when the group is manually deleted.</p>
+                                        </li>
+                                        <li value="8">
+                                            <p>Select the <b>Mail Approval</b> check box to enable the approver to approve or deny a workflow request from within the workflow email notification. These notifications contain the <b>Accept</b> and <b>Deny</b> buttons. On clicking any of these, the approver is redirected and auto-authenticated on the <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> portal, where he or she can approve or deny the request.<br />When this check box is not selected, the <b>Accept</b> and <b>Deny</b> buttons are not available in the email notifications. Approvers have to sign into the <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> portal  to manage workflow requests.</p>
+                                        </li>
+                                        <li value="9">
+                                            <p>The <b>Approver Acceleration</b> check box applies if approver acceleration is enabled for the identity store. See the <a href="ApproverAcceleration.htm#acceleration" target="_parent" title="Apply Approver Acceleration" alt="Apply Approver Acceleration" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Apply Approver Acceleration</a> topic.</p>
+                                            <ul>
+                                                <li>
+                                                    <p>To apply approver acceleration to this workflow, select the <b>Approver Acceleration</b> check box.</p>
+                                                </li>
+                                                <li>
+                                                    <p>To exempt this workflow from approver acceleration, clear this check box.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li value="10">
+                                            <p>Enter a brief description for the workflow in the <b>Description</b> box.</p>
+                                        </li>
+                                        <li value="11">
+                                            <p>In the <b>Portal URL</b> drop-down list, select a <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> portal URL to include in the workflow email notifications. The URL will redirect the recipients to the portal for taking action on a request, such as approve
+        or deny it.<br />The list contains URLs of <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> portals linked with the identity store.</p>
+                                        </li>
+                                        <li value="12">
+                                            <p>Click <b>Add Approver(s)</b> in the <b>Approver(s)</b> section to select the users and groups to approve the requests generated for this workflow: The <b>Add Approver(s)</b> dialog box is displayed.</p>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1">
+                                                    <p>Fields on the <b>Add Approver(s)</b> dialog box vary, depending on the object and event selected. Then select one or more of the available options:</p>
+                                                    <table cellspacing="21" class="TableStyle-Sb_Table_1" style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Sb Table 1.css');">
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Option</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">Available For</th>
+                                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <p>Owner of the Group</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <p><i>Edit</i> and <i>delete</i> events of the <i>Group</i> object</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <p>Select it to specify the group’s primary owner as the request approver.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <p>Owner and Additional Owner of the Group</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <p><i>Edit</i> and <i>delete</i> events of the <i>Group</i> object</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <p>Select it to specify the group’s primary and additional owners as the request approvers.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <p>Manager of User</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                                    <p><i>Edit</i> and <i>Delete</i> events of the <i>User</i> and <i>Contact </i>objects</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                                    <p>Select it to specify the user’s or contact’s primary manager as the request approver.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <p>Manager and Additional Manager of User</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                                    <p><i>Edit</i> and <i>Delete</i> events of the <i>User </i>and <i>Contact</i> objects</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                                    <p>Select it to specify the user’s/contact’s primary and additional managers as the request approvers.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                                    <p>Search Container</p>
+                                                                    <p>Include Sub-Containers</p>
+                                                                    <p>Search box</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                                    <p>For all objects and events</p>
+                                                                </td>
+                                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                                    <p>You can specify one or more users and groups as approvers. In case of a group, all its members are set as approvers.</p>
+                                                                    <p>Specify a container to search for the desired object(s); then perform a search to locate and select the object.</p>
+                                                                    <ul class="Disc">
+                                                                        <li>
+                                                                            <p>Click the down arrow in the <b>Search Container</b> box and select a container to limit the search scope to it.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Select the <b>Include Sub-Containers</b> check box to include the sub-containers within the selected container to search for the object.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Enter a search string in the search box; objects starting with the string are displayed as you type. Click <b>Add</b> for an object to select it.</p>
+                                                                            <p>You can also perform an advanced search to locate the object. Click <b>Advanced</b> in the search box and use the search fields to enter a search string. On clicking <b>Search</b>,
+                          objects matching the string are displayed. Select the user or group you want to add as approver.</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </li>
+                                                <li value="2">Click <b>Add</b> to close the <b>Add Approver(s)</b> dialog box.</li>
+                                            </ol>
+                                        </li>
+                                        <li value="13">
+                                            <p>Use the <b>Filters</b> section to specify a criterion; anything beyond that criterion will not trigger the workflow. For example, when you define the following filter:</p>
+                                            <p>Object: Group<br />Event: Delete<br />Filter: groupType = Security<br />This workflow will trigger when a security group is deleted. However, when a group object with type other than ‘Security’ is deleted, this workflow will not trigger.</p>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1">
+                                                    <p>In the <b>Filter(s)</b> section, click <b>Add Filter(s)</b>. The <b>Add Filter</b> dialog box is displayed.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>Select a schema attribute from the <i>field</i> list.</p>
+                                                </li>
+                                                <li value="3">
+                                                    <p>Select an operator to evaluate the attribute from the <i>operator</i> list.</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p><b>Present</b> - returns objects that have a value specified for the attribute.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><b>Not Present</b> - returns objects that do not have a value specified for the attribute.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><b>Equals</b> - returns objects when the attribute value exactly matches the text you specify in the value box.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><b>Not Equals</b> - returns objects when the attribute value does not match the text you specify in the value box.</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li value="4">
+                                                    <p>Enter a value in the <i>value</i> box (not case-sensitive). This box is not available for the <i>Present</i> and <i>Not Present</i> operators, which are not comparison operators.</p>
+                                                </li>
+                                                <li value="5">
+                                                    <p>Click <b>Add</b> to close the <b>Add Filter</b> dialog box.</p>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li value="14">
+                                            <p>Use the <b>Field(s)</b> section to specify the fields (attributes) that you want to apply the workflow to. For example, when you define a workflow as:</p>
+                                            <p>Object: User<br />Event: Edit<br />Filter: Department = IT<br />Field: Email<br />This workflow will trigger when the Email field for a user object with department set to IT is edited. It will not be triggered when the Email field is edited for a user that does not belong to the IT department, or when a field other than Email is edited for a user in the IT department.</p>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1">
+                                                    <p>To add a field, click <b>Add Field(s)</b> in the <b>Field(s)</b> section.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>On the <b>Add Fields</b> dialog box, select the check box for a field to add it to the workflow and click <b>Add</b>.</p>
+                                                </li>
+                                            </ol>
+                                            <p class="Note-1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" data-mc-autonum="NOTE: "><span class="autonumber"><span class="Note-1">NOTE: </span></span>The <b>Field(s)</b> section is not available when <i>Create</i> is selected in the <b>Events</b> drop-down list.</p>
+                                        </li>
+                                        <li value="15">
+                                            <p>By default, the workflow is enabled, as indicated by the <b>Enabled</b> toggle button at the top of the page. If required, use the toggle button to disable it.</p>
+                                        </li>
+                                        <li value="16">
+                                            <p>Click the <b>Create Workflow</b> button on the <b>Create Workflow</b> page to create the workflow.</p>
+                                        </li>
+                                        <li value="17">
+                                            <p>Click <b>Save</b> on the <b>Workflows</b> page.</p>
+                                        </li>
+                                    </ol>
+                                    <h2>Link a Workflow to a Power Automate Flow<a name="Link"></a></h2>
+                                    <p>You can define Power-Automate settings for a workflow to link that workflow to a Power Automate flow.</p>
+                                    <p>These settings enable you to connect to Power Automate from within a workflow (say Workflow1) and create a basic flow template there. On providing the URL of the flow template in Workflow1, the two are linked. As a result, the flow auto triggers when
+      the <span xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="mc-variable GroupID.Product variable">Directory Manager</span> workflow is triggered.</p>
+                                    <p>For details on linking a workflow to a flow, see the <a href="Integrate.htm#flow" target="_parent" title="Trigger a Flow from Directory Manager" alt="Trigger a Flow from Directory Manager" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Trigger a Flow from Directory Manager </a> topic.</p>
+                                    <h2>Modify a Workflow<a name="Modify"></a></h2>
+                                    <p>Workflows for an identity store are differentiated by their type. Predefined workflows (also called system workflows), by default, are displayed at the top; user-defined workflows follow.</p>
+                                    <p>You can update all details for a user-defined workflow. A system workflow, however, can be modified to a limited extent. You can only update the approvers, enable/disable mail approval, enable/disable approver acceleration, and link it to a Power
+      Automate flow.</p>
+                                    <p><b>To modify a workflow:</b>
+                                    </p>
+                                    <ol>
+                                        <li value="1">
+                                            <p>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On the <b>Identity Stores</b> page, click the ellipsis button  for an identity store and select <b>Edit</b>.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>Click <b>Workflows</b> under <b>Settings</b> in the left pane.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>On the <b>Configure Workflows</b> tab of the <b>Workflows</b> page, click the ellipsis button  for a workflow and select <b>Edit</b>.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p>The <b>Edit Workflow</b> page is displayed. Follow steps 5-15 in the <a href="#create" target="_parent" title="Create a New Workflow" alt="Create a New Workflow" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Create a New Workflow</a> topic
+        to update the required information.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p>To link this workflow to a Power Automate flow, click <b>Power Automate Settings</b> in the top right corner; the <b>Power Automate Settings</b> dialog box is displayed. Follow step
+        <a href="Integrate.htm#Step6">6</a> and onwards in the <a href="Integrate.htm#link" target="_parent" title="Link an Identity Store Workflow to a Flow" alt="Link an Identity Store Workflow to a Flow" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="MCXref xref">Link an Identity Store Workflow to a Flow</a> topic to complete the task.</p>
+                                        </li>
+                                        <li value="7">
+                                            <p>After making the required changes, click <b>Update Workflow</b> on the <b>Edit Workflow</b> page to save the settings.</p>
+                                        </li>
+                                        <li value="8">
+                                            <p>Click <b>Save</b> on the <b>Workflows</b> page.</p>
+                                        </li>
+                                    </ol>
+                                    <h2>Enable or Disable a Workflow<a name="Enable"></a></h2>
+                                    <p>Workflows in an identity store can be disabled to prevent them from triggering.</p>
+                                    <p>You can enable or disable a workflow in any of the following ways.</p>
+                                    <p><b>Method 1:</b>
+                                    </p>
+                                    <ol>
+                                        <li value="1">
+                                            <p>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On the <b>Identity Stores</b> page click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>Click <b>Workflows</b> under <b>Settings</b> in the left pane.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>On the <b>Configure Workflows</b> tab of the <b>Workflows</b> page,  use the <b>Enable</b> toggle button for a workflow to enable or disable it.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p>Click <b>Save</b>.</p>
+                                        </li>
+                                    </ol>
+                                    <p><b>Method 2:</b>
+                                    </p>
+                                    <ol>
+                                        <li value="1">
+                                            <p>In Admin Center, click <b>Identity Stores</b> in the left pane.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On the <b>Identity Stores</b> page click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>Click <b>Workflows</b> under <b>Settings</b> in the left pane.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>On the <b>Configure Workflows</b> tab of the <b>Workflows</b> page,  click the ellipsis button for a workflow and select <b>Edit</b>.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p>On the <b>Edit Workflow</b> dialog box, use the toggle button in the top left to enable or disable the workflow. Then click <b>Update Workflow</b>.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p>On the <b>Workflows</b> page, click <b>Save</b>.</p>
+                                        </li>
+                                    </ol>
+                                    <h2>Delete a User-defined Workflow<a name="Delete"></a></h2>
+                                    <p>Workflows in an identity store can have their type as <i>System</i> or <i>User Defined</i>. You can delete user-defined workflows; system workflows cannot be deleted.</p>
+                                    <p><b>To delete a workflow:</b>
+                                    </p>
+                                    <ol>
+                                        <li value="1">
+                                            <p>In Admin Center, click <b>Identity Stores </b>in the left pane.</p>
+                                        </li>
+                                        <li value="2">
+                                            <p>On the<b> Identity Stores</b> page, click the ellipsis button for an identity store and select <b>Edit</b>.</p>
+                                        </li>
+                                        <li value="3">
+                                            <p>Click <b>Workflows</b> under <b>Settings</b> in the left pane.</p>
+                                        </li>
+                                        <li value="4">
+                                            <p>On the <b>Configure Workflows</b> tab of the <b>Workflows</b> page, click the ellipsis button for a user-defined workflow and select <b>Delete Workflow</b>.</p>
+                                        </li>
+                                        <li value="5">
+                                            <p>Click <b>Delete</b> on the confirmation dialog box.</p>
+                                        </li>
+                                        <li value="6">
+                                            <p>Click <b>Save</b>.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

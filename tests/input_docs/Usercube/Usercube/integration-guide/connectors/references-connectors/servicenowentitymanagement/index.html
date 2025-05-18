@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Connectors|References: Connectors">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>
+              
+              ServiceNow
+              </title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/connectors/references-connectors/servicenowentitymanagement/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <section id="body">
+                                        <div id="body-inner">
+                                            <h1>
+                                                <div>
+              
+              ServiceNow
+              </div>
+                                            </h1>
+                                            <p>This connector exports and fulfills any data, including users and roles, from/to a <a href="https://www.servicenow.com/products/servicenow-platform/configuration-management-database.html">ServiceNow CMDB</a>.</p>
+                                            <p>This page is about <a href="../../references-packages/servicenow/index.html" target="_parent" class="MCXref xref">
+              
+              ServiceNow
+              </a>.
+
+</p>
+                                            <p style="text-align: center;">
+                                                <img src="../../../../../Resources/Images/Packages_servicenow_V603.png" alt="Package: ITSM/ServiceNow" />
+                                            </p>
+                                            <h2 id="overview">Overview</h2>
+                                            <p>ServiceNow is a cloud-based company that provides software as a service (SaaS) for technical management support. The company specializes in IT service management (ITSM), IT operations management (ITOM) and IT business management (ITBM), allowing users to manage projects, teams and customer interactions via a variety of apps and plugins.<br />This section focuses on ServiceNow Entity Management. To learn about how to use this connector to create tickets for other resources, see <a href="../../references-packages/servicenow-ticket/index.html" target="_parent" class="MCXref xref">
+              
+              ServiceNow Ticket
+              </a>.</p>
+                                            <h2 id="prerequisites">Prerequisites</h2>
+                                            <p>Implementing this connector requires:</p>
+                                            <ul>
+                                                <li>reading first the appsettings documentation;</li>
+                                                <li>a service account with the <strong>snc_platform_rest_api_access</strong> role, as well as reading and writing permissions on the target ServiceNow instance;</li>
+                                                <li>the version ServiceNow London or later;</li>
+                                                <li>the appropriate configuration in ServiceNow of authentication, Basic or OAuth.</li>
+                                            </ul>
+                                            <h2 id="export">Export</h2>
+                                            <p>This connector exports to CSV files ServiceNow's tables (Users, Groups, Group Memberships).</p>
+                                            <div class="notices info">
+                                                <p>An incremental search is possible to retrieve added and updated records but a full delta (including deleted items) can't be performed.</p>
+                                            </div>
+                                            <h3 id="configuration">Configuration</h3>
+                                            <p>This process is configured through a <a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> in the UI and/or the XML configuration, and in the <code>appsettings.agent.json &gt; Connections</code> section:</p><pre class="json" xml:space="preserve"><code><em>appsettings.agent.json</em>
+{
+  ...
+  "Connections": {
+    ...
+    "<b>&lt;ConnectionIdentifier&gt;</b>": {
+      ...
+    }
+  }
+}</code></pre>
+                                            <div class="notices note">
+                                                <p>The identifier of the connection and thus the name of the subsection must:
+<br />- be unique.
+<br />- not begin with a digit.
+<br />- not contain <code>&lt;</code>, <code>&gt;</code>, <code>:</code>, <code>"</code>, <code>/</code>, <code>\</code>, <code>|</code>, <code>?</code>, <code>*</code> and <code>_</code>.</p>
+                                            </div>
+                                            <blockquote>
+                                                <p>The following example retrieves from users only those that are active, and no filter is applied to the other tables. A single request can retrieve up to 5,000 entries, no more. This means that if there are 6,000 <code>sys_user</code> to retrieve, then all of them will be retrieved but with two requests.</p><pre class="json" xml:space="preserve"><code><em>appsettings.agent.json</em>
+{
+  ...
+  "Connections": {
+    ...
+    "ServiceNowExportFulfillment": {
+        "Server": "https://instance.service-now.com/api/now/table",
+        "Login": "login",
+        "Password": "password",
+        "ResponseSizeLimit":"5000",
+        "Filter":"sys_user#active=true"
+    }
+  }
+}</code></pre>
+                                                <p>The following example is the same as above, but using OAuth Authentication:</p><pre class="json" xml:space="preserve"><code><em>appsettings.agent.json</em>
+{
+  ...
+  "Connections": {
+    ...
+    "ServiceNowExportFulfillment": {
+        "Server": "https://instance.service-now.com/api/now/table",
+        "Login": "login",
+        "Password": "password",
+        <b>"ClientId": "ClientId",
+        "ClientSecret": "ClientSecret",
+        "OAuth2Url": "https://instance.service-now.com/oauth_token.do",</b>
+        "ResponseSizeLimit":"5000",
+        "Filter":"sys_user#active=true"
+    }
+  }
+}</code></pre>
+                                            </blockquote>
+                                            <h4 id="setting-attributes">Setting attributes</h4>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Name</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Details</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Server<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>URL of the ServiceNow Server Table API endpoint. <a href="https://developer.servicenow.com/dev.do#!/reference/api/latest/rest/c_TableAPI">See ServiceNow Official API Reference</a>.<br /><strong>Info:</strong> the URL must start with <code>https</code>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Login<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Username of the service account used to connect to the server.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Password<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Password of the service account used to connect to the server.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>ClientId<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Client Id used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>ClientSecret<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Client Secret used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>OAuth2Url<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Application endpoint used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p />
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p />
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Server<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>URL of the ServiceNow Server Table API endpoint. <a href="https://developer.servicenow.com/dev.do#!/reference/api/latest/rest/c_TableAPI">See ServiceNow Official API Reference</a>.<br /><strong>Info:</strong> the URL must start with <code>https</code>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Login<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Username of the service account used to connect to the server.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Password<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Password of the service account used to connect to the server.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>ClientId<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Client Id used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>ClientSecret<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Client Secret used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>OAuth2Url<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Application endpoint used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h3 id="output-details">Output details</h3>
+                                            <p>This connector is meant to generate to the <a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> folder one CSV file for each table, named <code>&lt;connectionIdentifier&gt;_&lt;tableName&gt;.csv</code>.</p>
+                                            <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;lists the tables to retrieve based on <a href="../../../toolkit/xml-configuration/connectors/entitytypemapping/index.html" target="_parent" title="Entity Type Mapping" alt="Entity Type Mapping" class="MCXref xref">
+              
+              Entity Type Mapping
+              </a>'s and <a href="../../../toolkit/xml-configuration/connectors/entityassociationmapping/index.html" target="_parent" title="EntityAssociationMapping" alt="EntityAssociationMapping" class="MCXref xref">
+              
+              Entity Association Mapping
+              </a>'s connection tables.</p>
+                                            <div class="notices note">
+                                                <p>For the connector to work properly, the connection tables must follow the naming convention too: <code>&lt;connectionIdentifier&gt;_&lt;tableName&gt;</code>.</p>
+                                            </div>
+                                            <blockquote>
+                                                <p>For example, with the following configuration:</p><pre class="xml" xml:space="preserve"><code>
+&lt;EntityTypeMapping Identifier="User" Connector="ServiceNow"  ConnectionTable="ServiceNowExportFulfillment_sys_user"&gt;  &lt;Property Identifier="sys_id" ConnectionColumn="sys_id" IsPrimaryKey="true" /&gt;  &lt;Property Identifier="name" ConnectionColumn="name" /&gt;  &lt;Property Identifier="user_name" ConnectionColumn="user_name" /&gt;  &lt;Property Identifier="email" ConnectionColumn="email" /&gt;&lt;/EntityTypeMapping&gt;&lt;EntityTypeMapping Identifier="User" Connector="ServiceNow"  ConnectionTable="ServiceNowExportFulfillment_sys_group"&gt;  &lt;Property Identifier="sys_id" ConnectionColumn="sys_id" IsPrimaryKey="true" /&gt;  &lt;Property Identifier="name" ConnectionColumn="name" /&gt;  &lt;Property Identifier="description" ConnectionColumn="description" /&gt;&lt;/EntityTypeMapping&gt;&lt;EntityAssociationMapping Identifier="Group_Members" Column1="user" EntityPropertyMapping1="User:sys_id" Column2="group" EntityPropertyMapping2="Group:sys_id" Connector="ServiceNow" ConnectionTable="ServiceNowExportFulfillment_sys_user_grmember" C0="sys_user_grmember"
+/&gt;
+</code></pre>
+                                                <p>We would have:</p><pre class="csv" xml:space="preserve"><code><em>ServiceNowExportFulfillment_sys_user.csv</em>
+sys_id,active,name,user_name,email
+...
+</code></pre><pre class="csv" xml:space="preserve"><code><em>ServiceNowExportFulfillment_sys_group.csv</em>
+sys_id,name,description
+...
+</code></pre><pre class="csv" xml:space="preserve"><code><em>ServiceNowExportFulfillment_sys_user_grmember.csv</em>
+user,group
+...
+</code></pre>
+                                            </blockquote>
+                                            <h2 id="fulfill">Fulfill</h2>
+                                            <p>This connector writes to ServiceNow to <u>create</u>, <u>update</u>, and/or <u>delete</u> any data.</p>
+                                            <h3 id="configuration-1">Configuration</h3>
+                                            <p><a href="#export">Same as for export</a>, fulfill is configured through connections.</p>
+                                            <blockquote>
+                                                <p>For example:</p><pre class="json" xml:space="preserve"><code><em>appsettings.agent.json</em>
+{
+  ...
+  "Connections": {
+    ...
+    "ServiceNowExportFulfillment": {
+        "Server": "https://instance.service-now.com/api/now/table",
+        "Login": "login",
+        "Password": "password"
+    }
+  }
+}</code></pre>
+                                                <p>The following example is the same as above, but using OAuth Authentication:</p><pre class="json" xml:space="preserve"><code><em>appsettings.agent.json</em>
+{
+  ...
+  "Connections": {
+    ...
+    "ServiceNowExportFulfillment": {
+        "Server": "https://instance.service-now.com/api/now/table",
+        "Login": "login",
+        "Password": "password",
+        <b>"ClientId": "ClientId",
+        "ClientSecret": "ClientSecret",
+        "OAuth2Url": "https://instance.service-now.com/oauth_token.do"</b>
+    }
+  }
+}</code></pre>
+                                            </blockquote>
+                                            <h4 id="setting-attributes-1">Setting attributes</h4>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                            <p>Name</p>
+                                                        </th>
+                                                        <th style="font-size: 11pt;" class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                            <p>Details</p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Server<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>URL of the ServiceNow Server Table API endpoint. <a href="https://developer.servicenow.com/dev.do#!/reference/api/latest/rest/c_TableAPI">See ServiceNow Official API Reference</a>.<br /><strong>Info:</strong> the URL must start with <code>https</code>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>Login<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Username of the service account used to connect to the server.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>Password<br /><span class="requiredAttribute">required</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Password of the service account used to connect to the server.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                            <p>ClientId<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Client Id used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                            <p>ClientSecret<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyD-Column1-Body1"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Client Secret used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                            <p>OAuth2Url<br /><span class="optionalAttribute">optional</span></p>
+                                                        </td>
+                                                        <td style="font-size: 11pt;" class="TableStyle-Sb_Table_1-BodyA-Column1-Body2"><strong>Type</strong>
+                                                            <br />String<br /><br /><strong>Description</strong><p>Application endpoint used (and <span class="requiredAttribute">required</span>) with <a href="https://docs.servicenow.com/bundle/latest-platform-administration/page/administer/security/concept/c_OAuthApplications.html">OAuth</a>.</p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h2 id="authentication">Authentication</h2>
+                                            <h3 id="password-reset">Password reset</h3>
+                                            <p>See the <a href="../../../network-configuration/agent-configuration/appsettings-agent/index.html" target="_parent" title="appsettings.agent" alt="appsettings.agent" class="MCXref xref">appsettings.agent</a> topic to learn more on how to configure password reset settings.</p>
+                                            <p>When setting a password for an ServiceNow user, the password attribute is defined by the password specified in the corresponding <a href="../../../toolkit/xml-configuration/connectors/resourcetypemappings/index.html" target="_parent" title="Resource Type Mappings" alt="Resource Type Mappings" class="MCXref xref">Resource Type Mappings</a>.</p>
+                                            <h3 id="credentials-protection">Credentials protection</h3>
+                                            <p>Data protection can be ensured through:</p>
+                                            <ul>
+                                                <li><a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a>, configured in the <code>appsettings.encrypted.agent.json</code> file;</li>
+                                                <li>An <a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> safe;</li>
+                                            </ul>
+                                            <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                                <thead>
+                                                    <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                        <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1" style="font-size: 11pt;">Attribute</th>
+                                                        <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1" style="font-size: 11pt;">Naming Convention for the Key in Azure Key Vault</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">Server</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--Server</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">Login</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--Login</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">Password</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--Password</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">ClientId</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--ClientId</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">ClientSecret</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--ClientSecret</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2" style="font-size: 11pt;">OAuth2Url</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--OAuth2Url</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                        <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1" style="font-size: 11pt;">Filter</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--Filter</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                        <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2" style="font-size: 11pt;">ResponseSizeLimit</td>
+                                                        <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2" style="font-size: 11pt;"><code>Connections--&lt;identifier&gt;--ResponseSizeLimit</code>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <ul>
+                                                <li>a <a href="../../../toolkit/xml-configuration/connectors/connection/index.html" target="_parent" title="Connection" alt="Connection" class="MCXref xref">
+              
+              Connection
+              </a> able to store Active Directory's <code>Login</code>, <code>Password</code>, <code>Server</code>, <code>ClientId</code> and <code>ClientSecret</code>.</li>
+                                            </ul>
+                                            <p>Protected attributes are stored inside a safe in CyberArk, into an account whose identifier can be retrieved by <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;from <code>appsettings.cyberark.agent.json</code>.</p>
+                                            <blockquote>
+                                                <p>For example:</p><pre class="json" xml:space="preserve"><code><em>appsettings.<b>cyberark</b>.agent.json</em>
+{
+  ...
+  "Connections": {
+    ...
+    "ServiceNowExportFulfillment": {
+        "Login": "ServiceNowExportFulfillment_CyberArkKey",
+        "Password": "ServiceNowExportFulfillment_CyberArkKey",
+        "Server": "ServiceNowExportFulfillment_CyberArkKey",
+        "ClientId": "ServiceNowExportFulfillment_CyberArkKey",
+        "ClientSecret": "ServiceNowExportFulfillment_CyberArkKey"
+    }
+  }
+}</code></pre>
+                                            </blockquote>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

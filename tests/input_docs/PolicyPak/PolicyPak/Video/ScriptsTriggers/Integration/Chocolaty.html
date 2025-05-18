@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Scripts &amp; Triggers Manager|[%=System.LinkedTitle%]|Tips and Tricks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Endpoint Policy Manager Scripts: Automate Software deployments with PP Scripts and Chocolaty.org</title>
+        <link href="../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Endpoint Policy Manager Scripts: Automate Software deployments with PP Scripts and Chocolaty.org</h1>
+                                    <p>Want a quick way to deliver applications to your end users without having to bring up a server infrastructure? Got remote workers and don't know how to service their software? Hook Chocolaty into <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span>, and... bingo. You're done. Remotely install just about any pre-packaged software from Choco's repository. And use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Scripts to install or un-install. Couldn't be simpler.</p>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/A2ksO8eQS5M" title="Endpoint Policy Manager Scripts: Automate Software deployments with PP Scripts and Chocolaty.org" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <p>Hi, this is Jeremy Moskowitz and in this video, we're going to talk about automating remote installation of software from Chocolaty.org using <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>. Now what I'm about to show you works across all of the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> platforms, either the Group Policy edition, the MDM edition, or the cloud edition, I'm just going to show you the Group Policy edition, but it all works exactly the same. If you don't know that Chocolaty.org, it's a bunch of applications that are pre-packaged and ready to rock. I've got the screen up here demonstrating their policy here that describes that each of the packages kind of goes through a quality check with a human that verifies it and goes through Virus Total and so on. That's pretty good. Of course, it may not be a perfect system, but I just want to put that out there and show you how I like to use it.</p>
+                                    <p>Anyway, the point is that they have literally thousands of packages that you can choose from to actually deploy, and I'm going to show you how to do it using <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>, but I want to do a little walk before I run test, as I do in lots of my videos. I'm going to just show you how Chocolaty works without <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> first and then we're going to add <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> to it second. </p>
+                                    <p>So the first thing I'm going to do is I'm going to just run an ad admin PowerShell. This is administrator. Now this administrative PowerShell. The first thing I want to do is I want to take the Install Chocolaty commanded, which is a one-liner, that puts the Chocolaty guts in place. Hint, hint, we're going to do this exact same thing using <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> in just about three minutes from now. I just want to zip through that. There you go. You can see that the Chocolaty guts are kind of getting installed as we speak and we'll kind of just give that a second to to finish up.</p>
+                                    <p>Then the second thing I want to do is try to install my first Chocolaty package. Now if you look at the packages list, really, it couldn't be easier. You look at the package name and they give you the command, and you copy and paste it in, and you're off to the races. Now, if you want to go one little micro step further, there's a little bit of extra goo you can put on the end of a command like the command can be --force and also force dependencies. So for instance, if I wanted to do 7Zip, which I already have here, so what I could do is I could take this lock, stock, and barrel or I can paste in Choco Install, 7Zip install, --force, --force-dependencies-yes-yes. That's a lot of dashes. The point is that this will forcefully do any kind of requirements behind the scenes that maybe the package won't do naturally. By the time this is over – again, this is a walk before you run with Chocolaty part first. By the time you're done, hey, look at that, 7Zip File Manager didn't exist ten seconds ago, and it exists now. Look at that. It runs. </p>
+                                    <p>Now that we we've done the walk before we run test, now, it's time to do this all on <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> land. What I'm going to do is I'm going to pause the video and revert back to before the time that I had Chocolaty. Hang tight for a second. Okay, I'm back and I've reverted this machine back. It ain't got no Chocolaty on it. So now we're going to do is we're going to go to our – this is my management station here. I was actually play with this earlier, so I'm not going to use any of those. I'm going to start from scratch, so what I'm going to do is create a new GPO and link it to my users. Again, you can do this on the computer side as well. Again, you could do this in <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud. You can take what we're about to do here and export it for wrapping up to MDM. I'm just keeping it simple, and I'm going to do PPChoco Demo.</p>
+                                    <p>I've got my Chocolaty demo GPO. It's linked over to my east sales users and I'm ready to make a little bit of magic. Now remember, the steps – the first step is I got to get the Chocolaty guts deployed to either the computer side or the user side. Remember, how do we do this? We could only do it when it was running with admin rights, ha ha. Well, <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span>'s Scripts Manager has a secret superpower which we're about to use. If we go to Add a New Policy here, we'll then take take that script that was on the Chocolaty website, which is just the the getting going started gut stuff, and we'll take that PowerShell script and just paste it right in lock, stock and barrel running it as a user but with elevated rights. That's the magic, so we can just kind of get that running underneath the hood. We don't need a revert action and we only need to run this one time. Once it's done, we're off to the races. So we'll call this Install Choco's guts and we're done. </p>
+                                    <p>Now the next thing is all about the applications. So we can add a new policy here and maybe what I'll do is I'll just add a new PowerShell script and I'll go ahead and do that same 7Zip install. Choco install 7Zip.install, which I got right off the website. Then I'm putting in a -force and the -force dependencies and the –yes, once again running with elevated rights. Now that's the apply action. Maybe sometimes you want to say goodbye to that app. How do we do that? Well, that's the revert action, and that command is Choco uninstall 7Zip.install --yes, which means quiet in the background and so on. I'm also going to run that thing with elevated rights. I'm going to just run this one time and that's it. </p>
+                                    <p>If I were to do a 7Zip install and uninstall, I'll show both of these. I'll also do maybe one more for good measure, so if I were to make a new policy here, something a little bit bigger – I'll do Filezilla, which is actually a slightly longer download process. If I were to go to PowerShell script – ooh, that's the uninstall for Filezilla. I need to grab this string for install. Bingo, so Choco install Filezilla force, force dependencies, yes, and then do it with elevated rights. Then the revert action would be, again, a PowerShell script take Filezilla and do Choco uninstall Filezilla -yes yes yes. We'll run that with elevated rights and what we'll say here is once again once and then we will say "install/uninstall Filezilla." </p>
+                                    <p>Now again, you could wrap this around item-level targeting, and you could say do this thing when I'm on this IP range. For instance, when I'm in the office, install Filezilla. When I am out of the office. Uninstall Filezilla. This totally works. You could also target it if you wanted to when it's a particular name of a machine, so only deploy this when the computer name is a match or not on VDI or whatever your scenario is. It totally works. I'm not going to do that not, just doing a quick download here. </p>
+                                    <p>Now what we'll do is we'll go back over to our machine I'm already logged on. I don't have Filezilla. I don't have WinZip, and I don't have the Choco guts. What I'm going to just do is run GP Update and then take a minute break. It doesn't take too long. It does have to get through all them first. Once it does, it downloads it directly from the internet. Now Choco has got its own internal servers that you can set up if you want to. You don't have to use the common repository out on the internet if you don't want to, nor can you, I think, if you're trying to do lots, and lots, and lots, and lots of installs. You can set up your own repositories, but this is just a quick, simple&#160; way for me to demonstrate to you that you can use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> scripts to automate the software delivery of your packages to your target machines using Chocolaty if that's what you wanted to do.</p>
+                                    <p>There we go. That was it. So you can see 7Zip and Filezilla. We could just go ahead and click it here and there we go. 7Zip launches and if we were to go to Filezilla here, give that a second, boom, there you go. If you wanted to be fancy, of course you could use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Start Screen and Task bar Manager or File Associations Manager as well, and you can guarantee that the icons are correctly in the right place here and in the task bar and also the file associations. That's easily done. I'm not going to do that here.</p>
+                                    <p>The last thing I do want to, however, show is the uninstallation of these things, for instance, like I said, if you are not in the office or the guy moves from sales to marketing or something like that. I'm just going to unlink the GPO. If this were an MDM or a <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud policy, the exact same thing would happen. The policy would simply update in the background. We'd get the signal, and that signal we said is on revert, perform the Choco Uninstall of both 7Zip and also Filezilla. We'll just give this a second to catch up and then we're not removing Choco's guts. Remember that? We're simply removing the actual applications that we specified If we just wait a minute or two, what we should see is that those applications should just peel right back.</p>
+                                    <p>Alright, so now that GP Update has been run, we just have to wait a minute or two for it to kick in. What we're expecting to see here is when we go back to the Start menu here, what we're looking for is that Filezilla is removed from F. Yep, that's gone, and 7Zip should be also removed here, too. There we go; we can see that it's out of the recently deployed list because now it's recently obliterated.</p>
+                                    <p>\</p>
+                                    <p>That's all there is to it. you can use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> scripts to deliver the Choco guts, the Choco install, and have a revert script that'll perform the Choco uninstall. I love this solution I think it really helps out and gives you the ability to deploy software really quickly to your endpoints no matter where they are. If they're working from home or whatever using Chocolaty. Hope this helps you out. Looking forward to getting you started with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> real soon. Take care.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

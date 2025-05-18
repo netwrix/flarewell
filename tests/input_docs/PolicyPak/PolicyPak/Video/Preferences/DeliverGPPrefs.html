@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|GPO&#160;Export Merge, Admin Templates &amp; Preferences 2.0|[%=System.LinkedTitle%]|Exporting Group Policy Preferences / Using Endpoint Policy Preferences Manager">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Deliver GPPrefs items without using loopback mode</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Deliver GPPrefs items without using loopback mode</h1>
+                                    <p>Not every GPPrefs item can be used on the Computer side. In this demonstration learn how to use Printers, Drive Maps and Internet settings… and deploy them to an OU of computers… regardless of where the user resides.</p>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/9XpPQUJ9Zm4" title="Endpoint Policy Manager:  Deliver GPPrefs items without using loopback mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <h3 id="transcript" style="text-align: center;">GPprefs without loopback</h3>
+                                    <p>Hi. This is Jeremy Moskowitz, former Group Policy MVP and Founder of PolicyPak Software. In this demonstration, I'm going to show you how you can deploy Group Policy Preferences items that would only normally apply on the user side to any computer you want.</p>
+                                    <p>This is kind of an advanced under-the-hood technique, but you're an advanced under-the-hood technique kind of guy, so I'm going to show you how this works. Basically, we're going to do some magic with Group Policy Preferences without <a href="https://www.policypak.com/pp-blog/group-policy-loopback">https://www.policypak.com/pp-blog/group-policy-loopback</a>, but it does require that you're licensed for the PolicyPak On-Prem Suite or the PolicyPak Cloud Suite.</p>
+                                    <p>To set the stage here, you can see I have "West Sales Desktops." Inside my "West Sales Desktops," I have a bunch of computers here. Here are three of those four computers – one, two, and three. For this example, I'm going to be deploying a shared printer to all three of these computers.</p>
+                                    <p>If we take a look at that, if we try to do this by hand in "West Sales Desktops" here, if we try to do this with Group Policy Preferences, "Deploy Shared Printer to all these desktops," you would have to do this on the computer side. If we go over to computer side, "Preferences" and go to "Printers/New," there is no Shared Printer. What are you going to do?</p>
+                                    <p>That's the whole point of this demonstration. There's no way to actually get Shared Printers to be eaten by computers unless you're using PolicyPak and you don't want to use loopback. We'll do this on the user side. What we'll do is we'll just go to "Printers" and we'll create a "New" "Shared Printer" item. I happen to have a printer already set up, "<code>\dcprinter1</code>." That's all you're going to do.</p>
+                                    <p>But this isn't going to work. You know that because you'd have to have a user in this OU, and there are no users in this OU. What I'm going to do now is I'm going to take this item and just drag it to the desktop here. I'm going to save it for later. I'm going to put it into<code> C:share</code>. I already have a "share" set up. I'm just going to drag that file called "printer1.xml" into that share. That's it.</p>
+                                    <p>Now going back to the Group Policy Object, this isn't going to work. So what we're going to do is just "Delete" this. That doesn't really help us very much. We're just going to now use Group Policy "Preferences/Files," and we're going to copy in that file which is in "<code>\dcshare</code>." It's called "printer1."</p>
+                                    <p>We have to copy that to a very special location inside PolicyPak land. What I'm going to do is show you what this special location is. It's "<code>%programdata%PolicyPakXmlDataComputer</code>." That's a folder, so you're putting it to the computer.</p>
+                                    <p>The trick is that you also must give it an actual file name. You can call it the same name "printer1.xml" or else it's not going to work. This is just the way Group Policy Preferences work. You have to give it the "Source" and give it the entire "Destination." The secret location is "<code>%programdata%PolicyPakXmlDataComputer</code>" and then give it a name like whatever.xml.</p>
+                                    <p>What we're doing is we're taking this Group Policy Preferences item and we're jamming it into every computer by means of delivery using Group Policy Preferences. No loopback involved, I promise.</p>
+                                    <p>Let's take a look. I'm logged on as a guy called "eastsalesuser1," so no loopback required. If I just go here and run "<code>GP Update</code>," we should get that file delivered using Group Policy Preferences. It's getting delivered to the secret PolicyPak location, and that is saying zap that printer down even though it's a user side only thing. There it is. Perfect. Excellent.</p>
+                                    <p>Let's go to the next guy here. No printer. This is "westsalesuser1," so not in this OU either. If we run "<code>GP Update</code>" on this guy, let's take a look and see if we get that printer the way we expect. Alright, let's give it a second or two here. Bingo! Just like that.</p>
+                                    <p>If we go over to the third machine, you're getting the picture, I'm sure. We'll run "<code>GP Update</code>" and we'll wait for this to happen. This is a totally different guy. He's an "Admin," so he's not in this OU either. What I'm showing you here is that you're able to deliver Group Policy Preferences items in a unique way using not loopback if you're willing to copy the file in.</p>
+                                    <p>This should also work for Internet settings and drive maps and other things that are only on the user side, but I figured I would show you Shared Printers because I think it's the most interesting of the three.</p>
+                                    <p>Okay, thanks so very much, and I hope this helps you out.</p>
+                                    <p>Talk to you soon.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Clean Up NetSuite" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Clean Up Unused Customizations</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Clean Up Unused Customizations</h1>
+                                        <p><span class="mc-variable General.ProductName variable">Platform Governance for NetSuite</span> has powerful tools to analyze, organize and delete unused customizations in a safe and secure manner.</p>
+                                        <p>Cleaning up fields has a direct impact on system performance.  Larger records load slower than small ones. When a record loads in NetSuite, the system formulates the SQL request, retrieves the data from the database, assembles the interface, retrieves any related list data or build the corresponding interface element (in edit mode) amongst other steps. While these are all highly optimized, records with large field sizes load slower. There can also be impact on system performance from alerts and other searches applied on demand to data when it is being saved (particularly if there are custom SQL formulas). The impact is dependent on the extent of the change and what else is causing performance lag.</p>
+                                        <p>You can organize clean up activities by record types to start with larger groups of customizations before progressing to individual customizations. For example you could progress in the following order:</p>
+                                        <ul>
+                                            <li><b>Bundles</b>: Removing unused bundles  eliminates large groups of records and other customizations</li>
+                                            <li><b>Records</b>: Removing records eliminates large groups of customizations</li>
+                                            <li><b>Forms/Scripts</b>: Depending on your requirements, you can move unused forms, scripts, fields and associated customizations to progress through your account</li>
+                                        </ul>
+                                        <p>Cleaning up fields makes the account more understandable and reduces the likelihood of confusion.</p>
+                                        <p>The basic clean up process:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p><a href="#Analyze" class="MCXref xref">Analyze Unused Customizations and Identify Dependencies</a>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p><a href="#Create" class="MCXref xref">Create Change Requests</a>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p><a href="#Archive" class="MCXref xref">Archive Field Data</a>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p><a href="#Back" class="MCXref xref">Back Up Searches, Scripts and Workflows</a>
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p><a href="#Delete" class="MCXref xref">Delete Customizations</a>
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p><a href="#Close" class="MCXref xref">Close the Change Request</a>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <div class="toc-macro"/><h2 id="analyze_unused_customizations_and_identify_dependencies"><a name="Analyze" id="Analyze"/>Analyze Unused Customizations and Identify Dependencies</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Clean Up</b> &gt; <b>Unused Customizations</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter filtering information to streamline your search. Searching on all unused customizations can take a long time to load and can time out.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/customizations_cleanup_unused_filters.png" title="Enter criteria prior to searching for unused customizations"/>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="img-inside-p">Click <b>Search</b>.<br/>				The results are coded with a flag in the first column and the text either blue (Inactive owner) or black. <br/><img src="../Resources/Images/customizations_cleanup_key.png" title="Cleanup Key"/><br/>				You can hover over the flag for more information. If the text is blue, <b>Inactive Owner</b> is displayed regardless of the flag color.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/customizations_cleanup_list.png"/>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click <b>View</b> next to each Customization to investigate. You can right-click on <b>View</b> and select <b>Open in a new tab or window</b> to keep your results page available.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/customizations_cleanup_view_record.png" title="View the Customization Record"/>
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Use the <b>ERD</b>, <b>Base Record</b> and <b>Related Objects</b> links to review the dependencies.<br/>												If you have a <b>Documentation and Optimization</b> license:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Click <b>Edit</b> if you decide it is safe to delete the customization.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Select <b>Actions</b> &gt; <b>Delete</b></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Click <b>Save</b></p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Return to your Results page and continue your investigations.
+				
+				<br/>If you have an <b>Intelligent Change Management</b> or <b>Enterprise</b> license, continue with these steps using the Change Management features.</p>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                        <h2 id="create_change_requests"><a name="Create" id="Create"/>Create Change Requests</h2>
+                                        <p>You can group the customizations you are considering to delete and create a change request that includes those customizations. You can do this by editing the <b>Create Customizations</b> or open an existing change request and add the customizations in the <b>Impacted Customizations</b> under <b>Scope</b>.</p>
+                                        <p>The Impact Analysis  is available in the Advanced Change Management Module. This appears as <b>Clean Up</b> or <b>Impact Analysis</b> as a tab at the bottom of the Change Request.  It provides specific warnings and status for each customization attached to the Change Request.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/cleanupimpactanalysis.png"/>
+                                        </p>
+                                        <p>The <b>Impact Analysis</b> tab has the following elements:</p>
+                                        <p><b>Can be safely deleted or modified</b>: A list of the customizations linked to the change request that do not trigger any of the warnings below.</p>
+                                        <p><b>Archiving Status</b>: Users can set the archiving status for fields to be deleted.  Archive status can have the following values:
+			</p><ul><li>Pending</li><li>Complete</li><li>Skip</li><li>Manually Complete</li></ul><p/>
+                                        <p><b>Cannot Be Safely Deleted or Modified</b>: A list of the customizations linked to the change request that have triggered one of the following warnings:
+			</p><ul><li><b>Active Processes</b>: this customization is linked to an active process.</li><li><b>Critical Searches:</b> this customization is used in a formula or filter of a search and could cause the search to break if modified or deleted.  Fields that are only in criteria or results of searches do not trigger this warning since the search would still function.  Searches that haven’t been used in over a year do not trigger this warning.</li><li><b>Dependent Scripts</b>: this customization is used in a script.</li><li><b>Recently Used</b>: this customization has been used in the last 6 months.</li><li><b>Dependent Workflows</b>: this customization is used in a workflow.</li><li><b>Dependent Integrations</b>: this customization is used in an integration with another system.</li></ul><p/>
+                                        <p>Follow your organization’s change management policies and procedures as well as NetSuite's best practices to determine if it is appropriate to delete any of the customizations.</p>
+                                        <h2 id="archive_field_data"><a name="Archive" id="Archive"/>Archive Field Data</h2>
+                                        <p>Once a Change Request has been approved the <b>Archive Customizations</b> button is available.  When clicked, any fields in the change request are archived and stored in the <b>File Cabinet</b>.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/archive.png"/>
+                                        </p>
+                                        <p>The status of those fields changes to <b>Archived</b>. The customization moves to the <b>Can Be Safely Deleted or Modified</b> tab.</p>
+                                        <h2 id="back_up_searches_scripts_and_workflows"><a name="Back" id="Back"/>Back Up Searches, Scripts and Workflows</h2>
+                                        <p>While there is no mass un-delete functionality, critical information about scripts, searches and workflows are preserved in the Customization Record.</p>
+                                        <ul>
+                                            <li><b>Searches</b>: All fields, filters, criteria and other search elements are documented in the Searches tab.</li>
+                                            <li><b>Scripts: </b>A script archive file is attached to the customization record.</li>
+                                            <li><b>Workflow: </b>Workflow actions, states, fields, conditions and other elements are documented in the Related Workflows tab.</li>
+                                        </ul>
+                                        <p>The customization record of deleted customizations are inactive and accessible for future reference.</p>
+                                        <h2 id="delete_customizations"><a name="Delete" id="Delete"/>Delete Customizations</h2>
+                                        <p>There are two choices for deleting customizations:</p>
+                                        <ul>
+                                            <li>You can go to the customization record and delete it manually</li>
+                                            <li>If you have the Advanced Change Management Module, you can use the go to the <b>Can be safely deleted or modified tab</b> at the bottom of the change request to delete the customizations.</li>
+                                        </ul>
+                                        <h2 id="close_the_change_request"><a name="Close" id="Close"/>Close the Change Request</h2>
+                                        <p>Once all activities are complete, mark the change request as complete.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

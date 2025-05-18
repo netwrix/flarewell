@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js csstransforms3d _Skins_HTML5___Side_Navigation" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Home Page|Integration Guide|Network Configuration|Agent Configuration">
+    <head data-mc-changes="10">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../../Resources/TableStyles/Sb Table 1.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title data-mc-changes="10">Application Settings</title>
+        <link href="../../../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body class="" data-url="../../../../integration-guide/network-configuration/agent-configuration/appsettings/">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../../index.html" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Application Settings</h1>
+                                    <p>This section describes the settings available in the agent's appsettings.json file, located in the agent's working directory or in environment variables.</p>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>JSON files can contain any additional information that you might find useful. See the example below.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <p>For example, in order to store the agent's address, we can add:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><br />appsettings.json<br /><br />"UsercubeAgent": {<br />&#160;&#160;"Url": "&lt;http://localhost:1234&gt;"<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>As <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;does not know any object named <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> Agent, its content will be ignored, but it can still be used to store information for human use.</p>
+                                    <p>The appsettings set allows the following attributes and sections:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 110px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>ApplicationUri<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Uri</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Server's listening URI. Used by the agent to send requests to the server.</p>
+                                                    <p>Example:</p>
+                                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br />{&#160;&#160;"ApplicationUri": "<br /><span style="color: #63a35c; ">&lt;https://usercubeserver.contoso.com:5000&gt;</span>"<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Jobs<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Job</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Settings to configure all jobs with common values.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Scheduler<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Scheduler</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Settings to configure <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s scheduler.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>TaskTimeoutSupplement<br />default value: 0</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Int32</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Additional time (in minutes) for the Invoke-Job tool's Timeout property.</p>
+                                                    <p>Example:</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br />{&#160;&#160;<br />&#160;&#160;"TaskTimeoutSupplement": 10<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>InstallationDirectoryPath<br />default value: Usercube-agent.exe directory</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Path of the installation directory.<br />It is used to read other configuration files.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>EncryptionCertificate<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>EncryptionCertificate</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Settings to configure the encryption of specific files.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>IdentityServer<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>IdentityServer</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Settings to configure the agent's encrypted network communication, for example with the server or a browser.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Authentication<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Authentication</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Settings to configure end-user authentication, for example for users to launch a job from the UI.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Serilog<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Logger setting</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Settings to configure the logging service, complying to the Logger properties and structure. See the <a href="../../../monitoring/index.html" target="_parent" title="Monitoring" alt="Monitoring" class="MCXref xref">
+              
+              Monitoring
+              </a> topic for additional information.</p>
+                                                    <p>Example:</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br />{&#160;&#160;<br />"Serilog": {&#160;&#160;&#160;&#160;<br />"WriteTo": [ "Console" ],&#160;&#160;&#160;&#160;<br />"MinimumLevel": {&#160;&#160;&#160;&#160;&#160;&#160;<br />"Default": "Error",&#160;&#160;&#160;&#160;&#160;&#160;<br />"Override": {&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />"Usercube": "Information"&#160;&#160;&#160;&#160;&#160;&#160;<br />&#160;&#160;}&#160;&#160;&#160;&#160;<br />&#160;&#160;}&#160;&#160;<br />&#160;&#160;}<br />}<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Cors<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Cors</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Settings to configure the agent's <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/CORS">CORS policy</a>, which is useful when using non-integrated agents.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>ApplicationInsights<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>ApplicationInsights</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Settings to plug to and configure the <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview">AppInsights</a> monitoring tool.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p><a name="tempfolderpath"></a>TempFolderPath<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Path to the temporary folder which contains:<br /></p>
+                                                    <ul>
+                                                        <li>ExportOutput: directory storing data exported from connectors.</li>
+                                                        <li>JobLogs: directory storing task instance logs.</li>
+                                                        <li>Reports: directory storing generated reports.</li>
+                                                        <li>Packages: directory storing the downloaded package logos.</li>
+                                                        <li>PolicySimulations: directory storing the files generated by policy simulations.</li>
+                                                        <li>ProvisioningCache.txt: file storing the clustered provisioning cache.  When enabled, this file can be used to coordinate the API cache among clusters.</li>
+                                                        <li>CorrelationCache.txt</li>
+                                                        <li>RiskCache.txt</li>
+                                                        <li>ExpressionCache.txt</li>
+                                                        <li>scheduler.lock</li>
+                                                        <li>connector.txt</li>
+                                                        <li>container.reset.txt: file acting as a reset command for <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s server, i.e. any change to this file triggers the reset service, thus reloading all the services instantiated by the server. Note that this path can be overridden by <strong>ResetSettings</strong> &gt; <strong>FilepathResetService</strong>.</li>
+                                                        <li>Mails: directory storing the email messages. Note that this path can be overridden by <strong>ResetSettings</strong> &gt; <strong>PickupDirectory</strong>.</li>
+                                                        <li>Deployment</li>
+                                                    </ul>
+                                                    <p>these elements can be removed, but make sure to restart the server after doing so.</p>
+                                                    <p>Example:</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />{&#160;&#160;<br />"TempFolderPath": "../Temp"<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p><a name="workfolderpath"></a>WorkFolderPath<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Path of the work folder which contains:<br /></p>
+                                                    <ul>
+                                                        <li>Collect: directory storing the CSV source files exported by connectors.</li>
+                                                        <li>ProvisioningOrders: directory storing the orders generated by the server.</li>
+                                                        <li>FulfillPowerShell: PowerShell provisioner's working directory.</li>
+                                                        <li>FulfillRobotFramework: Robot Framework's provisioner working directory.</li>
+                                                        <li>ExportCookies: directory storing the cookies used for incremental export.</li>
+                                                        <li>Synchronization: directory storing the agent's data collection results.</li>
+                                                        <li>Upload: directory storing the uploaded media like uploaded pictures, before they are inserted into the database.</li>
+                                                        <li>appsettings.connection.json</li>
+                                                    </ul>
+                                                    <p>These elements must not be removed, because doing so may disrupt <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s execution after restarting.</p>
+                                                    <p>Example:</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br />{&#160;&#160;<br />"WorkFolderPath": "../Work"<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>JobLaunchTimeout<br />default value: 7500</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Time period (in milliseconds) after which, if a launched job has not started, it is considered in error.</p>
+                                                    <p>Example:</p>
+                                                    <div class="codeSnippet">
+                                                        <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />{&#160;&#160;<br />"JobLaunchTimeout": 9000<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>InvokeSqlCommands<br />default value: null</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>List of parameter sets used to override InvokeSqlCommandTasks' SQLInputFile and OutputPath parameters from the XML configuration. See the <a href="../../../toolkit/xml-configuration/jobs/tasks/agent/invokesqlcommandtask/index.html" target="_parent" title="InvokeSqlCommandTask" alt="InvokeSqlCommandTask" class="MCXref xref">Invoke Sql Command Task</a> topic for additional information.<br /></p>
+                                                    <p>For each task to override, the key must be the task's identifier.</p>
+                                                    <p>Example:</p>
+                                                    <div class="codeSnippet">
+                                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json&#160;<br />{&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;"InvokeSqlCommands": {&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;"InvokeSqlCommandTask_Identifier": {&#160;&#160;&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;"SQLInputFile": "YourInputFilePath",&#160;&#160;&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;"OutputPath": "YourOutputFilePath"&#160;&#160;},&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;}<br />}</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="jobs">Jobs</h2>
+                                    <p>Below is an example of job that can be executed by the agent.</p>
+                                    <p>For example:</p>
+                                    <div class="codeSnippet">
+                                        <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />{<br />&#160;&#160;...<br />&#160;&#160;"Jobs": {<br />&#160;&#160;&#160;&#160;"MaxTaskBatchSize": "2"<br />&#160;&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>MaxTaskBatchSize<br />default value: 5</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Int64</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Maximum number of tasks that can be launched simultaneously, thus avoiding timeout issues.<br />When executing a job, <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;launches simultaneously the tasks of a same Level. See the <a href="../../../toolkit/xml-configuration/jobs/job/index.html" target="_parent" title="Job" alt="Job" class="MCXref xref">
+              
+              Job
+              </a> topic for additional information. If the number of same-level tasks exceeds MaxTaskBatchSize, then <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span> inserts new levels. These effective levels can be seen in the job's logs or with the Usercube-Get-JobSteps executable. See the <a href="../../../executables/references/get-jobsteps/index.html" target="_parent" title="Usercube-Get-JobSteps" alt="Usercube-Get-JobSteps" class="MCXref xref">
+              
+              Usercube-Get-JobSteps
+              </a> topic for additional information.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="scheduler">Scheduler</h2>
+                                    <p>Below is an example of scheduling and a list of attributes.</p>
+                                    <p>For example:</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />{<br />&#160;&#160;...<br />&#160;&#160;"Scheduler": {<br />&#160;&#160;&#160;&#160;"Enabled": "true",<br />&#160;&#160;&#160;&#160;"MaxLockWatchTime": 3600<br />&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Enabled<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>True to activate <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s scheduler.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>MaxLockWatchTime<br />default value: 1800</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Int32</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Time period (in seconds) to spend watching for the scheduler's lock file before launching it.<br /></p>
+                                                    <p>When set to 0 the duration is infinite, and when set to a negative value the scheduler launch fails if the lock file already exists.<br />This parameter prevents a failure if <span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>'s scheduler has already been launched from another source.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="encryptioncertificate">Encryption Certificate</h2>
+                                    <p>This information can be set one of two ways:</p>
+                                    <ul>
+                                        <li>
+                                            <p>As a <a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">Public Key Cryptography Standards (PKCS) #12</a> archive (also called <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/personal-information-exchange---pfx--files" style="text-decoration: none;">Personal Information Exchange file</a> or .pfx file) stored in the Agent's host file system. The archive contains both the public key certificate and the private key.</p>
+                                        </li>
+                                        <li>
+                                            <p>As a certificate from a Windows' <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/working-with-certificates#certificate-stores" style="text-decoration: none;">certificate store</a> identified by SubjectDistinguishedName or by Thumbprint. The Windows certificate also contains both the public key certificate and the private key.</p>
+                                            <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Netwrix recommends using Windows' certificate store.
+<br />On the other hand, the PFX file takes priority over Windows' certificate, which means that when File is specified then the PFX certificate is used, even if the options for Windows' certificate are specified too.<br />In both ways, missing and/or incorrect settings trigger an error and no certificate is loaded.</p>
+                                        </li>
+                                    </ul>
+                                    <p class="Bold_Subheading">As a PFX file</p>
+                                    <p>For example:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>{<br />&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;"EncryptionCertificate": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"File": "<span style="color: #63a35c; ">&lt;C:/UsercubeAgentContoso/contoso.pfx&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Password": "<span style="color: #63a35c; ">&lt;oarjr6r9f00&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;}<br />&#160;}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The archive is set using the following attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>File<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive path on the host file system.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Password<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive password.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Storing a .pfx file password in plain text in a production environment is strongly discouraged. It should always be encrypted using the Usercube-Protect-CertificatePassword tool. See<a href="../../../executables/references/protect-certificatepassword/index.html" target="_parent" title="Identity Manager-Protect-CertificatePassword" alt="Identity Manager-Protect-CertificatePassword" class="MCXref xref">
+              
+              Usercube-Protect-CertificatePassword
+              </a> topic for additional information.</p>
+                                    <p>The archive is set using the following attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>File<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive path on the host file system.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Password<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive password.<br /></p>
+                                                    <p>storing a .pfx file's password in plain text in a production environment is strongly discouraged. It should always be encrypted using the Usercube-Protect-CertificatePassword.exe tool. See the<a href="../../../executables/references/protect-certificatepassword/index.html" target="_parent" title="Identity Manager-Protect-CertificatePassword" alt="Identity Manager-Protect-CertificatePassword" class="MCXref xref">
+              
+              Usercube-Protect-CertificatePassword
+              </a> topic for additional information.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Bold_Subheading">As a Certificate in the Windows Store</p>
+                                    <p>For example:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>&#160;{<br />&#160;&#160;&#160;&#160;...<br />&#160;&#160;&#160;&#160;"EncryptionCertificate": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"DistinguishedName":"<span style="color: #63a35c; ">&lt;UsercubeContoso&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"StoreLocation": "<span style="color: #63a35c; ">&lt;LocalMachine&gt;</span>",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"StoreName": "<span style="color: #63a35c; ">&lt;AuthRoot&gt;</span>"<br />&#160;&#160;&#160;&#160;&#160;}<br />&#160;}<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The Windows certificate is set using these attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Details</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>DistinguishedName<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>SubjectDistinguishedName of the store certificate.<br /></p>
+                                                    <p>It is required when Thumbprint is not specified.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Thumbprint<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Thumbprint of the store certificate.<br /></p>
+                                                    <p>It is required when DistinguishedName is not specified.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>StoreLocation<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Location of the relevant Windows certificate store: LocalMachine or CurrentUser.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>StoreName<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Name of the relevant Windows certificate store.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Bold_Subheading">Using Azure Key Vault</p>
+                                    <p>If the certificate is saved in Azure Key Vault, we must define the certificate identifier and the Vault connection. See the <a href="../azure-key-vault/index.html" target="_parent" title="Azure Key Vault" alt="Azure Key Vault" class="MCXref xref">Azure Key Vault</a> topic for additional information.</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><br />"<span style="color: #63a35c; ">&lt;EncryptionCertificate&gt;</span>": {<br />&#160;&#160;&#160;&#160;"CertificateAzureKeyVault": "<span style="color: #63a35c; ">&lt;CertificateIdentifier&gt;</span>"<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <h2 id="identityserver">Identity Server</h2>
+                                    <p>Just like the Encryption Certificate, this information can be set one of two ways.</p>
+                                    <p class="Bold_Subheading">As a PFX file</p>
+                                    <p>For example:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><br />appsettings.json<br />"<span style="color: #63a35c; ">&lt;IdentityServer&gt;</span>": {<br />&#160;&#160;"X509KeyFilePath": "<span style="color: #63a35c; ">&lt;./Usercube.pfx&gt;</span>",<br />&#160;&#160;"X509KeyFilePassword": "<span style="color: #63a35c; ">&lt;oarjr6r9f00&gt;</span>"<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The archive is set using the following attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>X509KeyFilePath<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive path on the agent's host file system.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>X509KeyFilePassword<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p><a href="https://en.wikipedia.org/wiki/PKCS_12" style="text-decoration: none;">PKCS #12</a> archive password.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>Storing a .pfx file password in plain text in a production environment is strongly discouraged. It should always be encrypted using the Usercube-Protect-CertificatePassword tool. See the <a href="../../../executables/references/protect-certificatepassword/index.html" target="_parent" title="Identity Manager-Protect-CertificatePassword" alt="Identity Manager-Protect-CertificatePassword" class="MCXref xref">
+              
+              Usercube-Protect-CertificatePassword
+              </a> topic for additional information.</p>
+                                    <p class="Bold_Subheading">As a Certificate in the Windows Store</p>
+                                    <p>For example:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br />"<span style="color: #63a35c; ">&lt;IdentityServer&gt;</span>": {<br />&#160;&#160;"X509SubjectDistinguishedName":"<span style="color: #63a35c; ">&lt;UsercubeContoso&gt;</span>",<br />&#160;&#160;"X509StoreLocation": "<span style="color: #63a35c; ">&lt;LocalMachine&gt;</span>",<br />&#160;&#160;"X509StoreName": "<span style="color: #63a35c; ">&lt;AuthRoot&gt;</span>"<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The certificate is set using these attributes:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 45px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>X509StoreLocation<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>Location of the relevant Windows certificate store: LocalMachine or CurrentUser.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>X509StoreName<br />(required)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>Name of the relevant Windows certificate store.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>X509SubjectDistinguishedName<br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>SubjectDistinguishedName of the certificate.<br /></p>
+                                                    <p>It is required when X509Thumbprint is not defined.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>X509Thumbprint <br />(optional)</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>Thumbprint of the certificate.<br /></p>
+                                                    <p>It is required when X509SubjectDistinguishedName is not defined.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>If you are using the certificate provided in the SDK, the agent will fail when launching. You must create your own certificate.</p>
+                                    <p>You can get the DistinguishedName of the certificate using OpenSSL:</p>
+                                    <div class="codeSnippet">
+                                        <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><br />openssl x509 -noout -in {certificate file name with full path} -subject<br /></code></pre>
+                                        </div>
+                                    </div>
+                                    <h2 id="authentication">Authentication</h2>
+                                    <p>An example of authentication and a list of attributes.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />{<br />&#160;&#160;...<br />&#160;&#160;"Authentication": {<br />&#160;&#160;&#160;&#160;"Enabled": true,<br />&#160;&#160;&#160;&#160;"RequireHttpsMetadata": true<br />&#160;&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" style="width: 45px;" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Enabled<br />default value: true</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>True to enable authentication.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>RequireHttpsMetadata<br />default value: true</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body2">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body2">
+                                                    <p>True to set HTTPS required for the discovery endpoint.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="cors">Cors</h2>
+                                    <p>An example of cors and a list of attributes.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>appsettings.json<br /><br />{<br />&#160;&#160;...<br />&#160;&#160;"Cors": {<br />&#160;&#160;&#160;&#160;"AllowAnyHeader": true,<br />&#160;&#160;&#160;&#160;"AllowAnyMethod": false,<br />&#160;&#160;&#160;&#160;"AllowCredentials": true<br />&#160;&#160;}<br />}</code></pre>
+                                        </div>
+                                    </div>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Description</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>AllowAnyHeader<br />default value: false</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body1">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body1">
+                                                    <p>True to enable the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers" style="text-decoration: none;">Access-Control-Allow-Headers: *</a> header in the agent's response to a <a href="https://developer.mozilla.org/en-US/docs/Glossary/preflight_request" style="text-decoration: none;">preflight request</a>.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body2">
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>AllowAnyMethod<br />default value: false</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyE-Column1-Body2">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyD-Column1-Body2">
+                                                    <p>True to enable the <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Methods" style="text-decoration: none;">Access-Control-Allow-Methods: *</a> header in the agent's response to a <a href="https://developer.mozilla.org/en-US/docs/Glossary/preflight_request" style="text-decoration: none;">preflight request</a>.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>AllowCredentials<br />default value: false</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>Boolean</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>True to enable the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials" style="text-decoration: none;">Access-Control-Allow-Credentials: true</a> header in the agent's response to a <a href="https://developer.mozilla.org/en-US/docs/Glossary/preflight_request" style="text-decoration: none;">preflight request</a>.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="applicationinsights">Application Insights</h2>
+                                    <p><span class="mc-variable IdentityManager.Product_Stort_Name variable">Identity Manager</span>&#160;supports the Application Insights integration. It means that you can monitor the lifecycle of the application through a dedicated interface, which can be useful to measure performance, observe how the application is used or detect performance anomalies.</p>
+                                    <p>For example:</p>
+                                    <p>Code attributes enclosed with &lt;&gt; need to be replaced with a custom value before entering the script in the command line.</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><br />appsettings.json<br /><br />{<br />&#160;&#160;...<br />&#160;&#160;"ApplicationInsights": {<br />&#160;&#160;&#160;&#160;"InstrumentationKey": "<span style="color: #63a35c; ">&lt;AppInsights instance<span style="color: #df5000; ">'s key&gt;"</span></span><br /><span style="color: #63a35c; "><span style="color: #df5000; ">&#160;&#160;}</span></span><br /><span style="color: #63a35c; "><span style="color: #df5000; ">}</span></span></code></pre>
+                                        </div>
+                                    </div>
+                                    <p>The application insights details are:</p>
+                                    <table style="mc-table-style: url('../../../../../Resources/TableStyles/Sb Table 1.css');margin-left: auto;margin-right: auto;" class="TableStyle-Sb_Table_1" cellspacing="21">
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <col class="TableStyle-Sb_Table_1-Column-Column1" />
+                                        <thead>
+                                            <tr class="TableStyle-Sb_Table_1-Head-Header1">
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Name</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadE-Column1-Header1">
+                                                    <p>Type</p>
+                                                </th>
+                                                <th class="TableStyle-Sb_Table_1-HeadD-Column1-Header1">
+                                                    <p>Details</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Sb_Table_1-Body-Body1">
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>InstrumentationKey<br />default value: null</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyB-Column1-Body1">
+                                                    <p>String</p>
+                                                </td>
+                                                <td class="TableStyle-Sb_Table_1-BodyA-Column1-Body1">
+                                                    <p>Key linked to the AppInsights instance to which the server's logs, requests, dependencies and performance are to be sent. See Microsoft's documentation to create an<a href="https://docs.microsoft.com/en-us/azure/azure-monitor/app/create-new-resource" style="text-decoration: none;"> instrumentation key</a>.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="Note-1" data-mc-autonum="&lt;b&gt;NOTE: &lt;/b&gt;"><span class="autonumber"><span class="Note"><b>NOTE: </b></span></span>The logs sent to AppInsights are configured through the Logger properties. See the <a href="../../../monitoring/index.html" target="_parent" title="Monitoring" alt="Monitoring" class="MCXref xref">
+              
+              Monitoring
+              </a> topic for additional information.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

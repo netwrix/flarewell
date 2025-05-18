@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Financial Controls" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Example: Set an Agent Control</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Example: Set an Agent Control</h1>
+                                        <p id="docs-internal-guid-f3cb77f7-0689-116e-4013-1610047dcd88">Here is the process to create a control to monitor changes:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p><a href="#CreateSavedSearch" class="MCXref xref">Create a Saved Search</a>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p><a href="#CreateCustomizationRecord" class="MCXref xref">Create the Customization Record</a>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p><a href="#DesignateControl" class="MCXref xref">Designate the Customization as a Control</a>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <div class="toc-macro"/><h2 id="create_a_saved_search"><a name="CreateSavedSearch" id="CreateSavedSearch"/>Create a Saved Search</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b>Lists</b> &gt; <b>Search</b> &gt; <b>Saved Searches</b> &gt; <b>New</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Select <b>Employee</b> for the <b>Search Type</b></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Add <b>Control Employee Purchase Limit and Purchase Approval Limit Control</b> for <b>Search Title</b></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Check <b>Public</b></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Add filters on the <b>Criteria </b>tab:</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/agent_example1.png" title="Create the Saved Search for the Example"/>
+                                                </p>
+                                                <table count-columns="4" class="TableStyle-Standard table-with-header" cellspacing="0">
+                                                    <colgroup><col class="TableStyle-Standard-Column-Regular"/>
+                                                    <col class="TableStyle-Standard-Column-Regular"/>
+                                                    <col class="TableStyle-Standard-Column-Regular"/>
+                                                    <col class="TableStyle-Standard-Column-Regular"/>
+                                                    </colgroup><thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <th class="TableStyle-Standard-HeadE-Regular-Header1">Select Filter</th>
+                                                            <th class="TableStyle-Standard-HeadE-Regular-Header1">What to Set</th>
+                                                            <th class="TableStyle-Standard-HeadE-Regular-Header1">Resulting<br/>Description</th>
+                                                            <th class="TableStyle-Standard-HeadD-Regular-Header1">Formula To Set</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="body-for-table-with-header">
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>Inactive</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>Select <b>No</b></p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>Is false</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p> </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>Formula (Numeric)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>
+                                                                    </p><p>Select <b>less than</b> for Formula (Numeric)<br/>Enter <b>0</b> for Value</p>
+                                                                <p/>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>is less than 0</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p><b>{datecreated}-{lastmodifieddate}</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>System Notes Fields</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>
+                                                                    </p><p>Select <b>Field</b><br/>Select <b>any of</b><br/>Click <b>Purchase Approval Limit</b><br/>Ctrl-Click <b>Purchase Limit</b></p>
+                                                                <p/>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>Is any of Purchase Approval Limit, Purchase Limit</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p> </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                                <p>System Notes Fields</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                                <p>Select <b>Date</b><br/>Select <b>on or after</b><br/>Select <b>yesterday</b></p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                                <p>is on or after yesterday</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                                <p> </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table count-columns="2" class="TableStyle-Standard table-with-header" cellspacing="0">
+                                                    <colgroup><col class="TableStyle-Standard-Column-Regular"/>
+                                                    <col class="TableStyle-Standard-Column-Regular"/>
+                                                    </colgroup><thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <th class="TableStyle-Standard-HeadE-Regular-Header1">Field</th>
+                                                            <th class="TableStyle-Standard-HeadD-Regular-Header1">Summary Type</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="body-for-table-with-header">
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>Name</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Group</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>System Notes: Field</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Group</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>System Notes: Date</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Maximum</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>System Notes: Old Value</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Group</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>System Notes: New Value</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Group</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>System Notes: Set by</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Group</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                                <p>Internal ID</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                                <p>Group</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="6">
+                                                <p>Open the <b>Results</b> tab. You can Remove all to clear the defaults. Add the following fields:
+            </p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/agent_example2.png" title="Adding the Results columns"/>
+                                                </p>
+                                            </li>
+                                            <li value="7">
+                                                <p><b>Save</b> the search.</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Note the assigned <b>ID</b> for your new Search. For example, <b>customsearch5673</b></p>
+                                            </li>
+                                        </ol>
+                                        <h2 id="create_the_customization_record"><a name="CreateCustomizationRecord" id="CreateCustomizationRecord"/>Create the Customization Record</h2>
+                                        <p>You can wait until the next AutoSpider run, or manually create the customization record:</p>
+                                        <ol>
+                                            <li value="1">Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Customizations</b> &gt; <b>Customization</b> &gt; <b>New</b></li>
+                                            <li value="2">Enter information in the required fields:
+	        <ul><li><p><b>Custom Form</b>: Use the <b>Simplified Form</b>, or select a different form if you want to add a <b>Process/Step</b>, such as <b>Financial</b>.</p></li><li><p><b>Name</b>: Best practice is to enter a meaningful <b>Name</b> and <b>Description</b>. For this example, <b>Name</b> is the same as the Saved Search:<br/><b>Control Employee Purchase Limit and Purchase Approval Limit Control</b></p></li><li><p><b>Type</b>: Select <b>Search</b></p></li><li><p><b>Script ID</b>: Enter the <b>ID</b> from your Saved Search. For example, <b>customsearch5673</b></p><p class="img-inside-p"><img src="../Resources/Images/agent_example3.png" title="Create the Customization for the Example"/></p></li></ul></li>
+                                            <li value="3">
+                                                <p><b>Save</b> the customization.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click <b>Respider Now</b><br/>Leave the Customization Record open.</p>
+                                            </li>
+                                        </ol>
+                                        <h3 id="designate_the_customization_as_a_control"><a name="DesignateControl" id="DesignateControl"/>Designate the Customization as a Control</h3>
+                                        <p>From the customization record:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Click <b>Edit</b></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Open the <b>Controls </b>tab.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Check the <b>Control</b> box.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Fill in the following fields:</p>
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <p><b>Behavior</b>: Select <b>Log</b>.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Controlled Process</b>: If you added a <b>Process/Step</b> when you created the customization, select it here.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Risk/Requirement</b>: Assign or create a new Control Process and Risk Requirement. For example, <b>1259 Purchase Order Controls</b>.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Control Error/Warning</b>:  warnings or errors are displayed in this box.</p>
+                                                </li>
+                                                <li>
+                                                    <p><b>Cross Match Control</b>, <b>Cross Match Field</b> and <b>Cross Match Operator</b> can be set to effectively  perform a double join to filter your data and eliminate false positives. For example, a script to create an invoice from the user interface is saved to be run as administrator. A user creates the invoice from the interface as part of their work flow. Running a search for administrator-touched transactions causes false positives as the user is not an administrator. Using cross match, the first Saved Search is for all transactions by an administrator. The second Saved Search is an employee search using the administrator role. Cross Match returns the intersection of those two searches, showing only the transactions performed by administrators.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Check the <b>Large Control</b> box if the expected results for this control are over 1000.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Set other optional values.</p>
+                                                </li>
+                                            </ul>
+                                            <li value="5">
+                                                <p><b>Save</b> the record.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/agent_example4.png" title="Designating the customization as a control"/>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <p>The control is triggered as configured and all instances are logged under <b>Unresolved Control Incidents</b>, <b>Resolved Control Incidents</b> or <b>Pre-approved Control Incidents</b>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

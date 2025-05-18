@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_CSH_NPR_Skin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="online">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="msapplication-config" content="../../../../Skins/Favicons/browserconfig.xml" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" /><title>Configure SonicWall Devices</title>
+        <!-- Google Tag Manager -->
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NKJ33G');</script> -->
+        <!-- End Google Tag Manager -->
+        <link rel="shortcut icon" href="https://img.netwrix.com/fav.ico" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Resources/TableStyles/Basic.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link rel="shortcut icon" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="32x32" href="../../../../Skins/Favicons/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="../../../../Skins/Favicons/favicon-16x16.png" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1260px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJ33G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2538779-18">
+                                    </script>
+                                    <script>/* <![CDATA[ */
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-2538779-18');
+		/* ]]> */</script>
+                                    <div class="searchbar">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_Search mc-component">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search here" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="main">
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="toc">
+                                                <ul class="nocontent menu _Skins_TOC mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Auditor__Auditor.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="content">
+                                                <div role="main" id="mc-main-content">
+                                                    <h1>Configure SonicWall Devices</h1>
+                                                    <p><span class="mc-variable Auditor.Product_Long_Name variable">Netwrix Auditor</span> relies on native logs for collecting audit data. Therefore, successful change and access auditing requires a certain configuration of native audit settings in the audited environment and on the <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span> console computer.  Configuring your IT infrastructure may also include enabling certain built-in Windows services, etc. Proper audit configuration is required to ensure audit data integrity, otherwise your change reports may contain warnings, errors or incomplete audit data.</p>
+                                                    <p class="Caution" data-mc-autonum="&lt;span style=&quot;color: #da0000;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;CAUTION: &lt;/b&gt;&lt;/span&gt;"><span class="autonumber"><span class="Caution"><span style="color: #da0000;" class="mcFormatColor"><b>CAUTION: </b></span></span></span>Folder associated with <span class="mc-variable Auditor.Product_Long_Name variable">Netwrix Auditor</span> must be excluded from antivirus scanning. See the  <a href="https://helpcenter.netwrix.com/bundle/z-kb-articles-salesforce/page/kA04u0000000HirCAE.html" target="_blank" title="Antivirus Exclusions for Netwrix Auditor" alt="Antivirus Exclusions for Netwrix Auditor">Antivirus Exclusions for Netwrix Auditor</a> knowledge base article for additional information. </p>
+                                                    <p>You can configure your&#160;IT Infrastructure for monitoring in one of the following ways:</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>Automatically through a monitoring plan – This is a recommended method. If you select to automatically configure audit in the target environment, your current audit settings will be checked on each data collection and adjusted if necessary.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>Manually – Native audit settings must be adjusted manually to ensure collecting comprehensive and reliable audit data. You can enable <span class="mc-variable Auditor.Product_Short_Name variable">Auditor</span>  to continually enforce the relevant audit policies or configure them manually:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Configure log settings, depending on your device type. </p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <p>To configure your SonicWall devices, do the following:</p>
+                                                    <p><a name="WAF"></a>To configure SonicWall Web Application Firewall</p>
+                                                    <ol>
+                                                        <li value="1">Connect to your SonicWall device. Launch an Internet browser and enter the following in the URL field: <i>https://&lt;IP address&gt;:84443</i>, where <span class="semibold">IP address</span> is the IP of the device and<span class="semibold"> 84443</span> is the default connection port.</li>
+                                                        <li value="2">Log in to the device.</li>
+                                                        <li value="3">
+                                                            <p>In the <span class="semibold">Web Interface</span>, navigate to <span class="semibold">Log</span> <span style="font-family: 'Times New Roman'">→</span> <span class="semibold">Settings</span> and configure the following:</p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                                                                <col class="TableStyle-Basic-Column-Column1" />
+                                                                <col class="TableStyle-Basic-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Basic-Head-Header1">
+                                                                        <th class="TableStyle-Basic-HeadE-Column1-Header1">Parameter</th>
+                                                                        <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                            <ul>
+                                                                                <li>Log Level </li>
+                                                                                <li>Alert Level</li>
+                                                                                <li>Syslog Level</li>
+                                                                            </ul>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                            <p>Set to "Info".</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                            <ul>
+                                                                                <li>Enable Audit Log</li>
+                                                                                <li>
+                                                                                    <p>Send to Syslog Server in Audit Log Settings</p>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>Send to Syslog Server in Access Log Settings</p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                            <p>Select these checkboxes.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                            <p>Primary Syslog Server</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                            <p>Enter the address of your <span class="mc-variable MyVariables.NAC variable">Netwrix Auditor Server</span>.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                                                            <p>Primary Syslog Server Port</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                                                            <p>Provide the name of the UDP port used to listen to network devices (514 port used by default).</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                        <li value="4">Click <span class="semibold">Accept</span>.</li>
+                                                        <li value="5">Navigate to <span class="semibold">Log</span> <span style="font-family: 'Times New Roman'">→</span><span class="semibold"> Categories</span>.</li>
+                                                        <li value="6">
+                                                            <p>Select the following checkboxes:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p><span class="semibold">Authentication</span>
+                                                                    </p>
+                                                                </li>
+                                                                <li><span class="semibold">Authorization &amp; Access</span>
+                                                                </li>
+                                                                <li><span class="semibold">System</span>
+                                                                </li>
+                                                                <li><span class="semibold">Web Application Firewall</span>
+                                                                </li>
+                                                                <li><span class="semibold">Geo IP &amp; Botnet Filter In Log Categories (Standard)</span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li value="7">Click <span class="semibold">Accept</span>.</li>
+                                                    </ol>
+                                                    <p><a name="SMA"></a>To configure SonicWall SMA</p>
+                                                    <ol>
+                                                        <li value="1">Connect to your SonicWall device. Launch an Internet browser and enter the following in the URL field: <i>https://&lt;IP address&gt;:8443</i>, where <span class="semibold">IP address</span> is the IP of the device and<span class="semibold"> 8443</span> is the default connection port.</li>
+                                                        <li value="2">Log in to the device.</li>
+                                                        <li value="3">
+                                                            <p>In the <span class="semibold">Web Interface</span>, navigate <span class="semibold">Log</span> <span style="font-family: 'Times New Roman'">→</span> <span class="semibold">Settings</span> and configure the following: </p>
+                                                            <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                                                                <col class="TableStyle-Basic-Column-Column1" />
+                                                                <col class="TableStyle-Basic-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-Basic-Head-Header1">
+                                                                        <th class="TableStyle-Basic-HeadE-Column1-Header1">Parameter</th>
+                                                                        <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                            <ul>
+                                                                                <li>Log Level</li>
+                                                                                <li>Alert Level</li>
+                                                                                <li>Syslog Level</li>
+                                                                            </ul>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                            <p>Set to "Info".</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                            <ul>
+                                                                                <li>Enable Audit Log</li>
+                                                                                <li>
+                                                                                    <p>Send to Syslog Server in Audit Log Settings</p>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>Send to Syslog Server in Access Log Settings</p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                            <p>Select these checkboxes.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                            <p>Primary Syslog Server</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                            <p>Enter the address of your <span class="mc-variable MyVariables.NAC variable">Netwrix Auditor Server</span>.</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-Basic-Body-Body1">
+                                                                        <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                                                            <p>Primary Syslog Server Port</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                                                            <p>Provide the name of the UDP port used to listen to network devices (514 port used by default).</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                        <li value="4">Click <span class="semibold">Accept</span>.</li>
+                                                        <li value="5">Navigate to <span class="semibold">Log</span> <span style="font-family: 'Times New Roman'">→</span><span class="semibold"> Categories</span>.</li>
+                                                        <li value="6">
+                                                            <p>Select the following checkboxes:</p>
+                                                            <ul>
+                                                                <li><span class="semibold">Authentication</span>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span class="semibold">Authorization &amp; Access</span>
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span class="semibold">System</span>
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span class="semibold">Web Application Firewall</span>
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><span class="semibold">Geo IP &amp; Botnet Filter In Log Categories (Standard)</span>
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li value="7">Click <span class="semibold">Accept</span>.</li>
+                                                    </ol>
+                                                    <p><a name="NSv"></a>To configure SonicWall NS series</p>
+                                                    <ol>
+                                                        <li value="1">Connect to your SonicWall device. Launch an Internet browser and enter the following in the URL field: <i>https://&lt;IP address&gt;:443</i>, where <span class="semibold">IP address</span> is the IP of the device and<span class="semibold"> 443</span> is the default connection port.</li>
+                                                        <li value="2">Log in to the device.</li>
+                                                        <li value="3">In the <span class="semibold">Web Interface</span>, navigate to <span class="semibold">Manage</span> <span style="font-family: 'Times New Roman'">→</span><span class="semibold"> Log Settings</span> <span style="font-family: 'Times New Roman'">→</span> <span class="semibold">Base Setup</span>.</li>
+                                                        <li value="4">Select all checkboxes in the <span class="semibold">Syslog</span> column.</li>
+                                                        <li value="5">Click <span class="semibold">Accept</span>.</li>
+                                                        <li value="6">Navigate to <span class="semibold">Manage</span> <span style="font-family: 'Times New Roman'">→</span> <span class="semibold">Log Settings</span> <span style="font-family: 'Times New Roman'">→</span> <span class="semibold">Syslog</span>.</li>
+                                                        <li value="7">
+                                                            <p>Set the <span class="semibold">Syslog Format</span> to <span class="semibold">Default</span>.</p>
+                                                        </li>
+                                                        <li value="8">Click <span class="semibold">Add</span>.</li>
+                                                        <li value="9">In the dialog appears, select <span class="semibold">Create new address object</span> option in the <span class="semibold">Name or IP Address</span> combo box.</li>
+                                                        <li value="10">Provide name and IP address of the new object.</li>
+                                                        <li value="11">Click <span class="semibold">OK</span>.</li>
+                                                        <li value="12">In the <span class="semibold">Add Syslog Server</span> dialog, find the IP address you specified on the step 10 in the <span class="semibold">Name or IP Address</span> list.</li>
+                                                        <li value="13">Click <span class="semibold">OK</span>.</li>
+                                                        <li value="14">Click <span class="semibold">Save</span>.</li>
+                                                    </ol>
+                                                    <h2>SonicWall Devices</h2>
+                                                    <p>Review a full list of object types <span class="mc-variable MyVariables.ProductName variable">Netwrix Auditor</span> can collect on SonicWall network devices.</p>
+                                                    <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                                                        <col class="TableStyle-Basic-Column-Column1" />
+                                                        <col class="TableStyle-Basic-Column-Column1" />
+                                                        <col class="TableStyle-Basic-Column-Column1" data-mc-conditions="" />
+                                                        <thead>
+                                                            <tr class="TableStyle-Basic-Head-Header1">
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Object type</th>
+                                                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Actions</th>
+                                                                <th class="TableStyle-Basic-HeadD-Column1-Header1">Event ID</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">
+                                                                    <p>Logon</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Successful logon </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>User login from an internal zone allowed</li>
+                                                                        <li>
+                                                                            <p>User login successful</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>XAUTH Succeeded with VPN</p>
+                                                                        </li>
+                                                                        <li>VPN zone remote user login allowed</li>
+                                                                        <li>
+                                                                            <p>WAN zone remote user login allowed</p>
+                                                                        </li>
+                                                                        <li>PPP: Authentication successful</li>
+                                                                        <li>
+                                                                            <p>Local Authentication Success</p>
+                                                                        </li>
+                                                                        <li>RADIUS/LDAP Authentication Success</li>
+                                                                        <li>
+                                                                            <p>Successful authentication received for Remotely Triggered</p>
+                                                                        </li>
+                                                                        <li>IKEv2 Authentication successful</li>
+                                                                        <li>
+                                                                            <p>SSL VPN zone remote user login allowed</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li> Failed logon
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>User login denied</li>
+                                                                        <li>
+                                                                            <p>User login failed</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>XAUTH Failed with VPN</p>
+                                                                        </li>
+                                                                        <li>L2TP PPP Authentication Failed</li>
+                                                                        <li>
+                                                                            <p>check username / password</p>
+                                                                        </li>
+                                                                        <li>RADIUS/LDAP reports Authentication Failure</li>
+                                                                        <li>
+                                                                            <p>Local Authentication Failure</p>
+                                                                        </li>
+                                                                        <li>User login to Administration Portal denied</li>
+                                                                        <li>User login failure rate exceeded</li>
+                                                                        <li>
+                                                                            <p>User Name authentication Failure locally</p>
+                                                                        </li>
+                                                                        <li>ISAKMP_AUTH_FAILED</li>
+                                                                        <li>
+                                                                            <p>Guest service limit reached</p>
+                                                                        </li>
+                                                                        <li>Guest login denied</li>
+                                                                        <li>
+                                                                            <p>Incorrect authentication received for Remotely Triggered</p>
+                                                                        </li>
+                                                                        <li>Authentication Timeout during Remotely Triggered</li>
+                                                                        <li>
+                                                                            <p>Problem occurred during user group membership retrieval</p>
+                                                                        </li>
+                                                                        <li>An error has occurred while sending your</li>
+                                                                        <li>
+                                                                            <p>IPsec Authentication Failed</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Logoff</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>User logged out</li>
+                                                                        <li>
+                                                                            <p>logged out</p>
+                                                                        </li>
+                                                                        <li>Guest Session Timeout</li>
+                                                                        <li>
+                                                                            <p>Guest Account Timeout</p>
+                                                                        </li>
+                                                                        <li>Guest Idle Timeout</li>
+                                                                        <li>
+                                                                            <p>Guest traffic quota exceeded</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">
+                                                                    <p>Authentication</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Successful Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Administrator login allowed</li>
+                                                                        <li>
+                                                                            <p>CLI administrator login allowed</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>VPN zone administrator login allowed</p>
+                                                                        </li>
+                                                                        <li>WAN zone administrator login allowed</li>
+                                                                        <li>
+                                                                            <p>Configuration mode administration session started</p>
+                                                                        </li>
+                                                                        <li>Read-only mode GUI administration session started</li>
+                                                                        <li>
+                                                                            <p>Non-config mode GUI administration session started</p>
+                                                                        </li>
+                                                                        <li>User login successful</li>
+                                                                        <li>
+                                                                            <p>Session Start:</p>
+                                                                        </li>
+                                                                        <li>EventMessage: Session Start Success</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Failed Logon</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Administrator login denied</li>
+                                                                        <li>
+                                                                            <p>CLI administrator login denied due to bad credentials</p>
+                                                                        </li>
+                                                                        <li>User login failed</li>
+                                                                        <li>
+                                                                            <p>The account has been disabled for</p>
+                                                                        </li>
+                                                                        <li>is not permitted for this Web App</li>
+                                                                        <li>
+                                                                            <p>Authentication for user</p>
+                                                                        </li>
+                                                                        <li>Authentication failed</li>
+                                                                        <li>
+                                                                            <p>maximum authentication attempts exceeded for</p>
+                                                                        </li>
+                                                                        <li>EventMessage: Session Start Failed</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Logoff</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Administrator logged out</li>
+                                                                        <li>
+                                                                            <p>CLI administrator logged out</p>
+                                                                        </li>
+                                                                        <li>Configuration mode administration session ended</li>
+                                                                        <li>
+                                                                            <p>GUI administration session ended</p>
+                                                                        </li>
+                                                                        <li>Logged out</li>
+                                                                        <li>
+                                                                            <p>Session End:</p>
+                                                                        </li>
+                                                                        <li>EventMessage: Session End</li>
+                                                                        <li>
+                                                                            <p>Command='Tunnel'</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">Configuration</td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Add / Added (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>m=1333</li>
+                                                                        <li>
+                                                                            <p>Scheduled settings generated</p>
+                                                                        </li>
+                                                                        <li>A new default Self-Signed certificate was generated successfully</li>
+                                                                        <li>
+                                                                            <p>Scheduled Tech Support Report generated</p>
+                                                                        </li>
+                                                                        <li>Restarted Tech Support Report generated</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified / Modify (Failed attempt)
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Mail attachment disabled</li>
+                                                                        <li>
+                                                                            <p>Watch and report possible SYN floods</p>
+                                                                        </li>
+                                                                        <li>Watch and proxy WAN connections when under attack</li>
+                                                                        <li>
+                                                                            <p>Always proxy WAN connections</p>
+                                                                        </li>
+                                                                        <li>SYN Flood blacklisting enabled by user</li>
+                                                                        <li>
+                                                                            <p>SYN Flood blacklisting disabled by user</p>
+                                                                        </li>
+                                                                        <li>Administrator name changed</li>
+                                                                        <li>VPN disabled by administrator</li>
+                                                                        <li>
+                                                                            <p>VPN enabled by administrator</p>
+                                                                        </li>
+                                                                        <li>WLAN disabled by administrator</li>
+                                                                        <li>
+                                                                            <p>WLAN enabled by administrator</p>
+                                                                        </li>
+                                                                        <li>WLAN disabled by schedule</li>
+                                                                        <li>
+                                                                            <p>WLAN enabled by schedule</p>
+                                                                        </li>
+                                                                        <li>is added into Group</li>
+                                                                        <li>
+                                                                            <p>is removed from Group</p>
+                                                                        </li>
+                                                                        <li>m=1334</li>
+                                                                        <li>
+                                                                            <p>Update administrator/user lockout params</p>
+                                                                        </li>
+                                                                        <li>Settings imported</li>
+                                                                        <li>
+                                                                            <p>Critical Operating System Update failed</p>
+                                                                        </li>
+                                                                        <li>msg=\"WAF restarted</li>
+                                                                        <li>
+                                                                            <p>HTTP(S) Cache settings were updated</p>
+                                                                        </li>
+                                                                        <li>database has been updated</li>
+                                                                        <li>
+                                                                            <p>Web Server Fingerprint Protection enforced</p>
+                                                                        </li>
+                                                                        <li>About to reconfigure service:</li>
+                                                                        <li>
+                                                                            <p>Finished applying configuration changes</p>
+                                                                        </li>
+                                                                        <li>Started</li>
+                                                                        <li>
+                                                                            <p>Start failed</p>
+                                                                        </li>
+                                                                        <li>Stopped</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Read / Read (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>m=1203</li>
+                                                                        <li>
+                                                                            <p>m=1204</p>
+                                                                        </li>
+                                                                        <li>Problem loading the URL list</li>
+                                                                        <li>
+                                                                            <p>Registration Update Needed, Please restore your existing security service subscriptions</p>
+                                                                        </li>
+                                                                        <li>Failed to synchronize license information with Licensing Server</li>
+                                                                        <li>
+                                                                            <p>Current settings exported</p>
+                                                                        </li>
+                                                                        <li>Error sending</li>
+                                                                        <li>
+                                                                            <p>settings sent successfully</p>
+                                                                        </li>
+                                                                        <li>Automated scheduled settings successful</li>
+                                                                        <li>
+                                                                            <p>Scheduled settings downloaded</p>
+                                                                        </li>
+                                                                        <li>Tech Support Report</li>
+                                                                        <li>
+                                                                            <p>Tech Support Report sent successfully</p>
+                                                                        </li>
+                                                                        <li>Loaded WAF signature database successfully</li>
+                                                                        <li>
+                                                                            <p>Error sending</p>
+                                                                        </li>
+                                                                        <li>logs sent out successfully</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">&#160;</td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Remove / Removed (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Scheduled settings deleted</li>
+                                                                        <li>
+                                                                            <p>Oldest scheduled Tech Support Report deleted</p>
+                                                                        </li>
+                                                                        <li>has been deleted</li>
+                                                                        <li>
+                                                                            <p>Event Logs cleared</p>
+                                                                        </li>
+                                                                        <li>Audit Logs cleared</li>
+                                                                        <li>
+                                                                            <p>Access Logs cleared</p>
+                                                                        </li>
+                                                                        <li>Deleting log files</li>
+                                                                        <li>
+                                                                            <p>Deleting core files</p>
+                                                                        </li>
+                                                                        <li>Deleting snapshots older</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Device state</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified / Modify (Failed attempt)
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Registration Update Needed, Please restore your existing security service subscriptions</li>
+                                                                        <li>
+                                                                            <p>Intrusion Prevention (IDP) subscription has expired</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Failed to synchronize license information with Licensing Server</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">Folder</td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Add / Added (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Request='GET /cgi-bin/sonicfiles?RacNumber=9&amp;Arg1=</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Read / Read (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Request='GET /cgi-bin/sonicfiles?RacNumber=16&amp;Arg1=</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Remove / Removed (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Request='GET /cgi-bin/sonicfiles?RacNumber=13&amp;Arg1=</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4">
+                                                                    <p>File</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Add / Added (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Request='GET /cgi-bin/sonicfiles?RacNumber=31&amp;Arg1=</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Read / Read (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Request='GET /cgi-bin/sonicfiles?RacNumber=25&amp;Arg1=</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Rename / Renamed (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Request='GET /cgi-bin/sonicfiles?RacNumber=14&amp;Arg1=</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Remove / Removed (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Request='GET /cgi-bin/sonicfiles?RacNumber=12&amp;Arg1=</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Host</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Read / Read (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Received AV Alert</li>
+                                                                        <li>
+                                                                            <p>The loaded content URL List has expired</p>
+                                                                        </li>
+                                                                        <li>CFS Alert</li>
+                                                                        <li>
+                                                                            <p>Mail Filter Alert</p>
+                                                                        </li>
+                                                                        <li>Mail attachment deleted</li>
+                                                                        <li>Intrusion Prevention (IDP) subscription has expired</li>
+                                                                        <li>
+                                                                            <p>Smurf Amplification attack dropped</p>
+                                                                        </li>
+                                                                        <li>TCP Xmas Tree dropped</li>
+                                                                        <li>
+                                                                            <p>Source routed IP packet dropped</p>
+                                                                        </li>
+                                                                        <li>Mail fragment dropped</li>
+                                                                        <li>
+                                                                            <p>PASV response spoof attack dropped</p>
+                                                                        </li>
+                                                                        <li>PORT bounce attack dropped</li>
+                                                                        <li>
+                                                                            <p>PASV response bounce attack dropped</p>
+                                                                        </li>
+                                                                        <li>Spank attack multicast packet dropped</li>
+                                                                        <li>
+                                                                            <p>IPS Detection Alert</p>
+                                                                        </li>
+                                                                        <li>IPS Prevention Alert</li>
+                                                                        <li>
+                                                                            <p>Drop WLAN traffic</p>
+                                                                        </li>
+                                                                        <li>IDP Detection Alert</li>
+                                                                        <li>
+                                                                            <p>IDP Prevention Alert</p>
+                                                                        </li>
+                                                                        <li>Ping of death dropped</li>
+                                                                        <li>
+                                                                            <p>IP spoof dropped</p>
+                                                                        </li>
+                                                                        <li>Possible SYN flood attack detected</li>
+                                                                        <li>
+                                                                            <p>Land attack dropped</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <p>Rule</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Activated</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>will be denied</li>
+                                                                        <li>msg=\"WAF threat detected</li>
+                                                                        <li>
+                                                                            <p>Ping of death dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>IP spoof dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Possible SYN flood attack detected</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Land attack dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Smurf Amplification attack dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Possible port scan detected</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Probable port scan detected</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Probable TCP FIN scan detected</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Probable TCP XMAS scan detected</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Probable TCP NULL scan detected</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Mail attachment deleted</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>TCP Xmas Tree dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Source routed IP packet dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Mail fragment dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>PASV response spoof attack dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>PORT bounce attack dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>PASV response bounce attack dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Spank attack multicast packet dropped</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>IPS Detection Alert</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>IPS Prevention Alert</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>Drop WLAN traffic</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>IDP Detection Alert</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">
+                                                                    <p>Session</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Add / Added (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>msg=\"New HTTP Request to</li>
+                                                                        <li>
+                                                                            <p>msg=\"New HTTPS Request to</p>
+                                                                        </li>
+                                                                        <li>msg=\"New HTTP Session  for</li>
+                                                                        <li>
+                                                                            <p>msg=\"New HTTPS Session  for</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Read / Read (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>msg=\"WAF threat detected:</li>
+                                                                        <li>
+                                                                            <p>will be denied</p>
+                                                                        </li>
+                                                                        <li>Access to proxy server denied</li>
+                                                                        <li>
+                                                                            <p>Website found in blacklist</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Logoff</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Connection Closed</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3">
+                                                                    <p rowspan="3">User</p>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Add / Added (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Guest account</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Modified / Modify (Failed attempt)
+</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Administrator name changed</li>
+                                                                        <li>
+                                                                            <p>out user logins allowed</p>
+                                                                        </li>
+                                                                        <li>Guest account</li>
+                                                                        <li>
+                                                                            <p>User login disabled from</p>
+                                                                        </li>
+                                                                        <li>User account</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-Basic-Body-Body1">
+                                                                <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Remove / Removed (Failed attempt)</li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                                                    <ul>
+                                                                        <li>Guest account</li>
+                                                                        <li>
+                                                                            <p>m=1335</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

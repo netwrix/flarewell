@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Scripts &amp; Triggers Manager|[%=System.LinkedTitle%]|Scripts &amp; Triggers with Cloud">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Endpoint Policy Manager Cloud Scripts Manager: Distribute and Import X.509 certificates</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Endpoint Policy Manager Cloud Scripts Manager: Distribute and Import X.509 certificates</h1>
+                                    <p>Use <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> Cloud and Scripts Manager to distribute and import X.509 certificates to your endpoints, regardless of where they may reside, for use with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> VPN Manager or any any other purpose you have.</p>
+                                    <p>Script:</p>
+                                    <div class="codeSnippet">
+                                        <div style="mc-code-lang: PlainText;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code># Create Cert - update path for certificate as needed below$CertFile = "C:\temp\Cert\FABRIKAM-VPN-DEMO-ROOTCA-CERT.cer"Write-Output "-----BEGIN CERTIFICATE------=Certificate in BASE64 x.509 format text goes here=------END CERTIFICATE-----" | Out-File $CertFile# Import cert - replace certificate name and path as needed below.certutil -addstore root "C:\temp\Cert\FABRIKAM-VPN-DEMO-ROOTCA-CERT.cer"</code></pre>
+                                        </div>
+                                    </div>
+                                    <p><iframe width="1700" height="956" src="https://www.youtube.com/embed/yUj83ArFyZI" title="Endpoint Policy Manager Cloud Scripts Manager: Distribute and Import X.509 certificates" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <p>Hi, there. This is John Demianiuk with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Software. I'm going to show you how to use <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud and Scripts Manager to distribute and import your custom 509 Certificates to use with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> VPN Manager or for any other purposes you may need on your endpoints. First off, we need a donor Certificate file. Let's head over to my donor machine.</p>
+                                    <p>We have Certificates Manager open. You can see we have our fabrikam-DC2016-CA certificate. We're going to use this as our donor, and we're going to distribute this to our endpoints. Let's start by taking an export of this file. We're going to do this in Base-64, so Export 64, and Finish. Let's head over back to our work station here. I've got a copy of the exported file here. Let's right click on this. Let's take a look in Notepad and see what it looks like. This is our file in Notepad. This is the certificate that we need to distribute to the endpoints.</p>
+                                    <p>The next thing we need in order to get this done is we need the scripts. This is going to be available in our Guidance Downloads. If it isn't yet, it will be. If it isn't yet, I will be providing the script in the discussion or comments below. Let's take a look and see where you can get it from.</p>
+                                    <p>The first thing is to log onto our <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Portal. All of our clients have access to the portal. If you're not sure what your log on is, you can contact sales and they'll get you set up. First thing you need to do once you log in, head to Downloads. If you're downloading just the guidance, you can head over to Guidance XMLs and Scripts. Inside here there's a bunch of scripts and XML files for policies to help you do common things that you may need to do on your machine. I already have the script downloaded. I've got the script in here. This is basically the script. We have scrubbed out the certificate file, and this is the area that you would put in your own certificate file here.</p>
+                                    <p>Let's start creating the rule. Let's head over to the <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Cloud Editor. I'm going to go straight into Computer Groups to create this rule. I know I'm going to put it right in my test computer. I'm going to highlight my Test Computer Group. I'm going to Create and Link a New Policy in this section here. </p>
+                                    <p>Scroll down and find Certificates Manager and click OK. New policy is Cert File. Create a new policy. This is going to be on the machine side. Apply Action is where we're going to place our PowerShell script. Of course, we have to click the dropdown to PowerShell. We're going to copy over the script that we already created or downloaded.</p>
+                                    <p>Let's get our certificate. I already have the Begin and End Certificate sections, so I don't need to copy those. I'm going to replace this middle section here. There is no revert action, so we'll just click on OK. We've got our policy now. We'll click OK. That's saved to my Test Computer Group.</p>
+                                    <p>Let's theoretically switch over to my endpoint. We're going to download the policy and enforce that policy on this endpoint. First let's take a look at a couple things. This is the temporary folder that I put the certificate file in. You can put this in any folder you want. You can name it anything that you want. The script allows you to specify the folder name and the file name to be whatever you want it to be. </p>
+                                    <p>We'll take a look at Certificate Manager. [04:37] says where the certificate was. There is nothing here. Let's open up command prompt. The first thing we're going to do is we're going to download the file or the policies. To do that, type in ppcloud/sync. Here's our policy cert file here.</p>
+                                    <p>The next thing we're going to do is we're going to tell <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> to apply those policies. You don't have to do this. I'm just accelerating the hands of time to get this done. <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> does by default every hour run a sync and update your policies. That is done. It is downloaded and applied to the computer.</p>
+                                    <p>If we take a look into the shortcut folder, there is our policy. You can double click on this to see what it looks like. We don't have to install it, of course, because it already is installed. To show that, I'm going to come back over here and Refresh. Here's our fabrikam-DC2016-CA policy, our certificate all set to go.</p>
+                                    <p>That said, again, this is great for use with VPN Manager. Again, this is for absolutely any purpose you need to get custom X509 Certificates onto your endpoints. Thanks a lot and have a great day.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

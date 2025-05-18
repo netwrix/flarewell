@@ -1,41 +1,5 @@
-ERROR in ./docs/AccessInformationCenter/Access/InformationCenter/Admin/Login.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/AccessInformationCenter/Access/InformationCenter/Admin/Login.md"
-Cause: Can't parse URL http://localhost:8082(remote with base unspecified://
-Details:
-Error: Can't parse URL http://localhost:8082(remote with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ActivityMonitor/ActivityMonitor/Admin/Agents/Properties/DellCEEOptions.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ActivityMonitor/ActivityMonitor/Admin/Agents/Properties/DellCEEOptions.md"
-Cause: Can't parse URL http://ip-address-of-the-agent:port with base unspecified://
-Details:
-Error: Can't parse URL http://ip-address-of-the-agent:port with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
+Compiled with problems:
+×
 ERROR in ./docs/ActivityMonitor/ActivityMonitor/Admin/Outputs/LogFile/SharePointJSON.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ActivityMonitor/ActivityMonitor/Admin/Outputs/LogFile/SharePointJSON.md"
@@ -51,7 +15,7 @@ Details:
     "_index": 3,
     "line": 438,
     "column": 31,
-    "offset": 20007
+    "offset": 20011
   },
   "reason": "Unexpected end of file in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag",
   "ruleId": "unexpected-eof",
@@ -83,6 +47,38 @@ Details:
   "ruleId": "unexpected-character",
   "source": "micromark-extension-mdx-jsx",
   "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+}
+
+    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
+    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
+    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
+ERROR in ./docs/Auditor/Auditor/API/PostData/ActivityRecords.md
+Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Auditor/Auditor/API/PostData/ActivityRecords.md"
+Cause: Could not parse expression with acorn
+Details:
+{
+  "cause": {
+    "pos": 12022,
+    "loc": {
+      "line": 214,
+      "column": 75
+    },
+    "raisedAt": 2
+  },
+  "column": 76,
+  "message": "Could not parse expression with acorn",
+  "line": 214,
+  "name": "214:76",
+  "place": {
+    "line": 214,
+    "column": 76,
+    "offset": 12022
+  },
+  "reason": "Could not parse expression with acorn",
+  "ruleId": "acorn",
+  "source": "micromark-extension-mdx-expression",
+  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
@@ -145,82 +141,6 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ChangeTracker/ChangeTracker/Install/Agent/AIX.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ChangeTracker/ChangeTracker/Install/Agent/AIX.md"
-Cause: Can't parse URL https://IPADDRESS-SERVERNAME:PORT/api/ with base unspecified://
-Details:
-Error: Can't parse URL https://IPADDRESS-SERVERNAME:PORT/api/ with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ChangeTracker/ChangeTracker/Install/Agent/Solaris.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ChangeTracker/ChangeTracker/Install/Agent/Solaris.md"
-Cause: Can't parse URL https://IPADDRESS-SERVERNAME:PORT/api/ with base unspecified://
-Details:
-Error: Can't parse URL https://IPADDRESS-SERVERNAME:PORT/api/ with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/GroupID/GroupID/AdminCenter/Portal/Create.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/GroupID/GroupID/AdminCenter/Portal/Create.md"
-Cause: Can't parse URL https://web-server-name:port/IIS-application-name with base unspecified://
-Details:
-Error: Can't parse URL https://web-server-name:port/IIS-application-name with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/GroupID/GroupID/AdminCenter/Portal/Server/NativeIIS.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/GroupID/GroupID/AdminCenter/Portal/Server/NativeIIS.md"
-Cause: Can't parse URL https://web-server-name:port/IIS-application-name with base unspecified://
-Details:
-Error: Can't parse URL https://web-server-name:port/IIS-application-name with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
 ERROR in ./docs/GroupID/GroupID/AdminCenter/Schedule/Entitlement.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/GroupID/GroupID/AdminCenter/Schedule/Entitlement.md"
@@ -276,44 +196,6 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/GroupID/GroupID/Portal/User/Manage/InstallCP.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/GroupID/GroupID/Portal/User/Manage/InstallCP.md"
-Cause: Can't parse URL https://MachineName:port/portalname with base unspecified://
-Details:
-Error: Can't parse URL https://MachineName:port/portalname with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PasswordSecure/PasswordSecure/Installation/Installation Web Application/Installation Web Application.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PasswordSecure/PasswordSecure/Installation/Installation Web Application/Installation Web Application.md"
-Cause: Can't parse URL https://hostname:port/path-to-subdirectory with base unspecified://
-Details:
-Error: Can't parse URL https://hostname:port/path-to-subdirectory with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
@@ -425,16 +307,16 @@ Error: MDX compilation failed for file "/Users/jordan.violet/Documents/developme
 Cause: Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`
 Details:
 {
-  "column": 131,
+  "column": 133,
   "message": "Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
   "line": 93,
-  "name": "93:131",
+  "name": "93:133",
   "place": {
-    "_bufferIndex": 94,
+    "_bufferIndex": 96,
     "_index": 0,
     "line": 93,
-    "column": 131,
-    "offset": 3866
+    "column": 133,
+    "offset": 3868
   },
   "reason": "Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
   "ruleId": "unexpected-character",
@@ -460,7 +342,7 @@ Details:
     "_index": 0,
     "line": 134,
     "column": 78,
-    "offset": 5758
+    "offset": 5760
   },
   "reason": "Unexpected character `x` (U+0078) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
   "ruleId": "unexpected-character",
@@ -468,44 +350,6 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PrivilegeSecure/PrivilegeSecure/AccessManagement/Admin/Configuration/Page/EmailConfiguration.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PrivilegeSecure/PrivilegeSecure/AccessManagement/Admin/Configuration/Page/EmailConfiguration.md"
-Cause: Can't parse URL https://fqdn:port with base unspecified://
-Details:
-Error: Can't parse URL https://fqdn:port with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PrivilegeSecure/PrivilegeSecure/AccessManagement/Admin/Login.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PrivilegeSecure/PrivilegeSecure/AccessManagement/Admin/Login.md"
-Cause: Can't parse URL https://ExampleServer01:[PortNumber with base unspecified://
-Details:
-Error: Can't parse URL https://ExampleServer01:[PortNumber with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
@@ -561,44 +405,6 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ThreatManager/ThreatManager/Install/ActionService.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatManager/ThreatManager/Install/ActionService.md"
-Cause: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
-Details:
-Error: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ThreatManager/ThreatManager/Install/Secure.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatManager/ThreatManager/Install/Secure.md"
-Cause: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
-Details:
-Error: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
 ERROR in ./docs/ThreatPrevention/ThreatPrevention/Admin/Policies/EventType/Window/SelectDomainsServers.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatPrevention/ThreatPrevention/Admin/Policies/EventType/Window/SelectDomainsServers.md"
@@ -651,25 +457,6 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube/Usercube/integration-guide/connectors/how-tos/scim-cyberark-export/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/connectors/how-tos/scim-cyberark-export/index.md"
-Cause: Can't parse URL https://host:port/CyberArk/scim with base unspecified://
-Details:
-Error: Can't parse URL https://host:port/CyberArk/scim with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
 ERROR in ./docs/Usercube/Usercube/integration-guide/connectors/how-tos/write-ticket-template/index.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/connectors/how-tos/write-ticket-template/index.md"
@@ -696,44 +483,6 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube/Usercube/integration-guide/executables/references/agent/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/executables/references/agent/index.md"
-Cause: Can't parse URL http://localhost:6001;http://localhost:6002 with base unspecified://
-Details:
-Error: Can't parse URL http://localhost:6001;http://localhost:6002 with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube/Usercube/integration-guide/executables/references/server/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/executables/references/server/index.md"
-Cause: Can't parse URL http://localhost:5000;http://localhost:5001 with base unspecified://
-Details:
-Error: Can't parse URL http://localhost:5000;http://localhost:5001 with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
 ERROR in ./docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md"
@@ -741,7 +490,7 @@ Cause: Could not parse expression with acorn
 Details:
 {
   "cause": {
-    "pos": 62518,
+    "pos": 62529,
     "loc": {
       "line": 1332,
       "column": 20
@@ -754,7 +503,7 @@ Details:
   "place": {
     "line": 1332,
     "column": 21,
-    "offset": 62518
+    "offset": 62529
   },
   "reason": "Could not parse expression with acorn",
   "ruleId": "acorn",
@@ -762,25 +511,6 @@ Details:
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/connectors/how-tos/scim-cyberark-export/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/connectors/how-tos/scim-cyberark-export/index.md"
-Cause: Can't parse URL https://host:port/CyberArk/scim with base unspecified://
-Details:
-Error: Can't parse URL https://host:port/CyberArk/scim with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
@@ -810,44 +540,6 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/executables/references/agent/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/executables/references/agent/index.md"
-Cause: Can't parse URL http://localhost:6001;http://localhost:6002 with base unspecified://
-Details:
-Error: Can't parse URL http://localhost:6001;http://localhost:6002 with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/executables/references/server/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/executables/references/server/index.md"
-Cause: Can't parse URL http://localhost:5000;http://localhost:5001 with base unspecified://
-Details:
-Error: Can't parse URL http://localhost:5000;http://localhost:5001 with base unspecified://
-    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
-    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
-    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
-    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
-    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
-    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
-    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
-    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
-    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
 ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/end-users-authentication/index.md"
@@ -855,7 +547,7 @@ Cause: Could not parse expression with acorn
 Details:
 {
   "cause": {
-    "pos": 63038,
+    "pos": 63049,
     "loc": {
       "line": 1344,
       "column": 20
@@ -868,7 +560,7 @@ Details:
   "place": {
     "line": 1344,
     "column": 21,
-    "offset": 63038
+    "offset": 63049
   },
   "reason": "Could not parse expression with acorn",
   "ruleId": "acorn",

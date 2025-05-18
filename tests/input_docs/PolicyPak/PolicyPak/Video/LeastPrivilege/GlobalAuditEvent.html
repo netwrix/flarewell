@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|Least Privilege Manager|[%=System.LinkedTitle%]|Eventing">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Auto-Create Policy from Global Audit event</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>Auto-Create Policy from Global Audit event</h1>
+                                    <p>In this video learn how to make a workflow between EVENTS in the endpoint event log, and your management station. Just make the event occur, then copy and paste, and <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> does the rest.</p>
+                                    <p><iframe width="1642" height="924" src="https://www.youtube.com/embed/k7VeeCwKH4E" title="PPLPM: Auto-Create Policy from Global Audit event" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <p>Hi, this is Jeremy Moskowitz. In this video I'm going to show you how you can use Global Audit Policy to turn on auditable events and then take those auditable events and feed it back into Least Privilege Manager to automatically create your rules.</p>
+                                    <p>The idea might be you've got a desktop here that's got a bunch of things on it. Users download stuff or you know that they have the ability to install things. You want to automatically create rules. I'm going to focus on these applications here. I've got a bunch of other stuff here, but just to keep it simple, I'm going to focus on these guys.</p>
+                                    <p>Let's pretend for a second that you wanted your users to be able to install dotNetFx45. When you get this, that's too bad. There's no way for user to overcome this without <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Least Privilege Manager. You need to have an auditable rule in place that you can track to see if they are doing this thing. How do you do that?</p>
+                                    <p>We've got this idea called Global Audit Policy. You can create GPO, link it over to your computer side or your user side. I'm going to do this on the computer side. I'm going to Least Privilege Manager and create what's called a New Global Settings Policy.</p>
+                                    <p>What this does when you turn this on, we have four configurable items. In fact, I go over this in another video. Three of these items, the Applications Requiring Elevation, Audit Elevated Applications, and Audit Untrusted Applications, when we see that we have rules turned on for these things, we can then audit for these items that happen. Then feed it back into PolicyPak here right in this UI and automatically generate a rule to overcome that.</p>
+                                    <p>I'm going to turn on this auditing first. You won't get any events in the Event Log unless you do that first. I'm going to go ahead and run GP Update here. Give that a second to settle in. Then I'm going to rerun the installation of this dotNetFx45 and show you that even though it still doesn't let me overcome it, at least I've got an auditable event in the Event Log. In fact, I can show you that right now.</p>
+                                    <p>Now that that's all completed, I'll go ahead and double click on this. No rule to overcome it, but I do get an event in the Event Viewer. I already have my Event Viewer up and running here, so let me go ahead and Refresh. Here we go.</p>
+                                    <p>This process requires elevation. We can see here's the text. There's the application itself. We can see that it's digitally signed by Microsoft, and it's also got some internal information around the file name. This is the best case scenario.</p>
+                                    <p>This application has digitally signed, has file information, and so on. What you can do now that you've got this auditable event, you can right click, and you can Copy the Details as Text. Go back to your management station and now you can Add a New Policy from Audit Event. We tell you the instructions here. If you don't want to see that again, you're welcome to say no, thank you.</p>
+                                    <p>The idea is you then take this item, bang, and you paste it in. We're going to do as much as we can. We tell you you should be running this thing with Elevated Privileges. You can Allow and Log it, but that's not going to help you here. This thing, as we saw, has a UAC prompt and requires Elevated Privileges.</p>
+                                    <p>We also suggest to you that you want to do it By Publisher and you probably also want to do it by the Version and the File. You probably want to light up all these things. You want to say when it's this Publisher and this particular Product, this particular File, and it's this Version or Newer. That would be a best practice to really light it all up in this capacity.</p>
+                                    <p>Then we're going to say Apply to Child Processes. Some things require that. Some things don't. We can't know that out of the gate. That might require some more investigation. Then that's it.</p>
+                                    <p>We've created the rule. You can look at it again this way if you want to. You can see we've got File Name, File Version, and Signature Condition and so on. Now that we fed it back into <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> land, let's go ahead and close this out.</p>
+                                    <p>We'll rerun GP Update here. That item that had no ability to overcome a UAC prompt, we tracked for it. We had an auditable event, and we fed it back in. Let's go ahead and see if we can now launch dotNetFx. No UAC prompt. Boom, it's just doing its thing. We are off to the races.</p>
+                                    <p>We fed that back in based upon the audible rule. Again, this is the best case scenario here. There are some other cases that you should probably be aware of, items where we don't have complete information. For instance, here's 7-Zip Installer. You can see it throws a UAC prompt, but you see it's not digitally signed. It's not digitally signed.</p>
+                                    <p>What are we going to do? We can do what we can do. We can only do what's possible. If we were to refresh this, you can see this 7-Zip requires UAC prompt. What are we going to do?</p>
+                                    <p>We can see that we've got the product information, but we don't have it digitally signed. Let's just see what we can get out of this. We can Copy the Details as Text. We can go back here, and we can right click Add a New Policy from Audit Event. We'll go ahead and smash it in place.</p>
+                                    <p>Go ahead and click Next and run that install with Elevated Privileges. What can we do? We can do it By Path, which is name. Probably not your best bet. By Hash is pretty good, which says this version, not an older version, not a newer version, this particular version. That's pretty good. We'll go with that.</p>
+                                    <p>We'll go ahead and run with Child Privileges as well. Let's go ahead and see if we can get this one to work as well. Again, not every application is a perfect candidate for the best practice, which is to say digitally signed and also has inside file info rules. When we don't have that information, we just fall back to whatever is next in there.</p>
+                                    <p>Let's go ahead and see if 7-Zip will not work. There we go. We'll go ahead and Install, and you're off to the races. This version is now officially blessed. You can see it's performed. It's installed, and there is 7-Zip.</p>
+                                    <p>Let's do one more just to show you one more little variation here. Actually, I'm going to go and take a PowerPoint Viewer. PowerPoint Viewer is kind of interesting. When you go ahead and try to double click it, it is digitally signed. It has some information, but not everything.</p>
+                                    <p>Let's go ahead and go back here to this. We'll go ahead and refresh. Here's PowerPoint Viewer. We can see that it is – this one's digitally signed, but doesn't have the product information or file information name in here. You see that combination. There's only so much we can do.</p>
+                                    <p>We'll right click. We'll go ahead and copy the details as text. We're going to recommend what we think is the best for you. We'll go ahead and do New Policy from Audit Event. We'll go ahead and paste it in here. Click Next. Again, Run with Elevated Privileges. </p>
+                                    <p>Here's what we have this time. We know it's digitally signed by Microsoft, but that's not a great idea because you don't want everything digitally signed by Microsoft. That's a terrible idea because then all sorts of things are going to be elevated. You don't want to do that. </p>
+                                    <p>We can't say By Publisher and by inside information because that inside information isn't present. We do what we think is best for you, and we suggest that you do it By Hash. We'll go ahead and enable for Child Processes, and you're off to the races.</p>
+                                    <p>We'll go ahead and close this out. We'll GP Update. Then we'll leave it there. There are other auditable event types that you can use for this, but the basic gist is essentially the same. Once you have the event trapped, you're then going to paste it in.</p>
+                                    <p>We'll let you know if we can make an event from that thing or not. Let's just do PowerPoint Viewer as our last guy here. Yeah, sure enough we're off to the races; bing, bing, bing. That's about it. Hopefully this workflow process helps you out. This way you're able to turn on global auditing policy first.</p>
+                                    <p>You can send your events to a centralized logging server if that's what you want to do. Then once you've got those events all lined up in your event viewer like I just showed you, you can then take this data, right click, copy the text to the event, and smash it right in. Bang, you've got your workflow all set up. I hope this video helps you out. Looking forward to getting you started with <span class="mc-variable PolicyPak.Product_Short_Name variable">Endpoint Policy Manager</span> Least Privilege Manager real soon. Bye-bye.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

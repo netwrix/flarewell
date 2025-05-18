@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="_Skins_Netwrix_Website" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|All Things Licensing|[%=System.LinkedTitle%]|Licensing Install: All Methods (Universal Licenses for customers after 2021)">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>How to install UNIVERSAL licenses for NEW Customers (via GPO, SCCM or MDM)</title>
+        <link href="../../../Resources/Stylesheets/StealthbitsTemplate.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Overview.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div id="mc-main-content" role="main" data-mc-content-body="True">
+                                    <h1>How to install UNIVERSAL licenses for NEW Customers (via GPO, SCCM or MDM)</h1>
+                                    <p>Just got your <span class="mc-variable PolicyPak.Product_Long_Name variable">Netwrix Endpoint Policy Manager (formerly PolicyPak)</span> License File but not sure how to get it installed? This is your "one-stop shop" video to explain it all. Just get that license file deployed via GPO, an on-prem tool like SCCM, or an MDM tool like Intune, and... you're done! Once license... and that's it. We call it the "universal" license!</p>
+                                    <p><iframe width="1700px" height="956px" src="https://www.youtube.com/embed/BXlR3yVoMxQ" title="How to install UNIVERSAL licenses for NEW Customers (via GPO, SCCM or MDM)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>
+                                    </p>
+                                    <p>Hi, this is Jeremy Moskowitz. In this video, we're going to learn how to install your license files. This is what your license files should look like. Maybe the file names are a little different, but this is what you should have.</p>
+                                    <p>You should have a universal license that has an XML. You might have also asked for, or we've given you, an MSI file. If we didn't give you an MSI file, don't worry. I'm going to show you how you can create one. You don't even need to contact us. I'll show you how to do it. It's very easy.</p>
+                                    <p>Basically, we're going to do the group policy method first, or actually the Active Directory method first, which can do group policy, or it can do SCCM, or if you have other on-prem utility like Case, or PDQ Deploy, or something like that, you can use that. Then I'm going to move on to how to deploy the MSI using SCCM or your MDM tool. Let's get started.</p>
+                                    <p>The idea is that you asked us for this license, and it has a scope. If we're to just look at it in Notepad real fast. You don't have to be a technical wiz or anything. You should just spot-check this and make sure that it has what you asked for.</p>
+                                    <p>The first thing you should see is something like Active Directory values and another thing called UPN values. The idea is that this is going to light up for both Active Directory and for say an MDM service.</p>
+                                    <p>The second thing that you're going to look for is capabilities. You have to specifically ask for the capabilities you want. If you want to do the group policy method, that's great. If you want to do the SCCM, or we also call it the XML method, you can do that too. Lastly, if you want to do MDM, you have to ask for it. The idea is that all three of these capabilities you're entitled to with the Enterprise or Professional license, but you do have to ask for them.</p>
+                                    <p>Then after that, you've going to see the components. The components are what you're licensed for. Now, if you are an Enterprise customer, you get everything. That's the all-you-can-eat plan. You just get new stuff when we create it. The Pro plan means that you have to specifically request the items that you want and pay for those.</p>
+                                    <p>These are the licenses. They'll be here. That's how to interpret this. This is the XML file.</p>
+                                    <p>What we'll do to get that XML file installed, my recommendation, if you're going to use Group Policy to get it deployed, create and link a GPO against the entire domain. I'll call this PolicyPak Licenses for This Year. The idea is that you can just keep using it as long as you want.</p>
+                                    <p>The second thing is that we're going to use this license, this GPO, everywhere in the domain even if you're not lighting up places the entire domain. That's okay. It doesn't matter. You can go ahead, create, link it, and then enforce it. Enforced means that if you have a block inheritance later down the line here that it's going to still work.</p>
+                                    <p>Creating and linking against the entire domain, that's recommended. If you can't do that, and you need to do it against, say, your entire sales OU, that's fine. You can also enforce that if that's what you need to do.</p>
+                                    <p>I'm just going to go right-click for the licenses for this year. I've already installed the PolicyPak MMC Snap, and you can see it here. You're going to left-click here and get into the computer side PolicyPak node. You're going to left-click again, right-click, and go to License Management.</p>
+                                    <p>It's a little tricky, so let me talk you through that one more time. You're going to left-click on the word, PolicyPak, right-click and get to License Management. Here is where you're going to import in your license files.</p>
+                                    <p>I've got it in the desktop here. I've got your licenses. Here it is, my XML file. Again, your file name might be a little bit different. Here's where you get to see the same stuff all over again. You get to see the methods, GPO, XML, and MDM. You get to see the scope that you're licensed for.</p>
+                                    <p>I'm licensed for my entire domain. You get to see the components you're licensed for. If you have a particular capability, for instance, Least Privilege Manager has standard and complete, you should see that you've got your capabilities here. Then lastly your scopes, your on-prem scope and your MDM or Azure AD scope.</p>
+                                    <p>Once you're done with that, go ahead and click close. That's it. You are done. How do we know we're done? I'll show you how you know you're done.</p>
+                                    <p>What we'll do, we'll go over to our endpoint here. I've already preinstalled the PolicyPak client-side extension. Again, you download this from the PolicyPak portal and the bits. Once you've got that installed, this is what you're lighting up.</p>
+                                    <p>Now that I'm logged on to my endpoint machine, how do I know if I'm actually licensed? There's this command, ppupdate, it does a couple things. First thing it does, it will recycle the existing policies that we've already downloaded.</p>
+                                    <p>Two, it will tell you how you're licensed. Here we go. It will tell you, hey, you've got a Universal License. This is the GPO where it was, PP Licenses for this year. It tells you the methods, which is group policy, MDM, and XML.</p>
+                                    <p>Then it tells you when you're license for, start and expiry date. It tells you the scope, which is going to be your on-prem scope, like fabrikam.com, and if the machine is capable of being MDM enrolled and what the requirements are. This will either be a company name, or it will be a UPN name like this.</p>
+                                    <p>The second part is what components are you licensed for. You can see if you're an Enterprise customer you get all the things. Now, remember, from time to time we come up with new things. As an Enterprise customer, you get to have those new things. If you're a Professional customer, you have to buy into those new things.</p>
+                                    <p>This enterprise customer is not licensed for PolicyPak Software Package Manager. No problem, just open a support ticket https://www.netwrix.com/sign_in.html?rf=tickets.html#/open-a-ticket, and we'll turn around a new license for you as an enterprise customer. If you're a professional customer and you love this thing, that's not a problem either. You can certainly just buy into it. This is one method, the group policy method.</p>
+                                    <p>The next method is through SCCM, or KACE, or LANDesk, or whatever you use to deploy MSI files. Remember, you've got the license as an MSI. What, you don't have a license as an MSI? That's okay. Again, at the end of this video, I'm going to show you how to take that XML and make it into an MSI. That's fine.</p>
+                                    <p>If you have the MSI, all you do is you use SCCM just like this, or if you're using an MDM service, like Intune, like this. Remember, we're only talking about license file. You can see I've added it here to my Intune. Now, for completeness, I also wanted to show you that you would also deploy the client-side extension, and also PolicyPak policy files the same way. It's all the same thing. You've just got to get them over to your endpoint.</p>
+                                    <p>Here we are. I'm back on the endpoint. I've rolled it back. I'm showing that we are not licensed. There's no PolicyPak license on this machine. Here's the MSI file. I'm going to simulate deploying this using either SCCM, or Case, or an MDM service of any kind. I'm just going to simulate that.</p>
+                                    <p>This would normally just happen in the background. You wouldn't see anything like this. That's it. You're done. As long you get the file deployed to your Windows 10 machine, you are fully licensed. After that, you're ready to go. Let's just check it out. I'm going to run ppupdate here, and what do we get? Now, it says that we are licensed from a file location. We call this the XML method. It's licensed in this location. That's where the license ends up.</p>
+                                    <p>You can see the methods are exactly the same. The start date's exactly the same. The scope is exactly the same because it's the same exact license file. Here are the components that you're licensed for. Here's what you're not licensed for. It's as simple as that to get license.</p>
+                                    <p>The last thing I said I was going to do is show you how you can create your own MSI if you don't have one, but all you have is the PolicyPak XML, not a problem. When you install PolicyPak, also the Admin Consul piece, you'll see that not only do you get the MMC snap-ins, you get a couple little extra utilities. One of them is called the PolicyPak exporter tool.</p>
+                                    <p>All you're going to do is create an MSI here. Add a file. Pick your license file. There it is. That's handy for me. Pick your license file. It's going to tell you that it's a universal license type. You don't really have to make any choices or anything at all to do.</p>
+                                    <p>You can give it a nice name like My PolicyPak XML License, whatever. Then you're off to the races. You just save it. You can call it ABC-123 XML, that's fine, or MSI, and you’re done. That's how you can create an MSI if for some reason we didn't give you one.</p>
+                                    <p>With that in mind, that gives you everything you need to know on how to deploy the license file for the Group Policy slash Active Directory method, which works great if you plan on using Group Policy, or SCCM, or Case, or LANDesk to get your stuff deployed. If you're going to use an MDM service, you saw how to do that too.</p>
+                                    <p>Long story short, hope this helps you out. Looking forward to getting you started with PolicyPak real soon. Thank you so much.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

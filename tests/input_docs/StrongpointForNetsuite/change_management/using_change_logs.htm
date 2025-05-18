@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Change Management Tools" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Using Change Logs</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Using Change Logs</h1>
+                                        <p>Change Logs allow you to see the type of change, who made the change and view the system notes of the NetSuite record. Change Logs are accessed from the <a href="change_management_reports.htm" title="Open Change Management Reports topic" alt="Open Change Management Reports topic">Change Management Reports</a>. </p>
+                                        <p class="note">Once a change request is complete, best practice is to change the status to <b>Completed</b>. If there are multiple open change requests referencing the same object, any changes to the object result in the change log being associated with the oldest of the approved change requests.</p>
+                                        <p>To open a Change Log:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Reports</b> and select a report.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>View</b> beside the Change Log to open.</p>
+                                            </li>
+                                        </ol>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/changelog-1.png"/>
+                                        </p>
+                                        <p>If the <b>Actual Change Date</b> is empty or <b>Change By</b> is set to <b>Could Not Be Determined</b> or <b>Pending Autospider</b>, a <b>Refresh Changed By</b> button is available. When clicked, it populates <b>Actual Change Date</b> and <b>Change By</b> fields.</p>
+                                        <p class="note"> The button is only available for Object types where the <b>Actual Change Date</b> and <b>Change By</b> fields  can be retrieved.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/change_log_refresh.png" title="Refresh Changed By"/>
+                                        </p>
+                                        <div class="toc-macro"/><h2 id="change_log_header">Change Log Header</h2>
+                                        <p>Change Logs are different based on the type of change. These are the major fields.</p>
+                                        <p><b>Change Log Created</b>: Date the Change Log was created.</p>
+                                        <p><b>Deletion Date</b>: Date a customization was deleted. Used with deleted Script Deployments.</p>
+                                        <p><b>Actual Change Date</b>: Date of the system note entry reflecting the change date.  There must be an available system note to display the date.</p>
+                                        <p><b>Customization</b>: Linked customization(s) that have changed.</p>
+                                        <p><b>Deleted Customization</b>: Name of the deleted customization.  Used with deleted Script Deployments.</p>
+                                        <p><b>Managed Bundle/App Customization</b>: Checked when customizations belong to a managed bundle.</p>
+                                        <p><b>Changed By</b>: User who made the change. There must be an available system note to display the user.</p>
+                                        <p><b>Deleted By</b>: User who made the change.  Used with deleted Script Deployments.</p>
+                                        <p><b>Field Name</b>: Name of the changed field.</p>
+                                        <p><b>Field Script ID</b>: Script ID of the changed field .</p>
+                                        <p><b>Non-Compliance</b>: Checked if the change is non-compliant.</p>
+                                        <p><b>Policy</b>: Policies associated with the Change Log.</p>
+                                        <p><b>Change Level</b>: Change level required by the policy.</p>
+                                        <p><b>Change Type</b>: Type of change based on the policy.</p>
+                                        <p><b>Change Overview</b>: Overview of the change. </p>
+                                        <ul>
+                                            <li>When <b>Systemnotes.Type</b> is included as result column and one of the system note lines is <b>Created</b>, the Change Overview displays: <i>&lt;incident employee&gt;</i><b>created </b><i>&lt;record&gt;</i>.</li>
+                                            <li>When there are no system notes columns, <b>Change Overview</b> displays <i>&lt;incident employee&gt;</i><b>changed </b><i>&lt;record&gt;</i>.</li>
+                                            <li>Deleted records display <i>&lt;incident employee&gt;</i><b>deleted</b><i>&lt;record&gt;</i></li>
+                                            <li>For grouped results with multiple records, <b>Change Overview</b> displays <b>See Change Data Table for details.</b></li>
+                                        </ul>
+                                        <p><b>Related Change Request</b>: Change request related to the change or used to perform regression analysis of a non-compliant change.</p>
+                                        <p><b>Related Process Issue</b>: Process issue related to the change or used to resolve it.</p>
+                                        <p><b>Resolution Description</b>: Description of any steps taken to bring the change back into compliance.</p>
+                                        <p><b>Non-Material Clearance Reason</b>: Used when a change is evaluated as non-material. <b>Non-Material Object Changes</b> are changes detected in the object definition not caused by human intervention and do not have any functional impact. Examples include NetSuite internal IDs, object XML structure or JSON representation or reordering values in a list.</p>
+                                        <p><b>Non-Material Checked</b>: Indicates if the change log has been evaluated as non-material.</p>
+                                        <p><b>Status</b>: Current state of the Change Log. This field is manually set, except it is automatically set to complete when a compliant change is complete.</p>
+                                        <p><b>Operation</b>:The reason for the Change Log. For example, <b>edit</b> or <b>delete</b>.</p>
+                                        <p><b>System Note Available</b>: Indicates a system note was found.</p>
+                                        <p><b>Jira Ticket Link</b>: Link to the Jira ticket if used to create the Change Log.</p>
+                                        <h2 id="values_tab">Values Tab</h2>
+                                        <p>The <b>Values</b> tab displays the changes that occurred in the Change Log.</p>
+                                        <p><b>Diff. View</b>: Highlights the changes that occurred within specific fields.</p>
+                                        <p><b>Diff. Summary</b>: Displays  the difference between the old value and the new value.</p>
+                                        <p><b>Data Error</b>: Checked if a data error occurred.</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/values_tab.png"/>
+                                        </p>
+                                        <h2 id="finding_users_who_have_made_changes">Finding Users Who Have Made Changes</h2>
+                                        <p>When you want to find out who has made changes, you can run any of the Change Reports and view who made a change in the <b>Change By</b> column. </p>
+                                        <p>The <b>Change By</b> and <b>Actual Date</b> of the change logs are retrieved using System Notes Search for supported record types. If a System Note is not available, <b>Change By</b> displays <b>Could Not Be Determined</b> in the Report List. </p>
+                                        <p>Recorded types that are not supported can be retrieved from the AutoSpider.</p>
+                                        <table count-columns="2" class="TableStyle-Standard table-with-header" cellspacing="0">
+                                            <colgroup><col class="TableStyle-Standard-Column-Regular"/>
+                                            <col class="TableStyle-Standard-Column-Regular"/>
+                                            </colgroup><thead>
+                                                <tr class="TableStyle-Standard-Head-Header1">
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Supported Records for System Notes Search</th>
+                                                    <th class="TableStyle-Standard-HeadD-Regular-Header1">Change By retrieved from the AutoSpider</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="body-for-table-with-header">
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p><font face="Calibri">Body Field<br/>Bundle Installation Script<br/>Client Script<br/>Column Field<br/>CRM Field<br/>Custom Record Field<br/>Entity Field<br/>Item Field<br/>Item Number Field<br/>Item Option Field<br/>Library Script File<br/>List<br/>Map/Reduce Script<br/>Mass Update Script<br/>Other Field<br/>Plug-in Script<br/>Portlet Script<br/>Record<br/>Restlet Script<br/>Scheduled Script<br/>Script Deployments<br/>Setup Preference<sup>*</sup><br/>Suitelet Script<br/>User Event Script<br/>User Role<br/>Workflow<br/>Workflow Action Script<br/>Deleted Objects<sup>**</sup></font>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                        <p><font face="Calibri">Bundle<br/>Custom Report<br/>Entry Form<br/>Mass Update<br/>Search<br/>Transaction Form<br/>User Role / Global Permission Changes</font>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>* System notes can be retrieved for: Company Preferences, Company Information, Enable Features, Account, Foreign Currency Variance Posting Rule, Nexus, Tax Code, Taxation Type, Fair Value Formula, Fair Value Price List, Project Expense Type, and Item Revenue Category.</p>
+                                        <p>** Deleted by and actual delete date are available for: Workflow, Custom Record, List, Script Deployment, and Script.</p>
+                                        <h2 id="viewing_system_notes">Viewing System Notes<a name="kanchor20" id="kanchor20"/></h2>
+                                        <p> In an open Change Log:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Click on a linked <b>Customization </b>to open the Customization Record. <b>Strongpoint Return Jira Ticket Info (Suitelet Script)</b> in this example.</p>
+                                                <p class="img-inside-p">
+                                                    <br/>
+                                                    <img src="../Resources/Images/change_log_customization_link.png" title="Change Log Customization link"/>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click <b>Go to Record</b></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Open <b>System Notes</b></p>
+                                            </li>
+                                        </ol>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/systemsnotes.png"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>

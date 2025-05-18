@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Stealthbits_WebsiteSkin" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Change Management Tools" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="msapplication-config" content="../../Skins/Favicons/browserconfig.xml"/>
+        
+        
+        <title>Comparing Environments</title>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body><article class=" flare">
+        <div class="foundation-wrap off-canvas-wrapper flare-content">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    
+                                    <p>
+                                        
+                                    </p>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="hidden-element topictitle1">Comparing Environments</h1>
+                                        <p>Compare Environments is a powerful tool to locate customization differences between accounts. It is a best practice to compare accounts by type (this is a mandatory field). You can compare up to 1000 records.  If there are more than 1000 records, it compares the first 1000 and sends you a notification that there were more than 1000 records to compare and  to restrict the comparison.</p>
+                                        <ul>
+                                            <li><a href="#Set" target="_parent" title="Set up TBA Credentials" alt="Set up TBA Credentials" class="MCXref xref">Set up TBA Credentials</a>
+                                            </li>
+                                            <li><a href="#Run" target="_parent" title="Run Compare Environments" alt="Run Compare Environments" class="MCXref xref">Run Compare Environments</a>
+                                            </li>
+                                            <li><a href="#Determin" target="_parent" title="Determining What to Compare" alt="Determining What to Compare" class="MCXref xref">Determining What to Compare</a>
+                                            </li>
+                                            <li><a href="#Viewing" target="_parent" title="Viewing Differences Between Environments" alt="Viewing Differences Between Environments" class="MCXref xref">Viewing Differences Between Environments</a>
+                                            </li>
+                                        </ul>
+                                        <div class="toc-macro"/><h2 id="set_up_tbacredentials"><a name="Set" id="Set"/>Set up TBA Credentials</h2>
+                                        <p>Your TBA Credentials only need to be set up once. These are the credentials you need to run Compare Environments and to use the <b>Change Account</b> feature on a Change Requests.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Compare Environments</b></p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/tba_cred_1.png" title="Set up your TBA Credentials" alt="Set up your TBA Credentials"/>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Click New (<b>+</b>) beside the <b>Source</b> field.</p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/tba_cred_2.png" title="TBA Credentials" alt="TBA Credentials"/>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Enter the information for the environment:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><b>Name</b> enter the environment name.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Account ID</b> enter the account ID. If it is a Sandbox account, make sure <b>_SB1</b> is appended. Do not use -sb1.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Consumer Key</b> enter the consumer key.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Consumer Secret</b> enter the consumer secret.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Token ID</b> enter your token ID.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Token Secret</b> enter your token secret.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="4">
+                                                <p>Click <b>Save</b>. Your credentials are now saved for the environment.</p>
+                                            </li>
+                                        </ol>
+                                        <p>Repeat this process for all environments you use for environment compare or looking up customizations with the <b>Change Account</b> feature on a Change Request. Refer to <a href="creating_change_request.htm" target="_parent" title="Creating a Change Request" alt="Creating a Change Request" class="MCXref xref">Creating a Change Request</a>.</p>
+                                        <h2 id="run_compare_environments"><a name="Run" id="Run"/>Run Compare Environments</h2>
+                                        <p>The tool is also available as a <b>Run Compare</b> button within a Change Request.</p>
+                                        <p class="note">Token-based authentication (TBA) is required by NetSuite. Follow the steps in the <b>Set Up TBA Credentials</b> section the first time you use this feature.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Compare Environments</b></p>
+                                                <p class="img-inside-p">
+                                                    <img src="../Resources/Images/comp_env.png" title="Compare Environments"/>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter the information for the target account and source accounts. Tokens are persistent between your sessions.</p>
+                                            </li>
+                                        </ol>
+                                        <p>Here are the field and filter options. </p>
+                                        <p class="note">Only administrators can view the Consumer Key, Consumer Secret, Token ID and Token Secret information.<br/>This information is generated when you create your Integration Record with the Token-Based Authentication option enabled. If you lose or forget these credentials, you must reset them to obtain new values.</p>
+                                        <h3 id="fields">Fields</h3>
+                                        <ul>
+                                            <li><b>Name</b>: Enter a name to use as a reference if you export the results of the comparison.</li>
+                                            <li><b>Source</b>: Select source environment.</li>
+                                            <li><b>Target</b>: Select target environment.</li>
+                                        </ul>
+                                        <p>Once you enter the source and targets, the following information is populated:</p>
+                                        <ul>
+                                            <li><b>Account ID Source</b>: ID for the source environment account .</li>
+                                            <li><b>Source Consumer Key</b>: Consumer Key of the Integration Record from the source account.</li>
+                                            <li><b>Source Consumer Secret</b>: Consumer Secret of the Integration Record from the source account.</li>
+                                            <li><b>Source Token ID</b>:Token ID of the Integration Record from the source account.</li>
+                                            <li><b>Source Token Secret</b>:Token Secret of the Integration Record from the source account.</li>
+                                            <li><b>Account ID Target</b>: ID for the Target environment account.</li>
+                                            <li><b>Target Consumer Key</b>: Consumer Key of the Integration Record from the Target account.</li>
+                                            <li><b>Target Consumer Secret</b>:  Consumer Secret of the Integration Record from the Target account.</li>
+                                            <li><b>Target Token ID</b>: Token ID of the Integration Record from the Target account.</li>
+                                            <li><b>Target Token Secret</b>: Token Secret of the Integration Record from the Target account.</li>
+                                        </ul>
+                                        <h3 id="filters">Filters</h3>
+                                        <ul>
+                                            <li><b>Customization Type</b>: Compares all the object types in one account to another. For example, compare all entity fields between two accounts. If this field is blank, everything is compared. This filter is advised for a sandbox refresh or when deploying by record type.</li>
+                                            <li><b>Change Request No</b>.: Compares the customizations within a specific change request. If you clicked Run Compare from a Change Request, the number is automatically populated. This filter is advised when deploying a bundle of changes from one account to another.</li>
+                                            <li><b>Get Items from Search</b>: Compares objects identified by the criteria in a Customization Saved Search. Create the Saved Search prior to running the comparison. Within the Saved Search, you must have the <b>Script ID</b> in the <b>Results</b> column. This filter is advised when comparing changes in a bundle or other criteria that you can use for a saved search.</li>
+                                            <li><b>Comparison Type</b>: This a mandatory field. There are two predefined comparison types. 				<ul><li><b>Target Newer Than Source</b> looks for any objects that were changed in production after changes were made in the sandbox. This makes you aware if something may be overwritten or lost in your target environment before the deployment.</li><li><b>Diff </b>looks for any differences between the environments.</li></ul></li>
+                                            <li><b>Change After</b>: Compares objects in the account with a Change Log record dated on or after the date specified. This filter is used to restrict the comparison. This is only available for Comparison Type <b>Target Newer Than Source</b>.</li>
+                                            <li><b>Quick Add</b>: Add individual customization records you want to compare.</li>
+                                            <li><b>Include Children</b>: Check to include Children in your comparison.</li>
+                                            <li><b>Display Non-Material Changes Results</b>: Check to include non-material changes between the environments. This does not affect functionality. <b>Non-Material Object Changes</b> are changes detected in the object definition not caused by human intervention and do not have any functional impact. Examples include NetSuite internal IDs, object XML structure or JSON representation or reordering values in a list.</li>
+                                            <li><b>Exclude Managed Bundle/App Components</b>: Check to exclude all Managed Bundle or App customizations from the results.</li>
+                                            <li><b>Bundle/App Filter Mode</b>: Select <b>Include</b> or <b>Exclude</b> if you are going to use the  <b>Bundles/Apps to Include/Exclude</b> option.</li>
+                                            <li><b>Bundles/Apps to Include/Exclude</b>: Add bundle or App internal IDs to include/exclude (based on the <b>Bundle/App Filter Mode</b>) in the comparison. You can set multiple bundles/apps to be included/excluded, separating them with commas.</li>
+                                        </ul>
+                                        <p class="note">When using filters, it is recommended that you only use one filter at a time. An exception is using <b>Customization Type</b> and <b>Get Items from Search</b> together.
+</p>
+                                        <h2 id="determining_what_to_compare"><a name="Determin" id="Determin"/>Determining What to Compare</h2>
+                                        <h3 id="predeployment">Pre-Deployment</h3>
+                                        <p class="note">If you are migrating new objects, they will not exist in your target account.</p>
+                                        <p>To determine what to compare pre-deployment:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Create a <b>New Change Request</b> in Production (so it survives any Refreshes).</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Attach the <b>Customization Record(s)</b> to the Change Request.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Wait for Approval (if required).</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>On the <b>Change Request</b> open <b>Deployment Validation</b> &gt; <b>Run Compare Tool</b></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Select the environments for the <b>Target </b>and <b>Source </b>Accounts.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Set the <b>Comparison Type </b>to <b>Target Newer than Source</b>.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Set the <b>Change After Date</b>. (Set the date from when you want the comparison to start.)</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Click <b>Compare</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <h3 id="postdeployment">Post-Deployment</h3>
+                                        <p>To determine what to compare post-deployment:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Use the <b>Change Request </b>from the pre-deployment or create a new one.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>If creating a new one, attach the <b>Customization Record(s)</b> to the Change Request.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>On the <b>Change Request</b> go to &gt; <b>Deployment Validation</b> &gt; <b>Run Compare Tool</b></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Select the environments for the <b>Target </b>and <b>Source </b>Accounts.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Set the <b>Comparison Type </b>to <b>Diff</b>.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click <b>Compare</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <h3 id="communicating_results">Communicating Results</h3>
+                                        <p>An <b>Environment Compare Log</b> is created, and automatically linked to the Change Request for reference. The log can be shared if there are issues.</p>
+                                        <p>If there are issues, the Deployment Engineer can make changes and re-run the Environment Comparison to ensure the environments are synchronized.</p>
+                                        <h2 id="viewing_differences_between_environments"><a name="Viewing" id="Viewing"/>Viewing Differences Between Environments</h2>
+                                        <p>Environment comparison can be used on any Customization Type, including Body Fields.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open <b><span class="mc-variable General.MenuName variable">Strongpoint</span></b> &gt; <b>Change Management Tools</b> &gt; <b>Compare Environments</b>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter the <b>Name</b>, select the <b>Source </b>and <b>Target </b>environments and all the required credential information.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Select <b>Body Field</b> for the <b>Customization Type</b>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Select <b>Diff </b>for the <b>Comparison Type</b>.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Add one or more searches in <b>Quick Add</b>. For example, <b>Cash Register</b> and <b>Special Scheme Code</b>.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click <b>Compare</b>.</p>
+                                            </li>
+                                        </ol>
+                                        <h3 id="search_exists_in_both_environments">Search Exists in Both Environments</h3>
+                                        <p>In this example, <b>Cash Register</b> appears in both environments.</p>
+                                        <p>On the <b>Source </b>tab:</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/comp_env_source.png" title="Source target"/>
+                                        </p>
+                                        <p>On the <b>Target </b>tab:</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/Compare_Accounts_-_Target_SS.png"/>
+                                        </p>
+                                        <p>On the <b>Diff </b>tab:</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/Compare_Accounts_-_Diff_ss.png"/>
+                                        </p>
+                                        <p> </p>
+                                        <h3 id="search_exists_in_only_one_environment">Search Exists in Only One Environment</h3>
+                                        <p>In this example,<b> Special Scheme Code</b> body field only exists in the <b>Target </b>environment.</p>
+                                        <p>On the <b>Diff </b>tab:</p>
+                                        <p class="img-inside-p">
+                                            <img src="../Resources/Images/Compare_Accounts_-_Diff_Only_One_SS.png"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"/>
+                </div>
+            </div>
+        </div>
+    
+
+</article></body></html>
