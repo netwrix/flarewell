@@ -26,6 +26,7 @@ Missing image references are removed during a post-conversion scan of the genera
 ## Features
 
 - Convert Flare HTML output to Markdown
+- Uses **markdownify** and **BeautifulSoup** for high-fidelity HTML conversion
 - Preserve the original folder structure and automatically generate `sidebars.js`
 - Convert Flare-specific UI elements to Docusaurus equivalents (admonitions, expandable sections, etc.)
 - Generate Docusaurus sidebar configuration
