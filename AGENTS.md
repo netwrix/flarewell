@@ -20,7 +20,9 @@ Your overarching goal: **deliver high-fidelity Markdown optimized for Docusaurus
 
 # Testing
 * Run `flarewell --input-dir tests/input_docs --output-dir tests/test_website/docs` to test
+* Run `flarewell --input-dir tests/1Secure --output-dir tests/1SecureMarkdown` and ensure that all docs are created to match all .htm input docs. Also ensure that all images files have been successfully moved to the static directory and exist there.
 * Change directory to tests/test_website and run `npm build` to test
+
 
 Here are four errors you can write pytests for:
 1. The file tests/test_files/Secure.htm gives the following MDX JS error after conversion to Secure.md:
