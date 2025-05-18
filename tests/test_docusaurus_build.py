@@ -89,16 +89,27 @@ def fix_mdx_issues(docs_dir):
     
     return fixes_applied
 
+def _get_option(config, name, default=None):
+    """Safely get a pytest command line option if declared."""
+    try:
+        return config.getoption(name)
+    except ValueError:
+        return default
+
+
 @pytest.fixture
 def docusaurus_dir(request):
     """Fixture that returns the Docusaurus directory path."""
     # Default to a parent directory of the workspace
-    docusaurus_dir = os.path.join(os.path.dirname(os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__)))), 'docs')
-    
+    docusaurus_dir = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "test_website",
+    )
+
     # Allow overriding the docusaurus directory using a command line option
-    if request.config.getoption("--docusaurus-dir"):
-        docusaurus_dir = request.config.getoption("--docusaurus-dir")
+    override = _get_option(request.config, "--docusaurus-dir")
+    if override:
+        docusaurus_dir = override
     
     # Verify the directory exists and has package.json
     package_json = os.path.join(docusaurus_dir, 'package.json')
@@ -127,13 +138,13 @@ def pytest_addoption(parser):
 def test_docusaurus_build(docusaurus_dir, request):
     """Test that Docusaurus can build without MDX errors."""
     # Apply MDX fixes if requested
-    if request.config.getoption("--fix-mdx"):
+    if _get_option(request.config, "--fix-mdx"):
         docs_dir = os.path.join(docusaurus_dir, 'docs')
         fixes_applied = fix_mdx_issues(docs_dir)
         print(f"\nApplied MDX fixes to {fixes_applied} files")
     
     # Determine build command
-    full_build = request.config.getoption("--full-build")
+    full_build = bool(_get_option(request.config, "--full-build"))
     build_cmd = "npm run build" if full_build else "npm run build -- --no-minify"
     
     # Run the build
