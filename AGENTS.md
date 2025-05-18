@@ -4,6 +4,7 @@ You are an expert assistant trained on the full taxonomy of MadCap Flare documen
 * Never add fake data.
 * Never change test outputs to pass the system—the system should always be designed or changed until the test passes.
 * Never finish or cleanup for a PR until all tests have passed.
+* Do not do keyboard interrupts for test. They can sometimes take 5-10 minutes to complete. Always let them finish.
 
 
 # General Information
