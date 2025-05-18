@@ -6,16 +6,16 @@ Error: MDX compilation failed for file "/Users/jordan.violet/Documents/developme
 Cause: Unexpected end of file in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag
 Details:
 {
-  "column": 31,
+  "column": 33,
   "message": "Unexpected end of file in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag",
   "line": 438,
-  "name": "438:31",
+  "name": "438:33",
   "place": {
     "_bufferIndex": -1,
     "_index": 3,
     "line": 438,
-    "column": 31,
-    "offset": 20011
+    "column": 33,
+    "offset": 20019
   },
   "reason": "Unexpected end of file in name, expected a name character such as letters, digits, `$`, or `_`; whitespace before attributes; or the end of the tag",
   "ruleId": "unexpected-eof",
@@ -26,27 +26,33 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ActivityMonitor/ActivityMonitor/Troubleshooting/PerformanceMonitoring.md
+ERROR in ./docs/Auditor/Auditor/API/FilterReference.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ActivityMonitor/ActivityMonitor/Troubleshooting/PerformanceMonitoring.md"
-Cause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Auditor/Auditor/API/FilterReference.md"
+Cause: Could not parse expression with acorn
 Details:
 {
-  "column": 68,
-  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 622,
-  "name": "622:68",
-  "place": {
-    "_bufferIndex": 11,
-    "_index": 0,
-    "line": 622,
-    "column": 68,
-    "offset": 32469
+  "cause": {
+    "pos": 12777,
+    "loc": {
+      "line": 234,
+      "column": 82
+    },
+    "raisedAt": 2
   },
-  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+  "column": 83,
+  "message": "Could not parse expression with acorn",
+  "line": 234,
+  "name": "234:83",
+  "place": {
+    "line": 234,
+    "column": 83,
+    "offset": 12777
+  },
+  "reason": "Could not parse expression with acorn",
+  "ruleId": "acorn",
+  "source": "micromark-extension-mdx-expression",
+  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
@@ -59,21 +65,21 @@ Cause: Could not parse expression with acorn
 Details:
 {
   "cause": {
-    "pos": 12022,
+    "pos": 12072,
     "loc": {
       "line": 214,
-      "column": 75
+      "column": 83
     },
     "raisedAt": 2
   },
-  "column": 76,
+  "column": 84,
   "message": "Could not parse expression with acorn",
   "line": 214,
-  "name": "214:76",
+  "name": "214:84",
   "place": {
     "line": 214,
-    "column": 76,
-    "offset": 12022
+    "column": 84,
+    "offset": 12072
   },
   "reason": "Could not parse expression with acorn",
   "ruleId": "acorn",
@@ -115,58 +121,6 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ChangeTracker/ChangeTracker/Admin/Settings/DeviceGroups.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ChangeTracker/ChangeTracker/Admin/Settings/DeviceGroups.md"
-Cause: Unexpected character `(` (U+0028) after attribute name, expected a character that can start an attribute name, such as a letter, `$`, or `_`; `=` to initialize a value; or the end of the tag
-Details:
-{
-  "column": 238,
-  "message": "Unexpected character `(` (U+0028) after attribute name, expected a character that can start an attribute name, such as a letter, `$`, or `_`; `=` to initialize a value; or the end of the tag",
-  "line": 186,
-  "name": "186:238",
-  "place": {
-    "_bufferIndex": 201,
-    "_index": 0,
-    "line": 186,
-    "column": 238,
-    "offset": 8884
-  },
-  "reason": "Unexpected character `(` (U+0028) after attribute name, expected a character that can start an attribute name, such as a letter, `$`, or `_`; `=` to initialize a value; or the end of the tag",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/GroupID/GroupID/AdminCenter/Schedule/Entitlement.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/GroupID/GroupID/AdminCenter/Schedule/Entitlement.md"
-Cause: Unexpected character `.` (U+002E) in attribute name, expected an attribute name character such as letters, digits, `$`, or `_`; `=` to initialize a value; whitespace before attributes; or the end of the tag
-Details:
-{
-  "column": 243,
-  "message": "Unexpected character `.` (U+002E) in attribute name, expected an attribute name character such as letters, digits, `$`, or `_`; `=` to initialize a value; whitespace before attributes; or the end of the tag",
-  "line": 134,
-  "name": "134:243",
-  "place": {
-    "_bufferIndex": 206,
-    "_index": 0,
-    "line": 134,
-    "column": 243,
-    "offset": 7427
-  },
-  "reason": "Unexpected character `.` (U+002E) in attribute name, expected an attribute name character such as letters, digits, `$`, or `_`; `=` to initialize a value; whitespace before attributes; or the end of the tag",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
 ERROR in ./docs/GroupID/GroupID/Portal/Group/Properties/DynastyOptions.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
 Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/GroupID/GroupID/Portal/Group/Properties/DynastyOptions.md"
@@ -194,58 +148,6 @@ Details:
   "ruleId": "acorn",
   "source": "micromark-extension-mdx-expression",
   "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PolicyPak/PolicyPak/GPOExport/SecuritySettings.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PolicyPak/PolicyPak/GPOExport/SecuritySettings.md"
-Cause: Unexpected end of file before name, expected a character that can start a name, such as a letter, `$`, or `_`
-Details:
-{
-  "column": 24,
-  "message": "Unexpected end of file before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 92,
-  "name": "92:24",
-  "place": {
-    "_bufferIndex": -1,
-    "_index": 1,
-    "line": 92,
-    "column": 24,
-    "offset": 3495
-  },
-  "reason": "Unexpected end of file before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-eof",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-end-of-file-at-expected-expect"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PolicyPak/PolicyPak/ItemLevelTargeting/WindowsServer2019.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PolicyPak/PolicyPak/ItemLevelTargeting/WindowsServer2019.md"
-Cause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`
-Details:
-{
-  "column": 65,
-  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 145,
-  "name": "145:65",
-  "place": {
-    "_bufferIndex": 28,
-    "_index": 0,
-    "line": 145,
-    "column": 65,
-    "offset": 6122
-  },
-  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
 }
 
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
@@ -301,183 +203,71 @@ Error: Can't parse URL http://www.def.com and with base unspecified://
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PolicyPak/PolicyPak/Troubleshooting/GroupPolicyComplianceReporter/LogEnhanced.md
+ERROR in ./docs/ThreatManager/ThreatManager/Install/ActionService.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PolicyPak/PolicyPak/Troubleshooting/GroupPolicyComplianceReporter/LogEnhanced.md"
-Cause: Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatManager/ThreatManager/Install/ActionService.md"
+Cause: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
 Details:
-{
-  "column": 133,
-  "message": "Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 93,
-  "name": "93:133",
-  "place": {
-    "_bufferIndex": 96,
-    "_index": 0,
-    "line": 93,
-    "column": 133,
-    "offset": 3868
-  },
-  "reason": "Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
+Error: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
+    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
+    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
+    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
+    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
+    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
+    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
+    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
+    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
+    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
+    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/PolicyPak/PolicyPak/Troubleshooting/RemoteWorkDelivery/DropboxLink.md
+ERROR in ./docs/ThreatManager/ThreatManager/Install/Secure.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/PolicyPak/PolicyPak/Troubleshooting/RemoteWorkDelivery/DropboxLink.md"
-Cause: Unexpected character `x` (U+0078) before attribute value, expected a character that can start an attribute value, such as `"`, `'`, or `{`
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatManager/ThreatManager/Install/Secure.md"
+Cause: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
 Details:
-{
-  "column": 78,
-  "message": "Unexpected character `x` (U+0078) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
-  "line": 134,
-  "name": "134:78",
-  "place": {
-    "_bufferIndex": 41,
-    "_index": 0,
-    "line": 134,
-    "column": 78,
-    "offset": 5760
-  },
-  "reason": "Unexpected character `x` (U+0078) before attribute value, expected a character that can start an attribute value, such as `\"`, `'`, or `{`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
+Error: Can't parse URL https://ThreatManagerServer.Domain.com:8080).NOTE with base unspecified://
+    at parseURLOrPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:162:15)
+    at parseLocalURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/utils/lib/urlUtils.js:210:17)
+    at parseMarkdownLinkURLPath (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:12:51)
+    at /Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/remark/resolveMarkdownLinks/index.js:35:33
+    at overload (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:311:12)
+    at node (link) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:346:27)
+    at node (paragraph) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
+    at node (root) (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:363:61)
+    at visitParents (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit-parents/lib/index.js:304:31)
+    at visit (file:///Users/jordan.violet/Documents/development/docs/node_modules/unist-util-visit/lib/index.js:302:3)
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/StrongpointForNetsuite/installing_strongpoint/managing_menus.md
+ERROR in ./docs/Usercube/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/StrongpointForNetsuite/installing_strongpoint/managing_menus.md"
-Cause: Unexpected character `<` (U+003C) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md"
+Cause: Could not parse expression with acorn
 Details:
 {
-  "column": 115,
-  "message": "Unexpected character `<` (U+003C) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 55,
-  "name": "55:115",
-  "place": {
-    "_bufferIndex": 114,
-    "_index": 2,
-    "line": 55,
-    "column": 115,
-    "offset": 2330
+  "cause": {
+    "pos": 10468,
+    "loc": {
+      "line": 285,
+      "column": 101
+    },
+    "raisedAt": 8
   },
-  "reason": "Unexpected character `<` (U+003C) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ThreatManager/ThreatManager/Administration/Configuration/Integrations/TagManagement.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatManager/ThreatManager/Administration/Configuration/Integrations/TagManagement.md"
-Cause: Unexpected character `)` (U+0029) before name, expected a character that can start a name, such as a letter, `$`, or `_`
-Details:
-{
-  "column": 68,
-  "message": "Unexpected character `)` (U+0029) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 337,
-  "name": "337:68",
+  "column": 102,
+  "message": "Could not parse expression with acorn",
+  "line": 285,
+  "name": "285:102",
   "place": {
-    "_bufferIndex": 27,
-    "_index": 0,
-    "line": 337,
-    "column": 68,
-    "offset": 15959
+    "line": 285,
+    "column": 102,
+    "offset": 10468
   },
-  "reason": "Unexpected character `)` (U+0029) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ThreatPrevention/ThreatPrevention/Admin/Policies/EventType/Window/SelectDomainsServers.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatPrevention/ThreatPrevention/Admin/Policies/EventType/Window/SelectDomainsServers.md"
-Cause: Unexpected character `<` (U+003C) before name, expected a character that can start a name, such as a letter, `$`, or `_`
-Details:
-{
-  "column": 66,
-  "message": "Unexpected character `<` (U+003C) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 108,
-  "name": "108:66",
-  "place": {
-    "_bufferIndex": 17,
-    "_index": 0,
-    "line": 108,
-    "column": 66,
-    "offset": 4415
-  },
-  "reason": "Unexpected character `<` (U+003C) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/ThreatPrevention/ThreatPrevention/ReportingModule/Configuration/Integrations/TagManagement.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/ThreatPrevention/ThreatPrevention/ReportingModule/Configuration/Integrations/TagManagement.md"
-Cause: Unexpected character `)` (U+0029) before name, expected a character that can start a name, such as a letter, `$`, or `_`
-Details:
-{
-  "column": 68,
-  "message": "Unexpected character `)` (U+0029) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 339,
-  "name": "339:68",
-  "place": {
-    "_bufferIndex": 27,
-    "_index": 0,
-    "line": 339,
-    "column": 68,
-    "offset": 16142
-  },
-  "reason": "Unexpected character `)` (U+0029) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
-}
-
-    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
-    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
-    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube/Usercube/integration-guide/connectors/how-tos/write-ticket-template/index.md
-Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/connectors/how-tos/write-ticket-template/index.md"
-Cause: Unexpected character `:` (U+003A) before name, expected a character that can start a name, such as a letter, `$`, or `_`
-Details:
-{
-  "column": 50,
-  "message": "Unexpected character `:` (U+003A) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 305,
-  "name": "305:50",
-  "place": {
-    "_bufferIndex": 49,
-    "_index": 2,
-    "line": 305,
-    "column": 50,
-    "offset": 12341
-  },
-  "reason": "Unexpected character `:` (U+003A) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+  "reason": "Could not parse expression with acorn",
+  "ruleId": "acorn",
+  "source": "micromark-extension-mdx-expression",
+  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
@@ -490,7 +280,7 @@ Cause: Could not parse expression with acorn
 Details:
 {
   "cause": {
-    "pos": 62529,
+    "pos": 62544,
     "loc": {
       "line": 1332,
       "column": 20
@@ -503,7 +293,7 @@ Details:
   "place": {
     "line": 1332,
     "column": 21,
-    "offset": 62529
+    "offset": 62544
   },
   "reason": "Could not parse expression with acorn",
   "ruleId": "acorn",
@@ -514,27 +304,65 @@ Details:
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
     at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
     at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
-ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/connectors/how-tos/write-ticket-template/index.md
+ERROR in ./docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md
 Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
-Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/connectors/how-tos/write-ticket-template/index.md"
-Cause: Unexpected character `:` (U+003A) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md"
+Cause: Could not parse expression with acorn
 Details:
 {
-  "column": 50,
-  "message": "Unexpected character `:` (U+003A) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "line": 305,
-  "name": "305:50",
-  "place": {
-    "_bufferIndex": 49,
-    "_index": 2,
-    "line": 305,
-    "column": 50,
-    "offset": 12340
+  "cause": {
+    "pos": 13890,
+    "loc": {
+      "line": 323,
+      "column": 81
+    },
+    "raisedAt": 1
   },
-  "reason": "Unexpected character `:` (U+003A) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
-  "ruleId": "unexpected-character",
-  "source": "micromark-extension-mdx-jsx",
-  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+  "column": 82,
+  "message": "Could not parse expression with acorn",
+  "line": 323,
+  "name": "323:82",
+  "place": {
+    "line": 323,
+    "column": 82,
+    "offset": 13890
+  },
+  "reason": "Could not parse expression with acorn",
+  "ruleId": "acorn",
+  "source": "micromark-extension-mdx-expression",
+  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
+}
+
+    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
+    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
+    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
+ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md
+Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/monitoring/how-tos/qradar-setting/index.md"
+Cause: Could not parse expression with acorn
+Details:
+{
+  "cause": {
+    "pos": 10449,
+    "loc": {
+      "line": 285,
+      "column": 101
+    },
+    "raisedAt": 8
+  },
+  "column": 102,
+  "message": "Could not parse expression with acorn",
+  "line": 285,
+  "name": "285:102",
+  "place": {
+    "line": 285,
+    "column": 102,
+    "offset": 10449
+  },
+  "reason": "Could not parse expression with acorn",
+  "ruleId": "acorn",
+  "source": "micromark-extension-mdx-expression",
+  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
 }
 
     at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
@@ -547,7 +375,7 @@ Cause: Could not parse expression with acorn
 Details:
 {
   "cause": {
-    "pos": 63049,
+    "pos": 63066,
     "loc": {
       "line": 1344,
       "column": 20
@@ -560,7 +388,39 @@ Details:
   "place": {
     "line": 1344,
     "column": 21,
-    "offset": 63049
+    "offset": 63066
+  },
+  "reason": "Could not parse expression with acorn",
+  "ruleId": "acorn",
+  "source": "micromark-extension-mdx-expression",
+  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
+}
+
+    at compileToJSX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)
+    at async loadMDX (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)
+    at async Object.mdxLoader (/Users/jordan.violet/Documents/development/docs/node_modules/@docusaurus/mdx-loader/lib/loader.js:156:24)
+ERROR in ./docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md
+Module build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):
+Error: MDX compilation failed for file "/Users/jordan.violet/Documents/development/docs/docs/Usercube_SaaS/Usercube/integration-guide/network-configuration/server-configuration/general-purpose/index.md"
+Cause: Could not parse expression with acorn
+Details:
+{
+  "cause": {
+    "pos": 13890,
+    "loc": {
+      "line": 323,
+      "column": 81
+    },
+    "raisedAt": 1
+  },
+  "column": 82,
+  "message": "Could not parse expression with acorn",
+  "line": 323,
+  "name": "323:82",
+  "place": {
+    "line": 323,
+    "column": 82,
+    "offset": 13890
   },
   "reason": "Could not parse expression with acorn",
   "ruleId": "acorn",
