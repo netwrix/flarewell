@@ -14,7 +14,6 @@ from typing import Dict, List, Any, Optional
 from bs4 import BeautifulSoup
 import markdownify
 
-WINDOWS_ESCAPE_RE = re.compile(r"\\(?=[ \"'.,;:])")
 from html import unescape
 from flarewell.link_mapper import LinkMapper
 
@@ -118,16 +117,42 @@ class DocusaurusFormatter:
     def _sanitize_bad_urls(self, text: str) -> str:
         """Wrap malformed URLs in backticks so MDX does not parse them."""
 
-        def repl(match: re.Match) -> str:
-            url = match.group(0)
-            # If URL contains a port that is not purely numeric or any
-            # obviously invalid characters, wrap it in backticks.
-            parsed = re.match(r"https?://[^\s/:]+:(\d+)(/.*)?$", url)
-            if (";" in url) or ("(" in url) or (")" in url) or not parsed:
-                return f"`{url}`"
-            return url
+        # url_pattern captures the URL in group 1 and the character following it in group 2
+        # This helps determine if the URL is followed by problematic punctuation.
+        url_pattern = re.compile(
+            r'''(https?://(?:[a-zA-Z0-9\-_.~!*'();:@&=+$,/?%#\[\]]+\.)+(?:[a-zA-Z]{2,}|[0-9]{1,3})(?::\d+)?(?:/[a-zA-Z0-9\-_.~!*'();:@&=+$,/?%#\[\]]*)?)([^\w\-/.]|\s|$)'''
+        )
 
-        url_pattern = re.compile(r"https?://[^\s)>]+")
+        def repl(match: re.Match) -> str:
+            url = match.group(1)
+            trailing_char = match.group(2) # Character immediately following the URL
+
+            # Check for invalid port
+            port_match = re.match(r"https?://[^\s/:]+:(\d+)(/.*)?$", url)
+            is_port_valid = bool(port_match)
+
+            # Characters that, if trailing the URL, require the URL to be wrapped
+            problematic_trailing_chars = [")", "!", "?", ","] # Period is handled by regex
+
+            wrap_url = False
+            if not is_port_valid:
+                wrap_url = True
+            elif any(c in url for c in [";", "(", ")"]): # Unbalanced or problematic chars within URL
+                wrap_url = True
+            elif trailing_char in problematic_trailing_chars:
+                wrap_url = True
+            # Special case for period: only wrap if it's not part of the URL itself
+            # The regex already ensures period is not part of trailing_char unless it's the *only* trailing char
+            elif trailing_char == '.' and not url.endswith('.'): # e.g. URL followed by period then space
+                 wrap_url = True
+
+
+            if wrap_url:
+                return f"`{url}`{trailing_char}"
+            else:
+                # Return the original full match (URL + trailing character)
+                return match.group(0)
+
         return url_pattern.sub(repl, text)
 
     def _fix_code_blocks(self, text: str) -> str:
@@ -244,17 +269,21 @@ class DocusaurusFormatter:
         # Escape braces inside inline code
         markdown = self._escape_inline_code(markdown)
 
+        # Escape stray angle brackets which may be interpreted as JSX
+        # This should run before _escape_mdx_braces and _escape_jsx_like
+        markdown = self._escape_angle_brackets(markdown)
+
+        # Escape curly braces outside of code blocks to avoid MDX parse errors
+        # Runs after angle brackets are escaped, and after code blocks/inline code have handled their braces.
+        markdown = self._escape_mdx_braces(markdown)
+
         # Wrap HTML-like tags in backticks so MDX doesn't treat them as JSX
+        # Runs after angle brackets and braces are escaped. Its original pattern
+        # will likely not match anymore if _escape_angle_brackets is effective.
         markdown = self._escape_jsx_like(markdown)
 
         # Wrap malformed URLs so MDX does not attempt to parse them
         markdown = self._sanitize_bad_urls(markdown)
-
-        # Escape curly braces outside of code blocks to avoid MDX parse errors
-        markdown = self._escape_mdx_braces(markdown)
-
-        # Escape stray angle brackets which may be interpreted as JSX
-        markdown = self._escape_angle_brackets(markdown)
 
         # Fix any remaining HTML artifacts
         # Convert any remaining <br> tags to newlines
