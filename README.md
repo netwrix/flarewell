@@ -1,107 +1,275 @@
-# Flarewell - MadCap Flare to Docusaurus Converter
+# HTML to Markdown Converter
 
-A Python tool to convert MadCap Flare HTML exports to Docusaurus-compatible Markdown.
-
-## New: Improved Link Mapping
-
-This version includes a robust link mapping system that:
-
-1. **Automatically transforms links** from .htm/.html to their Markdown equivalents
-2. **Preserves relative paths** correctly between files
-3. **Handles case sensitivity** and path variations
-4. **Preserves link titles** and attributes
-5. **Supports absolute paths** (/path/to/file.htm) and relative paths (../path/to/file.htm)
-
-The link mapper is integrated into the main conversion workflow and uses a two-step process:
-1. First, all files are registered in a master link map
-2. Then, during conversion, all links in each file are transformed using this map
-
-## New: Image Relocation
-
-Images are now automatically moved to a `static` directory located next to the
-output docs. All references inside Markdown files are updated, preserving
-relative paths and directory structure. No additional flags are required.
-Missing image references are removed during a post-conversion scan of the generated Markdown.
+A Python tool that converts HTML documentation (particularly from MadCap Flare) to Markdown format while preserving folder structure and centralizing images. Includes an MDX validation test suite to ensure the converted files are compatible with MDX processors.
 
 ## Features
 
-- Convert Flare HTML output to Markdown
-- Uses **markdownify** and **BeautifulSoup** for high-fidelity HTML conversion
-- Preserve the original folder structure and automatically generate `sidebars.js`
-- Convert Flare-specific UI elements to Docusaurus equivalents (admonitions, expandable sections, etc.)
-- Generate Docusaurus sidebar configuration
-- Automatically relocate images to a `static` directory next to your docs
-- Image filenames with spaces are stored using underscores in the output
-- Remove references to images that are missing after conversion
+### HTML to Markdown Conversion (app.py)
+- Converts HTML files (`.html`, `.htm`, `.xhtml`) to Markdown (`.md`)
+- Preserves directory structure with optional flattening
+- Centralizes all images in a `static/img` directory
+- **Intelligent image deduplication** - detects identical images and stores only one copy
+- Updates all internal links to reference the new `.md` files
+- Handles MadCap Flare specific elements (breadcrumbs, dropdowns, etc.)
+- **Cross-reference resolution** - maintains anchor links between documents
+- **Heading ID preservation** - converts MadCap anchors to Docusaurus-compatible IDs
+- Validates converted files for MDX compatibility
+- Supports dry-run mode for previewing changes
+- Creates an `image-manifest.json` file tracking all image usage
+
+### MDX Validation Suite (mdx-test-suite.js)
+- Tests if markdown files can compile as MDX
+- Supports single files, directories, or glob patterns
+- **Ultra-verbose mode** with progress bars, emojis, and system information
+- Provides detailed error reporting with line/column numbers
+- Calculates success rate with letter grades (A+ to F)
+- Automatically excludes `node_modules` and `.git` directories
+- Generates comprehensive JSON test reports
 
 ## Installation
 
-```bash
-pip install flarewell
-```
-
-Or for development:
-
-```bash
-git clone https://github.com/yourusername/flarewell.git
-cd flarewell
-pip install -e .
-```
+1. Clone this repository
+2. Set up Python virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install Python dependencies:
+   ```bash
+   pip install beautifulsoup4 markdownify
+   ```
+4. Install Node.js dependencies (for MDX testing):
+   ```bash
+   npm install @mdx-js/mdx fast-glob chalk
+   ```
 
 ## Usage
 
-Flarewell provides a single command:
-- `convert`: Transform Flare content to Docusaurus Markdown. Links are automatically fixed during conversion.
+### Basic Conversion
 
-### Convert Command
-
-Convert HTML output from Flare:
+Convert HTML documentation to Markdown:
 
 ```bash
-flarewell convert --input-dir /path/to/flare/html --output-dir /path/to/docusaurus/docs
+python app.py /path/to/html/docs /path/to/output
 ```
 
-Convert HTML to generic Markdown without Docusaurus front matter:
+### Common Options
+
+- **Verbose output** - See detailed conversion progress:
+  ```bash
+  python app.py /path/to/html/docs /path/to/output --verbose
+  ```
+
+- **Flatten directories** - Remove redundant nested directories (e.g., `Product/Product/docs` → `Product/docs`):
+  ```bash
+  python app.py /path/to/html/docs /path/to/output --flatten
+  ```
+
+- **Add Docusaurus frontmatter** - Add YAML frontmatter for Docusaurus compatibility:
+  ```bash
+  python app.py /path/to/html/docs /path/to/output --docusaurus
+  ```
+
+- **Lowercase filenames** - Convert all filenames and directories to lowercase:
+  ```bash
+  python app.py /path/to/html/docs /path/to/output --lowercase-filenames
+  ```
+
+- **Dry run** - Preview what would be converted without creating files:
+  ```bash
+  python app.py /path/to/html/docs /path/to/output --dry-run
+  ```
+
+- **Find image references** - Locate where a specific image is used:
+  ```bash
+  python app.py /path/to/html/docs /path/to/output --find-image "logo.png"
+  ```
+
+- **List files** - Show all files that will be processed before converting:
+  ```bash
+  python app.py /path/to/html/docs /path/to/output --list-files
+  ```
+
+### Testing Converted Files
+
+After conversion, validate that the Markdown files are MDX-compatible:
 
 ```bash
-flarewell convert --input-dir /path/to/flare/html --output-dir ./docs --markdown-style markdown
+# Test entire output directory
+node mdx-test-suite.js /path/to/output
+
+# Test specific subdirectory
+node mdx-test-suite.js /path/to/output/ProductName
+
+# Test single file
+node mdx-test-suite.js /path/to/output/guide/intro.md
+
+# Save test report with custom name
+node mdx-test-suite.js /path/to/output --output=validation-report.json
+
+# Run in ultra-verbose mode with progress bars and fun facts
+node mdx-test-suite.js /path/to/output --verbose
 ```
 
-Converted images will be moved to a `static` directory next to your output docs automatically.
+## Output Structure
 
-#### Convert Options
+After conversion, your files will be organized as follows:
 
-- `--input-dir, -i`: Directory containing Flare HTML output
-- `--output-dir, -o`: Directory to output Docusaurus-compatible Markdown files
-- `--preserve-structure`: Preserve the original folder/file structure (default: `False`)
-- `--exclude-dir`: Directory patterns to exclude from conversion (can be used multiple times)
-- `--debug`: Enable debug mode for detailed logging
-- `--no-sidebars`: Skip generating `sidebars.js`
-- `--verbose-image-cleanup`: Print each removed image reference
-- 
-## Development
+```
+output/                    # Your specified output directory
+├── Product1/             # Converted markdown files maintain structure
+│   ├── guide/
+│   │   └── intro.md
+│   └── api/
+│       └── reference.md
+└── Product2/
+    └── docs/
+        └── overview.md
 
-### Setup Development Environment
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/flarewell.git
-cd flarewell
-
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install development dependencies
-pip install -e ".[dev]"
+static/                   # Parallel to output directory
+└── img/                 # All images centralized here (note: 'img' not 'images')
+    ├── image-manifest.json  # Tracks all images, their usage, and deduplication
+    ├── Product1/        # Images maintain source structure
+    │   ├── guide/
+    │   │   └── screenshot.png
+    │   └── api/
+    │       └── diagram.png
+    └── Product2/
+        └── docs/
+            └── logo.png
 ```
 
-### Run Tests
+## Advanced Features
 
-```bash
-pytest
-```
+### Image Deduplication
+The converter automatically detects duplicate images (based on content hash) and stores only one copy. The `image-manifest.json` file tracks:
+- Original image paths
+- Which documents use each image
+- Deduplication statistics
+
+### Cross-Reference Resolution
+The converter maintains links between documents by:
+- Building anchor mappings during the first pass
+- Converting MadCap-style anchors to Docusaurus-compatible heading IDs
+- Resolving cross-file references automatically
+
+### MDX Compatibility Fixes
+The converter automatically handles common MDX issues:
+- Escapes curly braces in code blocks
+- Wraps HTML-like tags to prevent JSX interpretation
+- Fixes comparison operators in tables
+- Handles solo backticks and other edge cases
+
+## Example Workflow
+
+1. **Convert documentation with all features:**
+   ```bash
+   python app.py /Users/jordan.violet/documents/product_docs ./docs_output \
+     --flatten --verbose --docusaurus --lowercase-filenames
+   ```
+
+2. **Validate the converted files with verbose output:**
+   ```bash
+   node mdx-test-suite.js ./docs_output --verbose --output=mdx-test-report.json
+   ```
+
+3. **Review the validation report:**
+   ```bash
+   cat mdx-test-report.json | grep -A 5 '"summary"'
+   ```
+
+4. **Check image deduplication results:**
+   ```bash
+   cat static/img/image-manifest.json | jq '.[] | select(.reference_count > 1)'
+   ```
+
+5. **Clean up (if this was just a test):**
+   ```bash
+   rm -rf docs_output static mdx-test-report.json
+   ```
+
+## Important Notes
+
+- **Source files are never modified** - The tool only reads from the input directory
+- **Images are copied, not moved** - Original images remain in the source directory
+- **Only referenced images are copied** - Unreferenced images are skipped to save space
+- **Links are automatically updated** - All `.html` references become `.md` references
+- **Static directory location** - The `static/img` directory is created parallel to your output directory
+- **Image deduplication** - Identical images are stored only once, saving disk space
+
+## Troubleshooting
+
+### MDX Validation Failures
+
+If some files fail MDX validation, the test report will show:
+- File path
+- Error message
+- Line and column number (when available)
+
+Common issues:
+- HTML entities in script tags (`&lt;`, `&gt;`, `&amp;`)
+- Unclosed HTML/JSX tags
+- Invalid JavaScript in MDX context
+- Curly braces in code blocks (automatically fixed by converter)
+
+### Missing Images
+
+If images appear broken after conversion:
+1. Check if the image was referenced in the HTML
+2. Use `--find-image` to locate references
+3. Verify the image exists in the source directory
+4. Check the `static/img` directory structure
+5. Review `image-manifest.json` for deduplication info
+
+### Performance
+
+For large documentation sets:
+- The tool processes files in two passes:
+  1. First pass: Scans for images and builds anchor mappings (faster)
+  2. Second pass: Converts files and processes content (slower)
+- Expect ~1-2 seconds per file depending on complexity
+- Image deduplication saves both time and disk space
+
+## Command Reference
+
+### app.py Options
+
+| Option | Description |
+|--------|-------------|
+| `input_dir` | Source directory containing HTML files |
+| `output_dir` | Destination directory for Markdown files |
+| `--verbose, -v` | Show detailed progress information |
+| `--flatten` | Remove redundant nested directories |
+| `--docusaurus` | Add Docusaurus-compatible frontmatter |
+| `--lowercase-filenames` | Convert all filenames to lowercase |
+| `--dry-run` | Preview without creating files |
+| `--find-image IMAGE` | Find where an image is referenced |
+| `--list-files` | List all files before converting |
+
+### mdx-test-suite.js Options
+
+| Option | Description |
+|--------|-------------|
+| `path` | File, directory, or glob pattern to test |
+| `--output=FILE` | Save test report to JSON file (default: mdx-test-report.json) |
+| `--verbose, -v` | Enable ultra-verbose mode with progress bars and system info |
+| `--help, -h` | Show help message |
+
+### MDX Test Suite Verbose Mode Features
+When run with `--verbose`, the test suite provides:
+- System information display
+- Progress bars and percentage completion
+- Memory usage statistics
+- Fun facts about MDX
+- Detailed error diagnostics
+- Session ID and timing information
+- Letter grade (A+ to F) based on success rate
+- Emoji-rich output for better readability
 
 ## License
 
-MIT 
+[Your license here]
+
+## Contributing
+
+[Your contributing guidelines here]
