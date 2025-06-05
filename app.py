@@ -656,7 +656,7 @@ class HTMLToMarkdownConverter:
                     
                     # Update the link href
                     img_path = dest_path.relative_to(self.images_dir)
-                    abs_path = '/img/' + str(img_path).replace('\\', '/')
+                    abs_path = '/static/img/' + str(img_path).replace('\\', '/')
                     link['href'] = abs_path
                     self.log(f"  → Updated image link: {href} → {abs_path}")
         
@@ -749,7 +749,7 @@ class HTMLToMarkdownConverter:
             # Update image reference in HTML
             # Always use full absolute path including /static/
             img_path = dest_path.relative_to(self.images_dir)
-            abs_path = '/static/img/' + str(img_path).replace('\\', '/')
+            abs_path = '/img/' + str(img_path).replace('\\', '/')
             img['src'] = abs_path
             
     def process_document_links(self, soup, html_file):
@@ -830,8 +830,46 @@ class HTMLToMarkdownConverter:
             parsed = urlparse(href)
             path_part = unquote(parsed.path)
             
-            # Check if this is an HTML file reference
-            if path_part.endswith(('.html', '.htm', '.xhtml', '.xhtm', '.HTML', '.HTM', '.XHTML', '.XHTM')):
+            # Check if this is an HTML file reference OR an MD file reference
+            if path_part.endswith(('.html', '.htm', '.xhtml', '.xhtm', '.HTML', '.HTM', '.XHTML', '.XHTM', '.md', '.MD')):
+                # Skip processing if it already ends with .md (unless we need to handle fragment)
+                if path_part.endswith(('.md', '.MD')) and not parsed.fragment:
+                    # Already pointing to .md file and no fragment to process
+                    continue
+                
+                # For .md files with fragments, we need to process the fragment but keep the path
+                if path_part.endswith(('.md', '.MD')):
+                    # Just use the path as-is since it's already .md
+                    new_href = path_part
+                    
+                    # Process fragment if present
+                    if parsed.fragment:
+                        fragment = unquote(parsed.fragment)
+                        
+                        # Check if the fragment itself ends with .md (which would be unusual)
+                        if fragment.endswith('.md'):
+                            # This is likely an error in the source - log it and strip the .md
+                            self.log(f"  → Warning: Fragment '{fragment}' ends with .md - this is likely an error")
+                            fragment = fragment[:-3]  # Remove the .md extension
+                        
+                        # Process the fragment as usual
+                        if self.docusaurus:
+                            # Sanitize and convert to Docusaurus format
+                            sanitized_fragment = fragment.replace(':', '_').replace('&', '_and_')
+                            sanitized_fragment = sanitized_fragment.lstrip('_')
+                            docusaurus_id = self.madcap_to_docusaurus_id(sanitized_fragment)
+                            new_href += '#' + docusaurus_id
+                        else:
+                            # Just sanitize
+                            sanitized_fragment = fragment.replace(':', '_').replace('&', '_and_')
+                            sanitized_fragment = sanitized_fragment.lstrip('_')
+                            new_href += '#' + sanitized_fragment
+                    
+                    # Update the link
+                    link['href'] = new_href
+                    self.log(f"  → Updated .md link: {href} → {new_href}")
+                    continue
+                
                 # If lowercase mode is enabled, handle paths differently
                 if self.lowercase_filenames:
                     # For relative paths, we need to handle them component by component

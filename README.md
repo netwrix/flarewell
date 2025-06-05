@@ -19,12 +19,12 @@ A Python tool that converts HTML documentation (particularly from MadCap Flare) 
 
 ### MDX Validation Suite (mdx-test-suite.js)
 - Tests if markdown files can compile as MDX
+- Recursively scans directories for `.md` and `.mdx` files
 - Supports single files, directories, or glob patterns
-- **Ultra-verbose mode** with progress bars, emojis, and system information
-- Provides detailed error reporting with line/column numbers
-- Calculates success rate with letter grades (A+ to F)
+- Provides error reporting with line/column numbers
 - Automatically excludes `node_modules` and `.git` directories
-- Generates comprehensive JSON test reports
+- Generates JSON test reports
+- Returns appropriate exit codes for CI/CD integration
 
 ## Installation
 
@@ -106,9 +106,6 @@ node mdx-test-suite.js /path/to/output/guide/intro.md
 
 # Save test report with custom name
 node mdx-test-suite.js /path/to/output --output=validation-report.json
-
-# Run in ultra-verbose mode with progress bars and fun facts
-node mdx-test-suite.js /path/to/output --verbose
 ```
 
 ## Output Structure
@@ -252,19 +249,7 @@ For large documentation sets:
 |--------|-------------|
 | `path` | File, directory, or glob pattern to test |
 | `--output=FILE` | Save test report to JSON file (default: mdx-test-report.json) |
-| `--verbose, -v` | Enable ultra-verbose mode with progress bars and system info |
 | `--help, -h` | Show help message |
-
-### MDX Test Suite Verbose Mode Features
-When run with `--verbose`, the test suite provides:
-- System information display
-- Progress bars and percentage completion
-- Memory usage statistics
-- Fun facts about MDX
-- Detailed error diagnostics
-- Session ID and timing information
-- Letter grade (A+ to F) based on success rate
-- Emoji-rich output for better readability
 
 ## License
 
