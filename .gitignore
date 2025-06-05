@@ -136,3 +136,9 @@ package.json
 
 # macOS specific files
 .DS_Store
+
+# Project specific directories
+product_docs/
+docs/
+tests/test_website/node_modules/
+tests/test_website/static/

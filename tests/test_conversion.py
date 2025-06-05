@@ -28,6 +28,9 @@ def setUpModule():
             str(INPUT_DIR),
             "--output-dir",
             str(DOCS_DIR),
+            "--preserve-structure",
+            "--exclude-dir",
+            "internal",
         ]
     )
     run_cmd(["npm", "run", "build"], cwd=SITE_DIR)
