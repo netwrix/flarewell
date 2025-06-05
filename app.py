@@ -486,6 +486,18 @@ class HTMLToMarkdownConverter:
             # Remove MadCap Flare specific elements
             self.clean_madcap_elements(soup)
             
+            # Pre-process code tags to preserve their content without escaping
+            # Convert <code> tags to temporary markers to handle them specially
+            code_blocks = []
+            for code_tag in soup.find_all('code'):
+                # Get the raw text content without any escaping
+                code_content = code_tag.get_text()
+                # Store the content
+                code_blocks.append(code_content)
+                # Replace with a temporary marker
+                marker = f"CODE_BLOCK_{len(code_blocks) - 1}_MARKER"
+                code_tag.string = marker
+            
             # Debug: Check pre tags after clean_madcap_elements
             if self.verbose:
                 pre_tags_after = soup.find_all('pre')
@@ -525,6 +537,14 @@ class HTMLToMarkdownConverter:
                 strip=['script', 'style', 'meta', 'link', 'noscript']  # Remove these tags entirely
             )
             
+            # Restore code blocks with triple backticks and no escaping
+            for i, code_content in enumerate(code_blocks):
+                marker = f"CODE_BLOCK_{i}_MARKER"
+                # Replace the marker with triple backtick code blocks
+                # The content is preserved exactly as it was in the HTML
+                markdown_content = markdown_content.replace(f"`{marker}`", f"```{code_content}```")
+                # Also handle cases where markdownify might have processed it differently
+                markdown_content = markdown_content.replace(marker, f"```{code_content}```")
             
             # Debug: Check for /* */ right after conversion
             if '/\\*' in markdown_content and '\\*/' in markdown_content:
@@ -571,6 +591,144 @@ class HTMLToMarkdownConverter:
             
             # Create parent directories
             markdown_path.parent.mkdir(parents=True, exist_ok=True)
+            
+            # FINAL FIX: Escape any remaining pipes in table cells right before writing
+            # This is our last chance to fix stubborn patterns
+            lines = markdown_content.split('\n')
+            
+            # First pass: Find tables and fix column consistency
+            table_column_count = None
+            in_table = False
+            table_start = -1
+            
+            for i, line in enumerate(lines):
+                # Detect table start
+                if '|' in line and line.count('|') >= 2:
+                    if not in_table:
+                        # Check if next line is separator
+                        if i + 1 < len(lines) and re.match(r'^[\s\-|:]+$', lines[i + 1]):
+                            in_table = True
+                            table_start = i
+                            # Count columns from header
+                            table_column_count = line.count('|') - 1  # Subtract 1 for leading/trailing pipes
+                    
+                    if in_table and table_column_count:
+                        # Fix column count for this row
+                        current_columns = line.count('|') - 1
+                        if current_columns < table_column_count:
+                            # Add empty columns
+                            missing_columns = table_column_count - current_columns
+                            # Remove trailing pipe if exists
+                            if line.rstrip().endswith('|'):
+                                line = line.rstrip()[:-1]
+                            # Add missing columns
+                            line = line + ' |' * missing_columns + ' |'
+                            lines[i] = line
+                        elif current_columns > table_column_count:
+                            # Too many columns - this might be a new table or error
+                            # For now, leave it as is
+                            pass
+                
+                # Detect table end
+                elif in_table and line.strip() == '':
+                    in_table = False
+                    table_column_count = None
+            
+            # Second pass: Apply all other fixes
+            for i, line in enumerate(lines):
+                # POLICYPAK FIXES: Apply to all lines, not just tables
+                # Fix 1: Remove curly braces from GUIDs (common in PolicyPak)
+                # Pattern: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}
+                if '{' in line and '}' in line:
+                    # Don't process if it's already in a code block
+                    if not line.strip().startswith('`'):
+                        # Remove braces from GUID patterns
+                        line = re.sub(r'\{([A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12})\}', 
+                                     r'\1', line, flags=re.IGNORECASE)
+                        # For any other curly braces (like placeholders), escape them
+                        line = re.sub(r'(?<!\\)\{([^}]+)\}', r'\\{\1\\}', line)
+                
+                # Fix 2: Handle percent variables (common in PolicyPak paths)
+                # Pattern: %ProgramData%, %LOCALAPPDATA%, etc.
+                if '%' in line:
+                    line = re.sub(r'(?<!`)%([A-Za-z0-9_]+)%(?!`)', r'`%\1%`', line)
+                
+                # Fix 3: Escape square brackets in URLs and parameters
+                # Pattern: [dl=0], [dl=1], etc.
+                if '[' in line and ']' in line:
+                    # Don't escape if in code block or if it's a markdown link
+                    if not line.strip().startswith('`') and not re.search(r'\]\([^)]+\)', line):
+                        # Escape square brackets that look like parameters
+                        line = re.sub(r'\[([^]]+=[^]]+)\]', r'\\[\1\\]', line)
+                        # Also escape other square brackets that might cause issues
+                        line = re.sub(r'(?<!\\)\[([^]]+)\]', r'\\[\1\\]', line)
+                
+                # Fix 4: Wrap inline XML/HTML tags in backticks
+                # Pattern: <tag attr=value or </tag> in regular text
+                if '<' in line and not line.strip().startswith('`'):
+                    # Don't process if it's a full HTML line or in a code block
+                    if not line.strip().startswith('<') and not line.strip().startswith('```'):
+                        # Find and wrap XML/HTML tags that aren't already wrapped
+                        line = re.sub(r'(?<!`)"<([^>"]+)"', r'"`<\1>`"', line)  # Quoted tags
+                        line = re.sub(r'(?<!`)(<[^>]+>)(?!`)', r'`\1`', line)   # Unquoted tags
+                
+                # If this is a table row (has 3+ pipes)
+                if '|' in line and line.count('|') >= 3:
+                    # Escape any letter|letter patterns
+                    line = re.sub(r'([a-zA-Z])\|([a-zA-Z])', r'\1\\|\2', line)
+                    
+                    # Fix triple backticks within table cells
+                    # Replace ``` with ` at the start and end of code blocks in cells
+                    # First, handle cases where triple backticks are at the end of a cell
+                    line = re.sub(r'```\s*\|', '` |', line)
+                    # Then handle cases where triple backticks start a code block
+                    line = re.sub(r'\|\s*```', '| `', line)
+                    # Handle any remaining triple backticks within cells
+                    parts = line.split('|')
+                    for j, part in enumerate(parts):
+                        if '```' in part:
+                            # Replace starting triple backticks
+                            part = re.sub(r'(^|\s)```(\S)', r'\1`\2', part)
+                            # Replace ending triple backticks
+                            part = re.sub(r'(\S)```($|\s)', r'\1`\2', part)
+                            # Replace any standalone triple backticks
+                            part = part.replace('```', '`')
+                        
+                        # POLICYPAK: Additional fixes for table cells
+                        # Remove curly braces from GUIDs in table cells
+                        if '{' in part or '\\{' in part:
+                            if not (part.strip().startswith('`') and part.strip().endswith('`')):
+                                # First handle already escaped GUIDs (with \\{ and \\})
+                                part = re.sub(r'\\\\\{([A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12})\\\\\}', 
+                                            r'\1', part, flags=re.IGNORECASE)
+                                # Then handle non-escaped GUIDs (with { and })
+                                part = re.sub(r'\{([A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12})\}', 
+                                            r'\1', part, flags=re.IGNORECASE)
+                                # For any other curly braces that aren't GUIDs, escape them
+                                # First check if there are any remaining unescaped braces
+                                if re.search(r'(?<!\\)\{[^}]+\}', part) and not re.search(r'\{[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}\}', part, re.IGNORECASE):
+                                    part = re.sub(r'(?<!\\)\{([^}]+)\}', r'\\{\1\\}', part)
+                        
+                        # Fix XML tags within table cells
+                        # Look for patterns like </RelatedItem or <tag> that might cause issues
+                        if '<' in part or '>' in part:
+                            # First check if it's an unclosed tag at the end
+                            # Pattern: text</tag with no closing >
+                            if re.search(r'<[^>]+$', part):
+                                # Add missing closing >
+                                part = part + '>'
+                            
+                            # Wrap XML/HTML tags in backticks if not already wrapped
+                            # But only if the entire cell isn't already in backticks
+                            if not (part.strip().startswith('`') and part.strip().endswith('`')):
+                                # Find all XML/HTML tags
+                                part = re.sub(r'(<[^>]+>)', r'`\1`', part)
+                        
+                        parts[j] = part
+                    line = '|'.join(parts)
+                    
+                lines[i] = line
+            markdown_content = '\n'.join(lines)
             
             # Write markdown file
             with open(markdown_path, 'w', encoding='utf-8') as f:
@@ -1893,6 +2051,9 @@ class HTMLToMarkdownConverter:
         # Fix comparison operators in tables
         content = self.fix_comparison_operators_in_tables(content)
         
+        # Fix MDX parsing issues (pipe escaping, backticks, JSON arrays)
+        content = self.fix_mdx_parsing_issues_ultimate(content)
+        
         # Final check for inline table tags that might cause MDX issues
         # If a line contains text before a <table> tag, it's likely inline and should be escaped
         lines = content.split('\n')
@@ -2333,6 +2494,343 @@ class HTMLToMarkdownConverter:
             elif in_table and line.strip() == '':
                 # Empty line ends the table
                 in_table = False
+            
+            fixed_lines.append(line)
+        
+        return '\n'.join(fixed_lines)
+    
+    def fix_mdx_parsing_issues_ultimate(self, content):
+        """Ultimate fix for all MDX parsing issues including the most stubborn edge cases"""
+        # Debug: Check if we're processing files with Select|Execute
+        if 'Select|Execute' in content or 'Select | Execute' in content:
+            self.log("  → DEBUG: fix_mdx_parsing_issues_ultimate called on content with Select|Execute")
+            # Pre-process the entire content to fix known problematic patterns
+            # This is a failsafe for stubborn cases
+            content = re.sub(r'Select\s*\|\s*Execute', r'Select\\|Execute', content)
+            content = re.sub(r'Select\s*\|\s*Update', r'Select\\|Update', content)
+            content = re.sub(r'Read\s*\|\s*Write', r'Read\\|Write', content)
+            # Generic pattern: any letter|letter within table context
+            lines_temp = content.split('\n')
+            for i, line in enumerate(lines_temp):
+                if '|' in line and line.count('|') >= 3:  # Likely a table row
+                    # Replace letter|letter patterns in this line
+                    lines_temp[i] = re.sub(r'([a-zA-Z])\|([a-zA-Z])', r'\1\\|\2', line)
+            content = '\n'.join(lines_temp)
+        
+        lines = content.split('\n')
+        fixed_lines = []
+        in_code_block = False
+        in_table = False
+        code_block_delimiter = None
+        
+        for line_num, line in enumerate(lines):
+            # Track code blocks - don't process content inside them
+            if line.strip().startswith('```') or line.strip().startswith('~~~'):
+                delimiter = line.strip()[:3]
+                if code_block_delimiter is None:
+                    code_block_delimiter = delimiter
+                    in_code_block = True
+                elif delimiter == code_block_delimiter:
+                    code_block_delimiter = None
+                    in_code_block = False
+                fixed_lines.append(line)
+                continue
+                
+            # Skip processing in code blocks
+            if in_code_block:
+                fixed_lines.append(line)
+                continue
+            
+            # Pre-process lines to handle specific patterns before table processing
+            # Fix curly braces in non-table contexts (like GUIDs)
+            if not ('|' in line and line.count('|') >= 2):
+                # Fix 1: Escape ALL curly braces (not just GUIDs)
+                # This catches more edge cases
+                line = re.sub(r'(?<!\\)\{([^}]*)\}', r'\\{\1\\}', line)
+                
+                # Fix 2: Escape percent variables
+                # Pattern: %variable% -> `%variable%`
+                line = re.sub(r'(?<!`)%([A-Za-z0-9_\-{}]+)%(?!`)', r'`%\1%`', line)
+                
+                # Fix 3: Escape backslashes in paths (but not in URLs)
+                # Only escape backslashes that are part of file/registry paths
+                if re.search(r'\\(?![nrt\\])', line) and not re.search(r'https?://', line):
+                    # Replace single backslashes with double backslashes
+                    line = re.sub(r'\\(?![\\])', r'\\\\', line)
+            
+            # Detect if we're in a table
+            if '|' in line and line.count('|') >= 2:
+                in_table = True
+                
+                # Check if this is a table separator line (contains only -, |, and :)
+                if re.match(r'^[\s\-|:]+$', line):
+                    fixed_lines.append(line)
+                    continue
+                
+                # CRITICAL FIX: Before splitting by pipes, we need to protect content in backticks
+                # because backtick-enclosed content should never be split
+                protected_sections = []
+                protected_marker = '___PROTECTED_CONTENT_{}___ '
+                
+                # Find all backtick-enclosed sections and protect them
+                backtick_pattern = r'`[^`]+`'
+                matches = list(re.finditer(backtick_pattern, line))
+                for i, match in enumerate(matches):
+                    protected_sections.append(match.group())
+                    line = line.replace(match.group(), protected_marker.format(i))
+                
+                # Split by pipes carefully to preserve content
+                # Use a special marker to handle already escaped pipes
+                temp_marker = '___ESCAPED_PIPE___'
+                line = line.replace('\\|', temp_marker)
+                parts = line.split('|')
+                fixed_parts = []
+                
+                for i, part in enumerate(parts):
+                    # Skip the first and last empty parts (from leading/trailing |)
+                    if i == 0 or i == len(parts) - 1:
+                        fixed_parts.append(part)
+                        continue
+                    
+                    # Restore protected content first
+                    for j, protected in enumerate(protected_sections):
+                        part = part.replace(protected_marker.format(j), protected)
+                    
+                    # Restore temporarily replaced escaped pipes
+                    part = part.replace(temp_marker, '\\|')
+                    
+                    # Debug logging BEFORE processing
+                    if 'Select' in part and 'Execute' in part:
+                        self.log(f"  → DEBUG: Found Select|Execute in part: '{part}'")
+                    
+                    # ULTIMATE FIX 1: Escape ALL pipes in table cells - SUPER AGGRESSIVE
+                    # Specifically target letter|letter patterns as requested
+                    # This will catch Select|Execute, Read|Write, etc.
+                    if '|' in part:
+                        original_part = part
+                        # First, escape any pipe that has a letter before and after it
+                        part = re.sub(r'([a-zA-Z])\|([a-zA-Z])', r'\1\\|\2', part)
+                        
+                        # Also catch cases where there might be spaces
+                        # For example: "Select | Execute" or "Select |Execute"
+                        part = re.sub(r'([a-zA-Z])\s*\|\s*([a-zA-Z])', r'\1\\|\2', part)
+                        
+                        # Debug: Log what we're processing if verbose
+                        if 'Select' in original_part and 'Execute' in original_part:
+                            self.log(f"  → DEBUG: After escaping: '{part}'")
+                            self.log(f"  → DEBUG: Changed: {original_part != part}")
+                    
+                    # ULTIMATE FIX 2: Handle complex JSON in table cells
+                    # If cell contains JSON-like content, wrap ENTIRE cell in code block
+                    if ('"' in part and '{' in part) or ('"' in part and '[' in part):
+                        if not (part.strip().startswith('`') and part.strip().endswith('`')):
+                            part = ' `' + part.strip() + '` '
+                    
+                    # Fix 3: Escape ALL curly braces in table cells
+                    # Don't try to be smart about GUIDs vs JSON - just escape them all
+                    if '{' in part and not (part.strip().startswith('`') and part.strip().endswith('`')):
+                        part = re.sub(r'(?<!\\)\{([^}]*)\}', r'\\{\1\\}', part)
+                    
+                    # Fix 4: Escape percent variables in table cells
+                    part = re.sub(r'(?<!`)%([A-Za-z0-9_\-{}]+)%(?!`)', r'`%\1%`', part)
+                    
+                    # Fix 5: Handle square brackets (common in SQL/code examples)
+                    # If not already in backticks, escape them
+                    if '[' in part and not (part.strip().startswith('`') and part.strip().endswith('`')):
+                        part = re.sub(r'\[([^\]]+)\]', r'\\[\1\\]', part)
+                    
+                    # Fix 6: Handle XML tags in table cells
+                    if '<' in part and '>' in part:
+                        if not (part.strip().startswith('`') and part.strip().endswith('`')):
+                            part = re.sub(r'(<[^>]+>)', r'`\1`', part)
+                    
+                    # Fix 7: Escape backslashes in paths within table cells
+                    if re.search(r'\\(?![nrt\\|])', part) and not re.search(r'https?://', part):
+                        part = re.sub(r'\\(?![\\|])', r'\\\\', part)
+                    
+                    # ULTIMATE FIX 8: Handle problematic Unicode characters
+                    # Replace check marks and other symbols that cause issues
+                    part = part.replace('✔', '[checkmark]')
+                    part = part.replace('✓', '[checkmark]')
+                    part = part.replace('×', '[x]')
+                    part = part.replace('✗', '[x]')
+                    
+                    fixed_parts.append(part)
+                
+                line = '|'.join(fixed_parts)
+                
+            elif in_table and line.strip() == '':
+                # Empty line ends the table
+                in_table = False
+            
+            # Additional fixes for non-table content
+            if not in_table:
+                # Fix backticks with curly braces
+                line = re.sub(r'`([^`]*)`\{', r'`\1`\\{', line)
+                
+                # Fix XML/HTML tags outside of code blocks
+                if re.search(r'<[^>]+>', line) and not line.strip().startswith('<'):
+                    # Wrap inline XML/HTML tags in backticks
+                    line = re.sub(r'(?<!`)<([^>]+)>(?!`)', r'`<\1>`', line)
+                
+                # Fix equals signs in unexpected places
+                if '=' in line and not re.search(r'(href|src|class|id|style)\s*=', line):
+                    # Check if it's in a link or normal HTML attribute
+                    if not re.search(r'\[.*\]\(.*=.*\)', line):  # Not in markdown link
+                        line = re.sub(r'(?<!["\'])\s=\s(?!["\'])', r' \\= ', line)
+                
+                # ULTIMATE FIX: Handle hyphens in specific contexts
+                # Fix patterns like `PP-`{name} by escaping the hyphen
+                line = re.sub(r'`([^`]*)-`(\s*)\{', r'`\1\\-`\2\\{', line)
+            
+            fixed_lines.append(line)
+        
+        return '\n'.join(fixed_lines)
+    
+    def fix_mdx_parsing_issues(self, content):
+        """Fix specific MDX parsing issues that cause acorn errors"""
+        lines = content.split('\n')
+        fixed_lines = []
+        in_code_block = False
+        in_table = False
+        code_block_delimiter = None
+        
+        for line in lines:
+            # Track code blocks - don't process content inside them
+            if line.strip().startswith('```') or line.strip().startswith('~~~'):
+                delimiter = line.strip()[:3]
+                if code_block_delimiter is None:
+                    code_block_delimiter = delimiter
+                    in_code_block = True
+                elif delimiter == code_block_delimiter:
+                    code_block_delimiter = None
+                    in_code_block = False
+                fixed_lines.append(line)
+                continue
+                
+            # Skip processing in code blocks
+            if in_code_block:
+                fixed_lines.append(line)
+                continue
+            
+            # Pre-process lines to handle specific patterns before table processing
+            # Fix curly braces in non-table contexts (like GUIDs)
+            if not ('|' in line and line.count('|') >= 2):
+                # Fix 1: Escape standalone curly braces (common in GUIDs)
+                # Pattern: {GUID} -> \{GUID\}
+                line = re.sub(r'(?<!\\)\{([A-F0-9\-]+)\}', r'\\{\1\\}', line, flags=re.IGNORECASE)
+                
+                # Fix 2: Escape percent variables
+                # Pattern: %variable% -> `%variable%`
+                line = re.sub(r'(?<!`)%([A-Za-z0-9_\-{}]+)%(?!`)', r'`%\1%`', line)
+                
+                # Fix 3: Escape backslashes in paths (but not in URLs)
+                # Only escape backslashes that are part of file/registry paths
+                if re.search(r'\\(?![nrt\\])', line) and not re.search(r'https?://', line):
+                    # Replace single backslashes with double backslashes
+                    line = re.sub(r'\\(?![\\])', r'\\\\', line)
+            
+            # Detect if we're in a table
+            if '|' in line and line.count('|') >= 2:
+                in_table = True
+                
+                # Check if this is a table separator line (contains only -, |, and :)
+                if re.match(r'^[\s\-|:]+$', line):
+                    fixed_lines.append(line)
+                    continue
+                
+                # Split by pipes carefully to preserve content
+                # Use a special marker to handle already escaped pipes
+                temp_marker = '___ESCAPED_PIPE___'
+                line = line.replace('\\|', temp_marker)
+                parts = line.split('|')
+                fixed_parts = []
+                
+                for i, part in enumerate(parts):
+                    # Skip the first and last empty parts (from leading/trailing |)
+                    if i == 0 or i == len(parts) - 1:
+                        fixed_parts.append(part)
+                        continue
+                    
+                    # Restore temporarily replaced escaped pipes
+                    part = part.replace(temp_marker, '\\|')
+                    
+                    # Fix 1: Escape pipe characters within table cells
+                    # Look for patterns like "Select|Execute", "Value1|Value2", etc.
+                    # Match word characters, spaces, or certain punctuation followed by pipe
+                    if re.search(r'[\w)\]]\s*\|\s*[\w\[]', part):
+                        # This contains patterns that should be escaped
+                        part = re.sub(r'([\w)\]])\s*\|\s*([\w\[])', r'\1\\|\2', part)
+                        # Handle multiple pipes in the same cell
+                        while re.search(r'([\w)\]])\s*\|\s*([\w\[])', part):
+                            part = re.sub(r'([\w)\]])\s*\|\s*([\w\[])', r'\1\\|\2', part)
+                    
+                    # Fix 2: Handle backticks with square brackets (common in SQL/JSON examples)
+                    # Pattern: `[something]` needs special handling
+                    # First, temporarily mark already properly formatted code
+                    part = re.sub(r'`([^`]+)`', lambda m: '___CODE_START___' + m.group(1) + '___CODE_END___', part)
+                    
+                    # Now escape any remaining square brackets that aren't in code
+                    part = re.sub(r'\[([^\]]+)\]', r'\\[\1\\]', part)
+                    
+                    # Restore the code blocks
+                    part = part.replace('___CODE_START___', '`').replace('___CODE_END___', '`')
+                    
+                    # Fix 3: Escape curly braces in table cells (like GUIDs)
+                    # But not if they're already escaped or part of JSON
+                    if not re.search(r'\{.*:.*\}', part):  # Not JSON
+                        part = re.sub(r'(?<!\\)\{([A-F0-9\-]+)\}', r'\\{\1\\}', part, flags=re.IGNORECASE)
+                    
+                    # Fix 4: Escape percent variables in table cells
+                    part = re.sub(r'(?<!`)%([A-Za-z0-9_\-{}]+)%(?!`)', r'`%\1%`', part)
+                    
+                    # Fix 5: Handle complex JSON in table cells
+                    # If the cell contains JSON-like content, wrap the entire cell content in backticks
+                    if (re.search(r'\{"[^"]+":', part) or 
+                        re.search(r'\["[^"]+"', part) or
+                        re.search(r'\{.*\\\\{.*\}.*\}', part)):
+                        # This looks like JSON, wrap entire content if not already wrapped
+                        if not (part.strip().startswith('`') and part.strip().endswith('`')):
+                            part = ' `' + part.strip() + '` '
+                    
+                    # Fix 6: Handle XML tags in table cells
+                    if re.search(r'<[^>]+>', part):
+                        # Wrap XML in backticks if not already
+                        if not (part.strip().startswith('`') and part.strip().endswith('`')):
+                            part = re.sub(r'(<[^>]+>)', r'`\1`', part)
+                    
+                    # Fix 7: Escape backslashes in paths within table cells
+                    if re.search(r'\\(?![nrt\\|])', part) and not re.search(r'https?://', part):
+                        part = re.sub(r'\\(?![\\|])', r'\\\\', part)
+                    
+                    # Fix 8: Handle special URL parameters
+                    # Pattern: [dl=0] -> \[dl=0\] (but only if not in backticks)
+                    if not re.search(r'`[^`]*\[[^\]]+\][^`]*`', part):
+                        part = re.sub(r'(?<!\\)\[([^]]+=[^]]+)\]', r'\\[\1\\]', part)
+                    
+                    fixed_parts.append(part)
+                
+                line = '|'.join(fixed_parts)
+                
+            elif in_table and line.strip() == '':
+                # Empty line ends the table
+                in_table = False
+            
+            # Additional fixes for non-table content
+            if not in_table:
+                # Fix backticks with curly braces
+                line = re.sub(r'`([^`]*)`\{', r'`\1`\\{', line)
+                
+                # Fix XML/HTML tags outside of code blocks
+                if re.search(r'<[^>]+>', line) and not line.strip().startswith('<'):
+                    # Wrap inline XML/HTML tags in backticks
+                    line = re.sub(r'(?<!`)<([^>]+)>(?!`)', r'`<\1>`', line)
+                
+                # Fix equals signs in unexpected places (like version comparisons)
+                # Pattern: "GREATER THAN 0.0.0.0" is fine, but bare = might not be
+                if '=' in line and not re.search(r'(href|src|class|id|style)\s*=', line):
+                    # Check if it's a comparison or assignment that needs escaping
+                    line = re.sub(r'(?<!["\'])\s*=\s*(?!["\'])', r' \\= ', line)
             
             fixed_lines.append(line)
         

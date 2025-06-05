@@ -134,3 +134,8 @@ dmypy.json
 node_modules/
 package-lock.json
 package.json
+
+# Project specific folders
+md_docs/
+product_docs/
+static/
