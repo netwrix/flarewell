@@ -1,120 +1,80 @@
-# HTML to Markdown Converter
+# HTML to Markdown Converter - Claude Instructions
 
-A Python tool that converts HTML documentation (particularly from MadCap Flare) to Markdown format while preserving folder structure and centralizing images. Includes an MDX validation test suite to ensure the converted files are compatible with MDX processors.
+<project_overview>
+A Python tool that converts HTML documentation (particularly from MadCap Flare) to Markdown format while preserving folder structure and centralizing images with intelligent deduplication.
+</project_overview>
 
-## Features
+## Core Functionality
 
-### HTML to Markdown Conversion (app.py)
-- Converts HTML files (`.html`, `.htm`, `.xhtml`) to Markdown (`.md`)
-- Preserves directory structure with optional flattening
-- Centralizes all images in a `static/img` directory
-- **Intelligent image deduplication** - detects identical images and stores only one copy
-- Updates all internal links to reference the new `.md` files
-- Handles MadCap Flare specific elements (breadcrumbs, dropdowns, etc.)
-- **Cross-reference resolution** - maintains anchor links between documents
-- **Heading ID preservation** - converts MadCap anchors to Docusaurus-compatible IDs
-- Validates converted files for MDX compatibility
-- Supports dry-run mode for previewing changes
-- Creates an `image-manifest.json` file tracking all image usage
+<conversion_rules>
+- **Input**: HTML files (`.html`, `.htm`, `.xhtml`)
+- **Output**: Markdown files (`.md`)
+- **Directory Structure**: Preserved except for images
+- **Image Handling**: Centralized in `static/img/{productname}` directory
+- **Filename Convention**: All lowercase with underscores replacing spaces
+- **Path References**: Absolute paths from parent output directory
+</conversion_rules>
 
-### MDX Validation Suite (mdx-test-suite.js)
-- Tests if markdown files can compile as MDX
-- Recursively scans directories for `.md` and `.mdx` files
-- Supports single files, directories, or glob patterns
-- Provides error reporting with line/column numbers
-- Automatically excludes `node_modules` and `.git` directories
-- Generates JSON test reports
-- Returns appropriate exit codes for CI/CD integration
+## Key Features
 
-## Installation
+<features>
+<feature name="intelligent_deduplication">
+- Detects identical images using content hashing
+- Stores only one copy of duplicate images
+- Tracks usage in `image-manifest.json`
+</feature>
 
-1. Clone this repository
-2. Set up Python virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install Python dependencies:
-   ```bash
-   pip install beautifulsoup4 markdownify
-   ```
-4. Install Node.js dependencies (for MDX testing):
-   ```bash
-   npm install @mdx-js/mdx fast-glob chalk
-   ```
+<feature name="link_preservation">
+- Updates all internal `.html` links to `.md`
+- Maintains anchor links between documents
+- Resolves cross-file references automatically
+</feature>
+
+<feature name="image_centralization">
+- All images stored in `/static/img/{mirror_doc_directory}`
+- One image folder per product
+- Only referenced images are copied
+</feature>
+</features>
+
+## Installation & Setup
+
+<setup_instructions>
+```bash
+# 1. Clone repository
+git clone [repository_url]
+
+# 2. Create virtual environment
+python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install beautifulsoup4 markdownify
+```
+</setup_instructions>
 
 ## Usage
 
-### Basic Conversion
-
-Convert HTML documentation to Markdown:
-
+<usage_examples>
+<example name="basic">
 ```bash
 python app.py /path/to/html/docs /path/to/output
 ```
+</example>
 
-### Common Options
-
-- **Verbose output** - See detailed conversion progress:
-  ```bash
-  python app.py /path/to/html/docs /path/to/output --verbose
-  ```
-
-- **Flatten directories** - Remove redundant nested directories (e.g., `Product/Product/docs` → `Product/docs`):
-  ```bash
-  python app.py /path/to/html/docs /path/to/output --flatten
-  ```
-
-- **Add Docusaurus frontmatter** - Add YAML frontmatter for Docusaurus compatibility:
-  ```bash
-  python app.py /path/to/html/docs /path/to/output --docusaurus
-  ```
-
-- **Lowercase filenames** - Convert all filenames and directories to lowercase:
-  ```bash
-  python app.py /path/to/html/docs /path/to/output --lowercase-filenames
-  ```
-
-- **Dry run** - Preview what would be converted without creating files:
-  ```bash
-  python app.py /path/to/html/docs /path/to/output --dry-run
-  ```
-
-- **Find image references** - Locate where a specific image is used:
-  ```bash
-  python app.py /path/to/html/docs /path/to/output --find-image "logo.png"
-  ```
-
-- **List files** - Show all files that will be processed before converting:
-  ```bash
-  python app.py /path/to/html/docs /path/to/output --list-files
-  ```
-
-### Testing Converted Files
-
-After conversion, validate that the Markdown files are MDX-compatible:
-
+<example name="verbose">
 ```bash
-# Test entire output directory
-node mdx-test-suite.js /path/to/output
-
-# Test specific subdirectory
-node mdx-test-suite.js /path/to/output/ProductName
-
-# Test single file
-node mdx-test-suite.js /path/to/output/guide/intro.md
-
-# Save test report with custom name
-node mdx-test-suite.js /path/to/output --output=validation-report.json
+python app.py /path/to/html/docs /path/to/output --verbose
 ```
+</example>
+</usage_examples>
 
 ## Output Structure
 
-After conversion, your files will be organized as follows:
-
+<output_structure>
 ```
-output/                    # Your specified output directory
-├── Product1/             # Converted markdown files maintain structure
+output/                    # Specified output directory
+├── Product1/             # Markdown files (structure preserved)
 │   ├── guide/
 │   │   └── intro.md
 │   └── api/
@@ -124,9 +84,9 @@ output/                    # Your specified output directory
         └── overview.md
 
 static/                   # Parallel to output directory
-└── img/                 # All images centralized here (note: 'img' not 'images')
-    ├── image-manifest.json  # Tracks all images, their usage, and deduplication
-    ├── Product1/        # Images maintain source structure
+└── img/                 # Centralized images (not 'images')
+    ├── image-manifest.json  # Deduplication tracking
+    ├── Product1/
     │   ├── guide/
     │   │   └── screenshot.png
     │   └── api/
@@ -135,126 +95,123 @@ static/                   # Parallel to output directory
         └── docs/
             └── logo.png
 ```
+</output_structure>
 
-## Advanced Features
+## Implementation Details
 
-### Image Deduplication
-The converter automatically detects duplicate images (based on content hash) and stores only one copy. The `image-manifest.json` file tracks:
-- Original image paths
-- Which documents use each image
-- Deduplication statistics
+<processing_phases>
+<phase number="1" name="scanning">
+- Scan for images and build reference map
+- Create anchor mappings for cross-references
+- Build deduplication hash table
+</phase>
 
-### Cross-Reference Resolution
-The converter maintains links between documents by:
-- Building anchor mappings during the first pass
-- Converting MadCap-style anchors to Docusaurus-compatible heading IDs
-- Resolving cross-file references automatically
+<phase number="2" name="conversion">
+- Convert HTML to Markdown
+- Update all link references
+- Copy unique images to static directory
+- Generate image-manifest.json
+</phase>
+</processing_phases>
 
-### MDX Compatibility Fixes
-The converter automatically handles common MDX issues:
-- Escapes curly braces in code blocks
-- Wraps HTML-like tags to prevent JSX interpretation
-- Fixes comparison operators in tables
-- Handles solo backticks and other edge cases
+## Critical Requirements
 
-## Example Workflow
+<requirements>
+<requirement priority="high">
+- Never modify source files
+- Preserve all internal links
+- Handle MadCap Flare-specific HTML structures
+</requirement>
 
-1. **Convert documentation with all features:**
-   ```bash
-   python app.py /Users/jordan.violet/documents/product_docs ./docs_output \
-     --flatten --verbose --docusaurus --lowercase-filenames
-   ```
+<requirement priority="medium">
+- Maintain readable Markdown output
+- Optimize image storage through deduplication
+- Generate comprehensive image manifest
+</requirement>
+</requirements>
 
-2. **Validate the converted files with verbose output:**
-   ```bash
-   node mdx-test-suite.js ./docs_output --verbose --output=mdx-test-report.json
-   ```
+## Error Handling
 
-3. **Review the validation report:**
-   ```bash
-   cat mdx-test-report.json | grep -A 5 '"summary"'
-   ```
+<error_scenarios>
+<scenario name="missing_images">
+- Log warning but continue processing
+- Record in image-manifest.json
+- Preserve image reference in Markdown
+</scenario>
 
-4. **Check image deduplication results:**
-   ```bash
-   cat static/img/image-manifest.json | jq '.[] | select(.reference_count > 1)'
-   ```
+<scenario name="invalid_html">
+- Attempt best-effort conversion
+- Log parsing errors with file path
+- Continue with next file
+</scenario>
 
-5. **Clean up (if this was just a test):**
-   ```bash
-   rm -rf docs_output static mdx-test-report.json
-   ```
+<scenario name="duplicate_output">
+- Check for existing files
+- Option to overwrite or skip
+- Log conflicts
+</scenario>
+</error_scenarios>
 
-## Important Notes
+## Performance Considerations
 
-- **Source files are never modified** - The tool only reads from the input directory
-- **Images are copied, not moved** - Original images remain in the source directory
-- **Only referenced images are copied** - Unreferenced images are skipped to save space
-- **Links are automatically updated** - All `.html` references become `.md` references
-- **Static directory location** - The `static/img` directory is created parallel to your output directory
-- **Image deduplication** - Identical images are stored only once, saving disk space
+<performance>
+- **Expected Speed**: ~1-2 seconds per file
+- **Memory Usage**: Scales with image deduplication table
+- **Disk Usage**: Reduced through image deduplication
+- **Large Documentation Sets**: Two-pass processing for efficiency
+</performance>
 
-## Troubleshooting
+## Troubleshooting Guide
 
-### MDX Validation Failures
+<troubleshooting>
+<issue name="broken_images">
+<cause>Image not referenced in HTML or missing from source</cause>
+<solution>
+1. Verify image exists in source
+2. Check if referenced in HTML
+3. Review image-manifest.json
+4. Confirm static/img structure
+</solution>
+</issue>
 
-If some files fail MDX validation, the test report will show:
-- File path
-- Error message
-- Line and column number (when available)
-
-Common issues:
-- HTML entities in script tags (`&lt;`, `&gt;`, `&amp;`)
-- Unclosed HTML/JSX tags
-- Invalid JavaScript in MDX context
-- Curly braces in code blocks (automatically fixed by converter)
-
-### Missing Images
-
-If images appear broken after conversion:
-1. Check if the image was referenced in the HTML
-2. Use `--find-image` to locate references
-3. Verify the image exists in the source directory
-4. Check the `static/img` directory structure
-5. Review `image-manifest.json` for deduplication info
-
-### Performance
-
-For large documentation sets:
-- The tool processes files in two passes:
-  1. First pass: Scans for images and builds anchor mappings (faster)
-  2. Second pass: Converts files and processes content (slower)
-- Expect ~1-2 seconds per file depending on complexity
-- Image deduplication saves both time and disk space
+<issue name="broken_links">
+<cause>Cross-reference anchors not found</cause>
+<solution>
+1. Check anchor mappings in verbose output
+2. Verify target document exists
+3. Confirm anchor ID consistency
+</solution>
+</issue>
+</troubleshooting>
 
 ## Command Reference
 
-### app.py Options
+<cli_options>
+| Option | Type | Description | Default |
+|--------|------|-------------|---------|
+| `input_dir` | Required | Source HTML directory | - |
+| `output_dir` | Required | Destination for Markdown | - |
+| `--verbose, -v` | Flag | Show detailed progress | False |
+| `--overwrite` | Flag | Overwrite existing files | False |
+| `--skip-images` | Flag | Convert without copying images | False |
+</cli_options>
 
-| Option | Description |
-|--------|-------------|
-| `input_dir` | Source directory containing HTML files |
-| `output_dir` | Destination directory for Markdown files |
-| `--verbose, -v` | Show detailed progress information |
-| `--flatten` | Remove redundant nested directories |
-| `--docusaurus` | Add Docusaurus-compatible frontmatter |
-| `--lowercase-filenames` | Convert all filenames to lowercase |
-| `--dry-run` | Preview without creating files |
-| `--find-image IMAGE` | Find where an image is referenced |
-| `--list-files` | List all files before converting |
+## Testing Checklist
 
-### mdx-test-suite.js Options
+<testing>
+- [ ] Basic HTML to Markdown conversion
+- [ ] Image deduplication across multiple files
+- [ ] Cross-file link resolution
+- [ ] MadCap Flare specific elements
+- [ ] Large documentation set performance
+- [ ] Edge cases (empty files, broken HTML)
+</testing>
 
-| Option | Description |
-|--------|-------------|
-| `path` | File, directory, or glob pattern to test |
-| `--output=FILE` | Save test report to JSON file (default: mdx-test-report.json) |
-| `--help, -h` | Show help message |
+## Future Enhancements
 
-## License
-
-[Your license here]
-
-## Contributing
-
-[Your contributing guidelines here]
+<enhancements>
+- Support for custom CSS preservation
+- Batch processing with progress bar
+- Configuration file support
+- Plugin system for custom transformations
+</enhancements>

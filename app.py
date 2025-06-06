@@ -19,6 +19,26 @@ from collections import defaultdict
 
 
 class HTMLToMarkdownConverter:
+    # Pre-compiled regex patterns for better performance
+    REGEX_CODE_BLOCKS = re.compile(r'```[^\n]*\n(.*?)\n```', re.DOTALL)
+    REGEX_SINGLE_BACKTICK_SPACE = re.compile(r'(?<![`\w])` (?![`\w])')
+    REGEX_DOUBLE_BACKTICK_SPACE = re.compile(r'(?<![`\w])`` (?![`\w])')
+    REGEX_STANDALONE_SINGLE_BACKTICK = re.compile(r'^\s*`\s*$')
+    REGEX_STANDALONE_DOUBLE_BACKTICK = re.compile(r'^\s*``\s*$')
+    REGEX_SINGLE_BACKTICK_START = re.compile(r'^\s*`\s+')
+    REGEX_DOUBLE_BACKTICK_START = re.compile(r'^\s*``\s+')
+    REGEX_UNDERSCORE_SPACE = re.compile(r'[_\s]+')
+    REGEX_NON_ALPHANUMERIC_HYPHEN = re.compile(r'[^a-z0-9-]')
+    REGEX_MULTIPLE_HYPHENS = re.compile(r'-+')
+    REGEX_ANCHOR_PATTERN = re.compile(r'\[anchor:([^\]]+)\]')
+    REGEX_MULTIPLE_NEWLINES = re.compile(r'\n\s*\n\s*\n')
+    REGEX_IMAGE_LINK = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
+    REGEX_HTML_COMMENT = re.compile(r'<!--.*?-->', re.DOTALL)
+    REGEX_DOUBLE_BACKTICK_CONTENT = re.compile(r'``[^`]+``')
+    REGEX_CURLY_BRACE_VAR = re.compile(r'(\w+)=\{([$A-Z][^}]*)\}')
+    REGEX_HEADING_ANCHOR = re.compile(r'\s*\{#[^}]+\}$')
+    REGEX_LINK_WITH_UNDERSCORES = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+    
     def __init__(self, input_dir, output_dir, verbose=False, flatten_dirs=False, docusaurus=False, lowercase_filenames=False):
         self.input_dir = Path(input_dir).resolve()  # Always use absolute paths
         self.output_dir = Path(output_dir).resolve()  # Always use absolute paths
@@ -32,7 +52,6 @@ class HTMLToMarkdownConverter:
         self.image_mappings = {}
         self.referenced_images = set()  # Track all referenced images
         self.flattened_paths = {}  # Cache for flattened paths
-        self.doc_image_mapping = {}  # Track which doc references which images
         self.image_hash_map = {}  # Map file hash to destination path
         self.image_manifest = defaultdict(lambda: {
             'original_paths': set(),
@@ -45,6 +64,30 @@ class HTMLToMarkdownConverter:
         """Print message if verbose mode is enabled"""
         if self.verbose:
             print(message)
+            
+    def multi_replace(self, text, replacements):
+        """Efficiently perform multiple string replacements in a single pass"""
+        if not replacements:
+            return text
+        
+        # Sort replacements by length of search string (longest first) to avoid partial matches
+        sorted_replacements = sorted(replacements.items(), key=lambda x: len(x[0]), reverse=True)
+        
+        # Build a single regex pattern that matches any of the search strings
+        pattern = '|'.join(re.escape(old) for old, _ in sorted_replacements)
+        
+        # Create a mapping for the replacements
+        replacement_dict = dict(sorted_replacements)
+        
+        # Perform all replacements in a single pass
+        def replace_func(match):
+            return replacement_dict[match.group(0)]
+        
+        return re.sub(pattern, replace_func, text)
+    
+    def sanitize_anchor(self, anchor):
+        """Sanitize anchor IDs for MDX compatibility"""
+        return self.multi_replace(anchor, {':': '_', '&': '_and_'})
             
     def calculate_file_hash(self, file_path):
         """Calculate MD5 hash of file content"""
@@ -224,7 +267,8 @@ class HTMLToMarkdownConverter:
                     rel_path = Path(path).relative_to(self.input_dir)
                     exists = "✓" if Path(path).exists() else "✗"
                     print(f"  {exists} {rel_path}")
-                except:
+                except ValueError:
+                    # Path is not relative to input_dir
                     exists = "✓" if Path(path).exists() else "✗"
                     print(f"  {exists} {path}")
         else:
@@ -244,7 +288,7 @@ class HTMLToMarkdownConverter:
                     print(f"  - {img.name}")
     
     def convert(self):
-        """Main conversion process"""
+        """Main conversion process with single-pass optimization"""
         print(f"Converting HTML documentation from: {self.input_dir}")
         print(f"Output directory: {self.output_dir}")
         if self.flatten_dirs:
@@ -271,18 +315,39 @@ class HTMLToMarkdownConverter:
         found_extensions = set(f.suffix.lower() for f in html_files)
         print(f"File types found: {', '.join(found_extensions)}")
         
-        # First pass: scan all HTML files to find referenced images and build anchor mappings
-        print("\nFirst pass: Scanning for referenced images and building anchor mappings...")
+        # Initialize mappings for single-pass processing
+        print("\nProcessing HTML files...")
         self.global_anchor_mappings = {}  # Maps file -> anchor -> heading text
         self.global_truncated_mappings = {}  # Maps truncated anchor -> [(file, heading_text), ...]
         
-        for html_file in html_files:
-            self.scan_for_images(html_file)
-            self.build_anchor_mappings(html_file)
+        # Single pass: process each file once, extracting all needed information
+        for i, html_file in enumerate(html_files, 1):
+            self.log(f"\n[{i}/{len(html_files)}] Processing: {html_file.relative_to(self.input_dir)}")
+            self.process_html_file_single_pass(html_file)
         
+        print(f"\nProcessing complete!")
         print(f"Found {len(self.referenced_images)} referenced images")
         print(f"Built anchor mappings for {len(self.global_anchor_mappings)} files")
         
+        
+        # Process unreferenced images report
+        self.report_unreferenced_images()
+            
+        # Save image manifest
+        self.save_image_manifest()
+        
+        print(f"\nConversion complete!")
+        print(f"- Converted {len(html_files)} HTML files")
+        print(f"- Copied {self.image_counter} referenced images to static/img/")
+        
+        # Show deduplication stats
+        total_refs = sum(len(info['used_by']) for info in self.image_manifest.values())
+        if total_refs > self.image_counter and self.image_counter > 0:
+            saved = total_refs - self.image_counter
+            print(f"- Deduplication saved {saved} file copies ({saved/total_refs*100:.1f}% reduction)")
+    
+    def report_unreferenced_images(self):
+        """Report on unreferenced images in the input directory"""
         # Find all image files in the input directory
         all_images = []
         image_extensions = ['*.png', '*.PNG', '*.jpg', '*.JPG', '*.jpeg', '*.JPEG', 
@@ -300,26 +365,322 @@ class HTMLToMarkdownConverter:
                 print(f"  - {img.relative_to(self.input_dir)}")
             if len(unreferenced_images) > 10:
                 print(f"  ... and {len(unreferenced_images) - 10} more")
-        
-        # Second pass: process and convert HTML files
-        print("\nConverting HTML files...")
-        for i, html_file in enumerate(html_files, 1):
-            self.log(f"\n[{i}/{len(html_files)}] Processing: {html_file.relative_to(self.input_dir)}")
-            self.process_html_file(html_file)
+    
+    def process_html_file_single_pass(self, html_file):
+        """Process HTML file in a single pass - scan images, build anchors, and convert"""
+        try:
+            # Read HTML content once
+            with open(html_file, 'r', encoding='utf-8') as f:
+                html_content = f.read()
             
-        # Save image manifest
-        self.save_image_manifest()
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # 1. Scan for images and record them
+            try:
+                self._scan_images_in_soup(soup, html_file)
+            except Exception as e:
+                if self.verbose:
+                    print(f"    Error in _scan_images_in_soup: {type(e).__name__}: {e}")
+                raise
+            
+            # 2. Build anchor mappings
+            try:
+                self._build_anchors_from_soup(soup, html_file)
+            except Exception as e:
+                if self.verbose:
+                    print(f"    Error in _build_anchors_from_soup: {type(e).__name__}: {e}")
+                raise
+            
+            # 3. Process and convert the file
+            try:
+                self._convert_soup_to_markdown(soup, html_file, html_content)
+            except Exception as e:
+                if self.verbose:
+                    print(f"    Error in _convert_soup_to_markdown: {type(e).__name__}: {e}")
+                raise
+            
+        except (SyntaxError, re.error) as e:
+            # Handle Unicode escape errors and regex pattern errors
+            if "bad escape" in str(e) or "unicode error" in str(e).lower() or isinstance(e, re.error):
+                print(f"  ✗ Pattern/Unicode escape error in {html_file}: {str(e)}")
+                print(f"    This usually happens with paths containing backslashes like C:\\Users or Domain\\User")
+                print(f"    The file will be skipped to prevent conversion errors")
+            else:
+                print(f"  ✗ Error processing {html_file}: {str(e)}")
+        except Exception as e:
+            print(f"  ✗ Error processing {html_file}: {str(e)}")
+            # If verbose, print the traceback
+            if self.verbose:
+                import traceback
+                print(f"    Traceback:")
+                traceback.print_exc()
+    
+    def _scan_images_in_soup(self, soup, html_file):
+        """Scan for images in parsed HTML soup"""
+        # Scan anchor tags that link to images
+        for link in soup.find_all('a'):
+            href = link.get('href')
+            if not href or href.startswith('http'):
+                continue
+                
+            # Check if this is an image link
+            if any(href.lower().endswith(ext) for ext in ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.svg', '.webp']):
+                src_path = Path(html_file).parent / unquote(href)
+                src_path = src_path.resolve()
+                
+                if src_path.exists():
+                    self.referenced_images.add(str(src_path))
         
-        print(f"\nConversion complete!")
-        print(f"- Converted {len(html_files)} HTML files")
-        print(f"- Copied {self.image_counter} referenced images to static/img/")
-        print(f"- Skipped {len(unreferenced_images)} unreferenced images")
+        # Scan img tags
+        for img in soup.find_all('img'):
+            src = img.get('src')
+            if not src or src.startswith('http'):
+                continue
+            
+            # Calculate source image path
+            src_path = Path(html_file).parent / unquote(src)
+            src_path = src_path.resolve()
+            
+            if src_path.exists():
+                self.referenced_images.add(str(src_path))
+    
+    def _build_anchors_from_soup(self, soup, html_file):
+        """Build anchor mappings from parsed HTML soup"""
+        # Get relative path for the output file
+        rel_path = html_file.relative_to(self.input_dir)
+        if self.flatten_dirs:
+            rel_path = self.flatten_path(rel_path)
+        if self.lowercase_filenames:
+            rel_path = self.lowercase_path(rel_path)
         
-        # Show deduplication stats
-        total_refs = sum(len(info['used_by']) for info in self.image_manifest.values())
-        if total_refs > self.image_counter and self.image_counter > 0:
-            saved = total_refs - self.image_counter
-            print(f"- Deduplication saved {saved} file copies ({saved/total_refs*100:.1f}% reduction)")
+        # Convert to markdown extension
+        output_path = rel_path.with_suffix('.md')
+        file_key = str(output_path).replace('\\', '/')
+        
+        # Initialize mappings for this file
+        self.global_anchor_mappings[file_key] = {}
+        
+        # Process headings to find anchors
+        for heading in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
+            # Check for anchor IDs
+            anchor_id = heading.get('name') or heading.get('id')
+            
+            # Check for anchor tags within the heading
+            anchor = heading.find('a', {'name': True})
+            if anchor and not anchor_id:
+                anchor_id = anchor.get('name')
+            
+            # Check for anchor before heading
+            if not anchor_id:
+                prev_sibling = heading.find_previous_sibling()
+                if prev_sibling and prev_sibling.name == 'a' and prev_sibling.get('name'):
+                    anchor_id = prev_sibling.get('name')
+            
+            heading_text = heading.get_text(strip=True)
+            if not heading_text:
+                continue
+            
+            if anchor_id:
+                # Store the mapping
+                self.global_anchor_mappings[file_key][anchor_id] = heading_text
+                
+                # Generate the Docusaurus ID for this heading
+                docusaurus_id = self.madcap_to_docusaurus_id(heading_text)
+                self.global_anchor_mappings[file_key][anchor_id + '_docusaurus'] = docusaurus_id
+                
+                # Also store truncated versions if applicable
+                if len(anchor_id) <= 8 and not '-' in anchor_id:
+                    # This is likely already truncated
+                    if anchor_id not in self.global_truncated_mappings:
+                        self.global_truncated_mappings[anchor_id] = []
+                    self.global_truncated_mappings[anchor_id].append((file_key, heading_text))
+                elif len(anchor_id) > 8:
+                    # Store potential truncated version
+                    truncated = anchor_id[:8]
+                    if truncated not in self.global_truncated_mappings:
+                        self.global_truncated_mappings[truncated] = []
+                    self.global_truncated_mappings[truncated].append((file_key, heading_text))
+            else:
+                # For headings without explicit anchors, Docusaurus will generate from text
+                docusaurus_id = self.madcap_to_docusaurus_id(heading_text)
+                # Try to guess potential MadCap anchor patterns
+                if heading.name == 'h1':
+                    # MadCap might use heading text with underscores
+                    implicit_anchor = heading_text.replace(' ', '_')
+                    self.global_anchor_mappings[file_key][implicit_anchor] = heading_text
+                    self.global_anchor_mappings[file_key][implicit_anchor + '_docusaurus'] = docusaurus_id
+    
+    def escape_backslashes_in_text(self, soup):
+        """Escape backslashes in text content to prevent Unicode escape errors"""
+        from bs4.element import NavigableString, Comment
+        
+        for text_node in soup.find_all(string=True):
+            if isinstance(text_node, (NavigableString, str)) and not isinstance(text_node, Comment):
+                # Skip if this is inside a script or style tag
+                if text_node.parent and text_node.parent.name in ['script', 'style']:
+                    continue
+                    
+                text_str = str(text_node)
+                if '\\' in text_str:
+                    # Replace problematic escape sequences
+                    # These are the common ones that cause SyntaxError
+                    escaped_text = text_str
+                    for pattern in ['\\U', '\\u', '\\x', '\\N']:
+                        if pattern in escaped_text:
+                            escaped_text = escaped_text.replace(pattern, '\\' + pattern)
+                    
+                    # Only replace if we made changes
+                    if escaped_text != text_str:
+                        text_node.replace_with(escaped_text)
+
+    def _convert_soup_to_markdown(self, soup, html_file, original_html_content):
+        """Convert parsed soup to markdown and save the file"""
+        # Process images before conversion
+        try:
+            if self.verbose:
+                self.log("  → Processing images...")
+            self.process_images(soup, html_file)
+        except Exception as e:
+            self.log(f"  ⚠ Error in process_images: {type(e).__name__}: {str(e)}")
+            if isinstance(e, re.error):
+                raise
+        
+        # Remove MadCap Flare specific elements
+        try:
+            if self.verbose:
+                self.log("  → Cleaning MadCap elements...")
+            self.clean_madcap_elements(soup)
+        except Exception as e:
+            self.log(f"  ⚠ Error in clean_madcap_elements: {type(e).__name__}: {str(e)}")
+            if isinstance(e, re.error):
+                raise
+        
+        # Pre-process tables for better markdown conversion
+        try:
+            if self.verbose:
+                self.log("  → Pre-processing tables...")
+            self.process_tables_before_conversion(soup)
+        except Exception as e:
+            self.log(f"  ⚠ Error in process_tables_before_conversion: {type(e).__name__}: {str(e)}")
+            if isinstance(e, re.error):
+                raise
+        
+        # Preserve heading IDs
+        try:
+            if self.verbose:
+                self.log("  → Preserving heading IDs...")
+            self.preserve_heading_ids(soup)
+        except Exception as e:
+            self.log(f"  ⚠ Error in preserve_heading_ids: {type(e).__name__}: {str(e)}")
+            if isinstance(e, re.error):
+                raise
+        
+        # Process document links
+        try:
+            if self.verbose:
+                self.log("  → Processing document links...")
+            self.process_document_links(soup, html_file)
+        except Exception as e:
+            self.log(f"  ⚠ Error in process_document_links: {type(e).__name__}: {str(e)}")
+            if isinstance(e, re.error):
+                raise
+        
+        # Remove script and style tags before conversion
+        for script in soup.find_all('script'):
+            script.decompose()
+        for style in soup.find_all('style'):
+            style.decompose()
+        
+        # Escape backslashes in text content to prevent Unicode escape errors
+        self.escape_backslashes_in_text(soup)
+        
+        # Convert to markdown
+        try:
+            # Log before conversion if verbose
+            if self.verbose:
+                self.log("  → Starting markdownify conversion...")
+            
+            markdown_content = md(
+                str(soup),
+                heading_style="ATX",
+                bullets="-",
+                code_language="",
+                autolinks=False,
+                strip=['script', 'style', 'meta', 'link', 'noscript']
+            )
+        except (SyntaxError, UnicodeDecodeError) as e:
+            # If markdownify fails due to escape sequences, try with raw string
+            self.log(f"  ⚠ Markdownify failed, trying alternative approach: {str(e)}")
+            # Get the HTML as string and manually escape problematic sequences
+            html_str = str(soup)
+            # Replace common problematic patterns
+            html_str = html_str.replace('\\U', '\\\\U')
+            html_str = html_str.replace('\\u', '\\\\u')
+            html_str = html_str.replace('\\x', '\\\\x')
+            # Try again
+            markdown_content = md(
+                html_str,
+                heading_style="ATX",
+                bullets="-",
+                code_language="",
+                autolinks=False,
+                strip=['script', 'style', 'meta', 'link', 'noscript']
+            )
+        except re.error as e:
+            # Handle regex pattern errors
+            self.log(f"  ⚠ Regex pattern error: {str(e)}")
+            raise
+        
+        # Clean up the markdown
+        try:
+            if self.verbose:
+                self.log("  → Cleaning markdown content...")
+            markdown_content = self.clean_markdown(markdown_content)
+        except re.error as e:
+            self.log(f"  ⚠ Regex error in clean_markdown: {str(e)}")
+            # Skip cleaning if there's a regex error
+            pass
+        
+        # Fix any triple backticks that should be single
+        try:
+            markdown_content = re.sub(r'`{3,}(?!\n)', '`', markdown_content)
+        except re.error as e:
+            self.log(f"  ⚠ Regex error fixing backticks: {str(e)}")
+        
+        # Post-process tables for MDX compatibility
+        try:
+            if self.verbose:
+                self.log("  → Post-processing tables...")
+            markdown_content = self.post_process_markdown_tables(markdown_content)
+        except re.error as e:
+            self.log(f"  ⚠ Regex error in post_process_markdown_tables: {str(e)}")
+            # Skip table processing if there's a regex error
+            pass
+        
+        # Add Docusaurus frontmatter if enabled
+        if self.docusaurus:
+            markdown_content = self.add_docusaurus_frontmatter(markdown_content, html_file)
+            # Restore anchors in MDX-compatible format
+            markdown_content = self.restore_mdx_anchors(markdown_content)
+            # Final MDX cleanup
+            markdown_content = self.final_mdx_cleanup(markdown_content)
+        
+        # Calculate output path
+        relative_path = html_file.relative_to(self.input_dir)
+        # Apply flattening if enabled
+        flattened_path = self.flatten_path(relative_path)
+        # Apply lowercase conversion if enabled
+        final_path = self.lowercase_path(flattened_path)
+        markdown_path = self.output_dir / final_path.with_suffix('.md')
+        
+        # Create parent directories
+        markdown_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Write markdown file
+        with open(markdown_path, 'w', encoding='utf-8') as f:
+            f.write(markdown_content)
+            
+        self.log(f"  ✓ Created: {markdown_path.relative_to(self.output_dir)}")
     
     def save_image_manifest(self):
         """Save image manifest to JSON file"""
@@ -348,239 +709,8 @@ class HTMLToMarkdownConverter:
         
         self.log(f"  ✓ Saved image manifest: {manifest_path}")
         
-    def scan_for_images(self, html_file):
-        """Scan HTML file for referenced images without processing"""
-        try:
-            with open(html_file, 'r', encoding='utf-8') as f:
-                html_content = f.read()
-            
-            soup = BeautifulSoup(html_content, 'html.parser')
-            
-            # Scan anchor tags that link to images
-            for link in soup.find_all('a'):
-                href = link.get('href')
-                if not href or href.startswith('http'):
-                    continue
-                    
-                # Check if this is an image link
-                if any(href.lower().endswith(ext) for ext in ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.svg', '.webp']):
-                    src_path = Path(html_file).parent / unquote(href)
-                    src_path = src_path.resolve()
-                    
-                    if src_path.exists():
-                        self.referenced_images.add(str(src_path))
-            
-            # Scan img tags
-            for img in soup.find_all('img'):
-                src = img.get('src')
-                if not src or src.startswith('http'):
-                    continue
-                
-                # Calculate source image path
-                src_path = Path(html_file).parent / unquote(src)
-                src_path = src_path.resolve()
-                
-                if src_path.exists():
-                    self.referenced_images.add(str(src_path))
-                    
-        except Exception as e:
-            self.log(f"  ✗ Error scanning {html_file}: {str(e)}")
     
-    def build_anchor_mappings(self, html_file):
-        """Build global anchor mappings for cross-file reference resolution"""
-        try:
-            with open(html_file, 'r', encoding='utf-8') as f:
-                html_content = f.read()
-            
-            soup = BeautifulSoup(html_content, 'html.parser')
-            
-            # Get relative path for the output file
-            rel_path = html_file.relative_to(self.input_dir)
-            if self.flatten_dirs:
-                rel_path = self.flatten_path(rel_path)
-            if self.lowercase_filenames:
-                rel_path = self.lowercase_path(rel_path)
-            
-            # Convert to markdown extension
-            output_path = rel_path.with_suffix('.md')
-            file_key = str(output_path).replace('\\', '/')
-            
-            # Initialize mappings for this file
-            self.global_anchor_mappings[file_key] = {}
-            
-            # Process headings to find anchors
-            for heading in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
-                # Check for anchor IDs
-                anchor_id = heading.get('name') or heading.get('id')
-                
-                # Check for anchor tags within the heading
-                anchor = heading.find('a', {'name': True})
-                if anchor and not anchor_id:
-                    anchor_id = anchor.get('name')
-                
-                # Check for anchor before heading
-                if not anchor_id:
-                    prev_sibling = heading.find_previous_sibling()
-                    if prev_sibling and prev_sibling.name == 'a' and prev_sibling.get('name'):
-                        anchor_id = prev_sibling.get('name')
-                
-                heading_text = heading.get_text(strip=True)
-                if not heading_text:
-                    continue
-                
-                if anchor_id:
-                    # Store the mapping
-                    self.global_anchor_mappings[file_key][anchor_id] = heading_text
-                    
-                    # Generate the Docusaurus ID for this heading
-                    docusaurus_id = self.madcap_to_docusaurus_id(heading_text)
-                    self.global_anchor_mappings[file_key][anchor_id + '_docusaurus'] = docusaurus_id
-                    
-                    # Also store truncated versions if applicable
-                    if len(anchor_id) <= 8 and not '-' in anchor_id:
-                        # This is likely already truncated
-                        if anchor_id not in self.global_truncated_mappings:
-                            self.global_truncated_mappings[anchor_id] = []
-                        self.global_truncated_mappings[anchor_id].append((file_key, heading_text))
-                    elif len(anchor_id) > 8:
-                        # Store potential truncated version
-                        truncated = anchor_id[:8]
-                        if truncated not in self.global_truncated_mappings:
-                            self.global_truncated_mappings[truncated] = []
-                        self.global_truncated_mappings[truncated].append((file_key, heading_text))
-                else:
-                    # For headings without explicit anchors, Docusaurus will generate from text
-                    docusaurus_id = self.madcap_to_docusaurus_id(heading_text)
-                    # Try to guess potential MadCap anchor patterns
-                    if heading.name == 'h1':
-                        # MadCap might use heading text with underscores
-                        implicit_anchor = heading_text.replace(' ', '_')
-                        self.global_anchor_mappings[file_key][implicit_anchor] = heading_text
-                        self.global_anchor_mappings[file_key][implicit_anchor + '_docusaurus'] = docusaurus_id
-                
-        except Exception as e:
-            self.log(f"  ✗ Error building anchor mappings for {html_file}: {str(e)}")
     
-    def process_html_file(self, html_file):
-        """Process a single HTML file"""
-        try:
-            # Read HTML content
-            with open(html_file, 'r', encoding='utf-8') as f:
-                html_content = f.read()
-                
-            # Parse HTML
-            soup = BeautifulSoup(html_content, 'html.parser')
-            
-            # Debug: Check pre tags before any processing
-            if self.verbose:
-                pre_tags_before = soup.find_all('pre')
-                if pre_tags_before:
-                    self.log(f"  → Found {len(pre_tags_before)} pre tags before processing")
-                    for idx, pre in enumerate(pre_tags_before):
-                        content = pre.get_text()[:50] + '...' if len(pre.get_text()) > 50 else pre.get_text()
-                        self.log(f"    Pre tag {idx + 1} before: {repr(content)}")
-            
-            # Process images before conversion
-            self.process_images(soup, html_file)
-            
-            # Remove MadCap Flare specific elements
-            self.clean_madcap_elements(soup)
-            
-            # Debug: Check pre tags after clean_madcap_elements
-            if self.verbose:
-                pre_tags_after = soup.find_all('pre')
-                if pre_tags_after:
-                    self.log(f"  → Found {len(pre_tags_after)} pre tags after clean_madcap_elements")
-                    for idx, pre in enumerate(pre_tags_after):
-                        content = pre.get_text()[:50] + '...' if len(pre.get_text()) > 50 else pre.get_text()
-                        self.log(f"    Pre tag {idx + 1} after clean: {repr(content)}")
-            
-            # First preserve heading IDs before conversion
-            # This must come BEFORE process_document_links so that anchor mappings are available
-            self.preserve_heading_ids(soup)
-            
-            # Process document links after preserve_heading_ids so we have anchor mappings
-            self.process_document_links(soup, html_file)
-            
-            # Debug: Log soup right before conversion
-            if self.verbose and soup.find_all('pre'):
-                self.log(f"  → Soup right before markdownify conversion:")
-                for pre in soup.find_all('pre'):
-                    self.log(f"    Pre content: {repr(pre.get_text()[:100])}")
-            
-            # Remove script and style tags before conversion
-            # This ensures their content is completely removed
-            for script in soup.find_all('script'):
-                script.decompose()
-            for style in soup.find_all('style'):
-                style.decompose()
-            
-            # Convert to markdown with better HTML handling
-            markdown_content = md(
-                str(soup),
-                heading_style="ATX",
-                bullets="-",
-                code_language="",
-                autolinks=False,
-                strip=['script', 'style', 'meta', 'link', 'noscript']  # Remove these tags entirely
-            )
-            
-            
-            # Debug: Check for /* */ right after conversion
-            if '/\\*' in markdown_content and '\\*/' in markdown_content:
-                self.log(f"  ⚠ Found /* */ pattern in markdown")
-            
-            # Debug: Check code blocks in markdown
-            if self.verbose and '```' in markdown_content:
-                self.log(f"  → Found code blocks in markdown")
-                # Extract code blocks
-                code_blocks = re.findall(r'```[^\n]*\n(.*?)\n```', markdown_content, re.DOTALL)
-                for idx, block in enumerate(code_blocks):
-                    content = block[:50] + '...' if len(block) > 50 else block
-                    self.log(f"    Code block {idx + 1}: {repr(content)}")
-            
-            # Clean up the markdown
-            markdown_content = self.clean_markdown(markdown_content)
-            
-            # Debug: Check code blocks after clean_markdown
-            if self.verbose and '```' in markdown_content:
-                self.log(f"  → After clean_markdown, checking code blocks")
-                code_blocks = re.findall(r'```[^\n]*\n(.*?)\n```', markdown_content, re.DOTALL)
-                for idx, block in enumerate(code_blocks):
-                    content = block[:50] + '...' if len(block) > 50 else block
-                    self.log(f"    Code block {idx + 1} after clean: {repr(content)}")
-            
-            # Restore anchors - always do this to preserve heading IDs
-            markdown_content = self.restore_heading_anchors(markdown_content)
-            
-            # Add Docusaurus frontmatter if enabled
-            if self.docusaurus:
-                markdown_content = self.add_docusaurus_frontmatter(markdown_content, html_file)
-                # Restore anchors in MDX-compatible format (for standalone anchors)
-                markdown_content = self.restore_mdx_anchors(markdown_content)
-                # Final MDX cleanup specifically for Docusaurus
-                markdown_content = self.final_mdx_cleanup(markdown_content)
-            
-            # Calculate output path
-            relative_path = html_file.relative_to(self.input_dir)
-            # Apply flattening if enabled
-            flattened_path = self.flatten_path(relative_path)
-            # Apply lowercase conversion if enabled (for Docusaurus)
-            final_path = self.lowercase_path(flattened_path)
-            markdown_path = self.output_dir / final_path.with_suffix('.md')
-            
-            # Create parent directories
-            markdown_path.parent.mkdir(parents=True, exist_ok=True)
-            
-            # Write markdown file
-            with open(markdown_path, 'w', encoding='utf-8') as f:
-                f.write(markdown_content)
-                
-            self.log(f"  ✓ Created: {markdown_path.relative_to(self.output_dir)}")
-            
-        except Exception as e:
-            print(f"  ✗ Error processing {html_file}: {str(e)}")
-            
     def process_images(self, soup, html_file):
         """Process all images in the HTML file"""
         # First, process anchor tags that link to images (like popup/lightbox images)
@@ -770,7 +900,7 @@ class HTMLToMarkdownConverter:
                 
                 if self.docusaurus:
                     # For Docusaurus, convert to Docusaurus-style IDs
-                    sanitized_anchor = anchor.replace(':', '_').replace('&', '_and_')
+                    sanitized_anchor = self.sanitize_anchor(anchor)
                     sanitized_anchor = sanitized_anchor.lstrip('_')
                     
                     # Check if this is a truncated MadCap anchor (8 characters or less)
@@ -819,7 +949,7 @@ class HTMLToMarkdownConverter:
                         self.log(f"  → Converted internal anchor to Docusaurus format: {href} → #{docusaurus_id}")
                 else:
                     # Non-Docusaurus mode - just sanitize
-                    sanitized_anchor = anchor.replace(':', '_').replace('&', '_and_')
+                    sanitized_anchor = self.sanitize_anchor(anchor)
                     sanitized_anchor = sanitized_anchor.lstrip('_')
                     if anchor != sanitized_anchor:
                         link['href'] = '#' + sanitized_anchor
@@ -855,13 +985,13 @@ class HTMLToMarkdownConverter:
                         # Process the fragment as usual
                         if self.docusaurus:
                             # Sanitize and convert to Docusaurus format
-                            sanitized_fragment = fragment.replace(':', '_').replace('&', '_and_')
+                            sanitized_fragment = self.sanitize_anchor(fragment)
                             sanitized_fragment = sanitized_fragment.lstrip('_')
                             docusaurus_id = self.madcap_to_docusaurus_id(sanitized_fragment)
                             new_href += '#' + docusaurus_id
                         else:
                             # Just sanitize
-                            sanitized_fragment = fragment.replace(':', '_').replace('&', '_and_')
+                            sanitized_fragment = self.sanitize_anchor(fragment)
                             sanitized_fragment = sanitized_fragment.lstrip('_')
                             new_href += '#' + sanitized_fragment
                     
@@ -978,7 +1108,7 @@ class HTMLToMarkdownConverter:
                         # For Docusaurus, convert to Docusaurus-style IDs
                         if self.docusaurus:
                             # First do the basic sanitization
-                            sanitized_fragment = fragment.replace(':', '_').replace('&', '_and_')
+                            sanitized_fragment = self.sanitize_anchor(fragment)
                             sanitized_fragment = sanitized_fragment.lstrip('_')
                             
                             # Check if this is a truncated MadCap anchor (8 characters or less)
@@ -1019,7 +1149,7 @@ class HTMLToMarkdownConverter:
                                             else:
                                                 # Fallback - use the path as-is
                                                 target_file_key = str(new_path).replace('\\', '/')
-                                        except:
+                                        except (ValueError, AttributeError):
                                             target_file_key = str(new_path).replace('\\', '/')
                                     else:
                                         target_file_key = str(new_path).replace('\\', '/').lstrip('/')
@@ -1141,7 +1271,7 @@ class HTMLToMarkdownConverter:
                                 self.log(f"  → Converted anchor to Docusaurus format: {fragment} → {docusaurus_id}")
                         else:
                             # Non-Docusaurus mode - just sanitize
-                            sanitized_fragment = fragment.replace(':', '_').replace('&', '_and_')
+                            sanitized_fragment = self.sanitize_anchor(fragment)
                             sanitized_fragment = sanitized_fragment.lstrip('_')
                             new_href += '#' + sanitized_fragment
                             if fragment != sanitized_fragment:
@@ -1203,7 +1333,7 @@ class HTMLToMarkdownConverter:
             if anchor_id:
                 # Sanitize anchor ID for MDX compatibility
                 # Replace colons and other invalid characters with underscores
-                sanitized_anchor_id = anchor_id.replace(':', '_').replace('&', '_and_')
+                sanitized_anchor_id = self.sanitize_anchor(anchor_id)
                 # Remove leading underscores as they're not valid in HTML5/React IDs
                 sanitized_anchor_id = sanitized_anchor_id.lstrip('_')
                 
@@ -1305,7 +1435,7 @@ class HTMLToMarkdownConverter:
             # that can be processed later
             try:
                 # Sanitize anchor name for MDX compatibility
-                sanitized_name = name.replace(':', '_').replace('&', '_and_')
+                sanitized_name = self.sanitize_anchor(name)
                 # Remove leading underscores as they're not valid in HTML5/React IDs
                 sanitized_name = sanitized_name.lstrip('_')
                 
@@ -1378,7 +1508,7 @@ class HTMLToMarkdownConverter:
                     if current_p.get('class') and any('Command-Line' in cls for cls in current_p.get('class', [])):
                         # Get text content and decode entities
                         text = current_p.get_text()
-                        text = text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')
+                        text = self.multi_replace(text, {'&lt;': '<', '&gt;': '>', '&amp;': '&'})
                         code_lines.append(text)
                         j += 1
                     else:
@@ -1424,7 +1554,7 @@ class HTMLToMarkdownConverter:
                 code_text = pre_code.get_text()
                 
                 # Replace HTML entities
-                code_text = code_text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&').replace('&#160;', ' ')
+                code_text = self.multi_replace(code_text, {'&lt;': '<', '&gt;': '>', '&amp;': '&', '&#160;': ' '})
                 
                 # Clean up excessive whitespace but preserve intentional indentation
                 lines = code_text.split('\n')
@@ -1461,28 +1591,28 @@ class HTMLToMarkdownConverter:
             
             # Pattern 1: Solo backtick with spaces around it (e.g., " ` ")
             # But not if it's part of inline code (e.g., `code`)
-            line = re.sub(r'(?<![`\w])` (?![`\w])', ' ``` ', line)
+            line = self.REGEX_SINGLE_BACKTICK_SPACE.sub(' ``` ', line)
             
             # Pattern 2: Solo backtick at the beginning of a line
             if line.strip() == '`':
                 line = line.replace('`', '```')
-            elif re.match(r'^\s*`\s*$', line):
+            elif self.REGEX_STANDALONE_SINGLE_BACKTICK.match(line):
                 # Solo backtick with only whitespace
                 line = re.sub(r'^(\s*)`(\s*)$', r'\1```\2', line)
-            elif re.match(r'^\s*`\s+', line) and line.count('`') == 1:
+            elif self.REGEX_SINGLE_BACKTICK_START.match(line) and line.count('`') == 1:
                 # Backtick at start of line followed by space and text, with no closing backtick
                 line = re.sub(r'^(\s*)`(\s+)', r'\1```\2', line)
             
             # Pattern 3: Solo double backticks with spaces around them (e.g., " `` ")
-            line = re.sub(r'(?<![`\w])`` (?![`\w])', ' ``` ', line)
+            line = self.REGEX_DOUBLE_BACKTICK_SPACE.sub(' ``` ', line)
             
             # Pattern 4: Solo double backticks at the beginning/end of a line
             if line.strip() == '``':
                 line = line.replace('``', '```')
-            elif re.match(r'^\s*``\s*$', line):
+            elif self.REGEX_STANDALONE_DOUBLE_BACKTICK.match(line):
                 # Solo double backticks with only whitespace
                 line = re.sub(r'^(\s*)``(\s*)$', r'\1```\2', line)
-            elif re.match(r'^\s*``\s+', line) and line.count('`') == 2:
+            elif self.REGEX_DOUBLE_BACKTICK_START.match(line) and line.count('`') == 2:
                 # Double backticks at start followed by space and text, with no other backticks
                 line = re.sub(r'^(\s*)``(\s+)', r'\1```\2', line)
             
@@ -1495,7 +1625,7 @@ class HTMLToMarkdownConverter:
                 line = re.sub(r'([^`\s])(\s+)`([.,;:!?\s])', r'\1\2```\3', line)
             
             # Pattern 6: Double backticks in the middle that aren't inline code
-            if '``' in line and not re.search(r'``[^`]+``', line):
+            if '``' in line and not self.REGEX_DOUBLE_BACKTICK_CONTENT.search(line):
                 # Replace double backticks that aren't part of inline code blocks
                 line = re.sub(r'([^`])``([^`])', r'\1```\2', line)
             
@@ -1525,6 +1655,84 @@ class HTMLToMarkdownConverter:
                 return True
         
         return False
+    
+    def post_process_markdown_tables(self, content):
+        """Post-process markdown tables to fix remaining MDX issues"""
+        lines = content.split('\n')
+        processed_lines = []
+        in_table = False
+        table_column_count = 0
+        
+        for line in lines:
+            # Detect table rows
+            if '|' in line and line.count('|') >= 2:
+                # Check if this is a separator row
+                if re.match(r'^\s*\|?\s*:?-+:?\s*\|', line):
+                    # It's a separator row, count columns
+                    table_column_count = line.count('|') - 1
+                    in_table = True
+                    processed_lines.append(line)
+                    continue
+                elif in_table or (line.strip().startswith('|') and line.strip().endswith('|')):
+                    # It's a table row
+                    in_table = True
+                    
+                    # Fix HTML entities in table cells
+                    line = line.replace('&lt;', '<')
+                    line = line.replace('&gt;', '>')
+                    line = line.replace('&amp;', '&')
+                    
+                    # For rows with too many pipes (content pipes), we need to escape them
+                    # Count the pipes
+                    pipe_count = line.count('|')
+                    
+                    # If we have more pipes than expected based on columns
+                    if table_column_count > 0 and pipe_count > table_column_count + 1:
+                        # This row has pipes in content
+                        # Try to identify which pipes are content vs delimiters
+                        # Split by pipe and reconstruct
+                        parts = line.split('|')
+                        
+                        # Reconstruct the line, escaping pipes in content
+                        # The first and last parts are usually empty for |cell|cell| format
+                        if len(parts) > table_column_count + 2:
+                            # We have extra pipes in content
+                            # Keep first empty, then merge middle parts, then last empty
+                            new_parts = [parts[0]]  # Leading empty
+                            
+                            # Calculate how many parts we need to merge
+                            extra_parts = len(parts) - (table_column_count + 2)
+                            
+                            # Process each expected column
+                            part_idx = 1
+                            for col_idx in range(table_column_count):
+                                if col_idx == 1 and extra_parts > 0:  # Second column often has the pipes
+                                    # Merge the extra parts for this column
+                                    merged = parts[part_idx]
+                                    for j in range(extra_parts):
+                                        part_idx += 1
+                                        merged += '\\|' + parts[part_idx]
+                                    new_parts.append(merged)
+                                    part_idx += 1
+                                else:
+                                    if part_idx < len(parts) - 1:
+                                        new_parts.append(parts[part_idx])
+                                        part_idx += 1
+                            
+                            new_parts.append(parts[-1])  # Trailing empty
+                            line = '|'.join(new_parts)
+                    
+                    # Ensure empty cells have at least a space
+                    line = re.sub(r'\|\s*\|', '| |', line)
+                    
+            elif in_table and (line.strip() == '' or not '|' in line):
+                # End of table
+                in_table = False
+                table_column_count = 0
+            
+            processed_lines.append(line)
+        
+        return '\n'.join(processed_lines)
     
     def fix_curly_braces_in_line(self, line):
         """Fix curly braces in a single line to prevent MDX interpretation as JSX"""
@@ -1615,7 +1823,7 @@ class HTMLToMarkdownConverter:
             
             # Handle inline code patterns like appid={$guid}
             # Look for patterns like word={$something} or word={SOMETHING}
-            line = re.sub(r'(\w+)=\{([$A-Z][^}]*)\}', r'\1=`{\2}`', line)
+            line = self.REGEX_CURLY_BRACE_VAR.sub(r'\1=`{\2}`', line)
             
             return line
         
@@ -1680,7 +1888,7 @@ class HTMLToMarkdownConverter:
                 
                 # Handle inline code patterns like appid={$guid}
                 # Look for patterns like word={$something} or word={SOMETHING}
-                processed = re.sub(r'(\w+)=\{([$A-Z][^}]*)\}', r'\1=`{\2}`', processed)
+                processed = self.REGEX_CURLY_BRACE_VAR.sub(r'\1=`{\2}`', processed)
                 
                 result += processed
         
@@ -1703,24 +1911,18 @@ class HTMLToMarkdownConverter:
         docusaurus_id = docusaurus_id.lower()
         
         # Replace underscores and spaces with hyphens
-        docusaurus_id = re.sub(r'[_\s]+', '-', docusaurus_id)
+        docusaurus_id = self.REGEX_UNDERSCORE_SPACE.sub('-', docusaurus_id)
         
         # Remove special characters (keep only alphanumeric and hyphens)
-        docusaurus_id = re.sub(r'[^a-z0-9-]', '', docusaurus_id)
+        docusaurus_id = self.REGEX_NON_ALPHANUMERIC_HYPHEN.sub('', docusaurus_id)
         
         # Remove leading/trailing hyphens
         docusaurus_id = docusaurus_id.strip('-')
         
         # Collapse multiple hyphens
-        docusaurus_id = re.sub(r'-+', '-', docusaurus_id)
+        docusaurus_id = self.REGEX_MULTIPLE_HYPHENS.sub('-', docusaurus_id)
         
         return docusaurus_id
-    
-    def restore_heading_anchors(self, content):
-        """Keep headings as plain markdown - don't add HTML anchors"""
-        # This method is now a no-op since we're not adding HTML headings
-        # Docusaurus will generate its own IDs from the heading text
-        return content
     
     def restore_mdx_anchors(self, content):
         """Restore anchors in MDX-compatible format"""
@@ -1748,7 +1950,7 @@ class HTMLToMarkdownConverter:
             # Check for standalone anchor markers
             if '[anchor:' in line:
                 # Extract anchor ID
-                match = re.search(r'\[anchor:([^\]]+)\]', line)
+                match = self.REGEX_ANCHOR_PATTERN.search(line)
                 if match:
                     anchor_id = match.group(1)
                     # For MDX, we can use an invisible span with an id
@@ -1766,11 +1968,95 @@ class HTMLToMarkdownConverter:
         
         return '\n'.join(new_lines)
     
+    def process_tables_before_conversion(self, soup):
+        """Pre-process HTML tables to ensure proper MDX conversion"""
+        for table in soup.find_all('table'):
+            # Process each cell to escape problematic content
+            for cell in table.find_all(['td', 'th']):
+                try:
+                    # Get the cell's inner HTML as string
+                    cell_content = cell.decode_contents()
+                    
+                    # First, escape backslashes to prevent them from being interpreted as escape sequences
+                    cell_content = cell_content.replace('\\', '\\\\')
+                    
+                    # Escape pipe characters that would break markdown tables
+                    cell_content = cell_content.replace('|', '\\|')
+                    
+                    # Also escape other markdown special characters
+                    cell_content = cell_content.replace('*', '\\*')
+                    cell_content = cell_content.replace('_', '\\_')
+                    # Don't escape [ and ] as they might be part of links
+                    
+                    # Handle < and > characters - convert entities to actual characters
+                    # They will be properly escaped by markdownify
+                    cell_content = cell_content.replace('&lt;', '<')
+                    cell_content = cell_content.replace('&gt;', '>')
+                    cell_content = cell_content.replace('&amp;', '&')
+                    
+                    # Handle curly braces - wrap in inline code to prevent MDX interpretation
+                    # Match patterns like {GUID} or ${VAR}
+                    # But first check if not already in backticks
+                    if '`' not in cell_content:
+                        cell_content = re.sub(r'(\{[^}]+\})', r'`\1`', cell_content)
+                        cell_content = re.sub(r'(\$\{[^}]+\})', r'`\1`', cell_content)
+                    
+                    # Handle line breaks - convert to spaces for single-line table cells
+                    cell_content = cell_content.replace('<br/>', ' ')
+                    cell_content = cell_content.replace('<br>', ' ')
+                    cell_content = cell_content.replace('<br />', ' ')
+                    
+                    # Handle multiline content - flatten lists
+                    if '<ul>' in cell_content or '<ol>' in cell_content:
+                        # Extract list items and join with semicolons
+                        list_items = re.findall(r'<li[^>]*>(.*?)</li>', cell_content, re.DOTALL)
+                        if list_items:
+                            # Process each list item to clean it up
+                            cleaned_items = []
+                            for item in list_items:
+                                # Remove nested tags but keep content
+                                item = re.sub(r'<[^>]+>', ' ', item)
+                                item = ' '.join(item.split())  # Normalize whitespace
+                                if item.strip():
+                                    cleaned_items.append(item.strip())
+                            
+                            list_text = '; '.join(cleaned_items)
+                            # Replace the entire list with the cleaned text
+                            cell_content = re.sub(r'<[uo]l[^>]*>.*?</[uo]l>', 
+                                                list_text, 
+                                                cell_content, flags=re.DOTALL)
+                    
+                    # Remove paragraph tags but keep content
+                    cell_content = re.sub(r'<p[^>]*>', '', cell_content)
+                    cell_content = re.sub(r'</p>', ' ', cell_content)
+                    
+                    # Remove any remaining HTML tags that didn't get processed
+                    # This catches stray closing tags like </li> </ol>
+                    cell_content = re.sub(r'<[^>]+>', ' ', cell_content)
+                    
+                    # Clean up multiple spaces
+                    cell_content = re.sub(r'\s+', ' ', cell_content).strip()
+                    
+                    # Ensure the cell has at least some content
+                    if not cell_content:
+                        cell_content = ' '
+                
+                    # Update the cell with processed content
+                    cell.clear()
+                    # Parse the processed content as HTML to ensure proper structure
+                    from bs4 import NavigableString
+                    cell.append(NavigableString(cell_content))
+                except Exception as e:
+                    # Log the error but continue processing
+                    self.log(f"  ⚠ Error processing table cell: {str(e)}")
+                    # Keep original content if processing fails
+                    continue
+    
     def clean_markdown(self, content):
         """Clean up the converted markdown"""
         # Debug: Count code blocks at start
         if self.verbose and '```' in content:
-            code_blocks_before = len(re.findall(r'```[^\n]*\n(.*?)\n```', content, re.DOTALL))
+            code_blocks_before = len(self.REGEX_CODE_BLOCKS.findall(content))
             self.log(f"  → clean_markdown: {code_blocks_before} code blocks at start")
         
         # Remove navigation elements and other non-content elements
@@ -1802,13 +2088,13 @@ class HTMLToMarkdownConverter:
         content = '\n'.join(cleaned_lines)
         
         # Remove excessive blank lines
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        content = self.REGEX_MULTIPLE_NEWLINES.sub('\n\n', content)
         
         # Fix image syntax if needed
         content = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'![\1](\2)', content)
         
         # Remove HTML comments
-        content = re.sub(r'<!--.*?-->', '', content, flags=re.DOTALL)
+        content = self.REGEX_HTML_COMMENT.sub('', content)
         
         # Remove any lines that look like JavaScript (but not in code blocks)
         lines = content.split('\n')
@@ -2798,12 +3084,14 @@ class HTMLToMarkdownConverter:
                 # This might be a table row
                 line = line.replace('\\|', '|')
             
-            # Fix escaped brackets
-            line = line.replace('\\[', '[').replace('\\]', ']')
+            # Fix escaped brackets and parentheses efficiently
+            replacements = {'\\[': '[', '\\]': ']'}
             
             # Fix escaped parentheses in non-link contexts
             if not re.search(r'\]\([^)]+\)', line):
-                line = line.replace('\\(', '(').replace('\\)', ')')
+                replacements.update({'\\(': '(', '\\)': ')'})
+            
+            line = self.multi_replace(line, replacements)
             
             cleaned_lines.append(line)
         
@@ -2837,7 +3125,7 @@ class HTMLToMarkdownConverter:
                 title_index = i
                 # Remove any heading anchor from the title
                 # e.g., "Getting Started {#GettingStartedWithStealthAUDIT}" -> "Getting Started"
-                title = re.sub(r'\s*\{#[^}]+\}$', '', title)
+                title = self.REGEX_HEADING_ANCHOR.sub('', title)
                 # Remove backticks that markdownify might have added
                 title = title.replace('`', '')
                 break
